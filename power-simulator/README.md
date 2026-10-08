@@ -34,7 +34,15 @@ The filename `index.html` remains constant, so people can always find the latest
 
 ## Licensing
 
-No software license has been assigned to this project yet. Do not assume that public source availability grants permission to redistribute, modify, or commercially reuse it. Contact the repository owner to discuss permissions. GitHub's terms still govern use of the GitHub platform.
+**PolyForm Strict License 1.0.0** applies to the Power Simulator files in this directory, including the latest stable simulator and archived versions, to the extent the repository owner has rights to license them.
+
+- **Permitted:** noncommercial use, including personal experimentation and eligible educational/research use, as defined in the license.
+- **Not licensed:** distributing copies, making modified or derivative versions, or commercial use.
+- **For permission outside these terms:** contact [@ThatAnarchyDude](https://github.com/ThatAnarchyDude) to discuss a separate agreement.
+
+Read the [full, unmodified license](./LICENSE.md) or the [official license text](https://polyformproject.org/licenses/strict/1.0.0). Applicable law (including fair use) and GitHub's platform terms may provide separate rights. A license cannot establish copyright protection in material that is not protected by copyright.
+
+**Project attribution:** A Corvus Workshop experiment maintained by **ThatAnarchyDude**, developed with AI assistance through the **Zander Corvus** collaboration.
 
 ---
 Part of the [Corvus Workshop](../README.md).
