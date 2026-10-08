@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101820">
+<meta name="description" content="Corvus Workshop: a home for collaborative engineering experiments, simulations, and software projects.">
+<title>Corvus Workshop | Experiments and Ideas</title>
+<style>
+:root{color-scheme:dark;--bg:#0d131b;--card:#172330;--line:#354756;--ink:#ecf1f5;--muted:#b0bec9;--teal:#59d2c4;--amber:#f2b569}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(ellipse at 85% 0,#193039 0,transparent 47%),var(--bg);color:var(--ink);line-height:1.55}
+a{color:inherit}
+.wrap{width:min(950px,calc(100% - 40px));margin:auto}
+header{border-bottom:1px solid #ffffff18}
+nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:19px 0}
+.brand{font-weight:800;font-size:1.06rem;letter-spacing:.11em;text-decoration:none}
+.navlink{color:var(--muted);font-size:.95rem;text-decoration:none}
+main{padding:70px 0 80px}
+.eyebrow{color:var(--teal);font-weight:750;font-size:.8rem;letter-spacing:.22em;text-transform:uppercase}
+h1{font-size:clamp(2.8rem,8vw,5.4rem);line-height:1.07;letter-spacing:-.055em;margin:18px 0}
+.intro{max-width:670px;font-size:clamp(1.07rem,2.8vw,1.24rem);color:var(--muted);margin-bottom:37px}
+.actions{display:flex;gap:14px;flex-wrap:wrap}
+.button{display:inline-block;border:1px solid var(--teal);background:var(--teal);color:#09171a;padding:14px 22px;border-radius:12px;font-weight:800;text-decoration:none}
+.button.secondary{background:transparent;color:var(--ink);border-color:var(--line)}
+section{margin-top:72px}
+section h2{font-size:1.55rem;margin:0 0 22px}
+.card{padding:clamp(24px,5vw,40px);border:1px solid var(--line);border-radius:24px;background:linear-gradient(150deg,#1b2b36,#131c27)}
+.tag{font-size:.75rem;font-weight:700;color:var(--amber);letter-spacing:.17em;text-transform:uppercase}
+.card h3{font-size:1.8rem;line-height:1.2;margin:15px 0 12px}
+.card p{color:var(--muted);max-width:650px}
+.card a{color:var(--teal);font-weight:750;text-underline-offset:4px}
+footer{border-top:1px solid #ffffff18;padding:24px 0 44px;color:var(--muted);font-size:.89rem}
+footer p{max-width:730px}
+@media(max-width:550px){main{padding-top:48px}section{margin-top:50px}.navlink{font-size:.8rem}.brand{font-size:.95rem}}
+</style>
+</head>
+<body>
+<header><nav class="wrap"><a class="brand" href="./">⚙ CORVUS WORKSHOP</a><a class="navlink" href="https://github.com/ThatAnarchyDude/corvus-workshop">View on GitHub ↗</a></nav></header>
+<main class="wrap">
+<div class="eyebrow">A workshop for the curious</div>
+<h1>Build. Test.<br>Understand.</h1>
+<p class="intro">Experiments, simulations, and software projects. A place to take interesting questions apart, put them back together, and discover what happens when we try something new.</p>
+<div class="actions"><a class="button" href="./power-simulator/">Launch Power Simulator →</a><a class="button secondary" href="https://github.com/ThatAnarchyDude/corvus-workshop">Explore the code</a></div>
+<section aria-labelledby="project-title">
+<h2 id="project-title">On the workbench</h2>
+<article class="card">
+<div class="tag">Project 001 · Stable release: Bench 02.1</div>
+<h3>Power Under Pressure</h3>
+<p>An interactive electrical simulation exploring battery power, capacitor buffering, electrical losses, temperature, current limits, undervoltage protection, and burst loads. Works on phones, too.</p>
+<p><a href="./power-simulator/">Open the simulator →</a> &nbsp; · &nbsp; <a href="https://github.com/ThatAnarchyDude/corvus-workshop/tree/main/power-simulator">Project documentation ↗</a></p>
+</article>
+</section>
+</main>
+<footer><div class="wrap"><p><strong>Experimental software.</strong> Simulator results are educational approximations, not a basis for selecting or validating real battery hardware.</p><p>Source is publicly viewable, but no reuse or redistribution license has been granted. Contact the repository owner about permissions.</p><p>Corvus Workshop · Work in progress, by design.</p></div></footer>
+</body>
+</html>
