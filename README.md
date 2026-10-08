@@ -17,6 +17,10 @@ Each project gets its own directory, documentation, and version history. We keep
 
 ## Licensing and safety
 
-Licensing will be decided per project. **No license has been granted by this repository at present.** Please contact the repository owner about reuse or redistribution; GitHub's terms still apply.
+Licensing is **per project**, not repository-wide. The [Power Simulator](./power-simulator/) is offered for permitted noncommercial use under the [PolyForm Strict License 1.0.0](./power-simulator/LICENSE.md). That license does not grant permission to distribute copies, modify the software, or use it commercially. For permission beyond those terms, contact [@ThatAnarchyDude](https://github.com/ThatAnarchyDude).
+
+No blanket license is granted for the workshop's other materials or future projects. Each project will specify its own terms, and any license applies only to rights the owner can lawfully grant. GitHub platform terms and applicable law may provide separate rights.
+
+**Project credit:** Workshop projects are maintained by ThatAnarchyDude in collaboration with an AI assistant presented as Zander Corvus.
 
 Experimental simulators are educational tools and must not be used as the sole basis for building or sizing real electrical systems.
