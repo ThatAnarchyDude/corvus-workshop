@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101820"><title>Corvus Workshop | Bench 02.1 · Electrothermal</title>
+<style>
+:root{color-scheme:dark;--bg:#0c1117;--panel:#18232d;--edge:#2c3a47;--text:#eef4f7;--muted:#a2b4c2;--cyan:#58d7cb;--amber:#f4b566;--red:#ff8288;--blue:#98b7f5}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse 95% 50% at 95% -10%,#1b3741 0%,transparent 65%),var(--bg);color:var(--text);font-family:system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.5}
+main{max-width:1250px;margin:0 auto;padding:28px 20px 70px}.eyebrow{color:var(--cyan);font-size:.76rem;letter-spacing:.19em;font-weight:850;text-transform:uppercase}h1{margin:9px 0 14px;font-size:clamp(2rem,6vw,3.85rem);line-height:1.07;letter-spacing:-.05em}.intro{color:var(--muted);max-width:76ch;margin:0 0 20px;font-size:1.02rem}.badges{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:26px}.badge{padding:5px 10px;border-radius:25px;border:1px solid #315466;background:#11252c;color:#b5e2de;font-size:.75rem;font-weight:700}.badge.warning{color:#edc48c;border-color:#6f5035;background:#2b221a}
+.layout{display:grid;grid-template-columns:minmax(285px,345px) minmax(0,1fr);align-items:start;gap:18px}.panel{background:linear-gradient(150deg,#1a2732,#151d27);border:1px solid var(--edge);border-radius:18px;padding:20px;box-shadow:0 11px 35px #0003}.panel h2{margin:0 0 16px;font-size:1.1rem}.controls{position:sticky;top:15px}.group{margin:15px 0;border-top:1px solid var(--edge);padding-top:12px}.group summary{cursor:pointer;color:#d9f0ee;font-size:.93rem;font-weight:730;list-style:none;display:flex;justify-content:space-between;align-items:center}.group summary::-webkit-details-marker{display:none}.group summary::after{content:'▾';color:var(--cyan);margin-left:10px}.group:not([open]) summary::after{content:'▸'}.group[open] summary{margin-bottom:17px}
+label.slider{display:block;margin:0 0 18px}.labelrow{display:flex;justify-content:space-between;gap:10px;align-items:baseline;font-size:.88rem}.labelrow output{font-variant-numeric:tabular-nums;color:var(--amber);font-weight:790;white-space:nowrap}input[type=range]{width:100%;accent-color:var(--cyan);margin:11px 0 2px;cursor:pointer}.hint{color:var(--muted);display:block;font-size:.75rem;line-height:1.45}.buttonbar{display:flex;gap:8px;flex-wrap:wrap;margin:17px 0}.buttonbar button{flex:1}button,select{background:#243945;color:var(--text);border:1px solid #41616c;border-radius:9px;padding:9px 11px;font-weight:720;cursor:pointer;font-size:.85rem}button:hover{background:#345060}button.primary{background:var(--cyan);color:#092229;border-color:var(--cyan)}button:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--amber);outline-offset:3px}.controls-note{font-size:.76rem;color:var(--muted);line-height:1.6}.selectrow{display:flex;align-items:center;justify-content:space-between;gap:14px;font-size:.87rem}.selectrow select{max-width:155px}.unitsbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;background:#162a33;border:1px solid #315466;border-radius:13px;padding:12px 15px;margin:-8px 0 22px;font-weight:720}.unitbuttons{display:flex;gap:7px}.unitbuttons button{min-width:78px}.unitbuttons button[aria-pressed="true"]{background:var(--cyan);border-color:var(--cyan);color:#08252a}.unitsbar small{display:block;color:var(--muted);font-size:.76rem;font-weight:450}
+.rightcol{min-width:0;display:grid;gap:18px}.metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.metric{background:#121c25;border:1px solid var(--edge);border-radius:12px;padding:13px;min-width:0}.metric small{display:block;color:var(--muted);font-size:.75rem;line-height:1.35}.metric strong{display:block;font-size:clamp(1.12rem,2.3vw,1.46rem);margin-top:3px;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}.metric .cyan{color:var(--cyan)}.metric .amber{color:var(--amber)}.metric .red{color:var(--red)}
+.status{border-left:4px solid var(--cyan);border-radius:5px;padding:13px 15px;margin-top:16px;background:#153034;color:#cef2eb;font-size:.89rem}.status.warn{border-left-color:var(--red);background:#302329;color:#f7d5d7}.legend{display:flex;gap:18px;align-items:center;flex-wrap:wrap;font-size:.8rem;color:var(--muted);margin-bottom:12px}.legend i{display:inline-block;width:18px;height:3px;vertical-align:middle;margin-right:6px}.charttitle{margin:0 0 10px;font-size:1.12rem}.chart{width:100%;height:295px;display:block;border:1px solid var(--edge);background:#101a23;border-radius:10px}.chart.short{height:205px}.chartdesc{font-size:.78rem;color:var(--muted);margin:8px 0 0}.lossgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.lossitem{background:#121c25;border:1px solid var(--edge);border-radius:9px;padding:10px 12px}.lossitem span{display:block;color:var(--muted);font-size:.77rem}.lossitem b{font-size:1rem;font-variant-numeric:tabular-nums}.twocol{display:grid;grid-template-columns:1fr 1fr;gap:16px}.note{font-size:.85rem;color:var(--muted);line-height:1.6}.note b{color:var(--text)}.note strong{color:var(--amber)}.science summary{cursor:pointer;font-size:.95rem;font-weight:750}.science p{margin:.65rem 0}.science code{color:var(--cyan)}.bottomwarn{color:#f3c99a;border-left:3px solid var(--amber);background:#2c241b;padding:11px 13px;border-radius:3px;margin:12px 0;font-size:.81rem}.small{font-size:.77rem;color:var(--muted)}
+@media(max-width:940px){.layout{grid-template-columns:1fr}.controls{position:static}.metrics{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:580px){main{padding:22px 12px 50px}.panel{padding:16px}.metrics{grid-template-columns:1fr 1fr}.metric:nth-child(3){grid-column:1 / -1}.twocol{grid-template-columns:1fr}.chart{height:275px}.chart.short{height:195px}.lossgrid{grid-template-columns:1fr 1fr}}
+@media(max-width:360px){.metrics,.lossgrid{grid-template-columns:1fr}.metric:nth-child(3){grid-column:auto}}
+</style>
+</head>
+<body><main>
+<div class="eyebrow">Corvus Workshop / Experimental Bench 02.1</div>
+<h1>Power, heat, and consequences.</h1>
+<p class="intro">The old bench was suspiciously optimistic. This one includes imperfect components, a regulator, heating, nonlinear battery behavior, and protection trips. Adjust the system, then watch where the watts actually go.</p>
+<div class="badges"><span class="badge">⚙️ Runs offline</span><span class="badge">🔬 Two side-by-side simulations</span><span class="badge warning">⚠️ Illustrative physics, not validated cell data</span></div>
+<div class="unitsbar"><div>🌡️ Temperature units<small>Changes the display, not the physics.</small></div><div class="unitbuttons" role="group" aria-label="Choose temperature unit"><button id="showF" type="button" aria-pressed="true">°F</button><button id="showC" type="button" aria-pressed="false">°C</button></div></div>
+<div class="layout">
+<aside class="panel controls"><h2>⚙️ Bench controls</h2>
+<details class="group" open><summary>Power demand &amp; storage</summary>
+<label class="slider"><span class="labelrow">Normal load <output id="baseOut"></output></span><input id="base" type="range" min="2" max="18" step="1" value="2"></label>
+<label class="slider"><span class="labelrow">Burst load <output id="burstOut"></output></span><input id="burst" type="range" min="16" max="50" step="1" value="16"><span class="hint">Four-second surges every 20 seconds.</span></label>
+<label class="slider"><span class="labelrow">Capacitor bank <output id="capOut"></output></span><input id="cap" type="range" min="0" max="180" step="3" value="60"><span class="hint">At 0 F, the buffered comparison becomes another battery-only run.</span></label>
+<label class="slider"><span class="labelrow">Internal battery resistance <output id="resOut"></output></span><input id="res" type="range" min="0.03" max="0.18" step="0.005" value="0.055"><span class="hint">Baseline at 77 °F (25 °C) and mid-level charge. Changes with state of charge and temperature.</span></label>
+<label class="slider"><span class="labelrow">Initial charge <output id="socOut"></output></span><input id="soc" type="range" min="5" max="100" step="5" value="85"></label>
+<label class="slider"><span class="labelrow">Battery capacity <output id="ahOut"></output></span><input id="ah" type="range" min="1" max="6" step="0.5" value="3"></label>
+</details>
+<details class="group"><summary>Losses &amp; conversion</summary>
+<label class="slider"><span class="labelrow">Capacitor ESR <output id="esrOut"></output></span><input id="esr" type="range" min="0.005" max="0.15" step="0.005" value="0.025"><span class="hint">Equivalent series resistance: heat lost in the capacitor bank.</span></label>
+<label class="slider"><span class="labelrow">Battery wiring resistance <output id="wireOut"></output></span><input id="wire" type="range" min="0.005" max="0.12" step="0.005" value="0.020"><span class="hint">Additional resistance between battery and input bus.</span></label>
+<label class="slider"><span class="labelrow">Peak converter efficiency <output id="effOut"></output></span><input id="eff" type="range" min="65" max="98" step="1" value="90"><span class="hint">Actual efficiency falls modestly at low loads.</span></label>
+</details>
+<details class="group"><summary>Protection &amp; temperature</summary>
+<label class="slider"><span class="labelrow">Battery current ceiling <output id="batLimOut"></output></span><input id="batLim" type="range" min="3" max="20" step="1" value="12"><span class="hint">Battery cannot discharge above this current.</span></label>
+<label class="slider"><span class="labelrow">Converter input current limit <output id="convLimOut"></output></span><input id="convLim" type="range" min="3" max="20" step="1" value="12"><span class="hint">Power demand beyond the limit causes a protection trip.</span></label>
+<label class="slider"><span class="labelrow">Input undervoltage cutoff <output id="uvOut"></output></span><input id="uv" type="range" min="2.5" max="3.5" step="0.05" value="2.9"><span class="hint">Converter pauses on brownout; retries after a delay and voltage recovery.</span></label>
+<label class="slider"><span class="labelrow">Ambient temperature <output id="ambOut"></output></span><input id="amb" type="range" min="0" max="45" step="1" value="25"></label>
+<label class="slider"><span class="labelrow">Cooling multiplier <output id="coolOut"></output></span><input id="cool" type="range" min="0.2" max="4" step="0.2" value="1"><span class="hint">Higher means faster heat transfer out of every component.</span></label>
+<label class="slider"><span class="labelrow">Simulation duration <output id="durationOut"></output></span><input id="duration" type="range" min="120" max="300" step="180" value="120"><span class="hint">Choose 120 or 300 seconds to see accumulated heating.</span></label>
+</details>
+<div class="buttonbar"><button class="primary" id="reset">Reset</button><button id="stress">Burst rescue</button><button id="overload">Hard fault</button><button id="export">Export CSV</button></div>
+<p class="controls-note">Topology: one Li-ion cell → battery resistance + wiring → DC input bus, with the supercapacitor bank connected across the bus through its ESR. The converter supplies a regulated 3.3 V output when it can. No external connection or installation needed.</p>
+</aside>
+<section class="rightcol">
+<div class="panel"><h2>📟 Live diagnostic summary</h2><div class="metrics">
+<div class="metric"><small>Load energy delivered, bare</small><strong class="amber" id="energyBare">…</strong></div>
+<div class="metric"><small>Load energy delivered, buffered</small><strong class="cyan" id="energyBuf">…</strong></div>
+<div class="metric"><small>Extra energy delivered with buffer</small><strong id="energyDelta">…</strong></div>
+<div class="metric"><small>Converter trips, bare</small><strong class="amber" id="tripsBare">…</strong></div>
+<div class="metric"><small>Converter trips, buffered</small><strong class="cyan" id="tripsBuf">…</strong></div>
+<div class="metric"><small>Peak battery temp, buffered</small><strong id="peakBattery">…</strong></div>
+</div><div id="status" role="status" class="status">Calculating…</div></div>
+<div class="panel"><h2 class="charttitle">① DC input-bus voltage</h2><div class="legend"><span><i style="background:var(--amber)"></i>No capacitor</span><span><i style="background:var(--cyan)"></i>With capacitor</span></div><canvas class="chart" id="voltageChart" role="img" aria-label="DC bus voltage for the bare and capacitor-buffered systems"></canvas><p class="chartdesc">Power bursts are shaded. <span style="color:var(--red)">Red tick marks</span> indicate the buffered converter has cut off. Important: the bus can rebound to a higher voltage while the output is <i>off</i>.</p></div>
+<div class="panel"><h2 class="charttitle">② Power actually delivered to the load</h2><div class="legend"><span><i style="background:var(--amber)"></i>No capacitor</span><span><i style="background:var(--cyan)"></i>With capacitor</span><span><i style="background:#82939e"></i>Requested</span></div><canvas class="chart short" id="powerChart" role="img" aria-label="Delivered versus requested output power"></canvas><p class="chartdesc">A protective shutdown appears as a drop to 0 W, even if the bus voltage recovers.</p></div>
+<div class="panel"><h2 class="charttitle">③ Battery temperature</h2><div class="legend"><span><i style="background:var(--amber)"></i>No capacitor</span><span><i style="background:var(--cyan)"></i>With capacitor</span></div><canvas class="chart short" id="heatChart" role="img" aria-label="Battery temperature in degrees Fahrenheit"></canvas><p class="chartdesc" id="thermalDesc"></p></div>
+<div class="panel"><h2>🔎 Where the energy went</h2><div class="lossgrid">
+<div class="lossitem"><span>Battery resistance losses · buffered</span><b id="batLoss">…</b></div>
+<div class="lossitem"><span>Wiring losses · buffered</span><b id="wireLoss">…</b></div>
+<div class="lossitem"><span>Capacitor ESR losses · buffered</span><b id="capLoss">…</b></div>
+<div class="lossitem"><span>Converter losses · buffered</span><b id="convLoss">…</b></div>
+<div class="lossitem"><span>Peak capacitor temp · buffered</span><b id="peakCap">…</b></div>
+<div class="lossitem"><span>Peak converter temp · buffered</span><b id="peakConv">…</b></div>
+<div class="lossitem"><span>Final charge · bare / buffered</span><b id="socFinal">…</b></div>
+<div class="lossitem"><span>Load served · bare / buffered</span><b id="uptime">…</b></div>
+</div><p class="small">Losses are integrated heat dissipations (Wh), not a full battery-energy audit. Some energy also remains in the capacitor and battery.</p></div>
+<div class="panel science"><details><summary>📐 How this upgraded model calculates things</summary>
+<p class="note"><b>Nonlinear battery:</b> Open-circuit voltage is interpolated from a hand-picked Li-ion-like voltage/state-of-charge table. Charge is updated by coulomb counting. Internal resistance rises as charge falls and varies with temperature. This is <i>illustrative</i>, not fitted to a cell manufacturer's data.</p>
+<p class="note"><b>Electrical losses:</b> Battery and wiring dissipate <code>I²R</code>. Capacitor current is <code>(Vcap − Vbus) / ESR</code>, and its heat is <code>Icap² × ESR</code>. Voltage on the capacitor bank changes as <code>dV/dt = −Icap / C</code>.</p>
+<p class="note"><b>Power conversion:</b> Load wattage is measured at a regulated <code>3.3 V</code> output. The battery/capacitor must supply <code>Pout / efficiency</code> at the input. Efficiency declines a little at light loads. The solver looks for the stable higher-voltage operating point.</p>
+<p class="note"><b>Protection:</b> The battery has a discharge-current ceiling and the converter has an input-current ceiling. If requested power cannot be maintained above the input undervoltage threshold, or the converter would need more current than allowed, output is shut off. It retries after a one-second pause with 0.25 V hysteresis. These are intentionally simplified controller behaviors, not real protection circuitry.</p>
+<p class="note"><b>Heating:</b> Battery, capacitor, and converter each use a lumped thermal mass and Newton-style cooling <code>dT/dt = (heat − cooling×(T−ambient)) / thermal mass</code>. Different materials, thermal interfaces, cooling geometry, entropic heat and thermal runaway are <i>not</i> simulated.</p>
+<p class="note"><b>Numerics:</b> A small time step integrates two independent systems side by side. The capacitor is initially charged to the battery's open-circuit voltage. Loss power is integrated through time; graphs sample the model for plotting.</p></details>
+<div class="bottomwarn"><b>Do not use this for real battery-pack sizing or protection design.</b> It includes all the missing effects named in Bench 01, but every one is a simplified mathematical approximation, not a tested component model. It does not cover datasheet current-duration curves, cycle aging, cell mismatch, inductance/transients, capacitor voltage rating, thermal runaway, fault analysis, or certified protection requirements.</div>
+</div>
+</section></div></main>
+<script>
+(()=>{'use strict';
+const $=id=>document.getElementById(id);
+// All thermal calculations stay in Celsius. Only input/readout presentation converts.
+let tempUnit='F';
+try{if(localStorage.getItem('corvus_bench_temp_unit')==='C')tempUnit='C';}catch(_){}
+const tempVal=c=>tempUnit==='F'?(c*9/5+32):c;
+const tempText=(c,digits=1)=>tempVal(c).toFixed(digits)+' °'+tempUnit;
+function showUnits(){
+ $('showF').setAttribute('aria-pressed',String(tempUnit==='F'));
+ $('showC').setAttribute('aria-pressed',String(tempUnit==='C'));
+ $('heatChart').setAttribute('aria-label','Battery temperature in degrees '+(tempUnit==='F'?'Fahrenheit':'Celsius'));
+ $('ambOut').textContent=tempText(+$('amb').value,0);
+ if(data){fillReport(data);renderAll();}
+}
+function selectUnits(unit){tempUnit=unit;try{localStorage.setItem('corvus_bench_temp_unit',unit);}catch(_){}showUnits();}
+
+const fields={base:{unit:' W',digits:0},burst:{unit:' W',digits:0},cap:{unit:' F',digits:0},res:{unit:' Ω',digits:3},soc:{unit:'%',digits:0},ah:{unit:' Ah',digits:1},esr:{unit:' Ω',digits:3},wire:{unit:' Ω',digits:3},eff:{unit:'%',digits:0},batLim:{unit:' A',digits:0},convLim:{unit:' A',digits:0},uv:{unit:' V',digits:2},amb:{unit:' °C',digits:0},cool:{unit:'×',digits:1},duration:{unit:' s',digits:0}};
+const defaultValues={base:2,burst:16,cap:60,res:.055,soc:85,ah:3,esr:.025,wire:.02,eff:90,batLim:12,convLim:12,uv:2.9,amb:25,cool:1,duration:120};
+const ocvTable=[[0,3.0],[.04,3.28],[.10,3.46],[.2,3.60],[.35,3.70],[.50,3.78],[.65,3.85],[.8,3.98],[.9,4.08],[1,4.2]];
+const clamp=(x,lo,hi)=>Math.min(hi,Math.max(lo,x));
+function voc(soc){soc=clamp(soc,0,1);for(let i=1;i<ocvTable.length;i++){const a=ocvTable[i-1],b=ocvTable[i];if(soc<=b[0])return a[1]+(b[1]-a[1])*(soc-a[0])/(b[0]-a[0]);}return 4.2;}
+function eff(p,settings){const light=clamp(p/18,0,1);return clamp(settings.eff/100*(1-.045*(1-light)*(1-light)),.5,.985);}
+function batteryResistance(s,settings){return settings.res*(1+.8*Math.pow(1-s.soc,3)+.017*Math.max(0,25-s.tb)+.005*Math.max(0,s.tb-35));}
+function readSettings(){const s={};for(const [key,display] of Object.entries(fields)){let val=+$((key)).value;if(key==='duration')val=val<210?120:300;s[key]=val;$(key+'Out').textContent=key==='amb'?tempText(val,0):val.toFixed(display.digits)+display.unit;}return s;}
+const isBurst=t=>t%20>=8&&t%20<12;
+const initialization=(cfg,buffered)=>({soc:cfg.soc/100,tb:cfg.amb,tc:cfg.amb,tconv:cfg.amb,vc:voc(cfg.soc/100),enabled:true,hold:-1,tripCount:0,onTime:0,desiredEnergy:0,deliveredEnergy:0,batteryHeat:0,wireHeat:0,capHeat:0,convHeat:0,peakBattery:cfg.amb,peakCap:cfg.amb,peakConv:cfg.amb,chargeAh:0,buffered});
+function solveStep(s,cfg,t,dt){
+ const requested=isBurst(t)?cfg.burst:cfg.base;
+ const eb=eff(requested,cfg),uv=cfg.uv,C=s.buffered?cfg.cap:0;
+ const rbat=batteryResistance(s,cfg),rpath=rbat+cfg.wire,rcap=cfg.esr;
+ const vOpen=voc(s.soc),upper=Math.max(vOpen,C? s.vc:0)+.000001;
+ const branch=(v)=>{const ib=clamp((vOpen-v)/rpath,0,cfg.batLim);const ic=C>0?(s.vc-v)/rcap:0;return {ib,ic};};
+ let on=s.enabled;
+ // A tripped converter can only retry after its timer and bus-recovery requirements are satisfied.
+ if(!on&&t>=s.hold&&vOpen>=uv+.25&&(!C||s.vc>=uv+.25)){s.enabled=true;on=true;}
+ let bus=upper,ib=0,ic=0,pout=0,pin=0;
+ if(on){
+  // At a fixed input voltage, available current follows from the parallel source branches.
+  // Find the highest-voltage solution of V*(Ibat+Icap)=Pout/eta above UV cutoff.
+  let prev=upper,found=false,low=uv,high=upper;
+  const steps=32;
+  if(upper>uv){for(let j=1;j<=steps;j++){
+   const vv=upper-(upper-uv)*j/steps;const b=branch(vv);
+   const supply=vv*(b.ib+b.ic);
+   if(supply>=requested/eb){low=vv;high=prev;found=true;break;}prev=vv;
+  }}
+  if(found){for(let j=0;j<23;j++){
+   const mid=(low+high)/2,b=branch(mid);
+   if(mid*(b.ib+b.ic)>=requested/eb)low=mid;else high=mid;
+  }
+  bus=(low+high)/2;({ib,ic}=branch(bus));
+  const iload=requested/eb/bus;
+  // converter and battery source current limitations: no fictitious energy supplied.
+  if(iload<=cfg.convLim+1e-6&&bus>=uv-1e-5){pout=requested;pin=pout/eb;}
+  else{found=false;}
+  if(!found){s.enabled=false;s.hold=t+1;s.tripCount++;on=false;}
+  }else{s.enabled=false;s.hold=t+1;s.tripCount++;on=false;}
+ }
+ if(!on){
+  // No converter draw: battery can recharge the capacitor through both series resistances.
+  if(C>0&&s.vc<vOpen){
+   ib=clamp((vOpen-s.vc)/(rpath+rcap),0,cfg.batLim);ic=-ib;bus=vOpen-ib*rpath;
+  }else{ib=0;ic=0;bus=C?Math.max(vOpen,s.vc):vOpen;}
+ }
+ // Coulomb count is discharge-only: this simple arrangement does not model charging the battery.
+ s.soc=clamp(s.soc-ib*dt/(cfg.ah*3600),0,1);
+ if(C>0)s.vc=clamp(s.vc-ic*dt/C,0,5.5);
+ const qb=ib*ib*rbat,qw=ib*ib*cfg.wire,qc=ic*ic*rcap,qconv=Math.max(0,pin-pout);
+ s.tb+=dt*(qb-.22*cfg.cool*(s.tb-cfg.amb))/55;
+ s.tc+=dt*(qc-.16*cfg.cool*(s.tc-cfg.amb))/65;
+ s.tconv+=dt*(qconv-.28*cfg.cool*(s.tconv-cfg.amb))/45;
+ s.tb=Math.max(cfg.amb-20,s.tb);s.tc=Math.max(cfg.amb-20,s.tc);s.tconv=Math.max(cfg.amb-20,s.tconv);
+ s.peakBattery=Math.max(s.peakBattery,s.tb);s.peakCap=Math.max(s.peakCap,s.tc);s.peakConv=Math.max(s.peakConv,s.tconv);
+ s.batteryHeat+=qb*dt/3600;s.wireHeat+=qw*dt/3600;s.capHeat+=qc*dt/3600;s.convHeat+=qconv*dt/3600;
+ s.deliveredEnergy+=pout*dt/3600;s.desiredEnergy+=requested*dt/3600;s.onTime+=on?dt:0;s.chargeAh+=ib*dt/3600;
+ return {t,bus,pout,temp:s.tb,requested,off:!on,ib,ic,vc:s.vc,soc:s.soc};
+}
+let data=null,timer=null;
+function simulate(){
+ const cfg=readSettings();const dt=.02,steps=Math.round(cfg.duration/dt),skip=Math.max(1,Math.floor(steps/600));
+ let bare=initialization(cfg,false),buf=initialization(cfg,true),samples=[];
+ for(let k=0;k<steps;k++){
+  const t=k*dt,a=solveStep(bare,cfg,t,dt),b=solveStep(buf,cfg,t,dt);
+  if(k%skip===0||k===steps-1)samples.push({t,...{ab:a.bus,bb:b.bus,ap:a.pout,bp:b.pout,at:a.temp,bt:b.temp,requested:a.requested,off:a.off,bOff:b.off}});
+ }
+ data={cfg,bare,buf,samples};fillReport(data);renderAll();
+}
+const n=(x,precision=2)=>Number.isFinite(x)?x.toFixed(precision):'—';
+function fillReport({cfg,bare,buf}){
+ $('energyBare').textContent=n(bare.deliveredEnergy,3)+' Wh';$('energyBuf').textContent=n(buf.deliveredEnergy,3)+' Wh';
+ const diff=buf.deliveredEnergy-bare.deliveredEnergy;
+ $('energyDelta').textContent=(diff>0?'+':'')+n(diff,3)+' Wh';
+ $('tripsBare').textContent=bare.tripCount;$('tripsBuf').textContent=buf.tripCount;
+ $('peakBattery').textContent=tempText(buf.peakBattery);
+ $('batLoss').textContent=n(buf.batteryHeat,4)+' Wh';$('wireLoss').textContent=n(buf.wireHeat,4)+' Wh';
+ $('capLoss').textContent=n(buf.capHeat,4)+' Wh';$('convLoss').textContent=n(buf.convHeat,4)+' Wh';
+ $('peakCap').textContent=tempText(buf.peakCap);$('peakConv').textContent=tempText(buf.peakConv);
+ $('socFinal').textContent=n(bare.soc*100,1)+'% / '+n(buf.soc*100,1)+'%';
+ $('uptime').textContent=n(bare.deliveredEnergy/bare.desiredEnergy*100,1)+'% / '+n(buf.deliveredEnergy/buf.desiredEnergy*100,1)+'%';
+ const msg=$('status');const energyFrac=buf.deliveredEnergy/buf.desiredEnergy;
+ if(energyFrac<.995){msg.className='status warn';msg.textContent='Protection intervened in the buffered system. Check the power plot, not just bus voltage: an open-circuit battery can look healthy while the load is disconnected. Try decreasing demand, lowering resistance, increasing allowable current within a hypothetical design, or adding capacitance.';}
+ else{msg.className='status';msg.textContent=diff>.002?'The capacitor bank delivers more requested energy in this run. Check the thermal and loss panels to see the trade-off.':'Both setups meet virtually all requested power here. The larger buffer may reduce short dips but does not automatically improve delivered energy.';}
+ $('thermalDesc').textContent=`Ambient ${tempText(cfg.amb,0)}. The chart shows battery temperature; buffered capacitor peaks at ${tempText(buf.peakCap)}, converter at ${tempText(buf.peakConv)}. Heat may change battery internal resistance during the run.`;
+}
+function draw(canvasId,dataset,ymin,ymax,yTick,label='',warnTicks=false){
+ const el=$(canvasId),rect=el.getBoundingClientRect();if(rect.width<10)return;
+ const pr=Math.min(window.devicePixelRatio||1,2),W=rect.width,H=rect.height;
+ el.width=Math.max(1,Math.floor(W*pr));el.height=Math.max(1,Math.floor(H*pr));const c=el.getContext('2d');c.setTransform(pr,0,0,pr,0,0);
+ const m={l:51,r:13,t:24,b:39},pw=W-m.l-m.r,ph=H-m.t-m.b;
+ const X=t=>m.l+pw*t/data.cfg.duration,Y=y=>m.t+ph*(ymax-y)/(ymax-ymin);
+ c.fillStyle='#101a23';c.fillRect(0,0,W,H);
+ for(let t=0;t<=data.cfg.duration;t+=20){if(isBurst(t+9)){c.fillStyle='#253128';c.globalAlpha=.65;c.fillRect(X(t+8),m.t,X(Math.min(t+12,data.cfg.duration))-X(t+8),ph);c.globalAlpha=1;}}
+ const gridCount=4;
+ c.lineWidth=1;c.font='12px system-ui, sans-serif';c.textAlign='right';c.textBaseline='middle';
+ for(let i=0;i<=gridCount;i++){let value=ymin+(ymax-ymin)*i/gridCount,y=Y(value);c.strokeStyle='#293946';c.beginPath();c.moveTo(m.l,y);c.lineTo(W-m.r,y);c.stroke();c.fillStyle='#adbfca';c.fillText(n(value,Math.abs(ymax-ymin)<12?1:0)+label,m.l-8,y);}
+ c.textAlign='center';c.textBaseline='top';const step=data.cfg.duration>200?60:20;
+ for(let t=0;t<=data.cfg.duration;t+=step){c.fillStyle='#a6b9c6';c.fillText(t+'s',X(t),H-m.b+10);}
+ function trace(key,color,dash=[],lineWidth=2){c.strokeStyle=color;c.lineWidth=lineWidth;c.lineJoin='round';c.setLineDash(dash);c.beginPath();dataset.forEach((d,i)=>{const x=X(d.t),y=Y(clamp(d[key],ymin,ymax));i===0?c.moveTo(x,y):c.lineTo(x,y);});c.stroke();c.setLineDash([]);}
+ if(canvasId==='voltageChart'){trace('ab','#f4b566');trace('bb','#58d7cb');}
+ if(canvasId==='powerChart'){trace('requested','#8899a5',[5,4],1.3);trace('ap','#f4b566');trace('bp','#58d7cb');}
+ if(canvasId==='heatChart'){trace('at','#f4b566');trace('bt','#58d7cb');}
+ if(warnTicks){c.strokeStyle='#ff8288';c.lineWidth=2;c.beginPath();dataset.forEach(d=>{if(d.bOff){const x=X(d.t);c.moveTo(x,m.t+2);c.lineTo(x,m.t+8);}});c.stroke();}
+}
+function renderAll(){if(!data)return;const pts=data.samples,cfg=data.cfg;
+ draw('voltageChart',pts,0,4.5,.0,' V',true);
+ draw('powerChart',pts,0,Math.max(18,cfg.burst*1.06),.0,' W');
+ const temps=pts.flatMap(p=>[tempVal(p.at),tempVal(p.bt)]);
+ const lo=Math.floor(Math.min(tempVal(cfg.amb),...temps)-(tempUnit==='F'?4:2));
+ const hi=Math.max(lo+(tempUnit==='F'?9:5),Math.ceil(Math.max(tempVal(cfg.amb)+(tempUnit==='F'?5:3),...temps)+(tempUnit==='F'?4:2)));
+ const displayTemps=pts.map(p=>({...p,at:tempVal(p.at),bt:tempVal(p.bt)}));
+ draw('heatChart',displayTemps,lo,hi,.0,' °'+tempUnit);
+}
+function schedule(){clearTimeout(timer);timer=setTimeout(simulate,95);}
+for(const name of Object.keys(fields))$(name).addEventListener('input',schedule);
+$('showF').addEventListener('click',()=>selectUnits('F'));
+$('showC').addEventListener('click',()=>selectUnits('C'));
+$('reset').addEventListener('click',()=>{Object.entries(defaultValues).forEach(([k,v])=>$(k).value=v);simulate();});
+$('stress').addEventListener('click',()=>{Object.entries({base:3,burst:35,cap:120,res:.12,esr:.025,wire:.03,eff:90,batLim:9,convLim:17,uv:2.9,amb:25,cool:1,duration:120}).forEach(([k,v])=>$(k).value=v);simulate();});
+$('overload').addEventListener('click',()=>{Object.entries({base:8,burst:43,cap:90,res:.12,esr:.08,wire:.06,eff:82,batLim:9,convLim:9,uv:3.0,amb:33,cool:.4,duration:120}).forEach(([k,v])=>$(k).value=v);simulate();});
+$('export').addEventListener('click',()=>{
+ if(!data)return;const cols=['time_s','requested_W','bare_bus_V','buffered_bus_V','bare_load_W','buffered_load_W','bare_battery_C','buffered_battery_C','bare_cutoff_1','buffered_cutoff_1','bare_battery_F','buffered_battery_F'];
+ const lines=[cols.join(',')];for(const p of data.samples)lines.push([p.t,p.requested,p.ab,p.bb,p.ap,p.bp,p.at,p.bt,+p.off,+p.bOff,p.at*9/5+32,p.bt*9/5+32].map(x=>typeof x==='number'?Number(x.toFixed(5)):x).join(','));
+ const url=URL.createObjectURL(new Blob([lines.join('\n')],{type:'text/csv;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='corvus_bench02_1_run.csv';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),3000);
+});
+window.addEventListener('resize',()=>{clearTimeout(timer);timer=setTimeout(renderAll,100);});
+simulate();
+showUnits();
+})();
+</script>
+</body></html>
