@@ -14,6 +14,7 @@ label.slider{display:block;margin:0 0 18px}.labelrow{display:flex;justify-conten
 @media(max-width:940px){.layout{grid-template-columns:1fr}.controls{position:static}.metrics{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:580px){main{padding:22px 12px 50px}.panel{padding:16px}.metrics{grid-template-columns:1fr 1fr}.metric:nth-child(3){grid-column:1 / -1}.twocol{grid-template-columns:1fr}.chart{height:275px}.chart.short{height:195px}.lossgrid{grid-template-columns:1fr 1fr}}
 @media(max-width:360px){.metrics,.lossgrid{grid-template-columns:1fr}.metric:nth-child(3){grid-column:auto}}
+.project-license{margin-top:22px;border-top:1px solid var(--edge);padding:18px 4px 0;color:var(--muted);font-size:.78rem;line-height:1.6}.project-license p{margin:6px 0}.project-license a{color:var(--cyan);text-underline-offset:3px}
 </style>
 </head>
 <body><main>
@@ -79,7 +80,11 @@ label.slider{display:block;margin:0 0 18px}.labelrow{display:flex;justify-conten
 <p class="note"><b>Numerics:</b> A small time step integrates two independent systems side by side. The capacitor is initially charged to the battery's open-circuit voltage. Loss power is integrated through time; graphs sample the model for plotting.</p></details>
 <div class="bottomwarn"><b>Do not use this for real battery-pack sizing or protection design.</b> It includes all the missing effects named in Bench 01, but every one is a simplified mathematical approximation, not a tested component model. It does not cover datasheet current-duration curves, cycle aging, cell mismatch, inductance/transients, capacitor voltage rating, thermal runaway, fault analysis, or certified protection requirements.</div>
 </div>
-</section></div></main>
+</section></div>
+<footer class="project-license" aria-label="Power Simulator credits and license">
+<p><strong>Project credit:</strong> Corvus Workshop · Maintained by ThatAnarchyDude · Created with AI assistance in the Zander Corvus collaboration.</p>
+<p>Permitted noncommercial use under the <a href="https://github.com/ThatAnarchyDude/corvus-workshop/blob/main/power-simulator/LICENSE.md">PolyForm Strict License 1.0.0</a>. Redistribution, modification, and commercial use are not licensed. For additional permission, contact <a href="https://github.com/ThatAnarchyDude">the repository owner</a>.</p>
+</footer></main>
 <script>
 (()=>{'use strict';
 const $=id=>document.getElementById(id);
