@@ -33,12 +33,12 @@ EVOLUTION_TEXT = TEXT + ['Make room in ITEM STORAGE, then reopen the PC\nto rece
 
 def message(s, index):
     # Don't overwrite the item/quantity buffers with player/rival names.
-    s.emit(45); s.data.append(index)
+    s.emit(45); s.data.append(index + getattr(s, "text_offset", 0))
     return s.emit(50).emit(53)
 
 
 def menu(s, entries, *, result=0x800C):
-    s.emit(45); s.data.append(26)
+    s.emit(45); s.data.append(26 + getattr(s, "text_offset", 0))
     s.emit(750); s.data.extend(bytes([1, 1, 0, 1])); s.emit(result)
     for text, value in entries:
         s.emit(751, text, 255, value)
@@ -50,8 +50,21 @@ def buffer(s, opcode, slot, value):
     return s
 
 
-def script(*, evolution_items=False):
-    s = Script().emit(96).emit(73, 1547)
+class TextScript(Script):
+    def __init__(self, text_offset):
+        super().__init__()
+        self.text_offset = text_offset
+
+    def emit(self, op, *args):
+        if op in (70, 751):
+            args = (args[0] + self.text_offset, *args[1:])
+        return super().emit(op, *args)
+
+
+def script(*, evolution_items=False, text_offset=0, service_only=False):
+    s = TextScript(text_offset)
+    if not service_only:
+        s.emit(96).emit(73, 1547)
     s.compare(INIT, 1).jump('upgrade' if evolution_items else 'boot', 1)
     for (item_var, qty_var), item, qty in zip(SLOTS, [17, 50], [1, 95]):
         s.emit(41, item_var, item).emit(41, qty_var, qty)
@@ -73,14 +86,19 @@ def script(*, evolution_items=False):
             s.label(f'upgrade_next_{step}')
         s.jump('boot')
         s.label('upgrade_full'); message(s, 39); s.jump('boot')
-    s.label('boot'); message(s, 0)
-    s.emit(746)
-    s.label('main').emit(190); s.data.append(0)
-    menu(s, [(1,0),(2,1)])
-    s.compare(0x800C,0).jump('login',1).jump('exit')
-    s.label('login').emit(73,1548)
+    s.label('boot')
+    if service_only:
+        s.jump('player_services')
+        s.label('main').jump('exit')
+    else:
+        message(s, 0)
+        s.emit(746)
+        s.label('main').emit(190); s.data.append(0)
+        menu(s, [(1,0),(2,1)])
+        s.compare(0x800C,0).jump('login',1).jump('exit')
+        s.label('login').emit(73,1548)
     s.label('player_services')
-    s.emit(45);s.data.append(26)
+    s.emit(45);s.data.append(26 + getattr(s, "text_offset", 0))
     s.emit(750);s.data.extend(bytes([1,1,0,1]));s.emit(0x800C)
     for text,value in [(3,0),(34,1),(35,2)]:
         s.emit(751,text,255,value)
@@ -106,7 +124,7 @@ def script(*, evolution_items=False):
     s.jump('player_services')
     for mode,label in [(0,'withdraw'),(2,'toss')]:
         s.label(label).emit(41,0x8008,mode).emit(41,0x8009,0)
-        s.emit(45); s.data.append(26)
+        s.emit(45); s.data.append(26 + getattr(s, "text_offset", 0))
         # The touch menu cannot display a full ten-stack inventory. The native
         # scrolling list supports all stacks without paging or hiding items.
         s.emit(69 if evolution_items else 750); s.data.extend(bytes([1,1,0,1])); s.emit(0x8006)
@@ -125,7 +143,7 @@ def script(*, evolution_items=False):
             s.emit(42,0x8005,qty_var).jump('quantity')
     s.label('deposit').emit(41,0x8008,1)
     if evolution_items:
-        s.emit(45);s.data.append(26)
+        s.emit(45);s.data.append(26 + getattr(s, "text_offset", 0))
         s.emit(69);s.data.extend(bytes([1,1,0,1]));s.emit(0x800A)
         for text,value in [(27+i,i) for i in range(7)]+[(9,250)]:s.emit(70,text,255,value)
         s.emit(71).emit(53)
@@ -157,7 +175,7 @@ def script(*, evolution_items=False):
     s.compare(0x8008,2).jump('confirm_toss',1)
     s.emit(125,0x8004,0x8007,0x800C).compare(0x800C,0).jump('no_room',1)
     s.jump('subtract')
-    s.label('confirm_toss'); s.emit(45);s.data.append(20)
+    s.label('confirm_toss'); s.emit(45);s.data.append(20 + getattr(s, "text_offset", 0))
     s.emit(63,0x800C).emit(53).compare(0x800C,0).jump('storage',5)
     s.label('subtract')
     for i,(_,qty_var) in enumerate(SLOTS):
@@ -184,5 +202,8 @@ def script(*, evolution_items=False):
         s.label(f'receipt_{mode}');message(s,msg);s.jump('storage')
     for label,msg in [('full',18),('insufficient',19),('no_room',17)]:
         s.label(label);message(s,msg);s.jump('storage')
-    s.label('exit').emit(747).emit(73,1549);message(s,22)
+    s.label('exit')
+    if service_only:
+        return s.emit(27).finish()
+    s.emit(747).emit(73,1549);message(s,22)
     return end(s).finish()

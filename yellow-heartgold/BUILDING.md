@@ -82,3 +82,16 @@ See [PROTOTYPE-004.md](PROTOTYPE-004.md) for the current builder, downloader and
 See [PROTOTYPE-005.md](PROTOTYPE-005.md) for the title builder, generated-art inputs, normal-save compatibility and exact validation scope. `tools/title.py` requires the exact tested prototype-004 input; it changes only title resources and the banner.
 
 Prototype 006 builds on the exact prototype-005 output. Run `yellow-heartgold/.venv/bin/python yellow-heartgold/tools/evolution_testing.py`, then package with `tools/package_playtest.py ... --version 006`. See [PROTOTYPE-006.md](PROTOTYPE-006.md) for commands, PC upgrade behavior and validation.
+
+## Prototype 007 — Oak’s Parcel
+
+Requires the exact prototype-006 output and supported pristine USA HeartGold ROM, both kept locally and ignored.
+
+```sh
+yellow-heartgold/.venv/bin/python yellow-heartgold/tools/parcel_quest.py
+yellow-heartgold/.venv/bin/python -m unittest discover -s yellow-heartgold/tests -q
+yellow-heartgold/.venv/bin/python yellow-heartgold/tools/package_playtest.py yellow-heartgold/build/browser-download-007 --version 007
+python3 yellow-heartgold/tools/check_repo_safety.py
+```
+
+The builder appends quest script/text/event assets and a small ITCM Dex gate. It retains prototype-006 evolution and title data and every original script/event member. Quest variables use the existing save layout: shoes 0x4169, parcel 0x416A, cashier 0x416D; flag 0xB52 marks initialization and 0xB53 tracks Oak’s one-time Poké Balls. Type-3 map scripts also run the Dex gate when importing a normal save. Seen/caught records are preserved. Running Shoes use unused item ID 113 and native running functionality. Read the release’s playtest notes before interpreting scripted model checks as emulator evidence.

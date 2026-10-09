@@ -131,7 +131,7 @@ def oak_talk():
     return end(s).finish()
 
 
-def ball_choice(index):
+def ball_choice(index, *, grant_dex=True):
     species = SPECIES[index]
     s = Script().emit(96).emit(32, 0x6A).jump('taken', 1)
     s.compare(OAK_STATE, 1).jump('allowed', 1).msg(15)
@@ -156,9 +156,11 @@ def ball_choice(index):
     s.data.extend(bytes([1, 0]))
     s.emit(602, 0).emit(608).emit(3, 10, 0x800C).emit(602, 1)
     s.emit(78, 1187).msg(29 + index * 2).emit(79)
-    s.emit(291).emit(30, 0x6B).emit(477)
-    s.data.append(1)
-    s.emit(0x800C).msg(3).msg(4).msg(5)
+    if grant_dex:
+        s.emit(291).emit(30, 0x6B).emit(477)
+        s.data.append(1)
+        s.emit(0x800C)
+    s.msg(3).msg(4).msg(5)
     # Rival walks to his chosen ball, then returns to wait near the exit.
     rival_index = RIVAL_CHOICES[index]
     s.movement(OBJ_RIVAL, 'pickup').emit(95)

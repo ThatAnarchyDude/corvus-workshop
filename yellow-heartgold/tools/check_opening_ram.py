@@ -5,7 +5,7 @@ import sys
 from pathlib import Path
 
 
-def check(path, species, *, owned=None):
+def check(path, species, *, owned=None, dex_enabled=True):
     expected_owned = sorted(set(owned)) if owned is not None else [species]
     ram = Path(path).read_bytes()
     dex = []
@@ -23,7 +23,7 @@ def check(path, species, *, owned=None):
                 and 0x100000 < avatar < len(ram) - 0x34):
             continue
         map_id = struct.unpack_from('<i', ram, location)[0]
-        if map_id not in (49, 503, 505, 506):
+        if map_id not in (9, 49, 50, 500, 501, 503, 505, 506, 527):
             continue
         player = struct.unpack_from('<I', ram, avatar + 0x30)[0] - 0x2000000
         follower = struct.unpack_from('<I', ram, offset + 0xE4)[0] - 0x2000000
@@ -60,7 +60,7 @@ def check(path, species, *, owned=None):
     # A normal reload can leave an additional Dex copy in the flash-read buffer.
     # Validate the live save block referenced by FieldSystem, not that cached copy.
     dex = [entry for entry in dex if entry['address'] == fields[0]['active_dex_address']]
-    if len(dex) != 1 or dex[0]['flags'][2:] != [1, 1] or dex[0]['owned'] != expected_owned:
+    if len(dex) != 1 or dex[0]['flags'][2:] != ([1, 1] if dex_enabled else [0, 0]) or dex[0]['owned'] != expected_owned:
         raise ValueError(f'Unexpected live National Dex state: {dex}')
     return dict(dex=dex[0], field=fields[0],
                 note='Follower visibility is verified separately in screenshots, not inferred from active state.')
