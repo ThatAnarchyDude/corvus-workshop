@@ -2,7 +2,13 @@
 
 This is an experimental HeartGold-based feature prototype, not the completed Yellow remake. Start a NEW game. The opening remains New Bark Town and Professor Elm’s lab.
 
-## Download package
+## Complete game download
+
+Download `yellow-heartgold-prototype-001.nds.zip` and extract it on your phone. It contains ONE complete `yellow-heartgold-prototype-001.nds` file. Open that extracted file in your Android DS emulator and choose New Game. No patching is needed when using this download.
+
+The complete game is ZIP-compressed because its extracted size exceeds GitHub’s regular-file limit. Extracted ROM SHA-256: `afee88f4f55266340c5b69f1f65ecbc324ae3a177407f2be7db9415423538378`.
+
+## Optional patch package
 
 Download `yellow-heartgold-prototype-001-android-patch.zip` from this folder, then extract it on your phone. It contains the xdelta patch, instructions, checksums, and validation status. It does not contain a ROM. Use your original US HeartGold file as the patch input.
 
