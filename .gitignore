@@ -1,0 +1,19 @@
+# Original game images, generated playable ROMs, and emulator saves stay local.
+*.nds
+*.gbc
+*.gb
+*.gba
+*.3ds
+*.cia
+*.sav
+*.dsv
+*.srm
+*.nds.zip
+*.gbc.zip
+
+# Local build tool outputs and Python environments.
+yellow-heartgold/build/
+yellow-heartgold/.venv/
+yellow-heartgold/.tools/
+__pycache__/
+.pytest_cache/
