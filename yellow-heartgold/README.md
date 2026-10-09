@@ -1,3 +1,5 @@
+Prototype 009 uses Yellow’s fixed Viridian shop inventory and records the ball-sale rules for later Kanto towns. See [PROTOTYPE-009.md](PROTOTYPE-009.md).
+
 Prototype 008 fixes the Viridian Center doorway and retires the parcel escort cashier after leaving the Mart. See [PROTOTYPE-008.md](PROTOTYPE-008.md) for playtest and save notes.
 
 # Pokémon Psyduck Yellow — implementation plan

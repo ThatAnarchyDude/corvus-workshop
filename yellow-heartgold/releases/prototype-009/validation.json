@@ -1,0 +1,35 @@
+{
+  "version": "009",
+  "output_sha256": "0058c03c36df298c8c5902fd71fa9d855b011ae494d14672c4eca1c348b11ecc",
+  "patch_sha256": "8f6c4b01887b72ed28e664ac84caf849c8d7493e8206c24965b83767d74153b4",
+  "hook": "0x1ff89a8",
+  "stock": [
+    4,
+    17,
+    18,
+    22,
+    19
+  ],
+  "original_archive_members_preserved": true,
+  "date": "2026-10-09",
+  "tests": {
+    "passed": 90,
+    "skipped": 0
+  },
+  "emulator": {
+    "engine": "DeSmuME libretro",
+    "completed": [
+      "Fresh boot from normal Viridian fixture; upper cashier shows fixed five-item Yellow stock"
+    ],
+    "unrun": [
+      "Android",
+      "New-game quest playthrough",
+      "Save/reload on prototype 009"
+    ]
+  },
+  "browser": {
+    "output_sha256": "0058c03c36df298c8c5902fd71fa9d855b011ae494d14672c4eca1c348b11ecc",
+    "bad_input_rejected": true,
+    "browser_errors": []
+  }
+}

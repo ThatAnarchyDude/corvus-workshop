@@ -99,3 +99,7 @@ The builder appends quest script/text/event assets and a small ITCM Dex gate. It
 ## Prototype 008 — Viridian fixes
 
 See [PROTOTYPE-008.md](PROTOTYPE-008.md) for the incremental builder, required input and checks. It builds from the exact prototype-007 output and keeps that release reproducible.
+
+## Prototype 009 — Yellow shop stock
+
+See [PROTOTYPE-009.md](PROTOTYPE-009.md) for the incremental builder and fixed inventory dispatch. Requires the exact prototype-008 output.
