@@ -60,9 +60,9 @@ def patch(rom, pristine):
     )
     current_event = struct.unpack_from("<H", blob, map_record + 16)[0]
     if (current_script, current_init, current_text, current_event) != (
-        737, 510, 448, 458
+        969, 970, 831, 493
     ):
-        raise ValueError("Prototype 003 bedroom map was already modified")
+        raise ValueError("Unexpected Prototype 003 active bedroom map; expected relocated script/text/event copies")
 
     _, original_messages = decode_messages(text_arc.files[448])
     if len(original_messages) < 2:
