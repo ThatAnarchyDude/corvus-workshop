@@ -1,3 +1,5 @@
+Prototype 009 updates Oak’s introduction with shiny Eevee and FireRed Blue’s rival portrait. See [PROTOTYPE-009.md](PROTOTYPE-009.md) for playtest and build notes. HeartGold’s shop progression remains intact.
+
 Prototype 008 fixes the Viridian Center doorway and retires the parcel escort cashier after leaving the Mart. See [PROTOTYPE-008.md](PROTOTYPE-008.md) for playtest and save notes.
 
 # Pokémon Psyduck Yellow — implementation plan

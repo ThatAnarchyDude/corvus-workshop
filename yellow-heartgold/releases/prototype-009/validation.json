@@ -1,0 +1,73 @@
+{
+  "version": "009",
+  "base_version": "008",
+  "output_sha256": "06671123403d1a16c834893c1131b46d1d5afc72ab0b2dc1648cf41232e762a2",
+  "patch_sha256": "5d772c5fee3cd3c2e1e6b6cafcad7a47b3de94f6e0da03b5a8a550fbcf2534c1",
+  "blue_source_sha256": "729041b940afe031302d630fdbe57c0c145f3f7b6d9b8eca5e98678d0ca4d059",
+  "blue_graphics_offset": "0xe60894",
+  "blue_palette_offset": "0xe60b4c",
+  "blue_dimensions": [
+    64,
+    64
+  ],
+  "blue_naming_tile": 837,
+  "shiny_effect": {
+    "native_shiny_animation": 11,
+    "particle_member": 31,
+    "particle_sha256": "c8538069d16bc6d0349cd6ab90de409c68cfbab9963cd837821afb11744eec7b",
+    "sound": 1808,
+    "sparkle_adapter": "2D Nitro cell animation",
+    "sparkle_frames": 40,
+    "eevee_species": 133
+  },
+  "overlay": {
+    "overlay": 53,
+    "cry_species": 133,
+    "release_helper": "0x21e8948",
+    "rival_helper": "0x21e895c",
+    "blue_pic_ids": [
+      67,
+      68
+    ],
+    "input_sha256": "b100a044da4dafdabe42c528f1937be25883eef427bbe6554489d33a928383fc",
+    "output_sha256": "211db2fc9f12398b5eddc704d65841763b311baa26b780b31af0a8b5a0057af0"
+  },
+  "changed_file_ids": [
+    53,
+    160,
+    249
+  ],
+  "date": "2026-10-09",
+  "tests": {
+    "passed": 94,
+    "skipped": 0
+  },
+  "patch_roundtrip_verified": true,
+  "browser": {
+    "output_sha256": "06671123403d1a16c834893c1131b46d1d5afc72ab0b2dc1648cf41232e762a2",
+    "bad_input_rejected": true,
+    "browser_errors": []
+  },
+  "unrun": [
+    "Android emulator",
+    "Audible cry/sparkle listening check",
+    "Normal save/reload and cross-version save import on 009"
+  ],
+  "emulator": {
+    "engine": "DeSmuME libretro",
+    "rom_sha256": "06671123403d1a16c834893c1131b46d1d5afc72ab0b2dc1648cf41232e762a2",
+    "completed": [
+      "Fresh-game intro reaches Pallet bedroom with male player",
+      "Fresh-game intro reaches Pallet bedroom with female player",
+      "Full FireRed Blue portrait on rival prompt and confirmation",
+      "Complete Blue portrait fits naming keyboard without covering controls",
+      "Male-player rival confirmation No returns to naming, then Yes completes intro",
+      "Shiny Eevee displays beside Oak with visible native-texture sparkle glints"
+    ],
+    "evidence_kept_local": [
+      "build/emulator-009-final-check",
+      "build/emulator-009-final-girl"
+    ],
+    "audio": "Native cry 133 and shiny SE 1808 calls verified by ARM hook execution; no audible listening check"
+  }
+}
