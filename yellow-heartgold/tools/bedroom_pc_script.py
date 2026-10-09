@@ -44,10 +44,10 @@ OP_RELEASE_ALL = 97
 OP_GIVE_ITEM = 125
 
 TEXT = (
-    "It's a Wii!\ Wii is huge in Kanto, too!",
-    "The PC holds one POTION.\ Withdraw it?",
+    "It's a Wii! Wii is huge in Kanto, too!",
+    "The PC holds one POTION. Withdraw it?",
     "You withdrew one POTION!",
-    "The PC holds 95 RARE CANDY.\ Withdraw all of them?",
+    "The PC holds 95 RARE CANDY. Withdraw all of them?",
     "You withdrew 95 RARE CANDY!",
     "You can't carry that many right now.",
     "There's nothing left in the PC."
