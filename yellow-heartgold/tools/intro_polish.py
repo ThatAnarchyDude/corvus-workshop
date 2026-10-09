@@ -80,31 +80,6 @@ def extract_blue(path):
     return art,palette
 
 
-def naming_portrait(rom,art,palette):
-    file=rom.filenames.idOf('a/0/3/1');arc=ndspy.narc.NARC(rom.files[file]);before=list(arc.files)
-    graphics=ndspy.lz10.decompress(arc.files[10]);tile=(len(graphics)-48)//32;assert tile+16<=1024
-    # Full-size art appears on the intro prompt/confirmation. Fit the same complete
-    # portrait into the keyboard's native 32px icon so it cannot cover controls.
-    pixels=bytearray(4096)
-    for ty in range(8):
-        for tx in range(8):
-            for y in range(8):
-                for x in range(8):
-                    at=(ty*8+tx)*32+y*4+x//2
-                    pixels[(ty*8+y)*64+tx*8+x]=(art[at]>>(4*(x%2)))&15
-    icon=tiled(bytes(pixels[y*2*64+x*2] for y in range(32) for x in range(32)),32,32)
-    arc.files[10]=ndspy.lz10.compress(replace_ncgr(graphics,graphics[48:]+icon))
-    colors=bytearray(arc.files[1]);colors[40+7*32:40+8*32]=palette;arc.files[1]=bytes(colors)
-    cell=bytearray(ndspy.lz10.decompress(arc.files[12]))
-    for index in [54,55,56]:
-        n,_,offset=struct.unpack_from('<HHI',cell,48+8*index);assert n==1
-        at=48+70*8+offset;assert struct.unpack_from('<2H',cell,at)==(0,0x8000)
-        struct.pack_into('<3H',cell,at,0,0x8000,0x7000|tile)
-    arc.files[12]=ndspy.lz10.compress(bytes(cell))
-    assert [i for i,(a,b) in enumerate(zip(before,arc.files)) if a!=b]==[1,10,12]
-    rom.files[file]=arc.save();return tile
-
-
 def intro_portrait(rom,art,palette):
     file=rom.filenames.idOf('a/1/2/0');arc=ndspy.narc.NARC(rom.files[file])
     # Reserved Ethan animation frame 2 is unused in HG's static player pictures.
@@ -206,7 +181,7 @@ sound: .word 1808'''
 def build(firered):
     source=PROJECT/'build/yellow-heartgold-prototype-008.nds';assert sha(source.read_bytes())==INPUT_SHA and sha(BASE.read_bytes())==EXPECTED
     rom=ndspy.rom.NintendoDSRom.fromFile(str(source));old=ndspy.rom.NintendoDSRom.fromFile(str(source))
-    art,palette=extract_blue(firered);tile=naming_portrait(rom,art,palette);effect=eevee_sequence(rom);blue_ids=intro_portrait(rom,art,palette);overlay=patch_overlay(rom,blue_ids)
+    art,palette=extract_blue(firered);effect=eevee_sequence(rom);blue_ids=intro_portrait(rom,art,palette);overlay=patch_overlay(rom,blue_ids)
     banner=bytearray(rom.iconBanner);title='Pokemon Psyduck Yellow\nShiny Eevee intro prototype 009\nCorvus Workshop'.encode('utf-16le')
     for at in range(0x240,0x840,0x100):banner[at:at+0x100]=title+b'\0'*(0x100-len(title))
     from ndspy import _common
@@ -216,7 +191,7 @@ def build(firered):
     tool=PROJECT/'.tools/xdelta3';patch=target.with_suffix('.xdelta');decoded=PROJECT/'build/intro-roundtrip.nds'
     subprocess.run([str(tool),'-f','-e','-S','none','-s',str(BASE),str(target),str(patch)],check=True)
     subprocess.run([str(tool),'-f','-d','-s',str(BASE),str(patch),str(decoded)],check=True);assert sha(decoded.read_bytes())==sha(output)
-    report=dict(version='009',base_version='008',output_sha256=sha(output),patch_sha256=sha(patch.read_bytes()),blue_source_sha256=FIRERED_SHA,blue_graphics_offset=hex(BLUE_GRAPHICS),blue_palette_offset=hex(BLUE_PALETTE),blue_dimensions=[64,64],blue_naming_tile=tile,shiny_effect=effect,overlay=overlay,changed_file_ids=[i for i,(a,b) in enumerate(zip(old.files,rom.files)) if a!=b])
+    report=dict(version='009',base_version='008',output_sha256=sha(output),patch_sha256=sha(patch.read_bytes()),blue_source_sha256=FIRERED_SHA,blue_graphics_offset=hex(BLUE_GRAPHICS),blue_palette_offset=hex(BLUE_PALETTE),blue_dimensions=[64,64],naming_archive_unchanged=True,shiny_effect=effect,overlay=overlay,changed_file_ids=[i for i,(a,b) in enumerate(zip(old.files,rom.files)) if a!=b])
     (PROJECT/'build/intro-polish-report.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2))
 
 

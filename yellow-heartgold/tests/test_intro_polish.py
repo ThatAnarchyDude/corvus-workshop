@@ -23,23 +23,17 @@ class IntroChecks(unittest.TestCase):
     def archive(self,rom,path):
         return ndspy.narc.NARC(rom.files[rom.filenames.idOf(path)]).files
     def test_gameplay_and_johto_are_unchanged(self):
-        expected={self.old.filenames.idOf(x) for x in ['a/0/3/1','a/1/2/0']};expected.add(53)
+        expected={self.old.filenames.idOf(x) for x in ['a/1/2/0']};expected.add(53)
         self.assertEqual({i for i,(a,b) in enumerate(zip(self.old.files,self.new.files)) if a!=b},expected)
         self.assertEqual(self.old.arm9,self.new.arm9);self.assertEqual(self.old.arm7,self.new.arm7)
         self.assertEqual(ndspy.fnt.save(self.old.filenames),ndspy.fnt.save(self.new.filenames))
-    def test_full_blue_art_preserved_and_keyboard_stays_native_size(self):
+    def test_full_blue_art_preserved_and_keyboard_unchanged(self):
         art,palette=extract_blue(PROJECT/'build/firered-source.gba')
         arc=self.archive(self.new,'a/1/2/0');char,pal=self.report['overlay']['blue_pic_ids']
         self.assertEqual(arc[char][48:],bytes(1024)+art+bytes(1024))
         self.assertEqual(arc[pal][40:72],palette)
-        old=self.archive(self.old,'a/0/3/1');new=self.archive(self.new,'a/0/3/1')
-        oldcell=ndspy.lz10.decompress(old[12]);newcell=ndspy.lz10.decompress(new[12]);allowed=set()
-        for i in [54,55,56]:
-            _,_,offset=struct.unpack_from('<HHI',newcell,48+8*i);at=48+70*8+offset
-            self.assertEqual(struct.unpack_from('<2H',newcell,at),(0,0x8000))
-            allowed.update(range(at+4,at+6))
-        self.assertTrue({i for i,(a,b) in enumerate(zip(oldcell,newcell)) if a!=b}<=allowed)
-        self.assertEqual(ndspy.lz10.decompress(new[10])[48:48+26784],ndspy.lz10.decompress(old[10])[48:])
+        file=self.old.filenames.idOf('a/0/3/1')
+        self.assertEqual(self.old.files[file],self.new.files[file])
     def test_ball_and_original_animations_survive(self):
         old=self.archive(self.old,'a/1/2/0');new=self.archive(self.new,'a/1/2/0')
         self.assertEqual(new[64][48:48+4480],old[64][48:])

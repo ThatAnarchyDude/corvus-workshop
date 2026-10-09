@@ -2,9 +2,9 @@
 
 Oak now releases shiny Eevee instead of Marill in the new-game introduction. The graphics and shiny palette come from HeartGold’s native Eevee resources. The release plays Eevee’s cry and HeartGold’s shiny sound, SEQ_SE_DP_REAPOKE (1808). The original ball release and intro music remain intact. HeartGold’s native shiny particle texture is converted to a 40-frame 2D sparkle sequence for the intro; its battle particle runtime cannot run directly in this screen. Eevee is positioned beside Oak rather than covering his face.
 
-The rival prompt and confirmation display the complete 64×64 early FireRed Blue battle portrait extracted from the supplied USA/Europe Rev 1 ROM. The naming keyboard displays a 32×32 version of that complete portrait to fit its original icon area without covering the input or controls. Original Ethan/Lyra graphics, player naming and the final player shrink animation remain intact. Rival confirmation hides the unrelated player portrait. Cancellation and renaming retain the native naming-overlay lifecycle.
+The rival prompt and confirmation display the complete 64×64 early FireRed Blue battle portrait extracted from the supplied USA/Europe Rev 1 ROM. The naming keyboard is preserved byte-for-byte from prototype 008; the FireRed portrait appears only when Oak introduces Blue and confirms his name. Original Ethan/Lyra graphics, player naming and the final player shrink animation remain intact. Rival confirmation hides the unrelated player portrait. Cancellation and renaming retain the native naming-overlay lifecycle.
 
-Only overlay 53 and the intro/naming graphics archives change from prototype 008, plus the prototype banner. Starter probabilities, parties, PC supplies, parcel progression, HeartGold’s shop progression, Johto content and starter selection are unchanged. Route 2 and Viridian Forest remain closed.
+Only overlay 53 and the intro graphics archive change from prototype 008, plus the prototype banner. Starter probabilities, parties, PC supplies, parcel progression, HeartGold’s shop progression, Johto content and starter selection are unchanged. Route 2 and Viridian Forest remain closed.
 
 ## Playtest
 
@@ -29,4 +29,8 @@ Build assertions preserve ARM9/ARM7 and unrelated filesystem payloads, retain th
 
 ## Verification
 
-94 tests passed with no skips. Chromium rejected incorrect input and downloaded the exact final NDS. Fresh DeSmuME runs on the final ROM reached the Pallet bedroom with both genders; the male-player run also rejected the first rival-name confirmation and returned to naming. Frame captures show shiny Eevee and visible sparkle glints beside Oak. Original and generated ROMs, screenshots, states and saves remain local. External hosting availability is separate from local browser verification.
+94 tests passed with no skips. Chromium rejected incorrect input and downloaded the exact final NDS. Before the placement correction, fresh DeSmuME runs reached the Pallet bedroom with both genders; the male-player run also rejected the first rival-name confirmation and returned to naming. Frame captures show shiny Eevee and visible sparkle glints beside Oak. Original and generated ROMs, screenshots, states and saves remain local. External hosting availability is separate from local browser verification.
+
+The placement correction restores the entire naming archive byte-for-byte from prototype 008. Full-size Blue on Oak’s introduction/confirmation screens, shiny Eevee, its sound hook and sparkle resources remain unchanged from the prior 009 revision.
+
+A fresh DeSmuME run of the corrected output confirmed the full portrait on both Oak dialogue screens, the restored HG naming icon, rival renaming and transition into Pallet.

@@ -1,8 +1,8 @@
 {
   "version": "009",
   "base_version": "008",
-  "output_sha256": "06671123403d1a16c834893c1131b46d1d5afc72ab0b2dc1648cf41232e762a2",
-  "patch_sha256": "5d772c5fee3cd3c2e1e6b6cafcad7a47b3de94f6e0da03b5a8a550fbcf2534c1",
+  "output_sha256": "73c6994b7b4e458064397ea2821077f2719f13f36a67565070801e278e70c5a4",
+  "patch_sha256": "dca0c7674eda6f1a901bec304ef92ea8a5f5e446bad38b08fc72e1be25bb5979",
   "blue_source_sha256": "729041b940afe031302d630fdbe57c0c145f3f7b6d9b8eca5e98678d0ca4d059",
   "blue_graphics_offset": "0xe60894",
   "blue_palette_offset": "0xe60b4c",
@@ -10,7 +10,7 @@
     64,
     64
   ],
-  "blue_naming_tile": 837,
+  "naming_archive_unchanged": true,
   "shiny_effect": {
     "native_shiny_animation": 11,
     "particle_member": 31,
@@ -34,17 +34,17 @@
   },
   "changed_file_ids": [
     53,
-    160,
     249
   ],
   "date": "2026-10-09",
+  "revision": "Portrait placement correction: preserve prototype 008 naming keyboard",
   "tests": {
     "passed": 94,
     "skipped": 0
   },
   "patch_roundtrip_verified": true,
   "browser": {
-    "output_sha256": "06671123403d1a16c834893c1131b46d1d5afc72ab0b2dc1648cf41232e762a2",
+    "output_sha256": "73c6994b7b4e458064397ea2821077f2719f13f36a67565070801e278e70c5a4",
     "bad_input_rejected": true,
     "browser_errors": []
   },
@@ -53,7 +53,7 @@
     "Audible cry/sparkle listening check",
     "Normal save/reload and cross-version save import on 009"
   ],
-  "emulator": {
+  "previous_revision_emulator": {
     "engine": "DeSmuME libretro",
     "rom_sha256": "06671123403d1a16c834893c1131b46d1d5afc72ab0b2dc1648cf41232e762a2",
     "completed": [
@@ -69,5 +69,18 @@
       "build/emulator-009-final-girl"
     ],
     "audio": "Native cry 133 and shiny SE 1808 calls verified by ARM hook execution; no audible listening check"
+  },
+  "emulator": {
+    "engine": "DeSmuME libretro",
+    "rom_sha256": "73c6994b7b4e458064397ea2821077f2719f13f36a67565070801e278e70c5a4",
+    "completed": [
+      "Full FireRed Blue portrait when Oak introduces his grandson",
+      "Full FireRed Blue portrait when Oak confirms rival name",
+      "Naming keyboard retains prototype 008 HG Blue icon",
+      "Reject confirmation, rename rival, accept confirmation and reach Pallet bedroom"
+    ],
+    "evidence_kept_local": [
+      "build/emulator-009-placement-fix"
+    ]
   }
 }
