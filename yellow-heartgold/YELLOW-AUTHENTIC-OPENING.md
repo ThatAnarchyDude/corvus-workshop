@@ -61,6 +61,27 @@ Native HG contains these **ability effects**, not a built-in three-slot Hidden A
 
 Explicit configuration: [data/psyduck-yellow-starters.json](data/psyduck-yellow-starters.json), with selection and evolution validation in [tools/psyduck_yellow_starters.py](tools/psyduck_yellow_starters.py).
 
+## Bedroom PC: Yellow starter supplies (source implemented, emulator testing pending)
+
+HeartGold no longer offers normal PC item storage. To recreate Yellow's starting Potion and give the supervisor an evolution-testing supply, the **existing Red's bedroom PC** on map 506 (Pallet Town, Red's House 2F, background event at (6,3)) gets a custom **two-item withdrawal interaction**. This does not affect PCs elsewhere, including Johto.
+
+- The PC contains **1 Potion** to withdraw once, in the spirit of Pokémon Yellow.
+- The PC also offers **95 Rare Candies** as a *single stack*, once, for evolution testing. The player may decline and return later.
+- These two stored gifts have independent, persistent save flags (`0xB60` Potion, `0xB61` Rare Candies), are not replenished, and cannot be duplicated on repeat visits.
+- If the Bag cannot accept the chosen quantity, the gift remains available. If the player cancels an offer, the gift remains available.
+- Red's bedroom **Wii interaction at (5,3) stays unchanged** and all original event/text banks remain preserved. We only change the active map 506 script/text pointers to new appended archive entries.
+- These are **scripted one-time PC gifts**, not a restoration of global Gen-I PC item storage. No deposit function is added.
+
+Implementation: [`tools/bedroom_pc_script.py`](tools/bedroom_pc_script.py) constructs the dialogue and native Yes/No + GiveItem script bytecode. [`tools/bedroom_pc.py`](tools/bedroom_pc.py) is a separate local builder that injects this script into the exact released Prototype 003 ROM (`SHA-256 1cd5dd980e9c9a542783fe261e5b4b9c59df7b1061e1be2d97f6fa2dd9e635db`). It produces only **ignored local build output**, optionally making an xdelta patch. [`tests/test_bedroom_pc_script.py`](tests/test_bedroom_pc_script.py) models the assembled bytecode to check item amounts, acceptance/decline, bag-full, save flags, and repeat interactions. Passing a scripted bytecode test does **not** substitute for melonDS verification.
+
+Rebuild from your locally available known-good Proto003 only:
+
+```sh
+yellow-heartgold/.venv/bin/python yellow-heartgold/tools/bedroom_pc.py
+```
+
+**Integration status:** PC source implementation is staged separately; the full authentic Oak/Psyduck escort, physical table, rival changes, and starter statistics are not in a complete playable build. Do not represent the PC-specific dev ROM as the requested next complete prototype until combined features and emulator tests pass.
+
 ## Blue and Johto preservation
 
 - Blue's Kanto overworld sprite is present (sprite 375). For battles, `TRAINERCLASS_RIVAL` 23 uses the stored custom rival name but shows the Johto rival portrait. `TRAINERCLASS_LEADER_BLUE` 110 shows Blue's image but can alter the trainer class/name. **Never swap class 23 to 110 indiscriminately.** Use Kanto-rival-specific portrait assignment that preserves the saved rival name and leaves every Johto trainer unaffected.
