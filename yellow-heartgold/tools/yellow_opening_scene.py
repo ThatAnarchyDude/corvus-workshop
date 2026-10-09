@@ -52,6 +52,10 @@ MOVE_END = 254
 ORIGINAL_OAK_START = (1038, 367)
 NORTH_EXIT_COLUMNS = (1030, 1031, 1032, 1033)
 OAK_INTERCEPT_Z = 353
+# Native HeartGold Pallet Town map 49's warp to Oak's Lab is at
+# world coordinate (1045,373); immediately west is the approach tile.
+OAK_LAB_DOOR = (1045, 373)
+OAK_LAB_APPROACH = (1044, 373)
 
 
 @dataclass(frozen=True)
@@ -97,3 +101,14 @@ def destination(start, path):
         else:
             raise ValueError("Not a cardinal movement")
     return x, z
+
+def oak_to_lab(player_x: int):
+    """Candidate uninterrupted world-space walk from north edge to lab door.
+
+    Path reverses the visible approach, then follows Pallet's open courtyard.
+    Must be collision-tested in melonDS; DO NOT run as a live cutscene yet.
+    """
+    approach = oak_approach(player_x)
+    return (follow_path(approach)
+            + (Segment(MOVE_RIGHT, 6), Segment(MOVE_DOWN, 6),
+               Segment(MOVE_RIGHT, 1)))
