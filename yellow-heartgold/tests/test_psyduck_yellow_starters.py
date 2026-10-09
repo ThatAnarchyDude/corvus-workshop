@@ -7,6 +7,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "tools"))
 from psyduck_yellow_starters import (
     get_config, player_starter_at, required_starter_gender, rival_starter,
     pokemon_gender_for_pid, matches_required_gender,
+    starter_ability_options, choose_starter_ability, evolved_hidden_ability,
 )
 
 class PsyduckYellowStarterTests(unittest.TestCase):
@@ -54,6 +55,40 @@ class PsyduckYellowStarterTests(unittest.TestCase):
         self.assertFalse(matches_required_gender(133,0x1F,31))
         self.assertTrue(matches_required_gender(175,0x1F,31))
         self.assertTrue(matches_required_gender(175,0x01,31))
+
+    def test_three_vetted_starter_abilities_each(self):
+        self.assertEqual(starter_ability_options(54), (6,13,33))
+        self.assertEqual(starter_ability_options(175), (55,32,105))
+        self.assertEqual(starter_ability_options(133), (50,91,107))
+        with self.assertRaises(ValueError):
+            starter_ability_options(152)
+
+    def test_uniform_slot_selection_boundaries(self):
+        for species in (54, 175, 133):
+            expected=starter_ability_options(species)
+            for i, ability in enumerate(expected):
+                self.assertEqual(choose_starter_ability(species, lambda n, i=i: i),
+                                 (ability, i+1, i==2))
+        for bad in (-1,3,False,1.0):
+            with self.assertRaises(ValueError):
+                choose_starter_ability(54, lambda n,bad=bad: bad)
+
+    def test_native_evolution_ability_for_hidden_starters(self):
+        expected={55:33,176:105,468:105,134:93,135:95,136:62,
+                  197:39,470:34,471:115}
+        for species, ability in expected.items():
+            with self.subTest(species=species):
+                self.assertEqual(evolved_hidden_ability(species,True),(ability,True))
+                self.assertEqual(evolved_hidden_ability(species,False),(None,False))
+
+    def test_espeon_magic_bounce_is_unavailable_and_falls_back(self):
+        self.assertEqual(evolved_hidden_ability(196,True),(None,False))
+        self.assertEqual(evolved_hidden_ability(196,False),(None,False))
+
+    def test_never_override_johto_or_other_species(self):
+        for species in (25,152,155,158,700):
+            with self.assertRaises(ValueError):
+                evolved_hidden_ability(species,True)
 
     def test_johto_baseline_is_not_changed(self):
         self.assertEqual(get_config()["johto_preservation"]["original_starters"],[152,155,158])
