@@ -1,0 +1,89 @@
+{
+  "project_name": "Pokémon Psyduck Yellow",
+  "short_name": "Psyduck Yellow",
+  "provenance": "Supervisor's opening redesign, 2026-10-09; not yet implemented in ROM",
+  "current_build": "Prototype 003 is known good and remains unchanged",
+  "capture_scene": {
+    "wild_species": 54,
+    "wild_name": "Psyduck",
+    "oak_catches": true,
+    "placed_at": "left Poké Ball on lab table",
+    "required_gender": "male",
+    "scripted": true
+  },
+  "lab_table": {
+    "approach": "freestanding table on right side of Oak's lab, in the spirit of Yellow",
+    "interaction": "approach a physical Poké Ball, inspect starter, confirm or decline",
+    "options": [
+      {
+        "position": "left",
+        "species": 54,
+        "name": "Psyduck",
+        "starter_gender": "male"
+      },
+      {
+        "position": "center",
+        "species": 175,
+        "name": "Togepi",
+        "starter_gender": "natural"
+      },
+      {
+        "position": "right",
+        "species": 133,
+        "name": "Eevee",
+        "starter_gender": "female"
+      }
+    ]
+  },
+  "starter_level": 5,
+  "gender_selection_policy": "Starter gender is independent of chosen player gender. Force via per-Pokémon personality/gender at creation, never by globally modifying species base data.",
+  "rival_rules": [
+    {
+      "player_gender": "male",
+      "chosen_starter": 133,
+      "rival_starter": 54
+    },
+    {
+      "player_gender": "female",
+      "chosen_starter": 54,
+      "rival_starter": 133
+    },
+    {
+      "player_gender": "male",
+      "chosen_starter": 175,
+      "rival_starter": 133
+    },
+    {
+      "player_gender": "female",
+      "chosen_starter": 175,
+      "rival_starter": 133
+    }
+  ],
+  "unresolved_rival_cases": [
+    {
+      "player_gender": "female",
+      "chosen_starter": 133,
+      "reason": "Awaiting supervisor's choice"
+    },
+    {
+      "player_gender": "male",
+      "chosen_starter": 54,
+      "reason": "Awaiting supervisor's choice"
+    }
+  ],
+  "rival_visuals": {
+    "kanto": "Blue for overworld and battle assets; player-named rival",
+    "johto": "Original red-haired rival Silver, unchanged"
+  },
+  "johto_preservation": {
+    "story": "unchanged for now",
+    "starter_selection": "keep original HeartGold presentation for later Johto event",
+    "original_starters": [
+      152,
+      155,
+      158
+    ],
+    "future_exception": "eight Johto gym leaders scale by badge order as previously agreed"
+  },
+  "release_policy": "Patch-only; no proprietary playable ROM committed or released; no claim of playable implementation until melonDS tests pass"
+}
