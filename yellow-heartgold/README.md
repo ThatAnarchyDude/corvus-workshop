@@ -49,7 +49,7 @@ Use an asset/script ROM hack of the supplied HeartGold, with reproducible script
 - melonDS or DeSmuME: required for gameplay acceptance and save/load tests. A DeSmuME libretro core is compiled locally under `.tools/`; `tools/emulator_smoke.py` exercises boot, starter selection, followers, Dex and save/reload using built-in firmware.
 - [hg-engine](https://github.com/BluRosie/hg-engine): evaluated but unnecessary for the agreed 493-species scope. Its later-generation expansion and battle changes would add substantial risk and alter mechanics.
 
-Prototype 001 has passed the recorded emulator checks and the user reports successful testing in an Android DS emulator. This validates the prototype’s tested features, not the unfinished Yellow campaign.
+Prototype 001 passed its recorded emulator checks. Prototype 003 also passed its documented DeSmuME checks, and the owner reports using melonDS DS on both PC and Android with the prototype working as intended so far. These observations cover the tested opening, not the unfinished Yellow campaign; see the Prototype 003 release validation file for separately documented and unrun checks.
 
 ## Content and feature policy
 
@@ -89,6 +89,24 @@ Validate all 16 gyms for roster/level accuracy, type identity, badge/story gates
 6. **Regression and release patch.** Fresh-save campaign playthroughs for all three starters; story sequence/return-trip checks, defeat recovery, save/reload, box operations, evolution, breeding, clock changes and long sessions. Validate patch application against the exact input hash and output checksum. Document mechanics, known limits and save compatibility. Produce a patch and documentation; do not automatically commit/push the uploaded ROM binaries.
 
 Keep event flags, variables, script/file identifiers and edited archive members under version control as structured data. Do not hard-code offsets until confirmed for this exact ROM revision. Store generated working ROMs separately from original uploads. Build steps must reject a wrong input hash and never overwrite the originals.
+
+## Repository safety and release practice
+
+The current development branch is `pikachu-yellow-development`; its starting point is the known-good prototype 003 branch, after removal of complete modified DS ROM ZIP archives from the branch contents. The project files are still in a **public** GitHub repository, so do not put original or rebuilt ROMs, proprietary SDKs or private assets into commits.
+
+- The repository-root `.gitignore` excludes common ROM and save file extensions, plus local build outputs.
+- `python3 yellow-heartgold/tools/check_repo_safety.py` examines tracked files and ZIP members for known ROM/save extensions. GitHub Actions runs it for future pushes and pull requests on this branch.
+- Release **patch archives and source instructions**, not complete game ROM archives. Verify clean-base input and patched-output hashes before publishing.
+- Removing ROM archives in new commits does **not** remove their blobs from historical commits or existing clones. A separate coordinated history rewrite and cache/retention review may be necessary; do not force-rewrite public release branches without a migration plan.
+- Scripted builds must not overwrite the input ROM, and their output belongs only in ignored local build directories.
+
+## Prototype 004 staging
+
+Prototype 003 remains the last independently recorded emulator-smoke-test baseline. The user additionally reports successful melonDS DS testing on PC and Android. We will keep that reference intact while staging Prototype 004.
+
+**Next playable boundary:** extend Route 1 into Viridian City, including the Yellow-style parcel delivery loop back to Professor Oak, then Route 2 and Viridian Forest only after that slice passes. Do not remove the Route 1 boundary until Viridian entry, shops, healing, warp exits, wild encounters, and the parcel loop have been wired and tested. Preserve HG's original Kanto assets for later Johto-postgame adaptation. Retain the agreed current National Dex-at-starter timing until the deferred move is separately approved.
+
+**Regression gate:** fresh starts for Pikachu/Eevee/Togepi, intro/rival naming and battle, follower behavior, save/reload, Route 1 Potion one-time event, encounter distribution, map transitions and blackout recovery. Do not assume Android parity from PC-only automated tests. Record what actually ran and keep untested behavior clearly labeled.
 
 ## Immediate next work
 
