@@ -37,3 +37,7 @@
 5. Re-test against reference Prototype 003 across PC and Android before claiming complete replacement.
 
 No proprietary playable ROM should be committed to public or private GitHub branches without appropriate rights.
+
+## Owner playtest result: 2026-10-09
+
+The supervisor reported **all tests passed** for the released bedroom-PC intermediate ROM, after testing the Potion/Rare Candy interaction and returning to direct development. This is owner-reported playtest evidence, not a newly executed independent emulator automation. Retain this exact build as the regression baseline. No claim is made that the later Oak movement and Psyduck starter overhaul are implemented in the tested ROM.
