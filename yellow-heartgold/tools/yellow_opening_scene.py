@@ -45,9 +45,11 @@ MOVE_RIGHT = 15
 MOVE_EXCLAMATION = 75
 MOVE_END = 254
 
-# These are from the *unmodified* US HeartGold (revision 0) Pallet event bank.
-# Original Oak NPC is object 0 at (1040, 367) on map 49.
-ORIGINAL_OAK_START = (1040, 367)
+# Proposed visible Oak staging point, not a native NPC position.
+# Native HG Pallet actor 0 (sprite 325) at (1040,367) is a woman.
+# Prototype 003 adds separate Oak actor 3 (sprite 366) at (1038,354).
+# The proposed south start must pass field collision testing before use.
+ORIGINAL_OAK_START = (1038, 367)
 NORTH_EXIT_COLUMNS = (1030, 1031, 1032, 1033)
 OAK_INTERCEPT_Z = 353
 
@@ -59,7 +61,7 @@ class Segment:
 
 
 def oak_approach(player_x: int):
-    """Plan continuous movement from Oak's existing spot to Route 1's edge.
+    """Plan movement from a proposed visible Oak position to Route 1's edge.
 
     Candidate collision route along the town's open central corridor;
     requires an emulator walkthrough before it is wired into the live event.
