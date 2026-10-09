@@ -1,0 +1,8 @@
+{
+  "version": "004",
+  "source_sha256": "65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105",
+  "output_sha256": "4018c164fe5ba818134d457f5ac0b923e2b5fdf44d5035be73714680d3f035df",
+  "source_bytes": 134217728,
+  "output_bytes": 126682824,
+  "patch_sha256": "5ff25be6004c0e1c55eff487c0d6d39dd1622bb2843773e823247a18ffeae8d5"
+}
