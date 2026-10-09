@@ -1,6 +1,6 @@
 # Pallet and first Route 1 grass test — prototype 003
 
-Unzip `yellow-heartgold-prototype-003.nds.zip` and open the single `.nds` file in your Android DS emulator. Keep older builds and their saves separate. Start a NEW GAME; do not load a prototype 001/002 save or save state. The original HeartGold title screen remains for now.
+Rebuild Prototype 003 locally from your own matching, legally obtained US HeartGold ROM or apply the `.xdelta` found in `yellow-heartgold-prototype-003-android-patch.zip` to the untouched original. Open the resulting `.nds` file in a Nintendo DS emulator such as melonDS. Complete modified `.nds.zip` ROM archives have been removed from the GitHub branch contents. See `yellow-heartgold/BUILDING.md` for reproducible commands and required hashes. Keep older builds and their saves separate. Start a NEW GAME; do not load a prototype 001/002 save or save state. The original HeartGold title screen remains for now.
 
 Name your Kanto rival during Oak's introduction, after naming your player. Rejecting the name at confirmation reopens the naming screen. The chosen rival name is used in lab dialogue and battle messages. HeartGold's separate Johto rival is reserved for later and will use the default name Silver, without a second naming sequence.
 
@@ -21,3 +21,9 @@ The patch ZIP is an alternative: apply its `.xdelta` to the untouched US HeartGo
 Original HeartGold SHA-256: `65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105`.
 
 Prototype 003 output SHA-256: `1cd5dd980e9c9a542783fe261e5b4b9c59df7b1061e1be2d97f6fa2dd9e635db`.
+
+## Additional user-reported testing
+
+The project owner reports testing **Prototype 003 with melonDS DS on PC and Android**, with functionality working as intended so far. This is a user report, separate from the recorded DeSmuME automation/screenshots, and is not a claim that every feature and save-state edge case has been verified on both devices.
+
+Citra emulates **Nintendo 3DS** software and does not serve as a Nintendo DS ROM test environment. A real 3DS/2DS can run most DS cartridges using hardware backward compatibility, but that does not make `.nds` files directly playable in Citra. Use melonDS or another compatible DS emulator for this project.
