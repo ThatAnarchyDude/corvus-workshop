@@ -19,6 +19,25 @@ VALID_GENDERS = ("male", "female")
 EXPECTED_TABLE = (("left", 54, "male"), ("center", 175, "natural"),
                   ("right", 133, "female"))
 JOHTO_STARTERS = (152, 155, 158)
+# Ability effects already defined in vanilla HGSS include/constants/abilities.h.
+# Only these verified native effects may be used in the planned Kanto-only gifts.
+NATIVE_HG_ABILITIES = {
+    6: "Damp", 13: "Cloud Nine", 28: "Synchronize", 32: "Serene Grace",
+    33: "Swift Swim", 34: "Chlorophyll", 39: "Inner Focus", 50: "Run Away",
+    55: "Hustle", 62: "Guts", 91: "Adaptability", 93: "Hydration",
+    95: "Quick Feet", 105: "Super Luck", 107: "Anticipation",
+    115: "Ice Body",
+}
+EXPECTED_STARTER_ABILITIES = {
+    54: (6, 13, 33),       # Psyduck
+    175: (55, 32, 105),    # Togepi
+    133: (50, 91, 107),    # Eevee
+}
+EXPECTED_EVOLUTION_HIDDEN = {
+    55: 33, 176: 105, 468: 105, 134: 93, 135: 95, 136: 62,
+    196: None, 197: 39, 470: 34, 471: 115,
+}
+
 
 
 @lru_cache(maxsize=1)
@@ -31,6 +50,37 @@ def get_config() -> dict:
         raise ValueError("Starter table layout or gender rules changed unexpectedly")
     if tuple(data["johto_preservation"]["original_starters"]) != JOHTO_STARTERS:
         raise ValueError("Johto's original starters must remain untouched")
+    abilities = data["starter_creation"]["ability_slots"]
+    mapping = abilities["mapping"]
+    actual = {row["species"]: tuple(slot["id"] for slot in row["slots"])
+              for row in mapping}
+    if len(mapping) != 3 or actual != EXPECTED_STARTER_ABILITIES:
+        raise ValueError("Starter Hidden Ability list has drifted")
+    if set(abilities["native_hg_ability_ids_used"]) != set(NATIVE_HG_ABILITIES):
+        raise ValueError("Native HG ability list has drifted")
+    for row in mapping:
+        if [a["slot"] for a in row["slots"]] != [1, 2, 3]:
+            raise ValueError("Ability slots must be 1, 2, 3")
+        for ability in row["slots"]:
+            ability_id = ability["id"]
+            if NATIVE_HG_ABILITIES.get(ability_id) != ability["name"]:
+                raise ValueError("Attempted an ability not supported by HeartGold")
+            if bool(ability.get("hidden", False)) != (ability["slot"] == 3):
+                raise ValueError("Only slot 3 may be marked Hidden")
+    targets = abilities["evolution_targets"]
+    evolved = {row["species"]: row["hidden_ability_id"] for row in targets}
+    if len(targets) != len(EXPECTED_EVOLUTION_HIDDEN) or evolved != EXPECTED_EVOLUTION_HIDDEN:
+        raise ValueError("Evolution Hidden Ability catalog has drifted")
+    for row in targets:
+        ability_id = row["hidden_ability_id"]
+        if ability_id is None:
+            if row["species"] != 196 or row["hidden_ability"] != "Magic Bounce":
+                raise ValueError("Unrecognized missing Hidden Ability")
+            if (row.get("native_fallback") != "Synchronize"
+                or row.get("native_fallback_id") != 28):
+                raise ValueError("Espeon must use its native HG ability")
+        elif NATIVE_HG_ABILITIES.get(ability_id) != row["hidden_ability"]:
+            raise ValueError("Evolution requires an ability not supported by HeartGold")
     rules = {(entry["player_gender"], entry["chosen_starter"]):
              entry["rival_starter"] for entry in data["rival_rules"]}
     if len(rules) != len(data["rival_rules"]):
@@ -99,3 +149,42 @@ def pokemon_gender_for_pid(species: int, personality: int, ratio: int) -> str:
 def matches_required_gender(species: int, personality: int, ratio: int) -> bool:
     required = required_starter_gender(species)
     return required == "natural" or pokemon_gender_for_pid(species, personality, ratio) == required
+
+
+def starter_ability_options(species: int) -> tuple[int, int, int]:
+    """Returns vetted vanilla-HeartGold effects for Kanto starter slots 1-3."""
+    if species not in EXPECTED_STARTER_ABILITIES:
+        raise ValueError("Not a supported Kanto starter")
+    get_config()
+    return EXPECTED_STARTER_ABILITIES[species]
+
+
+def choose_starter_ability(species: int, randbelow) -> tuple[int, int, bool]:
+    """Select (ability_id, slot_number, hidden) using uniform randbelow(3).
+
+    This is pure planning logic, not an integrated DS ROM implementation.
+    """
+    abilities = starter_ability_options(species)
+    index = randbelow(len(abilities))
+    if type(index) is not int or index not in (0, 1, 2):
+        raise ValueError("Ability roll must be an integer between 0 and 2")
+    return abilities[index], index + 1, index == 2
+
+
+def evolved_hidden_ability(species: int, previously_hidden: bool) -> tuple[int | None, bool]:
+    """Return ability override and third-slot marker for an evolution.
+
+    None means permit vanilla HeartGold to determine the ability, not invent a
+    substitute Hidden Ability. On evolving Hidden Ability Eevee to Espeon,
+    both result fields are reset because Magic Bounce is not in HeartGold.
+    Other evolution branches are planned only; hooks have not been built.
+    """
+    if type(previously_hidden) is not bool:
+        raise ValueError("Hidden Ability marker must be boolean")
+    if species not in EXPECTED_EVOLUTION_HIDDEN:
+        raise ValueError("Not a supported evolution of our three starters")
+    get_config()
+    ability = EXPECTED_EVOLUTION_HIDDEN[species]
+    if not previously_hidden or ability is None:
+        return None, False
+    return ability, True
