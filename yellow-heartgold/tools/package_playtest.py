@@ -9,11 +9,13 @@ PROJECT = Path(__file__).resolve().parents[1]
 VENDOR = PROJECT/'tools/vendor/rom-patcher'
 
 
-def build(destination):
+def build(destination, version='004'):
+    if version not in ('004', '005'):
+        raise ValueError('Unsupported prototype version')
     destination.mkdir(parents=True, exist_ok=True)
-    patch = PROJECT/'build/yellow-heartgold-prototype-004.xdelta'
-    rom = PROJECT/'build/yellow-heartgold-prototype-004.nds'
-    manifest = dict(version='004', source_sha256=
+    patch = PROJECT/f'build/yellow-heartgold-prototype-{version}.xdelta'
+    rom = PROJECT/f'build/yellow-heartgold-prototype-{version}.nds'
+    manifest = dict(version=version, source_sha256=
         '65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105',
         output_sha256=hashlib.sha256(rom.read_bytes()).hexdigest(),
         source_bytes=134217728, output_bytes=rom.stat().st_size,
@@ -93,7 +95,10 @@ button.addEventListener('click',async()=>{
     worker.postMessage({rom,patch,manifest:config.manifest},[rom,patch]);
   } catch(error){status.textContent=error.message;finish();}
 });
-</script></html>'''.replace('PACKAGE', encoded)
+</script></html>'''.replace('004', version).replace('PACKAGE', encoded)
+    if version == '005':
+        html=html.replace('Start a <strong>new game</strong> to test the revised opening. Keep earlier saves backed up.',
+            'Start a <strong>new game</strong> to test the opening, or import a backed-up prototype 004 normal save through your emulator. Emulator save states should not be transferred between builds.')
     # hidden must override display on the downloadable link.
     html=html.replace('footer{margin-top', '[hidden]{display:none!important}footer{margin-top')
     (destination/'index.html').write_text(html)
@@ -105,4 +110,6 @@ button.addEventListener('click',async()=>{
 if __name__ == '__main__':
     parser=argparse.ArgumentParser()
     parser.add_argument('destination',type=Path)
-    build(parser.parse_args().destination)
+    parser.add_argument('--version',choices=['004','005'],default='004')
+    args=parser.parse_args()
+    build(args.destination,args.version)

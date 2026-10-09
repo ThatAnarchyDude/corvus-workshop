@@ -76,3 +76,7 @@ Use a new game and `--output-dir yellow-heartgold/build/emulator-003-final` to k
 ## Prototype 004
 
 See [PROTOTYPE-004.md](PROTOTYPE-004.md) for the current builder, downloader and actual verification evidence. Older sections above describe earlier releases; their starter UI and portrait details are superseded for prototype 004.
+
+## Prototype 005 title screen
+
+See [PROTOTYPE-005.md](PROTOTYPE-005.md) for the title builder, generated-art inputs, normal-save compatibility and exact validation scope. `tools/title.py` requires the exact tested prototype-004 input; it changes only title resources and the banner.
