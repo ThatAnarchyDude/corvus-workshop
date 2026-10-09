@@ -95,6 +95,7 @@ def escort():
     # Identical Oak models at the same final tile allow stable normal re-entry.
     s.emit(30, HIDE_ESCORT_OAK).emit(101, 8)
     s.emit(31, HIDE_LAB_OAK).emit(100, 0).emit(41, OAK_STATE, 1)
+    s.emit(41,0x416B,2).emit(1).emit(41,0x416B,0)
     music(s, 1103).msg(12).msg(13).msg(14)
     end(s)
     moves = {'approach': [(12, 12)], 'face_south': [(1, 1)],
@@ -167,12 +168,9 @@ def ball_choice(index):
     s.label('taken').msg(19)
     end(s)
     # Table is on the right; approach from the south, without passing through it.
-    target_x = 9 + rival_index
-    pickup = [(13, 1), (15, 2), (12, 2)]  # (10,10) -> (12,9)
-    if target_x != 12:
-        pickup.append((14, 12-target_x))
-    pickup.append((0, 1))
-    back = [(15, 12-target_x), (13, 2), (14, 2), (12, 1), (2, 1)]
+    target_x = 11 + rival_index
+    pickup = [(12, 2), (15, target_x-10), (12, 1), (0, 1)]
+    back = [(13, 1), (14, target_x-10), (13, 2), (2, 1)]
     s.moves('pickup', pickup).moves('return', back)
     return s.finish()
 
@@ -189,7 +187,7 @@ def lab_init():
     s.label('balls').emit(32, 0x6A).jump('done', 1)
     for flag in BALL_FLAGS:
         s.emit(31, flag)
-    s.label('done').emit(2)
+    s.label('done').emit(41,0x416B,2).emit(1).emit(41,0x416B,0).emit(2)
     return s.finish()
 
 
@@ -305,30 +303,32 @@ def build():
     lab_active += [ball_choice(i) for i in range(3)]
     # Clone the lab matrix and land member so its original physical assets stay intact.
     matrix = bytearray(matrices.files[250])
-    land = bytearray(lands.files[365])
+    original_land, = struct.unpack_from('<H', matrix, len(matrix)-2)
+    assert original_land == 366
+    land = bytearray(lands.files[original_land])
     props_at = 20 + struct.unpack_from('<I', land)[0]
-    assert struct.unpack_from('<i', land, props_at)[0] == 17
-    z_at = props_at + 12
+    table_prop = props_at + 7*48
+    assert struct.unpack_from('<i', land, table_prop)[0] == 95
+    z_at = table_prop + 12
     z, = struct.unpack_from('<i', land, z_at)
     struct.pack_into('<i', land, z_at, z - 16 * 4096)
-    # Widen the tabletop enough for three small balls, maintaining its centre.
-    struct.pack_into('<i', land, props_at + 28, 6144)
-    for z in [8, 10]:
-        struct.pack_into('<H', land, 20 + (z*32+10)*2, 0)
-    for z in [7, 9]:
-        struct.pack_into('<H', land, 20 + (z*32+10)*2, 0x8000)
+    # Move the table's solid footprint with its visible model.
+    for x in range(11, 14):
+        for z in range(5, 9):
+            if z == 7:
+                struct.pack_into('<H', land, 20 + (z*32+x)*2, 0)
+            elif z == 5:
+                struct.pack_into('<H', land, 20 + (z*32+x)*2, 0x8000)
     new_land = len(lands.files)
     lands.files.append(bytes(land))
     struct.pack_into('<H', matrix, len(matrix)-2, new_land)
     new_matrix = len(matrices.files)
     matrices.files.append(bytes(matrix))
     mappings = []
-    room_lines = ['You turned on the PC.', 'Withdraw the one POTION stored here?',
-                  'You withdrew one POTION!', 'Withdraw the 95 RARE CANDY stored here?',
-                  'You withdrew 95 RARE CANDY!', 'You turned off the PC.',
-                  'There is not enough room in your Bag.', "It's a Wii! Wii is huge in Kanto, too!"]
+    from player_pc import script as player_pc_script, TEXT as player_pc_text
+    room_lines = player_pc_text
     room_init = b''.join(command(30, flag) for flag in range(0x11B,0x11F))+command(2)
-    room_active = [talk(7),bedroom_pc(),room_init]
+    room_active = [talk(23),player_pc_script(),room_init]
     for map_id, active, lines, init_id in [(49, town_active, town_lines, 9), (505, lab_active, lab_lines, 15),
                                          (506,room_active,room_lines,3)]:
         at = table + map_id*24
@@ -342,8 +342,8 @@ def build():
             groups[1].append(actor(5,87,1,1039,350,HIDE_CAPTURE_BALL,3))
         elif map_id == 505:
             for i in range(3):
-                row = bytearray(actor(4+i, 87, 16+i, 9+i, 8, BALL_FLAGS[i], 0))
-                struct.pack_into('<i', row, 28, 16*4096)
+                row = bytearray(actor(4+i, 87, 16+i, 11+i, 6, BALL_FLAGS[i], 0))
+                struct.pack_into('<i', row, 28, 0)
                 groups[1][4+i] = bytes(row)
             groups[1].append(actor(8, 366, 1, 8, 12, HIDE_ESCORT_OAK, 0))
             # Keep assistants clear of the three balls and rival approach.
@@ -375,6 +375,8 @@ def build():
             if not restored and archive.files[i] != old:
                 raise ValueError(f'Preserved asset modified: {path}/{i}')
         rom.files[rom.filenames.idOf(path)] = archive.save()
+    from blue_naming import patch as patch_blue_naming
+    blue_naming = patch_blue_naming(rom)
     rom.name = b'PSYDUCK YLW'
     banner=bytearray(rom.iconBanner)
     title='Pokemon Psyduck Yellow\nOpening prototype 004\nCorvus Workshop'.encode('utf-16le')
@@ -390,7 +392,7 @@ def build():
     report = dict(build='prototype-004', output_sha256=sha(output), maps=mappings,
                   lab_matrix=new_matrix, lab_land=new_land,
                   original_assets_preserved=True, johto_starter_ui_restored=True,
-                  native_starter_hooks=native_hooks,rival_trainers=trainers,
+                  native_starter_hooks=native_hooks,rival_trainers=trainers,blue_naming=blue_naming,
                   capture_presentation='Animated field capture; no dedicated Oak battle back sprite',
                   gameplay_verified=False, save_compatibility='New game required for opening tests')
     (target.parent/'escort-report.json').write_text(json.dumps(report, indent=2)+'\n')

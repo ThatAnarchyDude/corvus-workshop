@@ -10,6 +10,34 @@ ldr r1, generation_var
 bl 0x020403AC
 cmp r0, #1
 beq enabled
+cmp r0, #2
+beq raise_balls
+b done
+raise_balls:
+movs r6, #4
+ball_loop:
+movs r0, r5
+movs r1, r6
+bl 0x02041C70
+cmp r0, #0
+beq next_ball
+ldr r1, [r0]
+movs r2, #1
+lsls r2, r2, #23
+orrs r1, r2
+str r1, [r0]
+adds r0, #80
+movs r1, #0
+str r1, [r0]
+str r1, [r0, #12]
+str r1, [r0, #24]
+movs r1, #16
+lsls r1, r1, #12
+str r1, [r0, #36]
+next_ball:
+adds r6, #1
+cmp r6, #7
+blo ball_loop
 b done
 enabled:
 ldr r0, [r5, #12]

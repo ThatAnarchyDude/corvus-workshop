@@ -136,13 +136,16 @@ first_trainer: .word {FIRST_BLUE_TRAINER}
     assert data[0x73414:0x73418] == bytes.fromhex('172804d1')
     name, name_code = append_code(main, name_source)
     data[0x73414:0x73418] = thumb_bl(0x02073414, name)
+    pc_bag, pc_bag_code = append_code(main, (PROJECT/'asm/pc-bag.s').read_text())
+    assert data[0x4310E:0x43112] == thumb_bl(0x0204310E, 0x0203E460)
+    data[0x4310E:0x43112] = thumb_bl(0x0204310E, pc_bag)
     # Move SDK's ITCM arena lower bound past the extension. All prior ITCM
     # code remains byte-identical, and future allocations cannot overwrite it.
     assert struct.unpack_from('<I', data, 0xD2C68)[0] == old_end
     end = main.sections[1].ramAddress + len(main.sections[1].data)
     struct.pack_into('<I', data, 0xD2C68, end)
     return dict(starter_hook=hex(address), starter_bytes=len(code),
-                ability_hook=hex(ability), rival_name_hook=hex(name),
+                ability_hook=hex(ability), rival_name_hook=hex(name), pc_bag_hook=hex(pc_bag),
                 itcm_end=hex(end), starter_code_sha256=sha(code),
                 shiny_roll_denominator=16384, perfect_iv_roll_denominator=16384,
                 hidden_ability_probability='1/3', hidden_ability_evolution_exception=

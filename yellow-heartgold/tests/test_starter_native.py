@@ -18,6 +18,8 @@ from starter_properties import patch
 from build_rom import PROJECT
 
 
+@unittest.skipUnless((PROJECT/"build/yellow-heartgold-prototype-003.nds").exists(),
+                     "Requires locally supplied HeartGold and prototype 003")
 class NativeStarterChecks(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
