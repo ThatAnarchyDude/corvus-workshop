@@ -108,6 +108,81 @@
       "independent_genders": true
     },
     "non_starter_scope": "Leave ordinary wild and NPC Pokémon creation unchanged",
-    "integration_status": "Pure creation-planning utilities and tests only. No live ROM branch yet."
+    "integration_status": "Pure creation-planning utilities and tests only. No live ROM branch yet.",
+    "ability_slots": {
+      "chance_policy": "Uniform 1-in-3 for each of three ability slots (per starter gift only). Hidden Ability must be flagged for evolution to preserve or map to the correct evolved third ability.",
+      "mapping": [
+        {
+          "species": 54,
+          "name": "Psyduck",
+          "slots": [
+            {
+              "slot": 1,
+              "id": 6,
+              "name": "Damp"
+            },
+            {
+              "slot": 2,
+              "id": 13,
+              "name": "Cloud Nine"
+            },
+            {
+              "slot": 3,
+              "id": 33,
+              "name": "Swift Swim",
+              "hidden": true
+            }
+          ]
+        },
+        {
+          "species": 175,
+          "name": "Togepi",
+          "slots": [
+            {
+              "slot": 1,
+              "id": 55,
+              "name": "Hustle"
+            },
+            {
+              "slot": 2,
+              "id": 32,
+              "name": "Serene Grace"
+            },
+            {
+              "slot": 3,
+              "id": 105,
+              "name": "Super Luck",
+              "hidden": true
+            }
+          ]
+        },
+        {
+          "species": 133,
+          "name": "Eevee",
+          "slots": [
+            {
+              "slot": 1,
+              "id": 50,
+              "name": "Run Away"
+            },
+            {
+              "slot": 2,
+              "id": 91,
+              "name": "Adaptability"
+            },
+            {
+              "slot": 3,
+              "id": 107,
+              "name": "Anticipation",
+              "hidden": true
+            }
+          ]
+        }
+      ],
+      "gen4_engine_status": "All nine ability IDs exist natively; third species slot and Hidden Ability inheritance do not exist in stock HeartGold.",
+      "method": "A Kanto-starter-only gift routine selects from the three ability IDs and explicitly sets MON_DATA_ABILITY. Preserve the selected third-slot marker across save/reload and map to compatible evolutionary Hidden Abilities; stock UpdateMonAbility will otherwise reset to the native two-slot ability.",
+      "evolution_note": "Reconcile ability mapping for Eevee's seven Gen-IV evolutions, Psyduck to Golduck, and Togepi to Togetic/Togekiss. Some later-generation evolved Hidden Abilities such as Espeon's Magic Bounce are not available in unmodified Gen-IV; requires separately scoped fallback or added engine support.",
+      "cross_game_scope": "Do not change Johto starter selection, wild Pokémon, general ability slots, or Silver."
+    }
   }
 }
