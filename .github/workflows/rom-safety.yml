@@ -11,4 +11,5 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+      - run: python3 -m unittest discover -s yellow-heartgold/tests -p 'test_repo_safety.py' -v
       - run: python3 yellow-heartgold/tools/check_repo_safety.py
