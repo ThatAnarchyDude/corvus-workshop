@@ -120,5 +120,38 @@ class NativeStarterChecks(unittest.TestCase):
         self.assertEqual(struct.unpack_from('<I',self.main.sections[0].data,0xD2C68)[0],
                          int(self.report['itcm_end'],16))
 
+    def test_field_gift_initializes_follower_using_current_player_location(self):
+        cpu = Uc(UC_ARCH_ARM, UC_MODE_THUMB)
+        cpu.mem_map(0x01FF8000, 0x8000)
+        cpu.mem_map(0x02000000, 0x120000)
+        cpu.mem_map(0x02300000, 0x20000)
+        cpu.mem_write(0x02000000, bytes(self.main.sections[0].data))
+        cpu.mem_write(0x01FF8000, bytes(self.main.sections[1].data))
+        ctx, fs, location, avatar, manager = [0x02300000+i*0x1000 for i in range(5)]
+        cpu.mem_write(ctx+128, struct.pack('<I', fs))
+        for offset, value in [(32,location),(60,manager),(64,avatar)]:
+            cpu.mem_write(fs+offset, struct.pack('<I',value))
+        cpu.mem_write(location, struct.pack('<I',505))
+        calls=[]
+        def hook(uc,address,size,_):
+            if address==0x020FF000:
+                uc.emu_stop();return
+            values={0x020403AC:3,0x0205C67C:13,0x0205C688:7,0x0205C654:0}
+            if address in values:
+                uc.reg_write(UC_ARM_REG_R0,values[address])
+            elif address==0x020699F8:
+                calls.append([uc.reg_read(reg) for reg in
+                    [UC_ARM_REG_R0,UC_ARM_REG_R1,UC_ARM_REG_R2,UC_ARM_REG_R3]]+
+                    [int.from_bytes(uc.mem_read(uc.reg_read(UC_ARM_REG_SP),4),'little')])
+            else:return
+            uc.reg_write(UC_ARM_REG_PC,uc.reg_read(UC_ARM_REG_LR))
+        cpu.hook_add(UC_HOOK_CODE,hook)
+        cpu.reg_write(UC_ARM_REG_SP,0x0231F000)
+        cpu.reg_write(UC_ARM_REG_LR,0x020FF001)
+        cpu.reg_write(UC_ARM_REG_R0,ctx)
+        cpu.emu_start(int(self.report['starter_hook'],16)|1,0x020FF000,count=1000)
+        self.assertEqual(calls,[[manager,13,7,0,505]])
+        self.assertEqual(cpu.reg_read(UC_ARM_REG_SP),0x0231F000)
+
 
 if __name__=='__main__':unittest.main()

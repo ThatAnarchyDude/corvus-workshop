@@ -22,6 +22,9 @@ TEXT = [
     'What would you like to do?',
     'ITEMS', 'MEDICINE', 'POKE BALLS', 'TMs AND HMs', 'BERRIES',
     'MAIL', 'BATTLE ITEMS',
+    'MAILBOX', 'BALL CAPSULES', 'PHOTO ALBUM',
+    'There is no Mail in your Mailbox.',
+    'You do not have any Seals for Ball Capsules yet.',
 ]
 
 
@@ -56,10 +59,31 @@ def script():
     menu(s, [(1,0),(2,1)])
     s.compare(0x800C,0).jump('login',1).jump('exit')
     s.label('login').emit(73,1548)
+    s.label('player_services')
+    s.emit(45);s.data.append(26)
+    s.emit(750);s.data.extend(bytes([1,1,0,1]));s.emit(0x800C)
+    for text,value in [(3,0),(34,1),(35,2)]:
+        s.emit(751,text,255,value)
+    s.emit(616,0x8005).compare(0x8005,0).jump('services_back',1)
+    s.emit(751,36,255,3)
+    s.label('services_back').emit(751,7,255,250).emit(752).emit(53)
+    for value,label in [(0,'storage'),(1,'mail'),(2,'capsules'),(3,'photos')]:
+        s.compare(0x800C,value).jump(label,1)
+    s.jump('main')
+    s.label('mail').emit(377,0x800C).compare(0x800C,0).jump('no_mail',1)
+    s.emit(174,6,1,0,0).emit(175).emit(376).emit(150)
+    s.emit(174,6,1,1,0).emit(175).jump('player_services')
+    s.label('no_mail');message(s,37);s.jump('player_services')
+    s.label('capsules').emit(572,0x800C).compare(0x800C,0).jump('no_seals',1)
+    s.emit(174,6,1,0,0).emit(175).emit(156)
+    s.emit(174,6,1,1,0).emit(175).jump('player_services')
+    s.label('no_seals');message(s,38);s.jump('player_services')
+    s.label('photos').emit(174,6,1,0,0).emit(175).emit(617).emit(150)
+    s.emit(174,6,1,1,0).emit(175).jump('player_services')
     s.label('storage'); menu(s,[(4,0),(5,1),(6,2),(7,3)])
     for value, label in [(0,'withdraw'),(1,'deposit'),(2,'toss')]:
         s.compare(0x800C,value).jump(label,1)
-    s.jump('main')
+    s.jump('player_services')
     for mode,label in [(0,'withdraw'),(2,'toss')]:
         s.label(label).emit(41,0x8008,mode).emit(41,0x8009,0)
         s.emit(45); s.data.append(26)
@@ -82,7 +106,7 @@ def script():
     s.compare(0x800A,6).jump('storage',2)
     message(s,24)
     s.emit(41,0x800B,0xCAFE).emit(333); s.data.append(0)
-    s.emit(334,0x8004).emit(41,0x800B,0).emit(150)
+    s.emit(334,0x8004).emit(41,0x800B,0).emit(150).emit(174,6,1,1,0).emit(175)
     s.compare(0x8004,0).jump('storage',1)
     s.emit(130,0x8004,0x800C).compare(0x800C,7).jump('storage',1)
     s.emit(669,0x8004,0x8005)

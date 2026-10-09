@@ -1,4 +1,4 @@
-@ Reserved script Dummy command: operates only while VAR 416B is explicitly 1.
+@ Reserved script Dummy command: gated starter properties, ball lift, follower init.
 @ Call after GiveMon and before the follower/Dex UI reads the new party member.
 @ Native SetMonPersonality reshuffles and re-encrypts both data blocks safely.
 push {r4, r5, r6, r7, lr}
@@ -12,6 +12,26 @@ cmp r0, #1
 beq enabled
 cmp r0, #2
 beq raise_balls
+cmp r0, #3
+beq create_follower
+b done
+create_follower:
+ldr r0, [r5, #64]
+bl 0x0205C67C
+movs r4, r0
+ldr r0, [r5, #64]
+bl 0x0205C688
+movs r6, r0
+ldr r0, [r5, #64]
+bl 0x0205C654
+movs r3, r0
+ldr r0, [r5, #32]
+ldr r0, [r0]
+str r0, [sp]
+ldr r0, [r5, #60]
+movs r1, r4
+movs r2, r6
+bl 0x020699F8
 b done
 raise_balls:
 movs r6, #4
@@ -24,16 +44,17 @@ beq next_ball
 ldr r1, [r0]
 movs r2, #1
 lsls r2, r2, #23
-orrs r1, r2
+bics r1, r2
 str r1, [r0]
 adds r0, #80
 movs r1, #0
 str r1, [r0]
 str r1, [r0, #12]
 str r1, [r0, #24]
+str r1, [r0, #36]
 movs r1, #16
 lsls r1, r1, #12
-str r1, [r0, #36]
+str r1, [r0, #60]
 next_ball:
 adds r6, #1
 cmp r6, #7

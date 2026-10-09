@@ -87,7 +87,7 @@ def escort():
     s.movement(255, 'door_entry').emit(95)
     s.emit(41, OAK_STATE, 3).emit(30, HIDE_LAB_OAK).emit(31, HIDE_ESCORT_OAK)
     s.emit(174, 6, 6, 0, 0).emit(175)
-    s.emit(176, 505, 0, 8, 13, 0)
+    s.emit(176, 505, 0, 8, 14, 0)
     s.emit(174, 6, 6, 1, 0).emit(175)
     music(s, 1086)
     s.movement(8, 'indoor_walk').movement(255, 'indoor_walk').emit(95)
@@ -102,7 +102,7 @@ def escort():
              'south_three': [(13, 3)], 'south_nineteen': [(13, 19)],
              'south_one': [(13, 1)], 'east_five': [(15, 5)],
              'east_four': [(15, 4)], 'north_two': [(12, 2)],
-             'door_entry': [(15, 1), (12, 2)], 'indoor_walk': [(12, 6)],
+             'door_entry': [(15, 1), (12, 2)], 'indoor_walk': [(12, 7)],
              'face_north': [(0, 1)], 'duck_approach': [(13, 6), (2, 1)],
              'ball_throw': [(55, 1)], 'ball_shake': [(44, 1)],
              'collect_ball': [(15, 1)]}
@@ -149,6 +149,9 @@ def ball_choice(index):
     s.label('received').emit(41, 0x416B, 1).emit(1).emit(41, 0x416B, 0)
     s.emit(30, 0x6A).emit(131, species)
     s.emit(30, BALL_FLAGS[index]).emit(101, 4 + index)
+    # A field gift does not return from the native starter application, whose
+    # map reload ordinarily creates the follower. Initialize it in place.
+    s.emit(41, 0x416B, 3).emit(1).emit(41, 0x416B, 0)
     s.emit(605)
     s.data.extend(bytes([1, 0]))
     s.emit(602, 0).emit(608).emit(3, 10, 0x800C).emit(602, 1)
@@ -187,7 +190,7 @@ def lab_init():
     s.label('balls').emit(32, 0x6A).jump('done', 1)
     for flag in BALL_FLAGS:
         s.emit(31, flag)
-    s.label('done').emit(41,0x416B,2).emit(1).emit(41,0x416B,0).emit(2)
+    s.label('done').emit(2)
     return s.finish()
 
 
@@ -208,22 +211,6 @@ def rival_battle(trainers):
     end(s).moves('face_rival', [(1, 1)]).moves('leave', [(13, 2)])
     s.moves('challenge', [(13, 3), (14, 2), (0, 1)])
     return s.finish()
-
-
-def bedroom_pc():
-    s = Script().emit(96).emit(73, 1547).msg(0)
-    for label, state, item, qty, question, receipt in [
-            ('potion', 0x4169, 17, 1, 1, 2), ('candy', 0x416A, 50, 95, 3, 4)]:
-        s.compare(state, 1).jump(label+'_done', 1)
-        s.emit(45);s.data.append(question)
-        s.emit(63, 0x800C).emit(53).compare(0x800C, 0).jump(label+'_done', 5)
-        s.emit(125, item, qty, 0x800C).compare(0x800C, 0).jump('no_room', 1)
-        s.emit(41, state, 1).emit(78, 1185).msg(receipt).emit(79)
-        s.label(label+'_done')
-    s.msg(5).emit(73, 1549)
-    end(s)
-    s.label('no_room').msg(6).emit(73, 1549)
-    return end(s).finish()
 
 
 def build():
@@ -301,6 +288,7 @@ def build():
     lab_active = [oak_talk()] + [talk(24) for _ in range(10)]
     lab_active += [rival_talk(), rival_battle(trainers), starter_exit_guard(), lab_init()]
     lab_active += [ball_choice(i) for i in range(3)]
+    lab_active += [command(41,0x416B,2)+command(1)+command(41,0x416B,0)+command(2)]
     # Clone the lab matrix and land member so its original physical assets stay intact.
     matrix = bytearray(matrices.files[250])
     original_land, = struct.unpack_from('<H', matrix, len(matrix)-2)
@@ -345,7 +333,7 @@ def build():
                 row = bytearray(actor(4+i, 87, 16+i, 11+i, 6, BALL_FLAGS[i], 0))
                 struct.pack_into('<i', row, 28, 0)
                 groups[1][4+i] = bytes(row)
-            groups[1].append(actor(8, 366, 1, 8, 12, HIDE_ESCORT_OAK, 0))
+            groups[1].append(actor(8, 366, 1, 8, 13, HIDE_ESCORT_OAK, 0))
             # Keep assistants clear of the three balls and rival approach.
             row = bytearray(groups[1][2]);struct.pack_into("<2H", row, 24, 5, 8);groups[1][2] = bytes(row)
             row = bytearray(groups[1][3]);struct.pack_into('<2H', row, 24, 5, 12);groups[1][3] = bytes(row)
@@ -357,7 +345,8 @@ def build():
                     for row in groups[0]] == [(1,(5,3)),(2,(6,3))]
         ids = [len(scripts.files), len(scripts.files)+1, len(texts.files), len(events.files)]
         scripts.files.append(script_bank(active))
-        scripts.files.append(struct.pack('<BHHB', 2, init_id, 0, 0)+b'\0\0')
+        scripts.files.append((struct.pack('<BHH',2,init_id,0)+struct.pack('<BHH',3,19,0)+b'\0\0')
+                             if map_id == 505 else struct.pack('<BHHB',2,init_id,0,0)+b'\0\0')
         texts.files.append(encode_text(lines, placeholder))
         events.files.append(events_encode(groups))
         struct.pack_into('<3H', data, at+6, *ids[:3])

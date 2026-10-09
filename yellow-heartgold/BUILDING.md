@@ -72,3 +72,7 @@ Opening dialogue is transcribed from pret/pokeyellow at the revision recorded in
 New rival parties use HG's rival trainer class, which reads the saved name instead of a fixed trainer label. Saved variable `0x416C` records the first lab battle's win/loss result for future Yellow story dependencies. Johto's later HG rival will have the separate default identity Silver; no second naming scene is planned.
 
 Use a new game and `--output-dir yellow-heartgold/build/emulator-003-final` to keep prototype 003 saves separate. Final release evidence and explicitly unrun checks belong in `releases/prototype-003/validation.json`.
+
+## Prototype 004
+
+See [PROTOTYPE-004.md](PROTOTYPE-004.md) for the current builder, downloader and actual verification evidence. Older sections above describe earlier releases; their starter UI and portrait details are superseded for prototype 004.
