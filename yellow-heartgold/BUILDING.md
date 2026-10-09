@@ -95,3 +95,7 @@ python3 yellow-heartgold/tools/check_repo_safety.py
 ```
 
 The builder appends quest script/text/event assets and a small ITCM Dex gate. It retains prototype-006 evolution and title data and every original script/event member. Quest variables use the existing save layout: shoes 0x4169, parcel 0x416A, cashier 0x416D; flag 0xB52 marks initialization and 0xB53 tracks Oak’s one-time Poké Balls. Type-3 map scripts also run the Dex gate when importing a normal save. Seen/caught records are preserved. Running Shoes use unused item ID 113 and native running functionality. Read the release’s playtest notes before interpreting scripted model checks as emulator evidence.
+
+## Prototype 008 — Viridian fixes
+
+See [PROTOTYPE-008.md](PROTOTYPE-008.md) for the incremental builder, required input and checks. It builds from the exact prototype-007 output and keeps that release reproducible.

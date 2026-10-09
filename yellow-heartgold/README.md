@@ -1,3 +1,5 @@
+Prototype 008 fixes the Viridian Center doorway and retires the parcel escort cashier after leaving the Mart. See [PROTOTYPE-008.md](PROTOTYPE-008.md) for playtest and save notes.
+
 # Pokémon Psyduck Yellow — implementation plan
 
 Status: prototype 007 opens Route 1 and Viridian for Oak’s Parcel, adds Mom’s Running Shoes scene and a walking cashier escort, and grants the National Pokédex only after delivery; see [PROTOTYPE-007.md](PROTOTYPE-007.md). Prototype 006 added PC evolution supplies and the requested item evolution methods; its Android playtest passed according to the owner. Prototype 005 added the animated Psyduck/water title to prototype 004's Pallet opening. Prototype 001 is the earlier Android-tested reference build. Prototype 002 adds a separate Pallet opening. Prototype 003 adds Oak's exit stop, Blue's starter pickup and lab-exit battle, and a bounded Route 1 test with Yellow encounters and NPCs. See the matching release's `validation.json` and `ANDROID-TESTING.md` for evidence and remaining checks, and [BUILDING.md](BUILDING.md) for reproducible build commands. The full Yellow campaign and Johto postgame remain to be implemented.

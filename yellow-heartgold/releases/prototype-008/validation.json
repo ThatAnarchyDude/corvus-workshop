@@ -1,0 +1,137 @@
+{
+  "version": "008",
+  "input_sha256": "28803b52062e6bc23c777d14092678255eb4412e46b1d87984d5eaef6609bcbf",
+  "output_sha256": "48af56b6369c82911de476437753fae43f8d842bd83a03fd1fcda2caf678f46f",
+  "patch_sha256": "f6c92c1515d7259d58f23ebd6a6413fa5b58250e8a1fae601751e016873151be",
+  "original_script_members_preserved": true,
+  "center_header_unchanged": true,
+  "doorway_signs_cleared": true,
+  "city_event": 511,
+  "mart_script": 1006,
+  "mart_init": 1007,
+  "date": "2026-10-09",
+  "tests": {
+    "passed": 88,
+    "skipped": 0
+  },
+  "browser": {
+    "output_sha256": "48af56b6369c82911de476437753fae43f8d842bd83a03fd1fcda2caf678f46f",
+    "bad_input_rejected": true,
+    "browser_errors": []
+  },
+  "emulator": {
+    "engine": "DeSmuME libretro",
+    "fixture": "Normal save positioned south of the Center with an ignored native-warp fixture; runtime checks use the final unmodified prototype 008 ROM and a fresh boot. Quest completion originates from the actual prototype-007 parcel playthrough.",
+    "completed": [
+      "Direct north-facing approach enters the Center without repeated label",
+      "Two counter cashiers remain, escort cashier hidden on Mart entry after collection",
+      "Upper cashier opens native Buy/Sell menu and lists Pok\u00e9 Balls",
+      "Bought one Pok\u00e9 Ball; live bag quantity increases from five to six",
+      "Lower cashier gives dialogue instead of opening a shop",
+      "Left and re-entered Mart; escort cashier remains absent"
+    ],
+    "unrun": [
+      "Android emulator",
+      "Full fresh-game quest playthrough on prototype 008",
+      "Normal save/reload after the new purchase"
+    ]
+  },
+  "purchase": {
+    "dex": {
+      "address": "0x227d550",
+      "flags": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "owned": [
+        133
+      ],
+      "seen": [
+        16,
+        19,
+        54,
+        133
+      ]
+    },
+    "field": {
+      "address": "0x22a0270",
+      "map_id": 500,
+      "player": [
+        5,
+        0,
+        8
+      ],
+      "follower": [
+        5,
+        0,
+        9
+      ],
+      "follower_species": 133,
+      "follower_active": 1,
+      "party_count": 1,
+      "active_dex_address": "0x227d550"
+    },
+    "note": "Follower visibility is verified separately in screenshots, not inferred from active state.",
+    "quest": {
+      "parcel": 2,
+      "shoes": 1,
+      "cashier": 2,
+      "initialized": true,
+      "balls_given": true
+    },
+    "pc_storage": [
+      {
+        "item": 0,
+        "quantity": 0
+      },
+      {
+        "item": 50,
+        "quantity": 95
+      },
+      {
+        "item": 83,
+        "quantity": 95
+      },
+      {
+        "item": 84,
+        "quantity": 95
+      },
+      {
+        "item": 82,
+        "quantity": 95
+      },
+      {
+        "item": 109,
+        "quantity": 95
+      },
+      {
+        "item": 108,
+        "quantity": 95
+      },
+      {
+        "item": 246,
+        "quantity": 95
+      },
+      {
+        "item": 85,
+        "quantity": 95
+      },
+      {
+        "item": 0,
+        "quantity": 0
+      }
+    ],
+    "bag_items": {
+      "113": 1,
+      "17": 2,
+      "50": 95,
+      "4": 6
+    },
+    "key_items": {
+      "113": 1
+    },
+    "running_unlocked": true
+  }
+}
