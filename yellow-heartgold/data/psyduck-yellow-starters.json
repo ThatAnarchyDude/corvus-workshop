@@ -57,20 +57,19 @@
       "player_gender": "female",
       "chosen_starter": 175,
       "rival_starter": 133
-    }
-  ],
-  "unresolved_rival_cases": [
-    {
-      "player_gender": "female",
-      "chosen_starter": 133,
-      "reason": "Awaiting supervisor's choice"
     },
     {
       "player_gender": "male",
       "chosen_starter": 54,
-      "reason": "Awaiting supervisor's choice"
+      "rival_starter": 133
+    },
+    {
+      "player_gender": "female",
+      "chosen_starter": 133,
+      "rival_starter": 54
     }
   ],
+  "unresolved_rival_cases": [],
   "rival_visuals": {
     "kanto": "Blue for overworld and battle assets; player-named rival",
     "johto": "Original red-haired rival Silver, unchanged"
@@ -85,17 +84,17 @@
     ],
     "future_exception": "eight Johto gym leaders scale by badge order as previously agreed"
   },
-  "release_policy": "When a complete, emulator-tested build is available, supply the owner's personally uploaded HeartGold-derived NDS via private conversation download, not as a public GitHub asset. Do not distribute an untested or broken build.",
+  "release_policy": "Publish a patch and local-only automatic browser downloader. The user selects their own HeartGold ROM; the finished NDS is created and downloaded on that device. Never upload ROMs, including ZIPs, to GitHub.",
   "starter_creation": {
     "chosen_game": "Pokémon Psyduck Yellow",
     "shiny_chance": {
       "numerator": 1,
-      "denominator": 2,
+      "denominator": 16384,
       "applies_to": "each starter gift only"
     },
     "perfect_six_iv_bonus": {
       "numerator": 1,
-      "denominator": 64,
+      "denominator": 16384,
       "applies_to": "each starter gift only",
       "rule": "On bonus success all six are 31. Otherwise each IV is independent and uniformly random 0..31; accidental natural 6IV also remains possible."
     },
@@ -108,7 +107,7 @@
       "independent_genders": true
     },
     "non_starter_scope": "Leave ordinary wild and NPC Pokémon creation unchanged",
-    "integration_status": "Pure creation-planning utilities and tests only. No live ROM branch yet.",
+    "integration_status": "Live Thumb-1 implementation in starter_properties.py; native DS validation in progress.",
     "ability_slots": {
       "chance_policy": "Uniform 1-in-3 for each of three ability slots (per starter gift only). Hidden Ability must be flagged for evolution to preserve or map to the correct evolved third ability.",
       "mapping": [

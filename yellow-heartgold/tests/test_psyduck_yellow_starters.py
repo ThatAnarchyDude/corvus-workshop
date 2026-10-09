@@ -27,11 +27,9 @@ class PsyduckYellowStarterTests(unittest.TestCase):
         self.assertEqual(rival_starter("male",175),133)
         self.assertEqual(rival_starter("female",175),133)
 
-    def test_unspecified_choices_fail_closed(self):
-        with self.assertRaises(NotImplementedError):
-            rival_starter("male",54)
-        with self.assertRaises(NotImplementedError):
-            rival_starter("female",133)
+    def test_remaining_choices_use_paired_favourites(self):
+        self.assertEqual(rival_starter("male",54),133)
+        self.assertEqual(rival_starter("female",133),54)
 
     def test_invalid_entries_fail_closed(self):
         for gender,species in (("other",54),("male",25),("female",155)):
