@@ -1,0 +1,27 @@
+name: Export existing patch and development tools
+on:
+  push:
+    paths:
+      - .github/workflows/export-existing-patch.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Package existing distributable patch and source
+        run: |
+          test -f releases/prototype-003/yellow-heartgold-prototype-003-android-patch.zip
+          mkdir -p staging
+          cp releases/prototype-003/yellow-heartgold-prototype-003-android-patch.zip staging/
+          cp -r yellow-heartgold/tools staging/tools
+          cp -r yellow-heartgold/data staging/data
+          cp -r yellow-heartgold/tests staging/tests
+          cp yellow-heartgold/BUILDING.md staging/
+      - uses: actions/upload-artifact@v4
+        with:
+          name: psyduck-yellow-development-inputs
+          path: staging/
+          retention-days: 1
