@@ -7,7 +7,7 @@ from yellow_opening_scene import (
     NORTH_EXIT_COLUMNS, ORIGINAL_OAK_START, OAK_INTERCEPT_Z,
     BGM_OAK_MEETING, BGM_OAK_ESCORT, BGM_RIVAL_CHALLENGE,
     CMD_PLAY_BGM, CMD_APPLY_MOVEMENT, CMD_PLAY_SE, MOVE_LEFT, MOVE_UP,
-    destination, follow_path, oak_approach
+    destination, follow_path, oak_approach, oak_to_lab, OAK_LAB_DOOR
 )
 
 class AuthenticOpeningStageTests(unittest.TestCase):
@@ -24,6 +24,15 @@ class AuthenticOpeningStageTests(unittest.TestCase):
             path=oak_approach(x)
             back=follow_path(path)
             self.assertEqual(destination((x,OAK_INTERCEPT_Z), back), ORIGINAL_OAK_START)
+
+    def test_full_candidate_oak_walk_reaches_actual_lab_door(self):
+        for x in NORTH_EXIT_COLUMNS:
+            with self.subTest(exit_x=x):
+                route=oak_approach(x)
+                escort=oak_to_lab(x)
+                self.assertEqual(destination((x,OAK_INTERCEPT_Z),escort),OAK_LAB_DOOR)
+                self.assertGreater(sum(step.steps for step in escort),20)
+                self.assertEqual(route[0].steps,ORIGINAL_OAK_START[0]-x)
 
     def test_unexpected_columns_fail_closed(self):
         for x in (0,1029,1034,1040):
