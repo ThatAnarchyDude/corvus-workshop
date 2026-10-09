@@ -19,7 +19,7 @@ Source: [pret/pokeyellow scripts/PalletTown.asm](https://github.com/pret/pokeyel
 ### Existing HeartGold asset inspection
 
 - Pallet map 49 currently has a **new** Oak actor (script object 3, sprite 366, staged at 1038,354 in Prototype 003), created by the development scripts. Native HG Pallet object 0 at (1040,367) is an unrelated woman (sprite 325); do not overwrite her.
-- Prototype 003 triggers Oak at north boundary and uses `SetObjectMovementType` to move him near the player, followed by a direct `RockClimb`-op-indexed? (see exact verified opcodes) map transition; this shortcut must be deleted from the **final** live script, not hidden behind animations.
+- Prototype 003 triggers Oak at north boundary and uses `SetObjectMovementType` to move him near the player, followed by a direct `Warp` command (opcode 176) into Oak's lab; this shortcut must be deleted from the **final** live script, not hidden behind animations.
 - Native HeartGold Oak's lab map 505 includes three ball objects at (7,3), (8,3), (9,3), sprite 87. Reuse their visual style in the **appended** Kanto event bank, but make them independently interactable. Do not modify or delete the original archive.
 - Current `tools/prototype.py` globally replaces Johto starter species in binary code with (25,133,175). The Yellow manual-selection implementation must eventually reverse that global patch and give Yellow starters through **Kanto-only script logic**, otherwise Johto would incorrectly offer Yellow starters.
 - Oak's currently scripted selection uses the stock HeartGold `ChooseStarter` interface. Remove that call from the Kanto storyline **only after** the physical Poké Ball interactions and follower initialization pass testing.
