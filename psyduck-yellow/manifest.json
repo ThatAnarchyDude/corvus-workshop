@@ -1,8 +1,8 @@
 {
-  "version": "007",
+  "version": "008",
   "source_sha256": "65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105",
-  "output_sha256": "28803b52062e6bc23c777d14092678255eb4412e46b1d87984d5eaef6609bcbf",
+  "output_sha256": "48af56b6369c82911de476437753fae43f8d842bd83a03fd1fcda2caf678f46f",
   "source_bytes": 134217728,
-  "output_bytes": 126613704,
-  "patch_sha256": "a43749e189e01024853195e8bc40aaaf1f61c1e8ee2ab8994083581faa95de45"
+  "output_bytes": 126616776,
+  "patch_sha256": "f6c92c1515d7259d58f23ebd6a6413fa5b58250e8a1fae601751e016873151be"
 }
