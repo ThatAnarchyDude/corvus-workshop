@@ -57,6 +57,8 @@ A Hidden Ability can be assigned only if the exact effect already exists in **va
 
 Native HG contains these **ability effects**, not a built-in three-slot Hidden Ability selection or retention scheme. Evolution's `UpdateMonAbility` resets ability from the native species and PID, so third-slot gift and inheritance will require carefully scoped code and save compatibility tests. Until built and verified, do not claim the ROM supports these features. The rule is **Kanto starter line only**; no changes to Johto, wild encounters, other Pokémon species, or Silver.
 
+**Other Pokémon:** defer Hidden Ability work entirely until a later individual species or story event genuinely needs it and the supervisor approves. At that time, check the exact ability against the unmodified HeartGold engine, implement only that targeted case, and keep every unrelated Pokémon untouched. No game-wide third-slot conversion.
+
 Explicit configuration: [data/psyduck-yellow-starters.json](data/psyduck-yellow-starters.json), with selection and evolution validation in [tools/psyduck_yellow_starters.py](tools/psyduck_yellow_starters.py).
 
 ## Blue and Johto preservation
@@ -69,7 +71,7 @@ Explicit configuration: [data/psyduck-yellow-starters.json](data/psyduck-yellow-
 
 - All valid north-exit columns and both player genders; no NPC sprite snapping or magically appearing near the player.
 - Both Oak and player visibly reach the Pallet lab doorway; door warp occurs only at the entrance. Oak and player continue into the lab, no loading-screen teleport to their final standing positions.
-- Oak's scene handles Pikachu capture, dialogue, BGM changes and scene persistence, including saving/reloading during appropriate intervals.
+- Oak's scene handles Psyduck capture, dialogue, BGM changes and scene persistence, including saving/reloading during appropriate intervals.
 - Right-side table visibly has three Poke Balls; player walks to one, presses A, hears selection cue, sees specific starter preview/name/cry, can decline, and confirms the choice with no touchscreen Elm interface.
 - Only one chosen starter is granted; the opponent chooses the documented partner, both are level five; immediate following and the National Dex timing remain as already agreed.
 - Blue (not Silver) is drawn in all Kanto dialogue/battle contexts; chosen name appears correctly. Silver and his existing Johto events are unchanged.
@@ -78,6 +80,6 @@ Explicit configuration: [data/psyduck-yellow-starters.json](data/psyduck-yellow-
 
 ## Existing staged source
 
-`tools/yellow_opening_scene.py` provides sound constants and **candidate** geometry for a future walking scene; `tools/opening.py` has initial meeting/escort/rival music calls. Neither change eliminates the old scripted teleport yet. Do **not** call this a complete implementation.
+`tools/yellow_opening_scene.py` provides sound constants and **candidate** geometry for a future walking scene; the actual Prototype 003 `tools/opening.py` remains unchanged and still uses its original instant warp. Neither asset completes the new choreography yet. Do **not** call this a complete implementation.
 
 Keep this branch separate from `pikachu-yellow-development` and the owner's known-good `android-prototype-003` build until all new scenes pass acceptance.
