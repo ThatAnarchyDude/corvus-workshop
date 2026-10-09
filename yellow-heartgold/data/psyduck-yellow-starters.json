@@ -275,7 +275,13 @@
           "hidden_ability": "Ice Body",
           "hidden_ability_id": 115
         }
-      ]
+      ],
+      "future_pokemon_policy": {
+        "scope": "Deferred. Do not mass-edit the Pokédex or native species abilities.",
+        "trigger": "Only when an additional Pokémon becomes relevant to story/gameplay and the supervisor asks for it",
+        "guard": "Enable its Hidden Ability only if that exact effect is implemented in unmodified HeartGold; otherwise preserve its normal HeartGold abilities.",
+        "implementation": "Use targeted changes per species or event; never rewrite all Pokémon globally."
+      }
     }
   }
 }
