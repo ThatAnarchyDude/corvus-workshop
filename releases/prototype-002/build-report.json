@@ -1,0 +1,77 @@
+{
+  "build": "prototype-002",
+  "output_sha256": "4c4cac888ba52d4eb3ecce80e045cd7b3e6cc2060d8328bf0617f1bffe12b6ef",
+  "maps": [
+    {
+      "name": "Pallet Town",
+      "map_id": 49,
+      "original": [
+        735,
+        508,
+        446,
+        46
+      ],
+      "active": [
+        965,
+        966,
+        829,
+        491
+      ]
+    },
+    {
+      "name": "Red's house, downstairs",
+      "map_id": 503,
+      "original": [
+        736,
+        509,
+        447,
+        455
+      ],
+      "active": [
+        967,
+        968,
+        830,
+        492
+      ]
+    },
+    {
+      "name": "Red's house, upstairs",
+      "map_id": 506,
+      "original": [
+        737,
+        510,
+        448,
+        458
+      ],
+      "active": [
+        969,
+        970,
+        831,
+        493
+      ]
+    },
+    {
+      "name": "Oak's lab",
+      "map_id": 505,
+      "original": [
+        740,
+        513,
+        451,
+        457
+      ],
+      "active": [
+        971,
+        972,
+        832,
+        494
+      ]
+    }
+  ],
+  "original_kanto_opening_assets_preserved": true,
+  "gameplay_verified": false,
+  "limitations": [
+    "First rival battle not yet added to Pallet",
+    "Route 1 encounters and northward story gates not adapted",
+    "Full Yellow story and Johto postgame not implemented"
+  ]
+}

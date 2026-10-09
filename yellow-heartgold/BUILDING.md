@@ -1,0 +1,53 @@
+# Build status and commands
+
+The build foundation and experimental prototype 001 are implemented. Run `yellow-heartgold/.venv/bin/python yellow-heartgold/tools/prototype.py` from the repository root to build the prototype. See ANDROID-TESTING.md for its implemented changes and limitations.
+
+From `/workspace/corvus-workshop`:
+
+```sh
+python3 -m venv yellow-heartgold/.venv
+yellow-heartgold/.venv/bin/python -m pip install -r yellow-heartgold/requirements.txt
+yellow-heartgold/.venv/bin/python yellow-heartgold/tools/build_rom.py
+```
+
+Outputs are ignored under `yellow-heartgold/build/`: `heartgold-baseline.nds` and `baseline-report.json`. The builder verifies the exact original SHA-256, repacks through pinned ndspy 4.2.0, reloads the result, and compares all 513 file payloads, filenames, ARM9/ARM7 binaries, overlay tables, banner and RSA-signature bytes. It checks that the original remains unchanged. These comparisons establish payload preservation, not playable behavior or cryptographic signature validity.
+
+Current output is 126,645,960 bytes versus the original 134,217,728 bytes. The repacker changes container layout/padding. Every checked payload is identical, but the output is not byte-identical and must pass boot, battle and save/reload checks before serving as a validated base. Prototype 001 emulator checks are recorded in `build/validation.json`; baseline-only gameplay checks are distinct from that prototype validation. Do not treat this output as the requested game.
+
+## Located implementation points
+
+Source reference: pret/pokeheartgold commit `9d8b7591f09b65804da2fb2dfd56f320633e0d36`, inspected in `/tmp/yellow-hg-reference`. This temporary checkout is not a permanent build dependency.
+
+- `src/choose_starter.c`: constructs level-5 starter Pokémon and adds the selected one to the party. Original species table `[152,155,158]` occurs once in decompressed ARM9 at `0x108514` for this exact input. Planned replacement is `[25,133,175]`.
+- `src/choose_starter_app.c`: selection screen has a second species table. Original table occurs once in decompressed overlay 61 at `0x1a98`. Presentation and actual receipt must change together. Confirm UI text, cries, graphics, rival scripts and persistent starter state before calling a table replacement complete.
+- `src/choose_starter.c`: party receipt is in state 3; the field overlay reloads before fading back to gameplay. This is the integration point to inspect for immediate follower creation.
+- `src/follow_mon.c`: original follower code uses `GetFirstNonEggInParty` and `GetFirstAliveMonInParty_CrashIfNone` in some paths. Therefore stock behavior does not always mean literal slot 1. Audit and adapt those paths to the requested slot-1 rule, including fainted leads and egg/empty-party handling. All-species graphical coverage is distinct from slot-selection correctness.
+
+Offsets refer to decompressed component data, not offsets to write directly into the original ROM. Compression, ARM9 module parameters, overlay compressed-size metadata and runtime loading must be handled correctly before binary edits are made.
+
+Prototype 001 now patches the coordinated starter tables/text, early Dex grant, follower selectors, Togepi opening moves and first rival teams. Six focused binary/script tests pass, and xdelta round-trip reproduction passes. Consult build/validation.json for completed emulator checks. All three starter receipt paths and Eevee normal save/reload have passed emulator checks. The user also reports successful Android testing. Follower reordering, fainted leads, eggs and all-species coverage remain unverified. Pallet relocation, story replacement and gym scaling remain to be implemented. The next opening build will retain the current early National Dex grant; relocating it to Oak’s parcel return is deferred.
+
+
+## Prototype commands
+
+```sh
+yellow-heartgold/.venv/bin/python yellow-heartgold/tools/prototype.py
+yellow-heartgold/.venv/bin/python -m unittest discover -s yellow-heartgold/tests -v
+```
+
+The builder optionally generates and round-trip verifies the xdelta patch when `.tools/xdelta3` exists. The current ignored tools directory contains xdelta3 from Debian’s signed trixie package indexes, and a locally compiled DeSmuME libretro core (upstream commit `95b4d798731caa809125b6c3c11d17cc332ff6ef`). No proprietary BIOS/firmware was required for this emulator smoke test. The core uses built-in emulation.
+
+`tools/emulator_smoke.py` is a local ctypes/libretro test harness. Run it with system `python3` (Pillow available), the ROM path, and a JSON list of actions containing `frames`, optional `buttons` (libretro joypad IDs), optional `touch` coordinates in the 256×384 stacked-screen layout, and optional `screenshot` output filenames. Add `--fresh` to start without loading the previous test state. Test states, screenshots and RAM dumps remain ignored under `build/emulator/`; they are development artifacts, not included in the Android patch package.
+
+## Pallet development build
+
+Prototype 002 is built separately from the exact tested prototype 001 output:
+
+```sh
+yellow-heartgold/.venv/bin/python yellow-heartgold/tools/pallet.py
+yellow-heartgold/.venv/bin/python -m unittest discover -s yellow-heartgold/tests -v
+```
+
+Outputs are `build/yellow-heartgold-prototype-002.nds`, its `.xdelta`, and `build/pallet-report.json`. The builder appends separate opening scripts, initialization scripts, text and event copies, and redirects four Pallet map headers to those additions. Original Kanto archive members remain available for the future Johto postgame. The only existing script changes remain the two Johto prototype-001 entries. The shared starter UI now names Oak. New-game and home-return positions and initial home recovery move to Pallet. The National Dex remains granted at starter receipt. Separate map-transition scripts unlock Bag, Trainer Card, Save and Options without requiring the Johto mother introduction. Oak’s gift uses the native follower release sequence and records the chosen starter for future rival branches.
+
+Use `--output-dir yellow-heartgold/build/emulator-002` with the emulator harness to isolate prototype-002 save states and normal saves from prototype 001. Its first rival battle, route encounter balance and campaign progression are not yet implemented. Consult the build report and validation evidence before distributing it as a playable test.

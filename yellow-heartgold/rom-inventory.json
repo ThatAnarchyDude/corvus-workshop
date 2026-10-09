@@ -1,0 +1,2636 @@
+[
+  {
+    "file": "Pokemon - Yellow Version (UE) [C][!].gbc",
+    "size": 1048576,
+    "sha1": "cc7d03262ebfaf2f06772c1a480c7d9d5f4a38e1",
+    "sha256": "8cbaa499397e4f1a679c992ea9382a2dd7942ab398b48c19829c2d9529de47bf",
+    "title": "POKEMON YELLOW",
+    "cgb_flag": 128,
+    "cartridge_type": 27
+  },
+  {
+    "file": "Pokemon - HeartGold Version (USA).nds",
+    "size": 134217728,
+    "sha1": "4fcded0e2713dc03929845de631d0932ea2b5a37",
+    "sha256": "65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105",
+    "title": "POKEMON HG",
+    "game_code": "IPKE",
+    "revision": 0,
+    "fat_entries": 513,
+    "named_files": 384,
+    "files": [
+      {
+        "id": 129,
+        "path": "a/0/0/0",
+        "offset": 19540480,
+        "size": 6416,
+        "narc_members": 501
+      },
+      {
+        "id": 130,
+        "path": "a/0/0/1",
+        "offset": 19547136,
+        "size": 53904,
+        "narc_members": 297
+      },
+      {
+        "id": 131,
+        "path": "a/0/0/2",
+        "offset": 19601408,
+        "size": 26468,
+        "narc_members": 508
+      },
+      {
+        "id": 132,
+        "path": "a/0/0/3",
+        "offset": 19628032,
+        "size": 3348,
+        "narc_members": 8
+      },
+      {
+        "id": 133,
+        "path": "a/0/0/4",
+        "offset": 19631616,
+        "size": 11778676,
+        "narc_members": 2964
+      },
+      {
+        "id": 134,
+        "path": "a/0/0/5",
+        "offset": 31410688,
+        "size": 23108,
+        "narc_members": 1976
+      },
+      {
+        "id": 135,
+        "path": "a/0/0/6",
+        "offset": 31434240,
+        "size": 523924,
+        "narc_members": 85
+      },
+      {
+        "id": 136,
+        "path": "a/0/0/7",
+        "offset": 31958528,
+        "size": 797708,
+        "narc_members": 351
+      },
+      {
+        "id": 137,
+        "path": "a/0/0/8",
+        "offset": 32756736,
+        "size": 121568,
+        "narc_members": 346
+      },
+      {
+        "id": 138,
+        "path": "a/0/0/9",
+        "offset": 32878592,
+        "size": 15284,
+        "narc_members": 32
+      },
+      {
+        "id": 139,
+        "path": "a/0/1/0",
+        "offset": 32893952,
+        "size": 255632,
+        "narc_members": 501
+      },
+      {
+        "id": 140,
+        "path": "a/0/1/1",
+        "offset": 33149952,
+        "size": 11356,
+        "narc_members": 471
+      },
+      {
+        "id": 141,
+        "path": "a/0/1/2",
+        "offset": 33161728,
+        "size": 372012,
+        "narc_members": 965
+      },
+      {
+        "id": 142,
+        "path": "a/0/1/3",
+        "offset": 33533952,
+        "size": 6748,
+        "narc_members": 16
+      },
+      {
+        "id": 143,
+        "path": "a/0/1/4",
+        "offset": 33541120,
+        "size": 24996,
+        "narc_members": 78
+      },
+      {
+        "id": 144,
+        "path": "a/0/1/5",
+        "offset": 33566208,
+        "size": 274376,
+        "narc_members": 95
+      },
+      {
+        "id": 145,
+        "path": "a/0/1/6",
+        "offset": 33840640,
+        "size": 201528,
+        "narc_members": 11
+      },
+      {
+        "id": 146,
+        "path": "a/0/1/7",
+        "offset": 34042368,
+        "size": 22668,
+        "narc_members": 514
+      },
+      {
+        "id": 147,
+        "path": "a/0/1/8",
+        "offset": 34065408,
+        "size": 448456,
+        "narc_members": 797
+      },
+      {
+        "id": 148,
+        "path": "a/0/1/9",
+        "offset": 34513920,
+        "size": 80596,
+        "narc_members": 87
+      },
+      {
+        "id": 149,
+        "path": "a/0/2/0",
+        "offset": 34594816,
+        "size": 589656,
+        "narc_members": 551
+      },
+      {
+        "id": 150,
+        "path": "a/0/2/1",
+        "offset": 35184640,
+        "size": 51400,
+        "narc_members": 27
+      },
+      {
+        "id": 151,
+        "path": "a/0/2/2",
+        "offset": 35236352,
+        "size": 33076,
+        "narc_members": 37
+      },
+      {
+        "id": 152,
+        "path": "a/0/2/3",
+        "offset": 35269632,
+        "size": 4480,
+        "narc_members": 39
+      },
+      {
+        "id": 153,
+        "path": "a/0/2/4",
+        "offset": 35274240,
+        "size": 5372,
+        "narc_members": 37
+      },
+      {
+        "id": 154,
+        "path": "a/0/2/5",
+        "offset": 35279872,
+        "size": 4688,
+        "narc_members": 37
+      },
+      {
+        "id": 155,
+        "path": "a/0/2/6",
+        "offset": 35284992,
+        "size": 255536,
+        "narc_members": 236
+      },
+      {
+        "id": 156,
+        "path": "a/0/2/7",
+        "offset": 35540992,
+        "size": 4622756,
+        "narc_members": 829
+      },
+      {
+        "id": 157,
+        "path": "a/0/2/8",
+        "offset": 40163840,
+        "size": 41524,
+        "narc_members": 7
+      },
+      {
+        "id": 158,
+        "path": "a/0/2/9",
+        "offset": 40205824,
+        "size": 2423552,
+        "narc_members": 486
+      },
+      {
+        "id": 159,
+        "path": "a/0/3/0",
+        "offset": 42629632,
+        "size": 16940,
+        "narc_members": 277
+      },
+      {
+        "id": 160,
+        "path": "a/0/3/1",
+        "offset": 42647040,
+        "size": 16432,
+        "narc_members": 19
+      },
+      {
+        "id": 161,
+        "path": "a/0/3/2",
+        "offset": 42663936,
+        "size": 136784,
+        "narc_members": 491
+      },
+      {
+        "id": 162,
+        "path": "a/0/3/3",
+        "offset": 42801152,
+        "size": 19196,
+        "narc_members": 508
+      },
+      {
+        "id": 163,
+        "path": "a/0/3/4",
+        "offset": 42820608,
+        "size": 26468,
+        "narc_members": 508
+      },
+      {
+        "id": 164,
+        "path": "a/0/3/5",
+        "offset": 42847232,
+        "size": 1444,
+        "narc_members": 12
+      },
+      {
+        "id": 165,
+        "path": "a/0/3/6",
+        "offset": 42848768,
+        "size": 44940,
+        "narc_members": 54
+      },
+      {
+        "id": 166,
+        "path": "a/0/3/7",
+        "offset": 42893824,
+        "size": 29020,
+        "narc_members": 142
+      },
+      {
+        "id": 167,
+        "path": "a/0/3/8",
+        "offset": 42923008,
+        "size": 35372,
+        "narc_members": 51
+      },
+      {
+        "id": 168,
+        "path": "a/0/3/9",
+        "offset": 42958848,
+        "size": 127152,
+        "narc_members": 137
+      },
+      {
+        "id": 169,
+        "path": "a/0/4/0",
+        "offset": 43086336,
+        "size": 2397304,
+        "narc_members": 340
+      },
+      {
+        "id": 170,
+        "path": "a/0/4/1",
+        "offset": 45484032,
+        "size": 12036,
+        "narc_members": 288
+      },
+      {
+        "id": 171,
+        "path": "a/0/4/2",
+        "offset": 45496320,
+        "size": 1748,
+        "narc_members": 106
+      },
+      {
+        "id": 172,
+        "path": "a/0/4/3",
+        "offset": 45498368,
+        "size": 4436,
+        "narc_members": 104
+      },
+      {
+        "id": 173,
+        "path": "a/0/4/4",
+        "offset": 45502976,
+        "size": 1834056,
+        "narc_members": 106
+      },
+      {
+        "id": 174,
+        "path": "a/0/4/5",
+        "offset": 47337472,
+        "size": 19816,
+        "narc_members": 9
+      },
+      {
+        "id": 175,
+        "path": "a/0/4/6",
+        "offset": 47357440,
+        "size": 805232,
+        "narc_members": 44
+      },
+      {
+        "id": 176,
+        "path": "a/0/4/7",
+        "offset": 48162816,
+        "size": 152,
+        "narc_members": 5
+      },
+      {
+        "id": 177,
+        "path": "a/0/4/8",
+        "offset": 48163328,
+        "size": 121772,
+        "narc_members": 53
+      },
+      {
+        "id": 178,
+        "path": "a/0/4/9",
+        "offset": 48285184,
+        "size": 335464,
+        "narc_members": 78
+      },
+      {
+        "id": 179,
+        "path": "a/0/5/0",
+        "offset": 48621056,
+        "size": 16088,
+        "narc_members": 3
+      },
+      {
+        "id": 180,
+        "path": "a/0/5/1",
+        "offset": 48637440,
+        "size": 183920,
+        "narc_members": 134
+      },
+      {
+        "id": 181,
+        "path": "a/0/5/2",
+        "offset": 48821760,
+        "size": 11484,
+        "narc_members": 13
+      },
+      {
+        "id": 182,
+        "path": "a/0/5/3",
+        "offset": 48833536,
+        "size": 133020,
+        "narc_members": 116
+      },
+      {
+        "id": 183,
+        "path": "a/0/5/4",
+        "offset": 48966656,
+        "size": 27580,
+        "narc_members": 21
+      },
+      {
+        "id": 184,
+        "path": "a/0/5/5",
+        "offset": 48994304,
+        "size": 20716,
+        "narc_members": 738
+      },
+      {
+        "id": 185,
+        "path": "a/0/5/6",
+        "offset": 49015296,
+        "size": 26416,
+        "narc_members": 738
+      },
+      {
+        "id": 186,
+        "path": "a/0/5/7",
+        "offset": 49041920,
+        "size": 6928,
+        "narc_members": 1
+      },
+      {
+        "id": 187,
+        "path": "a/0/5/8",
+        "offset": 49049088,
+        "size": 1663908,
+        "narc_members": 645
+      },
+      {
+        "id": 188,
+        "path": "a/0/5/9",
+        "offset": 50713088,
+        "size": 34408,
+        "narc_members": 5
+      },
+      {
+        "id": 189,
+        "path": "a/0/6/0",
+        "offset": 50747904,
+        "size": 46816,
+        "narc_members": 26
+      },
+      {
+        "id": 190,
+        "path": "a/0/6/1",
+        "offset": 50795008,
+        "size": 12312,
+        "narc_members": 50
+      },
+      {
+        "id": 191,
+        "path": "a/0/6/2",
+        "offset": 50807808,
+        "size": 23680,
+        "narc_members": 8
+      },
+      {
+        "id": 192,
+        "path": "a/0/6/3",
+        "offset": 50831872,
+        "size": 63656,
+        "narc_members": 59
+      },
+      {
+        "id": 193,
+        "path": "a/0/6/4",
+        "offset": 50895872,
+        "size": 19312,
+        "narc_members": 11
+      },
+      {
+        "id": 194,
+        "path": "a/0/6/5",
+        "offset": 50915328,
+        "size": 19536660,
+        "narc_members": 676
+      },
+      {
+        "id": 195,
+        "path": "a/0/6/6",
+        "offset": 70452224,
+        "size": 1332,
+        "narc_members": 64
+      },
+      {
+        "id": 196,
+        "path": "a/0/6/7",
+        "offset": 70453760,
+        "size": 72988,
+        "narc_members": 130
+      },
+      {
+        "id": 197,
+        "path": "a/0/6/8",
+        "offset": 70526976,
+        "size": 58768,
+        "narc_members": 123
+      },
+      {
+        "id": 198,
+        "path": "a/0/6/9",
+        "offset": 70585856,
+        "size": 58604,
+        "narc_members": 497
+      },
+      {
+        "id": 199,
+        "path": "a/0/7/0",
+        "offset": 70644736,
+        "size": 1769676,
+        "narc_members": 104
+      },
+      {
+        "id": 200,
+        "path": "a/0/7/1",
+        "offset": 72414720,
+        "size": 74408,
+        "narc_members": 28
+      },
+      {
+        "id": 201,
+        "path": "a/0/7/2",
+        "offset": 72489472,
+        "size": 18484,
+        "narc_members": 20
+      },
+      {
+        "id": 202,
+        "path": "a/0/7/3",
+        "offset": 72508416,
+        "size": 4088,
+        "narc_members": 8
+      },
+      {
+        "id": 203,
+        "path": "a/0/7/4",
+        "offset": 72512512,
+        "size": 24120,
+        "narc_members": 102
+      },
+      {
+        "id": 204,
+        "path": "a/0/7/5",
+        "offset": 72537088,
+        "size": 1176,
+        "narc_members": 2
+      },
+      {
+        "id": 205,
+        "path": "a/0/7/6",
+        "offset": 72538624,
+        "size": 10276,
+        "narc_members": 17
+      },
+      {
+        "id": 206,
+        "path": "a/0/7/7",
+        "offset": 72549376,
+        "size": 22276,
+        "narc_members": 4
+      },
+      {
+        "id": 207,
+        "path": "a/0/7/8",
+        "offset": 72571904,
+        "size": 5412,
+        "narc_members": 9
+      },
+      {
+        "id": 208,
+        "path": "a/0/7/9",
+        "offset": 72577536,
+        "size": 109872,
+        "narc_members": 37
+      },
+      {
+        "id": 209,
+        "path": "a/0/8/0",
+        "offset": 72687616,
+        "size": 67540,
+        "narc_members": 16
+      },
+      {
+        "id": 210,
+        "path": "a/0/8/1",
+        "offset": 72755200,
+        "size": 4637368,
+        "narc_members": 863
+      },
+      {
+        "id": 211,
+        "path": "a/0/8/2",
+        "offset": 77392896,
+        "size": 176604,
+        "narc_members": 18
+      },
+      {
+        "id": 212,
+        "path": "a/0/8/3",
+        "offset": 77569536,
+        "size": 868,
+        "narc_members": 4
+      },
+      {
+        "id": 213,
+        "path": "a/0/8/4",
+        "offset": 77570560,
+        "size": 21732,
+        "narc_members": 15
+      },
+      {
+        "id": 214,
+        "path": "a/0/8/5",
+        "offset": 77592576,
+        "size": 13736,
+        "narc_members": 18
+      },
+      {
+        "id": 215,
+        "path": "a/0/8/6",
+        "offset": 77606400,
+        "size": 14140,
+        "narc_members": 15
+      },
+      {
+        "id": 216,
+        "path": "a/0/8/7",
+        "offset": 77620736,
+        "size": 31756,
+        "narc_members": 120
+      },
+      {
+        "id": 217,
+        "path": "a/0/8/8",
+        "offset": 77652992,
+        "size": 150964,
+        "narc_members": 48
+      },
+      {
+        "id": 218,
+        "path": "a/0/8/9",
+        "offset": 77804032,
+        "size": 31512,
+        "narc_members": 28
+      },
+      {
+        "id": 219,
+        "path": "a/0/9/0",
+        "offset": 77835776,
+        "size": 28500,
+        "narc_members": 143
+      },
+      {
+        "id": 220,
+        "path": "a/0/9/1",
+        "offset": 77864448,
+        "size": 4284,
+        "narc_members": 10
+      },
+      {
+        "id": 221,
+        "path": "a/0/9/2",
+        "offset": 77869056,
+        "size": 612,
+        "narc_members": 16
+      },
+      {
+        "id": 222,
+        "path": "a/0/9/3",
+        "offset": 77870080,
+        "size": 34312,
+        "narc_members": 26
+      },
+      {
+        "id": 223,
+        "path": "a/0/9/4",
+        "offset": 77904896,
+        "size": 472620,
+        "narc_members": 20
+      },
+      {
+        "id": 224,
+        "path": "a/0/9/5",
+        "offset": 78377984,
+        "size": 365260,
+        "narc_members": 133
+      },
+      {
+        "id": 225,
+        "path": "a/0/9/6",
+        "offset": 78743552,
+        "size": 3016,
+        "narc_members": 2
+      },
+      {
+        "id": 226,
+        "path": "a/0/9/7",
+        "offset": 78746624,
+        "size": 19352,
+        "narc_members": 17
+      },
+      {
+        "id": 227,
+        "path": "a/0/9/8",
+        "offset": 78766080,
+        "size": 3272,
+        "narc_members": 19
+      },
+      {
+        "id": 228,
+        "path": "a/0/9/9",
+        "offset": 78769664,
+        "size": 42488,
+        "narc_members": 1
+      },
+      {
+        "id": 229,
+        "path": "a/1/0/0",
+        "offset": 78812160,
+        "size": 53592,
+        "narc_members": 49
+      },
+      {
+        "id": 230,
+        "path": "a/1/0/1",
+        "offset": 78865920,
+        "size": 30028,
+        "narc_members": 20
+      },
+      {
+        "id": 231,
+        "path": "a/1/0/2",
+        "offset": 78896128,
+        "size": 1828,
+        "narc_members": 12
+      },
+      {
+        "id": 232,
+        "path": "a/1/0/3",
+        "offset": 78898176,
+        "size": 145000,
+        "narc_members": 169
+      },
+      {
+        "id": 233,
+        "path": "a/1/0/4",
+        "offset": 79043584,
+        "size": 44416,
+        "narc_members": 9
+      },
+      {
+        "id": 234,
+        "path": "a/1/0/5",
+        "offset": 79088128,
+        "size": 1048,
+        "narc_members": 1
+      },
+      {
+        "id": 235,
+        "path": "a/1/0/6",
+        "offset": 79089664,
+        "size": 333608,
+        "narc_members": 273
+      },
+      {
+        "id": 236,
+        "path": "a/1/0/7",
+        "offset": 79423488,
+        "size": 10932,
+        "narc_members": 340
+      },
+      {
+        "id": 237,
+        "path": "a/1/0/8",
+        "offset": 79434752,
+        "size": 7156,
+        "narc_members": 222
+      },
+      {
+        "id": 238,
+        "path": "a/1/0/9",
+        "offset": 79441920,
+        "size": 407244,
+        "narc_members": 242
+      },
+      {
+        "id": 239,
+        "path": "a/1/1/0",
+        "offset": 79849472,
+        "size": 42588,
+        "narc_members": 22
+      },
+      {
+        "id": 240,
+        "path": "a/1/1/1",
+        "offset": 79892480,
+        "size": 13892,
+        "narc_members": 1
+      },
+      {
+        "id": 241,
+        "path": "a/1/1/2",
+        "offset": 79906816,
+        "size": 1248,
+        "narc_members": 13
+      },
+      {
+        "id": 242,
+        "path": "a/1/1/3",
+        "offset": 79908352,
+        "size": 34296,
+        "narc_members": 50
+      },
+      {
+        "id": 243,
+        "path": "a/1/1/4",
+        "offset": 79942656,
+        "size": 1047468,
+        "narc_members": 261
+      },
+      {
+        "id": 244,
+        "path": "a/1/1/5",
+        "offset": 80990208,
+        "size": 11004,
+        "narc_members": 11
+      },
+      {
+        "id": 245,
+        "path": "a/1/1/6",
+        "offset": 81001472,
+        "size": 9708,
+        "narc_members": 2
+      },
+      {
+        "id": 246,
+        "path": "a/1/1/7",
+        "offset": 81011200,
+        "size": 1972,
+        "narc_members": 160
+      },
+      {
+        "id": 247,
+        "path": "a/1/1/8",
+        "offset": 81013248,
+        "size": 5092,
+        "narc_members": 11
+      },
+      {
+        "id": 248,
+        "path": "a/1/1/9",
+        "offset": 81018368,
+        "size": 9364,
+        "narc_members": 2
+      },
+      {
+        "id": 249,
+        "path": "a/1/2/0",
+        "offset": 81028096,
+        "size": 128724,
+        "narc_members": 67
+      },
+      {
+        "id": 250,
+        "path": "a/1/2/1",
+        "offset": 81157120,
+        "size": 896,
+        "narc_members": 3
+      },
+      {
+        "id": 251,
+        "path": "a/1/2/2",
+        "offset": 81158144,
+        "size": 333468,
+        "narc_members": 67
+      },
+      {
+        "id": 252,
+        "path": "a/1/2/3",
+        "offset": 81491968,
+        "size": 152180,
+        "narc_members": 8
+      },
+      {
+        "id": 253,
+        "path": "a/1/2/4",
+        "offset": 81644544,
+        "size": 5320,
+        "narc_members": 4
+      },
+      {
+        "id": 254,
+        "path": "a/1/2/5",
+        "offset": 81650176,
+        "size": 3020,
+        "narc_members": 1
+      },
+      {
+        "id": 255,
+        "path": "a/1/2/6",
+        "offset": 81653248,
+        "size": 52020,
+        "narc_members": 25
+      },
+      {
+        "id": 256,
+        "path": "a/1/2/7",
+        "offset": 81705472,
+        "size": 95360,
+        "narc_members": 25
+      },
+      {
+        "id": 257,
+        "path": "a/1/2/8",
+        "offset": 81801216,
+        "size": 33728,
+        "narc_members": 307
+      },
+      {
+        "id": 258,
+        "path": "a/1/2/9",
+        "offset": 81835008,
+        "size": 22876,
+        "narc_members": 951
+      },
+      {
+        "id": 259,
+        "path": "a/1/3/0",
+        "offset": 81858048,
+        "size": 57312,
+        "narc_members": 7
+      },
+      {
+        "id": 260,
+        "path": "a/1/3/1",
+        "offset": 81915392,
+        "size": 1532,
+        "narc_members": 1
+      },
+      {
+        "id": 261,
+        "path": "a/1/3/2",
+        "offset": 81916928,
+        "size": 556,
+        "narc_members": 1
+      },
+      {
+        "id": 262,
+        "path": "a/1/3/3",
+        "offset": 81917952,
+        "size": 60072,
+        "narc_members": 3962
+      },
+      {
+        "id": 263,
+        "path": "a/1/3/4",
+        "offset": 81978368,
+        "size": 49712,
+        "narc_members": 24
+      },
+      {
+        "id": 264,
+        "path": "a/1/3/5",
+        "offset": 82028544,
+        "size": 556,
+        "narc_members": 1
+      },
+      {
+        "id": 265,
+        "path": "a/1/3/6",
+        "offset": 82029568,
+        "size": 29020,
+        "narc_members": 142
+      },
+      {
+        "id": 266,
+        "path": "a/1/3/7",
+        "offset": 82058752,
+        "size": 556,
+        "narc_members": 1
+      },
+      {
+        "id": 267,
+        "path": "a/1/3/8",
+        "offset": 82059776,
+        "size": 1048,
+        "narc_members": 1
+      },
+      {
+        "id": 268,
+        "path": "a/1/3/9",
+        "offset": 82061312,
+        "size": 20252,
+        "narc_members": 10
+      },
+      {
+        "id": 269,
+        "path": "a/1/4/0",
+        "offset": 82081792,
+        "size": 15612,
+        "narc_members": 2
+      },
+      {
+        "id": 270,
+        "path": "a/1/4/1",
+        "offset": 82097664,
+        "size": 6844,
+        "narc_members": 566
+      },
+      {
+        "id": 271,
+        "path": "a/1/4/2",
+        "offset": 82104832,
+        "size": 118340,
+        "narc_members": 31
+      },
+      {
+        "id": 272,
+        "path": "a/1/4/3",
+        "offset": 82223616,
+        "size": 123376,
+        "narc_members": 60
+      },
+      {
+        "id": 273,
+        "path": "a/1/4/4",
+        "offset": 82347008,
+        "size": 204796,
+        "narc_members": 70
+      },
+      {
+        "id": 274,
+        "path": "a/1/4/5",
+        "offset": 82551808,
+        "size": 70104,
+        "narc_members": 28
+      },
+      {
+        "id": 275,
+        "path": "a/1/4/6",
+        "offset": 82621952,
+        "size": 228884,
+        "narc_members": 52
+      },
+      {
+        "id": 276,
+        "path": "a/1/4/7",
+        "offset": 82851328,
+        "size": 76584,
+        "narc_members": 46
+      },
+      {
+        "id": 277,
+        "path": "a/1/4/8",
+        "offset": 82928128,
+        "size": 1426856,
+        "narc_members": 222
+      },
+      {
+        "id": 278,
+        "path": "a/1/4/9",
+        "offset": 84355072,
+        "size": 51476,
+        "narc_members": 12
+      },
+      {
+        "id": 279,
+        "path": "a/1/5/0",
+        "offset": 84406784,
+        "size": 1036152,
+        "narc_members": 228
+      },
+      {
+        "id": 280,
+        "path": "a/1/5/1",
+        "offset": 85443072,
+        "size": 8712,
+        "narc_members": 9
+      },
+      {
+        "id": 281,
+        "path": "a/1/5/2",
+        "offset": 85452288,
+        "size": 1684,
+        "narc_members": 10
+      },
+      {
+        "id": 282,
+        "path": "a/1/5/3",
+        "offset": 85454336,
+        "size": 50664,
+        "narc_members": 38
+      },
+      {
+        "id": 283,
+        "path": "a/1/5/4",
+        "offset": 85505024,
+        "size": 101952,
+        "narc_members": 35
+      },
+      {
+        "id": 284,
+        "path": "a/1/5/5",
+        "offset": 85607424,
+        "size": 64,
+        "narc_members": 1
+      },
+      {
+        "id": 285,
+        "path": "a/1/5/6",
+        "offset": 85607936,
+        "size": 104512,
+        "narc_members": 33
+      },
+      {
+        "id": 286,
+        "path": "a/1/5/7",
+        "offset": 85712896,
+        "size": 12852,
+        "narc_members": 7
+      },
+      {
+        "id": 287,
+        "path": "a/1/5/8",
+        "offset": 85726208,
+        "size": 12396,
+        "narc_members": 7
+      },
+      {
+        "id": 288,
+        "path": "a/1/5/9",
+        "offset": 85739008,
+        "size": 78288,
+        "narc_members": 7
+      },
+      {
+        "id": 289,
+        "path": "a/1/6/0",
+        "offset": 85817344,
+        "size": 65432,
+        "narc_members": 10
+      },
+      {
+        "id": 290,
+        "path": "a/1/6/1",
+        "offset": 85882880,
+        "size": 5816,
+        "narc_members": 4
+      },
+      {
+        "id": 291,
+        "path": "a/1/6/2",
+        "offset": 85889024,
+        "size": 90916,
+        "narc_members": 79
+      },
+      {
+        "id": 292,
+        "path": "a/1/6/3",
+        "offset": 85980160,
+        "size": 33388,
+        "narc_members": 18
+      },
+      {
+        "id": 293,
+        "path": "a/1/6/4",
+        "offset": 86013952,
+        "size": 1408,
+        "narc_members": 4
+      },
+      {
+        "id": 294,
+        "path": "a/1/6/5",
+        "offset": 86015488,
+        "size": 1088,
+        "narc_members": 2
+      },
+      {
+        "id": 295,
+        "path": "a/1/6/6",
+        "offset": 86017024,
+        "size": 87064,
+        "narc_members": 30
+      },
+      {
+        "id": 296,
+        "path": "a/1/6/7",
+        "offset": 86104576,
+        "size": 106116,
+        "narc_members": 33
+      },
+      {
+        "id": 297,
+        "path": "a/1/6/8",
+        "offset": 86211072,
+        "size": 116304,
+        "narc_members": 15
+      },
+      {
+        "id": 298,
+        "path": "a/1/6/9",
+        "offset": 86327808,
+        "size": 15564,
+        "narc_members": 554
+      },
+      {
+        "id": 299,
+        "path": "a/1/7/0",
+        "offset": 86343680,
+        "size": 1372,
+        "narc_members": 20
+      },
+      {
+        "id": 300,
+        "path": "a/1/7/1",
+        "offset": 86345216,
+        "size": 55444,
+        "narc_members": 13
+      },
+      {
+        "id": 301,
+        "path": "a/1/7/2",
+        "offset": 86401024,
+        "size": 59064,
+        "narc_members": 16
+      },
+      {
+        "id": 302,
+        "path": "a/1/7/3",
+        "offset": 86460416,
+        "size": 4972,
+        "narc_members": 10
+      },
+      {
+        "id": 303,
+        "path": "a/1/7/4",
+        "offset": 86465536,
+        "size": 518532,
+        "narc_members": 110
+      },
+      {
+        "id": 304,
+        "path": "a/1/7/5",
+        "offset": 86984192,
+        "size": 13092,
+        "narc_members": 90
+      },
+      {
+        "id": 305,
+        "path": "a/1/7/6",
+        "offset": 86997504,
+        "size": 24380,
+        "narc_members": 22
+      },
+      {
+        "id": 306,
+        "path": "a/1/7/7",
+        "offset": 87022080,
+        "size": 47800,
+        "narc_members": 74
+      },
+      {
+        "id": 307,
+        "path": "a/1/7/8",
+        "offset": 87070208,
+        "size": 126732,
+        "narc_members": 18
+      },
+      {
+        "id": 308,
+        "path": "a/1/7/9",
+        "offset": 87197184,
+        "size": 841192,
+        "narc_members": 319
+      },
+      {
+        "id": 309,
+        "path": "a/1/8/0",
+        "offset": 88038400,
+        "size": 44028,
+        "narc_members": 1
+      },
+      {
+        "id": 310,
+        "path": "a/1/8/1",
+        "offset": 88082432,
+        "size": 11744,
+        "narc_members": 12
+      },
+      {
+        "id": 311,
+        "path": "a/1/8/2",
+        "offset": 88094208,
+        "size": 42800,
+        "narc_members": 11
+      },
+      {
+        "id": 312,
+        "path": "a/1/8/3",
+        "offset": 88137216,
+        "size": 844988,
+        "narc_members": 197
+      },
+      {
+        "id": 313,
+        "path": "a/1/8/4",
+        "offset": 88982528,
+        "size": 48408,
+        "narc_members": 65
+      },
+      {
+        "id": 314,
+        "path": "a/1/8/5",
+        "offset": 89031168,
+        "size": 3132,
+        "narc_members": 1
+      },
+      {
+        "id": 315,
+        "path": "a/1/8/6",
+        "offset": 89034752,
+        "size": 91236,
+        "narc_members": 49
+      },
+      {
+        "id": 316,
+        "path": "a/1/8/7",
+        "offset": 89126400,
+        "size": 191724,
+        "narc_members": 27
+      },
+      {
+        "id": 317,
+        "path": "a/1/8/8",
+        "offset": 89318400,
+        "size": 64024,
+        "narc_members": 7
+      },
+      {
+        "id": 318,
+        "path": "a/1/8/9",
+        "offset": 89382912,
+        "size": 259696,
+        "narc_members": 47
+      },
+      {
+        "id": 319,
+        "path": "a/1/9/0",
+        "offset": 89643008,
+        "size": 93268,
+        "narc_members": 23
+      },
+      {
+        "id": 320,
+        "path": "a/1/9/1",
+        "offset": 89736704,
+        "size": 708816,
+        "narc_members": 258
+      },
+      {
+        "id": 321,
+        "path": "a/1/9/2",
+        "offset": 90445824,
+        "size": 216612,
+        "narc_members": 57
+      },
+      {
+        "id": 322,
+        "path": "a/1/9/3",
+        "offset": 90662912,
+        "size": 257844,
+        "narc_members": 86
+      },
+      {
+        "id": 323,
+        "path": "a/1/9/4",
+        "offset": 103590912,
+        "size": 23108,
+        "narc_members": 1976
+      },
+      {
+        "id": 324,
+        "path": "a/1/9/5",
+        "offset": 103614464,
+        "size": 1684,
+        "narc_members": 136
+      },
+      {
+        "id": 325,
+        "path": "a/1/9/6",
+        "offset": 103616512,
+        "size": 64420,
+        "narc_members": 7
+      },
+      {
+        "id": 326,
+        "path": "a/1/9/7",
+        "offset": 103681024,
+        "size": 26124,
+        "narc_members": 13
+      },
+      {
+        "id": 327,
+        "path": "a/1/9/8",
+        "offset": 103707648,
+        "size": 110260,
+        "narc_members": 27
+      },
+      {
+        "id": 328,
+        "path": "a/1/9/9",
+        "offset": 103818240,
+        "size": 303008,
+        "narc_members": 59
+      },
+      {
+        "id": 329,
+        "path": "a/2/0/0",
+        "offset": 104121344,
+        "size": 17040,
+        "narc_members": 26
+      },
+      {
+        "id": 330,
+        "path": "a/2/0/1",
+        "offset": 104138752,
+        "size": 812032,
+        "narc_members": 204
+      },
+      {
+        "id": 331,
+        "path": "a/2/0/2",
+        "offset": 104950784,
+        "size": 37160,
+        "narc_members": 315
+      },
+      {
+        "id": 332,
+        "path": "a/2/0/3",
+        "offset": 104988160,
+        "size": 22876,
+        "narc_members": 951
+      },
+      {
+        "id": 333,
+        "path": "a/2/0/4",
+        "offset": 105011200,
+        "size": 11524,
+        "narc_members": 478
+      },
+      {
+        "id": 334,
+        "path": "a/2/0/5",
+        "offset": 105022976,
+        "size": 162668,
+        "narc_members": 41
+      },
+      {
+        "id": 335,
+        "path": "a/2/0/6",
+        "offset": 105185792,
+        "size": 5708,
+        "narc_members": 2
+      },
+      {
+        "id": 336,
+        "path": "a/2/0/7",
+        "offset": 105191936,
+        "size": 363436,
+        "narc_members": 208
+      },
+      {
+        "id": 337,
+        "path": "a/2/0/8",
+        "offset": 105555456,
+        "size": 36308,
+        "narc_members": 30
+      },
+      {
+        "id": 338,
+        "path": "a/2/0/9",
+        "offset": 105591808,
+        "size": 71460,
+        "narc_members": 4954
+      },
+      {
+        "id": 339,
+        "path": "a/2/1/0",
+        "offset": 105663488,
+        "size": 420,
+        "narc_members": 1
+      },
+      {
+        "id": 340,
+        "path": "a/2/1/1",
+        "offset": 105664000,
+        "size": 21592,
+        "narc_members": 2
+      },
+      {
+        "id": 341,
+        "path": "a/2/1/2",
+        "offset": 105686016,
+        "size": 1464,
+        "narc_members": 1
+      },
+      {
+        "id": 342,
+        "path": "a/2/1/3",
+        "offset": 105687552,
+        "size": 15948,
+        "narc_members": 57
+      },
+      {
+        "id": 343,
+        "path": "a/2/1/4",
+        "offset": 105703936,
+        "size": 24124,
+        "narc_members": 102
+      },
+      {
+        "id": 344,
+        "path": "a/2/1/5",
+        "offset": 105728512,
+        "size": 31040,
+        "narc_members": 19
+      },
+      {
+        "id": 345,
+        "path": "a/2/1/6",
+        "offset": 105759744,
+        "size": 129800,
+        "narc_members": 140
+      },
+      {
+        "id": 346,
+        "path": "a/2/1/7",
+        "offset": 105889792,
+        "size": 115032,
+        "narc_members": 22
+      },
+      {
+        "id": 347,
+        "path": "a/2/1/8",
+        "offset": 106004992,
+        "size": 34524,
+        "narc_members": 11
+      },
+      {
+        "id": 348,
+        "path": "a/2/1/9",
+        "offset": 106039808,
+        "size": 131000,
+        "narc_members": 62
+      },
+      {
+        "id": 349,
+        "path": "a/2/2/0",
+        "offset": 106170880,
+        "size": 144340,
+        "narc_members": 236
+      },
+      {
+        "id": 350,
+        "path": "a/2/2/1",
+        "offset": 106315264,
+        "size": 61432,
+        "narc_members": 1023
+      },
+      {
+        "id": 351,
+        "path": "a/2/2/2",
+        "offset": 106376704,
+        "size": 9556,
+        "narc_members": 108
+      },
+      {
+        "id": 352,
+        "path": "a/2/2/3",
+        "offset": 106386432,
+        "size": 24012,
+        "narc_members": 13
+      },
+      {
+        "id": 353,
+        "path": "a/2/2/4",
+        "offset": 106410496,
+        "size": 130428,
+        "narc_members": 18
+      },
+      {
+        "id": 354,
+        "path": "a/2/2/5",
+        "offset": 106541056,
+        "size": 2212,
+        "narc_members": 20
+      },
+      {
+        "id": 355,
+        "path": "a/2/2/6",
+        "offset": 106543616,
+        "size": 4684,
+        "narc_members": 3
+      },
+      {
+        "id": 356,
+        "path": "a/2/2/7",
+        "offset": 106548736,
+        "size": 392,
+        "narc_members": 10
+      },
+      {
+        "id": 357,
+        "path": "a/2/2/8",
+        "offset": 106549248,
+        "size": 577776,
+        "narc_members": 540
+      },
+      {
+        "id": 358,
+        "path": "a/2/2/9",
+        "offset": 107127296,
+        "size": 4152,
+        "narc_members": 1
+      },
+      {
+        "id": 359,
+        "path": "a/2/3/0",
+        "offset": 107131904,
+        "size": 11092,
+        "narc_members": 12
+      },
+      {
+        "id": 360,
+        "path": "a/2/3/1",
+        "offset": 107143168,
+        "size": 556,
+        "narc_members": 1
+      },
+      {
+        "id": 361,
+        "path": "a/2/3/2",
+        "offset": 107144192,
+        "size": 21960,
+        "narc_members": 19
+      },
+      {
+        "id": 362,
+        "path": "a/2/3/3",
+        "offset": 107166208,
+        "size": 1137628,
+        "narc_members": 60
+      },
+      {
+        "id": 363,
+        "path": "a/2/3/4",
+        "offset": 108303872,
+        "size": 102792,
+        "narc_members": 20
+      },
+      {
+        "id": 364,
+        "path": "a/2/3/5",
+        "offset": 108406784,
+        "size": 14708,
+        "narc_members": 27
+      },
+      {
+        "id": 365,
+        "path": "a/2/3/6",
+        "offset": 108421632,
+        "size": 24728,
+        "narc_members": 14
+      },
+      {
+        "id": 366,
+        "path": "a/2/3/7",
+        "offset": 108446720,
+        "size": 30012,
+        "narc_members": 18
+      },
+      {
+        "id": 367,
+        "path": "a/2/3/8",
+        "offset": 108476928,
+        "size": 419092,
+        "narc_members": 20
+      },
+      {
+        "id": 368,
+        "path": "a/2/3/9",
+        "offset": 108896256,
+        "size": 5872,
+        "narc_members": 16
+      },
+      {
+        "id": 369,
+        "path": "a/2/4/0",
+        "offset": 108902400,
+        "size": 21768,
+        "narc_members": 25
+      },
+      {
+        "id": 370,
+        "path": "a/2/4/1",
+        "offset": 108924416,
+        "size": 4128,
+        "narc_members": 8
+      },
+      {
+        "id": 371,
+        "path": "a/2/4/2",
+        "offset": 108929024,
+        "size": 7424,
+        "narc_members": 11
+      },
+      {
+        "id": 372,
+        "path": "a/2/4/3",
+        "offset": 108936704,
+        "size": 437100,
+        "narc_members": 27
+      },
+      {
+        "id": 373,
+        "path": "a/2/4/4",
+        "offset": 109373952,
+        "size": 84324,
+        "narc_members": 7
+      },
+      {
+        "id": 374,
+        "path": "a/2/4/5",
+        "offset": 109458432,
+        "size": 2484480,
+        "narc_members": 208
+      },
+      {
+        "id": 375,
+        "path": "a/2/4/6",
+        "offset": 111943168,
+        "size": 79436,
+        "narc_members": 60
+      },
+      {
+        "id": 376,
+        "path": "a/2/4/7",
+        "offset": 112023040,
+        "size": 18248,
+        "narc_members": 24
+      },
+      {
+        "id": 377,
+        "path": "a/2/4/8",
+        "offset": 112041472,
+        "size": 135724,
+        "narc_members": 540
+      },
+      {
+        "id": 378,
+        "path": "a/2/4/9",
+        "offset": 112177664,
+        "size": 21440,
+        "narc_members": 26
+      },
+      {
+        "id": 379,
+        "path": "a/2/5/0",
+        "offset": 112199168,
+        "size": 5368,
+        "narc_members": 11
+      },
+      {
+        "id": 380,
+        "path": "a/2/5/1",
+        "offset": 112204800,
+        "size": 4268,
+        "narc_members": 8
+      },
+      {
+        "id": 381,
+        "path": "a/2/5/2",
+        "offset": 112209408,
+        "size": 31780,
+        "narc_members": 540
+      },
+      {
+        "id": 382,
+        "path": "a/2/5/3",
+        "offset": 112241664,
+        "size": 6532,
+        "narc_members": 540
+      },
+      {
+        "id": 383,
+        "path": "a/2/5/4",
+        "offset": 112248320,
+        "size": 2284,
+        "narc_members": 93
+      },
+      {
+        "id": 384,
+        "path": "a/2/5/5",
+        "offset": 112250880,
+        "size": 5712,
+        "narc_members": 8
+      },
+      {
+        "id": 385,
+        "path": "a/2/5/6",
+        "offset": 112257024,
+        "size": 538984,
+        "narc_members": 664
+      },
+      {
+        "id": 386,
+        "path": "a/2/5/7",
+        "offset": 112796160,
+        "size": 2640,
+        "narc_members": 7
+      },
+      {
+        "id": 387,
+        "path": "a/2/5/8",
+        "offset": 112799232,
+        "size": 1652,
+        "narc_members": 100
+      },
+      {
+        "id": 388,
+        "path": "a/2/5/9",
+        "offset": 112801280,
+        "size": 4348,
+        "narc_members": 8
+      },
+      {
+        "id": 389,
+        "path": "a/2/6/0",
+        "offset": 112805888,
+        "size": 4776,
+        "narc_members": 10
+      },
+      {
+        "id": 390,
+        "path": "a/2/6/1",
+        "offset": 112811008,
+        "size": 1300,
+        "narc_members": 3
+      },
+      {
+        "id": 391,
+        "path": "a/2/6/2",
+        "offset": 112812544,
+        "size": 405044,
+        "narc_members": 106
+      },
+      {
+        "id": 392,
+        "path": "a/2/6/3",
+        "offset": 113218048,
+        "size": 194880,
+        "narc_members": 192
+      },
+      {
+        "id": 393,
+        "path": "a/2/6/4",
+        "offset": 113413120,
+        "size": 14484,
+        "narc_members": 18
+      },
+      {
+        "id": 394,
+        "path": "data/area00light.txt",
+        "offset": 3282432,
+        "size": 2005
+      },
+      {
+        "id": 395,
+        "path": "data/area01light.txt",
+        "offset": 3284480,
+        "size": 2024
+      },
+      {
+        "id": 396,
+        "path": "data/area02light.txt",
+        "offset": 3286528,
+        "size": 2114
+      },
+      {
+        "id": 397,
+        "path": "data/arealight.narc",
+        "offset": 3289088,
+        "size": 8376,
+        "narc_members": 4
+      },
+      {
+        "id": 398,
+        "path": "data/battle_win.NSCR",
+        "offset": 3297792,
+        "size": 2084
+      },
+      {
+        "id": 399,
+        "path": "data/cell0.NCGR",
+        "offset": 3300352,
+        "size": 8240
+      },
+      {
+        "id": 400,
+        "path": "data/cell0.NCLR",
+        "offset": 3309056,
+        "size": 552
+      },
+      {
+        "id": 401,
+        "path": "data/clact_default.NANR",
+        "offset": 3310080,
+        "size": 111
+      },
+      {
+        "id": 402,
+        "path": "data/crystal.nsbmd",
+        "offset": 3310592,
+        "size": 3332
+      },
+      {
+        "id": 403,
+        "path": "data/demo_climax.narc",
+        "offset": 3314176,
+        "size": 472620,
+        "narc_members": 20
+      },
+      {
+        "id": 404,
+        "path": "data/dp_areawindow.NCGR",
+        "offset": 3787264,
+        "size": 368
+      },
+      {
+        "id": 405,
+        "path": "data/dp_areawindow.NCLR",
+        "offset": 3787776,
+        "size": 552
+      },
+      {
+        "id": 406,
+        "path": "data/dun20_01light.txt",
+        "offset": 3788800,
+        "size": 134
+      },
+      {
+        "id": 407,
+        "path": "data/dun20_02light.txt",
+        "offset": 3789312,
+        "size": 134
+      },
+      {
+        "id": 408,
+        "path": "data/dun_sea.nsbtx",
+        "offset": 3789824,
+        "size": 1400
+      },
+      {
+        "id": 409,
+        "path": "data/eoo.dat",
+        "offset": 3791360,
+        "size": 278016
+      },
+      {
+        "id": 410,
+        "path": "data/exdata.dat",
+        "offset": 4069376,
+        "size": 292
+      },
+      {
+        "id": 411,
+        "path": "data/farm.dat",
+        "offset": 4069888,
+        "size": 505920
+      },
+      {
+        "id": 412,
+        "path": "data/field_cutin.narc",
+        "offset": 4576256,
+        "size": 34312,
+        "narc_members": 26
+      },
+      {
+        "id": 413,
+        "path": "data/fldtanime.narc",
+        "offset": 4611072,
+        "size": 20252,
+        "narc_members": 10
+      },
+      {
+        "id": 414,
+        "path": "data/fs_kanban.nsbca",
+        "offset": 4631552,
+        "size": 2036
+      },
+      {
+        "id": 415,
+        "path": "data/ground0.NCGR",
+        "offset": 4633600,
+        "size": 32816
+      },
+      {
+        "id": 416,
+        "path": "data/ground0.NCLR",
+        "offset": 4666880,
+        "size": 552
+      },
+      {
+        "id": 417,
+        "path": "data/ground0.NSCR",
+        "offset": 4667904,
+        "size": 2084
+      },
+      {
+        "id": 418,
+        "path": "data/gsbr.dat",
+        "offset": 4670464,
+        "size": 425024
+      },
+      {
+        "id": 419,
+        "path": "data/guru2.narc",
+        "offset": 5095936,
+        "size": 191724,
+        "narc_members": 27
+      },
+      {
+        "id": 420,
+        "path": "data/kemu_itpconv.dat",
+        "offset": 5287936,
+        "size": 20
+      },
+      {
+        "id": 421,
+        "path": "data/kowaza.narc",
+        "offset": 5288448,
+        "size": 4152,
+        "narc_members": 1
+      },
+      {
+        "id": 422,
+        "path": "data/lake_anim.nsbtx",
+        "offset": 5293056,
+        "size": 4432
+      },
+      {
+        "id": 423,
+        "path": "data/miniasahamabe.nsbtx",
+        "offset": 5297664,
+        "size": 4488
+      },
+      {
+        "id": 424,
+        "path": "data/miniasasea.nsbtx",
+        "offset": 5302272,
+        "size": 1400
+      },
+      {
+        "id": 425,
+        "path": "data/minihamabe.nsbtx",
+        "offset": 5303808,
+        "size": 4488
+      },
+      {
+        "id": 426,
+        "path": "data/minimum.nsbtx",
+        "offset": 5308416,
+        "size": 1400
+      },
+      {
+        "id": 427,
+        "path": "data/minirhana.nsbtx",
+        "offset": 5309952,
+        "size": 712
+      },
+      {
+        "id": 428,
+        "path": "data/nfont.NCGR",
+        "offset": 5310976,
+        "size": 32816
+      },
+      {
+        "id": 429,
+        "path": "data/nfont.NCLR",
+        "offset": 5344256,
+        "size": 552
+      },
+      {
+        "id": 430,
+        "path": "data/pc.nsbca",
+        "offset": 5345280,
+        "size": 396
+      },
+      {
+        "id": 431,
+        "path": "data/pl_wifi.ncgr",
+        "offset": 5345792,
+        "size": 576
+      },
+      {
+        "id": 432,
+        "path": "data/pl_wm.ncgr",
+        "offset": 5346816,
+        "size": 576
+      },
+      {
+        "id": 433,
+        "path": "data/pl_wm.nclr",
+        "offset": 5347840,
+        "size": 552
+      },
+      {
+        "id": 434,
+        "path": "data/slot.narc",
+        "offset": 5348864,
+        "size": 88388,
+        "narc_members": 77
+      },
+      {
+        "id": 435,
+        "path": "data/smptm_koori.NANR",
+        "offset": 5437440,
+        "size": 163
+      },
+      {
+        "id": 436,
+        "path": "data/smptm_koori.NCER",
+        "offset": 5437952,
+        "size": 215
+      },
+      {
+        "id": 437,
+        "path": "data/smptm_koori.NCGR",
+        "offset": 5438464,
+        "size": 3248
+      },
+      {
+        "id": 438,
+        "path": "data/smptm_koori.NCLR",
+        "offset": 5442048,
+        "size": 552
+      },
+      {
+        "id": 439,
+        "path": "data/smptm_nemuri.NANR",
+        "offset": 5443072,
+        "size": 111
+      },
+      {
+        "id": 440,
+        "path": "data/smptm_nemuri.NCER",
+        "offset": 5443584,
+        "size": 99
+      },
+      {
+        "id": 441,
+        "path": "data/smptm_nemuri.NCGR",
+        "offset": 5444096,
+        "size": 560
+      },
+      {
+        "id": 442,
+        "path": "data/smptm_nemuri.NCLR",
+        "offset": 5445120,
+        "size": 552
+      },
+      {
+        "id": 443,
+        "path": "data/str2uni.bin",
+        "offset": 5446144,
+        "size": 4832
+      },
+      {
+        "id": 444,
+        "path": "data/t3_fl_b.nsbtx",
+        "offset": 5451264,
+        "size": 592
+      },
+      {
+        "id": 445,
+        "path": "data/t3_fl_p.nsbtx",
+        "offset": 5452288,
+        "size": 592
+      },
+      {
+        "id": 446,
+        "path": "data/t3_fl_r.nsbtx",
+        "offset": 5453312,
+        "size": 592
+      },
+      {
+        "id": 447,
+        "path": "data/t3_fl_y.nsbtx",
+        "offset": 5454336,
+        "size": 592
+      },
+      {
+        "id": 448,
+        "path": "data/test.atr",
+        "offset": 5455360,
+        "size": 2048
+      },
+      {
+        "id": 449,
+        "path": "data/tmap_block.dat",
+        "offset": 5457408,
+        "size": 4372
+      },
+      {
+        "id": 450,
+        "path": "data/tmap_flags.dat",
+        "offset": 5462016,
+        "size": 732
+      },
+      {
+        "id": 451,
+        "path": "data/tradelist.narc",
+        "offset": 5463040,
+        "size": 11484,
+        "narc_members": 13
+      },
+      {
+        "id": 452,
+        "path": "data/trapmark.narc",
+        "offset": 5474816,
+        "size": 612,
+        "narc_members": 1
+      },
+      {
+        "id": 453,
+        "path": "data/ug_anim.narc",
+        "offset": 5475840,
+        "size": 23680,
+        "narc_members": 8
+      },
+      {
+        "id": 454,
+        "path": "data/ug_base_cur.nsbmd",
+        "offset": 5499904,
+        "size": 1684
+      },
+      {
+        "id": 455,
+        "path": "data/ug_boygirl.NCGR",
+        "offset": 5501952,
+        "size": 4656
+      },
+      {
+        "id": 456,
+        "path": "data/ug_boygirl.NCLR",
+        "offset": 5507072,
+        "size": 552
+      },
+      {
+        "id": 457,
+        "path": "data/ug_fossil.narc",
+        "offset": 5508096,
+        "size": 16088,
+        "narc_members": 3
+      },
+      {
+        "id": 458,
+        "path": "data/ug_hero.NANR",
+        "offset": 5524480,
+        "size": 249
+      },
+      {
+        "id": 459,
+        "path": "data/ug_hero.NCER",
+        "offset": 5524992,
+        "size": 265
+      },
+      {
+        "id": 460,
+        "path": "data/ug_hole.NANR",
+        "offset": 5525504,
+        "size": 214
+      },
+      {
+        "id": 461,
+        "path": "data/ug_hole.NCER",
+        "offset": 5526016,
+        "size": 162
+      },
+      {
+        "id": 462,
+        "path": "data/ug_hole.NCGR",
+        "offset": 5526528,
+        "size": 1328
+      },
+      {
+        "id": 463,
+        "path": "data/ug_parts.narc",
+        "offset": 5528064,
+        "size": 133020,
+        "narc_members": 116
+      },
+      {
+        "id": 464,
+        "path": "data/ug_radar.narc",
+        "offset": 5661184,
+        "size": 14440,
+        "narc_members": 7
+      },
+      {
+        "id": 465,
+        "path": "data/ug_trap.narc",
+        "offset": 5676032,
+        "size": 121772,
+        "narc_members": 53
+      },
+      {
+        "id": 466,
+        "path": "data/ugeffect_obj_graphic.narc",
+        "offset": 5797888,
+        "size": 19816,
+        "narc_members": 9
+      },
+      {
+        "id": 467,
+        "path": "data/underg_radar.narc",
+        "offset": 5817856,
+        "size": 41524,
+        "narc_members": 7
+      },
+      {
+        "id": 468,
+        "path": "data/UTF16.dat",
+        "offset": 3281920,
+        "size": 490
+      },
+      {
+        "id": 469,
+        "path": "data/utility.bin",
+        "offset": 5859840,
+        "size": 929852
+      },
+      {
+        "id": 470,
+        "path": "data/weather_sys.narc",
+        "offset": 6790144,
+        "size": 63656,
+        "narc_members": 59
+      },
+      {
+        "id": 471,
+        "path": "data/wifi.ncgr",
+        "offset": 6854144,
+        "size": 576
+      },
+      {
+        "id": 472,
+        "path": "data/wifinote.narc",
+        "offset": 6855168,
+        "size": 14668,
+        "narc_members": 12
+      },
+      {
+        "id": 473,
+        "path": "data/wifip2pmatch.narc",
+        "offset": 6870016,
+        "size": 150964,
+        "narc_members": 48
+      },
+      {
+        "id": 474,
+        "path": "data/wm.ncgr",
+        "offset": 7021056,
+        "size": 576
+      },
+      {
+        "id": 475,
+        "path": "data/wm.nclr",
+        "offset": 7022080,
+        "size": 552
+      },
+      {
+        "id": 476,
+        "path": "data/wm256k.ncgr",
+        "offset": 7023104,
+        "size": 1088
+      },
+      {
+        "id": 477,
+        "path": "data/mushi/mushi_encount.bin",
+        "offset": 19535872,
+        "size": 320
+      },
+      {
+        "id": 478,
+        "path": "data/mushi/mushi_trainer.bin",
+        "offset": 19534848,
+        "size": 640
+      },
+      {
+        "id": 479,
+        "path": "data/sound/gs_sound_data.sdat",
+        "offset": 7024640,
+        "size": 8660096
+      },
+      {
+        "id": 480,
+        "path": "dwc/utility.bin",
+        "offset": 125715968,
+        "size": 929852
+      },
+      {
+        "id": 481,
+        "path": "fielddata/build_model/bm_field.narc",
+        "offset": 15692288,
+        "size": 2397304,
+        "narc_members": 340
+      },
+      {
+        "id": 482,
+        "path": "fielddata/build_model/bm_field_matshp.dat",
+        "offset": 19516928,
+        "size": 4296
+      },
+      {
+        "id": 483,
+        "path": "fielddata/build_model/bm_room.narc",
+        "offset": 18089984,
+        "size": 1426856,
+        "narc_members": 222
+      },
+      {
+        "id": 484,
+        "path": "fielddata/build_model/bm_room_matshp.dat",
+        "offset": 19521536,
+        "size": 1856
+      },
+      {
+        "id": 485,
+        "path": "fielddata/maptable/mapname.bin",
+        "offset": 19524608,
+        "size": 8640
+      },
+      {
+        "id": 486,
+        "path": "fielddata/wazaoshie/waza_oshie.bin",
+        "offset": 19536384,
+        "size": 4040
+      },
+      {
+        "id": 487,
+        "path": "msgdata/scenario/scr_msg.narc",
+        "offset": 15685120,
+        "size": 6748,
+        "narc_members": 16
+      },
+      {
+        "id": 488,
+        "path": "pbr/b_plist_gra.narc",
+        "offset": 113427968,
+        "size": 74408,
+        "narc_members": 28
+      },
+      {
+        "id": 489,
+        "path": "pbr/bag_gra.narc",
+        "offset": 113502720,
+        "size": 105588,
+        "narc_members": 39
+      },
+      {
+        "id": 490,
+        "path": "pbr/batt_bg.narc",
+        "offset": 113608704,
+        "size": 640124,
+        "narc_members": 257
+      },
+      {
+        "id": 491,
+        "path": "pbr/batt_obj.narc",
+        "offset": 114249216,
+        "size": 131676,
+        "narc_members": 279
+      },
+      {
+        "id": 492,
+        "path": "pbr/font.narc",
+        "offset": 114381312,
+        "size": 134744,
+        "narc_members": 8
+      },
+      {
+        "id": 493,
+        "path": "pbr/growtbl.narc",
+        "offset": 114516480,
+        "size": 3348,
+        "narc_members": 8
+      },
+      {
+        "id": 494,
+        "path": "pbr/item_data.narc",
+        "offset": 114520064,
+        "size": 19500,
+        "narc_members": 442
+      },
+      {
+        "id": 495,
+        "path": "pbr/msg.narc",
+        "offset": 114540032,
+        "size": 2695184,
+        "narc_members": 624
+      },
+      {
+        "id": 496,
+        "path": "pbr/otherpoke.narc",
+        "offset": 102700032,
+        "size": 890604,
+        "narc_members": 213
+      },
+      {
+        "id": 497,
+        "path": "pbr/pbr_file.inc",
+        "offset": 117235712,
+        "size": 483
+      },
+      {
+        "id": 498,
+        "path": "pbr/personal.narc",
+        "offset": 117236224,
+        "size": 26104,
+        "narc_members": 501
+      },
+      {
+        "id": 499,
+        "path": "pbr/plist_gra.narc",
+        "offset": 117262336,
+        "size": 40108,
+        "narc_members": 24
+      },
+      {
+        "id": 500,
+        "path": "pbr/poke_anm.narc",
+        "offset": 117302784,
+        "size": 25412,
+        "narc_members": 134
+      },
+      {
+        "id": 501,
+        "path": "pbr/poke_icon.narc",
+        "offset": 117328384,
+        "size": 577776,
+        "narc_members": 540
+      },
+      {
+        "id": 502,
+        "path": "pbr/pokeanm.narc",
+        "offset": 117906432,
+        "size": 13892,
+        "narc_members": 1
+      },
+      {
+        "id": 503,
+        "path": "pbr/pokegra.narc",
+        "offset": 90920960,
+        "size": 11778676,
+        "narc_members": 2964
+      },
+      {
+        "id": 504,
+        "path": "pbr/poketch.narc",
+        "offset": 125581824,
+        "size": 59468,
+        "narc_members": 126
+      },
+      {
+        "id": 505,
+        "path": "pbr/pokezukan.narc",
+        "offset": 117920768,
+        "size": 1048,
+        "narc_members": 1
+      },
+      {
+        "id": 506,
+        "path": "pbr/pst_gra.narc",
+        "offset": 117922304,
+        "size": 127152,
+        "narc_members": 137
+      },
+      {
+        "id": 507,
+        "path": "pbr/sound_data.sdat",
+        "offset": 118049792,
+        "size": 7484768
+      },
+      {
+        "id": 508,
+        "path": "pbr/waza_tbl.narc",
+        "offset": 125534720,
+        "size": 11356,
+        "narc_members": 471
+      },
+      {
+        "id": 509,
+        "path": "pbr/winframe.narc",
+        "offset": 125546496,
+        "size": 35044,
+        "narc_members": 50
+      },
+      {
+        "id": 510,
+        "path": "pbr/zukan.narc",
+        "offset": 125641728,
+        "size": 73968,
+        "narc_members": 130
+      },
+      {
+        "id": 511,
+        "path": "poketool/personal/pms.narc",
+        "offset": 19523584,
+        "size": 1016
+      },
+      {
+        "id": 512,
+        "path": "tel/pmtel_book.dat",
+        "offset": 19533312,
+        "size": 1504
+      }
+    ]
+  }
+]

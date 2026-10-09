@@ -1,0 +1,137 @@
+{
+  "build": "prototype-002",
+  "output_sha256": "4c4cac888ba52d4eb3ecce80e045cd7b3e6cc2060d8328bf0617f1bffe12b6ef",
+  "status": "Pallet opening slice validated in emulator",
+  "automated_tests": {
+    "passed": 10,
+    "failed": 0
+  },
+  "passed": [
+    "Exact xdelta encode/decode roundtrip",
+    "Every original event archive member preserved",
+    "Original Kanto scripts and messages preserved",
+    "Fresh new game starts in Pallet upstairs bedroom",
+    "House stairs, house exit and Oak lab entrance",
+    "All three starter choices, immediate visible followers and one-member parties",
+    "National Dex enabled with only selected starter caught",
+    "Bag, Trainer Card, Save and Options available without Johto introduction",
+    "Repeat Oak interaction heals instead of granting another starter",
+    "National Dex UI shows one seen and one obtained",
+    "Normal in-game save, emulator restart without save state, Continue reload with Togepi follower and Dex retained",
+    "Follower resumes after lab exit, re-entry and walking"
+  ],
+  "unrun": [
+    "Physical Android emulator test for prototype 002",
+    "Pikachu and Eevee normal save/reload in prototype 002",
+    "Blackout recovery gameplay",
+    "Fainted leads, eggs, party reordering and all 493 follower species"
+  ],
+  "not_implemented": [
+    "Pallet first rival battle",
+    "Route 1 encounter balance and northward story gates",
+    "Full Yellow campaign and Kanto gym adaptations",
+    "Johto postgame and scaled gym teams",
+    "New title screen"
+  ],
+  "starter_runtime_checks": [
+    {
+      "dex": {
+        "address": "0x227d4a8",
+        "flags": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "owned": [
+          25
+        ]
+      },
+      "field": {
+        "address": "0x22a01c8",
+        "map_id": 505,
+        "player": [
+          8,
+          0,
+          7
+        ],
+        "follower": [
+          8,
+          0,
+          8
+        ],
+        "follower_species": 25,
+        "follower_active": 1,
+        "party_count": 1,
+        "active_dex_address": "0x227d4a8"
+      },
+      "note": "Follower visibility is verified separately in screenshots, not inferred from active state."
+    },
+    {
+      "dex": {
+        "address": "0x227d4a8",
+        "flags": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "owned": [
+          133
+        ]
+      },
+      "field": {
+        "address": "0x22a01c8",
+        "map_id": 505,
+        "player": [
+          8,
+          0,
+          7
+        ],
+        "follower": [
+          8,
+          0,
+          8
+        ],
+        "follower_species": 133,
+        "follower_active": 1,
+        "party_count": 1,
+        "active_dex_address": "0x227d4a8"
+      },
+      "note": "Follower visibility is verified separately in screenshots, not inferred from active state."
+    },
+    {
+      "dex": {
+        "address": "0x227d4a8",
+        "flags": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "owned": [
+          175
+        ]
+      },
+      "field": {
+        "address": "0x22a01c8",
+        "map_id": 505,
+        "player": [
+          8,
+          0,
+          7
+        ],
+        "follower": [
+          8,
+          0,
+          8
+        ],
+        "follower_species": 175,
+        "follower_active": 1,
+        "party_count": 1,
+        "active_dex_address": "0x227d4a8"
+      },
+      "note": "Follower visibility is verified separately in screenshots, not inferred from active state."
+    }
+  ]
+}
