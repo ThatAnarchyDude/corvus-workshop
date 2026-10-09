@@ -180,9 +180,102 @@
         }
       ],
       "gen4_engine_status": "All nine ability IDs exist natively; third species slot and Hidden Ability inheritance do not exist in stock HeartGold.",
-      "method": "A Kanto-starter-only gift routine selects from the three ability IDs and explicitly sets MON_DATA_ABILITY. Preserve the selected third-slot marker across save/reload and map to compatible evolutionary Hidden Abilities; stock UpdateMonAbility will otherwise reset to the native two-slot ability.",
-      "evolution_note": "Reconcile ability mapping for Eevee's seven Gen-IV evolutions, Psyduck to Golduck, and Togepi to Togetic/Togekiss. Some later-generation evolved Hidden Abilities such as Espeon's Magic Bounce are not available in unmodified Gen-IV; requires separately scoped fallback or added engine support.",
-      "cross_game_scope": "Do not change Johto starter selection, wild Pokémon, general ability slots, or Silver."
+      "method": "Design-stage Kanto-only creation/evolution hooks must set an available ability explicitly, retain a third-slot marker through saves, and bypass stock UpdateMonAbility only where an existing Hidden Ability maps to the evolved species. No such hook has been integrated yet.",
+      "evolution_note": "Map starter Hidden Ability to the evolved species' own Hidden Ability ONLY when that ability exists in stock HeartGold. Espeon's Magic Bounce is absent: on evolution let HeartGold recalculate its native Synchronize and discard any third-slot state. Non-hidden Pokémon use original HeartGold evolution mechanics. Preserve vanilla Johto and wild encounters.",
+      "cross_game_scope": "Do not change Johto starter selection, wild Pokémon, general ability slots, or Silver.",
+      "compatibility_policy": "Give third-slot Hidden Abilities only if the exact effect is already implemented in the original HeartGold engine. Never add Gen V+ abilities, substitute a different Hidden Ability, or modify globally shared Pokémon data.",
+      "native_hg_ability_ids_used": [
+        6,
+        13,
+        28,
+        32,
+        33,
+        34,
+        39,
+        50,
+        55,
+        62,
+        91,
+        93,
+        95,
+        105,
+        107,
+        115
+      ],
+      "evolution_targets": [
+        {
+          "species": 55,
+          "name": "Golduck",
+          "from": 54,
+          "hidden_ability": "Swift Swim",
+          "hidden_ability_id": 33
+        },
+        {
+          "species": 176,
+          "name": "Togetic",
+          "from": 175,
+          "hidden_ability": "Super Luck",
+          "hidden_ability_id": 105
+        },
+        {
+          "species": 468,
+          "name": "Togekiss",
+          "from": 176,
+          "hidden_ability": "Super Luck",
+          "hidden_ability_id": 105
+        },
+        {
+          "species": 134,
+          "name": "Vaporeon",
+          "from": 133,
+          "hidden_ability": "Hydration",
+          "hidden_ability_id": 93
+        },
+        {
+          "species": 135,
+          "name": "Jolteon",
+          "from": 133,
+          "hidden_ability": "Quick Feet",
+          "hidden_ability_id": 95
+        },
+        {
+          "species": 136,
+          "name": "Flareon",
+          "from": 133,
+          "hidden_ability": "Guts",
+          "hidden_ability_id": 62
+        },
+        {
+          "species": 196,
+          "name": "Espeon",
+          "from": 133,
+          "hidden_ability": "Magic Bounce",
+          "hidden_ability_id": null,
+          "native_fallback": "Synchronize",
+          "native_fallback_id": 28
+        },
+        {
+          "species": 197,
+          "name": "Umbreon",
+          "from": 133,
+          "hidden_ability": "Inner Focus",
+          "hidden_ability_id": 39
+        },
+        {
+          "species": 470,
+          "name": "Leafeon",
+          "from": 133,
+          "hidden_ability": "Chlorophyll",
+          "hidden_ability_id": 34
+        },
+        {
+          "species": 471,
+          "name": "Glaceon",
+          "from": 133,
+          "hidden_ability": "Ice Body",
+          "hidden_ability_id": 115
+        }
+      ]
     }
   }
 }
