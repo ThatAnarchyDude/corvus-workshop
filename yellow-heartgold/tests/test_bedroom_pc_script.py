@@ -18,9 +18,14 @@ from bedroom_pc_script import (
 
 def read_script(bank, index):
     ptr, = struct.unpack_from("<I", bank, 4*index)
-    nextptr, = struct.unpack_from("<I", bank, 4*(index+1))
     start = ptr + 4*index + 4
-    end = nextptr + 4*(index+1) + 4
+    if index == 0:
+        nextptr, = struct.unpack_from("<I", bank, 4*(index+1))
+        end = nextptr + 4*(index+1) + 4
+    elif index == 1:
+        end = len(bank)  # sentinel follows the second/last pointer
+    else:
+        raise ValueError("This bank contains only two entrypoints")
     if not (0 <= start < end <= len(bank)):
         raise ValueError("Bad script-bank pointers")
     return bank[start:end]
