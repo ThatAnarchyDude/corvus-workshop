@@ -1,7 +1,7 @@
 {
   "build": "prototype-003",
   "output_sha256": "1cd5dd980e9c9a542783fe261e5b4b9c59df7b1061e1be2d97f6fa2dd9e635db",
-  "status": "Bounded Pallet opening validated in DeSmuME emulator; Android device test pending",
+  "status": "Bounded Pallet opening validated in DeSmuME automated gameplay runs; owner additionally reports satisfactory melonDS tests on PC and Android",
   "automated_tests": {
     "passed": 17,
     "failed": 0
@@ -29,7 +29,7 @@
     "National Dex UI shows National mode, two seen and one obtained after rival battle"
   ],
   "unrun": [
-    "Physical Android emulator test for prototype 003",
+    "Exhaustive feature-by-feature Android verification under melonDS (not separately documented)",
     "Female-player introduction and naming confirmation path",
     "Pikachu normal in-game save/reload in prototype 003",
     "Wild-battle defeat and blackout recovery gameplay",
@@ -372,5 +372,15 @@
     "All release gameplay evidence uses ROM SHA-256 above. Earlier intermediate builds and their screenshots are excluded.",
     "Existing HG title, intro presentation and rival portraits remain; rival naming is restored in the pre-game intro.",
     "Use a new game and a separate save from earlier prototypes."
-  ]
+  ],
+  "user_reported_testing": {
+    "prototype": "003",
+    "emulator": "melonDS DS",
+    "platforms": [
+      "PC",
+      "Android"
+    ],
+    "outcome": "Reported working as intended so far",
+    "assurance": "User-reported functionality; no independent emulator logs or detailed all-feature results were provided"
+  }
 }
