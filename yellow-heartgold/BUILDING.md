@@ -51,3 +51,24 @@ yellow-heartgold/.venv/bin/python -m unittest discover -s yellow-heartgold/tests
 Outputs are `build/yellow-heartgold-prototype-002.nds`, its `.xdelta`, and `build/pallet-report.json`. The builder appends separate opening scripts, initialization scripts, text and event copies, and redirects four Pallet map headers to those additions. Original Kanto archive members remain available for the future Johto postgame. The only existing script changes remain the two Johto prototype-001 entries. The shared starter UI now names Oak. New-game and home-return positions and initial home recovery move to Pallet. The National Dex remains granted at starter receipt. Separate map-transition scripts unlock Bag, Trainer Card, Save and Options without requiring the Johto mother introduction. Oak’s gift uses the native follower release sequence and records the chosen starter for future rival branches.
 
 Use `--output-dir yellow-heartgold/build/emulator-002` with the emulator harness to isolate prototype-002 save states and normal saves from prototype 001. Its first rival battle, route encounter balance and campaign progression are not yet implemented. Consult the build report and validation evidence before distributing it as a playable test.
+
+## Bounded opening build
+
+Prototype 003 builds from the exact released prototype 002 and keeps its previous assets intact:
+
+```sh
+yellow-heartgold/.venv/bin/python yellow-heartgold/tools/opening.py
+yellow-heartgold/.venv/bin/python -m unittest discover -s yellow-heartgold/tests -v
+```
+
+Outputs are `build/yellow-heartgold-prototype-003.nds`, its `.xdelta`, and `build/opening-report.json`. The builder requires the local xdelta3 tool and verifies patch application against the untouched original HeartGold ROM. New scripts, events and messages implement Oak's Pallet north-exit stop, starter pickup by Blue and a level-5 lab-exit battle. A separate pre-starter exit guard prevents leaving Oak's lab without a partner. Saved variables `0x416F` and `0x416E` track Oak and rival progression; the report records the reserved flags and variables.
+
+Route 1 uses Yellow's Pidgey/Rattata levels and weighted encounter probabilities for all three time periods. Its four original HG trainers are removed from the active event copy and retained in the original archive member. Yellow's two non-battling NPCs replace the active route actors. A full-width coordinate guard limits the opening test to the first grass path. Do not unlock another town or route until its content has been adapted and verified.
+
+Opening dialogue is transcribed from pret/pokeyellow at the revision recorded in `data/yellow-opening-dialogue.json`, then reflowed into HG's message format. Player and rival names remain dynamic. The three-starter choice requires adapted gift dialogue. Oak's escort currently uses a lab transition, without the full Yellow Pikachu capture scene, and the rival battle retains HG's rival portrait.
+
+`tools/intro.py` restores the rival-name step in Oak's pre-game introduction after player naming and before the bedroom. It assembles the Thumb-1 wrapper in `asm/oak-rival-name.s` using pinned Keystone 0.9.2, verifies the original overlay-53 hash and hook, and extends that overlay within a checked size bound. HG's existing naming overlay, confirmation controls and final name-save routine are reused. Player-name arguments are left separate; the unused `OakSpeechData.unk_010` field tracks this new introduction phase. Two messages are appended to the existing intro bank without changing its original entries. Original Kanto event banks remain intact.
+
+New rival parties use HG's rival trainer class, which reads the saved name instead of a fixed trainer label. Saved variable `0x416C` records the first lab battle's win/loss result for future Yellow story dependencies. Johto's later HG rival will have the separate default identity Silver; no second naming scene is planned.
+
+Use a new game and `--output-dir yellow-heartgold/build/emulator-003-final` to keep prototype 003 saves separate. Final release evidence and explicitly unrun checks belong in `releases/prototype-003/validation.json`.

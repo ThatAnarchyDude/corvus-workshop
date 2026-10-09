@@ -1,0 +1,376 @@
+{
+  "build": "prototype-003",
+  "output_sha256": "1cd5dd980e9c9a542783fe261e5b4b9c59df7b1061e1be2d97f6fa2dd9e635db",
+  "status": "Bounded Pallet opening validated in DeSmuME emulator; Android device test pending",
+  "automated_tests": {
+    "passed": 17,
+    "failed": 0
+  },
+  "passed": [
+    "Exact xdelta encode/decode roundtrip from untouched original HeartGold",
+    "All previously existing event, script and trainer archive members preserved; original text retained, with intro and trainer-name bank entries appended",
+    "Fresh new-game Oak introduction: name BLUE, decline confirmation, rename GARY, confirm and enter Pallet bedroom",
+    "Chosen rival name used in lab dialogue, starter announcements and battle introduction",
+    "Oak stops player at Pallet north exit and transitions to lab",
+    "Oak prevents lab exit before starter receipt",
+    "All three starter choices at level 5, one-member party, immediate visible follower and National Dex with only the selected species obtained",
+    "Repeat Oak interaction heals without granting another starter",
+    "Rival chooses Eevee against Pikachu, Togepi against Eevee, Pikachu against Togepi",
+    "All three lab-exit challenges load the correct level-5 rival party",
+    "Pikachu and Eevee loss paths, Togepi victory path: continue in lab, full healing, rival disappears and saved win/loss result is correct",
+    "Lab exit after both outcomes; lab re-entry does not repeat rival battle",
+    "Route 1 active event bank has only Yellow non-battling NPCs; four original HG trainer records remain in the original bank",
+    "Yellow Route 1 weighted Pidgey/Rattata species/level probabilities match for all three periods; boundary is immediately north of the native entrance grass",
+    "Runtime Route 1 guard stops player at the first grass edge",
+    "Potion sample received once, repeat interaction uses Yellow Poke Ball shop dialogue, quantity remains one",
+    "Runtime wild level-2 Rattata encounter in first Route 1 grass and successful escape back to field",
+    "Normal in-game save, restart without save state, Continue reload for Togepi and Eevee; rival name/result, party and location retained",
+    "Togepi normal reload retains visible follower, National Dex and completed rival; Eevee Route 1 reload retains Potion",
+    "National Dex UI shows National mode, two seen and one obtained after rival battle"
+  ],
+  "unrun": [
+    "Physical Android emulator test for prototype 003",
+    "Female-player introduction and naming confirmation path",
+    "Pikachu normal in-game save/reload in prototype 003",
+    "Wild-battle defeat and blackout recovery gameplay",
+    "All 493 follower species, fainted leads, eggs and party reordering",
+    "Gameplay sampling of every individual encounter slot or every time of day; all three encounter tables checked automatically"
+  ],
+  "not_implemented": [
+    "Pallet and first Route 1 grass only; northward travel blocked",
+    "Oak escort uses a transition to his lab; full Pikachu capture scene not implemented",
+    "Battle portrait retains HG rival presentation; overworld uses Blue",
+    "Three-starter gift chronology differs from Yellow forced Eevee theft",
+    "Existing prototype-002 saves require a new game for the new opening",
+    "Full Yellow campaign and Kanto gym adaptations",
+    "Johto postgame, default Silver identity in adapted Johto rival scenes, and scaled gym teams",
+    "All-species acquisition paths and new title screen"
+  ],
+  "starter_runtime_checks": {
+    "pika": {
+      "dex": {
+        "address": "0x227d4dc",
+        "flags": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "owned": [
+          25
+        ]
+      },
+      "field": {
+        "address": "0x22a01fc",
+        "map_id": 505,
+        "player": [
+          8,
+          0,
+          7
+        ],
+        "follower": [
+          8,
+          0,
+          8
+        ],
+        "follower_species": 25,
+        "follower_active": 1,
+        "party_count": 1,
+        "active_dex_address": "0x227d4dc"
+      },
+      "note": "Follower visibility is verified separately in screenshots, not inferred from active state."
+    },
+    "eevee": {
+      "dex": {
+        "address": "0x227d4dc",
+        "flags": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "owned": [
+          133
+        ]
+      },
+      "field": {
+        "address": "0x22a01fc",
+        "map_id": 505,
+        "player": [
+          8,
+          0,
+          7
+        ],
+        "follower": [
+          8,
+          0,
+          8
+        ],
+        "follower_species": 133,
+        "follower_active": 1,
+        "party_count": 1,
+        "active_dex_address": "0x227d4dc"
+      },
+      "note": "Follower visibility is verified separately in screenshots, not inferred from active state."
+    },
+    "togepi": {
+      "dex": {
+        "address": "0x227d4dc",
+        "flags": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "owned": [
+          175
+        ]
+      },
+      "field": {
+        "address": "0x22a01fc",
+        "map_id": 505,
+        "player": [
+          8,
+          0,
+          7
+        ],
+        "follower": [
+          8,
+          0,
+          8
+        ],
+        "follower_species": 175,
+        "follower_active": 1,
+        "party_count": 1,
+        "active_dex_address": "0x227d4dc"
+      },
+      "note": "Follower visibility is verified separately in screenshots, not inferred from active state."
+    }
+  },
+  "battle_runtime_checks": {
+    "pika": {
+      "state": {
+        "fs": "0x22a01fc",
+        "map": 505,
+        "xyz": [
+          8,
+          0,
+          12
+        ],
+        "party": 1,
+        "states": {
+          "0x416c": 0,
+          "0x416d": 0,
+          "0x416e": 2,
+          "0x416f": 2
+        }
+      },
+      "lead": {
+        "rival_name_codes": [
+          305,
+          299,
+          316,
+          323,
+          65535,
+          0,
+          0,
+          0
+        ],
+        "species": 25,
+        "exp": 125,
+        "level": 5,
+        "hp": 18,
+        "maxhp": 18,
+        "status": 0,
+        "potions": 0
+      }
+    },
+    "eevee": {
+      "state": {
+        "fs": "0x22a01fc",
+        "map": 505,
+        "xyz": [
+          8,
+          0,
+          12
+        ],
+        "party": 1,
+        "states": {
+          "0x416c": 0,
+          "0x416d": 0,
+          "0x416e": 2,
+          "0x416f": 2
+        }
+      },
+      "lead": {
+        "rival_name_codes": [
+          305,
+          299,
+          316,
+          323,
+          65535,
+          0,
+          0,
+          0
+        ],
+        "species": 133,
+        "exp": 125,
+        "level": 5,
+        "hp": 21,
+        "maxhp": 21,
+        "status": 0,
+        "potions": 0
+      }
+    },
+    "togepi": {
+      "state": {
+        "fs": "0x22a01fc",
+        "map": 505,
+        "xyz": [
+          8,
+          0,
+          12
+        ],
+        "party": 1,
+        "states": {
+          "0x416c": 1,
+          "0x416d": 0,
+          "0x416e": 2,
+          "0x416f": 2
+        }
+      },
+      "lead": {
+        "rival_name_codes": [
+          305,
+          299,
+          316,
+          323,
+          65535,
+          0,
+          0,
+          0
+        ],
+        "species": 175,
+        "exp": 187,
+        "level": 6,
+        "hp": 20,
+        "maxhp": 20,
+        "status": 0,
+        "potions": 0
+      }
+    }
+  },
+  "togepi_reload": {
+    "state": {
+      "fs": "0x22a02ac",
+      "map": 505,
+      "xyz": [
+        8,
+        0,
+        12
+      ],
+      "party": 1,
+      "states": {
+        "0x416c": 1,
+        "0x416d": 0,
+        "0x416e": 2,
+        "0x416f": 2
+      }
+    },
+    "lead": {
+      "rival_name_codes": [
+        305,
+        299,
+        316,
+        323,
+        65535,
+        0,
+        0,
+        0
+      ],
+      "species": 175,
+      "exp": 187,
+      "level": 6,
+      "hp": 20,
+      "maxhp": 20,
+      "status": 0,
+      "potions": 0
+    }
+  },
+  "togepi_reload_follower_dex": {
+    "dex": {
+      "address": "0x227d58c",
+      "flags": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "owned": [
+        175
+      ]
+    },
+    "field": {
+      "address": "0x22a02ac",
+      "map_id": 505,
+      "player": [
+        8,
+        0,
+        12
+      ],
+      "follower": [
+        8,
+        0,
+        13
+      ],
+      "follower_species": 175,
+      "follower_active": 1,
+      "party_count": 1,
+      "active_dex_address": "0x227d58c"
+    },
+    "note": "Follower visibility is verified separately in screenshots, not inferred from active state."
+  },
+  "eevee_route_reload": {
+    "state": {
+      "fs": "0x22a0228",
+      "map": 9,
+      "xyz": [
+        1038,
+        2,
+        349
+      ],
+      "party": 1,
+      "states": {
+        "0x416c": 0,
+        "0x416d": 0,
+        "0x416e": 2,
+        "0x416f": 2
+      }
+    },
+    "lead": {
+      "rival_name_codes": [
+        305,
+        299,
+        316,
+        323,
+        65535,
+        0,
+        0,
+        0
+      ],
+      "species": 133,
+      "exp": 125,
+      "level": 5,
+      "hp": 21,
+      "maxhp": 21,
+      "status": 0,
+      "potions": 1
+    }
+  },
+  "emulator": "DeSmuME 0.9.12 libretro, built-in firmware, 256x384 stacked screens",
+  "notes": [
+    "All release gameplay evidence uses ROM SHA-256 above. Earlier intermediate builds and their screenshots are excluded.",
+    "Existing HG title, intro presentation and rival portraits remain; rival naming is restored in the pre-game intro.",
+    "Use a new game and a separate save from earlier prototypes."
+  ]
+}

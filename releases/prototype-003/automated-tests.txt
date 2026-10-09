@@ -1,0 +1,22 @@
+test_all_existing_events_and_scripts_remain_intact (test_opening.OpeningChecks.test_all_existing_events_and_scripts_remain_intact) ... ok
+test_boundary_is_immediately_north_of_the_entrance_grass (test_opening.OpeningChecks.test_boundary_is_immediately_north_of_the_entrance_grass) ... ok
+test_intercept_and_rival_triggers_are_saved_and_one_time (test_opening.OpeningChecks.test_intercept_and_rival_triggers_are_saved_and_one_time) ... ok
+test_new_rival_parties_are_level_five_with_usable_starters (test_opening.OpeningChecks.test_new_rival_parties_are_level_five_with_usable_starters) ... ok
+test_old_dialogue_preserved_when_new_trainer_names_appended (test_opening.OpeningChecks.test_old_dialogue_preserved_when_new_trainer_names_appended) ... ok
+test_route_one_has_two_non_battle_npcs_and_cannot_launch_a_trainer (test_opening.OpeningChecks.test_route_one_has_two_non_battle_npcs_and_cannot_launch_a_trainer) ... ok
+test_yellow_route_one_encounter_probabilities_match_for_all_times (test_opening.OpeningChecks.test_yellow_route_one_encounter_probabilities_match_for_all_times) ... ok
+test_opening_map_bindings_use_appended_assets (test_pallet.PalletChecks.test_opening_map_bindings_use_appended_assets) ... ok
+test_original_event_records_preserved_including_all_kanto (test_pallet.PalletChecks.test_original_event_records_preserved_including_all_kanto) ... ok
+test_original_messages_preserved_except_shared_starter_ui (test_pallet.PalletChecks.test_original_messages_preserved_except_shared_starter_ui) ... ok
+test_original_scripts_preserved_except_existing_johto_prototype_changes (test_pallet.PalletChecks.test_original_scripts_preserved_except_existing_johto_prototype_changes) ... ok
+test_first_rival_teams_and_branch_choices (test_prototype.PrototypeChecks.test_first_rival_teams_and_branch_choices) ... ok
+test_follower_slot_zero_machine_code (test_prototype.PrototypeChecks.test_follower_slot_zero_machine_code) ... ok
+test_national_dex_call_keeps_existing_command_locations (test_prototype.PrototypeChecks.test_national_dex_call_keeps_existing_command_locations) ... ok
+test_patch_sites_fail_closed (test_prototype.PrototypeChecks.test_patch_sites_fail_closed) ... ok
+test_starters_match_display_and_creation (test_prototype.PrototypeChecks.test_starters_match_display_and_creation) ... ok
+test_togepi_can_attack_at_level_five (test_prototype.PrototypeChecks.test_togepi_can_attack_at_level_five) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 2.883s
+
+OK
