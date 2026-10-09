@@ -1,4 +1,4 @@
-# Pikachu Yellow: Yellow-authentic opening (work in progress)
+# Pokémon Psyduck Yellow: Yellow-authentic opening (work in progress)
 
 **Purpose:** replace the Prototype 003 shortcuts with the original Yellow staging and in-world starter scene, using HeartGold's engine, audiovisual style, and following-Pokémon system.
 
@@ -39,6 +39,25 @@ From [pret/pokeheartgold script commands](https://github.com/pret/pokeheartgold/
 | Received a Pokémon | PlayFanfare opcode 78, WaitFanfare opcode 79, sequence 1187 | Not implemented |
 
 These numbers identify existing HGSS sounds, **not** yet a claim of faithful Yellow music reproduction. New arrangements or replacement audio require separate asset work, tests and appropriate permissions.
+
+## Starter-only ability and stats policy
+
+The **Psyduck Yellow** Kanto starter table is Psyduck (male) on the left, Togepi (normal gender ratio) in the center, Eevee (female) on the right. Oak's captured wild starter is Psyduck, replacing the scripted wild Pikachu from Yellow.
+
+For each starter gift, the currently approved engineering targets are a 50% shiny chance, a separate 1/64 *bonus* roll for all 31 IVs, and otherwise standard HeartGold 0–31 IVs. Ability slots 1/2/3 are equally likely. These are **planned mechanics**, not yet ROM-integrated or emulator-tested.
+
+A Hidden Ability can be assigned only if the exact effect already exists in **vanilla HeartGold**:
+
+- Psyduck: Damp / Cloud Nine / **Swift Swim** (Hidden); Golduck retains Swift Swim when evolving from a Hidden Ability Psyduck.
+- Togepi: Hustle / Serene Grace / **Super Luck** (Hidden); same for Togetic and Togekiss.
+- Eevee: Run Away / Adaptability / **Anticipation** (Hidden).
+- Eevee's evolved Hidden Abilities supported by HG: Vaporeon **Hydration**, Jolteon **Quick Feet**, Flareon **Guts**, Umbreon **Inner Focus**, Leafeon **Chlorophyll**, and Glaceon **Ice Body**.
+- **Espeon**: its later Hidden Ability **Magic Bounce** does not exist in HeartGold; let HG assign its native **Synchronize** instead. Do not add Magic Bounce or invent a replacement.
+- Sylveon is not in HeartGold's Gen-IV Pokémon roster and is out of scope.
+
+Native HG contains these **ability effects**, not a built-in three-slot Hidden Ability selection or retention scheme. Evolution's `UpdateMonAbility` resets ability from the native species and PID, so third-slot gift and inheritance will require carefully scoped code and save compatibility tests. Until built and verified, do not claim the ROM supports these features. The rule is **Kanto starter line only**; no changes to Johto, wild encounters, other Pokémon species, or Silver.
+
+Explicit configuration: [data/psyduck-yellow-starters.json](data/psyduck-yellow-starters.json), with selection and evolution validation in [tools/psyduck_yellow_starters.py](tools/psyduck_yellow_starters.py).
 
 ## Blue and Johto preservation
 
