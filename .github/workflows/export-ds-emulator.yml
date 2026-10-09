@@ -17,9 +17,11 @@ jobs:
           mkdir -p dist
           find /usr/lib -iname '*desmume*libretro*.so' -exec cp {} dist/desmume_libretro.so \;
           test -s dist/desmume_libretro.so
-          sha256sum dist/desmume_libretro.so
+          cp /lib/x86_64-linux-gnu/libtinyxml.so.2.6.2 dist/ || cp /usr/lib/x86_64-linux-gnu/libtinyxml.so.2.6.2 dist/
+          ldd dist/desmume_libretro.so
+          sha256sum dist/*
       - uses: actions/upload-artifact@v4
         with:
           name: psyduck-yellow-ds-emulator
-          path: dist/desmume_libretro.so
+          path: dist/
           retention-days: 1
