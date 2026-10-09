@@ -26,7 +26,7 @@ Pokémon Center PCs retain their normal HeartGold services. Stock HG has a playe
 - Separate live tests selected all three starters. Encrypted Pokémon checksums were valid; species, level, forced gender, follower positions and National Dex ownership matched. A live Togepi had Super Luck.
 - Togepi defeated the rival and continued healed; Eevee and Psyduck lost and also continued healed. The battle result variables and healed HP were checked in live RAM.
 - Normal save/reload preserved Eevee, its follower, starter state and National Dex. Route 1's north boundary displayed the opening-test closure message. No Route 1 trainer battle was added.
-- The bedroom menu opened the native Mailbox and returned to the player-PC menu. Live storage checks withdrew the Potion and all 95 stored Rare Candy; the deposit flow uses the native Bag selection UI.
+- The bedroom menu opened the native Mailbox and returned to the player-PC menu. Live storage checks withdrew the Potion and all 95 stored Rare Candy; the deposit flow uses the native Bag selection UI. Deposited Rare Candy survived a normal save/reload, and inventory conservation was checked in live RAM.
 - Chromium at phone width rejected an incorrect input and generated/downloaded an NDS matching the release SHA-256, with no browser errors. A repeat build produced the same output. No Android emulator run was performed here.
 
 ## Known limits

@@ -1,0 +1,44 @@
+{
+  "version": "004",
+  "date": "2026-10-09",
+  "output_sha256": "4018c164fe5ba818134d457f5ac0b923e2b5fdf44d5035be73714680d3f035df",
+  "source_sha256": "65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105",
+  "patch_sha256": "5ff25be6004c0e1c55eff487c0d6d39dd1622bb2843773e823247a18ffeae8d5",
+  "local_tests": {
+    "passed": 60,
+    "failed": 0,
+    "skipped": 0
+  },
+  "emulator": "DeSmuME 0.9.12 libretro, built-in firmware",
+  "verified": [
+    "Fresh new game: Blue naming icon and bedroom spawn",
+    "Oak warning, field Psyduck capture and visible escort into lab",
+    "Three physical balls on table moved one tile north",
+    "All three starter receipts, valid encrypted checksums, level 5, forced Psyduck/Eevee gender",
+    "Immediate native followers and National Dex, only selected starter owned",
+    "Live Super Luck Togepi",
+    "First rival win and loss both progress and heal party",
+    "Normal save/reload preserves starter, follower and Dex",
+    "Route 1 boundary closure",
+    "Native player Mailbox opens and returns to PC",
+    "Potion and all 95 Candy withdrawal, Candy deposit, normal-save item persistence",
+    "Chromium phone-width local downloader, wrong input rejection, exact output checksum",
+    "Identical repeat build and xdelta round trip",
+    "Tracked-tree ROM safety check"
+  ],
+  "not_verified": [
+    "Android emulator run of prototype 004",
+    "Audio listening",
+    "Later campaign, gyms and Johto postgame",
+    "Center item-storage integration and other PC native services with populated seals/photo data",
+    "Follower party reorder/evolution in this build"
+  ],
+  "limits": [
+    "Pallet opening and bounded Route 1 only",
+    "Animated field capture instead of native Oak battle capture",
+    "Full title artwork deferred",
+    "10 saved PC item stacks, 999 per stack",
+    "New game required for revised opening tests"
+  ],
+  "pc_live_test_note": "The iteration checkpoint already contained 95 Candy and 1 Potion. The fresh storage added 95 Candy and 1 Potion; withdrawing then depositing the combined 190 Candy conserved totals. Normal reload retained 190 stored Candy and 2 bag Potions."
+}
