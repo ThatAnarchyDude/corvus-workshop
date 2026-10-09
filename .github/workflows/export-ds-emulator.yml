@@ -1,0 +1,25 @@
+name: Export DS smoke-test emulator
+on:
+  push:
+    paths:
+      - .github/workflows/export-ds-emulator.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Install packaged libretro DS emulator
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y libretro-desmume
+          mkdir -p dist
+          find /usr/lib -iname '*desmume*libretro*.so' -exec cp {} dist/desmume_libretro.so \;
+          test -s dist/desmume_libretro.so
+          sha256sum dist/desmume_libretro.so
+      - uses: actions/upload-artifact@v4
+        with:
+          name: psyduck-yellow-ds-emulator
+          path: dist/desmume_libretro.so
+          retention-days: 1
