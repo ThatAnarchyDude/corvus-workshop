@@ -12,8 +12,6 @@ from build_rom import BASE, EXPECTED, PROJECT, sha
 from pallet import command
 from prototype import decode_messages, encode_messages
 from intro import patch_intro
-from yellow_opening_scene import (CMD_PLAY_BGM, CMD_RESET_BGM, BGM_OAK_MEETING,
-                                  BGM_OAK_ESCORT, BGM_RIVAL_CHALLENGE)
 
 INPUT = PROJECT / 'build/yellow-heartgold-prototype-002.nds'
 INPUT_SHA = '4c4cac888ba52d4eb3ecce80e045cd7b3e6cc2060d8328bf0617f1bffe12b6ef'
@@ -177,9 +175,8 @@ def intercept():
     s = Script().emit(96).emit(105, 0x4000, 0x4001)
     s.emit(39, 0x4001, 2).emit(31, HIDE_TOWN_OAK).emit(100, 3)
     s.emit(339, 3, 0x4000, 0, 0x4001, 0)
-    s.emit(CMD_PLAY_BGM, BGM_OAK_MEETING).msg(7).movement(3, 'oak_approach').emit(95)
+    s.msg(7).movement(3, 'oak_approach').emit(95)
     s.movement(255, 'face_oak').emit(95).msg(8).msg(9)
-    s.emit(CMD_PLAY_BGM, BGM_OAK_ESCORT)
     s.emit(41, OAK_STATE, 1).emit(30, HIDE_TOWN_OAK).emit(101, 3)
     s.emit(176, 505, 0, 8, 10, 0)
     end(s).moves('oak_approach', [(12, 1)]).moves('face_oak', [(1, 1)])
@@ -227,7 +224,7 @@ def rival_talk():
 
 def battle(trainers):
     s = Script().emit(96).emit(339, OBJ_RIVAL, 8, 0, 13, 0)
-    s.movement(255, 'face_rival').emit(95).emit(CMD_PLAY_BGM, BGM_RIVAL_CHALLENGE).msg(20)
+    s.movement(255, 'face_rival').emit(95).msg(20)
     s.emit(206, 0x800C).compare(0x800C, 25).jump('eevee', 1)
     s.compare(0x800C, 133).jump('togepi', 1)
     branches = [('pika', trainers[25]), ('eevee', trainers[133]), ('togepi', trainers[175])]
@@ -241,7 +238,6 @@ def battle(trainers):
     s.label('won').msg(21)
     s.label('outro').msg(23).emit(41, RIVAL_STATE, 2).emit(282)
     s.movement(OBJ_RIVAL, 'leave').emit(95).emit(30, HIDE_RIVAL).emit(101, OBJ_RIVAL)
-    s.emit(CMD_RESET_BGM)
     end(s).moves('face_rival', [(1, 1)]).moves('leave', [(13, 1)])
     return s.finish()
 
