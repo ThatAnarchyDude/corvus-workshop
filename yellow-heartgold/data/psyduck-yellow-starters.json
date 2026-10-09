@@ -85,5 +85,29 @@
     ],
     "future_exception": "eight Johto gym leaders scale by badge order as previously agreed"
   },
-  "release_policy": "Patch-only; no proprietary playable ROM committed or released; no claim of playable implementation until melonDS tests pass"
+  "release_policy": "When a complete, emulator-tested build is available, supply the owner's personally uploaded HeartGold-derived NDS via private conversation download, not as a public GitHub asset. Do not distribute an untested or broken build.",
+  "starter_creation": {
+    "chosen_game": "Pokémon Psyduck Yellow",
+    "shiny_chance": {
+      "numerator": 1,
+      "denominator": 2,
+      "applies_to": "each starter gift only"
+    },
+    "perfect_six_iv_bonus": {
+      "numerator": 1,
+      "denominator": 64,
+      "applies_to": "each starter gift only",
+      "rule": "On bonus success all six are 31. Otherwise each IV is independent and uniformly random 0..31; accidental natural 6IV also remains possible."
+    },
+    "generation_iv": {
+      "ivs_per_stat": 6,
+      "iv_min": 0,
+      "iv_max": 31,
+      "shiny_rule": "OT_ID low16 xor OT_ID high16 xor PID low16 xor PID high16 < 8",
+      "gender_rule": "species personal-data gender threshold vs PID low byte",
+      "independent_genders": true
+    },
+    "non_starter_scope": "Leave ordinary wild and NPC Pokémon creation unchanged",
+    "integration_status": "Pure creation-planning utilities and tests only. No live ROM branch yet."
+  }
 }
