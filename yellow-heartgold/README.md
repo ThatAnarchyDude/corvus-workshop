@@ -1,6 +1,6 @@
 # Pokémon Psyduck Yellow — implementation plan
 
-Status: prototype 005 adds the new animated Psyduck/water title to prototype 004's Pallet opening; see [PROTOTYPE-005.md](PROTOTYPE-005.md). Prototype 001 is the earlier Android-tested reference build. Prototype 002 adds a separate Pallet opening. Prototype 003 adds Oak's exit stop, Blue's starter pickup and lab-exit battle, and a bounded Route 1 test with Yellow encounters and NPCs. See the matching release's `validation.json` and `ANDROID-TESTING.md` for evidence and remaining checks, and [BUILDING.md](BUILDING.md) for reproducible build commands. The full Yellow campaign and Johto postgame remain to be implemented.
+Status: prototype 006 adds PC evolution supplies and the requested item evolution methods to prototype 005; see [PROTOTYPE-006.md](PROTOTYPE-006.md). Prototype 005 added the animated Psyduck/water title to prototype 004's Pallet opening. Prototype 001 is the earlier Android-tested reference build. Prototype 002 adds a separate Pallet opening. Prototype 003 adds Oak's exit stop, Blue's starter pickup and lab-exit battle, and a bounded Route 1 test with Yellow encounters and NPCs. See the matching release's `validation.json` and `ANDROID-TESTING.md` for evidence and remaining checks, and [BUILDING.md](BUILDING.md) for reproducible build commands. The full Yellow campaign and Johto postgame remain to be implemented.
 
 ## Agreed scope
 

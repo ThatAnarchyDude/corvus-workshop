@@ -1,6 +1,6 @@
 # Prototype 006 — evolution testing
 
-Status: planned; begin implementation only after the user verifies prototype 005 on their device.
+Status: implemented after the user authorized proceeding. See [PROTOTYPE-006.md](PROTOTYPE-006.md) for release details and validation.
 
 Add evolution items to the shared player's PC item storage so they can be withdrawn from the bedroom PC for testing. Keep the existing Potion and Rare Candy supplies. Use 95 of each evolution item unless the user requests another amount; verify storage capacity and compatibility with existing saves.
 

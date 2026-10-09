@@ -12,14 +12,14 @@ from player_pc import script,SLOTS,INIT
 
 
 class StorageRun:
-    def __init__(self, choices, *, variables=None, bag=None, selected=0, bag_limit=999):
+    def __init__(self, choices, *, variables=None, bag=None, selected=0, bag_limit=999, evolution_items=False):
         self.variables = dict(variables or {})
         self.bag = dict(bag or {})
         self.choices = iter(choices)
         self.selected = selected
         self.bag_limit = bag_limit
         self.messages = []
-        self.code = script()
+        self.code = script(evolution_items=evolution_items)
         self.at = 0
         self.cmp = 0
         self.entries = []
@@ -63,12 +63,12 @@ class StorageRun:
                 if op==39:value=v.get(target,0)+value
                 if op==40:value=v.get(target,0)-value
                 v[target]=value&65535;continue
-            if op==750:
+            if op in (69,750):
                 for _ in range(4):self.read('B')
                 self.result=self.read();self.entries=[];continue
-            if op==751:
+            if op in (70,751):
                 self.read();self.read();self.entries.append(self.read());continue
-            if op==752:
+            if op in (71,752):
                 choice=next(self.choices)
                 assert choice in self.entries or choice==0xfffd,(choice,self.entries)
                 v[self.result]=choice;continue

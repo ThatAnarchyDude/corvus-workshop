@@ -80,3 +80,5 @@ See [PROTOTYPE-004.md](PROTOTYPE-004.md) for the current builder, downloader and
 ## Prototype 005 title screen
 
 See [PROTOTYPE-005.md](PROTOTYPE-005.md) for the title builder, generated-art inputs, normal-save compatibility and exact validation scope. `tools/title.py` requires the exact tested prototype-004 input; it changes only title resources and the banner.
+
+Prototype 006 builds on the exact prototype-005 output. Run `yellow-heartgold/.venv/bin/python yellow-heartgold/tools/evolution_testing.py`, then package with `tools/package_playtest.py ... --version 006`. See [PROTOTYPE-006.md](PROTOTYPE-006.md) for commands, PC upgrade behavior and validation.

@@ -1,0 +1,247 @@
+{
+  "version": "006",
+  "output_sha256": "3ae1f3042633886583df22dc8f69bb13ca4fc0b75ba2770dbf4a689c336c0042",
+  "patch_sha256": "00f737908e9c1653333e94d8fa4e611f7104a8ea748577c05c122f7f5e6b19db",
+  "changed_file_ids": [
+    141,
+    146,
+    156
+  ],
+  "evolution_hook": "0x1ff88e0",
+  "hook_bytes": 138,
+  "itcm_end": "0x1ff896c",
+  "pc_items": [
+    83,
+    84,
+    82,
+    109,
+    108,
+    246,
+    85
+  ],
+  "quantity_each": 95,
+  "old_script": 983,
+  "new_script": 985,
+  "new_text": 839,
+  "custom_rules": [
+    [
+      54,
+      84,
+      55
+    ],
+    [
+      133,
+      109,
+      196
+    ],
+    [
+      133,
+      108,
+      197
+    ],
+    [
+      133,
+      246,
+      471
+    ],
+    [
+      133,
+      85,
+      470
+    ],
+    [
+      175,
+      109,
+      176
+    ]
+  ],
+  "date": "2026-10-09",
+  "tests": {
+    "passed": 71,
+    "skipped": 0
+  },
+  "browser": {
+    "output_sha256": "3ae1f3042633886583df22dc8f69bb13ca4fc0b75ba2770dbf4a689c336c0042",
+    "bad_input_rejected": true,
+    "errors": []
+  },
+  "emulator": {
+    "eevee_evolutions": [
+      {
+        "name": "jolteon",
+        "target": 135,
+        "consumed": 83,
+        "follower": 135,
+        "dex": [
+          133,
+          135
+        ]
+      },
+      {
+        "name": "vaporeon",
+        "target": 134,
+        "consumed": 84,
+        "follower": 134,
+        "dex": [
+          133,
+          134
+        ]
+      },
+      {
+        "name": "flareon",
+        "target": 136,
+        "consumed": 82,
+        "follower": 136,
+        "dex": [
+          133,
+          136
+        ]
+      },
+      {
+        "name": "espeon",
+        "target": 196,
+        "consumed": 109,
+        "follower": 196,
+        "dex": [
+          133,
+          196
+        ]
+      },
+      {
+        "name": "umbreon",
+        "target": 197,
+        "consumed": 108,
+        "follower": 197,
+        "dex": [
+          133,
+          197
+        ]
+      },
+      {
+        "name": "glaceon",
+        "target": 471,
+        "consumed": 246,
+        "follower": 471,
+        "dex": [
+          133,
+          471
+        ]
+      },
+      {
+        "name": "leafeon",
+        "target": 470,
+        "consumed": 85,
+        "follower": 470,
+        "dex": [
+          133,
+          470
+        ]
+      }
+    ],
+    "other_starter_evolutions": [
+      {
+        "starter": 54,
+        "item": 84,
+        "target": 55
+      },
+      {
+        "starter": 175,
+        "item": 109,
+        "target": 176
+      }
+    ],
+    "other_starter_fixture": "Native prototype-004 starter party records copied into isolated prototype-006 test states; not fresh story runs",
+    "normal_save": {
+      "field": {
+        "address": "0x22a0298",
+        "map_id": 506,
+        "player": [
+          6,
+          0,
+          4
+        ],
+        "follower": [
+          7,
+          0,
+          4
+        ],
+        "follower_species": 470,
+        "follower_active": 1,
+        "party_count": 1,
+        "active_dex_address": "0x227d578"
+      },
+      "dex": {
+        "address": "0x227d578",
+        "flags": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "owned": [
+          133,
+          470
+        ]
+      },
+      "pc_stacks": [
+        [
+          17,
+          1
+        ],
+        [
+          50,
+          95
+        ],
+        [
+          83,
+          94
+        ],
+        [
+          84,
+          94
+        ],
+        [
+          82,
+          94
+        ],
+        [
+          109,
+          94
+        ],
+        [
+          108,
+          94
+        ],
+        [
+          246,
+          94
+        ],
+        [
+          85,
+          94
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "upgrade_progress": 7
+    },
+    "pc_upgrade_preserves_existing_quantities": true,
+    "all_seven_item_types_withdrawn": true,
+    "scrolling_list_verified": true
+  },
+  "unchanged": [
+    "original evolution tables",
+    "prototype-005 title archive and overlay",
+    "other map event and script assets",
+    "Johto starter selection and rival"
+  ],
+  "not_tested": [
+    "Android emulator",
+    "audio listening",
+    "full campaign",
+    "Pokemon Center PC integration"
+  ],
+  "repeat_build_identical": true
+}

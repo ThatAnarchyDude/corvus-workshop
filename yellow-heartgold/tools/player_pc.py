@@ -8,6 +8,8 @@ from opening import Script, end
 
 SLOTS = [(0x4152+2*i, 0x4153+2*i) for i in range(10)]
 INIT = 0x4166
+EVOLUTION_INIT = 0x4167
+EVOLUTION_ITEMS = (83, 84, 82, 109, 108, 246, 85)
 TEXT = [
     'You turned on the PC.', '{PLAYER}\'s PC', 'SWITCH OFF',
     'ITEM STORAGE', 'WITHDRAW ITEM', 'DEPOSIT ITEM', 'TOSS ITEM', 'GO BACK',
@@ -26,6 +28,7 @@ TEXT = [
     'There is no Mail in your Mailbox.',
     'You do not have any Seals for Ball Capsules yet.',
 ]
+EVOLUTION_TEXT = TEXT + ['Make room in ITEM STORAGE, then reopen the PC\nto receive the remaining evolution items.']
 
 
 def message(s, index):
@@ -47,12 +50,29 @@ def buffer(s, opcode, slot, value):
     return s
 
 
-def script():
+def script(*, evolution_items=False):
     s = Script().emit(96).emit(73, 1547)
-    s.compare(INIT, 1).jump('boot', 1)
+    s.compare(INIT, 1).jump('upgrade' if evolution_items else 'boot', 1)
     for (item_var, qty_var), item, qty in zip(SLOTS, [17, 50], [1, 95]):
         s.emit(41, item_var, item).emit(41, qty_var, qty)
     s.emit(41, INIT, 1)
+    if evolution_items:
+        s.label('upgrade')
+        for step, item in enumerate(EVOLUTION_ITEMS):
+            s.compare(EVOLUTION_INIT, step).jump(f'upgrade_next_{step}', 5)
+            for i, (item_var, qty_var) in enumerate(SLOTS):
+                s.compare(item_var, item).jump(f'upgrade_add_{step}_{i}', 1)
+            for i, (_, qty_var) in enumerate(SLOTS):
+                s.compare(qty_var, 0).jump(f'upgrade_add_{step}_{i}', 1)
+            s.jump('upgrade_full')
+            for i, (item_var, qty_var) in enumerate(SLOTS):
+                s.label(f'upgrade_add_{step}_{i}').emit(42, 0x8009, qty_var)
+                s.emit(39, 0x8009, 95).compare(0x8009, 999).jump('upgrade_full', 2)
+                s.emit(41, item_var, item).emit(42, qty_var, 0x8009)
+                s.emit(41, EVOLUTION_INIT, step + 1).jump(f'upgrade_next_{step}')
+            s.label(f'upgrade_next_{step}')
+        s.jump('boot')
+        s.label('upgrade_full'); message(s, 39); s.jump('boot')
     s.label('boot'); message(s, 0)
     s.emit(746)
     s.label('main').emit(190); s.data.append(0)
@@ -87,13 +107,15 @@ def script():
     for mode,label in [(0,'withdraw'),(2,'toss')]:
         s.label(label).emit(41,0x8008,mode).emit(41,0x8009,0)
         s.emit(45); s.data.append(26)
-        s.emit(750); s.data.extend(bytes([1,1,0,1])); s.emit(0x8006)
+        # The touch menu cannot display a full ten-stack inventory. The native
+        # scrolling list supports all stacks without paging or hiding items.
+        s.emit(69 if evolution_items else 750); s.data.extend(bytes([1,1,0,1])); s.emit(0x8006)
         for i,(item_var,qty_var) in enumerate(SLOTS):
             s.compare(qty_var,0).jump(f'{label}_skip_{i}',1)
             buffer(s,194,0,item_var); buffer(s,198,1,qty_var)
-            s.emit(751,8,255,i).emit(39,0x8009,1)
+            s.emit(70 if evolution_items else 751,8,255,i).emit(39,0x8009,1)
             s.label(f'{label}_skip_{i}')
-        s.emit(751,9,255,250).emit(752).emit(53)
+        s.emit(70 if evolution_items else 751,9,255,250).emit(71 if evolution_items else 752).emit(53)
         # Menu's cancellation sentinel is FFFD, which also fails these cases.
         for i,(item_var,qty_var) in enumerate(SLOTS):
             s.compare(0x8006,i).jump(f'{label}_slot_{i}',1)
@@ -102,7 +124,13 @@ def script():
             s.label(f'{label}_slot_{i}').emit(42,0x8004,item_var)
             s.emit(42,0x8005,qty_var).jump('quantity')
     s.label('deposit').emit(41,0x8008,1)
-    menu(s,[(27+i,i) for i in range(7)]+[(9,250)],result=0x800A)
+    if evolution_items:
+        s.emit(45);s.data.append(26)
+        s.emit(69);s.data.extend(bytes([1,1,0,1]));s.emit(0x800A)
+        for text,value in [(27+i,i) for i in range(7)]+[(9,250)]:s.emit(70,text,255,value)
+        s.emit(71).emit(53)
+    else:
+        menu(s,[(27+i,i) for i in range(7)]+[(9,250)],result=0x800A)
     s.compare(0x800A,6).jump('storage',2)
     message(s,24)
     s.emit(41,0x800B,0xCAFE).emit(333); s.data.append(0)

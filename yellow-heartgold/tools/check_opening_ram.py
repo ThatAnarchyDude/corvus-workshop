@@ -5,7 +5,8 @@ import sys
 from pathlib import Path
 
 
-def check(path, species):
+def check(path, species, *, owned=None):
+    expected_owned = sorted(set(owned)) if owned is not None else [species]
     ram = Path(path).read_bytes()
     dex = []
     fields = []
@@ -59,7 +60,7 @@ def check(path, species):
     # A normal reload can leave an additional Dex copy in the flash-read buffer.
     # Validate the live save block referenced by FieldSystem, not that cached copy.
     dex = [entry for entry in dex if entry['address'] == fields[0]['active_dex_address']]
-    if len(dex) != 1 or dex[0]['flags'][2:] != [1, 1] or dex[0]['owned'] != [species]:
+    if len(dex) != 1 or dex[0]['flags'][2:] != [1, 1] or dex[0]['owned'] != expected_owned:
         raise ValueError(f'Unexpected live National Dex state: {dex}')
     return dict(dex=dex[0], field=fields[0],
                 note='Follower visibility is verified separately in screenshots, not inferred from active state.')

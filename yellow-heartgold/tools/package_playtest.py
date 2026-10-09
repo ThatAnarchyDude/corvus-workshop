@@ -10,7 +10,7 @@ VENDOR = PROJECT/'tools/vendor/rom-patcher'
 
 
 def build(destination, version='004'):
-    if version not in ('004', '005'):
+    if version not in ('004', '005', '006'):
         raise ValueError('Unsupported prototype version')
     destination.mkdir(parents=True, exist_ok=True)
     patch = PROJECT/f'build/yellow-heartgold-prototype-{version}.xdelta'
@@ -96,9 +96,14 @@ button.addEventListener('click',async()=>{
   } catch(error){status.textContent=error.message;finish();}
 });
 </script></html>'''.replace('004', version).replace('PACKAGE', encoded)
-    if version == '005':
+    if version in ('005', '006'):
         html=html.replace('Start a <strong>new game</strong> to test the revised opening. Keep earlier saves backed up.',
             'Start a <strong>new game</strong> to test the opening, or import a backed-up prototype 004 normal save through your emulator. Emulator save states should not be transferred between builds.')
+    if version == '006':
+        html=html.replace('Opening playtest · Prototype 006','Evolution playtest · Prototype 006')
+        html=html.replace('a backed-up prototype 004 normal save','a backed-up prototype 004 or 005 normal save')
+        html=html.replace('Oak’s Psyduck capture currently uses field animation.',
+            'Reopen the bedroom PC to receive 95 of each evolution item. Make space in storage if prompted, then reopen it to collect the remainder.')
     # hidden must override display on the downloadable link.
     html=html.replace('footer{margin-top', '[hidden]{display:none!important}footer{margin-top')
     (destination/'index.html').write_text(html)
@@ -110,6 +115,6 @@ button.addEventListener('click',async()=>{
 if __name__ == '__main__':
     parser=argparse.ArgumentParser()
     parser.add_argument('destination',type=Path)
-    parser.add_argument('--version',choices=['004','005'],default='004')
+    parser.add_argument('--version',choices=['004','005','006'],default='004')
     args=parser.parse_args()
     build(args.destination,args.version)
