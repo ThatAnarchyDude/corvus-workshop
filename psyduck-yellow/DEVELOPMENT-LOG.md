@@ -5,11 +5,12 @@ still being built. Share this page with anyone following the project.
 
 **Last updated: October 10, 2026.**
 
-**Latest published patch: prototype 0016.** The playable campaign currently
-reaches Pewter City and Brock's gym. This is an unfinished game, not a complete
-Yellow remake. Prototype 0016 completes the Pewter interiors and museum.
+**Latest published patch: prototype 0017.** The playable campaign currently
+reaches Route 3 after Brock's gym. This is an unfinished game, not a complete
+Yellow remake. Prototype 0017 adds Route 3 after the completed Pewter interiors
+and museum.
 
-[Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/0382c726e68ac51f1c6c9577debc998c3df8e02a/psyduck-yellow/prototype-0016/index.html)
+[Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/aa63eb1a44d8a73d305fbd85849638ab8c9c63f1/psyduck-yellow/prototype-0017/index.html)
 
 The download page contains a modification patch. Select your original,
 unmodified USA HeartGold game file to build the playable DS file on your own
@@ -28,7 +29,7 @@ future work; engine support does not mean every encounter is already placed.
 Kanto comes first. Johto is planned as the post-game region. Development is
 moving through Kanto one area at a time, with separate patch checkpoints.
 
-## Changes you can play in prototype 0016
+## Changes you can play in prototype 0017
 
 ### A new opening in Pallet Town
 
@@ -139,12 +140,12 @@ moving through Kanto one area at a time, with separate patch checkpoints.
   Shock Wave TM34 remains separately available. In prototype 0015, teaching
   Bide still consumes its TM; reusable TMs are available starting with 0016.
 - Pewter's houses, Mart, Center and museum conversions are complete in 0016.
-  Route 3 is currently the next development boundary.
+  Route 3 is now converted; Mt. Moon and Route 4 are next.
 
 ## Added in published prototype 0016
 
-These changes are included in the latest download above. Earlier downloads
-retain their original behavior and remain available separately.
+These changes first appeared in 0016 and carry forward into the latest
+download above. Earlier downloads retain their original behavior.
 
 - Yellow conversations for Pewter's houses, Mart and Pokémon Center, while
   keeping HeartGold's healing, shop and PC services.
@@ -168,7 +169,7 @@ retain their original behavior and remain available separately.
 - The requested **bulk Rare Candy quantity selector is not implemented yet**.
   It must preserve each level-up's move learning, evolution and correct item use.
 
-The released build passed 212 automated checks, including Moon Stone
+The 0016 build passed 212 automated checks, including Moon Stone
 evolution, removal of Psyduck's earlier methods, and existing stone evolution
 at level 100. The revised museum also passed 17 focused Pewter checks; both stair transitions
 worked in a DS emulator, and Old Amber was awarded exactly once with repeat
@@ -209,19 +210,37 @@ push date and time.
 | 0013 | Oct 10, 2026 · 3:42 AM EDT | League guard fixes, early Route 22 Blue battle, exact level-6 lab reward, automatic Oak Poké Balls, dialogue repairs, fair rival starter rolls, global shiny odds, Shiny Charm and scoped Legendary IV rules. |
 | 0014 | Oct 10, 2026 · 4:19 AM EDT | Route 2 and Viridian Forest encounters, trainers, items and conversations; removal of inherited Kanto HM terrain gates. |
 | 0015 | Oct 10, 2026 · 5:36 AM EDT | Pewter outdoor events, Brock's gym/Boulder Badge/Bide TM, Water/Psychic Golduck. |
-| 0016 | Oct 10, 2026 · 1:14 PM EDT | Pewter interiors, two-floor museum/Old Amber, reusable TMs, eligible level-100 Rare Candy evolution and Moon Stone Psyduck. **Latest published patch.** |
+| 0016 | Oct 10, 2026 · 1:14 PM EDT | Pewter interiors, two-floor museum/Old Amber, reusable TMs, eligible level-100 Rare Candy evolution and Moon Stone Psyduck. |
+| 0017 | Oct 10, 2026 · 4:29 PM EDT | Route 3: eight Yellow trainer teams, encounters, dialogue and post-Brock access. **Latest published patch.** |
 
-| 0017 | Not published yet | Route 3 conversion; native battle checks in progress. |
+[Detailed release notes and verification records](https://github.com/ThatAnarchyDude/corvus-workshop/tree/3c533771058943494062b16eae7dfbb03a89b65b/yellow-heartgold)
 
-[Detailed release notes and verification records](https://github.com/ThatAnarchyDude/corvus-workshop/tree/e2b7c70107017dfcc72c3763bd6ad89e91d96081/yellow-heartgold)
+## Added in published prototype 0017
 
-## Current development — prototype 0017
+- Route 3 has Yellow's eight trainer teams at levels 9–14, explicit Yellow moves,
+  and complete battle and post-battle dialogue. Trainers use native HeartGold
+  approaches, battles, rewards and defeat flags, at existing route positions.
+- Grass encounters are Spearow, Mankey, Sandshrew and Rattata at levels 8–12,
+  preserving Yellow's slot probabilities across morning, day and night.
+- The sign and resting traveler use Yellow conversations. The PC tip says
+  **30 Pokémon per box**, matching HeartGold's capacity.
+- Pewter's east exit opens after Brock's Boulder Badge. The pre-Brock escort
+  remains. No additional terrain barriers are added.
+- Original HeartGold route geometry and warps remain. Its original trainer and
+  item events are archived; Yellow has no Route 3 item pickups.
+- Existing Blue teams remain unchanged pending the owner's future team plan.
 
-Route 3 is implemented locally and has passed 218 automated tests. Its browser
-downloader reproduces the verified ROM. Native emulator checks of the post-Brock
-exit and an early Route 3 battle are in progress. This is not a release yet.
+All **218 automated tests passed**. The browser downloader rejected incorrect
+input and generated the verified ROM with its four-digit filename. DS emulator
+checks loaded a normal save carried from 0016, crossed the post-Brock exit in
+both directions, and won the shorts Youngster's battle against Rattata 11 and
+Ekans 11. The defeat flag and post-battle dialogue were checked. Private native
+commands prepared the battle test save; those grants are absent from the release.
+Not all eight battles or the complete campaign have been playtested.
+
 Normal saves are carried forward for focused new-area checks; opening changes
-still receive fresh-game tests when needed.
+still receive fresh-game tests when needed. Mt. Moon and Route 4 are unconverted:
+their native exits remain available, but their events are outside this checkpoint.
 
 ## Agreed plans that are not finished features
 
@@ -230,7 +249,7 @@ still receive fresh-game tests when needed.
   owner’s complete team plan; current teams remain in place.
 
 - Continue Yellow's Kanto campaign through Giovanni's eighth badge, then the
-  remaining adventure. Route 3 and Mt. Moon follow Pewter's completion.
+  remaining adventure. Mt. Moon and Route 4 follow Route 3's completion.
 - Give every Generation IV species an obtainable path, and complete later
   gyms, towns, dungeons, Rocket events, gifts and services.
 - When later battles require Blue's evolved Eevee: use Jolteon if the player
