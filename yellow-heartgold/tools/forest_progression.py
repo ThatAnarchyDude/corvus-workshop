@@ -60,7 +60,7 @@ def expanded_common(original,count):
     # Insert aliases without duplicating/repacking relative branch bodies.
     n=0
     while struct.unpack_from('<H',original,n*4)[0]!=0xFD13:n+=1
-    assert n==740 and count>=n
+    assert n>=740 and count>=n
     growth=4*(count-n);out=bytearray()
     for i in range(count):
         old=i if i<n else 0

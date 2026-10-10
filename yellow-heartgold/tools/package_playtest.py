@@ -10,7 +10,7 @@ VENDOR = PROJECT/'tools/vendor/rom-patcher'
 
 
 def build(destination, version='004'):
-    if version not in ('004', '005', '006', '007', '008', '009', '010', '011', '012', '013', '014'):
+    if version not in ('004', '005', '006', '007', '008', '009', '010', '011', '012', '013', '014', '015'):
         raise ValueError('Unsupported prototype version')
     destination.mkdir(parents=True, exist_ok=True)
     patch = PROJECT/f'build/yellow-heartgold-prototype-{version}.xdelta'
@@ -20,10 +20,11 @@ def build(destination, version='004'):
         output_sha256=hashlib.sha256(rom.read_bytes()).hexdigest(),
         source_bytes=134217728, output_bytes=rom.stat().st_size,
         patch_sha256=hashlib.sha256(patch.read_bytes()).hexdigest())
-    if version=='014':
-        manifest.update(parent_version='013',cumulative=True,
+    if version in ('014','015'):
+        parent=f'{int(version)-1:03d}'
+        manifest.update(parent_version=parent,cumulative=True,
                         parent_output_sha256=hashlib.sha256(
-                            (PROJECT/'build/yellow-heartgold-prototype-013.nds').read_bytes()).hexdigest())
+                            (PROJECT/f'build/yellow-heartgold-prototype-{parent}.nds').read_bytes()).hexdigest())
     vendors = '\n'.join((VENDOR/name).read_text() for name in
         ['HashCalculator.js','BinFile.js','RomPatcher.format.vcdiff.js'])
     worker = vendors + '''
@@ -100,7 +101,7 @@ button.addEventListener('click',async()=>{
   } catch(error){status.textContent=error.message;finish();}
 });
 </script></html>'''.replace('004', version).replace('PACKAGE', encoded)
-    if version in ('005', '006', '007', '008', '009', '010', '011', '012', '013', '014'):
+    if version in ('005', '006', '007', '008', '009', '010', '011', '012', '013', '014', '015'):
         html=html.replace('Start a <strong>new game</strong> to test the revised opening. Keep earlier saves backed up.',
             'Start a <strong>new game</strong> to test the opening, or import a backed-up prototype 004 normal save through your emulator. Emulator save states should not be transferred between builds.')
     if version == '006':
@@ -108,7 +109,7 @@ button.addEventListener('click',async()=>{
         html=html.replace('a backed-up prototype 004 normal save','a backed-up prototype 004 or 005 normal save')
         html=html.replace('Oak’s Psyduck capture currently uses field animation.',
             'Reopen the bedroom PC to receive 95 of each evolution item. Make space in storage if prompted, then reopen it to collect the remainder.')
-    if version in ('007', '008', '009', '010', '011', '012', '013', '014'):
+    if version in ('007', '008', '009', '010', '011', '012', '013', '014', '015'):
         html=html.replace(f'Opening playtest · Prototype {version}',f'Oak’s Parcel playtest · Prototype {version}')
         html=html.replace('a backed-up prototype 004 normal save','a backed-up prototype 004, 005, 006 or 007 normal save')
         html=html.replace('The route remains blocked beyond the first testing area. Oak’s Psyduck capture currently uses field animation.',
@@ -139,6 +140,11 @@ button.addEventListener('click',async()=>{
         html=html.replace('a backed-up prototype 004, 005, 006 or 007 normal save','a backed-up prototype 004–013 normal save')
         html=html.replace('Areas beyond Viridian remain blocked.', 'Route 2 and Viridian Forest are open after the catching lesson. Pewter is the next development area.')
         html=html.replace('Evolution supplies remain available in the player’s PC.', 'Route 2 has no battle trainers. Forest trainers and grass encounters use Yellow’s species and levels, with HeartGold’s maps and battle mechanics. Inherited Cut trees, Rock Smash rocks and Strength boulders have been removed from Kanto; only the two specifically requested Viridian trees remain. Johto terrain is unchanged. Earlier prototype downloads remain available separately. Evolution supplies remain in the player’s PC.')
+    if version == '015':
+        html=html.replace('Oak’s Parcel playtest · Prototype 015','Pewter gym checkpoint · Prototype 015')
+        html=html.replace('a backed-up prototype 004, 005, 006 or 007 normal save','a backed-up prototype 004–014 normal save')
+        html=html.replace('Areas beyond Viridian remain blocked.', 'Route 2, Viridian Forest and Pewter are open after the catching lesson. Route 3 is the next development area.')
+        html=html.replace('Evolution supplies remain available in the player’s PC.', 'Brock and his junior trainer use Yellow’s teams, levels and moves. Brock awards the Boulder Badge and a single-use Bide TM34 through the normal TM menu. Golduck is Water/Psychic; its moves remain unchanged. Earlier fixes, shiny odds, PC supplies and removed Kanto terrain gates carry forward. Pewter’s optional building events are still being converted. Earlier downloads remain available separately.')
     # hidden must override display on the downloadable link.
     html=html.replace('footer{margin-top', '[hidden]{display:none!important}footer{margin-top')
     (destination/'index.html').write_text(html)
@@ -150,6 +156,6 @@ button.addEventListener('click',async()=>{
 if __name__ == '__main__':
     parser=argparse.ArgumentParser()
     parser.add_argument('destination',type=Path)
-    parser.add_argument('--version',choices=['004','005','006','007','008','009','010','011','012','013','014'],default='004')
+    parser.add_argument('--version',choices=['004','005','006','007','008','009','010','011','012','013','014','015'],default='004')
     args=parser.parse_args()
     build(args.destination,args.version)

@@ -1,0 +1,11 @@
+{
+  "version": "015",
+  "source_sha256": "65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105",
+  "output_sha256": "b15097292e8dfcbc0a1c0d1f58eabb9132b0c117f95a79d266b0abe528f2ac84",
+  "source_bytes": 134217728,
+  "output_bytes": 126892232,
+  "patch_sha256": "9b906b9e75789463db4e962c12e7ccd4f41697adc7115db88a395d48d86cf489",
+  "parent_version": "014",
+  "cumulative": true,
+  "parent_output_sha256": "edcd95d49ad2a2c8959b2b946934793bdf8c6f506138d2f4087c246c1b08e79f"
+}
