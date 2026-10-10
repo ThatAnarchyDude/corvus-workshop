@@ -1,3 +1,5 @@
+Prototype 013 fixes League gate direction and progression, exact lab experience, mandatory Oak Poké Balls, Daisy/Trainer House messages and long dialogue; it adds Yellow’s early Route 22 Blue battle with his lab starter, a random Psyduck/Eevee choice of opposite gender for Togepi players, and matching 1-in-4,096 shiny and 1-in-16,384 perfect-IV odds. See [PROTOTYPE-013.md](PROTOTYPE-013.md). Global base shiny odds are 1/4,096, or 1/2,048 with the passive Shiny Charm supplied through the bedroom PC. Perfect Legendary IVs apply only to the 17 existing Yellow/HGSS encounter species listed in the release notes.
+
 Prototype 012 completes the Viridian opening groundwork with Cut trees, removable lesson barriers, the granddaughter, a temporary west guard and the cashier’s Pokégear/Town Map reward. See [PROTOTYPE-012.md](PROTOTYPE-012.md).
 
 Prototype 011 fixes the three-lane coffee gate, Blue’s touch-screen portrait and Eevee’s intro position. See [PROTOTYPE-011.md](PROTOTYPE-011.md). Route 2 and Viridian Forest follow after this correction playtest.
@@ -102,7 +104,7 @@ Keep event flags, variables, script/file identifiers and edited archive members 
 
 ## Repository safety and release practice
 
-The current development branch is `android-prototype-005`; its starting point is the known-good prototype 003 branch, after removal of complete modified DS ROM ZIP archives from the branch contents. The project files are still in a **public** GitHub repository, so do not put original or rebuilt ROMs, proprietary SDKs or private assets into commits.
+The current development branch is `android-prototype-013`; its starting point is the known-good prototype 003 branch, after removal of complete modified DS ROM ZIP archives from the branch contents. The project files are still in a **public** GitHub repository, so do not put original or rebuilt ROMs, proprietary SDKs or private assets into commits.
 
 - The repository-root `.gitignore` excludes common ROM and save file extensions, plus local build outputs.
 - `python3 yellow-heartgold/tools/check_repo_safety.py` examines tracked files and ZIP members for known ROM/save extensions. GitHub Actions runs it for future pushes and pull requests on this branch.

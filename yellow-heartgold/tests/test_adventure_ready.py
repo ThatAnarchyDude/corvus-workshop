@@ -6,6 +6,7 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'tools'))
 from adventure_ready import *
 from test_viridian_tutorial import EventRun
 import test_opening_corrections as geometry_tests
+from progression_cleanup import repair_scroll
 
 
 class RewardRun(EventRun):
@@ -76,5 +77,5 @@ class Binary(unittest.TestCase):
     def test_both_cashier_scenes_have_the_promise_and_lower_cashier_stays_non_shop(self):
         d=self.new.loadArm9().sections[0].data
         for m in [50,500]:
-            tid=struct.unpack_from('<H',d,TABLE+m*24+10)[0];msg=decode_messages(self.arc(self.new,'a/0/2/7')[tid])[1][4];self.assertEqual(msg,decode_messages(encode_text(["Okay! Say hi to PROF.OAK for me!\r"+PROMISE],PH))[1][0])
+            tid=struct.unpack_from('<H',d,TABLE+m*24+10)[0];msg=decode_messages(self.arc(self.new,'a/0/2/7')[tid])[1][4];self.assertEqual(repair_scroll(msg),decode_messages(encode_text(["Okay! Say hi to PROF.OAK for me!\r"+PROMISE],PH))[1][0])
         sid=struct.unpack_from('<H',d,TABLE+500*24+6)[0];self.assertNotIn(command(20,2048),split_bank(self.arc(self.new,'a/0/1/2')[sid])[0])

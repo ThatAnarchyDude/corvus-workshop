@@ -61,11 +61,11 @@ class TextScript(Script):
         return super().emit(op, *args)
 
 
-def script(*, evolution_items=False, text_offset=0, service_only=False):
+def script(*, evolution_items=False, text_offset=0, service_only=False, shiny_charm=False):
     s = TextScript(text_offset)
     if not service_only:
         s.emit(96).emit(73, 1547)
-    s.compare(INIT, 1).jump('upgrade' if evolution_items else 'boot', 1)
+    s.compare(INIT, 1).jump('upgrade' if evolution_items else 'charm' if shiny_charm else 'boot', 1)
     for (item_var, qty_var), item, qty in zip(SLOTS, [17, 50], [1, 95]):
         s.emit(41, item_var, item).emit(41, qty_var, qty)
     s.emit(41, INIT, 1)
@@ -84,8 +84,14 @@ def script(*, evolution_items=False, text_offset=0, service_only=False):
                 s.emit(41, item_var, item).emit(42, qty_var, 0x8009)
                 s.emit(41, EVOLUTION_INIT, step + 1).jump(f'upgrade_next_{step}')
             s.label(f'upgrade_next_{step}')
-        s.jump('boot')
+        s.jump('charm' if shiny_charm else 'boot')
         s.label('upgrade_full'); message(s, 39); s.jump('boot')
+    if shiny_charm:
+        s.label('charm').emit(32,0xB3B).jump('boot',1)
+        for i,(_,qty_var) in enumerate(SLOTS):s.compare(qty_var,0).jump(f'charm_slot_{i}',1)
+        message(s,39);s.jump('boot')
+        for i,(item_var,qty_var) in enumerate(SLOTS):
+            s.label(f'charm_slot_{i}').emit(41,item_var,114).emit(41,qty_var,1).emit(30,0xB3B).jump('boot')
     s.label('boot')
     if service_only:
         s.jump('player_services')
@@ -175,7 +181,9 @@ def script(*, evolution_items=False, text_offset=0, service_only=False):
     s.compare(0x8008,2).jump('confirm_toss',1)
     s.emit(125,0x8004,0x8007,0x800C).compare(0x800C,0).jump('no_room',1)
     s.jump('subtract')
-    s.label('confirm_toss'); s.emit(45);s.data.append(20 + getattr(s, "text_offset", 0))
+    s.label('confirm_toss')
+    if shiny_charm:s.compare(0x8004,114).jump('protected_charm',1)
+    s.emit(45);s.data.append(20 + getattr(s, "text_offset", 0))
     s.emit(63,0x800C).emit(53).compare(0x800C,0).jump('storage',5)
     s.label('subtract')
     for i,(_,qty_var) in enumerate(SLOTS):
@@ -202,6 +210,8 @@ def script(*, evolution_items=False, text_offset=0, service_only=False):
         s.label(f'receipt_{mode}');message(s,msg);s.jump('storage')
     for label,msg in [('full',18),('insufficient',19),('no_room',17)]:
         s.label(label);message(s,msg);s.jump('storage')
+    if shiny_charm:
+        s.label('protected_charm');message(s,40);s.jump('storage')
     s.label('exit')
     if service_only:
         return s.emit(27).finish()

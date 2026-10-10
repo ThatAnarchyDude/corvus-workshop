@@ -1,19 +1,19 @@
 {
-  "project_name": "Pokémon Psyduck Yellow",
+  "project_name": "Pok\u00e9mon Psyduck Yellow",
   "short_name": "Psyduck Yellow",
-  "provenance": "Supervisor's opening redesign, 2026-10-09; not yet implemented in ROM",
-  "current_build": "Prototype 003 is known good and remains unchanged",
+  "provenance": "Owner-approved opening and starter rules, implemented through prototype 013",
+  "current_build": "Prototype 013; see PROTOTYPE-013.md and release validation for tested scope",
   "capture_scene": {
     "wild_species": 54,
     "wild_name": "Psyduck",
     "oak_catches": true,
-    "placed_at": "left Poké Ball on lab table",
+    "placed_at": "left Pok\u00e9 Ball on lab table",
     "required_gender": "male",
     "scripted": true
   },
   "lab_table": {
     "approach": "freestanding table on right side of Oak's lab, in the spirit of Yellow",
-    "interaction": "approach a physical Poké Ball, inspect starter, confirm or decline",
+    "interaction": "approach a physical Pok\u00e9 Ball, inspect starter, confirm or decline",
     "options": [
       {
         "position": "left",
@@ -36,7 +36,7 @@
     ]
   },
   "starter_level": 5,
-  "gender_selection_policy": "Starter gender is independent of chosen player gender. Force via per-Pokémon personality/gender at creation, never by globally modifying species base data.",
+  "gender_selection_policy": "Starter gender is independent of chosen player gender. Force via per-Pok\u00e9mon personality/gender at creation, never by globally modifying species base data.",
   "rival_rules": [
     {
       "player_gender": "male",
@@ -51,12 +51,26 @@
     {
       "player_gender": "male",
       "chosen_starter": 175,
-      "rival_starter": 133
+      "rival_starter": null,
+      "rival_starter_choices": [
+        54,
+        133
+      ],
+      "probability_each": "1/2",
+      "gender": "opposite the chosen Togepi",
+      "persist_choice": true
     },
     {
       "player_gender": "female",
       "chosen_starter": 175,
-      "rival_starter": 133
+      "rival_starter": null,
+      "rival_starter_choices": [
+        54,
+        133
+      ],
+      "probability_each": "1/2",
+      "gender": "opposite the chosen Togepi",
+      "persist_choice": true
     },
     {
       "player_gender": "male",
@@ -86,11 +100,12 @@
   },
   "release_policy": "Publish a patch and local-only automatic browser downloader. The user selects their own HeartGold ROM; the finished NDS is created and downloaded on that device. Never upload ROMs, including ZIPs, to GitHub.",
   "starter_creation": {
-    "chosen_game": "Pokémon Psyduck Yellow",
+    "chosen_game": "Pok\u00e9mon Psyduck Yellow",
     "shiny_chance": {
       "numerator": 1,
-      "denominator": 16384,
-      "applies_to": "each starter gift only"
+      "denominator": 4096,
+      "applies_to": "each starter gift only",
+      "interpretation": "Current-generation base shiny odds requested by owner"
     },
     "perfect_six_iv_bonus": {
       "numerator": 1,
@@ -106,7 +121,7 @@
       "gender_rule": "species personal-data gender threshold vs PID low byte",
       "independent_genders": true
     },
-    "non_starter_scope": "Leave ordinary wild and NPC Pokémon creation unchanged",
+    "non_starter_scope": "Leave ordinary wild and NPC Pok\u00e9mon creation unchanged",
     "integration_status": "Live Thumb-1 implementation in starter_properties.py; native DS validation in progress.",
     "ability_slots": {
       "chance_policy": "Uniform 1-in-3 for each of three ability slots (per starter gift only). Hidden Ability must be flagged for evolution to preserve or map to the correct evolved third ability.",
@@ -180,9 +195,9 @@
       ],
       "gen4_engine_status": "All nine ability IDs exist natively; third species slot and Hidden Ability inheritance do not exist in stock HeartGold.",
       "method": "Design-stage Kanto-only creation/evolution hooks must set an available ability explicitly, retain a third-slot marker through saves, and bypass stock UpdateMonAbility only where an existing Hidden Ability maps to the evolved species. No such hook has been integrated yet.",
-      "evolution_note": "Map starter Hidden Ability to the evolved species' own Hidden Ability ONLY when that ability exists in stock HeartGold. Espeon's Magic Bounce is absent: on evolution let HeartGold recalculate its native Synchronize and discard any third-slot state. Non-hidden Pokémon use original HeartGold evolution mechanics. Preserve vanilla Johto and wild encounters.",
-      "cross_game_scope": "Do not change Johto starter selection, wild Pokémon, general ability slots, or Silver.",
-      "compatibility_policy": "Give third-slot Hidden Abilities only if the exact effect is already implemented in the original HeartGold engine. Never add Gen V+ abilities, substitute a different Hidden Ability, or modify globally shared Pokémon data.",
+      "evolution_note": "Map starter Hidden Ability to the evolved species' own Hidden Ability ONLY when that ability exists in stock HeartGold. Espeon's Magic Bounce is absent: on evolution let HeartGold recalculate its native Synchronize and discard any third-slot state. Non-hidden Pok\u00e9mon use original HeartGold evolution mechanics. Preserve vanilla Johto and wild encounters.",
+      "cross_game_scope": "Do not change Johto starter selection, wild Pok\u00e9mon, general ability slots, or Silver.",
+      "compatibility_policy": "Give third-slot Hidden Abilities only if the exact effect is already implemented in the original HeartGold engine. Never add Gen V+ abilities, substitute a different Hidden Ability, or modify globally shared Pok\u00e9mon data.",
       "native_hg_ability_ids_used": [
         6,
         13,
@@ -276,11 +291,45 @@
         }
       ],
       "future_pokemon_policy": {
-        "scope": "Deferred. Do not mass-edit the Pokédex or native species abilities.",
-        "trigger": "Only when an additional Pokémon becomes relevant to story/gameplay and the supervisor asks for it",
+        "scope": "Deferred. Do not mass-edit the Pok\u00e9dex or native species abilities.",
+        "trigger": "Only when an additional Pok\u00e9mon becomes relevant to story/gameplay and the supervisor asks for it",
         "guard": "Enable its Hidden Ability only if that exact effect is implemented in unmodified HeartGold; otherwise preserve its normal HeartGold abilities.",
-        "implementation": "Use targeted changes per species or event; never rewrite all Pokémon globally."
+        "implementation": "Use targeted changes per species or event; never rewrite all Pok\u00e9mon globally."
       }
     }
+  },
+  "rival_starter_properties": {
+    "shiny_roll_denominator": 4096,
+    "perfect_iv_roll_denominator": 16384,
+    "independent_rolls": true,
+    "otherwise": "normal random IVs",
+    "persistent_across_encounters": true,
+    "eevee_evolution": "ask owner before implementing first evolved encounter",
+    "psyduck_togepi_evolution": "normal species evolutions when later battles are implemented"
+  },
+  "global_shiny_rules": {
+    "base_denominator": 4096,
+    "shiny_charm_denominator": 2048,
+    "shiny_charm_item": 114,
+    "perfect_legendary_species": [
+      144,
+      145,
+      146,
+      150,
+      243,
+      244,
+      245,
+      249,
+      250,
+      380,
+      381,
+      382,
+      383,
+      384,
+      483,
+      484,
+      487
+    ],
+    "legendary_scope": "Only existing Yellow and HeartGold/SoulSilver encounter species, including native Sinjoh encounters"
   }
 }

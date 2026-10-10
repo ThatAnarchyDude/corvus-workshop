@@ -146,7 +146,9 @@ def encode_text(lines, placeholder):
             wrapped = textwrap.wrap(paragraph, width=30, break_long_words=False, break_on_hyphens=False)
             for i, row in enumerate(wrapped):
                 if i:
-                    output.append(mapping['\\n'] if i % 2 else 0x25BD)
+                    # A scroll leaves the cursor on the bottom line. Every
+                    # subsequent line must scroll too; another LF goes off-box.
+                    output.append(mapping['\\n'] if i == 1 else 0x25BD)
                 for token in re.split(r'(\{PLAYER\}|\{RIVAL\})', row):
                     if token == '{PLAYER}':
                         output.extend(placeholder)

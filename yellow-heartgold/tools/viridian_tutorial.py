@@ -93,7 +93,7 @@ def city_reload():
     return s.label('done').emit(30,CITY_MIGRATED).finish()
 
 
-def oak_parcel(base,pickup_message):
+def oak_parcel(base,pickup_message,mandatory_balls=False):
     s=Script().emit(96).emit(104).emit(32,0x6A).jump('before_starter',5)
     s.compare(PARCEL_STATE,2).jump('complete',1)
     s.emit(669,459,0x800C).compare(0x800C,0).jump('no_parcel',1)
@@ -113,7 +113,11 @@ def oak_parcel(base,pickup_message):
     s.emit(291).emit(30,0x6B).emit(477);s.data.append(1);s.emit(0x800C)
     s.emit(78,1187).msg(base+6).emit(79).msg(base+7).msg(base+8)
     music(s,1088).movement(9,'leave').emit(95).emit(73,1540).emit(30,BLUE_HIDE).emit(101,9)
-    s.emit(82).msg(base+9);end(s)
+    s.emit(82).msg(base+9)
+    if mandatory_balls:
+        s.emit(125,4,5,0x800C).compare(0x800C,0).jump('bag_full',1)
+        s.emit(30,BALLS_GIVEN).emit(78,1187).msg(base+10).emit(79).msg(base+11)
+    end(s)
     s.label('no_parcel').msg(base+13).emit(282);end(s)
     s.label('complete').emit(32,BALLS_GIVEN).jump('adventure',1)
     s.emit(125,4,5,0x800C).compare(0x800C,0).jump('bag_full',1)

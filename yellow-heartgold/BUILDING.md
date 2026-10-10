@@ -99,3 +99,18 @@ The builder appends quest script/text/event assets and a small ITCM Dex gate. It
 ## Prototype 008 — Viridian fixes
 
 See [PROTOTYPE-008.md](PROTOTYPE-008.md) for the incremental builder, required input and checks. It builds from the exact prototype-007 output and keeps that release reproducible.
+
+## Prototype 013 — progression corrections and shiny rules
+
+See [PROTOTYPE-013.md](PROTOTYPE-013.md) for the owner-approved rules, playtest steps and scope limits. Requires the exact local prototype 012 output and original USA HeartGold; ROMs and normal saves stay ignored.
+
+```sh
+yellow-heartgold/.venv/bin/python yellow-heartgold/tools/progression_cleanup.py
+yellow-heartgold/.venv/bin/python -m unittest discover -s yellow-heartgold/tests
+yellow-heartgold/.venv/bin/python yellow-heartgold/tools/package_playtest.py yellow-heartgold/build/browser-download-013 --version 013
+python3 yellow-heartgold/tools/check_repo_safety.py
+```
+
+The builder validates both input checksums, original hook bytes, ITCM bounds and a decoded patch round trip. New scripts, event banks and trainer records are appended while original members remain archived. `tools/shiny_charm.py` patches native generation and inventory checks and the existing anti-shiny rejection paths; the full allowed Legendary species list is explicit. The compiled Thumb tests exercise RNG boundaries, saved choice/gender/seed, experience, constructor arguments, IV setters, Charm ownership and trade identity rather than relying on configuration alone.
+
+Native DeSmuME checks use continuous fresh boots and normal saves. Fixtures change only local event scripts to place the player at a specific scene, grant controlled battle-test moves or generate representative species; these grants are excluded from the published patch. Screenshots and decoded live RAM distinguish displayed dialogue and movement from script-model assertions. Test coverage and remaining Android/audio/story checks are listed in `releases/prototype-013/validation.json`.

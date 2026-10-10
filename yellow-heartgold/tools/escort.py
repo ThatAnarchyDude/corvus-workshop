@@ -131,7 +131,7 @@ def oak_talk():
     return end(s).finish()
 
 
-def ball_choice(index, *, grant_dex=True):
+def ball_choice(index, *, grant_dex=True, rival_override=None, after_properties=None):
     species = SPECIES[index]
     s = Script().emit(96).emit(32, 0x6A).jump('taken', 1)
     s.compare(OAK_STATE, 1).jump('allowed', 1).msg(15)
@@ -143,10 +143,12 @@ def ball_choice(index, *, grant_dex=True):
     s.emit(77).emit(63, 0x800C).emit(53).emit(453)
     s.compare(0x800C, 0).jump('accept', 1)
     end(s)
-    s.label('accept').emit(73, 1501).emit(137, species, 5, 0, 0, 0, 0x800C)
+    s.label('accept').emit(73, 1501)
+    s.emit(137, species, 5, 0, 0, 0, 0x800C)
     s.compare(0x800C, 1).jump('received', 1).msg(30)
     end(s)
     s.label('received').emit(41, 0x416B, 1).emit(1).emit(41, 0x416B, 0)
+    if after_properties is not None:after_properties(s)
     s.emit(30, 0x6A).emit(131, species)
     s.emit(30, BALL_FLAGS[index]).emit(101, 4 + index)
     # A field gift does not return from the native starter application, whose
@@ -162,11 +164,11 @@ def ball_choice(index, *, grant_dex=True):
         s.emit(0x800C)
     s.msg(3).msg(4).msg(5)
     # Rival walks to his chosen ball, then returns to wait near the exit.
-    rival_index = RIVAL_CHOICES[index]
+    rival_index = RIVAL_CHOICES[index] if rival_override is None else rival_override
     s.movement(OBJ_RIVAL, 'pickup').emit(95)
     s.msg(6).msg(7).msg(8).msg(9).msg(10)
     s.emit(30, BALL_FLAGS[rival_index]).emit(101, 4 + rival_index)
-    s.emit(76, SPECIES[rival_index], 0).emit(77).msg(12 + index).msg(11)
+    s.emit(76, SPECIES[rival_index], 0).emit(77).msg(12 + index if rival_override is None else 14 if rival_index == 0 else 13).msg(11)
     s.movement(OBJ_RIVAL, 'return').emit(95)
     s.emit(41, RIVAL_STATE, 1).emit(41, OAK_STATE, 2)
     end(s)
@@ -196,14 +198,16 @@ def lab_init():
     return s.finish()
 
 
-def rival_battle(trainers):
+def rival_battle(trainers, *, battle_emitter=None):
     # Reuse the proven win/loss handling. Eevee faces Psyduck; both others face Eevee.
     s = Script().emit(96)
     music(s, 1088).movement(OBJ_RIVAL, 'challenge').emit(95)
     s.movement(255, 'face_rival').emit(95).msg(20)
-    s.emit(206, 0x800C).compare(0x800C, 133).jump('psyduck', 1)
-    s.emit(213, trainers[133], 0);s.data.extend(bytes([1, 0]));s.jump('after')
-    s.label('psyduck').emit(213, trainers[54], 0);s.data.extend(bytes([1, 0]))
+    if battle_emitter is not None:battle_emitter(s,trainers,1,'after')
+    else:
+        s.emit(206, 0x800C).compare(0x800C, 133).jump('psyduck', 1)
+        s.emit(213, trainers[133], 0);s.data.extend(bytes([1, 0]));s.jump('after')
+        s.label('psyduck').emit(213, trainers[54], 0);s.data.extend(bytes([1, 0]))
     s.label('after').emit(220, 0x800C).emit(42, opening.RIVAL_BATTLE_RESULT, 0x800C)
     s.compare(0x800C, 1).jump('won', 1).msg(22).jump('outro')
     s.label('won').msg(21)

@@ -86,8 +86,11 @@ def get_config() -> dict:
     if len(rules) != len(data["rival_rules"]):
         raise ValueError("Duplicate rival rule")
     if any(k[0] not in VALID_GENDERS or k[1] not in (54, 133, 175)
-           or v not in (54, 133, 175) for k, v in rules.items()):
+           or v not in (54, 133, 175, None) for k, v in rules.items()):
         raise ValueError("Unsupported starter/gender/rival configuration")
+    for entry in data['rival_rules']:
+        if entry['rival_starter'] is None and (entry['chosen_starter'] != 175 or entry.get('rival_starter_choices') != [54,133]):
+            raise ValueError('Unsupported random rival choice')
     undecided = {(entry["player_gender"], entry["chosen_starter"])
                  for entry in data["unresolved_rival_cases"]}
     if set(rules) & undecided:
@@ -116,8 +119,8 @@ def required_starter_gender(species: int) -> str:
     raise ValueError(f"Not a Kanto starter: {species}")
 
 
-def rival_starter(player_gender: str, player_starter: int) -> int:
-    """Return explicitly approved rival species; fail on undecided branches."""
+def rival_starter(player_gender: str, player_starter: int, randbelow=None) -> int:
+    """Return the approved rival species, requiring an RNG for Togepi."""
     rules = {(entry["player_gender"], entry["chosen_starter"]):
              entry["rival_starter"] for entry in get_config()["rival_rules"]}
     if player_gender not in VALID_GENDERS or player_starter not in (54, 133, 175):
@@ -125,6 +128,11 @@ def rival_starter(player_gender: str, player_starter: int) -> int:
     key = (player_gender, player_starter)
     if key not in rules:
         raise NotImplementedError(f"Rival starter still requires supervisor decision: {key}")
+    if rules[key] is None:
+        if randbelow is None:raise ValueError('Togepi requires a random rival-choice roll')
+        roll=randbelow(2)
+        if type(roll) is not int or not 0<=roll<2:raise ValueError('Invalid rival-choice roll')
+        return (54,133)[roll]
     return rules[key]
 
 

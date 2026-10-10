@@ -12,8 +12,9 @@ from player_pc import script,SLOTS,INIT
 
 
 class StorageRun:
-    def __init__(self, choices, *, variables=None, bag=None, selected=0, bag_limit=999, evolution_items=False):
+    def __init__(self, choices, *, variables=None, bag=None, selected=0, bag_limit=999, evolution_items=False, flags=None):
         self.variables = dict(variables or {})
+        self.flags = set(flags or [])
         self.bag = dict(bag or {})
         self.choices = iter(choices)
         self.selected = selected
@@ -37,6 +38,8 @@ class StorageRun:
         for _ in range(4000):
             op=self.read()
             if op==2:return self
+            if op==30:self.flags.add(self.read());continue
+            if op==32:self.cmp=0 if self.read() in self.flags else -1;continue
             if op in (50,53,96,97,150,175,746,747):continue
             if op==45:self.messages.append(self.read('B'));continue
             if op in (190,191):self.read('B');continue

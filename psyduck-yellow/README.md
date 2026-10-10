@@ -1,9 +1,11 @@
-# Pokémon Psyduck Yellow — prototype 012
+# Pokémon Psyduck Yellow — prototype 013
 
 Open `index.html` through HTTPS in a current browser. Select your original unmodified USA HeartGold `.nds`, choose **Create my playable NDS**, and download the verified file for your DS emulator. The original stays on your device. This page contains a modification patch, not a full ROM.
 
-The old man’s granddaughter replaces one invisible barrier, then walks aside and wanders after his lesson. The temporary invisible barriers disappear; both outer Cut trees remain until Cut is used. The western guard leaves after parcel delivery. Return to the upper Mart cashier for the one-time Pokégear reward with Town Map and Kanto access, followed by the normal shop. Blue’s touch-screen portrait and the approved opening remain intact. Route 2 and Viridian Forest are next.
+This build fixes the League gate interception and rightward push, long dialogue, Daisy and Trainer House messages, mandatory Oak Poké Balls and exact level-6 experience from the first lab victory. Route 22 includes Yellow's early Blue encounter, with level 9 Spearow and his chosen level 8 starter. Choosing Togepi gives Blue a persistent random Psyduck/Eevee of opposite gender.
 
-Back up normal saves and avoid transferring emulator save states between builds. A normal prototype 011 save can test the new actors and reward; use a pre-parcel save to see the cashier’s promise and west guard. The Cut trees follow HeartGold’s normal map re-entry reset behavior.
+Base shiny odds are 1/4,096; carry the Shiny Charm from the bedroom PC for 1/2,048. Both starters have independent 1/16,384 perfect-IV rolls. Guaranteed Legendary IVs apply only to the 17 existing Yellow/HGSS encounter species listed in the release notes. Intentional guaranteed shiny scenes remain shiny. Route 2 and Viridian Forest are next.
 
-Source and validation are on `android-prototype-012` in `yellow-heartgold/PROTOTYPE-012.md`. The decoder is RomPatcher.js by Marc Robledo, MIT licensed; see LICENSE.txt.
+Back up normal saves and avoid transferring emulator save states between builds. Use a new game for lab experience and Togepi's new rival selection; a pre-parcel save for Oak's mandatory gift and the full cashier promise; a post-parcel save for Route 22 and the League gate. Existing older Togepi saves retain Blue's prior Eevee choice.
+
+Source and validation are on `android-prototype-013` in `yellow-heartgold/PROTOTYPE-013.md`. The decoder is RomPatcher.js by Marc Robledo, MIT licensed; see LICENSE.txt.

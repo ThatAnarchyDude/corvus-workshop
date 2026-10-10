@@ -24,8 +24,8 @@ class PsyduckYellowStarterTests(unittest.TestCase):
     def test_explicit_blue_rival_choices(self):
         self.assertEqual(rival_starter("male",133),54)
         self.assertEqual(rival_starter("female",54),133)
-        self.assertEqual(rival_starter("male",175),133)
-        self.assertEqual(rival_starter("female",175),133)
+        self.assertEqual(rival_starter("male",175,lambda n:1),133)
+        self.assertEqual(rival_starter("female",175,lambda n:0),54)
 
     def test_remaining_choices_use_paired_favourites(self):
         self.assertEqual(rival_starter("male",54),133)
