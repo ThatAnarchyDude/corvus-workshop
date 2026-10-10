@@ -11,6 +11,13 @@ A mobile-friendly interactive battery and capacitor simulator with electrotherma
 - [Project notes and usage instructions](./power-simulator/README.md)
 - [Version 02.1 archive](./power-simulator/versions/bench-02.1.html)
 
+### [Pokémon Psyduck Yellow](./psyduck-yellow/DEVELOPMENT-LOG.md)
+
+A Pokémon Yellow adventure rebuilt with HeartGold's engine. Follow the
+[plain-language development log](./psyduck-yellow/DEVELOPMENT-LOG.md) for published
+changes, current work, and plans. This link stays the same as the log is updated.
+The latest released checkpoint is prototype 015; the full game is still in development.
+
 ## How the workshop is organized
 
 Each project gets its own directory, documentation, and version history. We keep a consistent `index.html` for the latest stable standalone simulator and preserve versioned snapshots separately.
