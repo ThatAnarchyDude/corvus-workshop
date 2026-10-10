@@ -1,0 +1,234 @@
+{
+  "reference": {
+    "repository": "pret/pokeyellow",
+    "commit": "e89ead154b9968aa50eed9328ff2b38b6c194382",
+    "paths": [
+      "data/wild/maps/Route2.asm",
+      "data/wild/maps/ViridianForest.asm",
+      "data/trainers/parties.asm",
+      "data/maps/objects/ViridianForest.asm",
+      "data/events/hidden_events.asm",
+      "text/Route2.asm",
+      "text/ViridianForest.asm",
+      "text/ViridianForestSouthGate.asm",
+      "text/ViridianForestNorthGate.asm"
+    ]
+  },
+  "status": "Prototype 014 implementation; owner checkpoint testing proceeds independently of continued desktop validation",
+  "wild_slots": {
+    "Route2": [
+      {
+        "level": 3,
+        "species": "RATTATA"
+      },
+      {
+        "level": 3,
+        "species": "PIDGEY"
+      },
+      {
+        "level": 4,
+        "species": "RATTATA"
+      },
+      {
+        "level": 4,
+        "species": "NIDORAN_M"
+      },
+      {
+        "level": 4,
+        "species": "NIDORAN_F"
+      },
+      {
+        "level": 5,
+        "species": "PIDGEY"
+      },
+      {
+        "level": 6,
+        "species": "NIDORAN_M"
+      },
+      {
+        "level": 6,
+        "species": "NIDORAN_F"
+      },
+      {
+        "level": 7,
+        "species": "PIDGEY"
+      },
+      {
+        "level": 7,
+        "species": "PIDGEY"
+      }
+    ],
+    "ViridianForest": [
+      {
+        "level": 3,
+        "species": "CATERPIE"
+      },
+      {
+        "level": 4,
+        "species": "METAPOD"
+      },
+      {
+        "level": 4,
+        "species": "CATERPIE"
+      },
+      {
+        "level": 5,
+        "species": "CATERPIE"
+      },
+      {
+        "level": 4,
+        "species": "PIDGEY"
+      },
+      {
+        "level": 6,
+        "species": "PIDGEY"
+      },
+      {
+        "level": 6,
+        "species": "CATERPIE"
+      },
+      {
+        "level": 6,
+        "species": "METAPOD"
+      },
+      {
+        "level": 8,
+        "species": "PIDGEY"
+      },
+      {
+        "level": 9,
+        "species": "PIDGEOTTO"
+      }
+    ]
+  },
+  "yellow_slot_weights": [
+    20,
+    20,
+    15,
+    10,
+    10,
+    10,
+    5,
+    5,
+    4,
+    1
+  ],
+  "messages": {
+    "Route2SignText": "ROUTE 2 VIRIDIAN CITY - PEWTER CITY",
+    "Route2DiglettsCaveSignText": "DIGLETT's CAVE",
+    "ViridianForestYoungster1Text": "I came here with some friends!\rThey're out for POKEMON fights!",
+    "ViridianForestYoungster2BattleText": "Hey! You have POKEMON! Come on! Let's battle 'em!",
+    "ViridianForestYoungster2EndBattleText": "No! CATERPIE can't cut it!",
+    "ViridianForestYoungster2AfterBattleText": "Ssh! You'll scare the bugs away!",
+    "ViridianForestYoungster3BattleText": "Yo! You can't jam out if you're a POKEMON trainer!",
+    "ViridianForestYoungster3EndBattleText": "Huh? I ran out of POKEMON!",
+    "ViridianForestYoungster3AfterBattleText": "Darn! I'm going to catch some stronger ones!",
+    "ViridianForestYoungster4BattleText": "Hey, wait up! What's the hurry?",
+    "ViridianForestYoungster4EndBattleText": "I give! You're good at this!",
+    "ViridianForestYoungster4AfterBattleText": "Sometimes, you can find stuff on the ground!\rI'm looking for the stuff I dropped!",
+    "ViridianForestCooltrainerFBattleText": "Hi, do you have a PIKACHU?",
+    "ViridianForestCooltrainerFEndBattleText": "Oh no, really?",
+    "ViridianForestCooltrainerFAfterBattleText": "I looked forever, but I never found a PIKACHU here!",
+    "ViridianForestYoungster5BattleText": "I'm gonna be the best. You just can't beat me!",
+    "ViridianForestYoungster5EndBattleText": "After all I did...",
+    "ViridianForestYoungster5AfterBattleText": "A METAPOD is cool because its attack is its defense!",
+    "ViridianForestYoungster6Text": "I ran out of POKE BALLs to catch POKEMON with!\rYou should carry extras!",
+    "ViridianForestTrainerTips1Text": "TRAINER TIPS\rIf you want to avoid battles, stay away from grassy areas!",
+    "ViridianForestUseAntidoteSignText": "For poison, use ANTIDOTE! Get it at POKEMON MARTs!",
+    "ViridianForestTrainerTips2Text": "TRAINER TIPS\rContact PROF.OAK via PC to get your POKEDEX evaluated!",
+    "ViridianForestTrainerTips3Text": "TRAINER TIPS\rNo stealing of POKEMON from other trainers! Catch only wild POKEMON!",
+    "ViridianForestTrainerTips4Text": "TRAINER TIPS\rWeaken POKEMON before attempting capture!\rWhen healthy, they may escape!",
+    "ViridianForestLeavingSignText": "LEAVING VIRIDIAN FOREST PEWTER CITY AHEAD",
+    "ViridianForestSouthGateGirlText": "Are you going to VIRIDIAN FOREST? Be careful, it's a natural maze!",
+    "ViridianForestSouthGateLittleGirlText": "You have to roam far to get new kinds of POKEMON.\rLook for other types outside of VIRIDIAN FOREST.",
+    "ViridianForestNorthGateSuperNerdText": "Many POKEMON live only in forests  and caves.\rYou need to look everywhere to get different kinds!",
+    "ViridianForestNorthGateGrampsText": "Have you noticed the bushes on the roadside?\rThey can be cut down by a special POKEMON move."
+  },
+  "trainers": [
+    {
+      "actor": 7,
+      "source": "BugCatcher 1",
+      "dialogue": "ViridianForestYoungster2",
+      "team": [
+        [
+          10,
+          7
+        ],
+        [
+          10,
+          7
+        ]
+      ],
+      "class": 6,
+      "original_hg_trainer": 695
+    },
+    {
+      "actor": 8,
+      "source": "BugCatcher 2",
+      "dialogue": "ViridianForestYoungster3",
+      "team": [
+        [
+          11,
+          6
+        ],
+        [
+          10,
+          6
+        ],
+        [
+          11,
+          6
+        ]
+      ],
+      "class": 6,
+      "original_hg_trainer": 696
+    },
+    {
+      "actor": 9,
+      "source": "Lass 19",
+      "dialogue": "ViridianForestCooltrainerF",
+      "team": [
+        [
+          29,
+          6
+        ],
+        [
+          32,
+          6
+        ]
+      ],
+      "class": 3,
+      "original_hg_trainer": 697
+    },
+    {
+      "actor": 10,
+      "source": "BugCatcher 15",
+      "dialogue": "ViridianForestYoungster5",
+      "team": [
+        [
+          10,
+          8
+        ],
+        [
+          11,
+          8
+        ]
+      ],
+      "class": 6,
+      "original_hg_trainer": 698
+    },
+    {
+      "actor": 11,
+      "source": "BugCatcher 3",
+      "dialogue": "ViridianForestYoungster4",
+      "team": [
+        [
+          10,
+          10
+        ]
+      ],
+      "class": 6,
+      "original_hg_trainer": 699
+    }
+  ]
+}

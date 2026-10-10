@@ -23,7 +23,8 @@ def check(path, species, *, owned=None, dex_enabled=True):
                 and 0x100000 < avatar < len(ram) - 0x34):
             continue
         map_id = struct.unpack_from('<i', ram, location)[0]
-        if map_id not in (9, 27, 49, 50, 299, 500, 501, 503, 504, 505, 506, 527):
+        if map_id not in (9, 10, 27, 49, 50, 147, 299, 414, 419, 420,
+                          500, 501, 503, 504, 505, 506, 527):
             continue
         player = struct.unpack_from('<I', ram, avatar + 0x30)[0] - 0x2000000
         follower = struct.unpack_from('<I', ram, offset + 0xE4)[0] - 0x2000000
