@@ -161,6 +161,8 @@ These changes are in source or local builds. **They are not in the prototype
   methods are removed. Rare Candies no longer evolve it.
 - Stone evolutions remain usable at level 100, including Psyduck's Moon Stone
   and the existing Eevee/Togepi item options.
+- Simpler fixes and Pewter event checks take priority before the more complex
+  interfaces and campaign systems.
 - The requested **bulk Rare Candy quantity selector is not implemented yet**.
   It must preserve each level-up's move learning, evolution and correct item use.
 
@@ -229,5 +231,4 @@ in each release's detailed notes.
 Back up ordinary saves before moving between prototypes. Emulator save states
 are different and should not be transferred between builds. The project is an
 unofficial fan modification; the public downloads distribute patches, not full
-commercial game ROMs. Work proceeds during active development sessions, rather
-than running unattended indefinitely between conversations.
+commercial game ROMs. Work proceeds during active development sessions.
