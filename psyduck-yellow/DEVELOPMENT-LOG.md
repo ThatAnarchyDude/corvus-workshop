@@ -167,7 +167,8 @@ download above. Earlier downloads retain their original behavior.
 - Simpler fixes and Pewter event checks take priority before the more complex
   interfaces and campaign systems.
 - The requested **bulk Rare Candy quantity selector is not implemented yet**.
-  It must preserve each level-up's move learning, evolution and correct item use.
+  It is required for 0018 and must preserve each level-up's move learning,
+  evolution and correct item use.
 
 The 0016 build passed 212 automated checks, including Moon Stone
 evolution, removal of Psyduck's earlier methods, and existing stone evolution
@@ -241,6 +242,27 @@ Not all eight battles or the complete campaign have been playtested.
 Normal saves are carried forward for focused new-area checks; opening changes
 still receive fresh-game tests when needed. Mt. Moon and Route 4 are unconverted:
 their native exits remain available, but their events are outside this checkpoint.
+
+## Prototype 0018 — work in progress, not published
+
+The owner reported that 0016 passed playtesting apart from the agreed deferred
+roadblocks, and is currently testing 0017. Those roadblocks remain deferred.
+
+The next checkpoint must include the **bulk Rare Candy quantity picker**, as
+requested after testing 0017. That picker was not included in 0016 or 0017.
+It remains unfinished; 0018 will not be released until choosing a quantity,
+consumption, intermediate move learning and evolution continuation are tested.
+The existing single-candy level-100 evolution feature is separate.
+
+Mt. Moon development has begun cumulatively from 0017. Its unpublished
+foundation adds Yellow's seven first-floor trainers, three Rocket grunts,
+low-level cave encounters, conversations and five ordinary item pickups.
+Six focused automated checks and six Route 3 regression checks pass. A normal
+0017 save reloads in the draft with its previous trainer defeat flag retained;
+the first cave Youngster launches a native level-10 battle. The fossil choice,
+Jessie/James scenes,
+remaining pickups and nearby Center still need work. This is development
+progress, not a new downloadable patch. Published 0017 remains unchanged.
 
 ## Agreed plans that are not finished features
 
