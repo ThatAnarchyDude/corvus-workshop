@@ -10,6 +10,16 @@ Testing policy (owner, 2026-10-10): continue town/route implementation with incr
 
 ## Campaign continuation and publication authorization
 
+Maintain the living public log at `psyduck-yellow/DEVELOPMENT-LOG.md`, published
+on `main` at https://github.com/ThatAnarchyDude/corvus-workshop/blob/main/psyduck-yellow/DEVELOPMENT-LOG.md.
+Update the same page after meaningful development changes and each published
+checkpoint. Include each checkpoint’s publication date and AM/PM time in
+America/New_York (Eastern Time), after its successful push, and mark unpublished
+checkpoints accordingly. Do not substitute build times for confirmed future
+publication times. Clearly distinguish released features, unpublished work and plans;
+keep the URL stable and preserve Git history. Log publication is authorized by
+the owner and does not require publishing an unfinished prototype.
+
 The owner authorizes continued implementation through Giovanni's eighth Kanto badge without waiting for their playtests. Publish a separate patch checkpoint after each completed area passes the available checks, and provide its download link in the conversation. Preserve every published version; do not overwrite a patch without the owner's explicit instruction. Apply later playtest feedback to the shared implementation so subsequent versions include the fixes.
 
 Each checkpoint is cumulative: build on the preceding prototype, retaining its features and fixes while adding the next area. The downloadable patch still targets the original unmodified USA HeartGold ROM; players do not need to apply a chain of earlier patches. Use separate version directories and immutable commit links for publication.
@@ -19,6 +29,24 @@ Retain HeartGold's maps, but remove inherited Cut trees, Rock Smash rocks, Stren
 Johto's terrain remains entirely unchanged while Kanto is being completed. Only previously agreed Johto changes, including trainer/gym scaling, are in scope; do not redesign its maps or terrain as part of the Kanto conversion.
 
 Use the established design for routine decisions. Ask the owner when a faithful implementation cannot be achieved or an unresolved reserved decision is reached. Distribute patches and browser-based local ROM reconstruction only; do not publish ROM files.
+
+## Item improvements — owner decisions for prototype 016
+
+Prioritize easy, less complex work first (owner, 2026-10-10). Finish Pewter's
+simple event and reward fixes before the bulk-use interface and larger systems.
+
+Make all TMs reusable. Add a shop-style Rare Candy quantity selector with normal
+move learning/evolution for each candy and exact consumption. At level 100, a
+Rare Candy may trigger an eligible level-up evolution while leaving level and
+experience unchanged; preserve B cancellation and consume nothing if ineligible.
+Stone evolutions also remain usable at level 100.
+
+Psyduck must evolve into Golduck only with a Moon Stone. Remove its original
+level-33 evolution and the prototype-006 Water Stone shortcut. This supersedes
+the earlier instruction to retain Psyduck's ordinary evolution methods. Other
+species retain their existing methods; Golduck stays Water/Psychic. These changes
+are unpublished until the next checkpoint is released. See ITEM-QUALITY-OF-LIFE.md
+for implementation and remaining quantity-selector work.
 
 ## Blue's Eevee evolution — owner decision
 
@@ -31,3 +59,9 @@ Typing note: in Generation IV, Jolteon's Electric attacks are super effective ag
 Prototype 015 makes Golduck Water/Psychic. Psyduck remains Water. `tools/pewter_progression.py` applies `tools/species_changes.py`; the species personal-data edit applies to player, rival and wild Golduck and is also read for existing Golduck in ordinary saves. Published prototype 014 remains unchanged.
 
 Keep Golduck's current moves, learnset and other attributes for now. Revisit its moves after the Kanto portion is complete, as explicitly requested by the owner.
+
+### Prototype 0016 verification checkpoint
+
+Pewter's houses, Mart, Center and two-floor museum are converted. Custom miniature exhibit models remain deferred; the museum uses native HeartGold displays with Yellow dialogue. The final build (SHA-256 `05ed484e1ddff00944063733031e2e3b4921c1e9cf145d58252fbd0c7b342242`) passed 212 automated tests. Its museum loads both floors, returns downstairs, and grants exactly one Old Amber with repeat dialogue in the DS emulator. The browser downloader reproduces this ROM with the four-digit filename and rejects incorrect input. The earlier slow Old Amber attempt was resolved by stepping through the complete dialogue; final checks passed. Route 3 is the next campaign area. Bulk Rare Candy selection is still unfinished and explicitly deferred while simpler campaign work continues.
+
+New checkpoint names use at least four digits (`0016`, `0017`, etc.). Preserve old published URLs/files; do not republish or rename historical artifacts merely for padding. Prototype 016 is now named 0016.
