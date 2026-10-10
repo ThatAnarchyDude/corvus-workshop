@@ -211,9 +211,23 @@ push date and time.
 | 0015 | Oct 10, 2026 · 5:36 AM EDT | Pewter outdoor events, Brock's gym/Boulder Badge/Bide TM, Water/Psychic Golduck. |
 | 0016 | Oct 10, 2026 · 1:14 PM EDT | Pewter interiors, two-floor museum/Old Amber, reusable TMs, eligible level-100 Rare Candy evolution and Moon Stone Psyduck. **Latest published patch.** |
 
+| 0017 | Not published yet | Route 3 conversion; native battle checks in progress. |
+
 [Detailed release notes and verification records](https://github.com/ThatAnarchyDude/corvus-workshop/tree/e2b7c70107017dfcc72c3763bd6ad89e91d96081/yellow-heartgold)
 
+## Current development — prototype 0017
+
+Route 3 is implemented locally and has passed 218 automated tests. Its browser
+downloader reproduces the verified ROM. Native emulator checks of the post-Brock
+exit and an early Route 3 battle are in progress. This is not a release yet.
+Normal saves are carried forward for focused new-area checks; opening changes
+still receive fresh-game tests when needed.
+
 ## Agreed plans that are not finished features
+
+- Eventually vary Blue’s teams according to the evolution chosen for the
+  player’s starter Eevee, including an unevolved Eevee. This waits for the
+  owner’s complete team plan; current teams remain in place.
 
 - Continue Yellow's Kanto campaign through Giovanni's eighth badge, then the
   remaining adventure. Route 3 and Mt. Moon follow Pewter's completion.
