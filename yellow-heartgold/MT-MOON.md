@@ -57,3 +57,13 @@ reloaded on the actual draft. The cave Youngster's Rattata 10, Rattata 10 and
 Zubat 10 were defeated in the DS emulator; his defeat flag and post-battle
 conversation were checked. Other cave battles, pickups and audio playback have
 not been playtested yet. Details are in validation-prototype-0018-foundation.json.
+
+## Updated development build
+
+`tools/build_prototype0018.py` builds the cumulative unpublished ROM from the
+verified 0017 file, including the cave foundation and the implemented bulk Rare
+Candy feature. Run `.venv/bin/python tools/build_prototype0018.py` from
+`yellow-heartgold`. Generated files remain in ignored `build/`; this command
+does not package or publish a checkpoint. Bulk Candy native checks and all
+236 automated tests passed; see validation-prototype-0018-bulk-candy.json. The
+remaining Mt. Moon story work listed above still prevents release.

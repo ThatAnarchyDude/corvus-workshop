@@ -80,8 +80,18 @@ The owner reported 0016 passed except for the agreed deferred roadblocks, and
 is testing 0017. Keep the roadblocks deferred. The owner specifically requests
 the shop-style bulk Rare Candy quantity picker in 0018, because it was absent
 from 0017. This supersedes the earlier discretionary deferral: do not publish
-0018 without the complete picker, sequential item consumption, move learning,
-evolution continuation and native tests. Mt. Moon work remains cumulative from
+0018 without the complete picker, accurate item consumption, intermediate move
+learning, one final evolution check and native tests. Mt. Moon work remains cumulative from
 0017; its trainer/encounter/pickup foundation is unpublished. See MT-MOON.md and
 ITEM-QUALITY-OF-LIFE.md for implemented work, pending scenes and native hook
 research. Do not represent the existing single-candy level-100 feature as bulk use.
+
+### Updated bulk behavior — October 10, 2026
+
+At the owner's request, apply the requested candies before processing moves,
+then check evolution once at the end. Native move replacement choices remain
+necessary when four moves are known. The native picker and batch hooks are
+implemented in `tools/bulk_rare_candy.py`; a level-14 Bulbasaur reached level 17,
+learned the intermediate-level Take Down move through the normal replacement
+summary, and evolved once into Ivysaur. Two of five candies remained. This is
+a development check, not a published 0018 checkpoint.

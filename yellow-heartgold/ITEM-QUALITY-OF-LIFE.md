@@ -56,33 +56,36 @@ The owner confirmed on October 10, 2026 that this must be included in 0018.
 It was absent from 0016 and 0017; those published patches remain unchanged.
 Do not publish 0018 until the quantity interface and continuation are tested.
 
-Add a shop-style quantity selector, clamped to available inventory and useful
-level increases. Apply each candy separately so that moves, evolution prompts
-and cancellation remain normal. Spend only the amount actually used. Preserve
-the remaining request across evolution and move-learning screen transitions.
-At level 100, allow an eligible evolution use without increasing the level.
-The quantity selector and continuation logic are not implemented yet.
+The native bag quantity controls select the requested amount before choosing a
+Pokémon. Apply the useful candies first, then process every move available at
+the intermediate levels, and check evolution once at the end. Pokémon with four
+moves still need replacement choices. Only the current species' learnset is
+processed during the batch; evolution happens afterwards. One batch triggers at
+most one evolution, with the usual B cancellation.
 
-### Native integration findings
+The quantity picker is bounded by inventory. After selecting the Pokémon,
+actual use is also bounded by the remaining levels to 100. Unused candies stay
+in the bag. The existing eligible level-100 evolution behavior remains intact.
+Runtime batch data lives in ITCM and does not change the save format.
 
-HeartGold's bag overlay 15 already supplies a quantity picker with touch
-controls, single/ten/hundred-step adjustments, confirmation and cancellation.
-Relevant native entry points are `ov15_021FBCAC` (initialize quantity),
-`ov15_021FBD50` (quantity input), and `ov15_021FBF98` (confirmation). These
-belong to the Toss path: reuse the controls, not its disposal callback or text.
-Normal Use starts at `ov15_021FB680`. Other item actions must retain their
-original behavior.
+Implementation: `tools/bulk_rare_candy.py` redirects only the Rare Candy Use
+entry into the native overlay-15 quantity widgets. Confirmation returns to Use;
+it never reaches Toss. The native level-up callback applies the batch using
+HeartGold's item service. A scoped learnset hook scans the intermediate levels
+without temporarily changing the Pokémon's actual level. Native move replacement
+screens remain available. The original final evolution check remains unchanged.
 
-The party menu's `PartyMenu_ItemUseFunc_LevelUpLearnMovesLoop` completes move
-learning before checking evolution and returning to the field application.
-The field's `Task_StartMenu_WaitEvolution` then returns to the bag. A batch must
-carry its remaining count and selected party member through both transitions,
-including the separate move-forgetting summary screen. Applying several level
-increases inside `UseItemOnMonInParty` would skip intermediate prompts and is
-not an acceptable implementation.
-
-Required checks: zero consumption on cancel; inventory and level-limit clamps;
-three candies producing three levels and consuming three; intermediate move
-learning; evolution and B cancellation with the remainder retained; an eligible
-level-100 evolution and an ineligible level-100 no-effect result; correct
-behavior with a single candy; and ordinary potion/Toss/Sell actions unchanged.
+Validation: twelve Thumb execution checks cover consumption, inventory and
+level caps, one-candy use, the actual native intermediate learnset scan,
+replacement cursors, quantity confirmation/cancellation, original label
+restoration, Potion bypass and clearing batch data on exit while preserving it
+for move replacement. In the DS emulator, selecting three candies raised
+Bulbasaur from 14 to 17, offered its level-15 Take Down, returned from the normal
+move replacement summary, evolved once into Ivysaur, and left two of five
+candies. The final button label fits; cancelling the quantity picker leaves all
+five candies. A normal save prepared with native game scripts loads in the
+actual development ROM. B cancellation of the final evolution was also tested: Bulbasaur stayed at
+level 16 after a two-candy batch. All 236 automated tests passed. Audible sounds
+were not tested.
+Prototype 0018 remains unpublished until its remaining Mt. Moon content and
+release checks are complete. See validation-prototype-0018-bulk-candy.json.

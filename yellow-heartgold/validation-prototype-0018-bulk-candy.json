@@ -1,0 +1,54 @@
+{
+  "status": "unpublished prototype 0018 development feature",
+  "checked_at_utc": "2026-10-10T23:19:35.160195+00:00",
+  "input_prototype": "0017",
+  "input_sha256": "71f86b48272129c0f3d8f6b876403bf831c454b5917add58caf9921560f1976d",
+  "development_sha256": "60c5ddf223c24a303c6216104c6b009d22f70d1faace56730267d87a10c364e8",
+  "bulk_rare_candy": {
+    "state": "0x1ffd6b4",
+    "routines": {
+      "apply": "0x1ffd6cc",
+      "learn_level": "0x1ffd76c",
+      "learn_moves": "0x1ffd78c",
+      "picker": "0x1ffd7dc",
+      "restore_label": "0x1ffd884",
+      "confirm": "0x1ffd8b4",
+      "cancel": "0x1ffd920",
+      "party_cleanup": "0x1ffd960"
+    },
+    "quantity_label": 129,
+    "evolution_after_batch": true,
+    "intermediate_moves": true,
+    "save_format_changed": false
+  },
+  "automated_focused_tests": 12,
+  "native_ds_checks": {
+    "preparation": "native GiveMon/GiveItem/Save scripts; no save-byte or RAM edits",
+    "normal_save_reloaded_in_development_rom": true,
+    "fixture_rom_sha256": "4d3a983c9f6df537b23bc605f291d7afc26873e233224e966f8f09e3e03b0abc",
+    "quantity_controls_selected_three": true,
+    "bulbasaur_start_level": 14,
+    "bulbasaur_final_level": 17,
+    "intermediate_take_down_move_offered": true,
+    "native_move_replacement_summary_opened_and_returned": true,
+    "take_down_learned": true,
+    "single_final_evolution_into_ivysaur": true,
+    "candies_before": 5,
+    "candies_after": 2,
+    "final_button_label_fits": true,
+    "quantity_cancel_left_five_candies": true,
+    "evolution_b_cancel_playtested": true,
+    "audible_sound_playback_tested": false,
+    "evolution_cancel_kept_bulbasaur_at_level": 16
+  },
+  "release_pending": [
+    "Remaining Mt. Moon story scenes and rewards",
+    "Cumulative patch packaging and publication"
+  ],
+  "ordinary_save_format_changed": false,
+  "automated_full_suite": {
+    "passed": 236,
+    "failed": 0,
+    "seconds": 133.669
+  }
+}
