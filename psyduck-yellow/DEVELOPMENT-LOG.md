@@ -166,9 +166,8 @@ download above. Earlier downloads retain their original behavior.
   and the existing Eevee/Togepi item options.
 - Simpler fixes and Pewter event checks take priority before the more complex
   interfaces and campaign systems.
-- The requested **bulk Rare Candy quantity selector is not implemented yet**.
-  It is required for 0018 and must preserve each level-up's move learning,
-  evolution and correct item use.
+- 0016 did not include bulk Rare Candy selection. It is now implemented and
+  undergoing final checks in the unpublished 0018 development build.
 
 The 0016 build passed 212 automated checks, including Moon Stone
 evolution, removal of Psyduck's earlier methods, and existing stone evolution
@@ -250,9 +249,19 @@ roadblocks, and is currently testing 0017. Those roadblocks remain deferred.
 
 The next checkpoint must include the **bulk Rare Candy quantity picker**, as
 requested after testing 0017. That picker was not included in 0016 or 0017.
-It remains unfinished; 0018 will not be released until choosing a quantity,
-consumption, intermediate move learning and evolution continuation are tested.
-The existing single-candy level-100 evolution feature is separate.
+The selector now works in the unpublished development build: choose the amount,
+apply the candies first, process moves from every intermediate level, then
+check evolution once at the end. When four moves are already known, normal
+replacement choices still appear. Only useful candies are consumed; cancelling
+the quantity picker consumes none. The existing level-100 evolution feature
+remains available.
+
+Development check — October 10, 2026: all 236 automated checks passed. In the
+DS emulator, three candies raised Bulbasaur from level 14 to 17, offered its
+level-15 Take Down through the normal move replacement screen, then evolved it
+once into Ivysaur. Two of five candies remained. Pressing B during the final evolution also worked: Bulbasaur
+stayed unevolved at level 16 after a two-candy batch. This is development
+progress; 0018 has not been published yet.
 
 Mt. Moon development has begun cumulatively from 0017. Its unpublished
 foundation adds Yellow's seven first-floor trainers, three Rocket grunts,
