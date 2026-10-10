@@ -85,7 +85,8 @@ move replacement summary, evolved once into Ivysaur, and left two of five
 candies. The final button label fits; cancelling the quantity picker leaves all
 five candies. A normal save prepared with native game scripts loads in the
 actual development ROM. B cancellation of the final evolution was also tested: Bulbasaur stayed at
-level 16 after a two-candy batch. All 236 automated tests passed. Audible sounds
+level 16 after a two-candy batch. Saving and a fresh boot preserved that level
+and the three remaining candies. All 236 automated tests passed. Audible sounds
 were not tested.
 Prototype 0018 remains unpublished until its remaining Mt. Moon content and
 release checks are complete. See validation-prototype-0018-bulk-candy.json.

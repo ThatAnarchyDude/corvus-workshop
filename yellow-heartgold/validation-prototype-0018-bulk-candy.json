@@ -1,6 +1,6 @@
 {
   "status": "unpublished prototype 0018 development feature",
-  "checked_at_utc": "2026-10-10T23:19:35.160195+00:00",
+  "checked_at_utc": "2026-10-10T23:21:20.617848+00:00",
   "input_prototype": "0017",
   "input_sha256": "71f86b48272129c0f3d8f6b876403bf831c454b5917add58caf9921560f1976d",
   "development_sha256": "60c5ddf223c24a303c6216104c6b009d22f70d1faace56730267d87a10c364e8",
@@ -39,7 +39,10 @@
     "quantity_cancel_left_five_candies": true,
     "evolution_b_cancel_playtested": true,
     "audible_sound_playback_tested": false,
-    "evolution_cancel_kept_bulbasaur_at_level": 16
+    "evolution_cancel_kept_bulbasaur_at_level": 16,
+    "normal_save_after_batch_fresh_boot": true,
+    "reloaded_bulbasaur_level": 16,
+    "reloaded_candy_quantity": 3
   },
   "release_pending": [
     "Remaining Mt. Moon story scenes and rewards",
