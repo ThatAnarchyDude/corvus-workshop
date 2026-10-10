@@ -1,5 +1,5 @@
-# Intro update plan
+# Opening progression plan
 
-Prototype 009 implements the requested FireRed Blue portrait and shiny Eevee opening. See [PROTOTYPE-009.md](PROTOTYPE-009.md) for build instructions and validation limits.
+Prototype 009’s intro is approved by the owner. Prototype 010 adds the coffee gate and catching tutorial, corrects the remaining ball’s text, and makes Oak collect visible Pokédexes from the table. See [PROTOTYPE-010.md](PROTOTYPE-010.md).
 
-Next: owner playtests a new game on Android, including the cry/sparkle audio and rival naming. Confirm prototype 008’s Viridian doorway and cashier fixes before extending Yellow progression through Route 2 and Viridian Forest. Keep HeartGold’s shop progression and Johto unchanged.
+Next: confirm prototype 010’s Android playtest, then implement Yellow’s zero-badge Route 2 and Viridian Forest progression, including wild encounters, trainer levels, dialogue, entrance/exit gates and forest traversal. Keep HeartGold’s shop progression, the approved intro and Johto intact. Original HG Kanto events remain preserved for later Johto relocation.

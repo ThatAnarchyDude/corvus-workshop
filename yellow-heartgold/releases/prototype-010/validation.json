@@ -1,0 +1,93 @@
+{
+  "mappings": [
+    {
+      "map_id": 505,
+      "script": 1008,
+      "init": 1009,
+      "text": 851,
+      "event": 512
+    },
+    {
+      "map_id": 50,
+      "script": 1010,
+      "init": 1011,
+      "text": 852,
+      "event": 513
+    }
+  ],
+  "graphics": {
+    "dex_sprite": 88,
+    "dex_model": 863,
+    "sprite_table": "0x1ff89a8",
+    "sprite_records_preserved": 901,
+    "old_man_back": 17
+  },
+  "hooks": {
+    "dummy": "0x1ff9ed8",
+    "previous_dummy": "0x1ff896d",
+    "mode_flag": "0x1ff9ed4",
+    "back_hook": "0x1ff9f54",
+    "name_hook": "0x1ff9f6c"
+  },
+  "flags": {
+    "tutorial": 2895,
+    "dex_props": 2896,
+    "lab_migration": 2897,
+    "city_migration": 2894
+  },
+  "preserved_original_map_members": true,
+  "version": "010",
+  "input_sha256": "73c6994b7b4e458064397ea2821077f2719f13f36a67565070801e278e70c5a4",
+  "output_sha256": "f9e25b1a196c81d879350d57bbb2b870bd43a596badd7a6f4a8c6f0a0965757e",
+  "patch_sha256": "908d92feabde100e24e2b18803fa71c1926fbc1380341f89134abbf4c6b31451",
+  "changed_file_ids": [
+    1,
+    135,
+    141,
+    156,
+    161,
+    210
+  ],
+  "date": "2026-10-09",
+  "base_version": "009",
+  "tests": {
+    "passed": 106,
+    "skipped": 0
+  },
+  "patch_roundtrip_verified": true,
+  "browser": {
+    "output_sha256": "f9e25b1a196c81d879350d57bbb2b870bd43a596badd7a6f4a8c6f0a0965757e",
+    "bad_input_rejected": true,
+    "browser_errors": []
+  },
+  "emulator": {
+    "engine": "DeSmuME libretro",
+    "rom_sha256": "f9e25b1a196c81d879350d57bbb2b870bd43a596badd7a6f4a8c6f0a0965757e",
+    "fixture_scope": "Native warp and parcel positioning fixtures prepared normal saves; checks below ran after a fresh boot of the unmodified final prototype. This was not a full fresh-game quest playthrough.",
+    "completed": [
+      "Two visible Pok\u00e9dex devices beside Oak PC before parcel handoff",
+      "Oak walks north to table, south away, devices disappear, Oak returns and grants National Pok\u00e9dex",
+      "Normal save/reload keeps Pok\u00e9dex devices absent",
+      "Remaining starter interaction shows requested last-starter text",
+      "Old man blocks path with coffee dialogue before delivery and Dex",
+      "After delivery and Dex, old man recognizes Pok\u00e9dex and starts catching lesson",
+      "Native automatic battle weakens and catches Rattata using Marill",
+      "Dedicated FireRed old-man trainer back and OLD MAN Pok\u00e9 Ball message appear",
+      "Player Eevee party and Pok\u00e9 Ball count unchanged by tutorial",
+      "Old man walks beside the path, normal save/reload preserves position, player passes former gate without replay"
+    ],
+    "evidence_kept_local": [
+      "build/emulator-010-lab",
+      "build/emulator-010-lab-reload",
+      "build/emulator-010-oak-walk",
+      "build/emulator-010-coffee",
+      "build/emulator-010-tutorial"
+    ]
+  },
+  "unrun": [
+    "Owner Android emulator playtest",
+    "Full fresh-game prototype 010 quest playthrough",
+    "Female-player native catching demo (both gender paths verified by ARM hook tests)",
+    "Audible music and sound listening check"
+  ]
+}

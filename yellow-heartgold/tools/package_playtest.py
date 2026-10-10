@@ -10,7 +10,7 @@ VENDOR = PROJECT/'tools/vendor/rom-patcher'
 
 
 def build(destination, version='004'):
-    if version not in ('004', '005', '006', '007', '008', '009'):
+    if version not in ('004', '005', '006', '007', '008', '009', '010'):
         raise ValueError('Unsupported prototype version')
     destination.mkdir(parents=True, exist_ok=True)
     patch = PROJECT/f'build/yellow-heartgold-prototype-{version}.xdelta'
@@ -96,7 +96,7 @@ button.addEventListener('click',async()=>{
   } catch(error){status.textContent=error.message;finish();}
 });
 </script></html>'''.replace('004', version).replace('PACKAGE', encoded)
-    if version in ('005', '006', '007', '008', '009'):
+    if version in ('005', '006', '007', '008', '009', '010'):
         html=html.replace('Start a <strong>new game</strong> to test the revised opening. Keep earlier saves backed up.',
             'Start a <strong>new game</strong> to test the opening, or import a backed-up prototype 004 normal save through your emulator. Emulator save states should not be transferred between builds.')
     if version == '006':
@@ -104,7 +104,7 @@ button.addEventListener('click',async()=>{
         html=html.replace('a backed-up prototype 004 normal save','a backed-up prototype 004 or 005 normal save')
         html=html.replace('Oak’s Psyduck capture currently uses field animation.',
             'Reopen the bedroom PC to receive 95 of each evolution item. Make space in storage if prompted, then reopen it to collect the remainder.')
-    if version in ('007', '008', '009'):
+    if version in ('007', '008', '009', '010'):
         html=html.replace(f'Opening playtest · Prototype {version}',f'Oak’s Parcel playtest · Prototype {version}')
         html=html.replace('a backed-up prototype 004 normal save','a backed-up prototype 004, 005, 006 or 007 normal save')
         html=html.replace('The route remains blocked beyond the first testing area. Oak’s Psyduck capture currently uses field animation.',
@@ -113,6 +113,10 @@ button.addEventListener('click',async()=>{
         html=html.replace('Oak’s Parcel playtest · Prototype 009','Intro playtest · Prototype 009')
         html=html.replace('a backed-up prototype 004, 005, 006 or 007 normal save','a backed-up prototype 004–008 normal save')
         html=html.replace('Start a <strong>new game</strong> to test the opening','Start a <strong>new game</strong> to see FireRed Blue’s full portrait and Oak’s shiny Eevee release with sparkles and sound')
+    if version == '010':
+        html=html.replace('Oak’s Parcel playtest · Prototype 010','Viridian tutorial playtest · Prototype 010')
+        html=html.replace('a backed-up prototype 004, 005, 006 or 007 normal save','a backed-up prototype 004–009 normal save')
+        html=html.replace('Evolution supplies remain available in the player’s PC.', 'Oak walks to collect the two visible Pokédexes before giving them out. The last starter ball has its own message. Viridian’s old man blocks the northern path before the Pokédex, then shows a catching demonstration and steps aside. Route 2 and Viridian Forest remain closed for the next prototype. Evolution supplies remain in the player’s PC. Use a new game or a save made before parcel delivery to see the revised Oak scene.')
     # hidden must override display on the downloadable link.
     html=html.replace('footer{margin-top', '[hidden]{display:none!important}footer{margin-top')
     (destination/'index.html').write_text(html)
@@ -124,6 +128,6 @@ button.addEventListener('click',async()=>{
 if __name__ == '__main__':
     parser=argparse.ArgumentParser()
     parser.add_argument('destination',type=Path)
-    parser.add_argument('--version',choices=['004','005','006','007','008','009'],default='004')
+    parser.add_argument('--version',choices=['004','005','006','007','008','009','010'],default='004')
     args=parser.parse_args()
     build(args.destination,args.version)
