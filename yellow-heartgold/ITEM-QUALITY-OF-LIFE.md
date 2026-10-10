@@ -50,7 +50,11 @@ against ROM evolution tables: Bulbasaur and Ivysaur level thresholds, Togepi's
 stone-only evolution. These do not constitute an emulator playtest of every
 evolution.
 
-## Bulk Rare Candy use — remaining work
+## Bulk Rare Candy use — required for prototype 0018
+
+The owner confirmed on October 10, 2026 that this must be included in 0018.
+It was absent from 0016 and 0017; those published patches remain unchanged.
+Do not publish 0018 until the quantity interface and continuation are tested.
 
 Add a shop-style quantity selector, clamped to available inventory and useful
 level increases. Apply each candy separately so that moves, evolution prompts
@@ -58,3 +62,27 @@ and cancellation remain normal. Spend only the amount actually used. Preserve
 the remaining request across evolution and move-learning screen transitions.
 At level 100, allow an eligible evolution use without increasing the level.
 The quantity selector and continuation logic are not implemented yet.
+
+### Native integration findings
+
+HeartGold's bag overlay 15 already supplies a quantity picker with touch
+controls, single/ten/hundred-step adjustments, confirmation and cancellation.
+Relevant native entry points are `ov15_021FBCAC` (initialize quantity),
+`ov15_021FBD50` (quantity input), and `ov15_021FBF98` (confirmation). These
+belong to the Toss path: reuse the controls, not its disposal callback or text.
+Normal Use starts at `ov15_021FB680`. Other item actions must retain their
+original behavior.
+
+The party menu's `PartyMenu_ItemUseFunc_LevelUpLearnMovesLoop` completes move
+learning before checking evolution and returning to the field application.
+The field's `Task_StartMenu_WaitEvolution` then returns to the bag. A batch must
+carry its remaining count and selected party member through both transitions,
+including the separate move-forgetting summary screen. Applying several level
+increases inside `UseItemOnMonInParty` would skip intermediate prompts and is
+not an acceptable implementation.
+
+Required checks: zero consumption on cancel; inventory and level-limit clamps;
+three candies producing three levels and consuming three; intermediate move
+learning; evolution and B cancellation with the remainder retained; an eligible
+level-100 evolution and an ineligible level-100 no-effect result; correct
+behavior with a single candy; and ordinary potion/Toss/Sell actions unchanged.

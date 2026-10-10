@@ -1,0 +1,45 @@
+{
+  "status": "unpublished foundation; incomplete 0018",
+  "checked_at_utc": "2026-10-10T21:41:18.015903+00:00",
+  "input_prototype": "0017",
+  "input_sha256": "71f86b48272129c0f3d8f6b876403bf831c454b5917add58caf9921560f1976d",
+  "draft_sha256": "97d3707e7c923706c9321769cd3458c2769a3755a5fc93df071a8d50f317aa7a",
+  "automated_tests": {
+    "mtmoon": 6,
+    "route3_regression": 6,
+    "full_suite_rerun": false
+  },
+  "native_checks": {
+    "previous_0017_normal_save_fresh_boot": true,
+    "previous_route3_trainer_flag_preserved": true,
+    "private_native_commands_prepared_cave_entry": true,
+    "actual_draft_reloaded_normal_save_at_cave_entry": true,
+    "youngster_trainer_id": 767,
+    "youngster_team": [
+      [
+        19,
+        10
+      ],
+      [
+        19,
+        10
+      ],
+      [
+        41,
+        10
+      ]
+    ],
+    "youngster_battle_won": true,
+    "defeat_flag": "0x84f",
+    "all_trainers_playtested": false,
+    "audio_playback_tested": false
+  },
+  "pending": [
+    "Bulk Rare Candy quantity picker and sequential continuation, required for 0018",
+    "Fossil boss and exclusive fossil choice",
+    "Jessie and James ambush and art",
+    "Remaining pickups and native Yellow TMs",
+    "Mt. Moon Center and Magikarp seller",
+    "Full release build, browser verification and publication"
+  ]
+}

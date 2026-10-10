@@ -73,3 +73,15 @@ Blue’s later teams may vary depending on which evolution the player chooses fo
 ## Incremental save-based testing
 
 Reuse backed-up normal in-game saves from previous prototypes for focused new-area tests, checking their compatibility on the new ROM. Keep emulator save states confined to their exact ROM build. Preserve save structures and existing progress wherever possible. Fresh-game checks remain appropriate for opening changes or migrations. Runtime native-command test fixtures may prepare an ordinary save, but must remain private and absent from published patches.
+
+## Prototype 0018 — owner testing feedback and release requirement
+
+The owner reported 0016 passed except for the agreed deferred roadblocks, and
+is testing 0017. Keep the roadblocks deferred. The owner specifically requests
+the shop-style bulk Rare Candy quantity picker in 0018, because it was absent
+from 0017. This supersedes the earlier discretionary deferral: do not publish
+0018 without the complete picker, sequential item consumption, move learning,
+evolution continuation and native tests. Mt. Moon work remains cumulative from
+0017; its trainer/encounter/pickup foundation is unpublished. See MT-MOON.md and
+ITEM-QUALITY-OF-LIFE.md for implemented work, pending scenes and native hook
+research. Do not represent the existing single-candy level-100 feature as bulk use.
