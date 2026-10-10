@@ -180,22 +180,30 @@ Each row describes what that version added; later versions include earlier
 changes and sometimes correct or replace them. The sections above describe the
 current rules, so older details should not be mistaken for today's behavior.
 
-| Checkpoint | Main changes |
-| --- | --- |
-| 001–003 | Early starter and Pallet-opening experiments; first Android playtests; low-level Route 1 setup and protected HeartGold event assets. |
-| 004 | Visible Oak escort/capture scene, three physical starter balls, immediate follower, Blue opening, starter properties and bedroom item storage. |
-| 005 | Psyduck swimming title screen and project logo. |
-| 006 | PC evolution supplies and additional item evolution choices. |
-| 007 | Mom's Running Shoes, Route 1 travel, cashier escort, Oak's Parcel, delayed National Pokédex and Viridian Center item storage. |
-| 008 | Center doorway fix, removal of the extra cashier after pickup, upper-cashier shopping and Poké Ball sales. |
-| 009 | Shiny Eevee introduction and Blue's full portrait on intro/confirmation screens. |
-| 010 | Old man's catching lesson, Oak collecting visible Pokédexes, corrected leftover starter-ball text. |
-| 011 | Old man's center-lane placement, Blue portrait moved to the touch-screen panel, aligned Eevee/sparkles. |
-| 012 | Persistent side Cut trees, granddaughter moving aside, cashier Pokégear/Map reward, western warning guard and temporary barrier removal. |
-| 013 | League guard fixes, early Route 22 Blue battle, exact level-6 lab reward, automatic Oak Poké Balls, dialogue repairs, fair rival starter rolls, global shiny odds, Shiny Charm and scoped Legendary IV rules. |
-| 014 | Route 2 and Viridian Forest encounters, trainers, items and conversations; removal of inherited Kanto HM terrain gates. |
-| 015 | Pewter outdoor events, Brock's gym/Boulder Badge/Bide TM, Water/Psychic Golduck. **Latest published patch.** |
-| 016 | Pewter interiors/museum and item improvements described above. **Unpublished; still being checked.** |
+Historical dates and AM/PM times below come from the recorded release commits,
+converted to Eastern Time (America/New_York). They are the best available release
+records; the exact GitHub push or hosting activation times were not recorded.
+Prototype 009 uses the intro release, following the withdrawn shop experiment.
+Future checkpoints will record their confirmed publication date and time.
+
+| Checkpoint | Made live (Eastern Time) | Main changes |
+| --- | --- | --- |
+| 001 | Oct 8, 2026 · 8:41 PM EDT | First Android testing patch and instructions; early starter and Pallet-opening experiments. |
+| 002 | Oct 8, 2026 · 10:56 PM EDT | Pallet opening with protected HeartGold event assets, starter selection and follower tests. |
+| 003 | Oct 9, 2026 · 12:40 AM EDT | Bounded Yellow opening, intro rival naming and low-level Route 1 setup. |
+| 004 | Oct 9, 2026 · 6:50 AM EDT | Visible Oak escort/capture scene, three physical starter balls, immediate follower, Blue opening, starter properties and bedroom item storage. |
+| 005 | Oct 9, 2026 · 12:37 PM EDT | Psyduck swimming title screen and project logo. |
+| 006 | Oct 9, 2026 · 1:11 PM EDT | PC evolution supplies and additional item evolution choices. |
+| 007 | Oct 9, 2026 · 3:18 PM EDT | Mom's Running Shoes, Route 1 travel, cashier escort, Oak's Parcel, delayed National Pokédex and Viridian Center item storage. |
+| 008 | Oct 9, 2026 · 5:40 PM EDT | Center doorway fix, removal of the extra cashier after pickup, upper-cashier shopping and Poké Ball sales. |
+| 009 | Oct 9, 2026 · 7:42 PM EDT | Shiny Eevee introduction and Blue's full portrait on intro/confirmation screens. |
+| 010 | Oct 9, 2026 · 9:45 PM EDT | Old man's catching lesson, Oak collecting visible Pokédexes, corrected leftover starter-ball text. |
+| 011 | Oct 9, 2026 · 11:59 PM EDT | Old man's center-lane placement, Blue portrait moved to the touch-screen panel, aligned Eevee/sparkles. |
+| 012 | Oct 10, 2026 · 1:02 AM EDT | Persistent side Cut trees, granddaughter moving aside, cashier Pokégear/Map reward, western warning guard and temporary barrier removal. |
+| 013 | Oct 10, 2026 · 3:42 AM EDT | League guard fixes, early Route 22 Blue battle, exact level-6 lab reward, automatic Oak Poké Balls, dialogue repairs, fair rival starter rolls, global shiny odds, Shiny Charm and scoped Legendary IV rules. |
+| 014 | Oct 10, 2026 · 4:19 AM EDT | Route 2 and Viridian Forest encounters, trainers, items and conversations; removal of inherited Kanto HM terrain gates. |
+| 015 | Oct 10, 2026 · 5:36 AM EDT | Pewter outdoor events, Brock's gym/Boulder Badge/Bide TM, Water/Psychic Golduck. **Latest published patch.** |
+| 016 | Not published yet | Pewter interiors/museum and item improvements described above. **Unpublished; still being checked.** |
 
 [Detailed release notes and verification records](https://github.com/ThatAnarchyDude/corvus-workshop/tree/9282bba885b399df77f451f36dd07ea0b6aa5dc7/yellow-heartgold)
 
