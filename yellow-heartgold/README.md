@@ -1,3 +1,5 @@
+Prototype 011 fixes the three-lane coffee gate, Blue’s touch-screen portrait and Eevee’s intro position. See [PROTOTYPE-011.md](PROTOTYPE-011.md). Route 2 and Viridian Forest follow after this correction playtest.
+
 Prototype 010 adds Viridian’s old-man catching tutorial and Oak’s visible Pokédex pickup. See [PROTOTYPE-010.md](PROTOTYPE-010.md). Route 2 and Viridian Forest are next after this playtest.
 
 Prototype 009 updates Oak’s introduction with shiny Eevee and FireRed Blue’s rival portrait. See [PROTOTYPE-009.md](PROTOTYPE-009.md) for playtest and build notes. HeartGold’s shop progression remains intact.
