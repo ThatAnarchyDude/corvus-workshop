@@ -12,7 +12,7 @@ VENDOR = PROJECT/'tools/vendor/rom-patcher'
 def build(destination, version='004'):
     version=f'{int(version):03d}'
     artifact_version=f'{int(version):04d}' if int(version)>=16 else version
-    if version not in ('004', '005', '006', '007', '008', '009', '010', '011', '012', '013', '014', '015', '016'):
+    if version not in ('004', '005', '006', '007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017'):
         raise ValueError('Unsupported prototype version')
     destination.mkdir(parents=True, exist_ok=True)
     patch = PROJECT/f'build/yellow-heartgold-prototype-{artifact_version}.xdelta'
@@ -22,8 +22,8 @@ def build(destination, version='004'):
         output_sha256=hashlib.sha256(rom.read_bytes()).hexdigest(),
         source_bytes=134217728, output_bytes=rom.stat().st_size,
         patch_sha256=hashlib.sha256(patch.read_bytes()).hexdigest())
-    if version in ('014','015','016'):
-        parent=f'{int(version)-1:03d}'
+    if version in ('014','015','016','017'):
+        parent=f'{int(version)-1:04d}' if int(version)>=17 else f'{int(version)-1:03d}'
         manifest.update(parent_version=f'{int(parent):04d}' if int(version)>=16 else parent,cumulative=True,
                         parent_output_sha256=hashlib.sha256(
                             (PROJECT/f'build/yellow-heartgold-prototype-{parent}.nds').read_bytes()).hexdigest())
@@ -103,7 +103,7 @@ button.addEventListener('click',async()=>{
   } catch(error){status.textContent=error.message;finish();}
 });
 </script></html>'''.replace('004', version).replace('PACKAGE', encoded)
-    if version in ('005', '006', '007', '008', '009', '010', '011', '012', '013', '014', '015', '016'):
+    if version in ('005', '006', '007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017'):
         html=html.replace('Start a <strong>new game</strong> to test the revised opening. Keep earlier saves backed up.',
             'Start a <strong>new game</strong> to test the opening, or import a backed-up prototype 004 normal save through your emulator. Emulator save states should not be transferred between builds.')
     if version == '006':
@@ -111,7 +111,7 @@ button.addEventListener('click',async()=>{
         html=html.replace('a backed-up prototype 004 normal save','a backed-up prototype 004 or 005 normal save')
         html=html.replace('Oak’s Psyduck capture currently uses field animation.',
             'Reopen the bedroom PC to receive 95 of each evolution item. Make space in storage if prompted, then reopen it to collect the remainder.')
-    if version in ('007', '008', '009', '010', '011', '012', '013', '014', '015', '016'):
+    if version in ('007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017'):
         html=html.replace(f'Opening playtest · Prototype {version}',f'Oak’s Parcel playtest · Prototype {version}')
         html=html.replace('a backed-up prototype 004 normal save','a backed-up prototype 004, 005, 006 or 007 normal save')
         html=html.replace('The route remains blocked beyond the first testing area. Oak’s Psyduck capture currently uses field animation.',
@@ -152,6 +152,11 @@ button.addEventListener('click',async()=>{
         html=html.replace('a backed-up prototype 004, 005, 006 or 007 normal save','a backed-up prototype 004–015 normal save')
         html=html.replace('Areas beyond Viridian remain blocked.', 'Route 2, Viridian Forest and Pewter are open after the catching lesson. Route 3 is the next development area.')
         html=html.replace('Evolution supplies remain available in the player’s PC.', 'Pewter’s houses, Mart and Pokémon Center now use Yellow conversations, with HeartGold healing, PC and shop services. The museum charges 50 Pokédollars and offers Old Amber once; a new second floor houses Yellow’s upstairs visitors and exhibit dialogue using HeartGold’s existing displays. Custom exhibit models are deferred. Fossil revival will be added in Cinnabar. Brock’s interaction sound is corrected. TMs are reusable, and Rare Candies can trigger eligible level-up evolutions at level 100. Psyduck now evolves only with a Moon Stone. The bulk Rare Candy selector is still being developed. All earlier changes carry forward, and earlier downloads remain available separately.')
+    if version == '017':
+        html=html.replace('Oak’s Parcel playtest · Prototype 017','Route 3 checkpoint · Prototype 017')
+        html=html.replace('a backed-up prototype 004, 005, 006 or 007 normal save','a backed-up prototype 0004–0016 normal save')
+        html=html.replace('Areas beyond Viridian remain blocked.', 'Route 3 is converted after Brock’s Boulder Badge. Mt. Moon and Route 4 remain unconverted; avoid them for this checkpoint.')
+        html=html.replace('Evolution supplies remain available in the player’s PC.', 'Route 3 has Yellow’s eight trainer teams, levels 9–14, explicit Yellow moves and complete battle dialogue. Grass has Spearow, Mankey, Sandshrew and Rattata at levels 8–12, with Yellow’s slot probabilities in every time period. HeartGold’s route geometry and warps are retained; inherited items and extra trainers are archived. The Pewter exit opens after Brock. All previous opening, item and museum changes carry forward. Blue team changes based on your Eevee’s evolution await your future plan. The bulk Rare Candy selector remains unfinished. Earlier downloads remain available separately.')
     if artifact_version!=version:
         html=html.replace(f'Prototype {version}',f'Prototype {artifact_version}')
         html=html.replace(f'prototype {version}.nds',f'prototype {artifact_version}.nds')
@@ -167,6 +172,6 @@ button.addEventListener('click',async()=>{
 if __name__ == '__main__':
     parser=argparse.ArgumentParser()
     parser.add_argument('destination',type=Path)
-    parser.add_argument('--version',choices=['004','005','006','007','008','009','010','011','012','013','014','015','016','0016'],default='004')
+    parser.add_argument('--version',choices=['004','005','006','007','008','009','010','011','012','013','014','015','016','0016','017','0017'],default='004')
     args=parser.parse_args()
     build(args.destination,args.version)

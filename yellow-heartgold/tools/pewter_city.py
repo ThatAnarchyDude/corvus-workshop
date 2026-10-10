@@ -14,7 +14,7 @@ ROUTE_GUIDE = 12
 MUSEUM_GUIDE = 13
 
 
-def route_guide():
+def route_guide(open_after_brock=False):
     s = Script().emit(96).emit(294,8,0x800C).compare(0x800C,1).jump('next',1)
     s.msg(0).emit(105,0x4000,0x4001)
     s.compare(0x4000,1085).jump('beside',1).jump('rows')
@@ -27,7 +27,8 @@ def route_guide():
     s.label('escort').movement(ROUTE_GUIDE,'mv_escort').movement(255,'mv_escort').emit(95)
     s.msg(1).movement(ROUTE_GUIDE,'return').emit(95)
     end(s)
-    s.label('next').msg(2).movement(255,'back').emit(95)
+    s.label('next').msg(2)
+    if not open_after_brock:s.movement(255,'back').emit(95)
     end(s)
     for z in range(104,108):
         s.moves(f'line{z}',[(13,106-z)] if z<106 else [(12,z-106)] if z>106 else [(2,1)])

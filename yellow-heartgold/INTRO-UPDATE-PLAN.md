@@ -65,3 +65,11 @@ Keep Golduck's current moves, learnset and other attributes for now. Revisit its
 Pewter's houses, Mart, Center and two-floor museum are converted. Custom miniature exhibit models remain deferred; the museum uses native HeartGold displays with Yellow dialogue. The final build (SHA-256 `05ed484e1ddff00944063733031e2e3b4921c1e9cf145d58252fbd0c7b342242`) passed 212 automated tests. Its museum loads both floors, returns downstairs, and grants exactly one Old Amber with repeat dialogue in the DS emulator. The browser downloader reproduces this ROM with the four-digit filename and rejects incorrect input. The earlier slow Old Amber attempt was resolved by stepping through the complete dialogue; final checks passed. Route 3 is the next campaign area. Bulk Rare Candy selection is still unfinished and explicitly deferred while simpler campaign work continues.
 
 New checkpoint names use at least four digits (`0016`, `0017`, etc.). Preserve old published URLs/files; do not republish or rename historical artifacts merely for padding. Prototype 016 is now named 0016.
+
+## Eventually — owner’s Eevee evolution and Blue teams
+
+Blue’s later teams may vary depending on which evolution the player chooses for their starter Eevee, including keeping it unevolved. Wait for the owner’s complete team plan before implementing those branches. Keep the already agreed Togepi→rival Jolteon and Psyduck→rival Umbreon rules, and current early battles, until that plan supersedes them. Continue current Route 3 development independently.
+
+## Incremental save-based testing
+
+Reuse backed-up normal in-game saves from previous prototypes for focused new-area tests, checking their compatibility on the new ROM. Keep emulator save states confined to their exact ROM build. Preserve save structures and existing progress wherever possible. Fresh-game checks remain appropriate for opening changes or migrations. Runtime native-command test fixtures may prepare an ordinary save, but must remain private and absent from published patches.
