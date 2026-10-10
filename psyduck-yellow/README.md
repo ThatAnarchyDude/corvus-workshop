@@ -1,9 +1,9 @@
-# Pokémon Psyduck Yellow — prototype 010
+# Pokémon Psyduck Yellow — prototype 011
 
 Open `index.html` in a current browser through HTTPS. Select the original unmodified USA HeartGold `.nds`, choose **Create my playable NDS**, then download the verified file for your DS emulator. The original stays on your device. This page contains a modification patch, not a full ROM.
 
-The old man blocks Viridian’s north path until Oak’s Parcel is delivered and the National Pokédex is received. He then demonstrates catching Pokémon and walks aside. Oak now walks to collect two visible Pokédexes from the back table before granting them. The remaining starter ball has its corrected text. The approved prototype 009 intro, HeartGold shop progression and Johto are preserved. Route 2 and Viridian Forest remain closed beyond the old man until the next build.
+Blue appears in the player’s touch-screen portrait rectangle during his introduction and name confirmation. Shiny Eevee and its sparkles retain the native intro position. Viridian’s old man lies face-up in the center lane; invisible barriers block both side lanes and the spaces beside him. After parcel delivery and the National Pokédex, he stands, teaches catching and walks aside. HeartGold shop progression and Johto are preserved. Route 2 and Viridian Forest remain closed for the next prototype.
 
-Use a new game or a normal save before parcel delivery to see Oak’s pickup scene. A completed-quest normal save can test the old man’s lesson. Back up normal saves and do not transfer emulator save states between builds.
+Start a new game to test the intro. Use a normal save before parcel delivery to check the coffee gate, or a completed-parcel save to check the lesson. Back up normal saves and do not transfer emulator save states between builds.
 
-Build and validation details are on the `android-prototype-010` branch in `yellow-heartgold/PROTOTYPE-010.md`. The decoder is RomPatcher.js by Marc Robledo, MIT licensed; see LICENSE.txt.
+Build and validation details are on the `android-prototype-011` branch in `yellow-heartgold/PROTOTYPE-011.md`. The decoder is RomPatcher.js by Marc Robledo, MIT licensed; see LICENSE.txt.
