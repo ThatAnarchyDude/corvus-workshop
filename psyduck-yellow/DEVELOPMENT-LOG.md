@@ -5,11 +5,11 @@ still being built. Share this page with anyone following the project.
 
 **Last updated: October 10, 2026.**
 
-**Latest published patch: prototype 015.** The playable campaign currently
+**Latest published patch: prototype 0016.** The playable campaign currently
 reaches Pewter City and Brock's gym. This is an unfinished game, not a complete
-Yellow remake. Prototype 016 is in development and has not been released.
+Yellow remake. Prototype 0016 completes the Pewter interiors and museum.
 
-[Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/532f79780c06314bbb0e8615e485da9aee55874f/psyduck-yellow/prototype-015/index.html)
+[Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/0382c726e68ac51f1c6c9577debc998c3df8e02a/psyduck-yellow/prototype-0016/index.html)
 
 The download page contains a modification patch. Select your original,
 unmodified USA HeartGold game file to build the playable DS file on your own
@@ -28,7 +28,7 @@ future work; engine support does not mean every encounter is already placed.
 Kanto comes first. Johto is planned as the post-game region. Development is
 moving through Kanto one area at a time, with separate patch checkpoints.
 
-## Changes you can play in prototype 015
+## Changes you can play in prototype 0016
 
 ### A new opening in Pallet Town
 
@@ -117,8 +117,8 @@ moving through Kanto one area at a time, with separate patch checkpoints.
 - Extra item evolution options let Eevee become all seven of its Generation IV
   evolutions, and let Togepi become Togetic with a Dawn Stone. NeverMeltIce
   keeps its held-item effect while gaining an evolution use.
-- **In published prototype 015**, Psyduck can evolve normally by level and also
-  by Water Stone. The Moon Stone replacement below is still unpublished.
+- Starting with prototype 0016, Psyduck evolves only with a Moon Stone. The
+  earlier level-up and Water Stone methods remain only in older downloads.
 - **Golduck is Water/Psychic.** Psyduck stays Water. Golduck's moves have not
   been changed yet.
 
@@ -136,15 +136,15 @@ moving through Kanto one area at a time, with separate patch checkpoints.
   uses Yellow teams: the junior trainer has Diglett and Sandshrew at level 11;
   Brock has Geodude 12 and Onix 14 with Yellow's moves.
 - Winning awards the Boulder Badge and a Bide TM34. HeartGold's original
-  Shock Wave TM34 remains separately available. In prototype 015, teaching
-  Bide still consumes its TM; reusable TMs are part of the unpublished update.
-- Pewter's optional interior conversions are unfinished in the published patch.
+  Shock Wave TM34 remains separately available. In prototype 0015, teaching
+  Bide still consumes its TM; reusable TMs are available starting with 0016.
+- Pewter's houses, Mart, Center and museum conversions are complete in 0016.
   Route 3 is currently the next development boundary.
 
-## Unpublished development work — prototype 016
+## Added in published prototype 0016
 
-These changes are in source or local builds. **They are not in the prototype
-015 download above, and this section is not a release announcement.**
+These changes are included in the latest download above. Earlier downloads
+retain their original behavior and remain available separately.
 
 - Yellow conversations for Pewter's houses, Mart and Pokémon Center, while
   keeping HeartGold's healing, shop and PC services.
@@ -168,44 +168,50 @@ These changes are in source or local builds. **They are not in the prototype
 - The requested **bulk Rare Candy quantity selector is not implemented yet**.
   It must preserve each level-up's move learning, evolution and correct item use.
 
-The development build passed 210 automated checks, including Moon Stone
+The released build passed 212 automated checks, including Moon Stone
 evolution, removal of Psyduck's earlier methods, and existing stone evolution
 at level 100. The revised museum also passed 17 focused Pewter checks; both stair transitions
-worked in a DS emulator, and the local downloader reproduced the verified ROM.
-These checks are not a complete playthrough of the unfinished update.
+worked in a DS emulator, and Old Amber was awarded exactly once with repeat
+dialogue. The local downloader reproduced the verified ROM with its four-digit
+filename.
+These checks are not a complete playthrough of the full campaign.
 
 ## Release history
+
+New checkpoints use four digits, beginning with **0016**. Earlier labels in the
+chart also use four digits; their existing download URLs and files stay valid.
 
 Each row describes what that version added; later versions include earlier
 changes and sometimes correct or replace them. The sections above describe the
 current rules, so older details should not be mistaken for today's behavior.
 
-Historical dates and AM/PM times below come from the recorded release commits,
+Dates and AM/PM times for 0001–0015 come from the recorded release commits,
 converted to Eastern Time (America/New_York). They are the best available release
 records; the exact GitHub push or hosting activation times were not recorded.
-Prototype 009 uses the intro release, following the withdrawn shop experiment.
-Future checkpoints will record their confirmed publication date and time.
+Prototype 0009 uses the intro release, following the withdrawn shop experiment.
+Checkpoint 0016 and future checkpoints use the recorded successful publication
+push date and time.
 
 | Checkpoint | Made live (Eastern Time) | Main changes |
 | --- | --- | --- |
-| 001 | Oct 8, 2026 · 8:41 PM EDT | First Android testing patch and instructions; early starter and Pallet-opening experiments. |
-| 002 | Oct 8, 2026 · 10:56 PM EDT | Pallet opening with protected HeartGold event assets, starter selection and follower tests. |
-| 003 | Oct 9, 2026 · 12:40 AM EDT | Bounded Yellow opening, intro rival naming and low-level Route 1 setup. |
-| 004 | Oct 9, 2026 · 6:50 AM EDT | Visible Oak escort/capture scene, three physical starter balls, immediate follower, Blue opening, starter properties and bedroom item storage. |
-| 005 | Oct 9, 2026 · 12:37 PM EDT | Psyduck swimming title screen and project logo. |
-| 006 | Oct 9, 2026 · 1:11 PM EDT | PC evolution supplies and additional item evolution choices. |
-| 007 | Oct 9, 2026 · 3:18 PM EDT | Mom's Running Shoes, Route 1 travel, cashier escort, Oak's Parcel, delayed National Pokédex and Viridian Center item storage. |
-| 008 | Oct 9, 2026 · 5:40 PM EDT | Center doorway fix, removal of the extra cashier after pickup, upper-cashier shopping and Poké Ball sales. |
-| 009 | Oct 9, 2026 · 7:42 PM EDT | Shiny Eevee introduction and Blue's full portrait on intro/confirmation screens. |
-| 010 | Oct 9, 2026 · 9:45 PM EDT | Old man's catching lesson, Oak collecting visible Pokédexes, corrected leftover starter-ball text. |
-| 011 | Oct 9, 2026 · 11:59 PM EDT | Old man's center-lane placement, Blue portrait moved to the touch-screen panel, aligned Eevee/sparkles. |
-| 012 | Oct 10, 2026 · 1:02 AM EDT | Persistent side Cut trees, granddaughter moving aside, cashier Pokégear/Map reward, western warning guard and temporary barrier removal. |
-| 013 | Oct 10, 2026 · 3:42 AM EDT | League guard fixes, early Route 22 Blue battle, exact level-6 lab reward, automatic Oak Poké Balls, dialogue repairs, fair rival starter rolls, global shiny odds, Shiny Charm and scoped Legendary IV rules. |
-| 014 | Oct 10, 2026 · 4:19 AM EDT | Route 2 and Viridian Forest encounters, trainers, items and conversations; removal of inherited Kanto HM terrain gates. |
-| 015 | Oct 10, 2026 · 5:36 AM EDT | Pewter outdoor events, Brock's gym/Boulder Badge/Bide TM, Water/Psychic Golduck. **Latest published patch.** |
-| 016 | Not published yet | Pewter interiors/museum and item improvements described above. **Unpublished; still being checked.** |
+| 0001 | Oct 8, 2026 · 8:41 PM EDT | First Android testing patch and instructions; early starter and Pallet-opening experiments. |
+| 0002 | Oct 8, 2026 · 10:56 PM EDT | Pallet opening with protected HeartGold event assets, starter selection and follower tests. |
+| 0003 | Oct 9, 2026 · 12:40 AM EDT | Bounded Yellow opening, intro rival naming and low-level Route 1 setup. |
+| 0004 | Oct 9, 2026 · 6:50 AM EDT | Visible Oak escort/capture scene, three physical starter balls, immediate follower, Blue opening, starter properties and bedroom item storage. |
+| 0005 | Oct 9, 2026 · 12:37 PM EDT | Psyduck swimming title screen and project logo. |
+| 0006 | Oct 9, 2026 · 1:11 PM EDT | PC evolution supplies and additional item evolution choices. |
+| 0007 | Oct 9, 2026 · 3:18 PM EDT | Mom's Running Shoes, Route 1 travel, cashier escort, Oak's Parcel, delayed National Pokédex and Viridian Center item storage. |
+| 0008 | Oct 9, 2026 · 5:40 PM EDT | Center doorway fix, removal of the extra cashier after pickup, upper-cashier shopping and Poké Ball sales. |
+| 0009 | Oct 9, 2026 · 7:42 PM EDT | Shiny Eevee introduction and Blue's full portrait on intro/confirmation screens. |
+| 0010 | Oct 9, 2026 · 9:45 PM EDT | Old man's catching lesson, Oak collecting visible Pokédexes, corrected leftover starter-ball text. |
+| 0011 | Oct 9, 2026 · 11:59 PM EDT | Old man's center-lane placement, Blue portrait moved to the touch-screen panel, aligned Eevee/sparkles. |
+| 0012 | Oct 10, 2026 · 1:02 AM EDT | Persistent side Cut trees, granddaughter moving aside, cashier Pokégear/Map reward, western warning guard and temporary barrier removal. |
+| 0013 | Oct 10, 2026 · 3:42 AM EDT | League guard fixes, early Route 22 Blue battle, exact level-6 lab reward, automatic Oak Poké Balls, dialogue repairs, fair rival starter rolls, global shiny odds, Shiny Charm and scoped Legendary IV rules. |
+| 0014 | Oct 10, 2026 · 4:19 AM EDT | Route 2 and Viridian Forest encounters, trainers, items and conversations; removal of inherited Kanto HM terrain gates. |
+| 0015 | Oct 10, 2026 · 5:36 AM EDT | Pewter outdoor events, Brock's gym/Boulder Badge/Bide TM, Water/Psychic Golduck. |
+| 0016 | Oct 10, 2026 · 1:14 PM EDT | Pewter interiors, two-floor museum/Old Amber, reusable TMs, eligible level-100 Rare Candy evolution and Moon Stone Psyduck. **Latest published patch.** |
 
-[Detailed release notes and verification records](https://github.com/ThatAnarchyDude/corvus-workshop/tree/9282bba885b399df77f451f36dd07ea0b6aa5dc7/yellow-heartgold)
+[Detailed release notes and verification records](https://github.com/ThatAnarchyDude/corvus-workshop/tree/e2b7c70107017dfcc72c3763bd6ad89e91d96081/yellow-heartgold)
 
 ## Agreed plans that are not finished features
 

@@ -16,7 +16,7 @@ A mobile-friendly interactive battery and capacitor simulator with electrotherma
 A Pokémon Yellow adventure rebuilt with HeartGold's engine. Follow the
 [plain-language development log](./psyduck-yellow/DEVELOPMENT-LOG.md) for published
 changes, current work, and plans. This link stays the same as the log is updated.
-The latest released checkpoint is prototype 015; the full game is still in development.
+The latest released checkpoint is prototype 0016; the full game is still in development.
 
 ## How the workshop is organized
 
