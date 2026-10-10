@@ -149,8 +149,10 @@ These changes are in source or local builds. **They are not in the prototype
 - Yellow conversations for Pewter's houses, Mart and Pokémon Center, while
   keeping HeartGold's healing, shop and PC services.
 - Museum admission for 50 Pokédollars, a one-time Old Amber gift, and a new
-  second floor for Yellow's upstairs visitors and space exhibits. The new floor
-  and its transitions still need further emulator checks.
+  second floor for Yellow's upstairs visitors and exhibit conversations, using
+  HeartGold's existing displays. Custom exhibit models are deferred after they
+  caused a black screen in testing. The revised floor now loads in the DS
+  emulator, with working stairs in both directions.
 - A correction to Brock's interaction sound command.
 - Reusable TMs, including Bide, through the normal teaching system.
 - Rare Candy use at level 100 can trigger the next eligible **level-up**
@@ -166,10 +168,11 @@ These changes are in source or local builds. **They are not in the prototype
 - The requested **bulk Rare Candy quantity selector is not implemented yet**.
   It must preserve each level-up's move learning, evolution and correct item use.
 
-The development build passed 205 automated checks before the Moon Stone change.
-Subsequent focused native-code checks passed for Moon Stone evolution, removal
-of Psyduck's earlier methods, and existing stone evolution at level 100. These
-checks are not a complete playthrough of the unfinished update.
+The development build passed 210 automated checks, including Moon Stone
+evolution, removal of Psyduck's earlier methods, and existing stone evolution
+at level 100. The revised museum also passed 17 focused Pewter checks; both stair transitions
+worked in a DS emulator, and the local downloader reproduced the verified ROM.
+These checks are not a complete playthrough of the unfinished update.
 
 ## Release history
 
