@@ -1,3 +1,5 @@
+Prototype 012 completes the Viridian opening groundwork with Cut trees, removable lesson barriers, the granddaughter, a temporary west guard and the cashier’s Pokégear/Town Map reward. See [PROTOTYPE-012.md](PROTOTYPE-012.md).
+
 Prototype 011 fixes the three-lane coffee gate, Blue’s touch-screen portrait and Eevee’s intro position. See [PROTOTYPE-011.md](PROTOTYPE-011.md). Route 2 and Viridian Forest follow after this correction playtest.
 
 Prototype 010 adds Viridian’s old-man catching tutorial and Oak’s visible Pokédex pickup. See [PROTOTYPE-010.md](PROTOTYPE-010.md). Route 2 and Viridian Forest are next after this playtest.

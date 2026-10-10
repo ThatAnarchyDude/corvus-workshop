@@ -1,9 +1,9 @@
-# Pokémon Psyduck Yellow — prototype 011
+# Pokémon Psyduck Yellow — prototype 012
 
-Open `index.html` in a current browser through HTTPS. Select the original unmodified USA HeartGold `.nds`, choose **Create my playable NDS**, then download the verified file for your DS emulator. The original stays on your device. This page contains a modification patch, not a full ROM.
+Open `index.html` through HTTPS in a current browser. Select your original unmodified USA HeartGold `.nds`, choose **Create my playable NDS**, and download the verified file for your DS emulator. The original stays on your device. This page contains a modification patch, not a full ROM.
 
-Blue appears in the player’s touch-screen portrait rectangle during his introduction and name confirmation. Shiny Eevee and its sparkles retain the native intro position. Viridian’s old man lies face-up in the center lane; invisible barriers block both side lanes and the spaces beside him. After parcel delivery and the National Pokédex, he stands, teaches catching and walks aside. HeartGold shop progression and Johto are preserved. Route 2 and Viridian Forest remain closed for the next prototype.
+The old man’s granddaughter replaces one invisible barrier, then walks aside and wanders after his lesson. The temporary invisible barriers disappear; both outer Cut trees remain until Cut is used. The western guard leaves after parcel delivery. Return to the upper Mart cashier for the one-time Pokégear reward with Town Map and Kanto access, followed by the normal shop. Blue’s touch-screen portrait and the approved opening remain intact. Route 2 and Viridian Forest are next.
 
-Start a new game to test the intro. Use a normal save before parcel delivery to check the coffee gate, or a completed-parcel save to check the lesson. Back up normal saves and do not transfer emulator save states between builds.
+Back up normal saves and avoid transferring emulator save states between builds. A normal prototype 011 save can test the new actors and reward; use a pre-parcel save to see the cashier’s promise and west guard. The Cut trees follow HeartGold’s normal map re-entry reset behavior.
 
-Build and validation details are on the `android-prototype-011` branch in `yellow-heartgold/PROTOTYPE-011.md`. The decoder is RomPatcher.js by Marc Robledo, MIT licensed; see LICENSE.txt.
+Source and validation are on `android-prototype-012` in `yellow-heartgold/PROTOTYPE-012.md`. The decoder is RomPatcher.js by Marc Robledo, MIT licensed; see LICENSE.txt.

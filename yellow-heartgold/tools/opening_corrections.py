@@ -139,7 +139,7 @@ previous: .word {previous}'''
     addr,_=append_code(main,source);struct.pack_into('<I',main.sections[0].data,CMD_TABLE+4,addr|1);return hex(addr)
 
 
-def old_man(base,interaction=False):
+def old_man(base,interaction=False,clear_objects=(),companion=None,companion_after=None):
     s=Script().emit(32,TUTORIAL_DONE).jump('finished',1).emit(96)
     if interaction:s.emit(104)
     s.compare(PARCEL_STATE,2).jump('coffee',5).emit(32,0x6B).jump('coffee',5)
@@ -150,14 +150,20 @@ def old_man(base,interaction=False):
     s.emit(105,0x4000,0x4001).compare(0x4000,GATE_X).jump('aside',5)
     s.compare(0x4001,GATE_Z+1).jump('aside',5).movement(255,'make_room').emit(95)
     s.label('aside').movement(12,'aside_move').emit(95)
-    s.emit(30,TUTORIAL_DONE).emit(30,BLOCKER_HIDE).emit(31,PASSED_HIDE);end(s)
+    if companion:s.movement(companion[0],'companion_aside').emit(95)
+    s.emit(30,TUTORIAL_DONE).emit(30,BLOCKER_HIDE).emit(31,PASSED_HIDE)
+    for obj in clear_objects:s.emit(101,obj)
+    if companion_after:s.emit(101,companion[0]).emit(100,companion_after)
+    end(s)
     s.label('coffee').msg(base)
     if not interaction:s.movement(255,'back').emit(95)
     end(s)
     s.label('finished')
     if interaction:s.emit(96).emit(104).msg(base+4);end(s)
     else:s.emit(2)
-    return s.moves('face_player',[(1,1)]).moves('make_room',[(14,1),(0,1)]).moves('aside_move',[(13,2),(15,2),(1,1)]).moves('back',[(13,1)]).finish()
+    s.moves('face_player',[(1,1)]).moves('make_room',[(14,1),(0,1)]).moves('aside_move',[(13,2),(15,2),(1,1)]).moves('back',[(13,1)])
+    if companion:s.moves('companion_aside',companion[1])
+    return s.finish()
 
 
 def migration():
