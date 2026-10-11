@@ -496,3 +496,24 @@ Back up the emulator's existing save before importing one of these files;
 then select Continue. No ROM is included. These save downloads are release
 attachments, not files in Git history, and do not replace any earlier patch.
 Compatibility of this specific testing save with other prototypes is unverified.
+
+
+### Android editor 0.1.1 compatibility update
+
+Published: October 11, 2026 at 06:36 PM EDT.
+
+The owner successfully downloaded 0.1.0 using the ZIP alternative, but the
+app closed immediately on their Samsung Android 16 phone. The exact crash
+cause is still unconfirmed because a device crash log is not available.
+
+[Download the new 0.1.1 ZIP](https://github.com/ThatAnarchyDude/PKHeX-Psyduck-Yellow/releases/download/android-v0.1.1-experimental/Psyduck-Save-Editor-0.1.1-Android.zip).
+Extract it, then tap the APK to update the existing app. The original release
+files remain available. This update uses a more conservative runtime setup
+and includes a Share startup diagnostics button. Reports contain device and
+runtime information, not game saves; sharing is controlled by the user.
+
+The build, APK signature, update certificate and 16 KB packaging checks
+passed. [Android 16 automated checks also passed](https://github.com/ThatAnarchyDude/PKHeX-Psyduck-Yellow/actions/runs/38180556331), including five cold launches,
+diagnostic sharing, opening a save, editing a level and validating the exported
+copy. These emulator results do not establish a fix for the owner's phone;
+physical-device confirmation is still needed.
