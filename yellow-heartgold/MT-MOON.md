@@ -1,12 +1,13 @@
-# Prototype 0018 — Mt. Moon work in progress
+# Prototype 0018 — Mt. Moon checkpoint
 
-This checkpoint is **not published or ready for playtesting**. Prototype 0017
-remains the latest downloadable patch. Never package the private test fixture.
+This checkpoint adds Mt. Moon cumulatively to prototype 0017. The release
+contains no private test fixture grants. See the release validation record for
+exact artifacts, native checks and remaining limitations.
 
 The first implementation builds cumulatively from the verified 0017 ROM,
 SHA-256 `71f86b48272129c0f3d8f6b876403bf831c454b5917add58caf9921560f1976d`.
 
-## Implemented in the unpublished foundation
+## Implemented campaign content
 
 - Yellow's seven first-floor trainers and three ordinary Rocket grunts, with
   exact species, levels and explicit Yellow moves. These use native HeartGold
@@ -18,7 +19,7 @@ SHA-256 `71f86b48272129c0f3d8f6b876403bf831c454b5917add58caf9921560f1976d`.
 - Two Potions, a Moon Stone, a Rare Candy and an Escape Rope, each collected
   once and left available if the bag is full.
 - Original native passages and geometry retained. Silver's endgame cave battle
-  and the weekday warp changes are archived, rather than active in this draft.
+  and the weekday warp changes are archived, rather than active in this checkpoint.
   The separate square and its events remain unchanged for now.
 
 The pinned source is pret/pokeyellow commit
@@ -32,12 +33,10 @@ picker a required part of 0018. It is implemented and natively verified: apply
 the batch, offer intermediate-level moves, then check evolution once. See
 ITEM-QUALITY-OF-LIFE.md and validation-prototype-0018-bulk-candy.json.
 
-Finish Jessie and James's artwork and the fossil prop graphics. Complete native
-checks of the remaining rewards, deeper-cave encounters and final traversal.
-Confirm the story can be completed on HeartGold's smaller cave layout without
-adding terrain obstacles. Test the scenes and rewards natively, then package an
-immutable cumulative 0018 patch and publish its link. Do not release this
-foundation as though those scenes already work.
+Jessie and James now have separate native overworld models, and their original
+Yellow paired battle portrait is registered as a separate class. The fossil
+props have distinct graphics. Native and static connectivity checks cover the
+fossil corridor and exit without introducing terrain obstacles.
 
 Preserve ordinary 0017 save backups. Use native-command private fixtures to
 prepare cave progress; do not edit save bytes or reuse another ROM's save state.
@@ -101,12 +100,11 @@ plus a native hidden Moon Stone and Ether with Dowsing Machine support. Hidden
 IDs 8195 and 8198 have no active uses elsewhere after cave conversion.
 
 `mtmoon_rockets.py` adds Yellow's fossil ambush dialogue and the original level-14
-Ekans, Meowth and Koffing team. The draft uses native Rocket placeholders pending
-Jessie/James art. Both characters walk into position and leave via the exit after
+Ekans, Meowth and Koffing team. The release uses separate Jessie/James sprites and a paired
+battle portrait. Both characters walk into position and leave via the exit after
 victory. Battle loss keeps the encounter pending. The trigger is a saved story
 condition, without new HM terrain obstacles or geometry changes. Native checks
-verified the complete battle and departure; artwork and final traversal still
-prevent release. The ordinary Bug Catcher now stands in the eastern pocket at
+verified the complete battle and departure; their Rocket payout, music and battle transition are preserved. The ordinary Bug Catcher now stands in the eastern pocket at
 (24,16), keeping his line of sight clear of the scripted Rocket exit trigger.
 
 Native checks verified learning Mega Punch on Golduck while retaining the TM,
@@ -127,11 +125,23 @@ ROM used by an active emulator state; carry ordinary saves into a fresh boot
 instead. Private fixtures must use one native warp transition at a time and verify the
 result through a normal menu save and fresh boot before continuing.
 
-## Current regression checkpoint
+## Release verification
 
-All 259 automated tests passed after the live B2F table selector and Bug Catcher
-position correction. Native checks on the new deeper-cave build loaded the
-completed Rocket ordinary save with its flags preserved and encountered
-Geodude at level 11 in the fossil corridor. The hidden Ether was awarded to the
-Medicine pocket. See validation-prototype-0018-mtmoon.json for exact builds,
-checks and remaining limitations. No 0018 patch has been published.
+The complete 263-test regression suite passed before the final trainer-name
+correction. Five focused artwork/class tests then passed on the final code,
+including native Thumb execution across all 256 class values for gender,
+payout, music and battle transition. Existing classes retain their behavior.
+Jessie and James's full name uses the uncapped class label because native
+personal trainer names have a seven-character limit.
+
+Both fossil branches and the Rocket battle were checked in the DS emulator.
+Water Gun was taught to a level-5 Psyduck without consuming its reusable TM.
+Earlier native checks cover Mega Punch, the hidden Moon Stone and Ether, the
+Magikarp sale, healing, shared PC storage and a level-11 B2F Geodude encounter.
+The release patch is decoded against the original USA HeartGold file and its
+browser downloader output must exactly match the release ROM's SHA-256.
+
+See validation-prototype-0018-release.json and the historical development
+validation records. Not every optional trainer battle or encounter slot has
+been individually playtested, and audio playback has not been audited by ear.
+Route 4 remains the next unconverted area; its exit is available.

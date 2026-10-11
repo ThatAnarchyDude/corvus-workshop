@@ -1,0 +1,175 @@
+{
+  "status": "validated cumulative 0018 release candidate",
+  "checked_at_utc": "2026-10-11T02:27:01.927740+00:00",
+  "version": "0018",
+  "parent": "0017",
+  "input_sha256": "71f86b48272129c0f3d8f6b876403bf831c454b5917add58caf9921560f1976d",
+  "output_sha256": "5ce1b82b86b568169540520ed77e3500d216d234c61c4afc4117179cd59a69dc",
+  "patch_sha256": "a63e81bbd3711c2589f7296521f711b17f7051114b2192bc1cb96a6a4fa24f28",
+  "base": "Original unmodified USA HeartGold",
+  "roundtrip_verified": true,
+  "automated_checks": {
+    "full_suite_before_final_class_name_and_music_corrections": {
+      "passed": 263,
+      "failed": 0,
+      "duration_seconds": 374.25
+    },
+    "final_art_class_name_music_hooks": {
+      "passed": 5,
+      "failed": 0,
+      "duration_seconds": 64.347,
+      "trainer_classes_executed": 256
+    }
+  },
+  "browser": {
+    "output_sha256": "5ce1b82b86b568169540520ed77e3500d216d234c61c4afc4117179cd59a69dc",
+    "bad_input_rejected": true,
+    "browser_errors": [],
+    "download_name": "Pokemon-Psyduck-Yellow-prototype-0018.nds"
+  },
+  "final_payload_preservation": {
+    "arm7_identical": true,
+    "arm9_overlay_table_identical": true,
+    "arm7_overlay_table_identical": true,
+    "all_rom_files_identical": true,
+    "filename_table_identical": true,
+    "banner_identical": true,
+    "arm9_main_only_music_hook_and_copy_compression_metadata_changed": true,
+    "old_itcm_prefix_preserved": true,
+    "itcm_total_bytes": 28860,
+    "native_copy_compression_metadata": [
+      {
+        "address": "0x2000ba0",
+        "before": "0x2118948",
+        "after": "0x211897c"
+      },
+      {
+        "address": "0x2000ba4",
+        "before": "0x2118960",
+        "after": "0x2118994"
+      },
+      {
+        "address": "0x2000bb4",
+        "before": "0x20bff44",
+        "after": "0x20bff7c"
+      }
+    ]
+  },
+  "native_checks": {
+    "helix_exclusive_choice_rocket_victory_HP_Up_exit_normal_save_fresh_final_boot": {
+      "directory": "emulator-0018-release-helix-reload",
+      "quest": [
+        3,
+        2
+      ],
+      "location": [
+        12,
+        4294967295,
+        1195,
+        113,
+        1
+      ],
+      "money": 4262,
+      "items": {
+        "45": 1,
+        "101": 1,
+        "102": 0,
+        "116": 0,
+        "117": 0
+      },
+      "party": [
+        {
+          "species": 55,
+          "level": 21,
+          "moves": [
+            39,
+            55,
+            50,
+            93
+          ]
+        }
+      ]
+    },
+    "water_gun_teaching_retained_TM_normal_save_fresh_final_boot": {
+      "directory": "emulator-0018-release-watergun-reload",
+      "quest": [
+        2,
+        1
+      ],
+      "location": [
+        107,
+        4294967295,
+        3,
+        5,
+        0
+      ],
+      "money": 3702,
+      "items": {
+        "45": 0,
+        "101": 0,
+        "102": 1,
+        "116": 1,
+        "117": 0
+      },
+      "party": [
+        {
+          "species": 55,
+          "level": 20,
+          "moves": [
+            39,
+            55,
+            50,
+            93
+          ]
+        },
+        {
+          "species": 54,
+          "level": 5,
+          "moves": [
+            346,
+            10,
+            39,
+            55
+          ]
+        }
+      ]
+    },
+    "rocket_team": [
+      [
+        23,
+        14
+      ],
+      [
+        52,
+        14
+      ],
+      [
+        109,
+        14
+      ]
+    ],
+    "rocket_payout": 560,
+    "rocket_art_and_complete_name_verified_on_pre_music_candidate_sha256": "66de403eb40967d899b246739e53651bddd76c4f37a199cd22fb5c74834c0cf5",
+    "both_rocket_actors_visibly_depart": true,
+    "history_records": [
+      "validation-prototype-0018-foundation.json",
+      "validation-prototype-0018-bulk-candy.json",
+      "validation-prototype-0018-mtmoon.json"
+    ],
+    "final_release_Rocket_transition_completed_into_level_14_Ekans_battle": true,
+    "final_release_audio_lookup_uses_Rocket_category": 29
+  },
+  "save_handling": {
+    "layout_unchanged": true,
+    "normal_saves_carried_forward": true,
+    "in_game_saves_backed_up": true,
+    "save_states_same_ROM_only": true,
+    "private_fixture_grants_excluded_from_release": true
+  },
+  "limitations": [
+    "Not every optional trainer battle or wild encounter slot has been individually playtested.",
+    "Audio selections and preservation were checked in code; playback was not audited by ear.",
+    "Route 4 remains unconverted and is the next development area.",
+    "Jessie/James battle portrait retains original Yellow monochrome art."
+  ]
+}

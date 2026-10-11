@@ -1,3 +1,5 @@
+Prototype 0018 adds Mt. Moon, its fossil choice and Jessie/James ambush, cave rewards and Center services, plus bulk Rare Candy use with a quantity picker. It is cumulative from 0017; Route 4 remains unconverted. See [MT-MOON.md](MT-MOON.md) and [the release validation record](validation-prototype-0018-release.json).
+
 Prototype 013 fixes League gate direction and progression, exact lab experience, mandatory Oak Poké Balls, Daisy/Trainer House messages and long dialogue; it adds Yellow’s early Route 22 Blue battle with his lab starter, a random Psyduck/Eevee choice of opposite gender for Togepi players, and matching 1-in-4,096 shiny and 1-in-16,384 perfect-IV odds. See [PROTOTYPE-013.md](PROTOTYPE-013.md). Global base shiny odds are 1/4,096, or 1/2,048 with the passive Shiny Charm supplied through the bedroom PC. Perfect Legendary IVs apply only to the 17 existing Yellow/HGSS encounter species listed in the release notes.
 
 Prototype 012 completes the Viridian opening groundwork with Cut trees, removable lesson barriers, the granddaughter, a temporary west guard and the cashier’s Pokégear/Town Map reward. See [PROTOTYPE-012.md](PROTOTYPE-012.md).
