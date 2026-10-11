@@ -1,5 +1,5 @@
 {
-  "status": "validated cumulative 0018 release candidate",
+  "status": "validated and published cumulative 0018 release",
   "checked_at_utc": "2026-10-11T02:27:01.927740+00:00",
   "version": "0018",
   "parent": "0017",
@@ -171,5 +171,11 @@
     "Audio selections and preservation were checked in code; playback was not audited by ear.",
     "Route 4 remains unconverted and is the next development area.",
     "Jessie/James battle portrait retains original Yellow monochrome art."
-  ]
+  ],
+  "publication": {
+    "commit": "3a18894189a390ba86279a75a097f6b16252e331",
+    "confirmed_push_utc": "2026-10-11T02:27:49.899202+00:00",
+    "source_commit": "2a79ff61ccb91886f704961fffed8a6a46380151",
+    "url": "https://raw.githack.com/ThatAnarchyDude/corvus-workshop/3a18894189a390ba86279a75a097f6b16252e331/psyduck-yellow/prototype-0018/index.html"
+  }
 }
