@@ -421,7 +421,19 @@ Back up the normal save, use Continue, and save again after loading 0022. Recove
 
 ### Planned save-editor compatibility
 
-Investigate PKHeX compatibility using ordinary prototype saves. Prefer a plugin
-for project-specific items and rules; consider a separate version only if a
-plugin cannot provide the necessary support. This is planned work, not a released
-editor. License requirements and compatibility checks will be completed first.
+PKHeX Core 26.08.26 recognizes the prototype 0022 HeartGold save format. A copied
+prepared save survived an unchanged export and an explicit money/IV edit, then
+both copies loaded successfully through the game's Continue option. Pokédex
+access and parcel-complete progress remained intact. These checks used a prepared
+test save, not the owner's actual save or every possible game state.
+
+A separate full editor fork is not needed for those tested edits. An experimental
+plugin compiles and adds a project view for PC items, shiny status and starter
+Hidden Abilities. Its Windows interface and ability-edit workflow still need
+runtime testing; it is not a released, fully compatible editor. Official PKHeX
+legality checks can disagree with our intentional changes. The upstream license
+permits modification and distribution under GPL terms, including providing source
+and retaining notices.
+
+[Compatibility findings and plugin source](https://github.com/ThatAnarchyDude/corvus-workshop/tree/b7e10cc42cf9a66926ac66d92a3a31cbc3a01373/yellow-heartgold/pkhex).
+This investigation takes place before campaign work on prototype 0023.
