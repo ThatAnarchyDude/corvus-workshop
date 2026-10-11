@@ -141,3 +141,7 @@ Prototype 001 remains the Android-tested reference build. Prototype 002 starts i
 ## Planned dialogue review
 
 The owner will provide a “Current Dialogue → Expected Dialogue” list. Review and apply those revisions later; broad dialogue rewrites are deferred while the area conversion continues.
+
+## Live cloud testing
+
+See [LIVE-TESTING.md](LIVE-TESTING.md) for the default-off DS frame stream, read-only RAM HUD, agent-controlled video switches, and optional Xvfb/noVNC setup. Remote viewing requires a workspace port-forward or tunnel; a local server alone does not create a ChatGPT preview panel.

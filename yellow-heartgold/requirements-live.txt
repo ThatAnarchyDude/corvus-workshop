@@ -1,0 +1,3 @@
+# Optional virtual desktop; direct frame streaming uses existing Pillow.
+PyVirtualDisplay==3.0
+python-xlib==0.33
