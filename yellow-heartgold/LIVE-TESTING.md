@@ -146,3 +146,9 @@ installer and native local stream work; the external tunnel remains unverified.
 The tunnel was retried after a turn-scoped network permission grant and outside
 the command sandbox. The same DNS failure remained, so the restriction requires
 a hosting/network configuration change, not another script or dependency.
+
+After publishing unrestricted network access, Cloudflare DNS resolution improved,
+but direct API connections were refused and proxy requests still returned 403.
+A separate LocalTunnel trial allocated an address, but its relay connection was
+refused and a remote dashboard request timed out. No usable external URL was
+verified. An allocated address alone must not be presented as a working feed.

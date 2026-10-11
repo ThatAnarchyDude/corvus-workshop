@@ -52,5 +52,12 @@
     "outside_command_sandbox_attempted": true,
     "result": "Still blocked: api.trycloudflare.com DNS connection refused",
     "public_url_created": false
+  },
+  "published_environment_retry": {
+    "published_network_policy": "unrestricted",
+    "cloudflare_direct": "TCP connection refused to API port 443",
+    "cloudflare_proxy": "HTTP 403, Your request was blocked",
+    "localtunnel": "address allocated but relay data connection refused; remote status timed out",
+    "external_viewing_verified": false
   }
 }
