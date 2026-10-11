@@ -1,4 +1,4 @@
-import json,struct,sys,unittest
+import json,struct,sys,unittest,os
 from pathlib import Path
 import ndspy.rom
 from unicorn import Uc,UC_ARCH_ARM,UC_MODE_THUMB,UC_HOOK_CODE
@@ -9,7 +9,7 @@ from build_rom import PROJECT
 class BlueProperties(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.rom=ndspy.rom.NintendoDSRom.fromFile(str(PROJECT/'build/0021-development-2.nds'));cls.main=cls.rom.loadArm9();r=json.loads((PROJECT/'build/0021-development-report.json').read_text())['cerulean']['rival'];cls.report={'hook':r['properties_hook'],'bytes':524}
+        cls.rom=ndspy.rom.NintendoDSRom.fromFile(str(PROJECT/os.environ.get('PROTOTYPE0021_ROM','build/0021-development-6.nds')));cls.main=cls.rom.loadArm9();r=json.loads((PROJECT/'build/0021-development-report.json').read_text())['cerulean']['rival'];cls.report={'hook':r['properties_hook'],'bytes':524}
     def execute(self,trainer,species,gender,rare_flags=None,shiny_roll=0,charm=False):
         c=Uc(UC_ARCH_ARM,UC_MODE_THUMB);c.mem_map(0x01FF8000,0x8000);c.mem_map(0x02000000,0x400000)
         for sec in self.main.sections[:2]:c.mem_write(sec.ramAddress,bytes(sec.data))
@@ -61,5 +61,34 @@ class BlueProperties(unittest.TestCase):
         at=int(self.report['hook'],16);code=self.main.sections[1].data[at-0x1FF8000:at-0x1FF8000+self.report['bytes']-16]
         self.assertFalse([i for i in Cs(CS_ARCH_ARM,CS_MODE_THUMB).disasm(code,at) if i.mnemonic.endswith('.w')])
 
+
+class StartupAndCut(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.main=ndspy.rom.NintendoDSRom.fromFile(str(PROJECT/os.environ.get('PROTOTYPE0021_ROM','build/0021-development-6.nds'))).loadArm9()
+    def test_autoload_code_is_word_aligned_and_end_pointer_matches(self):
+        itcm=self.main.sections[1]
+        self.assertEqual(len(itcm.data)%4,0)
+        self.assertLess(len(itcm.data),0x8000)
+        self.assertEqual(struct.unpack_from('<I',self.main.sections[0].data,0xD2C68)[0],itcm.ramAddress+len(itcm.data))
+    def test_native_cut_keeps_tree_and_restricted_map_checks(self):
+        for badges in [set(),{1},{9},{1,9}]:
+            for tree in [0,1]:
+                for maptype in [0,1,2,3]:
+                    c=Uc(UC_ARCH_ARM,UC_MODE_THUMB);c.mem_map(0x01FF8000,0x8000);c.mem_map(0x02000000,0x400000)
+                    for sec in self.main.sections[:2]:c.mem_write(sec.ramAddress,bytes(sec.data))
+                    check,field,profile,stop=0x02300000,0x02300100,0x02300200,0x023F0000
+                    c.mem_write(check+4,struct.pack('<I',field));c.mem_write(check+12,struct.pack('<H',tree));c.mem_write(field+0x70,struct.pack('<I',maptype));c.mem_write(field+12,struct.pack('<I',0x02300300))
+                    def hook(cpu,address,size,_):
+                        if address==stop:cpu.emu_stop();return
+                        if address==0x02028E9C:result=profile
+                        elif address==0x02028F98:
+                            self.assertEqual(cpu.reg_read(UC_ARM_REG_R0),profile)
+                            result=int(cpu.reg_read(UC_ARM_REG_R1) in badges)
+                        else:return
+                        cpu.reg_write(UC_ARM_REG_R0,result);cpu.reg_write(UC_ARM_REG_PC,cpu.reg_read(UC_ARM_REG_LR))
+                    c.hook_add(UC_HOOK_CODE,hook);c.reg_write(UC_ARM_REG_R0,check);c.reg_write(UC_ARM_REG_R4,44);c.reg_write(UC_ARM_REG_SP,0x023E0000);c.reg_write(UC_ARM_REG_LR,stop|1);c.emu_start(0x02067F69,stop,count=2000)
+                    expected=1 if maptype in [2,3] else 2 if not badges else 0 if tree else 1
+                    self.assertEqual(c.reg_read(UC_ARM_REG_R0),expected,(badges,tree,maptype));self.assertEqual(c.reg_read(UC_ARM_REG_R4),44)
 
 if __name__=='__main__':unittest.main()
