@@ -1,3 +1,5 @@
+Prototype 0021 restores Cerulean’s initial Yellow visit, the Bike Voucher exchange and Pewter’s mandatory pre-Brock escort. Its unpublished startup issue is repaired. See [CERULEAN.md](CERULEAN.md) and [the validation record](validation-prototype-0021.json). Route 24/25 and Bill follow next, with the requested PC friendship-testing item planned for 0022.
+
 Prototype 0020 adds the requested two-way Route 4 return crossing and free HM02 Fly at Celadon’s third-floor TM counter, with no badge required for outdoor Fly during testing. Normal saves remain compatible. Cerulean campaign work moves to 0021. See [TESTING-TRAVEL.md](TESTING-TRAVEL.md) and [the validation record](validation-prototype-0020.json).
 
 Prototype 0019 adds Yellow’s Route 4 encounters, optional Lass and reusable Whirlwind TM. It also restores working signs, requires A to read Kanto signs and keeps ground item balls solid. This checkpoint carries normal 0018 saves forward; Cerulean City is next. See [ROUTE-4.md](ROUTE-4.md) and [the release validation record](validation-prototype-0019.json).
