@@ -1,0 +1,122 @@
+{
+  "status": "unpublished development checkpoint; not a release",
+  "checked_at_utc": "2026-10-11T01:53:51.414308+00:00",
+  "input_prototype": "0017",
+  "builds": {
+    "fossil_native": {
+      "file": "0018-bulk-candy-development.nds",
+      "sha256": "4e586c2d3212c32b461e92b9456e82f0645a9293302c77e5a3a9378cce2a9298"
+    },
+    "center_native": {
+      "file": "0018-center-development.nds",
+      "sha256": "4ab1efba6f896b15ed739d70182e31fc4804b60b042fbeca2c26bd091e01c652"
+    },
+    "tm_and_hidden_moon_native": {
+      "file": "0018-scene-development.nds",
+      "sha256": "7552dbfdfe2349b620a9dc43228def2085acd317fd27947eca745d3644afbec1"
+    },
+    "rocket_and_hidden_ether_native": {
+      "file": "0018-scene-fixed-development.nds",
+      "sha256": "fcb4c5d690c1259b245455a72c3d856903939228e103d389e7d9cb67003b7f05"
+    },
+    "current_with_deep_encounters": {
+      "file": "0018-deep-encounters-development.nds",
+      "sha256": "0b6430d4d1279e1e5107c45d5da655f55dc76ce1dfa3075bc953db6173d8c7aa"
+    }
+  },
+  "automated_tests": {
+    "full_suite": 259,
+    "passed": 259,
+    "failed": 0,
+    "duration_seconds": 286.857,
+    "includes_live_B2F_selector_and_Bug_Catcher_position_fix": true
+  },
+  "native_checks": {
+    "fossil_boss_team": [
+      [
+        88,
+        12
+      ],
+      [
+        100,
+        12
+      ],
+      [
+        109,
+        12
+      ]
+    ],
+    "fossil_boss_won": true,
+    "dome_choice_exclusive_and_other_collected": true,
+    "dome_choice_normal_save_fresh_boot": true,
+    "helix_branch_native_tested": false,
+    "center_sale_species_level_price": [
+      129,
+      5,
+      500
+    ],
+    "center_sale_money_before_after": [
+      3702,
+      3202
+    ],
+    "center_sale_party_before_after": [
+      1,
+      2
+    ],
+    "center_sale_repeat_no_refund": true,
+    "center_native_healing_sequence_completed": true,
+    "center_shared_player_PC_storage_menu": true,
+    "mega_punch_taught_to_golduck": true,
+    "mega_punch_tm_remaining_after_teaching": 1,
+    "mega_punch_tm_remaining_after_normal_save_fresh_boot": 1,
+    "water_gun_TM_native_teaching_tested": false,
+    "rocket_ambush_stops_player_and_walks_actors": true,
+    "rocket_team": [
+      [
+        23,
+        14
+      ],
+      [
+        52,
+        14
+      ],
+      [
+        109,
+        14
+      ]
+    ],
+    "rocket_battle_won": true,
+    "rocket_actors_walk_to_exit_then_disappear": true,
+    "rocket_completed_normal_save_fresh_boot": {
+      "stage_choice": [
+        3,
+        1
+      ],
+      "flags": {
+        "0xb33": true,
+        "0xb34": true,
+        "0x859": true,
+        "0x3e3": false,
+        "0x3e6": true
+      }
+    },
+    "hidden_moon_stone_native_award_normal_save_repeat": true,
+    "hidden_ether_native_award_normal_save_repeat": true,
+    "deep_encounter_build_carries_completed_rocket_normal_save": true,
+    "deep_corridor_native_wild_species_level": [
+      74,
+      11
+    ],
+    "deep_corridor_wild_battle_won": true,
+    "audio_playback_tested": false,
+    "all_cave_battles_and_pickups_native_tested": false,
+    "fixture_policy": "Native command warps only; ordinary menu save and fresh actual-ROM boot verified; no direct save-byte edits. Exact-ROM state backups also remain private."
+  },
+  "remaining": [
+    "Custom Jessie/James overworld and battle artwork; native Rocket placeholders remain",
+    "Fossil prop graphics; native item-ball placeholders remain",
+    "Native Water Gun teaching, HP Up and remaining item checks",
+    "Complete native traversal and remaining cave trainer/encounter checks",
+    "Immutable cumulative patch packaging, browser verification and publication"
+  ]
+}

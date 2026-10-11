@@ -1,0 +1,112 @@
+{
+  "reference": {
+    "repository": "pret/pokeyellow",
+    "commit": "e89ead154b9968aa50eed9328ff2b38b6c194382",
+    "paths": [
+      "scripts/MtMoonB2F.asm",
+      "text/MtMoonB2F.asm",
+      "data/trainers/parties.asm",
+      "data/pokemon/evos_moves.asm"
+    ]
+  },
+  "fossil_boss": {
+    "trainer_class": 78,
+    "sprite": 317,
+    "actor": 21,
+    "x": 16,
+    "z": 20,
+    "team": [
+      {
+        "species": 88,
+        "level": 12,
+        "moves": [
+          1,
+          50,
+          0,
+          0
+        ]
+      },
+      {
+        "species": 100,
+        "level": 12,
+        "moves": [
+          33,
+          103,
+          0,
+          0
+        ]
+      },
+      {
+        "species": 109,
+        "level": 12,
+        "moves": [
+          33,
+          123,
+          0,
+          0
+        ]
+      }
+    ]
+  },
+  "fossils": [
+    {
+      "actor": 22,
+      "item": 102,
+      "name": "DOME FOSSIL",
+      "choice": 1,
+      "x": 17,
+      "z": 20,
+      "hide_flag": 2865
+    },
+    {
+      "actor": 23,
+      "item": 101,
+      "name": "HELIX FOSSIL",
+      "choice": 2,
+      "x": 18,
+      "z": 20,
+      "hide_flag": 2866
+    }
+  ],
+  "rocket_team": [
+    {
+      "species": 23,
+      "level": 14,
+      "moves": [
+        35,
+        43,
+        40,
+        0
+      ]
+    },
+    {
+      "species": 52,
+      "level": 14,
+      "moves": [
+        10,
+        45,
+        44,
+        0
+      ]
+    },
+    {
+      "species": 109,
+      "level": 14,
+      "moves": [
+        33,
+        123,
+        0,
+        0
+      ]
+    }
+  ],
+  "center_messages": {
+    "MtMoonPokecenterYoungsterText": "I've 6 POKE BALLs set in my belt.\rAt most, you can carry 6 POKEMON.",
+    "MtMoonPokecenterGentlemanText": "TEAM ROCKET attacks CERULEAN citizens...\rTEAM ROCKET is always in the news!",
+    "MtMoonPokecenterClipboardText": "",
+    "MtMoonPokecenterMagikarpSalesmanIGotADealText": "MAN: Hello, there! Have I got a deal just for you!\rI'll let you have a swell MAGIKARP for just $500! What do you say?",
+    "MtMoonPokecenterMagikarpSalesmanNoText": "No? I'm only doing this as a favor to you!",
+    "MtMoonPokecenterMagikarpSalesmanNoMoneyText": "You'll need more money than that!",
+    "MtMoonPokecenterMagikarpSalesmanNoRefundsText": "MAN: Well, I don't give refunds!"
+  }
+}
