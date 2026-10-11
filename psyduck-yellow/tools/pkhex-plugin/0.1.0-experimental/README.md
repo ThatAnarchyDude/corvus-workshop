@@ -33,7 +33,8 @@ Do not Set a stale Pokémon from that editor over a plugin-edited party slot.
 The project's shiny rules use XOR < 16; normal Gen IV shiny icons/checks use
 XOR < 8. Espeon's Magic Bounce is unavailable in Gen IV.
 
-The standalone plugin repository and upstream fork are prepared but have not
-been created on GitHub: the integration cannot create new repositories. The
-package is temporarily published through the existing project. Earlier game
-patches and recordings remain unchanged.
+The tools now have separate public repositories:
+[plugin source and releases](https://github.com/ThatAnarchyDude/psyduck-yellow-pkhex-plugin)
+and [PKHeX upstream fork](https://github.com/ThatAnarchyDude/PKHeX-Psyduck-Yellow).
+This original package remains available unchanged. Follow the standalone plugin
+repository for further work. Earlier game patches and recordings remain unchanged.

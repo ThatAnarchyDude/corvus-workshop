@@ -445,4 +445,15 @@ The upstream license permits modification and distribution under GPL terms,
 including source availability and preserving notices.
 
 [Compatibility findings and source](https://github.com/ThatAnarchyDude/corvus-workshop/tree/7137a96a526306225def58c26095597f752e22b1/yellow-heartgold/pkhex).
+The project now has separate public repositories for the tools:
+
+- [PKHeX plugin source and instructions](https://github.com/ThatAnarchyDude/psyduck-yellow-pkhex-plugin)
+- [Standalone experimental plugin release](https://github.com/ThatAnarchyDude/psyduck-yellow-pkhex-plugin/releases/tag/v0.1.0-experimental)
+- [PKHeX upstream fork](https://github.com/ThatAnarchyDude/PKHeX-Psyduck-Yellow)
+
+The fork retains the upstream application; custom editing features currently
+live in the plugin. The plugin repository includes GPL source, build instructions
+and automated Windows checks. Its fresh Windows build and loader/interface
+tests passed before the first standalone experimental release was published.
+Follow these repositories for further tool work.
 This investigation takes place before campaign work on prototype 0023.
