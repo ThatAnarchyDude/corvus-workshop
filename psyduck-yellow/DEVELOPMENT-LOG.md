@@ -20,7 +20,8 @@ prototype. Published checkpoints are kept separately and are not overwritten.
 [Watch the recorded playtests](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/playtests/index.html).
 
 This public page will receive additional recordings during active development.
-The first sample is a short, silent prototype 0022 controller/recording check,
+A new 30-second prototype 0022 sample includes real game music and stereo audio.
+The first sample remains a short, silent prototype 0022 controller/recording check,
 showing both DS screens and a RAM HUD. It uses a prepared test save containing
 a test-only level-50 Pikachu; it does not establish normal campaign difficulty.
 Recordings preserve observed behavior, and unknown telemetry is marked clearly.
