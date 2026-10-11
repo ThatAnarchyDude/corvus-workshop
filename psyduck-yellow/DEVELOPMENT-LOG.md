@@ -370,3 +370,13 @@ commercial game ROMs. Work proceeds during active development sessions.
 - Prototype 0021 will resume Cerulean’s Yellow campaign conversion.
 
 [Prototype 0020 download page](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/28b5fd7b8dd7e5311d0c182b5d047f91ffca451b/psyduck-yellow/prototype-0020/index.html)
+
+## Prototype 0021 work in progress
+
+Cerulean is being adapted next, including the Bike Shop and Yellow’s Bike Voucher exchange. The Pewter guide is also being corrected to stop players automatically before Brock is defeated and walk around scenery to the gym. No prototype 0021 patch has been published yet.
+
+The owner tested 0020 and reported that its travel changes worked. Two issues are recorded for investigation: NPC placement inside gatehouse counters, and occasional transition sprite glitches cleared by opening and closing the Bag. The cause of the sprite glitches is not confirmed.
+
+### Future dialogue review
+
+The owner will provide a Current Dialogue → Expected Dialogue list. Broader dialogue revisions are deferred until that list is available.
