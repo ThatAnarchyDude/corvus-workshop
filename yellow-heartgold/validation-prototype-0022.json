@@ -53,7 +53,7 @@
   "output_sha256": "a26d9003ec23d9ebc60cc721a6aec169dd33af4ff657d9726bd89ab1cb2e89da",
   "patch_sha256": "91f4cde6b1c17b809708c1f868bc124abb46b7dfc22fcd766ec49fb327955847",
   "roundtrip_verified": true,
-  "publication": "Release checks passed locally; immutable patch publication pending",
+  "publication": "Published as an immutable browser patch package; ROMs and saves remain private",
   "verification": {
     "unit_tests": {
       "save_bounds_recovery_actor_restore_daily_rollover": 7,
@@ -176,5 +176,11 @@
     "build/emulator-0022-friendship-reload/friendship-continue.png",
     "build/emulator-0022-quest-transfer/quest-preserved.png",
     "build/emulator-0022-repaired-save-reload/repaired-save-continue.png"
-  ]
+  ],
+  "download_url": "https://raw.githack.com/ThatAnarchyDude/corvus-workshop/0a1887b1ef80c3980576b1ff0793191b736d1859/psyduck-yellow/prototype-0022/index.html",
+  "published_utc": "2026-10-11T17:46:11.166650+00:00",
+  "delivery_verification": {
+    "public_github_files_match": true,
+    "cdn_fetch_blocked_by_environment_proxy": true
+  }
 }

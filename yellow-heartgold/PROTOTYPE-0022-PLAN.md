@@ -1,4 +1,4 @@
-# Prototype 0022 — next build
+# Prototype 0022 — released save repair checkpoint
 
 Cumulative from published 0021; retain all previous patch pages.
 
@@ -17,3 +17,5 @@ Add a temporary friendship-testing item to the player's PC storage. It must gran
 Continue Yellow's progression through Route 24, Route 25/Bill and the returning Cerulean robbed-house/Dig event. Preserve Johto's original maps and HeartGold event archives. The wider Current Dialogue → Expected Dialogue review remains deferred until the owner's list.
 
 The compatibility fixes take priority in 0022; campaign additions move to 0023.
+
+Published October 11, 2026 at 1:46 PM EDT. Publication receipt and focused checks are recorded in `releases/prototype-0022/publication.json` and `validation-prototype-0022.json`.
