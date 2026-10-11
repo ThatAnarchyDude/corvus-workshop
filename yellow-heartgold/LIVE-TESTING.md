@@ -152,3 +152,52 @@ but direct API connections were refused and proxy requests still returned 403.
 A separate LocalTunnel trial allocated an address, but its relay connection was
 refused and a remote dashboard request timed out. No usable external URL was
 verified. An allocated address alone must not be presented as a working feed.
+
+## Recorded playtests
+
+`tools/record_live_test.py` captures the native MJPEG feed, emulator status,
+validated RAM observations and queued-input log into a silent H.264 MP4. It
+requires FFmpeg (`ffmpeg` and `ffprobe` for verification), and never overwrites an
+existing output. The recorded images include only DS gameplay and the test HUD.
+
+```bash
+.venv/bin/python tools/record_live_test.py \
+  --output build/playtest-recordings/unique-test-name.mp4 --seconds 20
+```
+
+Use the same private `LIVE_TEST_TOKEN` as the running server. Optional `--actions`
+accepts a JSON list of `{at, button, frames}` for explicit controller presses at
+elapsed seconds. Inspect the entire capture and its JSON log before publication.
+Label prepared saves, test-only grants, omitted audio and unvalidated telemetry;
+a prepared high-level team does not demonstrate campaign balance. Frame timing
+is normalized to 12 fps; the JSON log includes capture wall time and input times.
+Only approved MP4s, posters and sanitized test logs go to the public viewing
+page. ROMs, normal saves, raw RAM, access tokens and private desktop windows do
+not belong in that package. Keep each published clip under its own filename.
+
+
+### Record actual game audio
+
+`tools/record_emulator_test.py` runs a separate native emulator using a private
+copy of a battery save. It captures stereo PCM from libretro audio callbacks,
+uses the core's reported frame/sample rates, and produces H.264 video with AAC
+sound. The live MJPEG endpoint remains silent. Audio capture is disabled by
+default in the live adapter and drained every frame when recording.
+
+```sh
+.venv/bin/python tools/record_emulator_test.py \
+  --rom build/yellow-heartgold-prototype-0022.nds \
+  --core .tools/emulator/desmume_libretro.so \
+  --save-dir build/private-recording-save \
+  --output build/playtest-recordings/unique-audio-check.mp4 \
+  --seconds 30 --skip-frames 1400 --actions build/private-actions.json
+```
+
+Actions are a JSON list of `{frame, buttons, frames}` using native emulation
+frame numbers, including any boot/Continue presses. Use a distinct save directory
+from a running live session. The sidecar includes sanitized telemetry and input
+times. Recordings are never overwritten. The 2026-10-11 audio sample passed
+native PCM nonzero detection, AAC/video decoding, browser playback and public
+asset byte verification. It lasts 30 seconds; audio/video durations differ by
+about 0.11 seconds in this capture. This sample checks recording, not every
+music/event cue in the campaign.

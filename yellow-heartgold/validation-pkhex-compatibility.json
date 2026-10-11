@@ -1,0 +1,96 @@
+{
+  "recognized": "SAV4HGSS",
+  "version": "HG",
+  "checksums": true,
+  "inputBytes": 524410,
+  "inputSHA256": "2265f77a9fe5e5494a2f0a99756a10799c3b58f8d978fb04bb8b4b0ccfbf0289",
+  "coreVersion": "26.8.26.0",
+  "party": [
+    {
+      "Species": 55,
+      "CurrentLevel": 21,
+      "Ability": 6,
+      "Gender": 0,
+      "IsShiny": false,
+      "ShinyXor": 1084,
+      "IV_HP": 28,
+      "IV_ATK": 30,
+      "IV_DEF": 29,
+      "IV_SPA": 12,
+      "IV_SPD": 0,
+      "IV_SPE": 21,
+      "CurrentFriendship": 255
+    },
+    {
+      "Species": 16,
+      "CurrentLevel": 10,
+      "Ability": 51,
+      "Gender": 0,
+      "IsShiny": false,
+      "ShinyXor": 38959,
+      "IV_HP": 8,
+      "IV_ATK": 29,
+      "IV_DEF": 8,
+      "IV_SPA": 9,
+      "IV_SPD": 8,
+      "IV_SPE": 23,
+      "CurrentFriendship": 255
+    }
+  ],
+  "noEditRoundTrip": "passed",
+  "questPCAndFlagsPreserved": true,
+  "dexPreserved": true,
+  "explicitEdits": {
+    "oldHPIV": 28,
+    "newHPIV": 29,
+    "oldMoney": 4262,
+    "newMoney": 4263
+  },
+  "emulatorReload": {
+    "roundtrip": {
+      "continue": "passed",
+      "metrics": {
+        "field_system": "0x22a0220",
+        "map_id": 506,
+        "player": {
+          "x": 6,
+          "y": 4,
+          "height": 0
+        },
+        "party_count": 2,
+        "parcel_state": 2,
+        "national_dex": true,
+        "text_box": "unavailable (no validated hook)",
+        "battle": "unavailable (no validated hook)"
+      },
+      "money": 4262,
+      "lead_hp_iv": 28
+    },
+    "edited": {
+      "continue": "passed",
+      "metrics": {
+        "field_system": "0x22a0284",
+        "map_id": 506,
+        "player": {
+          "x": 6,
+          "y": 4,
+          "height": 0
+        },
+        "party_count": 2,
+        "parcel_state": 2,
+        "national_dex": true,
+        "text_box": "unavailable (no validated hook)",
+        "battle": "unavailable (no validated hook)"
+      },
+      "money": 4263,
+      "lead_hp_iv": 29
+    }
+  },
+  "license": "GPL-3.0-or-later (upstream Core declaration)",
+  "upstreamCommit": "66ef5983a5d349efa2dd615f2926a1b1ee97306e",
+  "plugin": {
+    "build": "passed; zero warnings/errors",
+    "windowsRuntime": "not tested",
+    "released": false
+  }
+}

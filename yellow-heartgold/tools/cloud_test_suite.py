@@ -31,6 +31,17 @@ let on=false;
 async function refresh(){try{let r=await fetch('status',{headers});if(!r.ok)throw Error('Access denied');let s=await r.json();document.querySelector('#hud').textContent=JSON.stringify(s,null,2);document.querySelector('#state').textContent=s.video?'Video ON':'Video OFF — emulation and RAM monitoring continue';if(s.video!==on){on=s.video;const img=document.querySelector('#video');if(on)img.src='stream.mjpg?token='+encodeURIComponent(token)+'&t='+Date.now();else img.removeAttribute('src')}}catch(e){document.querySelector('#hud').textContent=String(e)}setTimeout(refresh,500)}refresh();
 </script>'''
 
+class RAMProbe:
+    def __init__(self):
+        self.hint=None; self.next_scan=0
+    def read(self,ram,now):
+        if self.hint is None and now<self.next_scan: return None
+        result=field_metrics(ram,self.hint)
+        if result: self.hint=int(result['field_system'],16)-0x02000000
+        else: self.hint=None; self.next_scan=now+5
+        return result
+
+
 class Session:
     def __init__(self,args):
         self.args=args; self.stop=threading.Event(); self.lock=threading.Condition()
@@ -62,7 +73,7 @@ class Session:
                 if action.get('button') not in BUTTONS or not 1<=action.get('frames',8)<=600:
                     raise ValueError('Invalid scripted action')
                 self.commands.put_nowait((action['button'],action.get('frames',8)))
-            frames=0; remaining=0; release=0; hint=None; next_metrics=0; next_capture=0; next_scan=0
+            frames=0; remaining=0; release=0; probe=RAMProbe(); next_metrics=0; next_capture=0
             log=self.args.save_dir/'live-metrics.jsonl'
             with log.open('a',buffering=1) as output:
                 while not self.stop.is_set():
@@ -80,11 +91,7 @@ class Session:
                         remaining-=1
                         if remaining==0: release=4
                     if start>=next_metrics:
-                        ram=emulator.ram()
-                        metrics=field_metrics(ram,hint) if hint is not None or start>=next_scan else None
-                        if metrics is None and hint is None: next_scan=start+5
-                        if metrics: hint=int(metrics['field_system'],16)-0x02000000
-                        else: hint=None
+                        metrics=probe.read(emulator.ram(),start)
                         with self.lock:
                             self.status.update(frames=frames,phase='running',ram=metrics,
                                                observed_at=time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()))

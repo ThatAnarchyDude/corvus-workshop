@@ -8,16 +8,25 @@ class Variable(C.Structure):
     _fields_ = [('key', C.c_char_p), ('value', C.c_char_p)]
 class Game(C.Structure):
     _fields_ = [('path', C.c_char_p), ('data', C.c_void_p), ('size', C.c_size_t), ('meta', C.c_char_p)]
+class Geometry(C.Structure):
+    _fields_ = [('base_width', C.c_uint), ('base_height', C.c_uint),
+                ('max_width', C.c_uint), ('max_height', C.c_uint), ('aspect_ratio', C.c_float)]
+class Timing(C.Structure):
+    _fields_ = [('fps', C.c_double), ('sample_rate', C.c_double)]
+class AVInfo(C.Structure):
+    _fields_ = [('geometry', Geometry), ('timing', Timing)]
 
 BUTTONS = {'b':0, 'select':2, 'start':3, 'up':4, 'down':5, 'left':6, 'right':7, 'a':8, 'x':9, 'l':10, 'r':11, 'y':1}
 
 class Emulator:
-    def __init__(self, core_path, rom_path, save_dir):
+    def __init__(self, core_path, rom_path, save_dir, capture_audio=False):
         self.core = C.CDLL(str(core_path))
         self.frame = None
         self.buttons = set()
         self.pixel = 0
         self.callbacks = []
+        self.capture_audio = capture_audio
+        self.audio_chunks = []
         self.directory = C.create_string_buffer(str(save_dir).encode())
         opts = {b'desmume_cpu_mode':b'jit', b'desmume_use_external_bios':b'disabled',
                 b'desmume_opengl_mode':b'disabled', b'desmume_screens_layout':b'top/bottom',
@@ -41,11 +50,17 @@ class Emulator:
             if not data or data == C.c_void_p(-1).value: return
             self.frame = (C.string_at(data,pitch*h),w,h,pitch,self.pixel)
         self.logger = C.CFUNCTYPE(None,C.c_int,C.c_char_p)(lambda *_:None)
+        def audio_sample(left, right):
+            if self.capture_audio: self.audio_chunks.append(struct.pack('<hh', left, right))
+        def audio_batch(data, count):
+            if self.capture_audio and data and count:
+                self.audio_chunks.append(C.string_at(data, count * 4))
+            return count
         signatures = [
             ('environment', C.CFUNCTYPE(C.c_bool,C.c_uint,C.c_void_p), environment),
             ('video_refresh', C.CFUNCTYPE(None,C.c_void_p,C.c_uint,C.c_uint,C.c_size_t),video),
-            ('audio_sample', C.CFUNCTYPE(None,C.c_int16,C.c_int16),lambda *_:None),
-            ('audio_sample_batch',C.CFUNCTYPE(C.c_size_t,C.c_void_p,C.c_size_t),lambda _,n:n),
+            ('audio_sample', C.CFUNCTYPE(None,C.c_int16,C.c_int16),audio_sample),
+            ('audio_sample_batch',C.CFUNCTYPE(C.c_size_t,C.c_void_p,C.c_size_t),audio_batch),
             ('input_poll',C.CFUNCTYPE(None),lambda:None),
             ('input_state',C.CFUNCTYPE(C.c_int16,C.c_uint,C.c_uint,C.c_uint,C.c_uint),
              lambda port,device,index,ident:int(device==1 and ident in self.buttons))]
@@ -58,11 +73,20 @@ class Emulator:
         self.rom=C.create_string_buffer(Path(rom_path).read_bytes())
         game=Game(str(rom_path).encode(),C.cast(self.rom,C.c_void_p),len(self.rom)-1,None)
         if not self.core.retro_load_game(C.byref(game)): raise RuntimeError('ROM rejected')
+        info = AVInfo()
+        self.core.retro_get_system_av_info.argtypes = [C.POINTER(AVInfo)]
+        self.core.retro_get_system_av_info(C.byref(info))
+        self.fps = info.timing.fps
+        self.sample_rate = info.timing.sample_rate
         self.core.retro_get_memory_data.argtypes=[C.c_uint]
         self.core.retro_get_memory_data.restype=C.c_void_p
         self.core.retro_get_memory_size.argtypes=[C.c_uint]
         self.core.retro_get_memory_size.restype=C.c_size_t
     def run(self): self.core.retro_run()
+    def drain_audio(self):
+        data = b''.join(self.audio_chunks)
+        self.audio_chunks.clear()
+        return data
     def ram(self):
         ptr=self.core.retro_get_memory_data(2); size=self.core.retro_get_memory_size(2)
         return C.string_at(ptr,size) if ptr and size else b''

@@ -17,3 +17,5 @@ The broad dialogue review awaits the owner's Current → Expected list. Future
 Blue teams reacting to the player's Eevee evolution await the owner's team
 plan. No new terrain roadblocks without an explicit request; required story
 events still gate progression.
+
+Before campaign work continues: complete the PKHeX save-compatibility investigation requested by the owner. Prefer a plugin; assess a fork only if necessary. See EDITOR-COMPATIBILITY-PLAN.md.

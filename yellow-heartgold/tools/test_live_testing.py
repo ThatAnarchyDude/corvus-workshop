@@ -5,7 +5,8 @@ from urllib.request import Request,urlopen
 from urllib.error import HTTPError
 from http.server import ThreadingHTTPServer
 from PIL import Image
-from cloud_test_suite import Session,handler_for
+from cloud_test_suite import Session,handler_for,RAMProbe
+from unittest.mock import patch
 from live_core import field_metrics
 
 class LiveTesting(unittest.TestCase):
@@ -51,6 +52,16 @@ class LiveTesting(unittest.TestCase):
             response.readline(); length=int(response.readline().split(b':')[1]);response.readline()
             image=Image.open(io.BytesIO(response.read(length)))
             self.assertEqual(image.size,(256,384))
+    def test_ram_discovery_retries_after_initial_boot(self):
+        probe=RAMProbe(); result={'field_system':'0x22a01e8'}
+        with patch('cloud_test_suite.field_metrics',side_effect=[None,result]) as scan:
+            self.assertIsNone(probe.read(b'boot',0))
+            self.assertIsNone(probe.read(b'intro',1))
+            self.assertIsNone(probe.read(b'menu',2))
+            self.assertEqual(scan.call_count,1)
+            self.assertEqual(probe.read(b'field',5),result)
+            self.assertEqual(scan.call_count,2)
+
     def test_unknown_ram_is_not_fabricated(self):
         self.assertIsNone(field_metrics(b'\0'*0x400000))
         self.assertIsNone(field_metrics(b'short'))
