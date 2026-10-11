@@ -142,3 +142,7 @@ before remote viewing works. Cloudflare Tunnel requires access to its API and
 edge domains with outbound port 7844; enabling ordinary HTTPS alone may not
 suffice. The scripts do not bypass the environment network policy. The client
 installer and native local stream work; the external tunnel remains unverified.
+
+The tunnel was retried after a turn-scoped network permission grant and outside
+the command sandbox. The same DNS failure remained, so the restriction requires
+a hosting/network configuration change, not another script or dependency.

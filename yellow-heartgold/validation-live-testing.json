@@ -46,5 +46,11 @@
       "battle status",
       "text box status"
     ]
+  },
+  "external_access_retry": {
+    "network_permission_granted": true,
+    "outside_command_sandbox_attempted": true,
+    "result": "Still blocked: api.trycloudflare.com DNS connection refused",
+    "public_url_created": false
   }
 }
