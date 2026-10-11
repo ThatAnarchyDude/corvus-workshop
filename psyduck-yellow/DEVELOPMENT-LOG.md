@@ -5,12 +5,12 @@ still being built. Share this page with anyone following the project.
 
 **Last updated: October 10, 2026.**
 
-**Latest published patch: prototype 0017.** The playable campaign currently
-reaches Route 3 after Brock's gym. This is an unfinished game, not a complete
-Yellow remake. Prototype 0017 adds Route 3 after the completed Pewter interiors
-and museum.
+**Latest published patch: prototype 0018.** The playable campaign now reaches
+Mt. Moon after Brock and Route 3. This checkpoint adds the fossil quest,
+Jessie and James, cave rewards and Center services, plus bulk Rare Candy use.
+The game remains unfinished; Route 4 is the next development area.
 
-[Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/aa63eb1a44d8a73d305fbd85849638ab8c9c63f1/psyduck-yellow/prototype-0017/index.html)
+[Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/3a18894189a390ba86279a75a097f6b16252e331/psyduck-yellow/prototype-0018/index.html)
 
 The download page contains a modification patch. Select your original,
 unmodified USA HeartGold game file to build the playable DS file on your own
@@ -166,8 +166,8 @@ download above. Earlier downloads retain their original behavior.
   and the existing Eevee/Togepi item options.
 - Simpler fixes and Pewter event checks take priority before the more complex
   interfaces and campaign systems.
-- 0016 did not include bulk Rare Candy selection. It is now implemented and
-  undergoing final checks in the unpublished 0018 development build.
+- 0016 did not include bulk Rare Candy selection. Prototype 0018 now includes
+  the quantity picker, intermediate moves and one final evolution check.
 
 The 0016 build passed 212 automated checks, including Moon Stone
 evolution, removal of Psyduck's earlier methods, and existing stone evolution
@@ -211,9 +211,10 @@ push date and time.
 | 0014 | Oct 10, 2026 · 4:19 AM EDT | Route 2 and Viridian Forest encounters, trainers, items and conversations; removal of inherited Kanto HM terrain gates. |
 | 0015 | Oct 10, 2026 · 5:36 AM EDT | Pewter outdoor events, Brock's gym/Boulder Badge/Bide TM, Water/Psychic Golduck. |
 | 0016 | Oct 10, 2026 · 1:14 PM EDT | Pewter interiors, two-floor museum/Old Amber, reusable TMs, eligible level-100 Rare Candy evolution and Moon Stone Psyduck. |
-| 0017 | Oct 10, 2026 · 4:29 PM EDT | Route 3: eight Yellow trainer teams, encounters, dialogue and post-Brock access. **Latest published patch.** |
+| 0017 | Oct 10, 2026 · 4:29 PM EDT | Route 3: eight Yellow trainer teams, encounters, dialogue and post-Brock access. |
+| 0018 | Oct 10, 2026 · 10:27 PM EDT | Mt. Moon: Yellow trainers/encounters, fossils, Jessie/James, rewards and Center services; bulk Rare Candy quantity picker. **Latest published patch.** |
 
-[Detailed release notes and verification records](https://github.com/ThatAnarchyDude/corvus-workshop/tree/3c533771058943494062b16eae7dfbb03a89b65b/yellow-heartgold)
+[Detailed release notes and verification records](https://github.com/ThatAnarchyDude/corvus-workshop/tree/d40c17fb9e721305bedf0781e00f1a11ce5cfe7c/yellow-heartgold)
 
 ## Added in published prototype 0017
 
@@ -242,44 +243,47 @@ Normal saves are carried forward for focused new-area checks; opening changes
 still receive fresh-game tests when needed. Mt. Moon is being converted and Route 4 remains unconverted:
 their native exits remain available, but their events are outside this checkpoint.
 
-## Prototype 0018 — work in progress, not published
+## Added in published prototype 0018
 
-The owner reported that 0016 passed playtesting apart from the agreed deferred
-roadblocks, and is currently testing 0017. Those roadblocks remain deferred.
+Published October 10, 2026, 10:27 PM EDT. This cumulative patch includes every earlier checkpoint;
+prototype 0017 and all older downloads remain unchanged.
 
-The next checkpoint must include the **bulk Rare Candy quantity picker**, as
-requested after testing 0017. That picker was not included in 0016 or 0017.
-The selector now works in the unpublished development build: choose the amount,
-apply the candies first, process moves from every intermediate level, then
-check evolution once at the end. When four moves are already known, normal
-replacement choices still appear. Only useful candies are consumed; cancelling
-the quantity picker consumes none. The existing level-100 evolution feature
-remains available.
+**Bulk Rare Candies:** choose the amount with the quantity picker, apply the
+candies, process moves from each intermediate level, then check evolution once
+at the end. Normal four-move replacement choices still appear. Cancelling the
+picker uses no candies, and only useful candies are consumed. Eligible level-100
+level-up evolutions remain supported. Native testing raised Bulbasaur from
+level 14 to 17, offered Take Down, then evolved it once into Ivysaur; cancelling
+the final evolution also worked.
 
-Development check — October 10, 2026: all 236 automated checks passed. In the
-DS emulator, three candies raised Bulbasaur from level 14 to 17, offered its
-level-15 Take Down through the normal move replacement screen, then evolved it
-once into Ivysaur. Two of five candies remained. Pressing B during the final evolution also worked: Bulbasaur
-stayed unevolved at level 16 after a two-candy batch. This is development
-progress; 0018 has not been published yet.
+**Mt. Moon:** Yellow's low-level cave encounters, trainer teams and dialogue,
+the Super Nerd's fossil battle, one exclusive Helix or Dome Fossil choice,
+and Jessie and James's level-14 Ekans, Meowth and Koffing ambush. The fossil
+props look different, Jessie and James have separate overworld sprites and
+Yellow's paired battle portrait, and both visibly leave after defeat. Their
+Rocket battle music, transition and prize money are preserved. HeartGold's
+cave layout is retained without adding HM terrain obstacles.
 
-Mt. Moon development continues cumulatively from 0017. Its unpublished build
-includes Yellow's trainers, low-level cave encounters, fossil boss and exclusive
-fossil choice, the Rocket ambush, cave rewards, and the nearby Pokémon Center.
-The $500 level-5 Magikarp sale, nurse healing and shared player PC menu have been
-checked in the DS emulator. The Dome Fossil choice survives an ordinary save and
-fresh boot. The Rockets' level-14 Ekans, Meowth and Koffing battle and their visible
-departure also work. A Bug Catcher's position was adjusted so his battle cannot
-interrupt that scene.
+**Rewards and services:** the nearby Pokémon Center heals Pokémon, supports
+shared player PC storage, and sells one level-5 Magikarp for 500 Pokédollars.
+Cave rewards include Potions, a Rare Candy, Escape Rope, Moon Stones, Ether,
+HP Up and reusable Water Gun/Mega Punch TMs. Existing HeartGold TMs remain.
 
-Development check — October 10, 2026, 9:53 PM EDT: Mega Punch can be learned
-without consuming its reusable TM, and the TM remains after saving and reloading.
-The hidden Moon Stone stays collected after saving and reloading; the hidden Ether is also awarded correctly. Yellow's deepest-cave
-encounter table is now selected around the fossil corridor; automated checks
-cover every map ID and the region boundary. The DS emulator also produced a level-11 Geodude encounter in that corridor. All 259 automated checks passed. These are development checks, not
-a published checkpoint. Custom Jessie/James and fossil graphics, remaining native
-item/encounter checks and final traversal still need work. Published 0017 remains
-unchanged.
+**Checks:** 263 regression tests passed before the final trainer-name/music
+corrections, followed by five passing focused checks on the final code. Native
+emulator checks cover both fossil choices, the Rocket battle/departure, rewards,
+TM teaching, a deeper-cave encounter, Center services and the exit to Route 4.
+Normal saves were carried forward, saved in-game and freshly reloaded. Water Gun
+remains learned and its TM retained; the Helix/HP Up run reloads on Route 4 with
+the Rocket quest complete. The browser produced exactly the verified DS file
+and rejected an incorrect input file.
+
+Not every optional battle or encounter slot has been individually playtested,
+and audio playback has not been audited by ear. Route 4 remains unconverted.
+Back up your ordinary save before switching versions; emulator save states
+must stay with the exact ROM that created them.
+
+[Prototype 0018 download page](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/3a18894189a390ba86279a75a097f6b16252e331/psyduck-yellow/prototype-0018/index.html)
 
 ## Agreed plans that are not finished features
 
@@ -288,7 +292,7 @@ unchanged.
   owner’s complete team plan; current teams remain in place.
 
 - Continue Yellow's Kanto campaign through Giovanni's eighth badge, then the
-  remaining adventure. Mt. Moon and Route 4 follow Route 3's completion.
+  remaining adventure. Route 4 follows Mt. Moon's completion.
 - Give every Generation IV species an obtainable path, and complete later
   gyms, towns, dungeons, Rocket events, gifts and services.
 - When later battles require Blue's evolved Eevee: use Jolteon if the player
