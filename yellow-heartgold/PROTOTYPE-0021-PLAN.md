@@ -17,3 +17,5 @@ Route 24, Route 25/Bill, and the returning robbed-house/Dig sequence follow in t
 - A genuine pre-Brock normal save reaches the automatic guide stop on a previously bypassable lane and completes the escort to the gym in the native emulator. Escort and return coordinates were checked against map collision data.
 - The initial native Bike Shop check exposed an incorrect inventory command (checking capacity instead of ownership). Corrected to HeartGold’s HasItem command; the revised build still needs its voucher and no-voucher native checks.
 - This checkpoint remains unpublished. Complete remaining native service, battle, gift, and save/reload checks before preparing a public patch.
+
+Latest native check: development build 5 repeatedly remained in the opening animation instead of reaching Continue. Do not publish it. Its final appended Cut helper left the ITCM autoload section two bytes short of word alignment; build 6 pads that helper to test this suspected startup cause. The inventory correction is source- and decision-tested but not yet validated in native play.

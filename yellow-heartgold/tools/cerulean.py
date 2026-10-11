@@ -169,6 +169,7 @@ movs r1,#9
 bl 0x02028F98
 done:
 pop {r4,pc}
+nop
 ''')
     d[cut_at:cut_at+4]=thumb_bl(cut_site,cut_hook)
     # Expand only the native common trainer dispatch aliases.
