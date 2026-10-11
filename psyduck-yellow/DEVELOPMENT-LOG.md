@@ -5,9 +5,9 @@ still being built. Share this page with anyone following the project.
 
 **Last updated: October 11, 2026.**
 
-**Latest published patch: prototype 0021.** The campaign reaches Cerulean’s initial visit: Misty’s Yellow teams, Blue’s bridge encounter, Melanie’s Bulbasaur gift, native Center/PC and shop services, and the Bike Voucher exchange. Pewter’s guide now stops the pre-Brock exit and walks around scenery to the gym. Earlier Fly testing conveniences remain available. Route 24, Route 25/Bill and the returning robbed-house event follow next.
+**Latest published patch: prototype 0022.** This repairs saved quest/reward progress, the returning Viridian cashier and guards, and Brock’s repeated Bide reward. Kanto’s badges now appear above Johto’s on the Trainer Card. A Friendship Charm in bedroom PC storage makes happiness-based evolution testing easier. The campaign remains at Cerulean’s initial visit; Route 24/25 and Bill follow next.
 
-[Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/876971401fd392cad83d2230842f086e236925bc/psyduck-yellow/prototype-0021/index.html)
+[Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/0a1887b1ef80c3980576b1ff0793191b736d1859/psyduck-yellow/prototype-0022/index.html)
 
 The download page contains a modification patch. Select your original,
 unmodified USA HeartGold game file to build the playable DS file on your own
@@ -212,7 +212,8 @@ push date and time.
 | 0018 | Oct 10, 2026 · 10:27 PM EDT | Mt. Moon: Yellow trainers/encounters, fossils, Jessie/James, rewards and Center services; bulk Rare Candy quantity picker. |
 | 0019 | Oct 11, 2026 · 12:01 AM EDT | Route 4: Yellow encounters, optional Lass and reusable Whirlwind; working A-button signs, visible Forest boards, solid item balls and carried-save NPC refresh. |
 | 0020 | Oct 11, 2026 · 12:55 AM EDT | Testing travel: two-way Route 4 return crossing and free HM02 Fly at Celadon’s third-floor TM counter; outdoor Fly needs no badge. |
-| 0021 | Oct 11, 2026 · 10:30 AM EDT | Cerulean’s initial Yellow visit, Bike Voucher exchange and corrected Pewter guide escort; startup repair. **Latest published patch.** |
+| 0021 | Oct 11, 2026 · 10:30 AM EDT | Cerulean’s initial Yellow visit, Bike Voucher exchange and corrected Pewter guide escort; startup repair. Later save issues are corrected in 0022. |
+| 0022 | Oct 11, 2026 · 1:46 PM EDT | Saved quest/reward repair, cleared stale Viridian NPCs, Kanto-first Trainer Card and PC Friendship Charm. **Latest published patch.** |
 
 [Detailed release notes and verification records](https://github.com/ThatAnarchyDude/corvus-workshop/tree/d40c17fb9e721305bedf0781e00f1a11ce5cfe7c/yellow-heartgold)
 
@@ -376,17 +377,32 @@ commercial game ROMs. Work proceeds during active development sessions.
 - The Bike Shop offers Yellow’s unaffordable price and exchanges a Bike Voucher for one Bicycle. Vermilion’s fan club will provide the voucher in a later area checkpoint. Its interior is a separate copy of HeartGold’s bike-shop assets; Johto’s shop is unchanged.
 - Cerulean’s Center includes normal healing and Player PC item storage. Its Mart keeps HeartGold’s sales rules.
 - Pewter’s guide stands centrally, stops all six exit lanes before Brock and escorts around scenery to the gym. His manual interaction approaches are also corrected.
-- An unpublished candidate’s startup problem was repaired. Sixteen focused checks pass, and browser output matches the verified release. Native checks include the guide, voucher/save/reload, Bulbasaur gift, Misty battle and rewards, Blue’s battle and departure, Center healing and Player PC storage menus. A completed normal save retains BubbleBeam and its received flag after a fresh load of the final ROM.
+- An unpublished candidate’s startup problem was repaired. Sixteen focused checks pass, and browser output matches the verified release. Native checks include the guide, voucher/save/reload, Bulbasaur gift, Misty battle and rewards, Blue’s battle and departure, Center healing and Player PC storage menus. Later testing found that the save checks missed an invalid flag-storage boundary. Prototype 0022 corrects it; retained items alone had not proved that the reward flags were safe.
 - Private battle test saves used temporary strong Pokémon to check reward events efficiently. Those grants are absent from the released game.
 
 [Prototype 0021 download page](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/876971401fd392cad83d2230842f086e236925bc/psyduck-yellow/prototype-0021/index.html)
 
 The owner’s reports of gatehouse NPCs inside counters and occasional transition sprite glitches remain recorded for investigation. Their exact locations or causes have not been confirmed.
 
-### Next: prototype 0022
+### Next: prototype 0023
 
-First add a temporary maximum-friendship testing item to the player’s PC storage, including existing saves. It will set friendship to 255 using the simplest safe reusable or automatic implementation. Other evolution prerequisites will still apply. Then continue Route 24, Route 25/Bill and the returning Cerulean robbed-house/Dig event.
+Continue Route 24, Route 25/Bill and the returning Cerulean robbed-house/Dig event. The requested friendship-testing item is available in 0022.
 
 ### Future dialogue review
 
 The owner will provide a Current Dialogue → Expected Dialogue list. Broader dialogue revisions are deferred until that list is available.
+
+## Added in published prototype 0022
+
+Published Oct 11, 2026 · 1:46 PM EDT.
+
+- Fixed two save problems: older custom completion markers could be cleared each day, and new Cerulean markers extended past HeartGold’s saved flag storage. Earlier tests missed these cases.
+- Recovery restores the parcel/Pokédex and Viridian event states when retained progress supports it. A fresh game keeps the original early quest requirements. Saved NPCs that should be hidden are removed on Continue.
+- Brock recognizes retained Bide as already awarded; Misty’s BubbleBeam and the Bicycle receive the same recovery treatment. Existing items are kept.
+- Kanto’s leaders and badges appear above Johto’s on the Trainer Card. Actual saved badge identities are unchanged.
+- Withdraw the Friendship Charm from the bedroom PC to maximize friendship for every non-Egg party Pokémon. If PC storage is full, withdraw a stack, close it and reopen it. Other evolution requirements still apply.
+- 44 focused checks passed. Native emulator checks covered a parcel-complete 0020 save transfer, recovery of reset symptoms, another normal save/reload, Brock giving advice without another Bide, maximum friendship persisting after reload, and the swapped badge display. Browser output matches the verified build. These are focused checks; the owner’s actual save and Android emulator were not part of this run.
+
+Back up the normal save, use Continue, and save again after loading 0022. Recovery cannot reconstruct erased history that has no remaining evidence. All previous patch pages remain available unchanged.
+
+[Prototype 0022 download page](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/0a1887b1ef80c3980576b1ff0793191b736d1859/psyduck-yellow/prototype-0022/index.html)
