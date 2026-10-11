@@ -10,3 +10,10 @@ Cumulative from published 0020. No 0021 patch is published yet. Preserve the exi
 - Future dialogue review: wait for the owner’s Current Dialogue → Expected Dialogue list before broad wording changes.
 
 Route 24, Route 25/Bill, and the returning robbed-house/Dig sequence follow in their campaign order. The initial Cerulean visit must not activate HeartGold’s missing-Misty, power-plant or Suicune postgame scenes. Those original assets remain archived for later relocation.
+
+## Development checks so far
+
+- Ten focused script-decision and CPU-hook tests pass, covering all six Pewter exit lanes, manual guide interactions from all four sides, reward failure/retry decisions, and Blue’s persisted starter properties.
+- A genuine pre-Brock normal save reaches the automatic guide stop on a previously bypassable lane and completes the escort to the gym in the native emulator. Escort and return coordinates were checked against map collision data.
+- The initial native Bike Shop check exposed an incorrect inventory command (checking capacity instead of ownership). Corrected to HeartGold’s HasItem command; the revised build still needs its voucher and no-voucher native checks.
+- This checkpoint remains unpublished. Complete remaining native service, battle, gift, and save/reload checks before preparing a public patch.
