@@ -26,5 +26,5 @@ Further investigation: the normal Gen IV editor can replace custom Hidden
 Abilities, so the plugin now edits selected native party slots directly. All 12
 supported species passed export tests; Psyduck/Eevee/Togepi and one edited PC
 stack passed native Continue reloads. A Windows host probe is prepared for CI.
-Standalone plugin/fork publication is blocked by GitHub integration permission
-to create repositories; existing project access remains available.
+The owner created the standalone plugin repository and upstream fork and granted
+access; prepared source is now published in those repositories.

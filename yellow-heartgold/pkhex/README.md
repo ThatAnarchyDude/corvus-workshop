@@ -52,11 +52,17 @@ PluginLoader: https://github.com/ThatAnarchyDude/corvus-workshop/actions/runs/38
 manual PKHeX editing session. A separate full fork is not required for tested
 native edits; standard editor icons/legality/types/item lists remain unchanged.
 
-The user requested public repositories named `PKHeX-Psyduck-Yellow` (upstream
-fork) and `psyduck-yellow-pkhex-plugin`. GitHub rejected both creation attempts
-with “Resource not accessible by integration.” Source and standalone packaging
-are prepared; an account owner must create the repositories and grant this
-integration access before they can be populated.
+## Public repositories
+
+- Upstream fork: https://github.com/ThatAnarchyDude/PKHeX-Psyduck-Yellow
+- Plugin source: https://github.com/ThatAnarchyDude/psyduck-yellow-pkhex-plugin
+- Plugin releases: https://github.com/ThatAnarchyDude/psyduck-yellow-pkhex-plugin/releases
+
+The owner created both repositories and granted this integration access. The
+prepared plugin history was merged with the repository's initial README commit,
+without rewriting that history. Further plugin development belongs in the
+standalone plugin repository; this directory records the initial investigation.
+The fork retains upstream's application and license and includes a project note.
 
 ## Build
 
