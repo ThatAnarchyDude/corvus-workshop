@@ -5,12 +5,13 @@ still being built. Share this page with anyone following the project.
 
 **Last updated: October 11, 2026.**
 
-**Latest published patch: prototype 0019.** The playable campaign now reaches
-Route 4 after Mt. Moon. This checkpoint fixes sign interactions and ground-item
-collision, adds Yellow’s Route 4 encounters and reusable Whirlwind TM, and
-keeps its optional level-31 Lass off the main path. Cerulean City is next.
+**Latest published patch: prototype 0020.** The campaign still reaches Route 4.
+This testing checkpoint opens a two-way return crossing toward Mt. Moon and
+adds free HM02 Fly at Celadon Department Store’s third-floor TM counter.
+Outdoor Fly works without a badge during testing. Cerulean campaign work moves
+to prototype 0021.
 
-[Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/732edbaea0dfbe33dc038db31747b173a21d1f27/psyduck-yellow/prototype-0019/index.html)
+[Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/28b5fd7b8dd7e5311d0c182b5d047f91ffca451b/psyduck-yellow/prototype-0020/index.html)
 
 The download page contains a modification patch. Select your original,
 unmodified USA HeartGold game file to build the playable DS file on your own
@@ -213,7 +214,8 @@ push date and time.
 | 0016 | Oct 10, 2026 · 1:14 PM EDT | Pewter interiors, two-floor museum/Old Amber, reusable TMs, eligible level-100 Rare Candy evolution and Moon Stone Psyduck. |
 | 0017 | Oct 10, 2026 · 4:29 PM EDT | Route 3: eight Yellow trainer teams, encounters, dialogue and post-Brock access. |
 | 0018 | Oct 10, 2026 · 10:27 PM EDT | Mt. Moon: Yellow trainers/encounters, fossils, Jessie/James, rewards and Center services; bulk Rare Candy quantity picker. |
-| 0019 | Oct 11, 2026 · 12:01 AM EDT | Route 4: Yellow encounters, optional Lass and reusable Whirlwind; working A-button signs, visible Forest boards, solid item balls and carried-save NPC refresh. **Latest published patch.** |
+| 0019 | Oct 11, 2026 · 12:01 AM EDT | Route 4: Yellow encounters, optional Lass and reusable Whirlwind; working A-button signs, visible Forest boards, solid item balls and carried-save NPC refresh. |
+| 0020 | Oct 11, 2026 · 12:55 AM EDT | Testing travel: two-way Route 4 return crossing and free HM02 Fly at Celadon’s third-floor TM counter; outdoor Fly needs no badge. **Latest published patch.** |
 
 [Detailed release notes and verification records](https://github.com/ThatAnarchyDude/corvus-workshop/tree/d40c17fb9e721305bedf0781e00f1a11ce5cfe7c/yellow-heartgold)
 
@@ -358,3 +360,13 @@ Back up ordinary saves before moving between prototypes. Emulator save states
 are different and should not be transferred between builds. The project is an
 unofficial fan modification; the public downloads distribute patches, not full
 commercial game ROMs. Work proceeds during active development sessions.
+
+## Added in published prototype 0020
+
+- Walk both ways through the westernmost tile of Route 4’s final ledge, immediately beside the trees, to return toward Mt. Moon from Cerulean. The existing ledge artwork remains.
+- Buy HM02 Fly for zero Pokédollars at Celadon Department Store’s third-floor TM counter. Its other TMs stay available. Teach Fly to a compatible Pokémon normally.
+- Fly outdoors without a badge during testing; destinations still need to have been visited. Other field moves and story restrictions retain their normal checks.
+- Native emulator checks verified the return crossing, free purchase, teaching Fly, flying to Celadon’s Center, and normal save/reload with HM02 retained. Six focused tests and the browser download/hash checks passed.
+- Prototype 0021 will resume Cerulean’s Yellow campaign conversion.
+
+[Prototype 0020 download page](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/28b5fd7b8dd7e5311d0c182b5d047f91ffca451b/psyduck-yellow/prototype-0020/index.html)
