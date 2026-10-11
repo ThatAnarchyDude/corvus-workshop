@@ -12,7 +12,7 @@ VENDOR = PROJECT/'tools/vendor/rom-patcher'
 def build(destination, version='004'):
     version=f'{int(version):03d}'
     artifact_version=f'{int(version):04d}' if int(version)>=16 else version
-    if version not in ('004', '005', '006', '007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '019'):
+    if version not in ('004', '005', '006', '007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '019', '020'):
         raise ValueError('Unsupported prototype version')
     destination.mkdir(parents=True, exist_ok=True)
     patch = PROJECT/f'build/yellow-heartgold-prototype-{artifact_version}.xdelta'
@@ -22,7 +22,7 @@ def build(destination, version='004'):
         output_sha256=hashlib.sha256(rom.read_bytes()).hexdigest(),
         source_bytes=134217728, output_bytes=rom.stat().st_size,
         patch_sha256=hashlib.sha256(patch.read_bytes()).hexdigest())
-    if version in ('014','015','016','017','018','019'):
+    if version in ('014','015','016','017','018','019','020'):
         parent=f'{int(version)-1:04d}' if int(version)>=17 else f'{int(version)-1:03d}'
         manifest.update(parent_version=f'{int(parent):04d}' if int(version)>=16 else parent,cumulative=True,
                         parent_output_sha256=hashlib.sha256(
@@ -103,7 +103,7 @@ button.addEventListener('click',async()=>{
   } catch(error){status.textContent=error.message;finish();}
 });
 </script></html>'''.replace('004', version).replace('PACKAGE', encoded)
-    if version in ('005', '006', '007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '019'):
+    if version in ('005', '006', '007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '019', '020'):
         html=html.replace('Start a <strong>new game</strong> to test the revised opening. Keep earlier saves backed up.',
             'Start a <strong>new game</strong> to test the opening, or import a backed-up prototype 004 normal save through your emulator. Emulator save states should not be transferred between builds.')
     if version == '006':
@@ -111,7 +111,7 @@ button.addEventListener('click',async()=>{
         html=html.replace('a backed-up prototype 004 normal save','a backed-up prototype 004 or 005 normal save')
         html=html.replace('Oak’s Psyduck capture currently uses field animation.',
             'Reopen the bedroom PC to receive 95 of each evolution item. Make space in storage if prompted, then reopen it to collect the remainder.')
-    if version in ('007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '019'):
+    if version in ('007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '019', '020'):
         html=html.replace(f'Opening playtest · Prototype {version}',f'Oak’s Parcel playtest · Prototype {version}')
         html=html.replace('a backed-up prototype 004 normal save','a backed-up prototype 004, 005, 006 or 007 normal save')
         html=html.replace('The route remains blocked beyond the first testing area. Oak’s Psyduck capture currently uses field animation.',
@@ -166,6 +166,10 @@ button.addEventListener('click',async()=>{
         html=html.replace('Oak’s Parcel playtest · Prototype 019','Route 4 checkpoint · Prototype 019')
         html=html.replace('Areas beyond Viridian remain blocked.', 'Route 4 is converted. Cerulean City is the next unconverted area.')
         html=html.replace('Evolution supplies remain available in the player’s PC.', 'Kanto signs now require the A button. Route 2 signs match their visible boards, and Viridian Forest has six visible Yellow information boards. Ground item balls enforce native solid collision until collected. Route 4 has Yellow encounters, dialogue, a reusable TM04 Whirlwind, and its optional Lass with two Paras and one Parasect at level 31, as in Yellow. She stands on a northern side path. All earlier features carry forward. Back up your normal save before switching; emulator save states belong to their exact ROM. Earlier download pages remain unchanged.')
+    if version == '020':
+        html=html.replace('Oak’s Parcel playtest · Prototype 020','Testing travel checkpoint · Prototype 020')
+        html=html.replace('Areas beyond Viridian remain blocked.', 'This checkpoint changes testing travel only. Cerulean’s campaign conversion moves to prototype 0021.')
+        html=html.replace('Evolution supplies remain available in the player’s PC.', 'Route 4 has a two-way return opening toward Mt. Moon. Buy HM02 Fly for zero Pokédollars at Celadon Department Store’s third-floor TM counter, teach it to a compatible Pokémon, then use Fly outdoors without a badge. Native visited-city destinations and other field restrictions remain. These Fly conveniences stay enabled during testing. All prototype 0019 features carry forward; back up your normal save before switching. Emulator save states stay with their exact ROM version. Earlier patch pages remain available separately.')
     if artifact_version!=version:
         html=html.replace(f'Prototype {version}',f'Prototype {artifact_version}')
         html=html.replace(f'prototype {version}.nds',f'prototype {artifact_version}.nds')
@@ -181,6 +185,6 @@ button.addEventListener('click',async()=>{
 if __name__ == '__main__':
     parser=argparse.ArgumentParser()
     parser.add_argument('destination',type=Path)
-    parser.add_argument('--version',choices=['004','005','006','007','008','009','010','011','012','013','014','015','016','0016','017','0017','018','0018','019','0019'],default='004')
+    parser.add_argument('--version',choices=['004','005','006','007','008','009','010','011','012','013','014','015','016','0016','017','0017','018','0018','019','0019','020','0020'],default='004')
     args=parser.parse_args()
     build(args.destination,args.version)

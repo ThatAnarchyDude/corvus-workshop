@@ -1,3 +1,5 @@
+Prototype 0020 adds the requested two-way Route 4 return crossing and free HM02 Fly at Celadon’s third-floor TM counter, with no badge required for outdoor Fly during testing. Normal saves remain compatible. Cerulean campaign work moves to 0021. See [TESTING-TRAVEL.md](TESTING-TRAVEL.md) and [the validation record](validation-prototype-0020.json).
+
 Prototype 0019 adds Yellow’s Route 4 encounters, optional Lass and reusable Whirlwind TM. It also restores working signs, requires A to read Kanto signs and keeps ground item balls solid. This checkpoint carries normal 0018 saves forward; Cerulean City is next. See [ROUTE-4.md](ROUTE-4.md) and [the release validation record](validation-prototype-0019.json).
 
 Prototype 0018 adds Mt. Moon, its fossil choice and Jessie/James ambush, cave rewards and Center services, plus bulk Rare Candy use with a quantity picker. It is cumulative from 0017; Route 4 remains unconverted. See [MT-MOON.md](MT-MOON.md) and [the release validation record](validation-prototype-0018-release.json).
