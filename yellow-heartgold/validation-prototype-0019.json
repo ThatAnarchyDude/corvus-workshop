@@ -555,7 +555,12 @@
     ],
     "party_items_quest_and_normal_save_layout_preserved": true
   },
-  "publication": "Validated locally; publication receipt records the immutable download URL.",
+  "publication": {
+    "commit": "732edbaea0dfbe33dc038db31747b173a21d1f27",
+    "confirmed_push_utc": "2026-10-11T04:01:19.942348+00:00",
+    "source_commit": "1e1015aba24b564840d2100d8631e156aa7569a6",
+    "url": "https://raw.githack.com/ThatAnarchyDude/corvus-workshop/732edbaea0dfbe33dc038db31747b173a21d1f27/psyduck-yellow/prototype-0019/index.html"
+  },
   "automated_checks": {
     "regression_tests": 275,
     "regression_status": "passed before the final Geodude NPC coordinate correction",
@@ -677,5 +682,22 @@
     "Every encounter slot and optional conversation has not been individually played.",
     "Audio has not been audited by ear.",
     "Normal save compatibility verified for these carried saves; keep backups. Emulator save states stay with their exact ROM."
+  ],
+  "published_files_byte_verified": [
+    {
+      "file": "index.html",
+      "bytes": 1215669,
+      "sha256": "937f9557f9e9912cb2f616bbdb40c45671fd2fd6a1554eb1a910bd518a8f5df0"
+    },
+    {
+      "file": "manifest.json",
+      "bytes": 486,
+      "sha256": "5c7b18c45075be2bf96802ad47d5301b2171cda2444f367f9148a3c3dae034b9"
+    },
+    {
+      "file": "LICENSE.txt",
+      "bytes": 1229,
+      "sha256": "a379dd012587a2fbe434ea6fcef30f502f32077738c2bd36e9e20cce621162bb"
+    }
   ]
 }

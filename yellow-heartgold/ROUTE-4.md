@@ -61,3 +61,10 @@ tests start from the last ordinary 0018 save, with separate native-command
 fixtures for focused checks. In-game saves are backed up between checks;
 save states stay with the exact ROM. See validation-prototype-0019.json for
 exact build hashes, completed checks and remaining limitations.
+
+## Published download
+
+[Create prototype 0019 locally](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/732edbaea0dfbe33dc038db31747b173a21d1f27/psyduck-yellow/prototype-0019/index.html).
+Select the original USA HeartGold ROM, rather than an earlier prototype.
+Successful publication: 2026-10-11T04:01:19.942348+00:00. Previous patch trees are
+unchanged. The public development log lists the Eastern release time.
