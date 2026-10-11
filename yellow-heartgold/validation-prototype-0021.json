@@ -732,7 +732,13 @@
   "output_sha256": "3bfbb2218be4ef8925d49dde1e760c5967e9e96f1a87685f148a5cbf302a7f3b",
   "patch_sha256": "b6d5a2b4692ada6a45bad808e49022e4e249aeb9a56727ccb092f8f3ca468d2b",
   "roundtrip_verified": true,
-  "publication": "Locally validated; publication pending",
+  "publication": {
+    "commit": "876971401fd392cad83d2230842f086e236925bc",
+    "confirmed_push_utc": "2026-10-11T14:30:29.359410+00:00",
+    "source_commit": "f968655c16ac04f5e3c2b3f164129c4e94fc5fbe",
+    "url": "https://raw.githack.com/ThatAnarchyDude/corvus-workshop/876971401fd392cad83d2230842f086e236925bc/psyduck-yellow/prototype-0021/index.html",
+    "public_log_commit": "1db13d28a65220ec082f01ef0eef2ab05de733c6"
+  },
   "browser": {
     "output_sha256": "3bfbb2218be4ef8925d49dde1e760c5967e9e96f1a87685f148a5cbf302a7f3b",
     "bad_input_rejected": true,

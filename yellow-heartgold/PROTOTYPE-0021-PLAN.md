@@ -1,6 +1,6 @@
-# Prototype 0021 — active work
+# Prototype 0021 — published
 
-Cumulative from published 0020. No 0021 patch is published yet. Preserve the existing checkpoints.
+Cumulative from published 0020. Published October 11, 2026 at 10:30 AM EDT. Preserve the existing checkpoints.
 
 - Cerulean’s initial Yellow visit: native Center/Player PC services, HeartGold shop sales rules, Blue’s north-exit scene with his persisted starter, Misty’s Yellow teams and Cascade Badge, reusable BubbleBeam TM, and Melanie’s level-10 Bulbasaur gift. Adapt Yellow’s 147 happiness requirement to the current lead Pokémon’s HeartGold friendship because this game has three starters.
 - Restore Cerulean’s Bike Shop using a separate clone of HeartGold’s existing bike-shop interior, retaining Johto’s original map. Implement Yellow’s unaffordable price and Bike Voucher exchange, retaining the voucher if the gift fails. The Vermilion fan club will provide the voucher in its area checkpoint.
@@ -23,3 +23,5 @@ Startup issue resolved in development build 6: padding the final Cut helper rest
 Next-build request: add a reusable or automatic maximum-friendship test item in the player’s PC storage, including existing saves. See PROTOTYPE-0022-PLAN.md. This is not part of 0021.
 
 Release validation complete: startup fixed; 16 focused checks and browser/hash roundtrip pass. Native guide, voucher/save/reload, Bulbasaur gift, Misty battle/rewards, Blue battle/departure and Center healing/Player PC menus checked. Genuine Save followed by final-ROM fresh reload retained one BubbleBeam and its received flag. Test-only boosted party is private and absent from the released game.
+
+Published patch: https://raw.githack.com/ThatAnarchyDude/corvus-workshop/876971401fd392cad83d2230842f086e236925bc/psyduck-yellow/prototype-0021/index.html
