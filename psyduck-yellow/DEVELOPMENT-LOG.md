@@ -15,6 +15,17 @@ device. The original file is not uploaded. Each new checkpoint includes earlier
 changes; use the original HeartGold file as input, rather than a previous
 prototype. Published checkpoints are kept separately and are not overwritten.
 
+## Watch recorded playtests
+
+[Watch the recorded playtests](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/playtests/index.html).
+
+This public page will receive additional recordings during active development.
+The first sample is a short, silent prototype 0022 controller/recording check,
+showing both DS screens and a RAM HUD. It uses a prepared test save containing
+a test-only level-50 Pikachu; it does not establish normal campaign difficulty.
+Recordings preserve observed behavior, and unknown telemetry is marked clearly.
+Please include the prototype number and video timestamp when reporting an issue.
+
 ## What we are making
 
 Pokémon Yellow's Kanto adventure, rebuilt using HeartGold's DS graphics and
@@ -406,3 +417,10 @@ Published Oct 11, 2026 · 1:46 PM EDT.
 Back up the normal save, use Continue, and save again after loading 0022. Recovery cannot reconstruct erased history that has no remaining evidence. All previous patch pages remain available unchanged.
 
 [Prototype 0022 download page](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/0a1887b1ef80c3980576b1ff0793191b736d1859/psyduck-yellow/prototype-0022/index.html)
+
+### Planned save-editor compatibility
+
+Investigate PKHeX compatibility using ordinary prototype saves. Prefer a plugin
+for project-specific items and rules; consider a separate version only if a
+plugin cannot provide the necessary support. This is planned work, not a released
+editor. License requirements and compatibility checks will be completed first.
