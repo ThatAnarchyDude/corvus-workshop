@@ -451,9 +451,45 @@ The project now has separate public repositories for the tools:
 - [Standalone experimental plugin release](https://github.com/ThatAnarchyDude/psyduck-yellow-pkhex-plugin/releases/tag/v0.1.0-experimental)
 - [PKHeX upstream fork](https://github.com/ThatAnarchyDude/PKHeX-Psyduck-Yellow)
 
-The fork retains the upstream application; custom editing features currently
-live in the plugin. The plugin repository includes GPL source, build instructions
+The fork retains the upstream application and now includes a separate Android
+save editor. Windows custom editing features live in the plugin. The plugin repository includes GPL source, build instructions
 and automated Windows checks. Its fresh Windows build and loader/interface
 tests passed before the first standalone experimental release was published.
 Follow these repositories for further tool work.
 This investigation takes place before campaign work on prototype 0023.
+
+
+## Android save editor and bedroom-start testing save
+
+Published: October 11, 2026 at 06:10 PM EDT.
+
+The first experimental Android editor is available for Psyduck Yellow and
+HeartGold normal saves. Open a `.dsv` or 512 KB `.sav`, edit party levels,
+friendship, IVs and supported abilities, then export a separate copy. It uses
+Android's file picker and works offline. Keep an original backup. This first
+version does not yet include box editing, item editing, Pokemon creation or
+all of the desktop application's tools.
+
+[Download Android editor 0.1.0](https://github.com/ThatAnarchyDude/PKHeX-Psyduck-Yellow/releases/download/android-v0.1.0-experimental/Psyduck-Save-Editor-0.1.0.apk).
+[Source, license and instructions](https://github.com/ThatAnarchyDude/PKHeX-Psyduck-Yellow/tree/master/Android).
+
+Save-data checks passed 54 assertions. An Android 16 emulator also passed
+installation, opening a save, changing a level, exporting and checking the
+exported save. The owner's physical phone has not yet been tested.
+[Build and Android interface verification](https://github.com/ThatAnarchyDude/PKHeX-Psyduck-Yellow/actions/runs/38178129659).
+
+A separate testing save skips the intro and starts at the first arrival in
+the player's bedroom in prototype 0022. The player is a boy named GOLD and
+the rival is BLUE. No starter, badges, Pokedex or parcel progress has been
+obtained. It was saved through the normal in-game menu and verified by a
+fresh boot through Continue. Both file formats also passed the Android
+editor's import/export checksum checks.
+
+- [Download bedroom-start .dsv](https://github.com/ThatAnarchyDude/PKHeX-Psyduck-Yellow/releases/download/android-v0.1.0-experimental/prototype-0022-bedroom-start.dsv)
+- [Download equivalent .sav](https://github.com/ThatAnarchyDude/PKHeX-Psyduck-Yellow/releases/download/android-v0.1.0-experimental/prototype-0022-bedroom-start.sav)
+- [Download ZIP with both formats and instructions](https://github.com/ThatAnarchyDude/PKHeX-Psyduck-Yellow/releases/download/android-v0.1.0-experimental/prototype-0022-bedroom-start.zip)
+
+Back up the emulator's existing save before importing one of these files;
+then select Continue. No ROM is included. These save downloads are release
+attachments, not files in Git history, and do not replace any earlier patch.
+Compatibility of this specific testing save with other prototypes is unverified.
