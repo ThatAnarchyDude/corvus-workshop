@@ -517,3 +517,34 @@ passed. [Android 16 automated checks also passed](https://github.com/ThatAnarchy
 diagnostic sharing, opening a save, editing a level and validating the exported
 copy. These emulator results do not establish a fix for the owner's phone;
 physical-device confirmation is still needed.
+
+
+### Android editor 0.1.2: party management and held items
+
+Published: October 11, 2026 at 07:43 PM EDT.
+
+The owner confirmed that 0.1.1 works on their Samsung phone. Version 0.1.2
+keeps that startup configuration and adds customized Pokemon creation, proper
+party size updates, party removal, held-item editing and four-move editing.
+Choose among all 493 Generation IV species, then customize level, gender,
+nature, shiny status, IVs, friendship, ability, moves and held item.
+
+[Download Android editor 0.1.2 ZIP](https://github.com/ThatAnarchyDude/PKHeX-Psyduck-Yellow/releases/download/android-v0.1.2-experimental/Psyduck-Save-Editor-0.1.2-Android.zip).
+Extract the ZIP and tap the APK to update the existing app. Export an edited
+copy and keep the original save backed up. Earlier releases remain available.
+
+Party size follows the actual members, up to six; removal closes the gap and
+cannot remove the last member. Removing a Pokemon does not move it to a PC
+box. Held items are searchable by name or ID; None clears an item. Key items,
+HMs and mail cannot be newly assigned as held items. Created Pokemon and
+chosen moves are for customized play/testing, with no promise of official
+encounter legality. Party changes preserve quests and Pokedex progress.
+
+The save model passed 94 assertions. A zero-party bedroom save also exported
+correctly with six members without changing quest or Pokedex state. A DS
+emulator loaded a separate edited save through Continue and displayed all
+three members, including the new female shiny Eevee holding Leftovers.
+[Android 16 interface tests passed](https://github.com/ThatAnarchyDude/PKHeX-Psyduck-Yellow/actions/runs/38184727927): five cold launches, party addition/removal,
+held-item assignment, move editing and validated save export. Signature,
+update certificate and 16 KB packaging checks passed too. The new interface
+still needs the owner's phone test.
