@@ -19,3 +19,5 @@ Route 24, Route 25/Bill, and the returning robbed-house/Dig sequence follow in t
 - This checkpoint remains unpublished. Complete remaining native service, battle, gift, and save/reload checks before preparing a public patch.
 
 Startup issue resolved in development build 6: padding the final Cut helper restored word alignment of the autoloaded code section. Native boot reaches the Psyduck title, Continue, and the carried normal save. A regression check fails on build 5 and passes on build 6. The Bike Shop now displays its no-voucher welcome instead of incorrectly assuming a Bicycle is owned. Fifteen focused checks pass, including original map/archive preservation, serialized Yellow teams, chained TM lookup, and native Cut prerequisites. Voucher exchange and remaining native city checks continue before release.
+
+Next-build request: add a reusable or automatic maximum-friendship test item in the player’s PC storage, including existing saves. See PROTOTYPE-0022-PLAN.md. This is not part of 0021.
