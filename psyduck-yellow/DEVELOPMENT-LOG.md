@@ -3,14 +3,14 @@
 A plain-language guide to what has changed, what you can play now, and what is
 still being built. Share this page with anyone following the project.
 
-**Last updated: October 10, 2026.**
+**Last updated: October 11, 2026.**
 
-**Latest published patch: prototype 0018.** The playable campaign now reaches
-Mt. Moon after Brock and Route 3. This checkpoint adds the fossil quest,
-Jessie and James, cave rewards and Center services, plus bulk Rare Candy use.
-The game remains unfinished; Route 4 is the next development area.
+**Latest published patch: prototype 0019.** The playable campaign now reaches
+Route 4 after Mt. Moon. This checkpoint fixes sign interactions and ground-item
+collision, adds Yellow’s Route 4 encounters and reusable Whirlwind TM, and
+keeps its optional level-31 Lass off the main path. Cerulean City is next.
 
-[Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/3a18894189a390ba86279a75a097f6b16252e331/psyduck-yellow/prototype-0018/index.html)
+[Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/732edbaea0dfbe33dc038db31747b173a21d1f27/psyduck-yellow/prototype-0019/index.html)
 
 The download page contains a modification patch. Select your original,
 unmodified USA HeartGold game file to build the playable DS file on your own
@@ -29,7 +29,7 @@ future work; engine support does not mean every encounter is already placed.
 Kanto comes first. Johto is planned as the post-game region. Development is
 moving through Kanto one area at a time, with separate patch checkpoints.
 
-## Changes you can play in prototype 0017
+## Features carried forward from earlier checkpoints
 
 ### A new opening in Pallet Town
 
@@ -212,7 +212,8 @@ push date and time.
 | 0015 | Oct 10, 2026 · 5:36 AM EDT | Pewter outdoor events, Brock's gym/Boulder Badge/Bide TM, Water/Psychic Golduck. |
 | 0016 | Oct 10, 2026 · 1:14 PM EDT | Pewter interiors, two-floor museum/Old Amber, reusable TMs, eligible level-100 Rare Candy evolution and Moon Stone Psyduck. |
 | 0017 | Oct 10, 2026 · 4:29 PM EDT | Route 3: eight Yellow trainer teams, encounters, dialogue and post-Brock access. |
-| 0018 | Oct 10, 2026 · 10:27 PM EDT | Mt. Moon: Yellow trainers/encounters, fossils, Jessie/James, rewards and Center services; bulk Rare Candy quantity picker. **Latest published patch.** |
+| 0018 | Oct 10, 2026 · 10:27 PM EDT | Mt. Moon: Yellow trainers/encounters, fossils, Jessie/James, rewards and Center services; bulk Rare Candy quantity picker. |
+| 0019 | Oct 11, 2026 · 12:01 AM EDT | Route 4: Yellow encounters, optional Lass and reusable Whirlwind; working A-button signs, visible Forest boards, solid item balls and carried-save NPC refresh. **Latest published patch.** |
 
 [Detailed release notes and verification records](https://github.com/ThatAnarchyDude/corvus-workshop/tree/d40c17fb9e721305bedf0781e00f1a11ce5cfe7c/yellow-heartgold)
 
@@ -284,6 +285,38 @@ Back up your ordinary save before switching versions; emulator save states
 must stay with the exact ROM that created them.
 
 [Prototype 0018 download page](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/3a18894189a390ba86279a75a097f6b16252e331/psyduck-yellow/prototype-0018/index.html)
+
+## Added in published prototype 0019
+
+Published October 11, 2026, 12:01 AM EDT. This cumulative patch includes the earlier
+checkpoints. Previous downloads remain available separately.
+
+**Signs and items:** press A to read Kanto signs. Walking toward them no longer
+opens their text automatically. Route 2 signs match their visible boards, and
+Viridian Forest has six visible boards with Yellow’s tips. Ground item balls
+block walking until collected; their empty tiles become walkable afterward.
+
+**Route 4:** Yellow’s Spearow, Mankey, Sandshrew and Rattata encounters at levels
+8–12, the route sign and Geodude conversation, and a reusable TM04 Whirlwind
+pickup. The optional Lass has two Paras and one Parasect at level 31, as she
+does in Yellow, and stands off the main eastbound path. HeartGold’s existing
+terrain and warps remain; no new HM obstacles were added.
+
+**Save carryover:** testing began with the last ordinary 0018 save, retaining
+Golduck, the Helix Fossil choice, HP Up and completed Mt. Moon quest. A one-time
+refresh prevents HeartGold’s old Route 4 trainers from returning through saved
+NPC records. Whirlwind collection and the updated NPC state survived a normal
+in-game save and fresh boot of the final release.
+
+**Checks:** 275 regression tests passed before the last NPC-position correction,
+then 12 focused tests passed on the final release. Emulator checks covered
+A-button signs, solid/collected items, the route walk and TM pickup, the optional
+Lass battle opening, the complete Geodude conversation and normal-save reloads.
+The browser rejected incorrect input and produced exactly the verified DS file.
+The full optional Lass battle and every encounter slot have not been individually
+playtested. Audio has not been audited by ear. Cerulean City remains unconverted.
+
+[Prototype 0019 download page](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/732edbaea0dfbe33dc038db31747b173a21d1f27/psyduck-yellow/prototype-0019/index.html)
 
 ## Agreed plans that are not finished features
 
