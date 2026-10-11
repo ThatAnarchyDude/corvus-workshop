@@ -5,13 +5,9 @@ still being built. Share this page with anyone following the project.
 
 **Last updated: October 11, 2026.**
 
-**Latest published patch: prototype 0020.** The campaign still reaches Route 4.
-This testing checkpoint opens a two-way return crossing toward Mt. Moon and
-adds free HM02 Fly at Celadon Department Store’s third-floor TM counter.
-Outdoor Fly works without a badge during testing. Cerulean campaign work moves
-to prototype 0021.
+**Latest published patch: prototype 0021.** The campaign reaches Cerulean’s initial visit: Misty’s Yellow teams, Blue’s bridge encounter, Melanie’s Bulbasaur gift, native Center/PC and shop services, and the Bike Voucher exchange. Pewter’s guide now stops the pre-Brock exit and walks around scenery to the gym. Earlier Fly testing conveniences remain available. Route 24, Route 25/Bill and the returning robbed-house event follow next.
 
-[Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/28b5fd7b8dd7e5311d0c182b5d047f91ffca451b/psyduck-yellow/prototype-0020/index.html)
+[Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/876971401fd392cad83d2230842f086e236925bc/psyduck-yellow/prototype-0021/index.html)
 
 The download page contains a modification patch. Select your original,
 unmodified USA HeartGold game file to build the playable DS file on your own
@@ -215,7 +211,8 @@ push date and time.
 | 0017 | Oct 10, 2026 · 4:29 PM EDT | Route 3: eight Yellow trainer teams, encounters, dialogue and post-Brock access. |
 | 0018 | Oct 10, 2026 · 10:27 PM EDT | Mt. Moon: Yellow trainers/encounters, fossils, Jessie/James, rewards and Center services; bulk Rare Candy quantity picker. |
 | 0019 | Oct 11, 2026 · 12:01 AM EDT | Route 4: Yellow encounters, optional Lass and reusable Whirlwind; working A-button signs, visible Forest boards, solid item balls and carried-save NPC refresh. |
-| 0020 | Oct 11, 2026 · 12:55 AM EDT | Testing travel: two-way Route 4 return crossing and free HM02 Fly at Celadon’s third-floor TM counter; outdoor Fly needs no badge. **Latest published patch.** |
+| 0020 | Oct 11, 2026 · 12:55 AM EDT | Testing travel: two-way Route 4 return crossing and free HM02 Fly at Celadon’s third-floor TM counter; outdoor Fly needs no badge. |
+| 0021 | Oct 11, 2026 · 10:30 AM EDT | Cerulean’s initial Yellow visit, Bike Voucher exchange and corrected Pewter guide escort; startup repair. **Latest published patch.** |
 
 [Detailed release notes and verification records](https://github.com/ThatAnarchyDude/corvus-workshop/tree/d40c17fb9e721305bedf0781e00f1a11ce5cfe7c/yellow-heartgold)
 
@@ -327,7 +324,7 @@ playtested. Audio has not been audited by ear. Cerulean City remains unconverted
   owner’s complete team plan; current teams remain in place.
 
 - Continue Yellow's Kanto campaign through Giovanni's eighth badge, then the
-  remaining adventure. Route 4 follows Mt. Moon's completion.
+  remaining adventure. Route 24 and Route 25 follow Cerulean’s initial visit.
 - Give every Generation IV species an obtainable path, and complete later
   gyms, towns, dungeons, Rocket events, gifts and services.
 - When later battles require Blue's evolved Eevee: use Jolteon if the player
@@ -371,11 +368,24 @@ commercial game ROMs. Work proceeds during active development sessions.
 
 [Prototype 0020 download page](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/28b5fd7b8dd7e5311d0c182b5d047f91ffca451b/psyduck-yellow/prototype-0020/index.html)
 
-## Prototype 0021 work in progress
+## Added in published prototype 0021
 
-Cerulean is being adapted next, including the Bike Shop and Yellow’s Bike Voucher exchange. The Pewter guide is also being corrected to stop players automatically before Brock is defeated and walk around scenery to the gym. No prototype 0021 patch has been published yet.
+- Misty uses level-18 Staryu and level-21 Starmie. Her gym trainers match Yellow’s levels. Winning gives the Cascade Badge and reusable TM11 BubbleBeam; Cascade also permits Cut at a suitable tree.
+- Blue approaches visibly at the north bridge and uses Spearow, Sandshrew, Rattata and his saved starter choice. He walks away after the battle.
+- Melanie gives a level-10 Bulbasaur when your current lead has at least 147 friendship and there is room in your party. A Pikachu is not required.
+- The Bike Shop offers Yellow’s unaffordable price and exchanges a Bike Voucher for one Bicycle. Vermilion’s fan club will provide the voucher in a later area checkpoint. Its interior is a separate copy of HeartGold’s bike-shop assets; Johto’s shop is unchanged.
+- Cerulean’s Center includes normal healing and Player PC item storage. Its Mart keeps HeartGold’s sales rules.
+- Pewter’s guide stands centrally, stops all six exit lanes before Brock and escorts around scenery to the gym. His manual interaction approaches are also corrected.
+- An unpublished candidate’s startup problem was repaired. Sixteen focused checks pass, and browser output matches the verified release. Native checks include the guide, voucher/save/reload, Bulbasaur gift, Misty battle and rewards, Blue’s battle and departure, Center healing and Player PC storage menus. A completed normal save retains BubbleBeam and its received flag after a fresh load of the final ROM.
+- Private battle test saves used temporary strong Pokémon to check reward events efficiently. Those grants are absent from the released game.
 
-The owner tested 0020 and reported that its travel changes worked. Two issues are recorded for investigation: NPC placement inside gatehouse counters, and occasional transition sprite glitches cleared by opening and closing the Bag. The cause of the sprite glitches is not confirmed.
+[Prototype 0021 download page](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/876971401fd392cad83d2230842f086e236925bc/psyduck-yellow/prototype-0021/index.html)
+
+The owner’s reports of gatehouse NPCs inside counters and occasional transition sprite glitches remain recorded for investigation. Their exact locations or causes have not been confirmed.
+
+### Next: prototype 0022
+
+First add a temporary maximum-friendship testing item to the player’s PC storage, including existing saves. It will set friendship to 255 using the simplest safe reusable or automatic implementation. Other evolution prerequisites will still apply. Then continue Route 24, Route 25/Bill and the returning Cerulean robbed-house/Dig event.
 
 ### Future dialogue review
 
