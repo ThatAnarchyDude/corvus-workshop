@@ -1,0 +1,40 @@
+name: PKHeX plugin Windows compatibility
+on:
+  push:
+    branches: [android-prototype-0022]
+    paths:
+      - 'yellow-heartgold/pkhex/**'
+      - '.github/workflows/pkhex-plugin.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  windows-host:
+    runs-on: windows-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: '10.0.x'
+      - name: Fetch pinned official PKHeX source
+        shell: pwsh
+        run: |
+          $dependency = 'yellow-heartgold/.tools/PKHeX'
+          git clone --filter=blob:none --no-checkout https://github.com/kwsch/PKHeX.git $dependency
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          git -C $dependency fetch --depth=1 origin 66ef5983a5d349efa2dd615f2926a1b1ee97306e
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          git -C $dependency checkout --detach 66ef5983a5d349efa2dd615f2926a1b1ee97306e
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          if ((git -C $dependency rev-parse HEAD) -ne '66ef5983a5d349efa2dd615f2926a1b1ee97306e') { throw 'Wrong upstream commit' }
+      - name: Build Core and Windows plugin host probe
+        shell: pwsh
+        run: |
+          dotnet build yellow-heartgold/.tools/PKHeX/PKHeX.Core/PKHeX.Core.csproj -c Release --nologo
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          dotnet build yellow-heartgold/pkhex/WindowsHostProbe -c Release --nologo
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Exercise Windows plugin and form controls
+        shell: pwsh
+        run: dotnet run --project yellow-heartgold/pkhex/WindowsHostProbe -c Release --no-build

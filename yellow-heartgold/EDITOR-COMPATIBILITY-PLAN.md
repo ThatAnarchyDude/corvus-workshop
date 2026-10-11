@@ -20,3 +20,11 @@ Continue reloads passed using upstream PKHeX Core 26.08.26. A plugin skeleton
 with project PC/shiny information and starter Hidden Ability editing compiles.
 See `pkhex/README.md` for exact scope, GPL terms and remaining Windows GUI tests.
 A full editor fork is not currently necessary for the tested use cases.
+
+
+Further investigation: the normal Gen IV editor can replace custom Hidden
+Abilities, so the plugin now edits selected native party slots directly. All 12
+supported species passed export tests; Psyduck/Eevee/Togepi and one edited PC
+stack passed native Continue reloads. A Windows host probe is prepared for CI.
+Standalone plugin/fork publication is blocked by GitHub integration permission
+to create repositories; existing project access remains available.

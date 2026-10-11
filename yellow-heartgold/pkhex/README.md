@@ -24,22 +24,39 @@ a separate full editor fork is not required for these tested edits.
 
 ## Experimental plugin
 
-`PsyduckYellow.Plugin` implements the real upstream IPlugin API and builds
-successfully as a Windows .NET 10 DLL. It adds a Tools entry with an explicitly
-opt-in project view: player PC item stacks, Shiny/Friendship Charm labels,
-parcel state, and project shiny classification (XOR < 16). It can apply the
-project's already-supported Hidden Ability to the currently edited Psyduck,
-Eevee or Togepi. The user must still Set the Pokémon into a slot and export.
+`PsyduckYellow.Plugin` implements the real upstream IPlugin API. It builds
+as a Windows .NET 10 DLL and edits a selected saved party slot directly. The
+previous approach through the normal Pokémon editor was replaced: upstream
+`GetAbilityIndex4` falls back to the first normal ability for unknown Gen IV
+abilities, and `SaveMisc4` writes that dropdown value during preparation.
+Apply project abilities after other editing and export the save; do not Set a
+stale Pokémon from the normal editor over the edited slot.
 
-The cloud runner is Linux: **Windows GUI loading and ability-edit round trips
-have not been verified**. This is source for an experimental plugin, not a
-released or fully validated editor. Do not use it on the only copy of a save.
-It cannot distinguish a hack from ordinary HGSS solely by save format, so its
-project view asks for explicit confirmation and never runs automatically.
-It does not rewrite the official legality engine, stock species names/types,
-item lists or shiny icons. Custom rules can therefore still disagree with the
-standard editor's displays and legality checks. Further integration is needed
-before claiming full project compatibility.
+The plugin shows project shiny status (XOR < 16), lists ten player PC stacks,
+and supports explicit stack edits with bounds/initialization checks. Supported
+Hidden Abilities cover Psyduck/Golduck, Eevee's supported evolutions, and
+Togepi/Togetic/Togekiss. Espeon's Magic Bounce is unavailable in Gen IV.
+
+The exact shared editing code passed 12 species export tests. Checksum, gender,
+PID, nature, shiny XOR and unrelated fields remained intact. Shiny boundaries
+0/7/8/15/16/65535, invalid edits and PC storage were checked. Three prepared
+starter fixtures with project-only shiny XOR 12 and Hidden Abilities loaded via
+normal Continue in the emulator, retaining those properties, National Pokédex
+access and parcel completion. An edited stack of 25 Poké Balls also persisted
+in the PC after Continue. Fixtures are synthetic tests, not ordinary playthroughs.
+
+A Windows host probe covers IPlugin initialization, Tools menu insertion,
+form construction, party selection, project shiny display, the initialized-PC
+gate and disabling the plugin for non-HGSS saves. See the GitHub Actions result
+for actual Windows runtime status. These tests do not constitute a complete
+manual PKHeX editing session. A separate full fork is not required for tested
+native edits; standard editor icons/legality/types/item lists remain unchanged.
+
+The user requested public repositories named `PKHeX-Psyduck-Yellow` (upstream
+fork) and `psyduck-yellow-pkhex-plugin`. GitHub rejected both creation attempts
+with “Resource not accessible by integration.” Source and standalone packaging
+are prepared; an account owner must create the repositories and grant this
+integration access before they can be populated.
 
 ## Build
 
