@@ -15,8 +15,8 @@ RECEIVED=0xB60
 
 def clerk():
     s=Script().emit(73,1500).emit(96).emit(104).emit(32,RECEIVED).jump('owned',1)
-    s.emit(127,BICYCLE,1,0x800C).compare(0x800C,1).jump('owned',1)
-    s.emit(127,VOUCHER,1,0x800C).compare(0x800C,1).jump('exchange',1)
+    s.emit(128,BICYCLE,1,0x800C).compare(0x800C,1).jump('owned',1)
+    s.emit(128,VOUCHER,1,0x800C).compare(0x800C,1).jump('exchange',1)
     s.msg(0).msg(1).emit(63,0x800C).compare(0x800C,0).jump('cancel',5).msg(2)
     s.label('cancel').msg(3);end(s)
     s.label('exchange').msg(4).emit(125,BICYCLE,1,0x800C).compare(0x800C,0).jump('full',1)
@@ -28,7 +28,7 @@ def clerk():
 
 
 def youngster():
-    s=Script().emit(73,1500).emit(96).emit(104).emit(127,BICYCLE,1,0x800C)
+    s=Script().emit(73,1500).emit(96).emit(104).emit(128,BICYCLE,1,0x800C)
     s.compare(0x800C,1).jump('owned',1).msg(9);end(s)
     s.label('owned').msg(10);return end(s).finish()
 

@@ -11,7 +11,7 @@ from cerulean import misty,melanie,MISTY_TM,BULBA_GIVEN,BULBA_HIDE
 from pewter_guide_fix import PATH,STATE,escort,step
 
 
-def run(code,*,flags=(),bag=None,room=True,yes=True,badge=False,win=True,friendship=200,count=1,z=104):
+def run(code,*,flags=(),bag=None,room=True,yes=True,badge=False,win=True,friendship=200,count=1,z=104,x=1086):
  vars={};flags=set(flags);bag=dict(bag or {});msgs=[];walks=[];badges=[];pc=0;cmp=0
  def half():
   nonlocal pc
@@ -37,7 +37,7 @@ def run(code,*,flags=(),bag=None,room=True,yes=True,badge=False,win=True,friends
    else:flags.discard(f)
   elif op==41:a,b=half(),half();vars[a]=b
   elif op==63:vars[half()]=0 if yes else 1
-  elif op==127:a,b,c=half(),half(),half();vars[c]=int(bag.get(a,0)>=b)
+  elif op==128:a,b,c=half(),half(),half();vars[c]=int(bag.get(a,0)>=b)
   elif op==125:
    a,b,c=half(),half(),half();vars[c]=int(room)
    if room:bag[a]=bag.get(a,0)+b
@@ -52,7 +52,7 @@ def run(code,*,flags=(),bag=None,room=True,yes=True,badge=False,win=True,friends
   elif op==137:
    args=[half() for _ in range(6)];vars[args[-1]]=1;bag['bulbasaur']=bag.get('bulbasaur',0)+1
   elif op==101:half()
-  elif op==105:vars[half()]=1086;vars[half()]=z
+  elif op==105:vars[half()]=x;vars[half()]=z
   elif op==94:
    obj=half();off=struct.unpack_from('<i',code,pc)[0];pc+=4;at=pc+off;arr=[]
    while True:
@@ -85,6 +85,14 @@ class Decisions(unittest.TestCase):
   for z in range(101,107):
    r=run(escort(),z=z);self.assertEqual(r['messages'],[0,1]);self.assertTrue(r['walks'])
   self.assertEqual(run(escort(),badge=True)['walks'],[])
+ def test_manual_guide_interaction_aligns_from_each_side(self):
+  for x,z in [(1084,104),(1085,103),(1085,105),(1086,104)]:
+   r=run(escort(),x=x,z=z)
+   moves=r['walks'][0][1]
+   for direction,n in moves:
+    dx,dz={12:(0,-1),13:(0,1),14:(-1,0),15:(1,0),2:(0,0)}[direction]
+    x+=dx*n;z+=dz*n
+   self.assertEqual((x,z),(1086,104))
  def test_guide_entire_escort_and_return_avoids_solid_terrain(self):
   rom=ndspy.rom.NintendoDSRom.fromFile(str(PROJECT/'build/yellow-heartgold-prototype-0020.nds'));m=ndspy.narc.NARC(rom.files[rom.filenames.idOf('a/0/4/1')]).files[0];w,h,hdr,alt,n=m[:5];off=5+n+w*h*(2*hdr+alt);lands=ndspy.narc.NARC(rom.files[rom.filenames.idOf('a/0/6/5')]).files
   for route in (PATH['escort'],PATH['return']):

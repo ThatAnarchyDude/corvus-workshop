@@ -16,9 +16,17 @@ def step(a,b):
 def escort():
     s=Script().emit(96).emit(294,8,0x800C).compare(0x800C,1).jump('open',1)
     s.msg(0).emit(105,0x4000,0x4001)
+    # Manual interaction can originate on any side of the guide. Move onto
+    # the east lane before joining the same single-file escort.
+    s.compare(0x4000,1084).jump('from_west',1)
+    s.compare(0x4000,1085).jump('from_vertical',1)
     for z in range(101,107):s.compare(0x4001,z).jump(f'lane{z}',1)
     s.jump('lane104')
     for z in range(101,107):s.label(f'lane{z}').movement(255,f'align{z}').emit(95).jump('walk')
+    s.label('from_west').movement(255,'align_west').emit(95).jump('walk')
+    s.label('from_vertical').compare(0x4001,103).jump('from_north',1)
+    s.movement(255,'align_south').emit(95).jump('walk')
+    s.label('from_north').movement(255,'align_north').emit(95).jump('walk')
     s.label('walk')
     route=PATH['escort']
     for i in range(1,len(route)):
@@ -27,6 +35,9 @@ def escort():
     for i in range(1,len(PATH['return'])):s.movement(12,f'return{i}').emit(95)
     end(s)
     s.label('open').msg(2);end(s)
+    s.moves('align_west',[(13,1),(15,2),(12,1)])
+    s.moves('align_north',[(15,1),(13,1)])
+    s.moves('align_south',[(15,1),(12,1)])
     for z in range(101,107):s.moves(f'align{z}',[(13,104-z)] if z<104 else [(12,z-104)] if z>104 else [(2,1)])
     for i in range(1,len(route)):
         s.moves(f'lead{i}',[(step(route[i-1],route[i]),1)])
