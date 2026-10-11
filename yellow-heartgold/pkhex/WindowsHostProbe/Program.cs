@@ -29,7 +29,7 @@ internal static class Program
         Check(party.Items.Count==2 && party.SelectedIndex==0,"Party selection missing");
         var ability=controls.OfType<Button>().Single(b=>b.Text.Contains("Anticipation"));
         Check(ability.Enabled,"Supported Hidden Ability disabled");
-        var summary=controls.OfType<TextBox>().Single();
+        var summary=controls.OfType<TextBox>().Single(t=>t.Multiline && t.ReadOnly);
         Check(summary.Text.Contains("Project shiny: True"),"Project shiny display lost");
         party.SelectedIndex=1;
         Check(!ability.Enabled,"Unsupported ability enabled");
