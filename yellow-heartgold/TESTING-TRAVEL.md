@@ -14,3 +14,5 @@ The patch page builds the complete playable file locally from your original, unm
 Six focused tests cover native Fly checks, the free-item shop quantity calculation, shop stock preservation, exact code/data changes, unchanged campaign assets and bidirectional terrain connectivity. Native emulator checks cover walking across the crossing, buying HM02 without spending money, teaching Fly, and a normal save/reload with HM02 retained. The browser rejects incorrect input and downloads a file matching the release hash; xdelta reconstruction matches the same hash.
 
 Build: `.venv/bin/python tools/release_prototype0020.py`. Existing release artifacts are protected against overwriting.
+
+Published October 11, 2026 at 12:55 AM EDT. [Prototype 0020 download page](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/28b5fd7b8dd7e5311d0c182b5d047f91ffca451b/psyduck-yellow/prototype-0020/index.html). Prior patch exports remain unchanged.
