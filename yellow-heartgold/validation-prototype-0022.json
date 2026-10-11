@@ -156,7 +156,17 @@
       "This verifies targeted save and gameplay paths, not a fresh full campaign playthrough or Android compatibility.",
       "The user save itself was not supplied; recovery was tested against matching reset symptoms.",
       "Arbitrary erased flags or random rolls without surviving evidence cannot be reconstructed."
-    ]
+    ],
+    "repaired_save_saved_and_reloaded": {
+      "parcel": 2,
+      "pokedex": true,
+      "bide_quantity": 2,
+      "bide_given": true,
+      "old_man_tutorial_done": true,
+      "west_guard_hidden": true,
+      "outdoor_clerk_hidden": true,
+      "recovery_marker_retained": true
+    }
   },
   "screenshots": [
     "build/emulator-0022-affected-recovery/recovered.png",
@@ -164,6 +174,7 @@
     "build/emulator-0022-prepare-brock-reward/brock-no-duplicate.png",
     "build/emulator-0022-card-swapped/kanto-first.png",
     "build/emulator-0022-friendship-reload/friendship-continue.png",
-    "build/emulator-0022-quest-transfer/quest-preserved.png"
+    "build/emulator-0022-quest-transfer/quest-preserved.png",
+    "build/emulator-0022-repaired-save-reload/repaired-save-continue.png"
   ]
 }
