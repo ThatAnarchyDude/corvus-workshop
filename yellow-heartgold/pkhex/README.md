@@ -47,8 +47,8 @@ in the PC after Continue. Fixtures are synthetic tests, not ordinary playthrough
 
 A Windows host probe covers IPlugin initialization, Tools menu insertion,
 form construction, party selection, project shiny display, the initialized-PC
-gate and disabling the plugin for non-HGSS saves. See the GitHub Actions result
-for actual Windows runtime status. These tests do not constitute a complete
+gate and disabling the plugin for non-HGSS saves. The Windows run passed, including loading the DLL through the pinned upstream
+PluginLoader: https://github.com/ThatAnarchyDude/corvus-workshop/actions/runs/38168315938. These tests do not constitute a complete
 manual PKHeX editing session. A separate full fork is not required for tested
 native edits; standard editor icons/legality/types/item lists remain unchanged.
 

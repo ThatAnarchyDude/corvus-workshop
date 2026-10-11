@@ -355,7 +355,21 @@
       ]
     }
   },
-  "windowsUI": "not tested on Linux",
+  "windowsUI": {
+    "status": "passed",
+    "run": "https://github.com/ThatAnarchyDude/corvus-workshop/actions/runs/38168315938",
+    "sourceCommit": "30d4284",
+    "checks": [
+      "actual pinned upstream PluginLoader discovers DLL",
+      "IPlugin Initialize and Tools menu",
+      "form construction",
+      "supported and unsupported party selections",
+      "project shiny display at XOR 12",
+      "initialized/uninitialized PC gate",
+      "disable on non-HGSS save"
+    ],
+    "manualFullEditorSession": "not yet tested"
+  },
   "stockEditorFinding": {
     "source": "PKHeX.WinForms/Controls/PKM Editor/LoadSave.cs",
     "methods": [
@@ -364,5 +378,10 @@
     ],
     "problem": "Unknown Gen IV ability falls back to first normal ability; preparing fields writes the dropdown value.",
     "solution": "Plugin edits native party slot directly using EntityImportSettings.None."
+  },
+  "repositoryCreation": {
+    "fork": "blocked by GitHub integration HTTP 403",
+    "plugin": "blocked by GitHub integration createRepository permission",
+    "preparedLocally": true
   }
 }
