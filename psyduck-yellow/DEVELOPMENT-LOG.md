@@ -471,6 +471,9 @@ version does not yet include box editing, item editing, Pokemon creation or
 all of the desktop application's tools.
 
 [Download Android editor 0.1.0](https://github.com/ThatAnarchyDude/PKHeX-Psyduck-Yellow/releases/download/android-v0.1.0-experimental/Psyduck-Save-Editor-0.1.0.apk).
+[ZIP alternative for downloads that stall on the APK](https://github.com/ThatAnarchyDude/PKHeX-Psyduck-Yellow/releases/download/android-v0.1.0-experimental/Psyduck-Save-Editor-0.1.0-Android.zip).
+Extract the ZIP using My Files, then tap the APK inside. It contains the same
+signed application; no existing release files were replaced.
 [Source, license and instructions](https://github.com/ThatAnarchyDude/PKHeX-Psyduck-Yellow/tree/master/Android).
 
 Save-data checks passed 54 assertions. An Android 16 emulator also passed
