@@ -72,14 +72,14 @@ def guide():
 
 def rival_scene(trainers):
     s=Script().emit(32,RIVAL_DONE).jump('done',1).emit(96).emit(105,0x4000,0x4001)
-    music(s,1095)
+    music(s,1088)
     for x in range(1329,1333):s.compare(0x4000,x).jump('lane'+str(x),1)
     s.jump('lane1329')
     for x in range(1329,1333):s.label('lane'+str(x)).movement(BLUE,'approach'+str(x)).emit(95).jump('battle')
     s.label('battle').movement(255,'face').emit(95).msg(0)
     selected_battle(s,trainers,0,'result');s.label('result').emit(220,0x800C)
     s.compare(0x800C,1).jump('lost',5).msg(1).msg(3)
-    music(s,1095)
+    music(s,1089)
     s.compare(0x4000,1329).jump('leave_right',1).movement(BLUE,'leave_left').emit(95).jump('finish')
     s.label('leave_right').movement(BLUE,'leave_right_path').emit(95)
     s.label('finish').emit(30,RIVAL_DONE).emit(30,RIVAL_HIDE).emit(101,BLUE).emit(41,RIVAL_STATE,1).emit(82);end(s)

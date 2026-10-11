@@ -7,19 +7,21 @@ from build_rom import PROJECT
 from opening import events_decode
 from viridian_tutorial import TABLE
 from cerulean_bike import clerk,VOUCHER,BICYCLE,RECEIVED
-from cerulean import misty,melanie,MISTY_TM,BULBA_GIVEN,BULBA_HIDE
+from cerulean import misty,melanie,MISTY_TM,BULBA_GIVEN,BULBA_HIDE,rival_scene,RIVAL_DONE,RIVAL_HIDE
 from pewter_guide_fix import PATH,STATE,escort,step
 
 
-def run(code,*,flags=(),bag=None,room=True,yes=True,badge=False,win=True,friendship=200,count=1,z=104,x=1086):
- vars={};flags=set(flags);bag=dict(bag or {});msgs=[];walks=[];badges=[];pc=0;cmp=0
+def run(code,*,flags=(),bag=None,room=True,yes=True,badge=False,win=True,friendship=200,count=1,z=104,x=1086,starter=133):
+ vars={};flags=set(flags);bag=dict(bag or {});msgs=[];walks=[];badges=[];battles=[];music=[];pc=0;cmp=0
  def half():
   nonlocal pc
   n=struct.unpack_from('<H',code,pc)[0];pc+=2;return n
  for _ in range(2000):
   op=half()
-  if op in (2,219):return dict(flags=flags,bag=bag,messages=msgs,walks=walks,badges=badges,whiteout=op==219)
-  if op in (73,78,80,81,36):half()
+  if op in (2,219):return dict(flags=flags,bag=bag,messages=msgs,walks=walks,badges=badges,whiteout=op==219,battles=battles,music=music)
+  if op in (73,78,80,81,36):
+   arg=half()
+   if op==80:music.append(arg)
   elif op in (96,97,104,50,53,79,95,82):pass
   elif op in (190,191,45):
    n=code[pc];pc+=1
@@ -45,7 +47,8 @@ def run(code,*,flags=(),bag=None,room=True,yes=True,badge=False,win=True,friends
    a,b,c=half(),half(),half();bag[a]=bag.get(a,0)-b;vars[c]=1
   elif op==294:half();vars[half()]=int(badge)
   elif op==295:badges.append(half())
-  elif op==213:half();half();pc+=2
+  elif op==206:vars[half()]=starter
+  elif op==213:battles.append(half());half();pc+=2
   elif op==220:vars[half()]=int(win)
   elif op==382:out=half();half();vars[out]=friendship
   elif op==332:vars[half()]=count
@@ -85,6 +88,17 @@ class Decisions(unittest.TestCase):
   for z in range(101,107):
    r=run(escort(),z=z);self.assertEqual(r['messages'],[0,1]);self.assertTrue(r['walks'])
   self.assertEqual(run(escort(),badge=True)['walks'],[])
+ def test_blue_keeps_choice_and_only_completes_after_win(self):
+  ids={'54_male':782,'54_female':783,'133_male':784,'133_female':785,54:782,133:785}
+  for x in range(1329,1333):
+   for female in [False,True]:
+    for duck in [False,True]:
+     flags={0xB41}|({0xB40} if duck else set())|({0xB3F} if female else set())
+     r=run(rival_scene(ids),x=x,flags=flags)
+     self.assertEqual(r['battles'],[782+int(female) if duck else 784+int(female)])
+     self.assertTrue({RIVAL_DONE,RIVAL_HIDE}<=r['flags']);self.assertEqual(r['music'],[1088,1089])
+  self.assertEqual(run(rival_scene(ids),flags={RIVAL_DONE})['battles'],[])
+  r=run(rival_scene(ids),win=False);self.assertTrue(r['whiteout']);self.assertNotIn(RIVAL_DONE,r['flags'])
  def test_manual_guide_interaction_aligns_from_each_side(self):
   for x,z in [(1084,104),(1085,103),(1085,105),(1086,104)]:
    r=run(escort(),x=x,z=z)
