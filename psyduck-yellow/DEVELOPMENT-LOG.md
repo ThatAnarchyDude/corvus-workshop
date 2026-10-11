@@ -239,7 +239,7 @@ commands prepared the battle test save; those grants are absent from the release
 Not all eight battles or the complete campaign have been playtested.
 
 Normal saves are carried forward for focused new-area checks; opening changes
-still receive fresh-game tests when needed. Mt. Moon and Route 4 are unconverted:
+still receive fresh-game tests when needed. Mt. Moon is being converted and Route 4 remains unconverted:
 their native exits remain available, but their events are outside this checkpoint.
 
 ## Prototype 0018 — work in progress, not published
@@ -263,15 +263,23 @@ once into Ivysaur. Two of five candies remained. Pressing B during the final evo
 stayed unevolved at level 16 after a two-candy batch. This is development
 progress; 0018 has not been published yet.
 
-Mt. Moon development has begun cumulatively from 0017. Its unpublished
-foundation adds Yellow's seven first-floor trainers, three Rocket grunts,
-low-level cave encounters, conversations and five ordinary item pickups.
-Six focused automated checks and six Route 3 regression checks pass. A normal
-0017 save reloads in the draft with its previous trainer defeat flag retained;
-the first cave Youngster launches a native level-10 battle. The fossil choice,
-Jessie/James scenes,
-remaining pickups and nearby Center still need work. This is development
-progress, not a new downloadable patch. Published 0017 remains unchanged.
+Mt. Moon development continues cumulatively from 0017. Its unpublished build
+includes Yellow's trainers, low-level cave encounters, fossil boss and exclusive
+fossil choice, the Rocket ambush, cave rewards, and the nearby Pokémon Center.
+The $500 level-5 Magikarp sale, nurse healing and shared player PC menu have been
+checked in the DS emulator. The Dome Fossil choice survives an ordinary save and
+fresh boot. The Rockets' level-14 Ekans, Meowth and Koffing battle and their visible
+departure also work. A Bug Catcher's position was adjusted so his battle cannot
+interrupt that scene.
+
+Development check — October 10, 2026, 9:53 PM EDT: Mega Punch can be learned
+without consuming its reusable TM, and the TM remains after saving and reloading.
+The hidden Moon Stone stays collected after saving and reloading; the hidden Ether is also awarded correctly. Yellow's deepest-cave
+encounter table is now selected around the fossil corridor; automated checks
+cover every map ID and the region boundary. The DS emulator also produced a level-11 Geodude encounter in that corridor. All 259 automated checks passed. These are development checks, not
+a published checkpoint. Custom Jessie/James and fossil graphics, remaining native
+item/encounter checks and final traversal still need work. Published 0017 remains
+unchanged.
 
 ## Agreed plans that are not finished features
 
