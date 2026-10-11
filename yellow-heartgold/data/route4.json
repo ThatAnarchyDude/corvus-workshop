@@ -1,0 +1,126 @@
+{
+  "reference": {
+    "repository": "pret/pokeyellow",
+    "commit": "e89ead154b9968aa50eed9328ff2b38b6c194382",
+    "paths": [
+      "text/Route4.asm",
+      "scripts/Route4.asm",
+      "data/maps/objects/Route4.asm",
+      "data/trainers/parties.asm",
+      "data/wild/maps/Route4.asm",
+      "data/pokemon/base_stats"
+    ]
+  },
+  "messages": {
+    "npc": "Ouch! I tripped over a rocky POKEMON, GEODUDE!",
+    "BattleText": "I came to get my mushroom POKEMON!",
+    "EndBattleText": "Oh! My cute mushroom POKEMON!",
+    "AfterBattleText": "There might not be any more mushrooms here.\rI think I got them all.",
+    "route_sign": "ROUTE 4\rMT. MOON - CERULEAN CITY",
+    "cave_sign": "MT. MOON\rTunnel Entrance",
+    "center_sign": "Heal your POKEMON!\rPOKEMON CENTER"
+  },
+  "encounter_rate": 20,
+  "wild_slots": [
+    {
+      "level": 8,
+      "species": 21
+    },
+    {
+      "level": 9,
+      "species": 21
+    },
+    {
+      "level": 9,
+      "species": 56
+    },
+    {
+      "level": 10,
+      "species": 21
+    },
+    {
+      "level": 8,
+      "species": 27
+    },
+    {
+      "level": 10,
+      "species": 19
+    },
+    {
+      "level": 10,
+      "species": 27
+    },
+    {
+      "level": 12,
+      "species": 19
+    },
+    {
+      "level": 11,
+      "species": 21
+    },
+    {
+      "level": 12,
+      "species": 21
+    }
+  ],
+  "trainer": {
+    "template": 151,
+    "class": 3,
+    "sprite": 320,
+    "x": 1250,
+    "z": 109,
+    "facing": 3,
+    "vision": 3,
+    "team": [
+      {
+        "species": 46,
+        "level": 31,
+        "moves": [
+          10,
+          78,
+          141,
+          147
+        ]
+      },
+      {
+        "species": 46,
+        "level": 31,
+        "moves": [
+          10,
+          78,
+          141,
+          147
+        ]
+      },
+      {
+        "species": 47,
+        "level": 31,
+        "moves": [
+          10,
+          78,
+          141,
+          147
+        ]
+      }
+    ]
+  },
+  "whirlwind_compatible_species": [
+    12,
+    16,
+    17,
+    18,
+    21,
+    22,
+    41,
+    42,
+    49,
+    83,
+    84,
+    85,
+    142,
+    144,
+    145,
+    146,
+    151
+  ]
+}

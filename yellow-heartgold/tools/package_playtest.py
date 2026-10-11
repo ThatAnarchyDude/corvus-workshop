@@ -12,7 +12,7 @@ VENDOR = PROJECT/'tools/vendor/rom-patcher'
 def build(destination, version='004'):
     version=f'{int(version):03d}'
     artifact_version=f'{int(version):04d}' if int(version)>=16 else version
-    if version not in ('004', '005', '006', '007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018'):
+    if version not in ('004', '005', '006', '007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '019'):
         raise ValueError('Unsupported prototype version')
     destination.mkdir(parents=True, exist_ok=True)
     patch = PROJECT/f'build/yellow-heartgold-prototype-{artifact_version}.xdelta'
@@ -22,7 +22,7 @@ def build(destination, version='004'):
         output_sha256=hashlib.sha256(rom.read_bytes()).hexdigest(),
         source_bytes=134217728, output_bytes=rom.stat().st_size,
         patch_sha256=hashlib.sha256(patch.read_bytes()).hexdigest())
-    if version in ('014','015','016','017','018'):
+    if version in ('014','015','016','017','018','019'):
         parent=f'{int(version)-1:04d}' if int(version)>=17 else f'{int(version)-1:03d}'
         manifest.update(parent_version=f'{int(parent):04d}' if int(version)>=16 else parent,cumulative=True,
                         parent_output_sha256=hashlib.sha256(
@@ -103,7 +103,7 @@ button.addEventListener('click',async()=>{
   } catch(error){status.textContent=error.message;finish();}
 });
 </script></html>'''.replace('004', version).replace('PACKAGE', encoded)
-    if version in ('005', '006', '007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018'):
+    if version in ('005', '006', '007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '019'):
         html=html.replace('Start a <strong>new game</strong> to test the revised opening. Keep earlier saves backed up.',
             'Start a <strong>new game</strong> to test the opening, or import a backed-up prototype 004 normal save through your emulator. Emulator save states should not be transferred between builds.')
     if version == '006':
@@ -111,7 +111,7 @@ button.addEventListener('click',async()=>{
         html=html.replace('a backed-up prototype 004 normal save','a backed-up prototype 004 or 005 normal save')
         html=html.replace('Oak’s Psyduck capture currently uses field animation.',
             'Reopen the bedroom PC to receive 95 of each evolution item. Make space in storage if prompted, then reopen it to collect the remainder.')
-    if version in ('007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018'):
+    if version in ('007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '019'):
         html=html.replace(f'Opening playtest · Prototype {version}',f'Oak’s Parcel playtest · Prototype {version}')
         html=html.replace('a backed-up prototype 004 normal save','a backed-up prototype 004, 005, 006 or 007 normal save')
         html=html.replace('The route remains blocked beyond the first testing area. Oak’s Psyduck capture currently uses field animation.',
@@ -162,6 +162,10 @@ button.addEventListener('click',async()=>{
         html=html.replace('a backed-up prototype 004, 005, 006 or 007 normal save','a backed-up prototype 0004–0017 normal save')
         html=html.replace('Areas beyond Viridian remain blocked.', 'Mt. Moon is converted. Route 4 is the next development area and remains unconverted.')
         html=html.replace('Evolution supplies remain available in the player’s PC.', 'Mt. Moon includes Yellow’s trainer teams, cave encounters, Super Nerd fossil battle, one exclusive fossil choice, and Jessie/James’s fossil ambush. Jessie and James have their own overworld sprites and Yellow’s paired battle portrait; the fossils have distinct ground graphics. The nearby Center heals Pokémon, provides shared player PC storage, and offers one level-5 Magikarp for 500 Pokédollars. Cave rewards include reusable Water Gun and Mega Punch TMs. Bulk Rare Candy use now offers a quantity picker, applies the batch, processes intermediate moves, and checks evolution once at the end. Normal four-move replacement choices still appear. All earlier features carry forward. Keep a backup of your ordinary save before switching builds; emulator save states are specific to their ROM version. Earlier downloads remain available separately.')
+    if version == '019':
+        html=html.replace('Oak’s Parcel playtest · Prototype 019','Route 4 checkpoint · Prototype 019')
+        html=html.replace('Areas beyond Viridian remain blocked.', 'Route 4 is converted. Cerulean City is the next unconverted area.')
+        html=html.replace('Evolution supplies remain available in the player’s PC.', 'Kanto signs now require the A button. Route 2 signs match their visible boards, and Viridian Forest has six visible Yellow information boards. Ground item balls enforce native solid collision until collected. Route 4 has Yellow encounters, dialogue, a reusable TM04 Whirlwind, and its optional Lass with two Paras and one Parasect at level 31, as in Yellow. She stands on a northern side path. All earlier features carry forward. Back up your normal save before switching; emulator save states belong to their exact ROM. Earlier download pages remain unchanged.')
     if artifact_version!=version:
         html=html.replace(f'Prototype {version}',f'Prototype {artifact_version}')
         html=html.replace(f'prototype {version}.nds',f'prototype {artifact_version}.nds')
@@ -177,6 +181,6 @@ button.addEventListener('click',async()=>{
 if __name__ == '__main__':
     parser=argparse.ArgumentParser()
     parser.add_argument('destination',type=Path)
-    parser.add_argument('--version',choices=['004','005','006','007','008','009','010','011','012','013','014','015','016','0016','017','0017','018','0018'],default='004')
+    parser.add_argument('--version',choices=['004','005','006','007','008','009','010','011','012','013','014','015','016','0016','017','0017','018','0018','019','0019'],default='004')
     args=parser.parse_args()
     build(args.destination,args.version)
