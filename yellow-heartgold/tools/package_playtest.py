@@ -12,7 +12,7 @@ VENDOR = PROJECT/'tools/vendor/rom-patcher'
 def build(destination, version='004'):
     version=f'{int(version):03d}'
     artifact_version=f'{int(version):04d}' if int(version)>=16 else version
-    if version not in ('004', '005', '006', '007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '019', '020', '021'):
+    if version not in ('004', '005', '006', '007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '019', '020', '021', '022'):
         raise ValueError('Unsupported prototype version')
     destination.mkdir(parents=True, exist_ok=True)
     patch = PROJECT/f'build/yellow-heartgold-prototype-{artifact_version}.xdelta'
@@ -22,7 +22,7 @@ def build(destination, version='004'):
         output_sha256=hashlib.sha256(rom.read_bytes()).hexdigest(),
         source_bytes=134217728, output_bytes=rom.stat().st_size,
         patch_sha256=hashlib.sha256(patch.read_bytes()).hexdigest())
-    if version in ('014','015','016','017','018','019','020','021'):
+    if version in ('014','015','016','017','018','019','020','021','022'):
         parent=f'{int(version)-1:04d}' if int(version)>=17 else f'{int(version)-1:03d}'
         manifest.update(parent_version=f'{int(parent):04d}' if int(version)>=16 else parent,cumulative=True,
                         parent_output_sha256=hashlib.sha256(
@@ -103,7 +103,7 @@ button.addEventListener('click',async()=>{
   } catch(error){status.textContent=error.message;finish();}
 });
 </script></html>'''.replace('004', version).replace('PACKAGE', encoded)
-    if version in ('005', '006', '007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '019', '020', '021'):
+    if version in ('005', '006', '007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '019', '020', '021', '022'):
         html=html.replace('Start a <strong>new game</strong> to test the revised opening. Keep earlier saves backed up.',
             'Start a <strong>new game</strong> to test the opening, or import a backed-up prototype 004 normal save through your emulator. Emulator save states should not be transferred between builds.')
     if version == '006':
@@ -111,7 +111,7 @@ button.addEventListener('click',async()=>{
         html=html.replace('a backed-up prototype 004 normal save','a backed-up prototype 004 or 005 normal save')
         html=html.replace('Oak’s Psyduck capture currently uses field animation.',
             'Reopen the bedroom PC to receive 95 of each evolution item. Make space in storage if prompted, then reopen it to collect the remainder.')
-    if version in ('007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '019', '020', '021'):
+    if version in ('007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '019', '020', '021', '022'):
         html=html.replace(f'Opening playtest · Prototype {version}',f'Oak’s Parcel playtest · Prototype {version}')
         html=html.replace('a backed-up prototype 004 normal save','a backed-up prototype 004, 005, 006 or 007 normal save')
         html=html.replace('The route remains blocked beyond the first testing area. Oak’s Psyduck capture currently uses field animation.',
@@ -174,6 +174,10 @@ button.addEventListener('click',async()=>{
         html=html.replace('Oak’s Parcel playtest · Prototype 021','Cerulean checkpoint · Prototype 021')
         html=html.replace('Areas beyond Viridian remain blocked.', 'Cerulean’s initial Yellow visit is converted. Route 24, Route 25, Bill and the returning robbed-house event follow in the next area checkpoints.')
         html=html.replace('Evolution supplies remain available in the player’s PC.', 'Challenge Misty’s Yellow team, meet Blue with his persisted starter, visit Melanie for Bulbasaur and exchange a Bike Voucher at the restored Bike Shop. The voucher comes from the Vermilion fan club in a later checkpoint. Pewter’s guide now automatically stops all exit lanes before Brock and walks around scenery to the gym. Existing Fly testing conveniences, reusable TMs and other earlier features carry forward. Back up your normal save before switching. Emulator save states belong to their exact ROM. Earlier patch pages remain unchanged.')
+    if version == '022':
+        html=html.replace('Oak’s Parcel playtest · Prototype 022','Save repair checkpoint · Prototype 022')
+        html=html.replace('Areas beyond Viridian remain blocked.', 'This checkpoint repairs normal-save progress and keeps the campaign at the same completed areas as 0021.')
+        html=html.replace('Evolution supplies remain available in the player’s PC.', 'Quest and reward flags now survive daily rollover. Cerulean flags no longer write past the save array. Completed parcel progress is restored where saved evidence supports it; Brock’s Bide and Misty’s BubbleBeam rewards are recognized from retained inventory. The Trainer Card opens on Kanto’s badges. Withdraw the Friendship Charm from your bedroom PC to maximize friendship for all non-Egg party Pokémon; if storage is full, withdraw a stack and reopen the PC. Other evolution requirements still apply. Back up your normal save before switching, and use Continue. Earlier patch pages remain unchanged.')
     if artifact_version!=version:
         html=html.replace(f'Prototype {version}',f'Prototype {artifact_version}')
         html=html.replace(f'prototype {version}.nds',f'prototype {artifact_version}.nds')
@@ -189,6 +193,6 @@ button.addEventListener('click',async()=>{
 if __name__ == '__main__':
     parser=argparse.ArgumentParser()
     parser.add_argument('destination',type=Path)
-    parser.add_argument('--version',choices=['004','005','006','007','008','009','010','011','012','013','014','015','016','0016','017','0017','018','0018','019','0019','020','0020','021','0021'],default='004')
+    parser.add_argument('--version',choices=['004','005','006','007','008','009','010','011','012','013','014','015','016','0016','017','0017','018','0018','019','0019','020','0020','021','0021','022','0022'],default='004')
     args=parser.parse_args()
     build(args.destination,args.version)

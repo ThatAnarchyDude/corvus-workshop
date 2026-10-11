@@ -35,6 +35,8 @@ class Script:
         self.fixups = []
 
     def emit(self, op, *args):
+        if op in (30, 31, 32) and args and 0xB60 <= args[0] < 0x4000:
+            raise ValueError(f'Persistent flag {args[0]:#x} exceeds HeartGold save bounds')
         self.data.extend(command(op, *args))
         return self
 
@@ -122,6 +124,8 @@ def events_encode(groups):
 
 
 def actor(obj, sprite, script, x, z, flag=0, facing=1):
+    if 0xB60 <= flag < 0x4000:
+        raise ValueError(f'Actor flag {flag:#x} exceeds HeartGold save bounds')
     return struct.pack('<6Hh5h2Hi', obj, sprite, 0, 0, flag, script, facing,
                        0, 0, 0, 0, 0, x, z, 0)
 

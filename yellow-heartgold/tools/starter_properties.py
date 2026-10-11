@@ -18,6 +18,12 @@ def append_code(main, source):
     assembly = '\n'.join(line.split('@')[0] for line in source.splitlines())
     raw, _ = Ks(KS_ARCH_ARM, KS_MODE_THUMB).asm(assembly, addr=address)
     code = bytes(raw)
+    # Keystone can silently widen a distant conditional jump to Thumb-2,
+    # which Unicorn supports but the DS ARM946E-S does not.
+    from capstone import Cs, CS_ARCH_ARM, CS_MODE_THUMB
+    for instruction in Cs(CS_ARCH_ARM, CS_MODE_THUMB).disasm(code, address):
+        if instruction.mnemonic.endswith('.w') and instruction.mnemonic.startswith('b'):
+            raise ValueError(f'ARM9 does not support {instruction.mnemonic} at {instruction.address:#x}; use a short conditional jump around a plain branch')
     itcm.data.extend(code)
     if len(itcm.data) >= 0x8000:
         raise ValueError('ITCM extension exceeds 32 KiB')

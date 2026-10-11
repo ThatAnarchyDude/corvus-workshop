@@ -10,7 +10,7 @@ from yellow_tms import ITEM_TABLE
 MAP=432
 VOUCHER=120
 BICYCLE=450
-RECEIVED=0xB60
+RECEIVED=0xA80
 
 
 def clerk():

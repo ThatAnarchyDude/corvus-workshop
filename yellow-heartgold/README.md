@@ -1,4 +1,6 @@
-Prototype 0021 restores Cerulean’s initial Yellow visit, the Bike Voucher exchange and Pewter’s mandatory pre-Brock escort. Its unpublished startup issue is repaired. See [CERULEAN.md](CERULEAN.md) and [the validation record](validation-prototype-0021.json). Route 24/25 and Bill follow next, with the requested PC friendship-testing item planned for 0022.
+Prototype 0022 repairs the normal-save and daily-reset regressions reported in 0021, recognizes retained one-time rewards, removes stale saved custom NPCs, shows Kanto’s badges above Johto’s and adds the temporary Friendship Charm to bedroom PC storage. See [SAVE-COMPATIBILITY.md](SAVE-COMPATIBILITY.md) and [the validation record](validation-prototype-0022.json). Back up the normal save and use Continue; recovery relies on retained evidence.
+
+Prototype 0021 restores Cerulean’s initial Yellow visit, the Bike Voucher exchange and Pewter’s mandatory pre-Brock escort. Its startup issue was repaired, but later playtesting found save-flag bugs; use 0022 for those fixes. See [CERULEAN.md](CERULEAN.md). Route 24/25, Bill and the returning robbed-house event follow next.
 
 Prototype 0020 adds the requested two-way Route 4 return crossing and free HM02 Fly at Celadon’s third-floor TM counter, with no badge required for outdoor Fly during testing. Normal saves remain compatible. Cerulean campaign work moves to 0021. See [TESTING-TRAVEL.md](TESTING-TRAVEL.md) and [the validation record](validation-prototype-0020.json).
 

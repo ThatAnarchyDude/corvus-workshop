@@ -61,7 +61,7 @@ class TextScript(Script):
         return super().emit(op, *args)
 
 
-def script(*, evolution_items=False, text_offset=0, service_only=False, shiny_charm=False):
+def script(*, evolution_items=False, text_offset=0, service_only=False, shiny_charm=False, friendship_charm=False):
     s = TextScript(text_offset)
     if not service_only:
         s.emit(96).emit(73, 1547)
@@ -93,6 +93,13 @@ def script(*, evolution_items=False, text_offset=0, service_only=False, shiny_ch
         for i,(item_var,qty_var) in enumerate(SLOTS):
             s.label(f'charm_slot_{i}').emit(41,item_var,114).emit(41,qty_var,1).emit(30,0xB3B).jump('boot')
     s.label('boot')
+    if friendship_charm:
+        s.emit(32,0xA8C).jump('friendship_ready',1)
+        for i,(_,qty_var) in enumerate(SLOTS):s.compare(qty_var,0).jump(f'friendship_slot_{i}',1)
+        message(s,39);s.jump('friendship_ready')
+        for i,(item_var,qty_var) in enumerate(SLOTS):
+            s.label(f'friendship_slot_{i}').emit(41,item_var,121).emit(41,qty_var,1).emit(30,0xA8C).jump('friendship_ready')
+        s.label('friendship_ready')
     if service_only:
         s.jump('player_services')
         s.label('main').jump('exit')
@@ -183,6 +190,7 @@ def script(*, evolution_items=False, text_offset=0, service_only=False, shiny_ch
     s.jump('subtract')
     s.label('confirm_toss')
     if shiny_charm:s.compare(0x8004,114).jump('protected_charm',1)
+    if friendship_charm:s.compare(0x8004,121).jump('protected_charm',1)
     s.emit(45);s.data.append(20 + getattr(s, "text_offset", 0))
     s.emit(63,0x800C).emit(53).compare(0x800C,0).jump('storage',5)
     s.label('subtract')
@@ -210,7 +218,7 @@ def script(*, evolution_items=False, text_offset=0, service_only=False, shiny_ch
         s.label(f'receipt_{mode}');message(s,msg);s.jump('storage')
     for label,msg in [('full',18),('insufficient',19),('no_room',17)]:
         s.label(label);message(s,msg);s.jump('storage')
-    if shiny_charm:
+    if shiny_charm or friendship_charm:
         s.label('protected_charm');message(s,40);s.jump('storage')
     s.label('exit')
     if service_only:
