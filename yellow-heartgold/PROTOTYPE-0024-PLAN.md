@@ -1,5 +1,8 @@
 # Prototype 0024 — Route 25 and Bill
 
+Implemented in prototype 0024. See ROUTE25-BILL.md and the validation record.
+The next checkpoint is PROTOTYPE-0025-PLAN.md.
+
 Continue cumulatively from published 0023. Preserve earlier patch folders.
 Convert Yellow’s Route 25 trainers, grass encounters, items and dialogue,
 then Bill’s transformation/help/SS Ticket scene using HeartGold assets.

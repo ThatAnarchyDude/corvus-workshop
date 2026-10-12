@@ -1,0 +1,826 @@
+{
+  "version": "0024",
+  "input_sha256": "3a861684a79452d6c6418e29ddc1e7b89c48345d638ad35cf75ea77cbbbb29de",
+  "route25": {
+    "tm": {
+      "tms": [
+        {
+          "item": 123,
+          "move": 69,
+          "index": 106,
+          "number": 19,
+          "name": "SEISMIC TOSS",
+          "key": "SEISMIC_TOSS",
+          "template": 349,
+          "later_index": 30,
+          "description": "The target is thrown using gravity. Damage equals the user's level."
+        }
+      ],
+      "lookup_hooks": [
+        {
+          "site": "0x2078000",
+          "hook": "0x1fffa4c",
+          "previous": "0x1fff809"
+        },
+        {
+          "site": "0x207804c",
+          "hook": "0x1fffa5c",
+          "previous": "0x1fff819"
+        }
+      ],
+      "display_hooks": [
+        {
+          "site": "0x21fe920",
+          "hook": "0x1fffa6c"
+        },
+        {
+          "site": "0x21ff5b2",
+          "hook": "0x1fffac8"
+        }
+      ],
+      "compatible_species": {
+        "SEISMIC_TOSS": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          25,
+          26,
+          27,
+          28,
+          31,
+          34,
+          35,
+          36,
+          39,
+          40,
+          54,
+          55,
+          56,
+          57,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          74,
+          75,
+          76,
+          80,
+          94,
+          96,
+          97,
+          104,
+          105,
+          106,
+          107,
+          108,
+          112,
+          113,
+          115,
+          122,
+          124,
+          125,
+          126,
+          127,
+          139,
+          141,
+          143,
+          150,
+          151,
+          156,
+          157,
+          158,
+          159,
+          160,
+          161,
+          162,
+          165,
+          166,
+          176,
+          180,
+          181,
+          183,
+          184,
+          185,
+          186,
+          190,
+          195,
+          199,
+          207,
+          209,
+          210,
+          212,
+          214,
+          215,
+          216,
+          217,
+          225,
+          236,
+          237,
+          239,
+          240,
+          241,
+          242,
+          246,
+          247,
+          248,
+          252,
+          253,
+          254,
+          256,
+          257,
+          259,
+          260,
+          271,
+          272,
+          274,
+          275,
+          286,
+          287,
+          288,
+          289,
+          294,
+          295,
+          296,
+          297,
+          302,
+          303,
+          306,
+          307,
+          308,
+          313,
+          314,
+          326,
+          327,
+          331,
+          332,
+          335,
+          341,
+          342,
+          347,
+          348,
+          352,
+          356,
+          371,
+          372,
+          373,
+          375,
+          376,
+          377,
+          378,
+          379,
+          382,
+          383,
+          384,
+          386,
+          390,
+          391,
+          392,
+          393,
+          394,
+          395,
+          402,
+          409,
+          418,
+          419,
+          424,
+          438,
+          439,
+          445,
+          446,
+          447,
+          448,
+          451,
+          452,
+          453,
+          454,
+          460,
+          461,
+          463,
+          464,
+          465,
+          466,
+          467,
+          468,
+          472,
+          475,
+          477,
+          483,
+          484,
+          486,
+          491,
+          493,
+          496,
+          497,
+          498
+        ]
+      },
+      "generation_one_compatibility": "Yellow",
+      "later_compatibility": "HeartGold Brick Break compatibility",
+      "native_tm_items_preserved": true,
+      "native_save_layout_preserved": true
+    },
+    "route": {
+      "map": 29,
+      "script": 1107,
+      "init": 1108,
+      "text": 897,
+      "event": 631,
+      "original": {
+        "script": 216,
+        "init": 461,
+        "text": 363,
+        "event": 593
+      }
+    },
+    "wild": 150,
+    "trainers": [
+      {
+        "id": 794,
+        "defeat_flag": 2154,
+        "role": "Hiker",
+        "trainer_class": 9,
+        "template": 25,
+        "sprite": 333,
+        "dialogue": "Route25Hiker1",
+        "x": 1335,
+        "z": 46,
+        "facing": 2,
+        "vision": 4,
+        "team": [
+          {
+            "species": 66,
+            "name": "MACHOP",
+            "level": 15,
+            "moves": [
+              2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "species": 74,
+            "name": "GEODUDE",
+            "level": 15,
+            "moves": [
+              33,
+              111,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "id": 795,
+        "defeat_flag": 2155,
+        "role": "Youngster",
+        "trainer_class": 2,
+        "template": 8,
+        "sprite": 317,
+        "dialogue": "Route25Youngster1",
+        "x": 1346,
+        "z": 49,
+        "facing": 0,
+        "vision": 3,
+        "team": [
+          {
+            "species": 19,
+            "name": "RATTATA",
+            "level": 15,
+            "moves": [
+              33,
+              39,
+              98,
+              158
+            ]
+          },
+          {
+            "species": 21,
+            "name": "SPEAROW",
+            "level": 15,
+            "moves": [
+              64,
+              45,
+              43,
+              31
+            ]
+          }
+        ]
+      },
+      {
+        "id": 796,
+        "defeat_flag": 2156,
+        "role": "Hiker",
+        "trainer_class": 9,
+        "template": 25,
+        "sprite": 333,
+        "dialogue": "Route25Hiker3",
+        "x": 1341,
+        "z": 43,
+        "facing": 1,
+        "vision": 4,
+        "team": [
+          {
+            "species": 95,
+            "name": "ONIX",
+            "level": 17,
+            "moves": [
+              33,
+              103,
+              20,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "id": 797,
+        "defeat_flag": 2157,
+        "role": "Youngster",
+        "trainer_class": 2,
+        "template": 8,
+        "sprite": 317,
+        "dialogue": "Route25Youngster2",
+        "x": 1364,
+        "z": 46,
+        "facing": 2,
+        "vision": 3,
+        "team": [
+          {
+            "species": 79,
+            "name": "SLOWPOKE",
+            "level": 17,
+            "moves": [
+              93,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "id": 798,
+        "defeat_flag": 2158,
+        "role": "Lass",
+        "trainer_class": 3,
+        "template": 22,
+        "sprite": 319,
+        "dialogue": "Route25CooltrainerF1",
+        "x": 1372,
+        "z": 46,
+        "facing": 1,
+        "vision": 2,
+        "team": [
+          {
+            "species": 32,
+            "name": "NIDORAN_M",
+            "level": 15,
+            "moves": [
+              43,
+              33,
+              30,
+              24
+            ]
+          },
+          {
+            "species": 29,
+            "name": "NIDORAN_F",
+            "level": 15,
+            "moves": [
+              45,
+              33,
+              10,
+              24
+            ]
+          }
+        ]
+      },
+      {
+        "id": 799,
+        "defeat_flag": 2159,
+        "role": "Camper",
+        "trainer_class": 4,
+        "template": 26,
+        "sprite": 345,
+        "dialogue": "Route25CooltrainerM",
+        "x": 1367,
+        "z": 38,
+        "facing": 1,
+        "vision": 3,
+        "team": [
+          {
+            "species": 19,
+            "name": "RATTATA",
+            "level": 14,
+            "moves": [
+              33,
+              39,
+              98,
+              158
+            ]
+          },
+          {
+            "species": 23,
+            "name": "EKANS",
+            "level": 14,
+            "moves": [
+              35,
+              43,
+              40,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "id": 800,
+        "defeat_flag": 2160,
+        "role": "Hiker",
+        "trainer_class": 9,
+        "template": 25,
+        "sprite": 333,
+        "dialogue": "Route25Hiker2",
+        "x": 1376,
+        "z": 49,
+        "facing": 0,
+        "vision": 3,
+        "team": [
+          {
+            "species": 74,
+            "name": "GEODUDE",
+            "level": 13,
+            "moves": [
+              33,
+              111,
+              0,
+              0
+            ]
+          },
+          {
+            "species": 74,
+            "name": "GEODUDE",
+            "level": 13,
+            "moves": [
+              33,
+              111,
+              0,
+              0
+            ]
+          },
+          {
+            "species": 66,
+            "name": "MACHOP",
+            "level": 13,
+            "moves": [
+              2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "species": 74,
+            "name": "GEODUDE",
+            "level": 13,
+            "moves": [
+              33,
+              111,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "id": 801,
+        "defeat_flag": 2161,
+        "role": "Youngster",
+        "trainer_class": 2,
+        "template": 8,
+        "sprite": 317,
+        "dialogue": "Route25Youngster3",
+        "x": 1384,
+        "z": 43,
+        "facing": 2,
+        "vision": 3,
+        "team": [
+          {
+            "species": 23,
+            "name": "EKANS",
+            "level": 14,
+            "moves": [
+              35,
+              43,
+              40,
+              0
+            ]
+          },
+          {
+            "species": 27,
+            "name": "SANDSHREW",
+            "level": 14,
+            "moves": [
+              10,
+              28,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "id": 802,
+        "defeat_flag": 2162,
+        "role": "Lass",
+        "trainer_class": 3,
+        "template": 22,
+        "sprite": 319,
+        "dialogue": "Route25CooltrainerF2",
+        "x": 1392,
+        "z": 45,
+        "facing": 1,
+        "vision": 4,
+        "team": [
+          {
+            "species": 43,
+            "name": "ODDISH",
+            "level": 13,
+            "moves": [
+              71,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "species": 16,
+            "name": "PIDGEY",
+            "level": 13,
+            "moves": [
+              16,
+              28,
+              98,
+              0
+            ]
+          },
+          {
+            "species": 43,
+            "name": "ODDISH",
+            "level": 13,
+            "moves": [
+              71,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    ],
+    "common": 1109,
+    "refresh": {
+      "hook": "0x1fffb24",
+      "bytes": 84,
+      "marker": "0x4d502429",
+      "removed_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "previous": "0x1fff9f9"
+    },
+    "flags": [
+      2708,
+      2709,
+      2710,
+      2711,
+      2712,
+      2713,
+      2714,
+      2715
+    ],
+    "hidden": [
+      {
+        "script": 8107,
+        "item": 38,
+        "name": "ETHER",
+        "x": 1393,
+        "z": 43,
+        "flag": 907
+      },
+      {
+        "script": 8199,
+        "item": 40,
+        "name": "ELIXIR",
+        "x": 1339,
+        "z": 40,
+        "flag": 999
+      }
+    ],
+    "hidden_table": "0x1ffce68",
+    "house": {
+      "map": 440,
+      "script": 1110,
+      "init": 1111,
+      "text": 898,
+      "event": 632,
+      "original": {
+        "script": 217,
+        "init": 462,
+        "text": 364,
+        "event": 395
+      },
+      "matrix": 293,
+      "land": 688,
+      "original_matrix": 254,
+      "original_land": 370,
+      "opened_chambers": [
+        {
+          "x": 4,
+          "z": 3,
+          "previous": 32768
+        },
+        {
+          "x": 4,
+          "z": 4,
+          "previous": 32768
+        },
+        {
+          "x": 10,
+          "z": 3,
+          "previous": 32768
+        },
+        {
+          "x": 10,
+          "z": 4,
+          "previous": 32768
+        }
+      ],
+      "refresh": {
+        "hook": "0x1fffb78",
+        "bytes": 84,
+        "marker": "0x4d5024bc",
+        "removed_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31
+        ],
+        "previous": "0x1fffb25"
+      },
+      "ticket_item": 456,
+      "phase_var": 16716,
+      "cerulean_bill_state": 16709
+    },
+    "johto_unchanged": true,
+    "outdoor_terrain_unchanged": true
+  },
+  "startup": {
+    "word_aligned": true,
+    "itcm_bytes": 31692,
+    "remaining_bytes": 1076
+  },
+  "output_sha256": "38c4ae17ae724549880cf5e1d21ad7a8eb1d7033719a9b12b88653749339f142",
+  "patch_sha256": "736cd7f7bba528bf5f13f137c824c9d5142a69ea55e6244b8c55d94eb6bcd264",
+  "roundtrip_verified": true,
+  "publication": "Release validated locally; public commit/link recorded after push.",
+  "verification": {
+    "automated": {
+      "passed": 29,
+      "failed": 0,
+      "scope": "15 Route 25/Bill/native checks plus 14 Mt. Moon, Blue properties, startup/Cut and saved-actor/daily-reset regressions",
+      "command": "PROTOTYPE0024_ROM=build/yellow-heartgold-prototype-0024.nds PROTOTYPE0023_ROM=build/yellow-heartgold-prototype-0024.nds PROTOTYPE0021_ROM=build/yellow-heartgold-prototype-0024.nds PYTHONPATH=tests:tools .venv/bin/python -m unittest test_prototype0024 test_mtmoon_corrections test_prototype0021_native test_prototype0023_native.Native.test_refresh_chain_only_removes_the_scoped_actor_ids test_prototype0023_native.Native.test_daily_reset_keeps_route24_flags_and_save_trailer -v"
+    },
+    "native": {
+      "emulator": "DeSmuME libretro ARMv5 JIT",
+      "source": "Private copy of the normal 0023 save; private field transports prepare locations, never included in published ROM",
+      "observed": [
+        "Automatic first Hiker battle: Machop and Geodude level 15; victory sets trainer flag 86A.",
+        "Bill visibly enters the left chamber; PC wait state survives normal Save/Continue.",
+        "Machine sound/white flash restore normal lighting; Bill walks out of the right chamber and grants exactly one S.S. Ticket automatically.",
+        "Normal Save/Continue on the final ROM retains separated Bill, phase 2, ticket flag, exactly one ticket, parcel completion, National Dex and four party members.",
+        "Normal cottage exit and reentry preserve human Bill without replaying the scene.",
+        "TM19 Seismic Toss is collected; TM19 and earlier TM45 Thunder Wave display correctly in the native TM pocket.",
+        "Hidden Ether uses the native pickup message and Medicine pocket.",
+        "Golduck learns Seismic Toss through the native TM/move-replacement screen; TM19 quantity remains one afterward."
+      ],
+      "limits": [
+        "Not a complete difficulty playthrough of all nine trainers.",
+        "Prepared party includes Golduck 21, Pidgey 10, a privately granted Pikachu 15 and Charmander 10; some earlier contest wins were staged.",
+        "The PC collection adapts the original list to native field portraits, rather than reproducing the Game Boy Pokedex layout.",
+        "Later-generation Seismic Toss compatibility uses HeartGold Brick Break eligibility.",
+        "Android melonDS 0023 freeze was not reproduced in owner/cloud DeSmuME checks; parked at owner request, with no confirmed cause.",
+        "Scripted RAM monitoring has validated field/quest data only; battle/text-box hooks are unavailable."
+      ]
+    },
+    "geometry": {
+      "unchanged_outdoor_matrix": true,
+      "unchanged_johto_headers": true,
+      "reachable_route_tiles_checked": 635,
+      "bill_front_reachable": true,
+      "tm_front_reachable": true,
+      "only_interior_permission_changes": [
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          10,
+          3
+        ],
+        [
+          10,
+          4
+        ]
+      ]
+    },
+    "browser": {
+      "browser": "Chromium",
+      "output_sha256": "38c4ae17ae724549880cf5e1d21ad7a8eb1d7033719a9b12b88653749339f142",
+      "expected_sha256": "38c4ae17ae724549880cf5e1d21ad7a8eb1d7033719a9b12b88653749339f142",
+      "download_filename": "Pokemon-Psyduck-Yellow-prototype-0024.nds",
+      "status": "Your prototype passed verification. Tap Download below.",
+      "previous_prototype_rejected": true,
+      "page_errors": []
+    },
+    "recording": {
+      "file": "prototype-0024-bill-final-20261012.mp4",
+      "duration_seconds": 40.19,
+      "audio": "Native emulator PCM encoded as AAC, 44100 Hz stereo; nonzero audio verified",
+      "video": "H.264 1024x768, both DS screens and read-only RAM HUD",
+      "rom_sha256": "38c4ae17ae724549880cf5e1d21ad7a8eb1d7033719a9b12b88653749339f142",
+      "recorded_at_utc": "2026-10-12T06:07:41.885663+00:00",
+      "ram_writes": false
+    }
+  }
+}

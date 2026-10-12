@@ -42,7 +42,11 @@ def patch(rom, configs=TMS, yellow_compatibility=None, later_name='Water Pulse')
     # The native UI computes the displayed TM number from a contiguous item
     # range. Substitute only the display value, retaining the actual bag ID.
     overlays=rom.loadArm9Overlays();bag=overlays[15];display=[]
-    numbers = dict(((115,34),(116,12),(117,1),(118,4),(119,11)))
+    # Later checkpoints replace these display hooks. Retain every earlier
+    # custom TM number instead of showing a native contiguous-range number.
+    numbers = {item:number for item,number in
+               ((115,34),(116,12),(117,1),(118,4),(119,11),(122,45))
+               if struct.unpack_from('<H',d,ITEM_TABLE+item*8)[0]}
     numbers.update((tm['item'],tm['number']) for tm in TMS)
     for site,load in ((0x021FE920,'ldrh r1, [r7]'),(0x021FF5B2,'ldrh r1, [r3, r7]')):
         at=site-bag.ramAddress

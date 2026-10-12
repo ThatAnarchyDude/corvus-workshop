@@ -1,0 +1,495 @@
+{
+  "reference": {
+    "repository": "pret/pokeyellow",
+    "commit": "e89ead154b9968aa50eed9328ff2b38b6c194382",
+    "paths": [
+      "scripts/Route25.asm",
+      "text/Route25.asm",
+      "scripts/BillsHouse.asm",
+      "text/BillsHouse.asm",
+      "engine/events/hidden_events/bills_house_pc.asm",
+      "data/text/text_2.asm",
+      "data/trainers/parties.asm",
+      "data/wild/maps/Route25.asm",
+      "data/pokemon/evos_moves.asm",
+      "data/pokemon/base_stats"
+    ]
+  },
+  "messages": {
+    "Route25Youngster1BattleText": "Local trainers come here to practice!",
+    "Route25Youngster1EndBattleText": "You're decent.",
+    "Route25Youngster1AfterBattleText": "All POKEMON have weaknesses. It's best to raise different kinds.",
+    "Route25Youngster2BattleText": "Dad took me to a great party on S.S.ANNE at VERMILION CITY!",
+    "Route25Youngster2EndBattleText": "I'm not mad!",
+    "Route25Youngster2AfterBattleText": "On S.S.ANNE, I saw trainers from around the world.",
+    "Route25CooltrainerMBattleText": "I'm a cool guy. I've got a girl friend!",
+    "Route25CooltrainerMEndBattleText": "Aww, darn...",
+    "Route25CooltrainerMAfterBattleText": "Oh well. My girl will cheer me up.",
+    "Route25CooltrainerF1BattleText": "Hi! My boy friend is cool!",
+    "Route25CooltrainerF1EndBattleText": "I'm in a slump!",
+    "Route25CooltrainerF1AfterBattleText": "I wish my guy was as good as you!",
+    "Route25Youngster3BattleText": "I knew I had to fight you!",
+    "Route25Youngster3EndBattleText": "I knew I'd lose too!",
+    "Route25Youngster3AfterBattleText": "If your POKEMON gets confused or falls asleep, switch it!",
+    "Route25CooltrainerF2BattleText": "My friend has a cute POKEMON. I'm so jealous!",
+    "Route25CooltrainerF2EndBattleText": "I'm not so jealous!",
+    "Route25CooltrainerF2AfterBattleText": "You came from MT. MOON? May I have a CLEFAIRY?",
+    "Route25Hiker1BattleText": "I just got down from MT.MOON, but I'm ready!",
+    "Route25Hiker1EndBattleText": "You worked hard!",
+    "Route25Hiker1AfterBattleText": "Drat! A ZUBAT bit me back in there.",
+    "Route25Hiker2BattleText": "I'm off to see a POKEMON collector at the cape!",
+    "Route25Hiker2EndBattleText": "You got me.",
+    "Route25Hiker2AfterBattleText": "The collector has many rare kinds of POKEMON.",
+    "Route25Hiker3BattleText": "You're going to see BILL? First, let's fight!",
+    "Route25Hiker3EndBattleText": "You're something.",
+    "Route25Hiker3AfterBattleText": "The trail below is a shortcut to CERULEAN CITY.",
+    "Route25BillSignText": "SEA COTTAGE BILL lives here!",
+    "BillsHouseBillDontLeaveText": "Whoa, don't go anywhere, wait!",
+    "BillsHouseBillImNotAPokemonText": "Hiya! I'm a POKEMON... ...No I'm not!\rCall me BILL! I'm a true blue POKEMANIAC! Hey! What's with that skeptical look?\rI'm not joshing you, I screwed up an experiment and got combined with a POKEMON!\rSo, how about it? Help me out here!",
+    "BillsHouseBillUseSeparationSystemText": "When I'm in the TELEPORTER, go to my PC and run the Cell Separation System!",
+    "BillsHouseBillNoYouGottaHelpText": "No!? Come on, you gotta help a guy in deep trouble!\rWhat do you say, chief? Please? OK? All right!",
+    "BillsHouseBillThankYouText": "BILL: Yeehah! Thanks, bud! I owe you one!\rSo, did you come to see my POKEMON collection? You didn't? That's a bummer.\rI've got to thank you... Oh here, maybe this'll do.",
+    "BillsHouseBillWhyDontYouGoInsteadOfMeText": "That cruise ship, S.S.ANNE, is in VERMILION CITY. Its passengers are all trainers!\rThey invited me to their party, but I can't stand fancy do's. Why don't you go instead of me?",
+    "BillsHouseBillCheckOutMyRarePokemonText": "BILL: Look, bud, just check out some of my rare POKEMON on my PC!",
+    "BillsHouseMonitorText": "TELEPORTER is displayed on the PC monitor.",
+    "BillsHouseInitiatedText": "{PLAYER} initiated TELEPORTER's Cell Separator!",
+    "BillsHousePokemonListText1": "BILL's favorite POKEMON list!",
+    "BillsHousePokemonListText2": "Which POKEMON do you want to see?"
+  },
+  "trainers": [
+    {
+      "role": "Hiker",
+      "trainer_class": 9,
+      "template": 25,
+      "sprite": 333,
+      "dialogue": "Route25Hiker1",
+      "x": 1335,
+      "z": 46,
+      "facing": 2,
+      "vision": 4,
+      "team": [
+        {
+          "species": 66,
+          "name": "MACHOP",
+          "level": 15,
+          "moves": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "species": 74,
+          "name": "GEODUDE",
+          "level": 15,
+          "moves": [
+            33,
+            111,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "role": "Youngster",
+      "trainer_class": 2,
+      "template": 8,
+      "sprite": 317,
+      "dialogue": "Route25Youngster1",
+      "x": 1346,
+      "z": 49,
+      "facing": 0,
+      "vision": 3,
+      "team": [
+        {
+          "species": 19,
+          "name": "RATTATA",
+          "level": 15,
+          "moves": [
+            33,
+            39,
+            98,
+            158
+          ]
+        },
+        {
+          "species": 21,
+          "name": "SPEAROW",
+          "level": 15,
+          "moves": [
+            64,
+            45,
+            43,
+            31
+          ]
+        }
+      ]
+    },
+    {
+      "role": "Hiker",
+      "trainer_class": 9,
+      "template": 25,
+      "sprite": 333,
+      "dialogue": "Route25Hiker3",
+      "x": 1341,
+      "z": 43,
+      "facing": 1,
+      "vision": 4,
+      "team": [
+        {
+          "species": 95,
+          "name": "ONIX",
+          "level": 17,
+          "moves": [
+            33,
+            103,
+            20,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "role": "Youngster",
+      "trainer_class": 2,
+      "template": 8,
+      "sprite": 317,
+      "dialogue": "Route25Youngster2",
+      "x": 1364,
+      "z": 46,
+      "facing": 2,
+      "vision": 3,
+      "team": [
+        {
+          "species": 79,
+          "name": "SLOWPOKE",
+          "level": 17,
+          "moves": [
+            93,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "role": "Lass",
+      "trainer_class": 3,
+      "template": 22,
+      "sprite": 319,
+      "dialogue": "Route25CooltrainerF1",
+      "x": 1372,
+      "z": 46,
+      "facing": 1,
+      "vision": 2,
+      "team": [
+        {
+          "species": 32,
+          "name": "NIDORAN_M",
+          "level": 15,
+          "moves": [
+            43,
+            33,
+            30,
+            24
+          ]
+        },
+        {
+          "species": 29,
+          "name": "NIDORAN_F",
+          "level": 15,
+          "moves": [
+            45,
+            33,
+            10,
+            24
+          ]
+        }
+      ]
+    },
+    {
+      "role": "Camper",
+      "trainer_class": 4,
+      "template": 26,
+      "sprite": 345,
+      "dialogue": "Route25CooltrainerM",
+      "x": 1367,
+      "z": 38,
+      "facing": 1,
+      "vision": 3,
+      "team": [
+        {
+          "species": 19,
+          "name": "RATTATA",
+          "level": 14,
+          "moves": [
+            33,
+            39,
+            98,
+            158
+          ]
+        },
+        {
+          "species": 23,
+          "name": "EKANS",
+          "level": 14,
+          "moves": [
+            35,
+            43,
+            40,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "role": "Hiker",
+      "trainer_class": 9,
+      "template": 25,
+      "sprite": 333,
+      "dialogue": "Route25Hiker2",
+      "x": 1376,
+      "z": 49,
+      "facing": 0,
+      "vision": 3,
+      "team": [
+        {
+          "species": 74,
+          "name": "GEODUDE",
+          "level": 13,
+          "moves": [
+            33,
+            111,
+            0,
+            0
+          ]
+        },
+        {
+          "species": 74,
+          "name": "GEODUDE",
+          "level": 13,
+          "moves": [
+            33,
+            111,
+            0,
+            0
+          ]
+        },
+        {
+          "species": 66,
+          "name": "MACHOP",
+          "level": 13,
+          "moves": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "species": 74,
+          "name": "GEODUDE",
+          "level": 13,
+          "moves": [
+            33,
+            111,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "role": "Youngster",
+      "trainer_class": 2,
+      "template": 8,
+      "sprite": 317,
+      "dialogue": "Route25Youngster3",
+      "x": 1384,
+      "z": 43,
+      "facing": 2,
+      "vision": 3,
+      "team": [
+        {
+          "species": 23,
+          "name": "EKANS",
+          "level": 14,
+          "moves": [
+            35,
+            43,
+            40,
+            0
+          ]
+        },
+        {
+          "species": 27,
+          "name": "SANDSHREW",
+          "level": 14,
+          "moves": [
+            10,
+            28,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "role": "Lass",
+      "trainer_class": 3,
+      "template": 22,
+      "sprite": 319,
+      "dialogue": "Route25CooltrainerF2",
+      "x": 1392,
+      "z": 45,
+      "facing": 1,
+      "vision": 4,
+      "team": [
+        {
+          "species": 43,
+          "name": "ODDISH",
+          "level": 13,
+          "moves": [
+            71,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "species": 16,
+          "name": "PIDGEY",
+          "level": 13,
+          "moves": [
+            16,
+            28,
+            98,
+            0
+          ]
+        },
+        {
+          "species": 43,
+          "name": "ODDISH",
+          "level": 13,
+          "moves": [
+            71,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    }
+  ],
+  "wild_slots": [
+    {
+      "level": 12,
+      "species": 43,
+      "name": "ODDISH"
+    },
+    {
+      "level": 12,
+      "species": 69,
+      "name": "BELLSPROUT"
+    },
+    {
+      "level": 13,
+      "species": 16,
+      "name": "PIDGEY"
+    },
+    {
+      "level": 14,
+      "species": 43,
+      "name": "ODDISH"
+    },
+    {
+      "level": 14,
+      "species": 69,
+      "name": "BELLSPROUT"
+    },
+    {
+      "level": 15,
+      "species": 16,
+      "name": "PIDGEY"
+    },
+    {
+      "level": 13,
+      "species": 48,
+      "name": "VENONAT"
+    },
+    {
+      "level": 16,
+      "species": 48,
+      "name": "VENONAT"
+    },
+    {
+      "level": 17,
+      "species": 16,
+      "name": "PIDGEY"
+    },
+    {
+      "level": 17,
+      "species": 17,
+      "name": "PIDGEOTTO"
+    }
+  ],
+  "encounter_rate": 15,
+  "seismic_toss_compatible_species": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    25,
+    26,
+    27,
+    28,
+    31,
+    34,
+    35,
+    36,
+    39,
+    40,
+    54,
+    55,
+    56,
+    57,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    74,
+    75,
+    76,
+    80,
+    94,
+    96,
+    97,
+    104,
+    105,
+    106,
+    107,
+    108,
+    112,
+    113,
+    115,
+    122,
+    124,
+    125,
+    126,
+    127,
+    139,
+    141,
+    143,
+    150,
+    151
+  ]
+}
