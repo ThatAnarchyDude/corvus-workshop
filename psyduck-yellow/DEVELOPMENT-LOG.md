@@ -719,3 +719,16 @@ Each completed prototype update will include a labeled gameplay test recording
 here, alongside its playable patch link. Prepared saves or test-only setup will be
 identified, and earlier checkpoints and recordings will remain available. No new
 0026 completion recording or playable patch is being claimed in this progress update.
+
+
+## Prototype 0026 — local playable checkpoint, October 12, 2026
+
+Prototype 0026 has been delivered to the owner’s RetroArch downloads, with a separate copy of the latest normal 0025 save. Originals remain untouched. This is an incremental Route 5 encounters and Day Care checkpoint; 0025 remains the latest public patch page until the new artifacts are published.
+
+Route 5 now has Yellow’s weighted grass encounters throughout the day, its Underground Path sign and no inherited outdoor NPC. Its existing HeartGold house provides native Day Care interactions using the same deposited Pokémon as Johto. Separate native checks observed deposit, withdrawal with the 100-Pokédollar fee and a normal save/Continue reload preserving the entire Day Care save block. Egg handling is still untested. Johto resources, the supplied Oak introduction and naming screens, and approved customizations are preserved.
+
+Six focused Route 5 checks pass. The cumulative patch was applied to a pristine USA HeartGold ROM and reconstructed the exact tested 0026 file. A new 40-second recording with real game music and stereo audio shows Continue into the Kanto Day Care and attendant dialogue. It uses a copied prepared save; it is not campaign difficulty evidence or a recording of the entire deposit/withdrawal cycle. The playable file and recording are linked in the owner’s desktop chat; public artifact publication remains pending.
+
+Yellow’s Route 5 terrain and Day Care placement remain unfinished. Saffron’s drink roadblock is excluded from this checkpoint: a saved-variable collision with bedroom PC item slots was found during development. The gate source now uses a shared flag without that saved variable; native tests are still needed. Area-name banners on every transition and Blue’s phase-aware rival title also remain pending. Work continues toward the full Yellow campaign.
+
+The live dashboard now places the upper DS screen on the left and the touch screen on the right. Video and audio pause while editing. The owner-posted viewing URL is unchanged; a proposed separation of public viewing from private controls awaits specific approval.
