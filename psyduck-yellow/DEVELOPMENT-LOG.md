@@ -5,6 +5,9 @@ still being built. Share this page with anyone following the project.
 
 **Last updated: October 12, 2026 at 07:27 AM EDT.**
 
+Follow our LIVE testing stream!
+https://across-keen-clay-states.trycloudflare.com/#token=SaBO46q-TKH_m6lLAib088MTzb7drRISjWaqa7IlVxM
+
 **Latest published patch: prototype 0025.** Nugget Bridge trainers appear before the Cerulean boundary. Its southern board now reads with A, Bill’s PC has a visible computer, and Cerulean’s robbed-house/Rocket event returns reusable TM28 Dig after helping Bill. Route 5 follows next.
 
 [Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0025/index.html)
