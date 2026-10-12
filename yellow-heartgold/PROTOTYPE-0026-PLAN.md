@@ -72,3 +72,12 @@ These tests use an isolated private transport fixture; no transports or grants a
 included in the development ROM. Withdrawal, normal save/reload, egg handling,
 Yellow geometry/Day Care placement and the Saffron drink gate remain unverified or
 unfinished. Do not publish this foundation as a completed 0026 checkpoint.
+
+
+## Incremental 0026 checkpoint delivered locally — October 12
+
+The tested Route 5 encounter/Day Care foundation has been delivered as 0026, with its own copied normal save and a 40-second native audio/video recording. The cumulative pristine-base xdelta round trip matches SHA256 c3085440e6f27d02898c6a9dd56ab0f64a4ede4f92c7dcd61dbbde4a6c1be9d4. Six focused Route 5 checks pass. Deposit, separate withdrawal/100 fee and normal save/Continue preservation were observed on private copies; egg handling remains untested. The recording shows Continue and attendant dialogue, not a complete deposit cycle.
+
+Do not describe Route 5 as fully rebuilt. Yellow geometry and Day Care placement remain unfinished. Continue them and the native Saffron gate checks toward the next checkpoint. Exclude unverified gates from the delivered 0026 ROM. Development gate builds v1/v2/v3 contain colliding saved-variable choices and must never be used as release evidence. Current gate source uses only flag 0xA9D and a literal-zero coordinate condition; four compiled checks pass, native validation pending. Bedroom PC dynamically occupies 0x4152 through 0x4165. Preserve Johto and all owner saves.
+
+Public artifact publication is pending; no ROM/save or source push is authorized by local packaging. Existing public 0025 remains available. The owner explicitly authorizes plan/log updates; preserve their added live-stream link while access changes await approval.
