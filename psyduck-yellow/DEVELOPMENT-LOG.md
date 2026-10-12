@@ -3,14 +3,14 @@
 A plain-language guide to what has changed, what you can play now, and what is
 still being built. Share this page with anyone following the project.
 
-**Last updated: October 12, 2026 at 07:27 AM EDT.**
+**Last updated: October 12, 2026 at 10:17 AM EDT.**
 
 Follow our LIVE testing stream!
 https://across-keen-clay-states.trycloudflare.com/#token=SaBO46q-TKH_m6lLAib088MTzb7drRISjWaqa7IlVxM
 
-**Latest published patch: prototype 0025.** Nugget Bridge trainers appear before the Cerulean boundary. Its southern board now reads with A, Bill’s PC has a visible computer, and Cerulean’s robbed-house/Rocket event returns reusable TM28 Dig after helping Bill. Route 5 follows next.
+**Latest published patch: prototype 0026.** Route 5 has Yellow’s encounters at every time of day and native shared Day Care services. Yellow terrain/Day Care placement and Saffron guards remain unfinished in this checkpoint.
 
-[Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0025/index.html)
+[Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0026/index.html)
 
 The download page contains a modification patch. Select your original,
 unmodified USA HeartGold game file to build the playable DS file on your own
@@ -732,3 +732,12 @@ Six focused Route 5 checks pass. The cumulative patch was applied to a pristine 
 Yellow’s Route 5 terrain and Day Care placement remain unfinished. Saffron’s drink roadblock is excluded from this checkpoint: a saved-variable collision with bedroom PC item slots was found during development. The gate source now uses a shared flag without that saved variable; native tests are still needed. Area-name banners on every transition and Blue’s phase-aware rival title also remain pending. Work continues toward the full Yellow campaign.
 
 The live dashboard now places the upper DS screen on the left and the touch screen on the right. Video and audio pause while editing. The owner-posted viewing URL is unchanged; a proposed separation of public viewing from private controls awaits specific approval.
+
+
+## Prototype 0026 — phone patching page published
+
+[Create prototype 0026 on your phone or PC](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0026/index.html) by selecting your original, unmodified USA HeartGold ROM. The page applies the cumulative modification patch locally and verifies the finished file; your ROM is never uploaded. Use the original HeartGold file, rather than 0025, as patch input. Earlier patch pages remain unchanged. The owner’s Windows file link timed out on the phone, so this restores the browser-based download workflow.
+
+[Watch the new 40-second test recording with real game audio](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/playtests/prototype-0026.html). It shows normal Continue into the Kanto Day Care and attendant dialogue using a copied prepared save; it does not show a full deposit/withdrawal cycle or establish campaign difficulty. Separate native deposit, withdrawal/100 fee and normal-save preservation checks are recorded in the checkpoint notes. Egg handling is untested. Yellow’s Route 5 geometry, precise Day Care placement and Saffron drink gates remain excluded or unfinished in 0026.
+
+The owner specifically approved public viewing with private controls. The existing live URL is unchanged and now grants viewing/audio only; a new private control credential stays local. Ten bridge checks pass, and remote checks confirm that viewing/audio work while public and anonymous game controls are rejected. Video/audio remain paused while editing. No ROMs, saves or private control credential were published.
