@@ -749,7 +749,13 @@
   "output_sha256": "38c4ae17ae724549880cf5e1d21ad7a8eb1d7033719a9b12b88653749339f142",
   "patch_sha256": "736cd7f7bba528bf5f13f137c824c9d5142a69ea55e6244b8c55d94eb6bcd264",
   "roundtrip_verified": true,
-  "publication": "Release validated locally; public commit/link recorded after push.",
+  "publication": {
+    "commit": "a1abb87d42dadd6892efa06e870f912edfe984ae",
+    "confirmed_push_utc": "2026-10-12T06:18:08.845404+00:00",
+    "source_commit": "b6d2e8d26c78e63b47f247a81cf3bbdf914e885c",
+    "url": "https://raw.githack.com/ThatAnarchyDude/corvus-workshop/a1abb87d42dadd6892efa06e870f912edfe984ae/psyduck-yellow/prototype-0024/index.html",
+    "status": "Published; patch files and previous releases preserved"
+  },
   "verification": {
     "automated": {
       "passed": 29,
@@ -768,7 +774,8 @@
         "Normal cottage exit and reentry preserve human Bill without replaying the scene.",
         "TM19 Seismic Toss is collected; TM19 and earlier TM45 Thunder Wave display correctly in the native TM pocket.",
         "Hidden Ether uses the native pickup message and Medicine pocket.",
-        "Golduck learns Seismic Toss through the native TM/move-replacement screen; TM19 quantity remains one afterward."
+        "Golduck learns Seismic Toss through the native TM/move-replacement screen; TM19 quantity remains one afterward.",
+        "Post-help PC shows native Eevee-family portraits and cries; B exits the collection."
       ],
       "limits": [
         "Not a complete difficulty playthrough of all nine trainers.",
@@ -820,7 +827,15 @@
       "video": "H.264 1024x768, both DS screens and read-only RAM HUD",
       "rom_sha256": "38c4ae17ae724549880cf5e1d21ad7a8eb1d7033719a9b12b88653749339f142",
       "recorded_at_utc": "2026-10-12T06:07:41.885663+00:00",
-      "ram_writes": false
+      "ram_writes": false,
+      "browser_playback": {
+        "playback": "passed",
+        "duration": 40.19,
+        "width": 1024,
+        "height": 768,
+        "muted": false,
+        "src": "http://127.0.0.1:8793/clips/prototype-0024-bill-final-20261012.mp4"
+      }
     }
   }
 }

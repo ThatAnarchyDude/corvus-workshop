@@ -7,7 +7,7 @@ still being built. Share this page with anyone following the project.
 
 **Latest published patch: prototype 0024.** Route 25 now has Yellow’s nine trainer teams, grass encounters, hidden Ether/Elixir and reusable Seismic Toss TM. Bill visibly enters his chamber, his PC runs the separation machine, and he gives the S.S. Ticket automatically. The returning Cerulean robbed-house/Dig quest follows next.
 
-[Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0024/index.html)
+[Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/a1abb87d42dadd6892efa06e870f912edfe984ae/psyduck-yellow/prototype-0024/index.html)
 
 The download page contains a modification patch. Select your original,
 unmodified USA HeartGold game file to build the playable DS file on your own
