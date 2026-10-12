@@ -3,11 +3,11 @@
 A plain-language guide to what has changed, what you can play now, and what is
 still being built. Share this page with anyone following the project.
 
-**Last updated: October 11, 2026.**
+**Last updated: October 11, 2026 at 10:47 PM EDT.**
 
-**Latest published patch: prototype 0022.** This repairs saved quest/reward progress, the returning Viridian cashier and guards, and Brock’s repeated Bide reward. Kanto’s badges now appear above Johto’s on the Trainer Card. A Friendship Charm in bedroom PC storage makes happiness-based evolution testing easier. The campaign remains at Cerulean’s initial visit; Route 24/25 and Bill follow next.
+**Latest published patch: prototype 0023.** Route 24 now has Yellow’s Nugget Bridge contest, Nugget/Rocket event, Charmander gift, Thunder Wave TM and grass encounters. Blue correctly stops you on the bridge. Mt. Moon’s extra figure is removed, its fossil guard battle is automatic, and Jessie/James ambush every exit approach after fossil selection. Route 25 and Bill follow next.
 
-[Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/0a1887b1ef80c3980576b1ff0793191b736d1859/psyduck-yellow/prototype-0022/index.html)
+[Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0023/index.html)
 
 The download page contains a modification patch. Select your original,
 unmodified USA HeartGold game file to build the playable DS file on your own
@@ -225,7 +225,8 @@ push date and time.
 | 0019 | Oct 11, 2026 · 12:01 AM EDT | Route 4: Yellow encounters, optional Lass and reusable Whirlwind; working A-button signs, visible Forest boards, solid item balls and carried-save NPC refresh. |
 | 0020 | Oct 11, 2026 · 12:55 AM EDT | Testing travel: two-way Route 4 return crossing and free HM02 Fly at Celadon’s third-floor TM counter; outdoor Fly needs no badge. |
 | 0021 | Oct 11, 2026 · 10:30 AM EDT | Cerulean’s initial Yellow visit, Bike Voucher exchange and corrected Pewter guide escort; startup repair. Later save issues are corrected in 0022. |
-| 0022 | Oct 11, 2026 · 1:46 PM EDT | Saved quest/reward repair, cleared stale Viridian NPCs, Kanto-first Trainer Card and PC Friendship Charm. **Latest published patch.** |
+| 0022 | Oct 11, 2026 · 1:46 PM EDT | Saved quest/reward repair, cleared stale Viridian NPCs, Kanto-first Trainer Card and PC Friendship Charm. |
+| 0023 | Oct 11, 2026 · 10:47 PM EDT | Nugget Bridge, Charmander and reusable Thunder Wave; correct Blue bridge approach; Mt. Moon fossil rendering and mandatory guard/exit battles. **Latest published patch.** |
 
 [Detailed release notes and verification records](https://github.com/ThatAnarchyDude/corvus-workshop/tree/d40c17fb9e721305bedf0781e00f1a11ce5cfe7c/yellow-heartgold)
 
@@ -398,7 +399,7 @@ The owner’s reports of gatehouse NPCs inside counters and occasional transitio
 
 ### Next: prototype 0023
 
-Continue Route 24, Route 25/Bill and the returning Cerulean robbed-house/Dig event. The requested friendship-testing item is available in 0022.
+Continue Route 25/Bill and the returning Cerulean robbed-house/Dig event. The requested friendship-testing item is available in 0022.
 
 ### Future dialogue review
 
@@ -548,3 +549,37 @@ three members, including the new female shiny Eevee holding Leftovers.
 held-item assignment, move editing and validated save export. Signature,
 update certificate and 16 KB packaging checks passed too. The new interface
 still needs the owner's phone test.
+
+### Prototype 0023: Nugget Bridge and Mt. Moon corrections
+
+Published: October 11, 2026 at 10:47 PM EDT.
+
+The bridge’s five contest trainers, optional grass trainer and Rocket recruiter
+use Yellow’s teams, levels, moves and dialogue. Beat all five for one Nugget,
+then the recruitment battle. Losing permits a retry without another Nugget.
+Damian gives one level-10 Charmander; make room in your party first. The solid
+item ball gives reusable TM45 Thunder Wave. Grass uses Yellow’s species and
+levels during morning, day and night. Blue’s approach covers the bridge lanes
+at the correct height and keeps his saved starter.
+
+The extra figure near the fossils came from incorrect fossil rendering
+settings. Both fossils now display as items. The guard automatically stops
+you for his battle before fossil selection; an early exit attempt starts his
+battle before any fossil reminder. Jessie and James wait to the left of the
+southern opening, walk up for their ambush after a fossil is chosen, and walk
+to the exit after defeat. Side approaches along the bottom wall are covered
+too. The map terrain and warps remain unchanged.
+
+Normal saves preserve the rewards, party and National Pokédex through Continue.
+The automated checks passed 37 tests, and the browser patcher reproduced the
+expected DS file. Native checks used private prepared saves, including staged
+contest wins and a test Pikachu for TM teaching; these are focused checks, not
+a complete campaign difficulty test. Private test grants and transports are
+excluded from the prototype. Android game testing remains deferred.
+
+A new [30-second recording with game audio](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/playtests/index.html) shows the fossil
+rendering and automatic guard scene. Earlier recordings and patches remain.
+[Route 24 details](https://github.com/ThatAnarchyDude/corvus-workshop/blob/main/yellow-heartgold/ROUTE24.md),
+[Mt. Moon corrections](https://github.com/ThatAnarchyDude/corvus-workshop/blob/main/yellow-heartgold/MTMOON-CORRECTIONS.md),
+and [verification](https://github.com/ThatAnarchyDude/corvus-workshop/blob/main/yellow-heartgold/validation-prototype-0023.json)
+are available for reviewers.
