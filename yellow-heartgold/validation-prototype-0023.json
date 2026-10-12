@@ -636,7 +636,7 @@
   "output_sha256": "3a861684a79452d6c6418e29ddc1e7b89c48345d638ad35cf75ea77cbbbb29de",
   "patch_sha256": "0a3b34c485f97880b9483dbbfa7bbb4cab505067cc699d6eca00ce06863c55cb",
   "roundtrip_verified": true,
-  "publication": "Validated locally; publication record will identify the immutable public commit.",
+  "publication": "Published as an immutable cumulative browser patch; ROMs and saves remain private",
   "verification": {
     "unit_tests": {
       "route24_scripts_assets": 8,
@@ -721,5 +721,18 @@
     "build/emulator-0023-moon-east/side-pair-approach.png",
     "build/emulator-0023-final-gifts-reload/final-continue.png",
     "build/emulator-0023-final-nugget-reload/final-continue.png"
-  ]
+  ],
+  "download_url": "https://raw.githack.com/ThatAnarchyDude/corvus-workshop/67f2ddb6fa8de337d247456448f6c50e9c157802/psyduck-yellow/prototype-0023/index.html",
+  "published_utc": "2026-10-12T02:47:02.165645+00:00",
+  "delivery_verification": {
+    "public_github_files_match": true
+  },
+  "recording_browser": {
+    "playback": "passed",
+    "duration": 30.089002,
+    "width": 1024,
+    "height": 768,
+    "muted": false,
+    "src": "psyduck-yellow/playtests/clips/prototype-0023-fossil-guard-20261011.mp4"
+  }
 }

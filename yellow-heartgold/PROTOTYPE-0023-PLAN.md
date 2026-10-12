@@ -1,4 +1,4 @@
-# Prototype 0023 — next campaign checkpoint
+# Prototype 0023 — published checkpoint
 
 Cumulative from published 0022. Preserve all existing release pages.
 
@@ -18,4 +18,4 @@ Blue teams reacting to the player's Eevee evolution await the owner's team
 plan. No new terrain roadblocks without an explicit request; required story
 events still gate progression.
 
-The PKHeX prerequisite is complete. Android editor work is paused at the owner’s request. Prototype 0023 adds Route 24 and the owner’s Mt. Moon corrections; publication waits for the recorded validation checks. Next checkpoint: Route 25 and Bill, then the returning robbed-house/Dig event.
+The PKHeX prerequisite is complete. Android editor work is paused at the owner’s request. Prototype 0023 adds Route 24 and the owner’s Mt. Moon corrections; the final checks passed and the immutable patch is published. Next checkpoint: Route 25 and Bill, then the returning robbed-house/Dig event.

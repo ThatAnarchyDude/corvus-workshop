@@ -7,7 +7,7 @@ still being built. Share this page with anyone following the project.
 
 **Latest published patch: prototype 0023.** Route 24 now has Yellow’s Nugget Bridge contest, Nugget/Rocket event, Charmander gift, Thunder Wave TM and grass encounters. Blue correctly stops you on the bridge. Mt. Moon’s extra figure is removed, its fossil guard battle is automatic, and Jessie/James ambush every exit approach after fossil selection. Route 25 and Bill follow next.
 
-[Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0023/index.html)
+[Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/67f2ddb6fa8de337d247456448f6c50e9c157802/psyduck-yellow/prototype-0023/index.html)
 
 The download page contains a modification patch. Select your original,
 unmodified USA HeartGold game file to build the playable DS file on your own
