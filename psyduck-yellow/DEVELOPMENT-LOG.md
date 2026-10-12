@@ -3,11 +3,11 @@
 A plain-language guide to what has changed, what you can play now, and what is
 still being built. Share this page with anyone following the project.
 
-**Last updated: October 12, 2026 at 02:18 AM EDT.**
+**Last updated: October 12, 2026 at 03:53 AM EDT.**
 
-**Latest published patch: prototype 0024.** Route 25 now has Yellow’s nine trainer teams, grass encounters, hidden Ether/Elixir and reusable Seismic Toss TM. Bill visibly enters his chamber, his PC runs the separation machine, and he gives the S.S. Ticket automatically. The returning Cerulean robbed-house/Dig quest follows next.
+**Latest published patch: prototype 0025.** Nugget Bridge trainers appear before the Cerulean boundary. Its southern board now reads with A, Bill’s PC has a visible computer, and Cerulean’s robbed-house/Rocket event returns reusable TM28 Dig after helping Bill. Route 5 follows next.
 
-[Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/a1abb87d42dadd6892efa06e870f912edfe984ae/psyduck-yellow/prototype-0024/index.html)
+[Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0025/index.html)
 
 The download page contains a modification patch. Select your original,
 unmodified USA HeartGold game file to build the playable DS file on your own
@@ -20,7 +20,7 @@ prototype. Published checkpoints are kept separately and are not overwritten.
 [Watch the recorded playtests](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/playtests/index.html).
 
 This public page will receive additional recordings during active development.
-The latest recording is a 40-second prototype 0024 Bill scene with real game music and stereo audio. Earlier audio recordings remain available.
+Two new 40-second prototype 0025 recordings show the bridge/sign and Bill’s visible computer, with real game music and stereo audio. Earlier recordings remain available.
 The first sample remains a short, silent prototype 0022 controller/recording check,
 showing both DS screens and a RAM HUD. It uses a prepared test save containing
 a test-only level-50 Pikachu; it does not establish normal campaign difficulty.
@@ -227,7 +227,8 @@ push date and time.
 | 0021 | Oct 11, 2026 · 10:30 AM EDT | Cerulean’s initial Yellow visit, Bike Voucher exchange and corrected Pewter guide escort; startup repair. Later save issues are corrected in 0022. |
 | 0022 | Oct 11, 2026 · 1:46 PM EDT | Saved quest/reward repair, cleared stale Viridian NPCs, Kanto-first Trainer Card and PC Friendship Charm. |
 | 0023 | Oct 11, 2026 · 10:47 PM EDT | Nugget Bridge, Charmander and reusable Thunder Wave; correct Blue bridge approach; Mt. Moon fossil rendering and mandatory guard/exit battles. |
-| 0024 | Oct 12, 2026 · 02:18 AM EDT | Yellow’s Route 25, reusable Seismic Toss, hidden Ether/Elixir, Bill’s visible separation scene and automatic S.S. Ticket. **Latest published patch.** |
+| 0024 | Oct 12, 2026 · 02:18 AM EDT | Yellow’s Route 25, reusable Seismic Toss, hidden Ether/Elixir, Bill’s visible separation scene and automatic S.S. Ticket. |
+| 0025 | Oct 12, 2026 · 03:53 AM EDT | Visible bridge trainers, a working Nugget Bridge board, Bill’s visible PC, and Cerulean’s rear-house/Rocket/Dig event. **Latest published patch.** |
 
 [Detailed release notes and verification records](https://github.com/ThatAnarchyDude/corvus-workshop/tree/d40c17fb9e721305bedf0781e00f1a11ce5cfe7c/yellow-heartgold)
 
@@ -400,7 +401,7 @@ The owner’s reports of gatehouse NPCs inside counters and occasional transitio
 
 ### Next: prototype 0023
 
-Continue the returning Cerulean robbed-house/Dig event, then the southbound campaign. The requested friendship-testing item is available in 0022.
+Continue the southbound Route 5 campaign. The requested friendship-testing item is available in 0022.
 
 ### Future dialogue review
 
@@ -629,3 +630,50 @@ disappearing when the player is nearby. Similar behavior affects other added
 trainers. Investigating and fixing that is the first priority for 0025, before
 continuing the robbed-house/Rocket/Dig event. The released 0024 patch remains
 unchanged; the visibility issue has not yet been fixed.
+
+### Prototype 0025: visible bridge trainers and the stolen Dig TM
+
+Published: October 12, 2026 at 03:53 AM EDT.
+
+The first three Nugget Bridge trainers now appear before you cross from
+Cerulean into Route 24. HeartGold’s neighboring-map actor system keeps them
+visible during an approach and retreat, including after loading an older
+normal save. Their ordinary trainer battles remain intact. This fixes the
+confirmed boundary issue; focused checks of another added Route 25 trainer
+also showed normal visibility and sight-based interaction. Other rendering
+reports can still be investigated if they recur.
+
+The board west of the southern bridge entrance now reads ROUTE 24, NUGGET
+BRIDGE, and “Five trainers await your challenge!” with the A button. Bill’s
+PC now has a visible HeartGold computer terminal at its existing interaction
+spot. It still operates the separation machine and his later collection menu.
+
+After helping Bill, enter Cerulean’s robbed house and use its new rear-wall
+passage. The Rocket stops adjacent approaches and battles with Yellow’s
+level-17 Machop and Drowzee. Winning returns one reusable TM28 Dig. He walks
+away afterward; a full TM pocket permits a reward retry without another
+battle. Losing does not finish the event. Its completion and reward survive
+normal Save/Continue, and the rear entrance cannot skip Bill’s earlier gate.
+
+All 31 focused/regression checks passed. Native DeSmuME checks confirmed
+older-save loading, bridge approaches and boundary transitions, A-button sign
+text, Bill’s visible PC and separation, the Rocket battle/reward/departure,
+both rear-house transitions and saved completion. The browser patcher
+reconstructed the expected playable file and rejected an earlier prototype
+as its input. Prepared private saves were used; these checks do not establish
+normal campaign difficulty or exhaustive emulator compatibility.
+
+The two new recordings play with sound. Small recorder audio-clock drift is
+aligned without changing pitch, and that adjustment is recorded in the clip
+log. Original soundtracks, earlier patches and earlier recordings are retained.
+Johto terrain and archived HeartGold events remain unchanged. Private ROMs,
+saves, raw RAM and test transports are excluded from this publication.
+
+[Watch the recordings with sound](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/playtests/index.html),
+[read the checkpoint details](https://github.com/ThatAnarchyDude/corvus-workshop/blob/main/yellow-heartgold/CERULEAN-DIG-VISIBILITY.md),
+or [review the checks](https://github.com/ThatAnarchyDude/corvus-workshop/blob/main/yellow-heartgold/validation-prototype-0025.json).
+
+Route 5 is next. The owner’s broader dialogue list and Blue teams reacting to
+the player’s Eevee evolution remain future work. Android editor development
+is paused, and the earlier melonDS movement-freeze report remains parked
+without a confirmed cause.
