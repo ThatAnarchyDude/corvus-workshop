@@ -620,3 +620,12 @@ The owner reported a freeze in Android melonDS while crossing northern Route 2
 and Cerulean in 0023. Their PC DeSmuME comparison did not freeze, and they asked
 to park the report and continue. The cause remains unconfirmed; transferring
 a save has not been established as the cause.
+
+
+### Next: trainer visibility, then the returning Cerulean quest
+
+The owner’s new screenshots show Nugget Bridge trainers appearing and
+disappearing when the player is nearby. Similar behavior affects other added
+trainers. Investigating and fixing that is the first priority for 0025, before
+continuing the robbed-house/Rocket/Dig event. The released 0024 patch remains
+unchanged; the visibility issue has not yet been fixed.
