@@ -1,0 +1,1693 @@
+{
+  "version": "0025",
+  "input_sha256": "38c4ae17ae724549880cf5e1d21ad7a8eb1d7033719a9b12b88653749339f142",
+  "visibility": {
+    "city": 52,
+    "owner_map": 28,
+    "actors": [
+      0,
+      1,
+      2
+    ],
+    "event": 633,
+    "script": 1112,
+    "aliases": [
+      "00003e01000001001c00ffff0300040000000000000000002d055e0000000300",
+      "01003f01000001001c00ffff02000400000000000000000031055a0000000300",
+      "02003d01000001001c00ffff0300040000000000000000002d05560000000300"
+    ],
+    "sight_guard": {
+      "site": "0x206429a",
+      "hook": "0x1fffbcc",
+      "bytes": 18
+    },
+    "saved_actor_refresh": {
+      "marker": "0x4d502552",
+      "hook": "0x1fffbe0",
+      "bytes": 236,
+      "previous": "0x1fffb79"
+    },
+    "terrain_unchanged": true,
+    "trainer_records_unchanged": true
+  },
+  "robbery": {
+    "city": {
+      "script": 1113,
+      "init": 1104,
+      "text": 899,
+      "event": 634,
+      "thief_entry": 17,
+      "back_entry": 18,
+      "first_message": 20,
+      "refresh": {
+        "hook": "0x1fffccc",
+        "bytes": 76,
+        "marker": "0x4d502531",
+        "removed_ids": [
+          31
+        ],
+        "previous": "0x1fffbe1"
+      },
+      "exit": [
+        1305,
+        112
+      ],
+      "warp": 8
+    },
+    "house": {
+      "script": 1114,
+      "text": 900,
+      "event": 635,
+      "matrix": 294,
+      "land": 689,
+      "old_matrix": 96,
+      "old_land": 214,
+      "rear_exit": [
+        6,
+        3
+      ],
+      "original_event": 625
+    },
+    "trainer": 786,
+    "team": [
+      {
+        "species": 66,
+        "level": 17
+      },
+      {
+        "species": 96,
+        "level": 17
+      }
+    ],
+    "dig_item": 355,
+    "flags": [
+      2693,
+      2694,
+      2716
+    ],
+    "scene_var": 16717,
+    "johto_unchanged": true,
+    "no_new_HM_barriers": true
+  },
+  "bill_pc": {
+    "map": 440,
+    "model": 138,
+    "interaction": [
+      2,
+      7
+    ],
+    "matrix": 295,
+    "land": 690,
+    "old_matrix": 293,
+    "old_land": 688,
+    "previous_permission": 32768,
+    "native_scripts_unchanged": true,
+    "native_area_list_unchanged": true
+  },
+  "bridge_sign": {
+    "map": 52,
+    "position": [
+      1324,
+      106
+    ],
+    "text": "ROUTE 24\rNUGGET BRIDGE\rFive trainers await your challenge!",
+    "script": 1115,
+    "text_bank": 901,
+    "event": 636,
+    "entry": 19,
+    "message": 26,
+    "A_button_only": true
+  },
+  "startup": {
+    "word_aligned": true,
+    "itcm_bytes": 32024,
+    "remaining_bytes": 744
+  },
+  "output_sha256": "52853b58ad6d2e1f51b74409024c53657870273d63e727c05a9e42a578bf9af2",
+  "patch_sha256": "51a99a42d5d8173061d41bacccda8aaa0ee8be0e1ea9af15f1a9e9e9e3daf75c",
+  "roundtrip_verified": true,
+  "publication": "Validated locally; awaiting publication",
+  "tests": {
+    "tests": 31,
+    "passed": 31,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "successful": true
+  },
+  "browser": {
+    "browser": "Chromium",
+    "output_sha256": "52853b58ad6d2e1f51b74409024c53657870273d63e727c05a9e42a578bf9af2",
+    "expected_sha256": "52853b58ad6d2e1f51b74409024c53657870273d63e727c05a9e42a578bf9af2",
+    "download_filename": "Pokemon-Psyduck-Yellow-prototype-0025.nds",
+    "status": "Your prototype passed verification. Tap Download below.",
+    "previous_prototype_rejected": true,
+    "page_errors": []
+  },
+  "validated_at_utc": "2026-10-12T07:45:34.099873+00:00",
+  "native_testing": {
+    "emulator": "DeSmuME 0.9.12 libretro, ARM JIT; normal Continue and native controller inputs",
+    "old_0024_save": "Loaded without cross-version states; party count 4, parcel_state 2, National Dex true and one S.S. Ticket retained",
+    "bridge": "Before fix map52 x1327,z97 had no Route24 actors; after fix aliases0..2 were present and visible before the boundary; preserved across map28 entry, retreat, Bag open/close and Save/Continue",
+    "route25": "Lass802 visible four tiles ahead; stepping into sight triggered native approach and battle dialogue",
+    "sign": "Full Route24/NuggetBridge/challenge text with A; proximity alone did not open it",
+    "Bill_PC": "Visible native computer at2,7; normal A interaction performed separation, Bill walked out, one Ticket456 awarded automatically",
+    "robbery": "Native Machop17/Drowzee17 battle won using prepared Golduck21; item355 quantity1, flagsA85/A86/A9C and trainer defeat flag862 set; Rocket walked away and was absent on Continue",
+    "house": "Native back exit to city and Bill-gated scripted rear entry both traversed; front warp and furniture preserved",
+    "save": "Saved in game after battle, then fresh normal Continue in final0025 retained one Dig, one Ticket, party4, NationalDex and parcel2",
+    "limits": "Prepared test party includes private test Pikachu15; not normal campaign difficulty or exhaustive rendering/Android compatibility testing; loss/full-pocket branches are script tests",
+    "ram_writes": false
+  },
+  "recordings": [
+    {
+      "label": "Prototype 0025 \u2014 bridge visibility",
+      "recorded_at_utc": "2026-10-12T07:42:13.679587+00:00",
+      "silent": false,
+      "audio_source": "native libretro PCM callbacks",
+      "sample_rate": 44100,
+      "audio_samples": 1778800,
+      "audio_nonzero": true,
+      "native_fps": 59.8261,
+      "video_frames": 479,
+      "duration_seconds": 40.032694760313646,
+      "source_audio_duration_seconds": 40.33560090702948,
+      "source_clock_drift_seconds": 0.30290614671583427,
+      "audio_tempo_correction": 1.0075664690705788,
+      "audio_pitch_preserved": true,
+      "encoded_stream_durations": {
+        "video": 40.032695,
+        "audio": 40.040998
+      },
+      "ram_writes": false,
+      "events": [
+        {
+          "native_frame": 2500,
+          "buttons": [
+            "start"
+          ]
+        },
+        {
+          "native_frame": 3158,
+          "buttons": [
+            "a"
+          ]
+        },
+        {
+          "native_frame": 7166,
+          "buttons": [
+            "a"
+          ]
+        },
+        {
+          "elapsed_seconds": 0.0,
+          "ram": {
+            "field_system": "0x22a0230",
+            "map_id": 52,
+            "player": {
+              "x": 1327,
+              "y": 107,
+              "height": 6
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 1.003,
+          "ram": {
+            "field_system": "0x22a0230",
+            "map_id": 52,
+            "player": {
+              "x": 1327,
+              "y": 107,
+              "height": 6
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 2.006,
+          "ram": {
+            "field_system": "0x22a0230",
+            "map_id": 52,
+            "player": {
+              "x": 1327,
+              "y": 107,
+              "height": 6
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "native_frame": 8300,
+          "buttons": [
+            "left"
+          ]
+        },
+        {
+          "elapsed_seconds": 3.009,
+          "ram": {
+            "field_system": "0x22a0230",
+            "map_id": 52,
+            "player": {
+              "x": 1325,
+              "y": 107,
+              "height": 6
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "native_frame": 8390,
+          "buttons": [
+            "up"
+          ]
+        },
+        {
+          "elapsed_seconds": 4.012,
+          "ram": {
+            "field_system": "0x22a0230",
+            "map_id": 52,
+            "player": {
+              "x": 1324,
+              "y": 107,
+              "height": 6
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "native_frame": 8420,
+          "buttons": [
+            "a"
+          ]
+        },
+        {
+          "elapsed_seconds": 5.015,
+          "ram": {
+            "field_system": "0x22a0230",
+            "map_id": 52,
+            "player": {
+              "x": 1324,
+              "y": 107,
+              "height": 6
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 6.017,
+          "ram": {
+            "field_system": "0x22a0230",
+            "map_id": 52,
+            "player": {
+              "x": 1324,
+              "y": 107,
+              "height": 6
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 7.02,
+          "ram": {
+            "field_system": "0x22a0230",
+            "map_id": 52,
+            "player": {
+              "x": 1324,
+              "y": 107,
+              "height": 6
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 8.023,
+          "ram": {
+            "field_system": "0x22a0230",
+            "map_id": 52,
+            "player": {
+              "x": 1324,
+              "y": 107,
+              "height": 6
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "native_frame": 8650,
+          "buttons": [
+            "a"
+          ]
+        },
+        {
+          "elapsed_seconds": 9.026,
+          "ram": {
+            "field_system": "0x22a0230",
+            "map_id": 52,
+            "player": {
+              "x": 1324,
+              "y": 107,
+              "height": 6
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 10.029,
+          "ram": {
+            "field_system": "0x22a0230",
+            "map_id": 52,
+            "player": {
+              "x": 1324,
+              "y": 107,
+              "height": 6
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 11.032,
+          "ram": {
+            "field_system": "0x22a0230",
+            "map_id": 52,
+            "player": {
+              "x": 1324,
+              "y": 107,
+              "height": 6
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 12.035,
+          "ram": {
+            "field_system": "0x22a0230",
+            "map_id": 52,
+            "player": {
+              "x": 1324,
+              "y": 107,
+              "height": 6
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "native_frame": 8910,
+          "buttons": [
+            "a"
+          ]
+        },
+        {
+          "elapsed_seconds": 13.038,
+          "ram": {
+            "field_system": "0x22a0230",
+            "map_id": 52,
+            "player": {
+              "x": 1324,
+              "y": 107,
+              "height": 6
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 14.041,
+          "ram": {
+            "field_system": "0x22a0230",
+            "map_id": 52,
+            "player": {
+              "x": 1324,
+              "y": 107,
+              "height": 6
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 15.044,
+          "ram": {
+            "field_system": "0x22a0230",
+            "map_id": 52,
+            "player": {
+              "x": 1324,
+              "y": 107,
+              "height": 6
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 16.047,
+          "ram": {
+            "field_system": "0x22a0230",
+            "map_id": 52,
+            "player": {
+              "x": 1324,
+              "y": 107,
+              "height": 6
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 17.049,
+          "ram": {
+            "field_system": "0x22a0230",
+            "map_id": 52,
+            "player": {
+              "x": 1324,
+              "y": 107,
+              "height": 6
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "native_frame": 9180,
+          "buttons": [
+            "a"
+          ]
+        },
+        {
+          "elapsed_seconds": 18.052,
+          "ram": {
+            "field_system": "0x22a0230",
+            "map_id": 52,
+            "player": {
+              "x": 1324,
+              "y": 107,
+              "height": 6
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "native_frame": 9250,
+          "buttons": [
+            "right"
+          ]
+        },
+        {
+          "elapsed_seconds": 19.055,
+          "ram": {
+            "field_system": "0x22a0230",
+            "map_id": 52,
+            "player": {
+              "x": 1326,
+              "y": 107,
+              "height": 6
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "native_frame": 9350,
+          "buttons": [
+            "up"
+          ]
+        },
+        {
+          "elapsed_seconds": 20.058,
+          "ram": {
+            "field_system": "0x22a0230",
+            "map_id": 52,
+            "player": {
+              "x": 1327,
+              "y": 107,
+              "height": 6
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 21.061,
+          "ram": {
+            "field_system": "0x22a0230",
+            "map_id": 52,
+            "player": {
+              "x": 1327,
+              "y": 103,
+              "height": 6
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 22.064,
+          "ram": {
+            "field_system": "0x22a0230",
+            "map_id": 52,
+            "player": {
+              "x": 1327,
+              "y": 100,
+              "height": 6
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 23.067,
+          "ram": {
+            "field_system": "0x22a0230",
+            "map_id": 52,
+            "player": {
+              "x": 1327,
+              "y": 98,
+              "height": 6
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 24.07,
+          "ram": {
+            "field_system": "0x22a0230",
+            "map_id": 52,
+            "player": {
+              "x": 1327,
+              "y": 98,
+              "height": 6
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 25.073,
+          "ram": {
+            "field_system": "0x22a0230",
+            "map_id": 52,
+            "player": {
+              "x": 1327,
+              "y": 98,
+              "height": 6
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "native_frame": 9690,
+          "buttons": [
+            "up"
+          ]
+        },
+        {
+          "elapsed_seconds": 26.076,
+          "ram": {
+            "field_system": "0x22a0230",
+            "map_id": 52,
+            "player": {
+              "x": 1327,
+              "y": 97,
+              "height": 6
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 27.078,
+          "ram": {
+            "field_system": "0x22a0230",
+            "map_id": 52,
+            "player": {
+              "x": 1327,
+              "y": 97,
+              "height": 6
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 28.081,
+          "ram": {
+            "field_system": "0x22a0230",
+            "map_id": 52,
+            "player": {
+              "x": 1327,
+              "y": 97,
+              "height": 6
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "native_frame": 9870,
+          "buttons": [
+            "up"
+          ]
+        },
+        {
+          "elapsed_seconds": 29.084,
+          "ram": {
+            "field_system": "0x22a0230",
+            "map_id": 52,
+            "player": {
+              "x": 1327,
+              "y": 96,
+              "height": 6
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 30.087,
+          "ram": {
+            "field_system": "0x22a0230",
+            "map_id": 52,
+            "player": {
+              "x": 1327,
+              "y": 96,
+              "height": 6
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 31.09,
+          "ram": {
+            "field_system": "0x22a0230",
+            "map_id": 52,
+            "player": {
+              "x": 1327,
+              "y": 96,
+              "height": 6
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "native_frame": 10070,
+          "buttons": [
+            "down"
+          ]
+        },
+        {
+          "elapsed_seconds": 32.093,
+          "ram": {
+            "field_system": "0x22a0230",
+            "map_id": 52,
+            "player": {
+              "x": 1327,
+              "y": 96,
+              "height": 6
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 33.096,
+          "ram": {
+            "field_system": "0x22a0230",
+            "map_id": 52,
+            "player": {
+              "x": 1327,
+              "y": 98,
+              "height": 6
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 34.099,
+          "ram": {
+            "field_system": "0x22a0230",
+            "map_id": 52,
+            "player": {
+              "x": 1327,
+              "y": 98,
+              "height": 6
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 35.102,
+          "ram": {
+            "field_system": "0x22a0230",
+            "map_id": 52,
+            "player": {
+              "x": 1327,
+              "y": 98,
+              "height": 6
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "native_frame": 10280,
+          "buttons": [
+            "left"
+          ]
+        },
+        {
+          "elapsed_seconds": 36.105,
+          "ram": {
+            "field_system": "0x22a0230",
+            "map_id": 52,
+            "player": {
+              "x": 1326,
+              "y": 98,
+              "height": 6
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 37.108,
+          "ram": {
+            "field_system": "0x22a0230",
+            "map_id": 52,
+            "player": {
+              "x": 1326,
+              "y": 98,
+              "height": 6
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "native_frame": 10400,
+          "buttons": [
+            "right"
+          ]
+        },
+        {
+          "elapsed_seconds": 38.11,
+          "ram": {
+            "field_system": "0x22a0230",
+            "map_id": 52,
+            "player": {
+              "x": 1327,
+              "y": 98,
+              "height": 6
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 39.113,
+          "ram": {
+            "field_system": "0x22a0230",
+            "map_id": 52,
+            "player": {
+              "x": 1327,
+              "y": 98,
+              "height": 6
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        }
+      ]
+    },
+    {
+      "label": "Prototype 0025 \u2014 Bill computer",
+      "recorded_at_utc": "2026-10-12T07:32:19.445671+00:00",
+      "silent": false,
+      "audio_source": "native libretro PCM callbacks",
+      "sample_rate": 44100,
+      "audio_samples": 1772620,
+      "audio_nonzero": true,
+      "native_fps": 59.8261,
+      "video_frames": 479,
+      "duration_seconds": 40.032694760313646,
+      "ram_writes": false,
+      "events": [
+        {
+          "native_frame": 2500,
+          "buttons": [
+            "start"
+          ]
+        },
+        {
+          "native_frame": 3158,
+          "buttons": [
+            "a"
+          ]
+        },
+        {
+          "native_frame": 7166,
+          "buttons": [
+            "a"
+          ]
+        },
+        {
+          "elapsed_seconds": 0.0,
+          "ram": {
+            "field_system": "0x22a0228",
+            "map_id": 440,
+            "player": {
+              "x": 3,
+              "y": 7,
+              "height": 0
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 1.003,
+          "ram": {
+            "field_system": "0x22a0228",
+            "map_id": 440,
+            "player": {
+              "x": 3,
+              "y": 7,
+              "height": 0
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 2.006,
+          "ram": {
+            "field_system": "0x22a0228",
+            "map_id": 440,
+            "player": {
+              "x": 3,
+              "y": 7,
+              "height": 0
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "native_frame": 8300,
+          "buttons": [
+            "a"
+          ]
+        },
+        {
+          "elapsed_seconds": 3.009,
+          "ram": {
+            "field_system": "0x22a0228",
+            "map_id": 440,
+            "player": {
+              "x": 3,
+              "y": 7,
+              "height": 0
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 4.012,
+          "ram": {
+            "field_system": "0x22a0228",
+            "map_id": 440,
+            "player": {
+              "x": 3,
+              "y": 7,
+              "height": 0
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 5.015,
+          "ram": {
+            "field_system": "0x22a0228",
+            "map_id": 440,
+            "player": {
+              "x": 3,
+              "y": 7,
+              "height": 0
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 6.017,
+          "ram": {
+            "field_system": "0x22a0228",
+            "map_id": 440,
+            "player": {
+              "x": 3,
+              "y": 7,
+              "height": 0
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 7.02,
+          "ram": {
+            "field_system": "0x22a0228",
+            "map_id": 440,
+            "player": {
+              "x": 3,
+              "y": 7,
+              "height": 0
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 8.023,
+          "ram": {
+            "field_system": "0x22a0228",
+            "map_id": 440,
+            "player": {
+              "x": 3,
+              "y": 7,
+              "height": 0
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "native_frame": 8650,
+          "buttons": [
+            "a"
+          ]
+        },
+        {
+          "elapsed_seconds": 9.026,
+          "ram": {
+            "field_system": "0x22a0228",
+            "map_id": 440,
+            "player": {
+              "x": 3,
+              "y": 7,
+              "height": 0
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 10.029,
+          "ram": {
+            "field_system": "0x22a0228",
+            "map_id": 440,
+            "player": {
+              "x": 3,
+              "y": 7,
+              "height": 0
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 11.032,
+          "ram": {
+            "field_system": "0x22a0228",
+            "map_id": 440,
+            "player": {
+              "x": 3,
+              "y": 7,
+              "height": 0
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 12.035,
+          "ram": {
+            "field_system": "0x22a0228",
+            "map_id": 440,
+            "player": {
+              "x": 3,
+              "y": 7,
+              "height": 0
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 13.038,
+          "ram": {
+            "field_system": "0x22a0228",
+            "map_id": 440,
+            "player": {
+              "x": 3,
+              "y": 7,
+              "height": 0
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 14.041,
+          "ram": {
+            "field_system": "0x22a0228",
+            "map_id": 440,
+            "player": {
+              "x": 3,
+              "y": 7,
+              "height": 0
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "native_frame": 9000,
+          "buttons": [
+            "a"
+          ]
+        },
+        {
+          "elapsed_seconds": 15.044,
+          "ram": {
+            "field_system": "0x22a0228",
+            "map_id": 440,
+            "player": {
+              "x": 3,
+              "y": 7,
+              "height": 0
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 16.047,
+          "ram": {
+            "field_system": "0x22a0228",
+            "map_id": 440,
+            "player": {
+              "x": 3,
+              "y": 7,
+              "height": 0
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 17.049,
+          "ram": {
+            "field_system": "0x22a0228",
+            "map_id": 440,
+            "player": {
+              "x": 3,
+              "y": 7,
+              "height": 0
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 18.052,
+          "ram": {
+            "field_system": "0x22a0228",
+            "map_id": 440,
+            "player": {
+              "x": 3,
+              "y": 7,
+              "height": 0
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 19.055,
+          "ram": {
+            "field_system": "0x22a0228",
+            "map_id": 440,
+            "player": {
+              "x": 3,
+              "y": 7,
+              "height": 0
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 20.058,
+          "ram": {
+            "field_system": "0x22a0228",
+            "map_id": 440,
+            "player": {
+              "x": 3,
+              "y": 7,
+              "height": 0
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 21.061,
+          "ram": {
+            "field_system": "0x22a0228",
+            "map_id": 440,
+            "player": {
+              "x": 3,
+              "y": 7,
+              "height": 0
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 22.064,
+          "ram": {
+            "field_system": "0x22a0228",
+            "map_id": 440,
+            "player": {
+              "x": 3,
+              "y": 7,
+              "height": 0
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 23.067,
+          "ram": {
+            "field_system": "0x22a0228",
+            "map_id": 440,
+            "player": {
+              "x": 3,
+              "y": 7,
+              "height": 0
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 24.07,
+          "ram": {
+            "field_system": "0x22a0228",
+            "map_id": 440,
+            "player": {
+              "x": 3,
+              "y": 7,
+              "height": 0
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 25.073,
+          "ram": {
+            "field_system": "0x22a0228",
+            "map_id": 440,
+            "player": {
+              "x": 3,
+              "y": 7,
+              "height": 0
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 26.076,
+          "ram": {
+            "field_system": "0x22a0228",
+            "map_id": 440,
+            "player": {
+              "x": 3,
+              "y": 7,
+              "height": 0
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 27.078,
+          "ram": {
+            "field_system": "0x22a0228",
+            "map_id": 440,
+            "player": {
+              "x": 3,
+              "y": 7,
+              "height": 0
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 28.081,
+          "ram": {
+            "field_system": "0x22a0228",
+            "map_id": 440,
+            "player": {
+              "x": 3,
+              "y": 7,
+              "height": 0
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 29.084,
+          "ram": {
+            "field_system": "0x22a0228",
+            "map_id": 440,
+            "player": {
+              "x": 3,
+              "y": 7,
+              "height": 0
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 30.087,
+          "ram": {
+            "field_system": "0x22a0228",
+            "map_id": 440,
+            "player": {
+              "x": 3,
+              "y": 7,
+              "height": 0
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 31.09,
+          "ram": {
+            "field_system": "0x22a0228",
+            "map_id": 440,
+            "player": {
+              "x": 3,
+              "y": 7,
+              "height": 0
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 32.093,
+          "ram": {
+            "field_system": "0x22a0228",
+            "map_id": 440,
+            "player": {
+              "x": 3,
+              "y": 7,
+              "height": 0
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 33.096,
+          "ram": {
+            "field_system": "0x22a0228",
+            "map_id": 440,
+            "player": {
+              "x": 3,
+              "y": 7,
+              "height": 0
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 34.099,
+          "ram": {
+            "field_system": "0x22a0228",
+            "map_id": 440,
+            "player": {
+              "x": 3,
+              "y": 7,
+              "height": 0
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 35.102,
+          "ram": {
+            "field_system": "0x22a0228",
+            "map_id": 440,
+            "player": {
+              "x": 3,
+              "y": 7,
+              "height": 0
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 36.105,
+          "ram": {
+            "field_system": "0x22a0228",
+            "map_id": 440,
+            "player": {
+              "x": 3,
+              "y": 7,
+              "height": 0
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 37.108,
+          "ram": {
+            "field_system": "0x22a0228",
+            "map_id": 440,
+            "player": {
+              "x": 3,
+              "y": 7,
+              "height": 0
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 38.11,
+          "ram": {
+            "field_system": "0x22a0228",
+            "map_id": 440,
+            "player": {
+              "x": 3,
+              "y": 7,
+              "height": 0
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        },
+        {
+          "elapsed_seconds": 39.113,
+          "ram": {
+            "field_system": "0x22a0228",
+            "map_id": 440,
+            "player": {
+              "x": 3,
+              "y": 7,
+              "height": 0
+            },
+            "party_count": 4,
+            "parcel_state": 2,
+            "national_dex": true,
+            "text_box": "unavailable (no validated hook)",
+            "battle": "unavailable (no validated hook)"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -80,12 +80,30 @@ def main():
         if result: raise RuntimeError('Video encoding failed')
         if not samples or not nonzero: raise RuntimeError('Emulator did not produce audible PCM')
         video_duration = video_frames/(fps/5)
-        if abs(samples/rate-video_duration) > 0.2: raise RuntimeError('Audio/video duration mismatch')
+        audio_duration = samples / rate
+        drift = audio_duration - video_duration
+        tempo = audio_duration / video_duration
+        # DeSmuME's SPU callback clock can drift slightly from its reported DS
+        # video clock, especially across field loads. Use the complete native
+        # PCM track, preserving pitch and aligning it to the frame timeline.
+        # Large discrepancies still fail rather than masking dropped capture.
+        if abs(tempo - 1) > 0.01:
+            raise RuntimeError(f'Audio/video clock discrepancy exceeds 1%: '
+                               f'audio={audio_duration:.6f}s video={video_duration:.6f}s')
         subprocess.run(['ffmpeg','-v','error','-i',str(temp/'video.mp4'),'-i',str(temp/'audio.wav'),
-            '-c:v','copy','-c:a','aac','-b:a','128k','-movflags','+faststart','-n',str(args.output)],check=True)
+            '-c:v','copy','-af',f'atempo={tempo:.12f}',
+            '-c:a','aac','-b:a','128k','-movflags','+faststart','-n',str(args.output)],check=True)
+        probe = json.loads(subprocess.check_output(['ffprobe','-v','error','-show_streams',
+                                                    '-of','json',str(args.output)]))
+        durations = {s['codec_type']:float(s['duration']) for s in probe['streams']}
+        if abs(durations['audio']-durations['video']) > 0.2:
+            raise RuntimeError(f'Encoded audio/video duration mismatch: {durations}')
     report = {'label':args.label,'recorded_at_utc':started,'silent':False,'audio_source':'native libretro PCM callbacks',
         'sample_rate':rate,'audio_samples':samples,'audio_nonzero':nonzero,'native_fps':fps,
-        'video_frames':video_frames,'duration_seconds':video_duration,'ram_writes':False,'events':history}
+        'video_frames':video_frames,'duration_seconds':video_duration,
+        'source_audio_duration_seconds':audio_duration,'source_clock_drift_seconds':drift,
+        'audio_tempo_correction':tempo,'audio_pitch_preserved':True,
+        'encoded_stream_durations':durations,'ram_writes':False,'events':history}
     args.output.with_suffix('.json').write_text(json.dumps(report,indent=2)+'\n')
     print(json.dumps({k:v for k,v in report.items() if k!='events'}))
 

@@ -1,5 +1,8 @@
 # Prototype 0025 — returning Cerulean and the stolen Dig TM
 
+Completed in 0025. See [the resulting behavior and checks](CERULEAN-DIG-VISIBILITY.md).
+The next campaign checkpoint is [prototype 0026](PROTOTYPE-0026-PLAN.md).
+
 Continue cumulatively from published 0024. Preserve earlier releases and use
 a copy of the ordinary saved game after helping Bill for native testing.
 

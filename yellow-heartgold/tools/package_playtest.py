@@ -12,7 +12,7 @@ VENDOR = PROJECT/'tools/vendor/rom-patcher'
 def build(destination, version='004'):
     version=f'{int(version):03d}'
     artifact_version=f'{int(version):04d}' if int(version)>=16 else version
-    if version not in ('004', '005', '006', '007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '019', '020', '021', '022', '023', '024'):
+    if version not in ('004', '005', '006', '007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '019', '020', '021', '022', '023', '024', '025'):
         raise ValueError('Unsupported prototype version')
     destination.mkdir(parents=True, exist_ok=True)
     patch = PROJECT/f'build/yellow-heartgold-prototype-{artifact_version}.xdelta'
@@ -22,7 +22,7 @@ def build(destination, version='004'):
         output_sha256=hashlib.sha256(rom.read_bytes()).hexdigest(),
         source_bytes=134217728, output_bytes=rom.stat().st_size,
         patch_sha256=hashlib.sha256(patch.read_bytes()).hexdigest())
-    if version in ('014','015','016','017','018','019','020','021','022','023','024'):
+    if version in ('014','015','016','017','018','019','020','021','022','023','024','025'):
         parent=f'{int(version)-1:04d}' if int(version)>=17 else f'{int(version)-1:03d}'
         manifest.update(parent_version=f'{int(parent):04d}' if int(version)>=16 else parent,cumulative=True,
                         parent_output_sha256=hashlib.sha256(
@@ -103,7 +103,7 @@ button.addEventListener('click',async()=>{
   } catch(error){status.textContent=error.message;finish();}
 });
 </script></html>'''.replace('004', version).replace('PACKAGE', encoded)
-    if version in ('005', '006', '007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '019', '020', '021', '022', '023', '024'):
+    if version in ('005', '006', '007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '019', '020', '021', '022', '023', '024', '025'):
         html=html.replace('Start a <strong>new game</strong> to test the revised opening. Keep earlier saves backed up.',
             'Start a <strong>new game</strong> to test the opening, or import a backed-up prototype 004 normal save through your emulator. Emulator save states should not be transferred between builds.')
     if version == '006':
@@ -111,7 +111,7 @@ button.addEventListener('click',async()=>{
         html=html.replace('a backed-up prototype 004 normal save','a backed-up prototype 004 or 005 normal save')
         html=html.replace('Oak’s Psyduck capture currently uses field animation.',
             'Reopen the bedroom PC to receive 95 of each evolution item. Make space in storage if prompted, then reopen it to collect the remainder.')
-    if version in ('007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '019', '020', '021', '022', '023', '024'):
+    if version in ('007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '019', '020', '021', '022', '023', '024', '025'):
         html=html.replace(f'Opening playtest · Prototype {version}',f'Oak’s Parcel playtest · Prototype {version}')
         html=html.replace('a backed-up prototype 004 normal save','a backed-up prototype 004, 005, 006 or 007 normal save')
         html=html.replace('The route remains blocked beyond the first testing area. Oak’s Psyduck capture currently uses field animation.',
@@ -188,6 +188,11 @@ button.addEventListener('click',async()=>{
         html=html.replace('a backed-up prototype 004, 005, 006 or 007 normal save','a backed-up earlier prototype normal save, including 0023')
         html=html.replace('Areas beyond Viridian remain blocked.', 'Route 25 and Bill’s separation scene are converted. The returning robbed-house/Dig quest follows in the next checkpoint.')
         html=html.replace('Evolution supplies remain available in the player’s PC.', 'Route 25 uses Yellow’s nine trainer teams, levels, dialogue and grass encounters. Its solid item ball gives reusable TM19 Seismic Toss. Bill visibly enters the left chamber; use his PC beside the left wall to separate him, watch him leave the right chamber, and receive the S.S. Ticket. His PC later displays his favorite Eevee family. Earlier features and normal save progress carry forward; use Continue and keep a backup. Johto terrain and Route 25’s terrain remain unchanged. Earlier patches remain available separately.')
+    if version == '025':
+        html=html.replace('Oak’s Parcel playtest · Prototype 025','Cerulean Dig checkpoint · Prototype 025')
+        html=html.replace('a backed-up prototype 004, 005, 006 or 007 normal save','a backed-up earlier prototype normal save, including 0024')
+        html=html.replace('Areas beyond Viridian remain blocked.', 'The returning Cerulean robbed-house and stolen Dig TM event are converted. Route 5 follows next.')
+        html=html.replace('Evolution supplies remain available in the player’s PC.', 'Nugget Bridge trainers remain visible across the Cerulean boundary, including when loading an older normal save. The sign west of the south bridge entrance reads ROUTE 24 / NUGGET BRIDGE when you press A. Bill’s PC has a visible computer terminal at its existing interaction spot. After helping Bill, enter the robbed house, use the new rear-wall passage, and confront the Rocket with Machop and Drowzee at level 17. Winning returns reusable TM28 Dig; a full TM pocket permits a later retry without repeating the battle. Earlier features carry forward. Use Continue and keep a backup; emulator save states stay with their exact ROM version. Johto terrain and earlier patch pages remain unchanged.')
     if artifact_version!=version:
         html=html.replace(f'Prototype {version}',f'Prototype {artifact_version}')
         html=html.replace(f'prototype {version}.nds',f'prototype {artifact_version}.nds')
@@ -203,6 +208,6 @@ button.addEventListener('click',async()=>{
 if __name__ == '__main__':
     parser=argparse.ArgumentParser()
     parser.add_argument('destination',type=Path)
-    parser.add_argument('--version',choices=['004','005','006','007','008','009','010','011','012','013','014','015','016','0016','017','0017','018','0018','019','0019','020','0020','021','0021','022','0022','023','0023','024','0024'],default='004')
+    parser.add_argument('--version',choices=['004','005','006','007','008','009','010','011','012','013','014','015','016','0016','017','0017','018','0018','019','0019','020','0020','021','0021','022','0022','023','0023','024','0024','025','0025'],default='004')
     args=parser.parse_args()
     build(args.destination,args.version)
