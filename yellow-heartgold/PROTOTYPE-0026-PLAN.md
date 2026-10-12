@@ -81,3 +81,10 @@ The tested Route 5 encounter/Day Care foundation has been delivered as 0026, wit
 Do not describe Route 5 as fully rebuilt. Yellow geometry and Day Care placement remain unfinished. Continue them and the native Saffron gate checks toward the next checkpoint. Exclude unverified gates from the delivered 0026 ROM. Development gate builds v1/v2/v3 contain colliding saved-variable choices and must never be used as release evidence. Current gate source uses only flag 0xA9D and a literal-zero coordinate condition; four compiled checks pass, native validation pending. Bedroom PC dynamically occupies 0x4152 through 0x4165. Preserve Johto and all owner saves.
 
 Public artifact publication is pending; no ROM/save or source push is authorized by local packaging. Existing public 0025 remains available. The owner explicitly authorizes plan/log updates; preserve their added live-stream link while access changes await approval.
+
+
+## Publication completed at owner request — October 12
+
+The owner explicitly requested the established phone patching page workflow. The verified 0026 patching page is now published at [prototype-0026/index.html](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0026/index.html), with its manifest and vendor license. The page was fetched remotely and matched the verified local page exactly. The [40-second audiovisual Day Care recording](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/playtests/prototype-0026.html) is linked in the plain-language log and playtest index. This supersedes earlier pending-publication notes. No ROM/save or unfinished source was published.
+
+The owner also specifically approved keeping the posted stream URL view-only and using a separate private control credential. Ten HTTP bridge checks pass and actual tunnel checks verified audio/viewing, rejection of public/anonymous controls and acceptance of private controls. Public URL unchanged; private control credential remains local. The feed pauses while editing. Local development now follows PROTOTYPE-0027-PLAN.md; 0027 is unreleased.
