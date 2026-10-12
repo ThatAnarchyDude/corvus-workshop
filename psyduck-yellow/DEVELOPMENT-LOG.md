@@ -3,11 +3,11 @@
 A plain-language guide to what has changed, what you can play now, and what is
 still being built. Share this page with anyone following the project.
 
-**Last updated: October 11, 2026 at 10:47 PM EDT.**
+**Last updated: October 12, 2026 at 02:18 AM EDT.**
 
-**Latest published patch: prototype 0023.** Route 24 now has Yellow’s Nugget Bridge contest, Nugget/Rocket event, Charmander gift, Thunder Wave TM and grass encounters. Blue correctly stops you on the bridge. Mt. Moon’s extra figure is removed, its fossil guard battle is automatic, and Jessie/James ambush every exit approach after fossil selection. Route 25 and Bill follow next.
+**Latest published patch: prototype 0024.** Route 25 now has Yellow’s nine trainer teams, grass encounters, hidden Ether/Elixir and reusable Seismic Toss TM. Bill visibly enters his chamber, his PC runs the separation machine, and he gives the S.S. Ticket automatically. The returning Cerulean robbed-house/Dig quest follows next.
 
-[Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/67f2ddb6fa8de337d247456448f6c50e9c157802/psyduck-yellow/prototype-0023/index.html)
+[Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0024/index.html)
 
 The download page contains a modification patch. Select your original,
 unmodified USA HeartGold game file to build the playable DS file on your own
@@ -20,7 +20,7 @@ prototype. Published checkpoints are kept separately and are not overwritten.
 [Watch the recorded playtests](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/playtests/index.html).
 
 This public page will receive additional recordings during active development.
-A new 30-second prototype 0022 sample includes real game music and stereo audio.
+The latest recording is a 40-second prototype 0024 Bill scene with real game music and stereo audio. Earlier audio recordings remain available.
 The first sample remains a short, silent prototype 0022 controller/recording check,
 showing both DS screens and a RAM HUD. It uses a prepared test save containing
 a test-only level-50 Pikachu; it does not establish normal campaign difficulty.
@@ -226,7 +226,8 @@ push date and time.
 | 0020 | Oct 11, 2026 · 12:55 AM EDT | Testing travel: two-way Route 4 return crossing and free HM02 Fly at Celadon’s third-floor TM counter; outdoor Fly needs no badge. |
 | 0021 | Oct 11, 2026 · 10:30 AM EDT | Cerulean’s initial Yellow visit, Bike Voucher exchange and corrected Pewter guide escort; startup repair. Later save issues are corrected in 0022. |
 | 0022 | Oct 11, 2026 · 1:46 PM EDT | Saved quest/reward repair, cleared stale Viridian NPCs, Kanto-first Trainer Card and PC Friendship Charm. |
-| 0023 | Oct 11, 2026 · 10:47 PM EDT | Nugget Bridge, Charmander and reusable Thunder Wave; correct Blue bridge approach; Mt. Moon fossil rendering and mandatory guard/exit battles. **Latest published patch.** |
+| 0023 | Oct 11, 2026 · 10:47 PM EDT | Nugget Bridge, Charmander and reusable Thunder Wave; correct Blue bridge approach; Mt. Moon fossil rendering and mandatory guard/exit battles. |
+| 0024 | Oct 12, 2026 · 02:18 AM EDT | Yellow’s Route 25, reusable Seismic Toss, hidden Ether/Elixir, Bill’s visible separation scene and automatic S.S. Ticket. **Latest published patch.** |
 
 [Detailed release notes and verification records](https://github.com/ThatAnarchyDude/corvus-workshop/tree/d40c17fb9e721305bedf0781e00f1a11ce5cfe7c/yellow-heartgold)
 
@@ -399,7 +400,7 @@ The owner’s reports of gatehouse NPCs inside counters and occasional transitio
 
 ### Next: prototype 0023
 
-Continue Route 25/Bill and the returning Cerulean robbed-house/Dig event. The requested friendship-testing item is available in 0022.
+Continue the returning Cerulean robbed-house/Dig event, then the southbound campaign. The requested friendship-testing item is available in 0022.
 
 ### Future dialogue review
 
@@ -583,3 +584,39 @@ rendering and automatic guard scene. Earlier recordings and patches remain.
 [Mt. Moon corrections](https://github.com/ThatAnarchyDude/corvus-workshop/blob/main/yellow-heartgold/MTMOON-CORRECTIONS.md),
 and [verification](https://github.com/ThatAnarchyDude/corvus-workshop/blob/main/yellow-heartgold/validation-prototype-0023.json)
 are available for reviewers.
+
+### Prototype 0024: Route 25 and Bill
+
+Published: October 12, 2026 at 02:18 AM EDT.
+
+Route 25 keeps HeartGold’s terrain and gains Yellow’s nine trainer teams, levels,
+moves and conversations. Grass uses Yellow’s species and levels throughout the
+day. A solid item ball above the Camper gives reusable TM19 Seismic Toss;
+Thunder Wave remains TM45. Yellow’s hidden Ether and Elixir use the normal
+A-button pickups and Dowsing behavior. The Sea Cottage sign requires A.
+
+Bill begins combined with a Pokémon and walks into the left chamber after
+asking for help. Use the PC on the left wall to start the separation machine,
+with game sounds and a brief flash. He walks out of the right chamber and
+automatically offers the S.S. Ticket. A full Key Item pocket permits a later
+retry; receiving the ticket cannot be repeated. His PC later shows his favorite
+Eevee family with portraits and cries. Bill’s completion opens the existing
+Cerulean police gate; the Rocket/Dig follow-up is the next checkpoint.
+
+Normal Save/Continue retained Bill’s completion, one S.S. Ticket, the party,
+parcel progress and National Pokédex. All 29 focused/regression tests passed,
+and the browser download reproduced the expected DS file. These checks used
+private prepared saves and do not constitute a complete nine-trainer difficulty
+playthrough. No private test transports or Pokémon grants are in the release.
+Johto terrain and earlier releases remain unchanged. Later-generation Seismic
+Toss compatibility uses HeartGold’s Brick Break eligibility; Generation I
+compatibility follows Yellow.
+
+[Watch the new 40-second recording with sound](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/playtests/index.html),
+[read Route 25/Bill details](https://github.com/ThatAnarchyDude/corvus-workshop/blob/main/yellow-heartgold/ROUTE25-BILL.md),
+or [review the checks](https://github.com/ThatAnarchyDude/corvus-workshop/blob/main/yellow-heartgold/validation-prototype-0024.json).
+
+The owner reported a freeze in Android melonDS while crossing northern Route 2
+and Cerulean in 0023. Their PC DeSmuME comparison did not freeze, and they asked
+to park the report and continue. The cause remains unconfirmed; transferring
+a save has not been established as the cause.

@@ -1,4 +1,6 @@
-Prototype 0023 continues through Route 24 and Nugget Bridge, including Yellow’s contest teams, Nugget/Rocket event, Charmander gift and reusable Thunder Wave TM. It also corrects Blue’s bridge approach lanes and height, the fossil rendering and mandatory Mt. Moon battles. See [ROUTE24.md](ROUTE24.md) and the [validation record](validation-prototype-0023.json). Route 25 and Bill follow next.
+Prototype 0024 adds Yellow’s Route 25 trainers, encounters, hidden Ether/Elixir and reusable Seismic Toss TM, plus Bill’s visible separation scene and automatic S.S. Ticket reward. See [ROUTE25-BILL.md](ROUTE25-BILL.md) and the [validation record](validation-prototype-0024.json). The returning Cerulean robbed-house/Dig event follows next.
+
+Prototype 0023 continues through Route 24 and Nugget Bridge, including Yellow’s contest teams, Nugget/Rocket event, Charmander gift and reusable Thunder Wave TM. It also corrects Blue’s bridge approach lanes and height, the fossil rendering and mandatory Mt. Moon battles. See [ROUTE24.md](ROUTE24.md) and the [validation record](validation-prototype-0023.json).
 
 Prototype 0022 repairs the normal-save and daily-reset regressions reported in 0021, recognizes retained one-time rewards, removes stale saved custom NPCs, shows Kanto’s badges above Johto’s and adds the temporary Friendship Charm to bedroom PC storage. See [SAVE-COMPATIBILITY.md](SAVE-COMPATIBILITY.md) and [the validation record](validation-prototype-0022.json). Back up the normal save and use Continue; recovery relies on retained evidence.
 
