@@ -20,7 +20,8 @@ TMS = (
 )
 
 
-def patch(rom):
+def patch(rom, configs=TMS, yellow_compatibility=None, later_name='Water Pulse'):
+    TMS = configs
     main=rom.loadArm9();d=main.sections[0].data=bytearray(main.sections[0].data)
     assert struct.unpack_from('<I',d,0xD2C68)[0]==main.sections[1].ramAddress+len(main.sections[1].data)
     assert d[0x825B4:0x825B8]==bytes.fromhex('c046c046'), 'Reusable TM patch required'
@@ -41,23 +42,25 @@ def patch(rom):
     # The native UI computes the displayed TM number from a contiguous item
     # range. Substitute only the display value, retaining the actual bag ID.
     overlays=rom.loadArm9Overlays();bag=overlays[15];display=[]
+    numbers = dict(((115,34),(116,12),(117,1),(118,4),(119,11)))
+    numbers.update((tm['item'],tm['number']) for tm in TMS)
     for site,load in ((0x021FE920,'ldrh r1, [r7]'),(0x021FF5B2,'ldrh r1, [r3, r7]')):
         at=site-bag.ramAddress
         assert bag.data[at+1]&0xF8==0xF0 and bag.data[at+3]&0xF8==0xF8
         source=load+'\n'
-        for item in (115,116,117,118,119):source+=f'cmp r1, #{item}\nbeq item{item}\n'
+        for item in numbers:source+=f'cmp r1, #{item}\nbeq item{item}\n'
         source+='b finish\n'
-        for item,number in ((115,34),(116,12),(117,1),(118,4),(119,11)):
+        for item,number in numbers.items():
             source+=f'item{item}:\nldr r1, value{item}\nb finish\n'
         source+='finish:\nlsls r0, r0, #2\nbx lr\n.align 2\n'
-        for item,number in ((115,34),(116,12),(117,1),(118,4),(119,11)):source+=f'value{item}: .word {327+number}\n'
+        for item,number in numbers.items():source+=f'value{item}: .word {327+number}\n'
         address,_=append_code(main,source);bag.data[at:at+4]=thumb_bl(site,address)
         display.append(dict(site=hex(site),hook=hex(address)))
     rom.files[bag.fileID]=bag.save(compress=bag.compressed)
     rom.arm9OverlayTable=ndspy.code.saveOverlayTable(overlays)
 
     personal_id=rom.filenames.idOf('a/0/0/2');personal=ndspy.narc.NARC(rom.files[personal_id])
-    yellow={'BUBBLEBEAM':json.loads((PROJECT/'data/cerulean.json').read_text())['bubblebeam_compatible_species']}
+    yellow=yellow_compatibility if yellow_compatibility is not None else {'BUBBLEBEAM':json.loads((PROJECT/'data/cerulean.json').read_text())['bubblebeam_compatible_species']}
     compatible={tm['key']:[] for tm in TMS}
     for species,row in enumerate(personal.files):
         b=bytearray(row)
@@ -83,5 +86,5 @@ def patch(rom):
     struct.pack_into('<I',d,0xD2C68,main.sections[1].ramAddress+len(main.sections[1].data))
     rom.arm9=main.save(compress=True)
     return dict(tms=TMS,lookup_hooks=lookups,display_hooks=display,compatible_species=compatible,
-                generation_one_compatibility='Yellow',later_compatibility='Water Pulse',
+                generation_one_compatibility='Yellow',later_compatibility=later_name,
                 native_tm_items_preserved=True,native_save_layout_preserved=True)

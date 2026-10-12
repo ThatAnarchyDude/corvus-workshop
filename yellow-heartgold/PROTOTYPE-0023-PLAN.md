@@ -18,4 +18,4 @@ Blue teams reacting to the player's Eevee evolution await the owner's team
 plan. No new terrain roadblocks without an explicit request; required story
 events still gate progression.
 
-Before campaign work continues: complete the PKHeX save-compatibility investigation requested by the owner. Prefer a plugin; assess a fork only if necessary. See EDITOR-COMPATIBILITY-PLAN.md.
+The PKHeX prerequisite is complete. Android editor work is paused at the owner’s request. Prototype 0023 adds Route 24 and the owner’s Mt. Moon corrections; publication waits for the recorded validation checks. Next checkpoint: Route 25 and Bill, then the returning robbed-house/Dig event.

@@ -1,0 +1,725 @@
+{
+  "version": "0023",
+  "input_sha256": "a26d9003ec23d9ebc60cc721a6aec169dd33af4ff657d9726bd89ab1cb2e89da",
+  "route24": {
+    "tm": {
+      "tms": [
+        {
+          "item": 122,
+          "move": 86,
+          "index": 105,
+          "number": 45,
+          "name": "THUNDER WAVE",
+          "key": "THUNDER_WAVE",
+          "template": 400,
+          "later_index": 72,
+          "description": "A weak electric charge paralyzes the target."
+        }
+      ],
+      "lookup_hooks": [
+        {
+          "site": "0x2078000",
+          "hook": "0x1fff808",
+          "previous": "0x1fff1f5"
+        },
+        {
+          "site": "0x207804c",
+          "hook": "0x1fff818",
+          "previous": "0x1fff205"
+        }
+      ],
+      "display_hooks": [
+        {
+          "site": "0x21fe920",
+          "hook": "0x1fff828"
+        },
+        {
+          "site": "0x21ff5b2",
+          "hook": "0x1fff878"
+        }
+      ],
+      "compatible_species": {
+        "THUNDER_WAVE": [
+          25,
+          26,
+          35,
+          36,
+          39,
+          40,
+          63,
+          64,
+          65,
+          79,
+          80,
+          81,
+          82,
+          96,
+          97,
+          100,
+          101,
+          113,
+          120,
+          121,
+          122,
+          125,
+          135,
+          137,
+          145,
+          147,
+          148,
+          149,
+          150,
+          151,
+          170,
+          171,
+          172,
+          173,
+          174,
+          175,
+          176,
+          177,
+          178,
+          179,
+          180,
+          181,
+          190,
+          198,
+          199,
+          200,
+          203,
+          206,
+          209,
+          210,
+          211,
+          223,
+          224,
+          233,
+          234,
+          239,
+          241,
+          242,
+          243,
+          248,
+          249,
+          250,
+          251,
+          263,
+          264,
+          280,
+          281,
+          282,
+          299,
+          300,
+          301,
+          306,
+          309,
+          310,
+          311,
+          312,
+          313,
+          314,
+          325,
+          326,
+          351,
+          352,
+          353,
+          354,
+          358,
+          359,
+          377,
+          378,
+          379,
+          380,
+          381,
+          382,
+          383,
+          384,
+          385,
+          386,
+          399,
+          400,
+          403,
+          404,
+          405,
+          417,
+          424,
+          425,
+          426,
+          427,
+          428,
+          429,
+          430,
+          433,
+          439,
+          440,
+          462,
+          466,
+          468,
+          474,
+          475,
+          476,
+          478,
+          479,
+          480,
+          481,
+          482,
+          483,
+          484,
+          486,
+          487,
+          488,
+          491,
+          493,
+          496,
+          497,
+          498,
+          501,
+          503,
+          504,
+          505,
+          506,
+          507
+        ]
+      },
+      "generation_one_compatibility": "Yellow",
+      "later_compatibility": "Thunder Wave",
+      "native_tm_items_preserved": true,
+      "native_save_layout_preserved": true
+    },
+    "map": 28,
+    "script": 1100,
+    "init": 1101,
+    "text": 896,
+    "event": 628,
+    "wild": 149,
+    "original": [
+      215,
+      460,
+      362,
+      25,
+      130
+    ],
+    "trainers": [
+      {
+        "id": 787,
+        "defeat_flag": 2147,
+        "order": 1,
+        "role": "Bug Catcher",
+        "trainer_class": 6,
+        "template": 4,
+        "sprite": 318,
+        "dialogue": "Route24Youngster2",
+        "x": 1325,
+        "z": 94,
+        "facing": 3,
+        "team": [
+          {
+            "species": 10,
+            "name": "CATERPIE",
+            "level": 14,
+            "moves": [
+              33,
+              81,
+              0,
+              0
+            ]
+          },
+          {
+            "species": 13,
+            "name": "WEEDLE",
+            "level": 14,
+            "moves": [
+              40,
+              81,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "id": 788,
+        "defeat_flag": 2148,
+        "order": 2,
+        "role": "Lass",
+        "trainer_class": 3,
+        "template": 22,
+        "sprite": 319,
+        "dialogue": "Route24CooltrainerF2",
+        "x": 1329,
+        "z": 90,
+        "facing": 2,
+        "team": [
+          {
+            "species": 16,
+            "name": "PIDGEY",
+            "level": 14,
+            "moves": [
+              16,
+              28,
+              98,
+              0
+            ]
+          },
+          {
+            "species": 29,
+            "name": "NIDORAN_F",
+            "level": 14,
+            "moves": [
+              45,
+              33,
+              10,
+              24
+            ]
+          }
+        ]
+      },
+      {
+        "id": 789,
+        "defeat_flag": 2149,
+        "order": 3,
+        "role": "Youngster",
+        "trainer_class": 2,
+        "template": 8,
+        "sprite": 317,
+        "dialogue": "Route24Youngster1",
+        "x": 1325,
+        "z": 86,
+        "facing": 3,
+        "team": [
+          {
+            "species": 19,
+            "name": "RATTATA",
+            "level": 14,
+            "moves": [
+              33,
+              39,
+              98,
+              158
+            ]
+          },
+          {
+            "species": 23,
+            "name": "EKANS",
+            "level": 14,
+            "moves": [
+              35,
+              43,
+              40,
+              0
+            ]
+          },
+          {
+            "species": 41,
+            "name": "ZUBAT",
+            "level": 14,
+            "moves": [
+              141,
+              48,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "id": 790,
+        "defeat_flag": 2150,
+        "order": 4,
+        "role": "Lass",
+        "trainer_class": 3,
+        "template": 22,
+        "sprite": 319,
+        "dialogue": "Route24CooltrainerF1",
+        "x": 1329,
+        "z": 82,
+        "facing": 2,
+        "team": [
+          {
+            "species": 16,
+            "name": "PIDGEY",
+            "level": 16,
+            "moves": [
+              16,
+              28,
+              98,
+              0
+            ]
+          },
+          {
+            "species": 29,
+            "name": "NIDORAN_F",
+            "level": 16,
+            "moves": [
+              45,
+              33,
+              10,
+              24
+            ]
+          }
+        ]
+      },
+      {
+        "id": 791,
+        "defeat_flag": 2151,
+        "order": 5,
+        "role": "Camper",
+        "trainer_class": 4,
+        "template": 5,
+        "sprite": 345,
+        "dialogue": "Route24CooltrainerM3",
+        "x": 1325,
+        "z": 78,
+        "facing": 3,
+        "team": [
+          {
+            "species": 56,
+            "name": "MANKEY",
+            "level": 18,
+            "moves": [
+              10,
+              43,
+              67,
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "id": 792,
+        "defeat_flag": 2152,
+        "order": 0,
+        "role": "Camper",
+        "trainer_class": 4,
+        "template": 5,
+        "sprite": 345,
+        "dialogue": "Route24CooltrainerM2",
+        "x": 1320,
+        "z": 80,
+        "facing": 3,
+        "team": [
+          {
+            "species": 19,
+            "name": "RATTATA",
+            "level": 14,
+            "moves": [
+              33,
+              39,
+              98,
+              158
+            ]
+          },
+          {
+            "species": 23,
+            "name": "EKANS",
+            "level": 14,
+            "moves": [
+              35,
+              43,
+              40,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "id": 793,
+        "defeat_flag": 2153,
+        "order": 0,
+        "role": "Rocket",
+        "trainer_class": 55,
+        "template": 12,
+        "sprite": 222,
+        "dialogue": "Route24CooltrainerM1",
+        "x": 1327,
+        "z": 74,
+        "facing": 2,
+        "team": [
+          {
+            "species": 23,
+            "name": "EKANS",
+            "level": 15,
+            "moves": [
+              35,
+              43,
+              40,
+              0
+            ]
+          },
+          {
+            "species": 41,
+            "name": "ZUBAT",
+            "level": 15,
+            "moves": [
+              141,
+              48,
+              44,
+              0
+            ]
+          }
+        ]
+      }
+    ],
+    "common": 1102,
+    "flags": [
+      2701,
+      2702,
+      2703,
+      2704,
+      2705,
+      2706
+    ],
+    "refresh": {
+      "hook": "0x1fff8c8",
+      "bytes": 204,
+      "marker": "0x4d502328",
+      "removed_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "previous": "0x1fff161"
+    },
+    "blue_bridge": {
+      "map": 52,
+      "script": 1103,
+      "init": 1104,
+      "event": 629,
+      "old": [
+        1084,
+        1085,
+        620
+      ],
+      "trigger": [
+        1325,
+        100,
+        5
+      ],
+      "actor": [
+        1329,
+        96,
+        3
+      ],
+      "refresh": {
+        "hook": "0x1fff994",
+        "bytes": 76,
+        "marker": "0x4d502352",
+        "removed_ids": [
+          30
+        ],
+        "previous": "0x1fff8c9"
+      }
+    },
+    "terrain_unchanged": true
+  },
+  "mtmoon_corrections": {
+    "map": 107,
+    "script": 1105,
+    "init": 1106,
+    "event": 630,
+    "original": {
+      "script": 1069,
+      "init": 1060,
+      "event": 610
+    },
+    "rendering": {
+      "sprites": [
+        93,
+        94
+      ],
+      "old_flags": 0,
+      "item_flags": 1056,
+      "collision_hook": "0x1fff9e0",
+      "previous_collision_hook": "0x1fff0bc"
+    },
+    "refresh": {
+      "hook": "0x1fff9f8",
+      "bytes": 84,
+      "marker": "0x4d50236d",
+      "removed_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63
+      ],
+      "previous": "0x1fff995"
+    },
+    "refresh_flag": 2707,
+    "guard_trainer": 776,
+    "rocket_trainer": 777,
+    "guard_message": 11,
+    "rocket_message": 30,
+    "exit_message": 25,
+    "rocket_standby": [
+      [
+        18,
+        23
+      ],
+      [
+        19,
+        23
+      ]
+    ],
+    "terrain_and_warps_unchanged": true
+  },
+  "startup": {
+    "word_aligned": true,
+    "itcm_bytes": 31308,
+    "remaining_bytes": 1460
+  },
+  "output_sha256": "3a861684a79452d6c6418e29ddc1e7b89c48345d638ad35cf75ea77cbbbb29de",
+  "patch_sha256": "0a3b34c485f97880b9483dbbfa7bbb4cab505067cc699d6eca00ce06863c55cb",
+  "roundtrip_verified": true,
+  "publication": "Validated locally; publication record will identify the immutable public commit.",
+  "verification": {
+    "unit_tests": {
+      "route24_scripts_assets": 8,
+      "native_tm_refresh_daily_flags": 3,
+      "mtmoon_order_walks_rendering_exit_neighbors": 6,
+      "native_blue_properties_cut_startup": 6,
+      "save_compatibility_regressions": 7,
+      "cerulean_pewter_regressions": 7,
+      "total": 37
+    },
+    "browser": {
+      "browser": "Chromium",
+      "output_sha256": "3a861684a79452d6c6418e29ddc1e7b89c48345d638ad35cf75ea77cbbbb29de",
+      "expected_sha256": "3a861684a79452d6c6418e29ddc1e7b89c48345d638ad35cf75ea77cbbbb29de",
+      "download_filename": "Pokemon-Psyduck-Yellow-prototype-0023.nds",
+      "status": "Your prototype passed verification. Tap Download below.",
+      "previous_prototype_rejected": true,
+      "page_errors": []
+    },
+    "ordinary_save_continue": {
+      "gifts": {
+        "field_system": "0x22a0204",
+        "map_id": 28,
+        "player": {
+          "x": 1320,
+          "y": 65,
+          "height": 2
+        },
+        "party_count": 4,
+        "parcel_state": 2,
+        "national_dex": true,
+        "text_box": "unavailable (no validated hook)",
+        "battle": "unavailable (no validated hook)",
+        "nuggets": 0,
+        "tm45_quantity": 1,
+        "charmander_received": true,
+        "rocket_defeated": true
+      },
+      "nugget": {
+        "field_system": "0x22a0250",
+        "map_id": 28,
+        "player": {
+          "x": 1327,
+          "y": 74,
+          "height": 6
+        },
+        "party_count": 2,
+        "parcel_state": 2,
+        "national_dex": true,
+        "text_box": "unavailable (no validated hook)",
+        "battle": "unavailable (no validated hook)",
+        "nuggets": 1,
+        "tm45_quantity": 0,
+        "charmander_received": false,
+        "rocket_defeated": true
+      }
+    },
+    "native_observed": [
+      "Normal Cerulean bridge approach at height 6; Blue interrupts, battles with his persisted Eevee, and departs after victory.",
+      "First contest battle opens with Caterpie level 14.",
+      "Nugget awarded once; Rocket Ekans/Zubat level 15 defeated; control returns and one Nugget persists through Save/Continue.",
+      "TM45 Thunder Wave acquired with A, displayed correctly, taught to a private test Pikachu, retained at quantity one after teaching and Save/Continue.",
+      "Charmander received once; party grows to four; repeat interaction and Save/Continue preserve the gift.",
+      "Fossil rendering no longer produces the extra person-like figure.",
+      "Guard automatically approaches and battles with Grimer/Voltorb/Koffing level 12 before the Helix Fossil choice.",
+      "Jessie/James approach, battle with Ekans/Meowth/Koffing level 14, walk to the exit and disappear after victory.",
+      "Final build catches both bottom-wall side approaches; Jessie and James walk to the player."
+    ],
+    "limits": [
+      "Focused native checks use private prepared normal saves and staging scripts; five contest wins are staged for reward checks. No private grants, transports, ROMs, saves or RAM dumps are published.",
+      "This is not a complete fresh-game playthrough, a full five-contest-battle difficulty test or an Android emulator certification.",
+      "Charmander requires a free party slot; PC overflow transfer is not implemented.",
+      "Route 25 and Bill remain the next development checkpoint."
+    ]
+  },
+  "screenshots": [
+    "build/emulator-0023-moon-corrected/fossil-rendering-fixed.png",
+    "build/emulator-0023-moon-corrected/guard-auto-stop.png",
+    "build/emulator-0023-moon-corrected/corrected-fossil-choice.png",
+    "build/emulator-0023-moon-rockets/pair-departed.png",
+    "build/emulator-0023-moon-west/side-pair-approach.png",
+    "build/emulator-0023-moon-east/side-pair-approach.png",
+    "build/emulator-0023-final-gifts-reload/final-continue.png",
+    "build/emulator-0023-final-nugget-reload/final-continue.png"
+  ]
+}

@@ -1,0 +1,378 @@
+{
+  "reference": {
+    "repository": "pret/pokeyellow",
+    "commit": "e89ead154b9968aa50eed9328ff2b38b6c194382",
+    "paths": [
+      "scripts/Route24.asm",
+      "text/Route24.asm",
+      "data/maps/objects/Route24.asm",
+      "data/trainers/parties.asm",
+      "data/wild/maps/Route24.asm",
+      "data/pokemon/evos_moves.asm",
+      "data/pokemon/base_stats"
+    ]
+  },
+  "messages": {
+    "Route24CooltrainerM1YouBeatOurContestText": "Congratulations! You beat our 5 contest trainers!",
+    "Route24CooltrainerM1YouJustEarnedAPrizeText": "You just earned a fabulous prize!",
+    "Route24CooltrainerM1ReceivedNuggetText": "{PLAYER} received a NUGGET!",
+    "Route24CooltrainerM1NoRoomText": "You don't have any room!",
+    "Route24CooltrainerM1JoinTeamRocketText": "By the way, would you like to join TEAM ROCKET?\rWe're a group dedicated to evil using POKEMON!\rWant to join?\rAre you sure?\rCome on, join us!\rI'm telling you to join!\rOK, you need convincing!\rI'll make you an offer you can't refuse!",
+    "Route24CooltrainerM1DefeatedText": "Arrgh! You are good!",
+    "Route24CooltrainerM1YouCouldBecomeATopLeaderText": "With your ability, you could become a top leader in TEAM ROCKET!",
+    "Route24CooltrainerM2BattleText": "I saw your feat from the grass!",
+    "Route24CooltrainerM2EndBattleText": "I thought not!",
+    "Route24CooltrainerM2AfterBattleText": "I hid because the people on the bridge scared me!",
+    "Route24CooltrainerM3BattleText": "OK! I'm No. 5! I'll stomp you!",
+    "Route24CooltrainerM3EndBattleText": "Whoa! Too much!",
+    "Route24CooltrainerM3AfterBattleText": "I did my best, I have no regrets!",
+    "Route24CooltrainerF1BattleText": "I'm No. 4! Getting tired?",
+    "Route24CooltrainerF1EndBattleText": "I lost too!",
+    "Route24CooltrainerF1AfterBattleText": "I did my best, so I've no regrets!",
+    "Route24Youngster1BattleText": "Here's No. 3! I won't be easy!",
+    "Route24Youngster1EndBattleText": "Ow! Stomped flat!",
+    "Route24Youngster1AfterBattleText": "I did my best, I have no regrets!",
+    "Route24CooltrainerF2BattleText": "I'm second! Now it's serious!",
+    "Route24CooltrainerF2EndBattleText": "How could I lose?",
+    "Route24CooltrainerF2AfterBattleText": "I did my best, I have no regrets!",
+    "Route24Youngster2BattleText": "This is NUGGET BRIDGE! Beat us 5 trainers and win a fabulous prize!\rThink you got what it takes?",
+    "Route24Youngster2EndBattleText": "Whoo! Good stuff!",
+    "Route24Youngster2AfterBattleText": "I did my best, I have no regrets!",
+    "Route24DamianText1": "I'm not good at raising POKEMON.\rI should release my CHARMANDER because I haven't raised it well...\rIf you promise me you'll care for it, it's yours.",
+    "Route24DamianText2": "Take good care of my CHARMANDER!",
+    "Route24DamianText3": "Oh... I'd better release it then.",
+    "Route24DamianText4": "How's CHARMANDER doing?"
+  },
+  "trainers": [
+    {
+      "order": 1,
+      "role": "Bug Catcher",
+      "trainer_class": 6,
+      "template": 4,
+      "sprite": 318,
+      "dialogue": "Route24Youngster2",
+      "x": 1325,
+      "z": 94,
+      "facing": 3,
+      "team": [
+        {
+          "species": 10,
+          "name": "CATERPIE",
+          "level": 14,
+          "moves": [
+            33,
+            81,
+            0,
+            0
+          ]
+        },
+        {
+          "species": 13,
+          "name": "WEEDLE",
+          "level": 14,
+          "moves": [
+            40,
+            81,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "role": "Lass",
+      "trainer_class": 3,
+      "template": 22,
+      "sprite": 319,
+      "dialogue": "Route24CooltrainerF2",
+      "x": 1329,
+      "z": 90,
+      "facing": 2,
+      "team": [
+        {
+          "species": 16,
+          "name": "PIDGEY",
+          "level": 14,
+          "moves": [
+            16,
+            28,
+            98,
+            0
+          ]
+        },
+        {
+          "species": 29,
+          "name": "NIDORAN_F",
+          "level": 14,
+          "moves": [
+            45,
+            33,
+            10,
+            24
+          ]
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "role": "Youngster",
+      "trainer_class": 2,
+      "template": 8,
+      "sprite": 317,
+      "dialogue": "Route24Youngster1",
+      "x": 1325,
+      "z": 86,
+      "facing": 3,
+      "team": [
+        {
+          "species": 19,
+          "name": "RATTATA",
+          "level": 14,
+          "moves": [
+            33,
+            39,
+            98,
+            158
+          ]
+        },
+        {
+          "species": 23,
+          "name": "EKANS",
+          "level": 14,
+          "moves": [
+            35,
+            43,
+            40,
+            0
+          ]
+        },
+        {
+          "species": 41,
+          "name": "ZUBAT",
+          "level": 14,
+          "moves": [
+            141,
+            48,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "role": "Lass",
+      "trainer_class": 3,
+      "template": 22,
+      "sprite": 319,
+      "dialogue": "Route24CooltrainerF1",
+      "x": 1329,
+      "z": 82,
+      "facing": 2,
+      "team": [
+        {
+          "species": 16,
+          "name": "PIDGEY",
+          "level": 16,
+          "moves": [
+            16,
+            28,
+            98,
+            0
+          ]
+        },
+        {
+          "species": 29,
+          "name": "NIDORAN_F",
+          "level": 16,
+          "moves": [
+            45,
+            33,
+            10,
+            24
+          ]
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "role": "Camper",
+      "trainer_class": 4,
+      "template": 5,
+      "sprite": 345,
+      "dialogue": "Route24CooltrainerM3",
+      "x": 1325,
+      "z": 78,
+      "facing": 3,
+      "team": [
+        {
+          "species": 56,
+          "name": "MANKEY",
+          "level": 18,
+          "moves": [
+            10,
+            43,
+            67,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "order": 0,
+      "role": "Camper",
+      "trainer_class": 4,
+      "template": 5,
+      "sprite": 345,
+      "dialogue": "Route24CooltrainerM2",
+      "x": 1320,
+      "z": 80,
+      "facing": 3,
+      "team": [
+        {
+          "species": 19,
+          "name": "RATTATA",
+          "level": 14,
+          "moves": [
+            33,
+            39,
+            98,
+            158
+          ]
+        },
+        {
+          "species": 23,
+          "name": "EKANS",
+          "level": 14,
+          "moves": [
+            35,
+            43,
+            40,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "order": 0,
+      "role": "Rocket",
+      "trainer_class": 55,
+      "template": 12,
+      "sprite": 222,
+      "dialogue": "Route24CooltrainerM1",
+      "x": 1327,
+      "z": 74,
+      "facing": 2,
+      "team": [
+        {
+          "species": 23,
+          "name": "EKANS",
+          "level": 15,
+          "moves": [
+            35,
+            43,
+            40,
+            0
+          ]
+        },
+        {
+          "species": 41,
+          "name": "ZUBAT",
+          "level": 15,
+          "moves": [
+            141,
+            48,
+            44,
+            0
+          ]
+        }
+      ]
+    }
+  ],
+  "wild_slots": [
+    {
+      "level": 12,
+      "species": 43,
+      "name": "ODDISH"
+    },
+    {
+      "level": 12,
+      "species": 69,
+      "name": "BELLSPROUT"
+    },
+    {
+      "level": 13,
+      "species": 16,
+      "name": "PIDGEY"
+    },
+    {
+      "level": 14,
+      "species": 43,
+      "name": "ODDISH"
+    },
+    {
+      "level": 14,
+      "species": 69,
+      "name": "BELLSPROUT"
+    },
+    {
+      "level": 15,
+      "species": 16,
+      "name": "PIDGEY"
+    },
+    {
+      "level": 13,
+      "species": 48,
+      "name": "VENONAT"
+    },
+    {
+      "level": 16,
+      "species": 48,
+      "name": "VENONAT"
+    },
+    {
+      "level": 17,
+      "species": 16,
+      "name": "PIDGEY"
+    },
+    {
+      "level": 17,
+      "species": 17,
+      "name": "PIDGEOTTO"
+    }
+  ],
+  "encounter_rate": 25,
+  "thunder_wave_compatible_species": [
+    25,
+    26,
+    35,
+    36,
+    39,
+    40,
+    63,
+    64,
+    65,
+    79,
+    80,
+    81,
+    82,
+    96,
+    97,
+    100,
+    101,
+    113,
+    120,
+    121,
+    122,
+    125,
+    135,
+    137,
+    145,
+    147,
+    148,
+    149,
+    150,
+    151
+  ]
+}

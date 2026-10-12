@@ -11,7 +11,7 @@ from cerulean import misty,melanie,MISTY_TM,BULBA_GIVEN,BULBA_HIDE,rival_scene,R
 from pewter_guide_fix import PATH,STATE,escort,step
 
 
-def run(code,*,flags=(),bag=None,room=True,yes=True,badge=False,win=True,friendship=200,count=1,z=104,x=1086,starter=133):
+def run(code,*,flags=(),bag=None,room=True,yes=True,badge=False,win=True,friendship=200,count=1,z=104,x=1086,starter=133,defeated=()):
  vars={};flags=set(flags);bag=dict(bag or {});msgs=[];walks=[];badges=[];battles=[];music=[];pc=0;cmp=0
  def half():
   nonlocal pc
@@ -33,6 +33,7 @@ def run(code,*,flags=(),bag=None,room=True,yes=True,badge=False,win=True,friends
    if (cond==1 and cmp==0) or (cond==5 and cmp!=0) or (cond==0 and cmp<0):pc+=off
   elif op==22:off=struct.unpack_from('<i',code,pc)[0];pc+=4;pc+=off
   elif op==32:cmp=0 if half() in flags else 1
+  elif op==38:cmp=0 if half() in defeated else 1
   elif op in (30,31):
    f=half()
    if op==30:flags.add(f)
@@ -53,7 +54,11 @@ def run(code,*,flags=(),bag=None,room=True,yes=True,badge=False,win=True,friends
   elif op==382:out=half();half();vars[out]=friendship
   elif op==332:vars[half()]=count
   elif op==137:
-   args=[half() for _ in range(6)];vars[args[-1]]=1;bag['bulbasaur']=bag.get('bulbasaur',0)+1
+   args=[half() for _ in range(6)];vars[args[-1]]=int(count<6)
+   if count<6:
+    key='bulbasaur' if args[0]==1 else 'pokemon'+str(args[0]);bag[key]=bag.get(key,0)+1
+  elif op==76:half();half()
+  elif op==77:pass
   elif op==101:half()
   elif op==105:vars[half()]=x;vars[half()]=z
   elif op==94:
