@@ -783,7 +783,8 @@
         "The PC collection adapts the original list to native field portraits, rather than reproducing the Game Boy Pokedex layout.",
         "Later-generation Seismic Toss compatibility uses HeartGold Brick Break eligibility.",
         "Android melonDS 0023 freeze was not reproduced in owner/cloud DeSmuME checks; parked at owner request, with no confirmed cause.",
-        "Scripted RAM monitoring has validated field/quest data only; battle/text-box hooks are unavailable."
+        "Scripted RAM monitoring has validated field/quest data only; battle/text-box hooks are unavailable.",
+        "Owner reports added sight-trainers appearing/disappearing nearby, including Nugget Bridge; investigating this is the first priority for 0025."
       ]
     },
     "geometry": {
