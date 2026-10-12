@@ -5,8 +5,14 @@ still being built. Share this page with anyone following the project.
 
 **Last updated: October 12, 2026 at 10:17 AM EDT.**
 
-Follow our LIVE testing stream!
-https://across-keen-clay-states.trycloudflare.com/#token=SaBO46q-TKH_m6lLAib088MTzb7drRISjWaqa7IlVxM
+[Watch LIVE testing with video and audio](https://remedies-regression-lawyer-ins.trycloudflare.com/#token=SaBO46q-TKH_m6lLAib088MTzb7drRISjWaqa7IlVxM)
+
+Tap **Enable sound** in the viewer for game audio. The upper DS screen is on the
+left and the touch screen is on the right. The link grants viewing only; game
+controls remain private. Video and audio pause between actual playtests.
+
+*Stream link restored and remotely checked: October 12, 2026. This temporary link
+requires the laptop and streaming processes to remain online.*
 
 **Latest published patch: prototype 0026.** Route 5 has Yellow’s encounters at every time of day and native shared Day Care services. Yellow terrain/Day Care placement and Saffron guards remain unfinished in this checkpoint.
 
