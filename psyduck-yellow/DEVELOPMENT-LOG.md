@@ -3,7 +3,7 @@
 A plain-language guide to what has changed, what you can play now, and what is
 still being built. Share this page with anyone following the project.
 
-**Last updated: October 12, 2026 at 03:53 AM EDT.**
+**Last updated: October 12, 2026 at 07:27 AM EDT.**
 
 **Latest published patch: prototype 0025.** Nugget Bridge trainers appear before the Cerulean boundary. Its southern board now reads with A, Bill’s PC has a visible computer, and Cerulean’s robbed-house/Rocket event returns reusable TM28 Dig after helping Bill. Route 5 follows next.
 
@@ -677,3 +677,42 @@ Route 5 is next. The owner’s broader dialogue list and Blue teams reacting to
 the player’s Eevee evolution remain future work. Android editor development
 is paused, and the earlier melonDS movement-freeze report remains parked
 without a confirmed cause.
+
+
+## PC development resumed — October 12, 2026
+
+Prototype **0025 remains the latest published playable patch**. A new local 0026
+build is in development; it is not yet a finished or downloadable checkpoint.
+
+The target is now explicit: rebuild Yellow’s Kanto layout and adventure using
+HeartGold’s DS graphics and systems, then open Johto after the first Elite Four
+victory and Hall of Fame. Earlier areas will be checked where their maps still
+follow HeartGold. Johto’s existing maps and gameplay will be preserved. The approved
+starter choices, shiny odds, bedroom PC supplies, Water/Psychic Golduck and custom
+evolution methods remain intentional. The complete Oak introduction and player/rival
+naming screens are locked to the owner’s supplied 0025 version.
+
+Blue remains the Kanto rival, without a Leader title, before the first Hall of Fame.
+Giovanni remains Team Rocket’s leader and Viridian Gym’s leader during that campaign;
+Blue’s gym takeover follows afterward. These later events are planned, not implemented.
+Suitable color Jessie/James overworld and battle sprites are being researched.
+
+Route 5’s first development build now has Yellow’s encounters throughout the day,
+its Underground Path sign and no inherited outdoor NPC. The Kanto Day Care is being
+connected to HeartGold’s native services. The owner has approved sharing its deposited
+Pokémon and interactions with Johto’s existing Day Care, while leaving that facility
+unchanged. A private test reached the Kanto house, selected a Pokémon and deposited it;
+withdrawal, saving/reloading and egg handling still need checks. Yellow’s route layout,
+correct Day Care placement and the Saffron guard’s drink roadblock are still unfinished.
+Six focused automated checks pass; this is not a full campaign playthrough.
+
+The local build tools and DS emulator are working. A copy of the owner’s latest save
+loaded through Continue; the original was left untouched. A private live viewing link
+now carries both DS screens and game audio. A slow video conversion was corrected,
+and the owner reported much smoother playback. The private link is temporary and
+requires the PC and streaming processes to stay online; it is not a public viewing page.
+
+Each completed prototype update will include a labeled gameplay test recording
+here, alongside its playable patch link. Prepared saves or test-only setup will be
+identified, and earlier checkpoints and recordings will remain available. No new
+0026 completion recording or playable patch is being claimed in this progress update.
