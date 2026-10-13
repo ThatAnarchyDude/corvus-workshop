@@ -755,3 +755,9 @@ Route 5 now has a private test build with seamless outdoor connections, HeartGol
 All 52 focused Route 5 checks pass. The new scenery changes rendered terrain only: collision, events, executable code and other resources remain unchanged compared with the connected baseline. Johto and the supplied Oak introduction/naming screens remain preserved. A labeled 24-second native gameplay recording with real stereo game audio is saved locally for this private checkpoint.
 
 0026 remains the latest released prototype. 0027 still needs fence/scenery finishing, gate interior and door-animation work, broader old-save and travel checks, and release patch verification. The next step is to finish those items before posting a new patching page and its recording. The live server and viewing tunnel remain connected; picture and sound pause between actual tests. No ROMs, saves or private controls are published by this update.
+
+## October 13 — live viewing page repaired
+
+The stream server was sending video and audio, but a JavaScript initialization error left the viewing page blank before it could draw the game screens. That error is fixed. Both screens now visibly render in the browser, sound initializes, and all 11 stream/dashboard checks pass, including a new test that executes the actual page script. Refresh the stream page to load the repair. The existing viewing URL is unchanged; public viewing and private controls remain separated.
+
+This repair does not change the ROM. The server and viewing tunnel remain connected, with ordinary video/audio pauses between tests. The owner's requested five-minute viewing window was restarted after the browser repair.
