@@ -769,3 +769,12 @@ The northern entrance needed alignment: HeartGold's stairs reach the side roads,
 Continuous native tests now walk from either existing Cerulean entrance through Route 5 into Day Care without intermediate test transports. The actual live walk also completed that route. All 55 focused Route 5 checks pass. A labeled 49-second native recording with real stereo audio verifies Cerulean, Route 5 and Day Care; it stays local with this private checkpoint until release packaging.
 
 0026 remains the latest released prototype. Remaining work includes fences, the northern visual seam, gate interior and door animation, broader save/travel checks, and the cumulative release patch/recording. The viewing server and tunnel remain connected, with the feed paused between actual playtests.
+
+
+## October 13 — prototype 0026 bedroom report checked
+
+A tester reported unreliable movement and a recurring black screen using standalone DeSmuME 0.9.13-4 under Linux Xvfb. The cause is still unconfirmed.
+
+A clean run of the exact released 0026 ROM with our DeSmuME libretro core completed the supplied Oak/player/rival introduction, walked normally in the bedroom, used the stairs, and made a normal first-floor save. A fresh Continue boot loaded that save, and a separate direct-input test moved the player another tile. This does not rule out the tester's reported failure in their environment.
+
+A local Linux test kit and separate fresh first-floor .dsv were prepared for comparison. The kit needs no Xvfb, contains no ROM, preserves its input save, and captures screenshots and actual stereo game audio. Its official core downloader verifies the same core used by development. Saves and private test artifacts remain local. Two opening-metrics checks and all eleven stream/bridge checks pass. Prototype 0026 remains the latest release.
