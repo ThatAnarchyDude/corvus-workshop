@@ -819,3 +819,8 @@ Native Rod Save/Continue, fishing with the earned item and the full-bag case sti
 ## October 13 — reported invisible gatehouse repaired in private0030
 The northbound gatehouse was missing from Vermilion's loaded building models even though its doorway remained active. The private next-prototype candidate now includes the compatible gate model. Live testing with a copied save showed its exterior, entry into the original HeartGold interior and normal exit with the exterior still visible. Complete city-to-gate traversal remains on the final release checklist.
 Preservation checks passed: the fix changes only Vermilion's graphics reference, leaving interiors, events, doors, terrain and Johto unchanged.0029 remains the latest release. The existing stream connection stays available with picture and audio paused between tests; its URL has not changed.
+
+
+## October 13 — Vermilion letter and house advice tested
+Yellow's letter to PIPPI is now visible on the existing house table and readable through all three paragraphs. Live tests also verified the youngster and Pidgey dialogue, the southern house's HM advice and normal dialogue closure. The original HeartGold rooms, furniture, collision and doors are preserved; only a small letter object was added.
+Preservation checks pass. The viewing link remains connected and remotely verified, with controls private and picture/sound paused between tests.0030 is still in development;0029 remains the latest release.
