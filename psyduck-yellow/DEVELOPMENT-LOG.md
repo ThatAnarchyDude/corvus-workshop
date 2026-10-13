@@ -761,3 +761,11 @@ All 52 focused Route 5 checks pass. The new scenery changes rendered terrain onl
 The stream server was sending video and audio, but a JavaScript initialization error left the viewing page blank before it could draw the game screens. That error is fixed. Both screens now visibly render in the browser, sound initializes, and all 11 stream/dashboard checks pass, including a new test that executes the actual page script. Refresh the stream page to load the repair. The existing viewing URL is unchanged; public viewing and private controls remain separated.
 
 This repair does not change the ROM. The server and viewing tunnel remain connected, with ordinary video/audio pauses between tests. The owner's requested five-minute viewing window was restarted after the browser repair.
+
+## October 13 — natural Cerulean-to-Day Care access verified (private 0027)
+
+The northern entrance needed alignment: HeartGold's stairs reach the side roads, while Yellow's central approach sits between them. Two small gaps in the first-row tree/fence boundary now connect those stairs to the central path. All 48 grass tiles, 40 ledges, doors, buildings and the southern gate roadblock remain intact; Cerulean's original map and Johto remain unchanged.
+
+Continuous native tests now walk from either existing Cerulean entrance through Route 5 into Day Care without intermediate test transports. The actual live walk also completed that route. All 55 focused Route 5 checks pass. A labeled 49-second native recording with real stereo audio verifies Cerulean, Route 5 and Day Care; it stays local with this private checkpoint until release packaging.
+
+0026 remains the latest released prototype. Remaining work includes fences, the northern visual seam, gate interior and door animation, broader save/travel checks, and the cumulative release patch/recording. The viewing server and tunnel remain connected, with the feed paused between actual playtests.
