@@ -814,3 +814,8 @@ Three focused checks cover the exchange/repeat logic, refusal/full-bag retries a
 Vermilion's fishing guru now offers Yellow's Old Rod in the private 0030 candidate, retaining HeartGold's room. Actual live testing confirmed refusal and reoffering, acceptance and the named receipt, then the completed-gift greeting. Six focused Rod/Voucher checks pass, including existing ownership, refusal/full-bag retries and native-resource preservation. Johto's native fishing-guru flag and scripts remain unchanged.
 
 Native Rod Save/Continue, fishing with the earned item and the full-bag case still need checks. Other Vermilion campaign work remains unfinished; prototype 0029 is the latest published release. Original saves are untouched, and the viewing connection remains available with picture and sound paused between tests.
+
+
+## October 13 — reported invisible gatehouse repaired in private0030
+The northbound gatehouse was missing from Vermilion's loaded building models even though its doorway remained active. The private next-prototype candidate now includes the compatible gate model. Live testing with a copied save showed its exterior, entry into the original HeartGold interior and normal exit with the exterior still visible. Complete city-to-gate traversal remains on the final release checklist.
+Preservation checks passed: the fix changes only Vermilion's graphics reference, leaving interiors, events, doors, terrain and Johto unchanged.0029 remains the latest release. The existing stream connection stays available with picture and audio paused between tests; its URL has not changed.
