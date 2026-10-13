@@ -16,3 +16,10 @@ Keep ROMs, originals, saves and private controls local. Project Recovery stays r
 ## October 13 — opening/save regression follow-up
 
 Tester report: standalone DeSmuME 0.9.13-4 under Linux Xvfb has unreliable bedroom movement and an unconfirmed recurring black screen. Clean exact released 0026 on the development DeSmuME libretro core passes unchanged Oak/name intro, native bedroom walking, stairs to map503, normal first-floor save and fresh Continue. Local direct-input Linux kit also passes Continue and one-tile Down with stereo audio; input save remains intact. Two opening-metrics checks and eleven live/bridge checks pass. Original ROM and owner campaign save are unchanged. Keep this report open until the tester compares the verified first-floor save/core or supplies reproducible black-screen steps. No new prototype release from these diagnostic checks.
+
+
+## October 13 — complete offline Linux tester bundle
+
+The requested local bundle now includes the Python runner, exact DeSmuME libretro core, explicit configuration, portable Python, pinned Pillow packages, offline setup and the separate fresh first-floor save. It contains no ROM or owner campaign save. Base Linux runtime libraries are checked at startup.
+
+An extracted-copy test using the bundled Python and packages passed Continue and one-tile movement, captured both screens and real stereo audio, and preserved the supplied save. No Xvfb, pip or network download was required for setup. The bundle remains local for transfer to the tester. Prototype 0026 remains the release, and the standalone DeSmuME/Xvfb black-screen report remains open pending comparison.
