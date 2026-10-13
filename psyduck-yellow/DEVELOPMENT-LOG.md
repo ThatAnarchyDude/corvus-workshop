@@ -800,3 +800,10 @@ The Soul Badge permits Surf in both Kanto and Johto, with Fog Badge retained as 
 Separate continuous gameplay checks walked through both Underground entrances and the corridor, encountered a wild Pokémon, defeated both southern trainers and reached Vermilion. Native Save followed by fresh pure-candidate Continue retained the position and both actual defeat flags. Trade/evolution, hidden pickups, all three rods, Surf, preview history and preservation checks have separate evidence; this is not a complete campaign playthrough or gameplay coverage of every preview destination.
 
 The actual patch-page JavaScript decoder reconstructed the exact candidate and rejected incorrect size/checksum inputs. The cumulative xdelta and ROM archive also passed checks. Published patch and recording pages matched the tested local artifacts. No ROM, save or private control credential was published.
+
+
+## October 13 — Vermilion Bike Voucher reward verified in development
+
+The Fan Club chairman now gives Yellow's one-time Bike Voucher in the private 0030 candidate, keeping HeartGold's room intact. An actual native reward, normal save and fresh pure-candidate Continue retained the completed reward. A copy of that earned-Voucher save then completed the native Cerulean Voucher-for-Bicycle exchange. Tests used initial private transport only, without item grants or emulator save states; original saves remain untouched.
+
+Three focused checks cover the exchange/repeat logic, refusal/full-bag retries and native-resource preservation. Gameplay checks ran on the connected live video/audio feed, with picture and sound paused afterward. Other Vermilion events, Old Rod gift, ship and gym progression remain unfinished. The exchange's own Save/Continue and native refusal/full-bag cases still need checks. Prototype 0029 remains the latest published release.
