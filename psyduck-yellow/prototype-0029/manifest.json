@@ -1,0 +1,13 @@
+{
+  "version": "0029",
+  "source_sha256": "65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105",
+  "output_sha256": "e10c99766c73e7c458632bd7d9a17ee97bfe10231b33a727294c62eafaf08d76",
+  "source_bytes": 134217728,
+  "output_bytes": 127710408,
+  "patch_sha256": "dc3202131079aecfe735b05e80145319001c925a037a3a5de75b7a8ad0369686",
+  "cumulative": true,
+  "roundtrip_verified": true,
+  "zip_verified": true,
+  "publication": "private package; patch page and recording publication pending",
+  "recording": "../0029-release-recording-v1/prototype-0029-boundary-audio.mp4"
+}
