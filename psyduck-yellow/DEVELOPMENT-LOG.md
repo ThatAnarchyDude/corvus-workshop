@@ -824,3 +824,7 @@ Preservation checks passed: the fix changes only Vermilion's graphics reference,
 ## October 13 — Vermilion letter and house advice tested
 Yellow's letter to PIPPI is now visible on the existing house table and readable through all three paragraphs. Live tests also verified the youngster and Pidgey dialogue, the southern house's HM advice and normal dialogue closure. The original HeartGold rooms, furniture, collision and doors are preserved; only a small letter object was added.
 Preservation checks pass. The viewing link remains connected and remotely verified, with controls private and picture/sound paused between tests.0030 is still in development;0029 remains the latest release.
+
+
+## October 13 — Vermilion Mart conversations in development
+Added Yellow's two Mart customer conversations to the private candidate, preserving the native shop interior and clerks. The Rocket conversation and normal dialogue closure were exercised on the live feed. Preservation checks pass; the second customer's gameplay check and Yellow's exact shop inventory still need completion. Pokémon Center services and dialogue remain in progress.0029 remains the latest release.
