@@ -778,3 +778,10 @@ A tester reported unreliable movement and a recurring black screen using standal
 A clean run of the exact released 0026 ROM with our DeSmuME libretro core completed the supplied Oak/player/rival introduction, walked normally in the bedroom, used the stairs, and made a normal first-floor save. A fresh Continue boot loaded that save, and a separate direct-input test moved the player another tile. This does not rule out the tester's reported failure in their environment.
 
 A local Linux test kit and separate fresh first-floor .dsv were prepared for comparison. The kit needs no Xvfb, contains no ROM, preserves its input save, and captures screenshots and actual stereo game audio. Its official core downloader verifies the same core used by development. Saves and private test artifacts remain local. Two opening-metrics checks and all eleven stream/bridge checks pass. Prototype 0026 remains the latest release.
+
+
+## October 13 — complete offline Linux tester bundle
+
+The requested local bundle now includes the Python runner, exact DeSmuME libretro core, explicit configuration, portable Python, pinned Pillow packages, offline setup and the separate fresh first-floor save. It contains no ROM or owner campaign save. Base Linux runtime libraries are checked at startup.
+
+An extracted-copy test using the bundled Python and packages passed Continue and one-tile movement, captured both screens and real stereo audio, and preserved the supplied save. No Xvfb, pip or network download was required for setup. The bundle remains local for transfer to the tester. Prototype 0026 remains the release, and the standalone DeSmuME/Xvfb black-screen report remains open pending comparison.
