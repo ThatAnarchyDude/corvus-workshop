@@ -807,3 +807,10 @@ The actual patch-page JavaScript decoder reconstructed the exact candidate and r
 The Fan Club chairman now gives Yellow's one-time Bike Voucher in the private 0030 candidate, keeping HeartGold's room intact. An actual native reward, normal save and fresh pure-candidate Continue retained the completed reward. A copy of that earned-Voucher save then completed the native Cerulean Voucher-for-Bicycle exchange. Tests used initial private transport only, without item grants or emulator save states; original saves remain untouched.
 
 Three focused checks cover the exchange/repeat logic, refusal/full-bag retries and native-resource preservation. Gameplay checks ran on the connected live video/audio feed, with picture and sound paused afterward. Other Vermilion events, Old Rod gift, ship and gym progression remain unfinished. The exchange's own Save/Continue and native refusal/full-bag cases still need checks. Prototype 0029 remains the latest published release.
+
+
+## October 13 — Old Rod gift in development
+
+Vermilion's fishing guru now offers Yellow's Old Rod in the private 0030 candidate, retaining HeartGold's room. Actual live testing confirmed refusal and reoffering, acceptance and the named receipt, then the completed-gift greeting. Six focused Rod/Voucher checks pass, including existing ownership, refusal/full-bag retries and native-resource preservation. Johto's native fishing-guru flag and scripts remain unchanged.
+
+Native Rod Save/Continue, fishing with the earned item and the full-bag case still need checks. Other Vermilion campaign work remains unfinished; prototype 0029 is the latest published release. Original saves are untouched, and the viewing connection remains available with picture and sound paused between tests.
