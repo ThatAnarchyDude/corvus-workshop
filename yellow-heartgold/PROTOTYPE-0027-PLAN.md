@@ -11,3 +11,8 @@ Next: finish fences and the visible northern seam, gate interior and cloned door
 Preserve Johto maps, scripts, encounters and gameplay. Keep Kanto Day Care's approved shared native services. Preserve the supplied Oak intro/naming screens and intentional starter, shiny, PC, typing and evolution changes. Blue remains Kanto rival before the first Hall of Fame, with Giovanni leading Team Rocket and Viridian Gym; the later Blue takeover and Johto access remain planned. Repeated area-name banners and final Jessie/James graphics remain pending.
 
 Keep ROMs, originals, saves and private controls local. Project Recovery stays read-only. Keep the viewing server/tunnel connected and display gameplay/audio only during actual tests. Update the plain-language log with completed checkpoints.
+
+
+## October 13 — opening/save regression follow-up
+
+Tester report: standalone DeSmuME 0.9.13-4 under Linux Xvfb has unreliable bedroom movement and an unconfirmed recurring black screen. Clean exact released 0026 on the development DeSmuME libretro core passes unchanged Oak/name intro, native bedroom walking, stairs to map503, normal first-floor save and fresh Continue. Local direct-input Linux kit also passes Continue and one-tile Down with stereo audio; input save remains intact. Two opening-metrics checks and eleven live/bridge checks pass. Original ROM and owner campaign save are unchanged. Keep this report open until the tester compares the verified first-floor save/core or supplies reproducible black-screen steps. No new prototype release from these diagnostic checks.
