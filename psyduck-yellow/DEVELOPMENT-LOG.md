@@ -5,7 +5,7 @@ still being built. Share this page with anyone following the project.
 
 **Last updated: October 12, 2026 at 10:17 AM EDT.**
 
-[Watch LIVE testing with video and audio](https://attributes-set-inbox-educational.trycloudflare.com/#token=SaBO46q-TKH_m6lLAib088MTzb7drRISjWaqa7IlVxM)
+[Watch LIVE testing with video and audio](https://standings-scholarship-arnold-winners.trycloudflare.com/#token=SaBO46q-TKH_m6lLAib088MTzb7drRISjWaqa7IlVxM)
 
 Tap **Enable sound** in the viewer for game audio. The upper DS screen is on the
 left and the touch screen is on the right. The link grants viewing only; game
