@@ -3,7 +3,7 @@
 A plain-language guide to what has changed, what you can play now, and what is
 still being built. Share this page with anyone following the project.
 
-**Last updated: October 12, 2026 at 10:17 AM EDT.**
+**Last updated: October 13, 2026.**
 
 [Watch LIVE testing with video and audio](https://standings-scholarship-arnold-winners.trycloudflare.com/#token=SaBO46q-TKH_m6lLAib088MTzb7drRISjWaqa7IlVxM)
 
@@ -14,9 +14,9 @@ controls remain private. Video and audio pause between actual playtests.
 *Stream link refreshed and remotely checked: October 13, 2026. This temporary link
 requires the laptop and streaming processes to remain online.*
 
-**Latest published patch: prototype 0026.** Route 5 has Yellow’s encounters at every time of day and native shared Day Care services. Yellow terrain/Day Care placement and Saffron guards remain unfinished in this checkpoint.
+**Latest published patch: prototype 0029.** Connected Route 6 and native Underground Path services, with earlier checkpoints carried forward.
 
-[Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0026/index.html)
+[Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0029/index.html)
 
 The download page contains a modification patch. Select your original,
 unmodified USA HeartGold game file to build the playable DS file on your own
@@ -785,3 +785,18 @@ A local Linux test kit and separate fresh first-floor .dsv were prepared for com
 The requested local bundle now includes the Python runner, exact DeSmuME libretro core, explicit configuration, portable Python, pinned Pillow packages, offline setup and the separate fresh first-floor save. It contains no ROM or owner campaign save. Base Linux runtime libraries are checked at startup.
 
 An extracted-copy test using the bundled Python and packages passed Continue and one-tile movement, captured both screens and real stereo audio, and preserved the supplied save. No Xvfb, pip or network download was required for setup. The bundle remains local for transfer to the tester. Prototype 0026 remains the release, and the standalone DeSmuME/Xvfb black-screen report remains open pending comparison.
+
+
+## Prototype 0029 — Route 6 and Underground Path, October 13, 2026
+
+[Create prototype 0029 on your phone or PC](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0029/index.html). Select your original, unmodified USA HeartGold ROM; the cumulative patch is applied locally and your original is never uploaded. Back up normal saves and keep emulator save states with their exact ROM version. Earlier patch pages remain available.
+
+Route 6 now connects to the native cities and has Yellow's six trainer teams, grass encounters and rod encounters. Native Underground rooms and hidden Full Restore/X Special rewards are retained. The northern entrance offers Cubone for RICKY, with the native trade followed by evolution into Machamp. Earlier Route 5 work and native interiors carry forward. Saffron's missing pavement textures are repaired.
+
+The Soul Badge permits Surf in both Kanto and Johto, with Fog Badge retained as an alternative. Native full-screen location previews remember visits within each time period and return after a period change; repeated entries keep the small name banners. The supplied Oak introduction/naming screens, approved customizations and native interiors are preserved. Johto assets remain preserved; future changes are limited to necessary traversal/HM compatibility with Kanto-earned unlocks. The full Kanto campaign remains unfinished.
+
+[Watch the 50-second recording with real game audio](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/playtests/prototype-0029.html). It shows repeated Vermilion/Route 6 crossings following a normal Continue on the final candidate. Both screens are side by side. Testing used a copied prepared traversal save and its existing party, without RAM writes or emulator state restoration; it does not establish campaign difficulty. Native audio-clock drift was aligned while preserving pitch.
+
+Separate continuous gameplay checks walked through both Underground entrances and the corridor, encountered a wild Pokémon, defeated both southern trainers and reached Vermilion. Native Save followed by fresh pure-candidate Continue retained the position and both actual defeat flags. Trade/evolution, hidden pickups, all three rods, Surf, preview history and preservation checks have separate evidence; this is not a complete campaign playthrough or gameplay coverage of every preview destination.
+
+The actual patch-page JavaScript decoder reconstructed the exact candidate and rejected incorrect size/checksum inputs. The cumulative xdelta and ROM archive also passed checks. Published patch and recording pages matched the tested local artifacts. No ROM, save or private control credential was published.
