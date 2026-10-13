@@ -8,6 +8,6 @@
   "cumulative": true,
   "roundtrip_verified": true,
   "zip_verified": true,
-  "publication": "private package; patch page and recording publication pending",
+  "publication": "Verified patch page and recording published; ROM and saves remain local",
   "recording": "../0029-release-recording-v1/prototype-0029-boundary-audio.mp4"
 }
