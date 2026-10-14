@@ -24,6 +24,8 @@ device. The original file is not uploaded. Each new checkpoint includes earlier
 changes; use the original HeartGold file as input, rather than a previous
 prototype. Published checkpoints are kept separately and are not overwritten.
 
+For every newly released test prototype, publish and verify its own browser patching page, post the link in this chat and its dated GitHub update, and update the latest-patch link above. Preserve earlier patch pages. Private work-in-progress builds are not announced as released versions.
+
 ## Watch recorded playtests
 
 [Watch the recorded playtests](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/playtests/index.html).
