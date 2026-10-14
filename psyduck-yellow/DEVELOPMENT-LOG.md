@@ -883,3 +883,10 @@ The viewing stream was restored after the desktop and Ubuntu recovery. [Open the
 [Download the full Windows PKHeX release](https://github.com/ThatAnarchyDude/PKHeX-Psyduck-Yellow/releases/tag/pkhex-py0029-v1). This keeps PKHeX's normal editors and adds an optional Psyduck Yellow 0029 profile. Open a copied battery save (.sav/.dsv or supported .srm), then enable Tools → Psyduck Yellow prototype 0029. The .nds game file and emulator save states are not editor inputs.
 
 Custom starter legality, supported Hidden Abilities, evolution changes, project shiny classification, item names and Golduck's Water/Psychic typing are built in. Saves remain Generation IV/HeartGold-compatible. Windows editor regressions and an exported-save native Continue check passed; an independent public build also passed. The full altered wild/campaign encounter catalog remains incomplete, so other custom encounters may still produce retail warnings. ROMs and player saves are not included. The game release remains prototype 0029.
+
+
+## October 14, 2026 — player PC items tab in PKHeX v2
+
+[Download PKHeX with the new PC inventory tab](https://github.com/ThatAnarchyDude/PKHeX-Psyduck-Yellow/releases/tag/pkhex-py0029-v2). With the Psyduck Yellow profile enabled, SAV → Items now includes the player's PC item storage separately from the Bag. All ten physical slots in prototype 0029 are editable regardless of badges. Tests verify correct saved item/quantity mapping, preservation of Bag and story data, and no extra tab in ordinary HeartGold saves. The independent Windows release build passed; v1 remains available.
+
+The approved next game prototype will start at 20 usable PC slots and unlock five for each distinct Kanto badge, up to 60. This restriction belongs in the game only; PKHeX will expose all physical slots supported by that new save layout. The expanded game layout is still pending and is not written into existing 0029 saves by this editor. The game release remains prototype 0029.
