@@ -849,3 +849,9 @@ The private candidate now contains Jenny's Thunder Badge check and level-10 Squi
 ## October 13 — approved Jenny gift behavior verified
 Jenny now uses the requested full-party warning and keeps Squirtle available until the player has a free party slot. This approved customization replaces automatic Box delivery. Four script checks pass. Live testing verified full-party refusal/retry, successful level-10 Squirtle delivery, repeat dialogue and persistence through normal Save/Continue on the pure candidate.
 Tests used isolated copied saves; eligibility and capacity fixtures were clearly labeled, and originals remain untouched. Jenny's final artwork and other Vermilion campaign work still need completion.0029 remains the latest release. The viewing connection remains available with picture and sound paused between tests.
+
+## October 13 — restored prototype 0028 patch link
+
+The missing [prototype 0028 browser patch page](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0028/index.html) is now published. It restores native gatehouse interiors. Its browser decoder reproduces the preserved released ROM exactly and rejects incorrect original files. Use an unmodified USA HeartGold file; the page contains only a patch and performs patching locally. Prototype 0029 remains the newer published checkpoint.
+
+Project pages and plain-language notes belong under `psyduck-yellow`. The existing `yellow-heartgold` folder holds development tools and ignored private build outputs. A local copy of the 0028 ZIP is now also available under `psyduck-yellow/downloads/prototype-0028`; that download folder is ignored and its ROM archive is not published. Existing release and tool paths remain preserved.
