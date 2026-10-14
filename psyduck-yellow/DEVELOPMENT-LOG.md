@@ -864,3 +864,10 @@ Project pages and plain-language notes belong under `psyduck-yellow`. The existi
 Both Vermilion vendors now use the new cumulative Kanto stock system in the private prototype 0030 candidate: the northern vendor sells balls and the southern vendor sells supplies. Native buying, selling and cancellation work. Tests on a copied two-badge save showed the expected early stock. A separate controlled fixture with four out-of-order Kanto badges and all eight Johto badges selected fourth-stage stock correctly, including Great Balls, Revive and Super Repel; later items remained locked. A normal save and fresh Continue on the pure candidate retained that stock. These fixture badges are test setup, not campaign victories.
 
 Compiled-script checks cover every badge combination for both vendors. Preservation checks confirm the existing shared shop scripts and excluded shops remain unchanged. Other ordinary Kanto Marts still need connecting as their areas progress. Vermilion's remaining city, ship and gym work and release checks are unfinished; prototype 0029 remains the latest published release. Original saves and released builds remain untouched.
+
+
+## October 13 — isolated ship rooms and captain reward checked
+
+Separate copies of HeartGold's ship hall and captain cabin now render and support ordinary doorway travel in both directions. Existing S.S. Aqua and Johto maps, events and assets remain unchanged. These test rooms are disconnected from the campaign and still have temporary native ship labels.
+
+The captain's Yellow dialogue and one-time HM01 Cut reward were checked in the native game on a copied save. A repeat conversation used the completed-reward greeting, and that behavior survived a normal Save and fresh Continue on the pure experimental candidate. Script checks also cover full-bag retry and unrelated quest flags; the full-bag case still needs an in-game check. The rubbing animation, final location names, boarding, rival, trainers and departure remain unfinished. Prototype 0029 remains the latest public release; this is private development progress, not a new playable release.
