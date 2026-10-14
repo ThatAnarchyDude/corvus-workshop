@@ -840,3 +840,7 @@ Confirmed Lavender's Yellow stock for the fourth-badge expansion: Great Balls, R
 
 ## October 13 — Vermilion Center interactions checked
 Yellow's training advice and stationary Chansey are implemented in the private candidate. Live checks verified their dialogue and return to normal field control, plus the native nurse's completed healing sequence. Preservation checks pass; the original room, nurse and link-service scripts remain intact. A conflicting poison-dialogue detail and other Vermilion campaign work remain pending.
+
+
+## October 13 — Jenny reward event staged
+The private candidate now contains Jenny's Thunder Badge check and level-10 Squirtle event. Three compiled-script checks pass; live testing verified that the existing two-badge save cannot receive the gift yet. The event is not release-ready: Yellow's Box delivery when the party is full, final Jenny artwork and accepted-gift save checks remain unfinished. Originals are untouched;0029 stays the latest release.
