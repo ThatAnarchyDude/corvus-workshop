@@ -857,3 +857,10 @@ Tests used isolated copied saves; eligibility and capacity fixtures were clearly
 The missing [prototype 0028 browser patch page](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0028/index.html) is now published. It restores native gatehouse interiors. Its browser decoder reproduces the preserved released ROM exactly and rejects incorrect original files. Use an unmodified USA HeartGold file; the page contains only a patch and performs patching locally. Prototype 0029 remains the newer published checkpoint.
 
 Project pages and plain-language notes belong under `psyduck-yellow`. The existing `yellow-heartgold` folder holds development tools and ignored private build outputs. A local copy of the 0028 ZIP is now also available under `psyduck-yellow/downloads/prototype-0028`; that download folder is ignored and its ROM archive is not published. Existing release and tool paths remain preserved.
+
+
+## October 13 — shared Vermilion Mart stock checked in-game
+
+Both Vermilion vendors now use the new cumulative Kanto stock system in the private prototype 0030 candidate: the northern vendor sells balls and the southern vendor sells supplies. Native buying, selling and cancellation work. Tests on a copied two-badge save showed the expected early stock. A separate controlled fixture with four out-of-order Kanto badges and all eight Johto badges selected fourth-stage stock correctly, including Great Balls, Revive and Super Repel; later items remained locked. A normal save and fresh Continue on the pure candidate retained that stock. These fixture badges are test setup, not campaign victories.
+
+Compiled-script checks cover every badge combination for both vendors. Preservation checks confirm the existing shared shop scripts and excluded shops remain unchanged. Other ordinary Kanto Marts still need connecting as their areas progress. Vermilion's remaining city, ship and gym work and release checks are unfinished; prototype 0029 remains the latest published release. Original saves and released builds remain untouched.
