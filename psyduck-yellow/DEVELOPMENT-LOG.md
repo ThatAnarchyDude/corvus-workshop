@@ -3,15 +3,15 @@
 A plain-language guide to what has changed, what you can play now, and what is
 still being built. Share this page with anyone following the project.
 
-**Last updated: October 13, 2026.**
+**Last updated: October 14, 2026.**
 
-[Watch LIVE testing with video and audio](https://standings-scholarship-arnold-winners.trycloudflare.com/#token=SaBO46q-TKH_m6lLAib088MTzb7drRISjWaqa7IlVxM)
+[Watch LIVE testing with video and audio](https://enrolled-ira-opening-five.trycloudflare.com/)
 
 Tap **Enable sound** in the viewer for game audio. The upper DS screen is on the
 left and the touch screen is on the right. The link grants viewing only; game
 controls remain private. Video and audio pause between actual playtests.
 
-*Stream link refreshed and remotely checked: October 13, 2026. This temporary link
+*Stream link refreshed and remotely checked: October 14, 2026. This temporary link
 requires the laptop and streaming processes to remain online.*
 
 **Latest published patch: prototype 0029.** Connected Route 6 and native Underground Path services, with earlier checkpoints carried forward.
@@ -871,3 +871,8 @@ Compiled-script checks cover every badge combination for both vendors. Preservat
 Separate copies of HeartGold's ship hall and captain cabin now render and support ordinary doorway travel in both directions. Existing S.S. Aqua and Johto maps, events and assets remain unchanged. These test rooms are disconnected from the campaign and still have temporary native ship labels.
 
 The captain's Yellow dialogue and one-time HM01 Cut reward were checked in the native game on a copied save. A repeat conversation used the completed-reward greeting, and that behavior survived a normal Save and fresh Continue on the pure experimental candidate. Script checks also cover full-bag retry and unrelated quest flags; the full-bag case still needs an in-game check. The rubbing animation, final location names, boarding, rival, trainers and departure remain unfinished. Prototype 0029 remains the latest public release; this is private development progress, not a new playable release.
+
+
+## October 14 — viewing stream reconnected
+
+The viewing stream was restored after the desktop and Ubuntu recovery. [Open the refreshed live video/audio viewer](https://enrolled-ira-opening-five.trycloudflare.com/). Remote checks confirm authenticated viewing works and the viewing credential cannot use game controls. The access-bearing link is shared with the owner in chat; this public log stores only the viewer address. Picture and sound pause between actual playtests; the server and tunnel remain connected when possible. Prototype 0029 remains the latest published game release.
