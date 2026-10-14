@@ -844,3 +844,8 @@ Yellow's training advice and stationary Chansey are implemented in the private c
 
 ## October 13 — Jenny reward event staged
 The private candidate now contains Jenny's Thunder Badge check and level-10 Squirtle event. Three compiled-script checks pass; live testing verified that the existing two-badge save cannot receive the gift yet. The event is not release-ready: Yellow's Box delivery when the party is full, final Jenny artwork and accepted-gift save checks remain unfinished. Originals are untouched;0029 stays the latest release.
+
+
+## October 13 — approved Jenny gift behavior verified
+Jenny now uses the requested full-party warning and keeps Squirtle available until the player has a free party slot. This approved customization replaces automatic Box delivery. Four script checks pass. Live testing verified full-party refusal/retry, successful level-10 Squirtle delivery, repeat dialogue and persistence through normal Save/Continue on the pure candidate.
+Tests used isolated copied saves; eligibility and capacity fixtures were clearly labeled, and originals remain untouched. Jenny's final artwork and other Vermilion campaign work still need completion.0029 remains the latest release. The viewing connection remains available with picture and sound paused between tests.
