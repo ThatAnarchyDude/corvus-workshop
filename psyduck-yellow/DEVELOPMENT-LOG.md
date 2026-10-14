@@ -833,3 +833,10 @@ Added Yellow's two Mart customer conversations to the private candidate, preserv
 ## October 13 — shared Kanto shop progression foundation checked
 The owner approved a common cumulative stock system for regular Kanto Marts, including Lavender: start with Yellow's Viridian stock and add missing items after each newly earned Kanto badge, following the standard badge-city order. Northern vendors sell balls and southern vendors sell general supplies. Johto shops, Celadon's Department Store and Pokémon League shops keep their HeartGold inventories and prices. Master Balls and Cherish Balls are excluded from new shop stock.
 Prepared shared inventory data and a Kanto-only badge counter. Five checks pass, including every possible badge combination. Native integration and the fourth badge's Celadon-derived stock selection remain pending. The earlier fixed Vermilion catalog passed actual copied-save buy/sell checks; the new shared system is not yet playable.0029 remains the latest release.
+
+
+## October 13 — Lavender supplies the fourth shop expansion
+Confirmed Lavender's Yellow stock for the fourth-badge expansion: Great Balls, Revives and Super Repels. All cumulative stock stages are now defined and five checks pass, including every badge combination and the two-vendor split. Celadon Department Store, League-area shops and Johto shops remain unchanged. Native integration is still pending; this is not yet a playable shared shop system.0029 remains the latest release.
+
+## October 13 — Vermilion Center interactions checked
+Yellow's training advice and stationary Chansey are implemented in the private candidate. Live checks verified their dialogue and return to normal field control, plus the native nurse's completed healing sequence. Preservation checks pass; the original room, nurse and link-service scripts remain intact. A conflicting poison-dialogue detail and other Vermilion campaign work remain pending.
