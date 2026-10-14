@@ -895,3 +895,10 @@ The approved next game prototype will start at 20 usable PC slots and unlock fiv
 ## October 14, 2026 — PKHeX v3 resizable window
 
 [Download PKHeX v3](https://github.com/ThatAnarchyDude/PKHeX-Psyduck-Yellow/releases/tag/pkhex-py0029-v3). The main window now supports dragging its edges and the standard Windows maximize button. Editor panes expand to fit, the menu stays at its normal height, and maximizing uses the desktop working area so the visible taskbar remains accessible. Restore returns to the prior normal size. Native Windows resize/maximize/restore checks and the existing PC-item/starter editor regressions passed locally and in the independent public release build. Earlier editor releases remain available. Game prototype 0029 is unchanged.
+
+
+## October 14, 2026 — PKHeX v4 proportional interface scaling
+
+[Download PKHeX v4](https://github.com/ThatAnarchyDude/PKHeX-Psyduck-Yellow/releases/tag/pkhex-py0029-v4). Both manual resizing and maximizing now enlarge the live interface together: text, controls, spacing, menu icons and Pokemon images scale from their original dimensions. At 150% of the default client size, the display uses a 150% scale. A uniform factor fits differing window shapes without clipping or distortion; the taskbar remains available. Returning to the original size restores the original interface.
+
+Local and independent Windows checks passed manual scaling, the exact 150% example, maximize/restore, loading a save while enlarged, editing supported starter families and the PC inventory tab. The game/save format remains unchanged and earlier editor releases are preserved.
