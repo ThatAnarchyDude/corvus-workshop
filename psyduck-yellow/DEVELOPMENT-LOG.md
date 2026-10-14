@@ -828,3 +828,8 @@ Preservation checks pass. The viewing link remains connected and remotely verifi
 
 ## October 13 — Vermilion Mart conversations in development
 Added Yellow's two Mart customer conversations to the private candidate, preserving the native shop interior and clerks. The Rocket conversation and normal dialogue closure were exercised on the live feed. Preservation checks pass; the second customer's gameplay check and Yellow's exact shop inventory still need completion. Pokémon Center services and dialogue remain in progress.0029 remains the latest release.
+
+
+## October 13 — shared Kanto shop progression foundation checked
+The owner approved a common cumulative stock system for regular Kanto Marts, including Lavender: start with Yellow's Viridian stock and add missing items after each newly earned Kanto badge, following the standard badge-city order. Northern vendors sell balls and southern vendors sell general supplies. Johto shops, Celadon's Department Store and Pokémon League shops keep their HeartGold inventories and prices. Master Balls and Cherish Balls are excluded from new shop stock.
+Prepared shared inventory data and a Kanto-only badge counter. Five checks pass, including every possible badge combination. Native integration and the fourth badge's Celadon-derived stock selection remain pending. The earlier fixed Vermilion catalog passed actual copied-save buy/sell checks; the new shared system is not yet playable.0029 remains the latest release.
