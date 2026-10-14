@@ -876,3 +876,10 @@ The captain's Yellow dialogue and one-time HM01 Cut reward were checked in the n
 ## October 14 — viewing stream reconnected
 
 The viewing stream was restored after the desktop and Ubuntu recovery. [Open the refreshed live video/audio viewer](https://enrolled-ira-opening-five.trycloudflare.com/). Remote checks confirm authenticated viewing works and the viewing credential cannot use game controls. The access-bearing link is shared with the owner in chat; this public log stores only the viewer address. Picture and sound pause between actual playtests; the server and tunnel remain connected when possible. Prototype 0029 remains the latest published game release.
+
+
+## October 14, 2026 — full PKHeX with built-in prototype 0029 support
+
+[Download the full Windows PKHeX release](https://github.com/ThatAnarchyDude/PKHeX-Psyduck-Yellow/releases/tag/pkhex-py0029-v1). This keeps PKHeX's normal editors and adds an optional Psyduck Yellow 0029 profile. Open a copied battery save (.sav/.dsv or supported .srm), then enable Tools → Psyduck Yellow prototype 0029. The .nds game file and emulator save states are not editor inputs.
+
+Custom starter legality, supported Hidden Abilities, evolution changes, project shiny classification, item names and Golduck's Water/Psychic typing are built in. Saves remain Generation IV/HeartGold-compatible. Windows editor regressions and an exported-save native Continue check passed; an independent public build also passed. The full altered wild/campaign encounter catalog remains incomplete, so other custom encounters may still produce retail warnings. ROMs and player saves are not included. The game release remains prototype 0029.
