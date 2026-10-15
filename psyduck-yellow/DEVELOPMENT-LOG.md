@@ -912,3 +912,10 @@ Local and independent Windows checks passed manual scaling, the exact 150% examp
 ## October 15 — replacement viewing connection
 
 The earlier temporary tunnel returned Cloudflare error 1033. [The replacement live video/audio viewer](https://enclosed-mesa-cal-assumed.trycloudflare.com/) is remotely verified and controls remain private. The owner received the access-bearing link in chat. This public address contains no viewing credential. Prototype 0030 is still in development; prototype 0029 remains the latest released game.
+
+
+## October 15 — colored battle artwork and ship navigation in development
+
+The owner's colored Jessie and James battle artwork is now integrated into the private prototype 0030 candidate and was observed in the running game's trainer introduction with stereo audio. Comparison with the preserved 0029 release confirms the supplied artwork changes only the intended battle graphics. The test used a copied save and a clearly identified forced-battle fixture; it does not establish a complete Mt. Moon story replay.
+
+Ship navigation work now accounts for all 17 passenger cabins. Live checks exercised all six first-floor cabins, both floor connections in both directions, and the farthest second-floor cabin. A doorway arrival-direction mismatch found during testing was corrected. A continuous native walk then reached the captain through the copied passage and ladder, with no intermediate test transport. Original HeartGold ship resources remain preserved. Boarding, remaining ship story events, Gym progression, expanded PC storage and final release checks are still unfinished. Prototype 0029 remains the latest published game; 0030 has not been released.
