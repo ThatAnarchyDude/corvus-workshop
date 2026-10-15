@@ -14,9 +14,9 @@ controls remain private. Video and audio pause between actual playtests.
 *Stream link refreshed and remotely checked: October 15, 2026. This temporary link
 requires the laptop and streaming processes to remain online.*
 
-**Latest published patch: prototype 0029.** Connected Route 6 and native Underground Path services, with earlier checkpoints carried forward.
+**Latest published patch: prototype 0030.** Owner-approved as-is test checkpoint: Vermilion and S.S. Anne boarding, colored Jessie/James artwork, and earlier changes. Remaining work moves to0031.
 
-[Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0029/index.html)
+[Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0030/index.html)
 
 The download page contains a modification patch. Select your original,
 unmodified USA HeartGold game file to build the playable DS file on your own
@@ -930,3 +930,9 @@ A normal save in the captain's cabin loaded successfully through fresh Continue 
 The private 0030 candidate now connects Vermilion to the S.S. Anne through copied native port rooms. Native playtests confirmed refusal without a ticket, admission with a ticket, and a continuous return walk from the ship to Vermilion. The admission test used one explicitly granted test ticket on a copied save; this does not claim the full Bill-to-ship story is complete.
 Separate controlled tests verified that the pre-Hall-of-Fame route reaches the Anne port, while the post-Hall-of-Fame route restores the unchanged native HeartGold port and allows a normal return to the city. All 23 ship regression tests passed. Existing Johto content, original saves and the supplied colored battle artwork were preserved.
 Prototype 0030 remains private and unfinished. Ship story events and missing areas, remaining Vermilion/Gym work, and expanded PC item storage still need completion. Prototype 0029 remains the latest published patch.
+
+
+## October 15, 2026 — prototype 0030 published as-is at the owner's request
+[Patch your original USA HeartGold file for prototype 0030](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0030/index.html). This cumulative browser patch includes the colored Jessie/James battle artwork, Vermilion changes, shared ordinary-Kanto-Mart stock, connected S.S. Anne rooms, ticket boarding and the captain's Cut reward. The original ROM is processed locally and is never uploaded.
+The exact tested build was packaged without fixture ticket grants, forced transports or artificial Hall-of-Fame flags. Patch round-trip verification and execution of the actual page decoder passed; wrong-size and wrong-checksum originals were rejected. The public page rendered successfully in the browser. Keep a backup of your normal save.
+At the owner's direction, the unfinished ship story/Blue/trainers/departure and missing areas, remaining Vermilion/Gym/fishing checks, and 20-to-60-slot PC item storage with legacy-save/editor support move to prototype 0031. Prototype 0030 still has ten PC item stacks. This is a test checkpoint, not a completed Kanto campaign. Earlier patch pages remain available.
