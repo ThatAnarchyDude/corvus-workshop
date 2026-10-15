@@ -3,15 +3,15 @@
 A plain-language guide to what has changed, what you can play now, and what is
 still being built. Share this page with anyone following the project.
 
-**Last updated: October 14, 2026.**
+**Last updated: October 15, 2026.**
 
-[Watch LIVE testing with video and audio](https://enrolled-ira-opening-five.trycloudflare.com/)
+[Watch LIVE testing with video and audio](https://louisville-voted-worship-examining.trycloudflare.com/)
 
 Tap **Enable sound** in the viewer for game audio. The upper DS screen is on the
 left and the touch screen is on the right. The link grants viewing only; game
 controls remain private. Video and audio pause between actual playtests.
 
-*Stream link refreshed and remotely checked: October 14, 2026. This temporary link
+*Stream link refreshed and remotely checked: October 15, 2026. This temporary link
 requires the laptop and streaming processes to remain online.*
 
 **Latest published patch: prototype 0029.** Connected Route 6 and native Underground Path services, with earlier checkpoints carried forward.
@@ -902,3 +902,8 @@ The approved next game prototype will start at 20 usable PC slots and unlock fiv
 [Download PKHeX v4](https://github.com/ThatAnarchyDude/PKHeX-Psyduck-Yellow/releases/tag/pkhex-py0029-v4). Both manual resizing and maximizing now enlarge the live interface together: text, controls, spacing, menu icons and Pokemon images scale from their original dimensions. At 150% of the default client size, the display uses a 150% scale. A uniform factor fits differing window shapes without clipping or distortion; the taskbar remains available. Returning to the original size restores the original interface.
 
 Local and independent Windows checks passed manual scaling, the exact 150% example, maximize/restore, loading a save while enlarged, editing supported starter families and the PC inventory tab. The game/save format remains unchanged and earlier editor releases are preserved.
+
+
+## October 15 — viewing stream restored
+
+[Open the current live video/audio viewer](https://louisville-voted-worship-examining.trycloudflare.com/). The previous temporary tunnel stopped; its replacement is remotely verified. Authenticated viewing works and the viewing credential cannot operate game controls. The access-bearing viewing link is shared only with the owner in chat. Picture and sound pause between actual playtests. Prototype 0030 remains private and unfinished; prototype 0029 remains the latest published game release.
