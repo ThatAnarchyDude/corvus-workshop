@@ -1,0 +1,14 @@
+{
+  "version": "0030",
+  "source_sha256": "65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105",
+  "output_sha256": "53d9c36ffda9fe7ba0f9378083442914bc3ead205ebd761360cd538bc9044e3a",
+  "source_bytes": 134217728,
+  "output_bytes": 127749832,
+  "patch_sha256": "c533e14a6e1bf13717c1be81e5dfbde7792a2fa76a32752bbfb52c9e54624d30",
+  "cumulative": true,
+  "roundtrip_verified": true,
+  "zip_verified": true,
+  "publication": "owner-authorized as-is test release; patch page publication pending",
+  "known_limitations": "Ship story/Blue/trainers/departure/missing areas, Vermilion/Gym checks and expanded PC storage deferred to0031. PC storage remains10 slots.",
+  "recording": null
+}
