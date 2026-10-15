@@ -951,3 +951,8 @@ The playtest used a copied save with an explicitly artificial Cut reward flag an
 
 ## October 15 — private 0031 rival and ship sequence checked
 Native playtesting confirmed Blue’s Rival title and artwork, his four-Pokemon ship battle, victory dialogue and exit, and a normal save followed by fresh Continue without repeating the encounter. The pure candidate then allowed the captain interaction, ordinary return through the ship, and animated departure with stereo audio. All 34 ship tests and eight starter-property/title tests passed. These checks used copied saves and an existing high-level party, with initial transport where labeled; they do not establish campaign balance or complete Bill-to-ticket progression. Prototype 0030 remains the latest published patch; 0031 remains private work in progress.
+
+
+## October 15 — optional Blue rival battles and saved progression
+The owner approved continuing after losing any Blue rival battle before facing him as Kanto's first Champion. After a loss, the entire party is healed and Blue finishes his dialogue and leaves. Defeating Champion Blue remains required.
+The private 0031 ship playtest verified the loss, full healing of all three party members, captain access, and a normal save followed by fresh Continue on the pure candidate without repeating the encounter. Route 22 and Cerulean are updated in the same candidate; compiled checks cover both outcomes, every starter choice and every approach lane. Their native tests are still in progress. Original saves and published builds remain unchanged; prototype 0030 is still the latest released patch.
