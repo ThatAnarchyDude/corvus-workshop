@@ -924,3 +924,9 @@ Ship navigation work now accounts for all 17 passenger cabins. Live checks exerc
 ## October 15 — saved-game ship travel checked
 
 A normal save in the captain's cabin loaded successfully through fresh Continue on the pure private candidate, with no test transport or battle fixture active. Ordinary movement then returned through the ladder and passage to the first-floor hall. This adds saved-game travel coverage to the earlier cabin and doorway checks. Originals remain preserved. Prototype 0030 is still unfinished and has not been released.
+
+
+## October 15 — S.S. Anne boarding checked
+The private 0030 candidate now connects Vermilion to the S.S. Anne through copied native port rooms. Native playtests confirmed refusal without a ticket, admission with a ticket, and a continuous return walk from the ship to Vermilion. The admission test used one explicitly granted test ticket on a copied save; this does not claim the full Bill-to-ship story is complete.
+Separate controlled tests verified that the pre-Hall-of-Fame route reaches the Anne port, while the post-Hall-of-Fame route restores the unchanged native HeartGold port and allows a normal return to the city. All 23 ship regression tests passed. Existing Johto content, original saves and the supplied colored battle artwork were preserved.
+Prototype 0030 remains private and unfinished. Ship story events and missing areas, remaining Vermilion/Gym work, and expanded PC item storage still need completion. Prototype 0029 remains the latest published patch.
