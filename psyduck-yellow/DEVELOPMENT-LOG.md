@@ -947,3 +947,7 @@ The viewing tunnel was restored at https://minimal-charlotte-reader-survivor.try
 ## October 15 — native ship departure animation checked in0031
 The private0031 candidate now uses HeartGold's native animated ship transition and returns to the copied Kanto port. Timed video frames captured the ship moving away, with stereo audio enabled. The animation was followed by a normal save and fresh Continue on the pure candidate; boarding stayed closed and the player could return normally to Vermilion.
 The playtest used a copied save with an explicitly artificial Cut reward flag and test ticket. This checks the scene and persistence, not a completed ship campaign replay. Published0030 and original saves remain unchanged. Blue's ship encounter and the remaining0031 work are still being tested; no new patch is released at this checkpoint.
+
+
+## October 15 — private 0031 rival and ship sequence checked
+Native playtesting confirmed Blue’s Rival title and artwork, his four-Pokemon ship battle, victory dialogue and exit, and a normal save followed by fresh Continue without repeating the encounter. The pure candidate then allowed the captain interaction, ordinary return through the ship, and animated departure with stereo audio. All 34 ship tests and eight starter-property/title tests passed. These checks used copied saves and an existing high-level party, with initial transport where labeled; they do not establish campaign balance or complete Bill-to-ticket progression. Prototype 0030 remains the latest published patch; 0031 remains private work in progress.
