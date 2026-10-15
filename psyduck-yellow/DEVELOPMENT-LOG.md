@@ -5,7 +5,7 @@ still being built. Share this page with anyone following the project.
 
 **Last updated: October 15, 2026.**
 
-[Watch LIVE testing with video and audio](https://enclosed-mesa-cal-assumed.trycloudflare.com/)
+[Watch LIVE testing with video and audio](https://minimal-charlotte-reader-survivor.trycloudflare.com/)
 
 Tap **Enable sound** in the viewer for game audio. The upper DS screen is on the
 left and the touch screen is on the right. The link grants viewing only; game
@@ -911,7 +911,7 @@ Local and independent Windows checks passed manual scaling, the exact 150% examp
 
 ## October 15 — replacement viewing connection
 
-The earlier temporary tunnel returned Cloudflare error 1033. [The replacement live video/audio viewer](https://enclosed-mesa-cal-assumed.trycloudflare.com/) is remotely verified and controls remain private. The owner received the access-bearing link in chat. This public address contains no viewing credential. Prototype 0030 is still in development; prototype 0029 remains the latest released game.
+The earlier temporary tunnel returned Cloudflare error 1033. [The replacement live video/audio viewer](https://minimal-charlotte-reader-survivor.trycloudflare.com/) is remotely verified and controls remain private. The owner received the access-bearing link in chat. This public address contains no viewing credential. Prototype 0030 is still in development; prototype 0029 remains the latest released game.
 
 
 ## October 15 — colored battle artwork and ship navigation in development
@@ -936,3 +936,9 @@ Prototype 0030 remains private and unfinished. Ship story events and missing are
 [Patch your original USA HeartGold file for prototype 0030](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0030/index.html). This cumulative browser patch includes the colored Jessie/James battle artwork, Vermilion changes, shared ordinary-Kanto-Mart stock, connected S.S. Anne rooms, ticket boarding and the captain's Cut reward. The original ROM is processed locally and is never uploaded.
 The exact tested build was packaged without fixture ticket grants, forced transports or artificial Hall-of-Fame flags. Patch round-trip verification and execution of the actual page decoder passed; wrong-size and wrong-checksum originals were rejected. The public page rendered successfully in the browser. Keep a backup of your normal save.
 At the owner's direction, the unfinished ship story/Blue/trainers/departure and missing areas, remaining Vermilion/Gym/fishing checks, and 20-to-60-slot PC item storage with legacy-save/editor support move to prototype 0031. Prototype 0030 still has ten PC item stacks. This is a test checkpoint, not a completed Kanto campaign. Earlier patch pages remain available.
+
+
+## October 15 — prototype0031 departure-state checkpoint
+A private0031 candidate now detects the return from the ship after Cut, runs a departure cue and automatic dock exit, and remembers that boarding is closed. Native testing verified the exit and refusal even with a ticket. A normal save, fresh Continue on the pure candidate, repeated refusal and ordinary return to Vermilion passed. These checks used a copied save with an explicitly artificial Cut flag and test ticket, not a completed Bill/captain campaign replay. All29 ship regression tests passed.
+The moving-ship visual and camera scene are still unfinished; this checkpoint does not claim the full sailing animation. Prototype0030 remains the latest published patch. Original saves, released builds and native Johto content were preserved.
+The viewing tunnel was restored at https://minimal-charlotte-reader-survivor.trycloudflare.com/ . The authenticated owner link is shared only in chat; viewing controls remain private. Picture and sound are paused between playtests.
