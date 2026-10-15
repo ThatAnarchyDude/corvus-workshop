@@ -5,7 +5,7 @@ still being built. Share this page with anyone following the project.
 
 **Last updated: October 15, 2026.**
 
-[Watch LIVE testing with video and audio](https://louisville-voted-worship-examining.trycloudflare.com/)
+[Watch LIVE testing with video and audio](https://enclosed-mesa-cal-assumed.trycloudflare.com/)
 
 Tap **Enable sound** in the viewer for game audio. The upper DS screen is on the
 left and the touch screen is on the right. The link grants viewing only; game
@@ -907,3 +907,8 @@ Local and independent Windows checks passed manual scaling, the exact 150% examp
 ## October 15 — viewing stream restored
 
 [Open the current live video/audio viewer](https://louisville-voted-worship-examining.trycloudflare.com/). The previous temporary tunnel stopped; its replacement is remotely verified. Authenticated viewing works and the viewing credential cannot operate game controls. The access-bearing viewing link is shared only with the owner in chat. Picture and sound pause between actual playtests. Prototype 0030 remains private and unfinished; prototype 0029 remains the latest published game release.
+
+
+## October 15 — replacement viewing connection
+
+The earlier temporary tunnel returned Cloudflare error 1033. [The replacement live video/audio viewer](https://enclosed-mesa-cal-assumed.trycloudflare.com/) is remotely verified and controls remain private. The owner received the access-bearing link in chat. This public address contains no viewing credential. Prototype 0030 is still in development; prototype 0029 remains the latest released game.
