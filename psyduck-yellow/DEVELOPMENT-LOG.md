@@ -956,3 +956,7 @@ Native playtesting confirmed Blue’s Rival title and artwork, his four-Pokemon 
 ## October 15 — optional Blue rival battles and saved progression
 The owner approved continuing after losing any Blue rival battle before facing him as Kanto's first Champion. After a loss, the entire party is healed and Blue finishes his dialogue and leaves. Defeating Champion Blue remains required.
 The private 0031 ship playtest verified the loss, full healing of all three party members, captain access, and a normal save followed by fresh Continue on the pure candidate without repeating the encounter. Route 22 and Cerulean are updated in the same candidate; compiled checks cover both outcomes, every starter choice and every approach lane. Their native tests are still in progress. Original saves and published builds remain unchanged; prototype 0030 is still the latest released patch.
+
+
+## October 15 — optional Blue encounters checked in the game
+Native copied-save tests now confirm that losing to Blue on Route 22 and in Cerulean heals the entire party, completes his dialogue and exit, and leaves the route open without repeating the encounter. Route 22's winning outcome also passed. The ship's optional-loss state additionally survived a normal save and fresh Continue on the pure candidate. Tests used explicitly labeled scene resets and low-HP copies; original saves and released builds remain unchanged. Prototype 0031 is still private, with the remaining campaign and PC-storage work pending.
