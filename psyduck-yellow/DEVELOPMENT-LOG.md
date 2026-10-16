@@ -5,13 +5,13 @@ still being built. Share this page with anyone following the project.
 
 **Last updated: October 16, 2026.**
 
-[Watch LIVE testing with video and audio](https://minimal-charlotte-reader-survivor.trycloudflare.com/)
+[Watch LIVE testing with video and audio](https://semiconductor-occasionally-filters-howard.trycloudflare.com/)
 
 Tap **Enable sound** in the viewer for game audio. The upper DS screen is on the
 left and the touch screen is on the right. The link grants viewing only; game
 controls remain private. Video and audio pause between actual playtests.
 
-*Stream link refreshed and remotely checked: October 15, 2026. This temporary link
+*Stream link refreshed and remotely checked: October 16, 2026. This temporary link
 requires the laptop and streaming processes to remain online.*
 
 **Latest published patch: prototype 0031.** Blue rival progression and S.S. Anne departure, with previous changes preserved. The full Kanto campaign remains unfinished.
@@ -911,7 +911,7 @@ Local and independent Windows checks passed manual scaling, the exact 150% examp
 
 ## October 15 — replacement viewing connection
 
-The earlier temporary tunnel returned Cloudflare error 1033. [The replacement live video/audio viewer](https://minimal-charlotte-reader-survivor.trycloudflare.com/) is remotely verified and controls remain private. The owner received the access-bearing link in chat. This public address contains no viewing credential. Prototype 0030 is still in development; prototype 0029 remains the latest released game.
+The earlier temporary tunnel returned Cloudflare error 1033. [The replacement live video/audio viewer](https://semiconductor-occasionally-filters-howard.trycloudflare.com/) is remotely verified and controls remain private. The owner received the access-bearing link in chat. This public address contains no viewing credential. Prototype 0030 is still in development; prototype 0029 remains the latest released game.
 
 
 ## October 15 — colored battle artwork and ship navigation in development
@@ -941,7 +941,7 @@ At the owner's direction, the unfinished ship story/Blue/trainers/departure and 
 ## October 15 — prototype0031 departure-state checkpoint
 A private0031 candidate now detects the return from the ship after Cut, runs a departure cue and automatic dock exit, and remembers that boarding is closed. Native testing verified the exit and refusal even with a ticket. A normal save, fresh Continue on the pure candidate, repeated refusal and ordinary return to Vermilion passed. These checks used a copied save with an explicitly artificial Cut flag and test ticket, not a completed Bill/captain campaign replay. All29 ship regression tests passed.
 The moving-ship visual and camera scene are still unfinished; this checkpoint does not claim the full sailing animation. Prototype0030 remains the latest published patch. Original saves, released builds and native Johto content were preserved.
-The viewing tunnel was restored at https://minimal-charlotte-reader-survivor.trycloudflare.com/ . The authenticated owner link is shared only in chat; viewing controls remain private. Picture and sound are paused between playtests.
+The viewing tunnel was restored at https://semiconductor-occasionally-filters-howard.trycloudflare.com/ . The authenticated owner link is shared only in chat; viewing controls remain private. Picture and sound are paused between playtests.
 
 
 ## October 15 — native ship departure animation checked in0031
@@ -974,3 +974,8 @@ Please test: Continue using a backed-up normal save; unfinished Route 22/Cerulea
 Still unfinished: later required Kanto progression and Vermilion Gym verification, optional ship content and presentation. PC storage remains ten stacks. Its expansion, optional gift refinements and other nonessential improvements are deferred, not canceled; existing completed content remains preserved. Next campaign task: Cut access to Lt. Surge, Thunder Badge and onward travel.
 
 The governing workflow is now progression bugs first, required campaign second, polish third and deferred optional Yellow content fourth. New playable checkpoints are due after each map becomes progression-ready and at least once per active 24-hour development period. If a newer safe build cannot be produced, report the attempts and obstacle, provide the stable build and await owner instructions on the blocked task; an unchanged build is not progress. No ROMs or saves are published.
+
+
+## October 16 — viewing connection restored; 0032 Gym checks resumed
+The viewing connection has been restored at https://semiconductor-occasionally-filters-howard.trycloudflare.com/ . The authenticated owner link is shared only in chat; controls remain private. Remote status returned successfully. Prototype 0031 remains the latest published patch.
+The private 0032 candidate now uses Yellow’s Vermilion Gym teams and Thunderbolt reward while retaining the native switch puzzle. Four focused checks passed. Native testing reached the Gym from the ship/port and completed the three-Voltorb trainer encounter; full puzzle, Lt. Surge, reward and Save/Continue checks remain unfinished. A usage interruption stopped the previous session; it did not complete those pending checks. Resumed tests use a labeled initial-transport-only fixture and a copied save, with no Pokémon/item/badge grants.
