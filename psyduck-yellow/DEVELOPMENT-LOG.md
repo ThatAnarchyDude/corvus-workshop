@@ -14,9 +14,9 @@ controls remain private. Video and audio pause between actual playtests.
 *Stream link refreshed and remotely checked: October 16, 2026. This temporary link
 requires the laptop and streaming processes to remain online.*
 
-**Latest published patch: prototype 0033.** Restored Vermilion Gym Cut obstacle and Cascade Badge interaction, with all0032 changes preserved. Later Kanto remains unfinished.
+**Latest published patch: prototype 0034.** Yellow Route 9 trainers, encounters and Cut access; native route-to-tunnel travel and Save/Continue checked. Later Kanto remains unfinished.
 
-[Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0033/index.html)
+[Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0034/index.html)
 
 The download page contains a modification patch. Select your original,
 unmodified USA HeartGold game file to build the playable DS file on your own
@@ -1003,3 +1003,15 @@ Native checks passed on the pure candidate: blocked movement and refusal before 
 Please test: Cut at the Gym entrance, Gym entry/exit and normal Save/Continue. If an old save loads directly in Vermilion without the restored tree, enter a building and return so the city objects refresh. Back up your normal save first.
 
 The cumulative patch and actual browser decoder reconstructed the exact tested ROM and rejected wrong inputs; the public page matched the local tested page byte for byte. Browser UI inspection was unavailable this session. Native tests used a copied high-level party, not a new-game balance run. Later Kanto, optional content and presentation remain unfinished; PC storage is still ten stacks. No new recording is bundled. Work continues with the next required routes rather than optional polish.
+
+
+## October 16, 2026 — prototype 0034 published: Route 9
+[Create prototype 0034 from your original USA HeartGold file](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0034/index.html).
+
+Completed: Yellow's nine Route 9 trainer teams, explicit moves and dialogue, grass encounters across all times of day, and required western Cut access. HeartGold's terrain remains traversable; all0033 changes are preserved.
+
+Verified: seven focused Route9/Route6 regression checks; native Cut, Sandshrew24 and Meowth23 trainer battles, Sandshrew repeat dialogue without another battle, continuous walking across Route9 into Route10, Center entry/exit and RockTunnel entry. A normal save loaded through fresh Continue on the pure build, followed by ordinary tunnel exit. Tests used a copied high-level party and initial transport to the western approach, with no item/Pokemon/badge grants; this is not a full new-game or balance run.
+
+Please test: Cerulean-to-Route9 Cut access, trainer approaches/battles, eastern stairs and passage to Route10, Center/tunnel entry and Save/Continue. Back up your save. A save already on Route9 may need leaving/re-entering to refresh actors.
+
+Still unfinished: Route10/RockTunnel Yellow events, trainers and encounters, onward Kanto and the full campaign run. Exact Yellow terrain alignment, optional pickups and presentation are deferred, not canceled. PC storage remains ten stacks. No new recording is bundled. The cumulative patch roundtrip, ZIP and actual browser decoder passed, including wrong-input rejection. The public page matches the tested content; browser UI inspection was unavailable. Work continues on the next required route.
