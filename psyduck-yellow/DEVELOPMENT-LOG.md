@@ -14,9 +14,9 @@ controls remain private. Video and audio pause between actual playtests.
 *Stream link refreshed and remotely checked: October 16, 2026. This temporary link
 requires the laptop and streaming processes to remain online.*
 
-**Latest published patch: prototype 0034.** Yellow Route 9 trainers, encounters and Cut access; native route-to-tunnel travel and Save/Continue checked. Later Kanto remains unfinished.
+**Latest published patch: prototype 0035.** Yellow Route 10 trainers and encounters; native travel to Lavender and normal Save/Continue checked. Rock Tunnel conversion and later Kanto remain unfinished.
 
-[Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0034/index.html)
+[Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0035/index.html)
 
 The download page contains a modification patch. Select your original,
 unmodified USA HeartGold game file to build the playable DS file on your own
@@ -1015,3 +1015,17 @@ Verified: seven focused Route9/Route6 regression checks; native Cut, Sandshrew24
 Please test: Cerulean-to-Route9 Cut access, trainer approaches/battles, eastern stairs and passage to Route10, Center/tunnel entry and Save/Continue. Back up your save. A save already on Route9 may need leaving/re-entering to refresh actors.
 
 Still unfinished: Route10/RockTunnel Yellow events, trainers and encounters, onward Kanto and the full campaign run. Exact Yellow terrain alignment, optional pickups and presentation are deferred, not canceled. PC storage remains ten stacks. No new recording is bundled. The cumulative patch roundtrip, ZIP and actual browser decoder passed, including wrong-input rejection. The public page matches the tested content; browser UI inspection was unavailable. Work continues on the next required route.
+
+
+## October 16, 2026 — prototype 0035 published: Route 10
+[Create prototype 0035 from your original USA HeartGold file](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0035/index.html).
+
+Completed: Yellow's six Route10 trainer teams, explicit moves and dialogue across its north, south and Power Plant approaches, and grass encounters across all times. All0034 changes, native terrain, interiors and transitions remain.
+
+Verified: four focused checks cover every team, move, actor dispatch, encounter table and unrelated-resource preservation. Native tests defeated the northern Jigglypuff20/Clefairy20 trainer and southern Geodude21/Onix21 and Onix19/Graveler19 trainers. A continuous ordinary-controller walk crossed the inherited Rock Tunnel through four floor changes and continued through southern Route10 into Lavender. Normal Save and fresh Continue on the pure build retained the Lavender arrival.
+
+Please test: Route10 trainers, approaches, grass encounters, Center access and the southern path into Lavender. Back up your save; leave/re-enter an area if an older save restores old actors. The Power Plant-side trainer and remaining trainer outcomes still need native checks.
+
+Limits: the copied test save has an existing high-level party and stocked items; one existing Max Repel was used, with no new Pokemon/item/badge grants. These checks do not establish natural party balance or full new-game progression. Rock Tunnel still needs Yellow's trainers, encounters and the Flash reward dependency. Native traversal of the inherited dark cave does not mean its conversion is complete. Later Kanto, optional details and presentation remain unfinished; PC capacity is ten stacks. No new recording is bundled.
+
+The cumulative patch roundtrip, ZIP verification and actual browser decoder passed, including wrong-input rejection. The public page matches the tested content; browser UI inspection remained unavailable. Work continues with Rock Tunnel and its required dependencies.
