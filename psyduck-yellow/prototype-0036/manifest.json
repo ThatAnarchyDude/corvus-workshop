@@ -1,0 +1,14 @@
+{
+  "version": "0036",
+  "source_sha256": "65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105",
+  "output_sha256": "ade12749956eeb0f33cf65244a01ce3c5c142e0b438a8b4cbbb7a9e04c52e152",
+  "source_bytes": 134217728,
+  "output_bytes": 127786184,
+  "patch_sha256": "29adc278485c6dd372b205520a5cdd01799bd40d2e66583682a87bdd76b613ae",
+  "cumulative": true,
+  "roundtrip_verified": true,
+  "zip_verified": true,
+  "publication": "campaign-first incremental test release; patch page publication pending",
+  "known_limitations": "Route2 Flash reward dependency checkpoint. Rock Tunnel retains inherited HeartGold content and still requires Yellow trainers and encounters. Later Kanto and full new-game progression remain unfinished. Exact Yellow terrain, optional pickups and presentation deferred. PC storage remains ten slots.",
+  "recording": null
+}
