@@ -14,9 +14,9 @@ controls remain private. Video and audio pause between actual playtests.
 *Stream link refreshed and remotely checked: October 16, 2026. This temporary link
 requires the laptop and streaming processes to remain online.*
 
-**Latest published patch: prototype 0031.** Blue rival progression and S.S. Anne departure, with previous changes preserved. The full Kanto campaign remains unfinished.
+**Latest published patch: prototype 0032.** Yellow Vermilion Gym teams, Thunder Badge and Thunderbolt reward, with earlier changes preserved. The full Kanto campaign remains unfinished.
 
-[Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0031/index.html)
+[Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0032/index.html)
 
 The download page contains a modification patch. Select your original,
 unmodified USA HeartGold game file to build the playable DS file on your own
@@ -979,3 +979,15 @@ The governing workflow is now progression bugs first, required campaign second, 
 ## October 16 — viewing connection restored; 0032 Gym checks resumed
 The viewing connection has been restored at https://semiconductor-occasionally-filters-howard.trycloudflare.com/ . The authenticated owner link is shared only in chat; controls remain private. Remote status returned successfully. Prototype 0031 remains the latest published patch.
 The private 0032 candidate now uses Yellow’s Vermilion Gym teams and Thunderbolt reward while retaining the native switch puzzle. Four focused checks passed. Native testing reached the Gym from the ship/port and completed the three-Voltorb trainer encounter; full puzzle, Lt. Surge, reward and Save/Continue checks remain unfinished. A usage interruption stopped the previous session; it did not complete those pending checks. Resumed tests use a labeled initial-transport-only fixture and a copied save, with no Pokémon/item/badge grants.
+
+
+## October 16, 2026 — prototype 0032 published: Vermilion Gym
+[Create prototype 0032 from your original USA HeartGold file](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0032/index.html).
+
+Completed: Yellow’s Vermilion Gym teams, including Lt. Surge’s level-28 Raichu with Thunderbolt, Mega Punch, Mega Kick and Growl; victory awards the Thunder Badge and TM24 Thunderbolt. HeartGold’s native interior and two-switch puzzle remain. All0031 changes are included.
+
+Verified: four focused party/script/preservation checks; native trainer battles, both switches and opened gates, Raichu victory, third-badge display and TM24 receipt; normal saving, fresh Continue in the pure candidate, post-victory advice without another battle/reward, and return to Vermilion. A cumulative patch round-trip and the actual page decoder produced the expected ROM and rejected unsupported inputs. The published page was fetched and matched the tested page byte for byte; the browser UI inspection tool was unavailable this session.
+
+Please test: Gym switches and trainers, Lt. Surge, Thunderbolt receipt and repeat dialogue, normal Save/Continue and leaving the Gym. Back up your normal save first. Use the original unmodified USA HeartGold ROM as patch input.
+
+Limits: native tests used an existing high-level copied party and a clearly labeled initial-transport-only fixture before the Gym sequence, followed by pure-build Continue. This is not campaign balance or a complete new-game playthrough. A fresh-save check of the exterior Cut dependency remains pending. Junior trainer names/class artwork and cosmetic dialogue are deferred. PC storage still has ten stacks. Later Kanto progression remains unfinished. No new recording is bundled. Next work targets the required onward route and unresolved progression dependencies, rather than Gym decoration.
