@@ -14,9 +14,9 @@ controls remain private. Video and audio pause between actual playtests.
 *Stream link refreshed and remotely checked: October 16, 2026. This temporary link
 requires the laptop and streaming processes to remain online.*
 
-**Latest published patch: prototype 0035.** Yellow Route 10 trainers and encounters; native travel to Lavender and normal Save/Continue checked. Rock Tunnel conversion and later Kanto remain unfinished.
+**Latest published patch: prototype 0036.** Route 2 aide Flash reward after ten caught species; native teaching, Save/Continue and cave Flash checked. Rock Tunnel conversion and later Kanto remain unfinished.
 
-[Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0035/index.html)
+[Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0036/index.html)
 
 The download page contains a modification patch. Select your original,
 unmodified USA HeartGold game file to build the playable DS file on your own
@@ -1029,3 +1029,15 @@ Please test: Route10 trainers, approaches, grass encounters, Center access and t
 Limits: the copied test save has an existing high-level party and stocked items; one existing Max Repel was used, with no new Pokemon/item/badge grants. These checks do not establish natural party balance or full new-game progression. Rock Tunnel still needs Yellow's trainers, encounters and the Flash reward dependency. Native traversal of the inherited dark cave does not mean its conversion is complete. Later Kanto, optional details and presentation remain unfinished; PC capacity is ten stacks. No new recording is bundled.
 
 The cumulative patch roundtrip, ZIP verification and actual browser decoder passed, including wrong-input rejection. The public page matches the tested content; browser UI inspection remained unavailable. Work continues with Rock Tunnel and its required dependencies.
+
+
+## October 16, 2026 — prototype 0036 published: Flash access
+[Create prototype 0036 from your original USA HeartGold file](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0036/index.html).
+
+Completed: Oak's aide in Route2's southeastern gatehouse now awards Flash after ten caught species, following Yellow's requirement. HeartGold's reusable TM70 provides Flash through normal teaching and field menus. The reward is one-time, with a full-TM-pocket retry. All0035 changes and the native gate interior/other NPC remain.
+
+Verified: four focused checks cover caught thresholds, full-pocket retry, one-time behavior, exact native caught-count opcode and unrelated-resource preservation. Native testing confirmed refusal on a four-owned copied save, then receipt on a clearly labeled ten-owned Dex-only fixture. Flash quantity increased95to96, normal teaching to the existing Umbreon kept the reusable TM, and a normal save/fresh Continue retained the reward and repeat-only aide dialogue. Using the normally learned Flash in Rock Tunnel expanded visibility.
+
+Please test: fewer-than-ten refusal, ten-caught reward, repeat dialogue, teaching Flash, saving/Continue and native cave use. Back up your save. Caught species count; merely seeing Pokemon does not qualify.
+
+Limits: eligibility testing changed only copied Dex caught/seen flags and native checksums; initial transport fixtures were used for gate/cave checks. It does not establish naturally catching ten species or campaign balance. Original saves were preserved. Rock Tunnel's Yellow trainers/encounters and onward Kanto remain unfinished. Optional details and PC expansion are deferred, not canceled; current PC capacity is ten stacks. No new recording is bundled. Patch roundtrip, ZIP and actual browser decoder passed, including wrong-input rejection; the public page matches tested content. Browser UI inspection remained unavailable.
