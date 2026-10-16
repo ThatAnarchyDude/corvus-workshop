@@ -14,9 +14,9 @@ controls remain private. Video and audio pause between actual playtests.
 *Stream link refreshed and remotely checked: October 16, 2026. This temporary link
 requires the laptop and streaming processes to remain online.*
 
-**Latest published patch: prototype 0032.** Yellow Vermilion Gym teams, Thunder Badge and Thunderbolt reward, with earlier changes preserved. The full Kanto campaign remains unfinished.
+**Latest published patch: prototype 0033.** Restored Vermilion Gym Cut obstacle and Cascade Badge interaction, with all0032 changes preserved. Later Kanto remains unfinished.
 
-[Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0032/index.html)
+[Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0033/index.html)
 
 The download page contains a modification patch. Select your original,
 unmodified USA HeartGold game file to build the playable DS file on your own
@@ -991,3 +991,15 @@ Verified: four focused party/script/preservation checks; native trainer battles,
 Please test: Gym switches and trainers, Lt. Surge, Thunderbolt receipt and repeat dialogue, normal Save/Continue and leaving the Gym. Back up your normal save first. Use the original unmodified USA HeartGold ROM as patch input.
 
 Limits: native tests used an existing high-level copied party and a clearly labeled initial-transport-only fixture before the Gym sequence, followed by pure-build Continue. This is not campaign balance or a complete new-game playthrough. A fresh-save check of the exterior Cut dependency remains pending. Junior trainer names/class artwork and cosmetic dialogue are deferred. PC storage still has ten stacks. Later Kanto progression remains unfinished. No new recording is bundled. Next work targets the required onward route and unresolved progression dependencies, rather than Gym decoration.
+
+
+## October 16, 2026 — prototype 0033 published: restored Cut access
+[Create prototype 0033 from your original USA HeartGold file](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0033/index.html).
+
+Fixed: an early development pass had removed Vermilion Gym’s Cut-tree actor. The original tree is restored. Direct tree interactions now accept the Cascade Badge, matching the existing party-menu Cut permission; HeartGold’s Hive Badge remains an alternative. A party member must know Cut. No HM, move or badge is automatically granted. All0032 Gym teams/rewards and earlier changes are preserved.
+
+Native checks passed on the pure candidate: blocked movement and refusal before a party member learned Cut; teaching the legitimately earned HM to the existing Umbreon; native offer, animation and passage using Cascade; tree regrowth after a normal building visit; normal Save, fresh Continue and successful Cut use again. Four focused checks cover all badge combinations, original tree data, script call/branch preservation and unchanged unrelated map/event/encounter resources. Johto map/event/encounter files were not changed. The shared permission retains native Hive behavior.
+
+Please test: Cut at the Gym entrance, Gym entry/exit and normal Save/Continue. If an old save loads directly in Vermilion without the restored tree, enter a building and return so the city objects refresh. Back up your normal save first.
+
+The cumulative patch and actual browser decoder reconstructed the exact tested ROM and rejected wrong inputs; the public page matched the local tested page byte for byte. Browser UI inspection was unavailable this session. Native tests used a copied high-level party, not a new-game balance run. Later Kanto, optional content and presentation remain unfinished; PC storage is still ten stacks. No new recording is bundled. Work continues with the next required routes rather than optional polish.
