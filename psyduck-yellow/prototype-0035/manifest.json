@@ -1,0 +1,14 @@
+{
+  "version": "0035",
+  "source_sha256": "65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105",
+  "output_sha256": "ca5580ad4bfc2b1e46fb3f966045250201577a3cc74a49c0df38991062ffcaec",
+  "source_bytes": 134217728,
+  "output_bytes": 127784136,
+  "patch_sha256": "e332b56392d8466b1f51e90f0368979e99a6fe1ec8fd9e65b47f79e2d09a982e",
+  "cumulative": true,
+  "roundtrip_verified": true,
+  "zip_verified": true,
+  "publication": "campaign-first incremental test release; patch page publication pending",
+  "known_limitations": "Route10 trainer/encounter checkpoint. Rock Tunnel retains inherited HeartGold content and still requires Yellow trainers, encounters and Flash reward dependency. Later Kanto and full new-game progression remain unfinished. Exact Yellow terrain, optional pickups and presentation deferred. PC storage remains ten slots.",
+  "recording": null
+}
