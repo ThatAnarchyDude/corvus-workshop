@@ -1,0 +1,14 @@
+{
+  "version": "0033",
+  "source_sha256": "65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105",
+  "output_sha256": "304d391a6e37956f9e4ef4f8bad49e5f991293bdd6354b2c0840480fd0692e7c",
+  "source_bytes": 134217728,
+  "output_bytes": 127767752,
+  "patch_sha256": "e3e4789280e4f5e28a641798a6e5cb0b05b0e840a5132cdbdb8ee96f63c9c59e",
+  "cumulative": true,
+  "roundtrip_verified": true,
+  "zip_verified": true,
+  "publication": "campaign-first incremental test release; patch page publication pending",
+  "known_limitations": "Later Kanto campaign and full new-game progression remain unfinished. Legacy saves loaded directly in Vermilion may need a building entry/exit to refresh restored tree actors. Junior presentation and optional content are deferred. PC storage remains ten slots.",
+  "recording": null
+}
