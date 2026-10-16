@@ -3,7 +3,7 @@
 A plain-language guide to what has changed, what you can play now, and what is
 still being built. Share this page with anyone following the project.
 
-**Last updated: October 15, 2026.**
+**Last updated: October 16, 2026.**
 
 [Watch LIVE testing with video and audio](https://minimal-charlotte-reader-survivor.trycloudflare.com/)
 
@@ -14,9 +14,9 @@ controls remain private. Video and audio pause between actual playtests.
 *Stream link refreshed and remotely checked: October 15, 2026. This temporary link
 requires the laptop and streaming processes to remain online.*
 
-**Latest published patch: prototype 0030.** Owner-approved as-is test checkpoint: Vermilion and S.S. Anne boarding, colored Jessie/James artwork, and earlier changes. Remaining work moves to0031.
+**Latest published patch: prototype 0031.** Blue rival progression and S.S. Anne departure, with previous changes preserved. The full Kanto campaign remains unfinished.
 
-[Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0030/index.html)
+[Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0031/index.html)
 
 The download page contains a modification patch. Select your original,
 unmodified USA HeartGold game file to build the playable DS file on your own
@@ -960,3 +960,17 @@ The private 0031 ship playtest verified the loss, full healing of all three part
 
 ## October 15 — optional Blue encounters checked in the game
 Native copied-save tests now confirm that losing to Blue on Route 22 and in Cerulean heals the entire party, completes his dialogue and exit, and leaves the route open without repeating the encounter. Route 22's winning outcome also passed. The ship's optional-loss state additionally survived a normal save and fresh Continue on the pure candidate. Tests used explicitly labeled scene resets and low-HP copies; original saves and released builds remain unchanged. Prototype 0031 is still private, with the remaining campaign and PC-storage work pending.
+
+
+## October 16, 2026 — prototype 0031 published: campaign progression first
+[Create prototype 0031 from your original USA HeartGold file](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0031/index.html).
+
+Completed: Blue's S.S. Anne encounter, departure after obtaining Cut, and continuing after losses to pre-Champion Blue in the implemented rival scenes. The entire party heals after a loss, Blue finishes his dialogue and leaves, and the scene does not repeat. First Champion Blue victory remains required. All prototype 0030 changes are retained.
+
+Verified: native copied-save checks of rival outcomes, full-party healing, captain access and departure; normal save/Continue persistence for the ship sequence; cumulative patch round-trip and the actual browser decoder, including wrong-input rejection. The public patch page renders successfully. These tests do not establish a full new-game campaign run or natural party balance.
+
+Please test: Continue using a backed-up normal save; unfinished Route 22/Cerulean rival scenes; ticket boarding, ship Blue, captain Cut, departure and subsequent Save/Continue. Previously completed scenes should stay completed.
+
+Still unfinished: later required Kanto progression and Vermilion Gym verification, optional ship content and presentation. PC storage remains ten stacks. Its expansion, optional gift refinements and other nonessential improvements are deferred, not canceled; existing completed content remains preserved. Next campaign task: Cut access to Lt. Surge, Thunder Badge and onward travel.
+
+The governing workflow is now progression bugs first, required campaign second, polish third and deferred optional Yellow content fourth. New playable checkpoints are due after each map becomes progression-ready and at least once per active 24-hour development period. If a newer safe build cannot be produced, report the attempts and obstacle, provide the stable build and await owner instructions on the blocked task; an unchanged build is not progress. No ROMs or saves are published.
