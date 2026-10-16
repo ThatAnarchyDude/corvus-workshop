@@ -1,0 +1,14 @@
+{
+  "version": "0034",
+  "source_sha256": "65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105",
+  "output_sha256": "bb0b1aeb41a6e9586eb1b57030a955ee46bd5832f90f39ac8d18e1879800dcea",
+  "source_bytes": 134217728,
+  "output_bytes": 127776456,
+  "patch_sha256": "eb271776a41d7620431be9b29b9fbcbdbe29c6232f8e9e9760ce398e2329266c",
+  "cumulative": true,
+  "roundtrip_verified": true,
+  "zip_verified": true,
+  "publication": "campaign-first incremental test release; patch page publication pending",
+  "known_limitations": "Route9 functional checkpoint; Route10 and Rock Tunnel retain inherited HeartGold content and require Yellow progression conversion. Later Kanto and full new-game progression remain unfinished. Exact Yellow terrain, optional pickups and presentation deferred. PC storage remains ten slots.",
+  "recording": null
+}
