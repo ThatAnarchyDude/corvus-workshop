@@ -1,0 +1,28 @@
+{
+  "version": "0038-EXPERIMENTAL",
+  "source_sha256": "65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105",
+  "source_bytes": 134217728,
+  "output_sha256": "e86da7667b8347043b61fb11a63a60ecca54c840ab0120d58689457e025c80d3",
+  "output_bytes": 193135072,
+  "patch_sha256": "fa36900d1ee6114d23de0264766771a0a9d8f477511aa8f6fc80b73844036e49",
+  "patch_bytes": 31249530,
+  "cumulative": true,
+  "roundtrip_verified": true,
+  "status": "early expanded-engine playtest; startup repaired, campaign unfinished",
+  "verified": "clean new game through Oak/player/rival naming to bedroom; movement, native staircase, normal Save and fresh Continue; Charizardite X pickup and switch flag ON",
+  "legacy_save_migration_verified": false,
+  "Mega_Evolution_battle_tested": false,
+  "PKHeX_compatibility_verified": false,
+  "browser_patch_stages": [
+    {
+      "url": "https://raw.githubusercontent.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0037-expanded/prototype-0037-expanded.xdelta",
+      "bytes": 31249946,
+      "sha256": "05dae8773b3309562f66ba705e26d1d13a0482df6e109f991eda777116a6066f"
+    },
+    {
+      "url": "0037-to-0038.xdelta",
+      "bytes": 10238,
+      "sha256": "a5f4f6112a2a075d295cf75a26b83d983787284db3e754c9c20fc212ce53896b"
+    }
+  ]
+}

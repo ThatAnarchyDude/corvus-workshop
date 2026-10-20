@@ -1,0 +1,15 @@
+Pokémon Psyduck Yellow — Prototype 0038 EXPERIMENTAL — October 20, 2026
+
+A playable early expanded-engine checkpoint, not a complete campaign or fully tested engine. Original unfinished0037 and released0037 expansion remain preserved.
+
+Fixed: mixed-width script filenames had shifted script-bank indices during expansion assembly. This build restores the original campaign field scripts, fixing the observed black screen after Oak/player/rival naming. Expanded engine code, species/items/battle support and previously imported customizations remain.
+
+Checked in a native DS emulator: clean new game through the supplied Oak introduction and naming into the bedroom; movement and normal staircase transition; normal Save and fresh Continue; visible bedroom test controls and Charizardite X pickup. These are focused startup checks, not a campaign playthrough.
+
+Bedroom: the item ball at (4,5) gives one Charizardite X. The red standing flag panel at (8,5) acts as the MEGA TEST SWITCH: interact with A to toggle Mega flag2518 ON/OFF. It explains the resulting setting. Give Charizardite X to a compatible Charizard and look for the Mega button during battle. No Pokemon is gifted. Battle Mega Evolution itself has NOT yet been verified. The switch starts OFF in a clean game and changes only when used. The existing bedroom PC/interior are preserved.
+
+IMPORTANT: PRE-EXPANSION SAVES DO NOT HAVE A VERIFIED MIGRATION. Use a separate folder and a new game, or a backed-up normal save created in this expanded engine. Never overwrite your original save. Current PKHeX/ALM compatibility is not verified. Do not transfer emulator save states between different ROM builds.
+
+Please test: startup, bedroom stone pickup and switch, item held by Charizard, Mega button/transformation/reversion, regular battles, Save/Continue, PC storage and early campaign progression. Report build0038, emulator and the action before any failure. The campaign and engine integration remain unfinished. Optional PC20-to60 storage expansion remains deferred; current item-PC capacity is ten.
+
+Credits: BluRosie/hg-engine and contributors; see HG-ENGINE-CREDITS.md. Free, noncommercial fan modification. No Nintendo ROMs or saves are included in the public page.

@@ -14,9 +14,9 @@ controls remain private. Video and audio pause between actual playtests.
 *Stream link refreshed and remotely checked: October 16, 2026. This temporary link
 requires the laptop and streaming processes to remain online.*
 
-**Latest experimental patch: prototype 0037 Expanded Engine — KNOWN STARTUP FAILURE.** A clean new game can remain black after Oak’s introduction/naming. Compilation and patch/file checks passed, but this build is not suitable for normal play. Earlier 0036 remains the previous gameplay-tested checkpoint.
+**Latest experimental playable patch: prototype 0038 — expanded-engine startup repair.** Clean new-game startup and focused Save/Continue checks passed. The campaign and engine integration remain unfinished; legacy-save migration and battle Mega Evolution remain unverified.
 
-[Create the latest experimental expanded-engine prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0037-expanded/index.html)
+[Create prototype 0038: startup repair and bedroom Mega test controls](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0038/index.html)
 
 [Previous gameplay-tested checkpoint: prototype 0036](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0036/index.html)
 
@@ -1076,3 +1076,18 @@ The owner reported that an old save did not load and a new game black-screened a
 The expanded engine changes the save structures and has no verified legacy migration. This does not establish that the owner’s original save is corrupt. Original saves and both 0037 baselines are preserved. Diagnosis is proceeding with isolated copies. Audio callback data were nonzero in the reproduction; audio silence has not been independently established.
 
 The [view-only testing address](https://certificates-fully-literature-biographies.trycloudflare.com/) has been restored; access credentials remain private and picture/sound pause between actual tests. The experimental patcher now displays the known startup issue. The ROM has not been silently replaced.
+
+
+## October 20, 2026 — prototype 0038: startup repair and bedroom Mega test controls
+
+[Create playable experimental prototype 0038 from original USA HeartGold](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0038/index.html).
+
+Fixed: a mixed three/four-digit archive filename error shifted field-script bank indices during expanded-engine assembly. The restored campaign script archive now allows a clean new game to finish the supplied Oak introduction, player/rival naming and enter the bedroom. Expanded engine code and Pokémon/battle data remain; both original0037 baselines are preserved.
+
+Verified in the native DS emulator: clean intro/naming-to-bedroom, movement and staircase transition, normal Save followed by a fresh Continue into the house, then ordinary stairs back to the bedroom. The visible item ball gives one Charizardite X, and the red standing flag panel acts as an A-button Mega test switch with ON/OFF dialogue. RAM checks confirmed held-item ID660 was added once and Mega unlock flag2518 became set; the OFF interaction also displayed correctly. This is a focused startup/interaction check, not a full campaign playthrough or a battle Mega Evolution test.
+
+For testing: collect the bedroom item ball, interact with the red flag panel to turn Mega testing ON, give Charizardite X to a compatible Charizard and look for the Mega button in battle. No Pokémon is gifted. The original PC and interior remain. The switch is optional and does not rewrite campaign completion or other gimmick flags.
+
+**Pre-expansion saves still need migration work.** Use a separate folder and a new game for this early test; preserve all original saves. PKHeX/ALM compatibility, full battle integration, expanded species and end-to-end progression remain unverified. Do not transfer emulator save states between different ROMs. The Kanto campaign and inherited Rock Tunnel work are unfinished; PC item storage remains ten stacks, with expansion deferred.
+
+The cumulative patch roundtrip and ZIP integrity passed. A full Chrome file-selection/Create/Download check reconstructed exact ROM SHA256 `e86da7667b8347043b61fb11a63a60ecca54c840ab0120d58689457e025c80d3`. The browser check caught unsupported secondary patch compression before publication; the released patch uses the decoder-supported format. Public artifacts contain patches/documentation only; ROMs and saves remain local.
