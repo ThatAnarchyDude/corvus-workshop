@@ -3,9 +3,9 @@
 A plain-language guide to what has changed, what you can play now, and what is
 still being built. Share this page with anyone following the project.
 
-**Last updated: October 19, 2026.**
+**Last updated: October 20, 2026.**
 
-[Watch LIVE testing with video and audio](https://semiconductor-occasionally-filters-howard.trycloudflare.com/)
+[Watch LIVE testing with video and audio](https://certificates-fully-literature-biographies.trycloudflare.com/)
 
 Tap **Enable sound** in the viewer for game audio. The upper DS screen is on the
 left and the touch screen is on the right. The link grants viewing only; game
@@ -14,7 +14,7 @@ controls remain private. Video and audio pause between actual playtests.
 *Stream link refreshed and remotely checked: October 16, 2026. This temporary link
 requires the laptop and streaming processes to remain online.*
 
-**Latest published patch: prototype 0037 Expanded Engine — EXPERIMENTAL / UNTESTED.** Built from a separate copy of unfinished 0037. Compilation and patch/file checks passed; gameplay and save compatibility have not been tested.
+**Latest experimental patch: prototype 0037 Expanded Engine — KNOWN STARTUP FAILURE.** A clean new game can remain black after Oak’s introduction/naming. Compilation and patch/file checks passed, but this build is not suitable for normal play. Earlier 0036 remains the previous gameplay-tested checkpoint.
 
 [Create the latest experimental expanded-engine prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0037-expanded/index.html)
 
@@ -913,7 +913,7 @@ Local and independent Windows checks passed manual scaling, the exact 150% examp
 
 ## October 15 — replacement viewing connection
 
-The earlier temporary tunnel returned Cloudflare error 1033. [The replacement live video/audio viewer](https://semiconductor-occasionally-filters-howard.trycloudflare.com/) is remotely verified and controls remain private. The owner received the access-bearing link in chat. This public address contains no viewing credential. Prototype 0030 is still in development; prototype 0029 remains the latest released game.
+The earlier temporary tunnel returned Cloudflare error 1033. [The replacement live video/audio viewer](https://certificates-fully-literature-biographies.trycloudflare.com/) is remotely verified and controls remain private. The owner received the access-bearing link in chat. This public address contains no viewing credential. Prototype 0030 is still in development; prototype 0029 remains the latest released game.
 
 
 ## October 15 — colored battle artwork and ship navigation in development
@@ -943,7 +943,7 @@ At the owner's direction, the unfinished ship story/Blue/trainers/departure and 
 ## October 15 — prototype0031 departure-state checkpoint
 A private0031 candidate now detects the return from the ship after Cut, runs a departure cue and automatic dock exit, and remembers that boarding is closed. Native testing verified the exit and refusal even with a ticket. A normal save, fresh Continue on the pure candidate, repeated refusal and ordinary return to Vermilion passed. These checks used a copied save with an explicitly artificial Cut flag and test ticket, not a completed Bill/captain campaign replay. All29 ship regression tests passed.
 The moving-ship visual and camera scene are still unfinished; this checkpoint does not claim the full sailing animation. Prototype0030 remains the latest published patch. Original saves, released builds and native Johto content were preserved.
-The viewing tunnel was restored at https://semiconductor-occasionally-filters-howard.trycloudflare.com/ . The authenticated owner link is shared only in chat; viewing controls remain private. Picture and sound are paused between playtests.
+The viewing tunnel was restored at https://certificates-fully-literature-biographies.trycloudflare.com/ . The authenticated owner link is shared only in chat; viewing controls remain private. Picture and sound are paused between playtests.
 
 
 ## October 15 — native ship departure animation checked in0031
@@ -979,7 +979,7 @@ The governing workflow is now progression bugs first, required campaign second, 
 
 
 ## October 16 — viewing connection restored; 0032 Gym checks resumed
-The viewing connection has been restored at https://semiconductor-occasionally-filters-howard.trycloudflare.com/ . The authenticated owner link is shared only in chat; controls remain private. Remote status returned successfully. Prototype 0031 remains the latest published patch.
+The viewing connection has been restored at https://certificates-fully-literature-biographies.trycloudflare.com/ . The authenticated owner link is shared only in chat; controls remain private. Remote status returned successfully. Prototype 0031 remains the latest published patch.
 The private 0032 candidate now uses Yellow’s Vermilion Gym teams and Thunderbolt reward while retaining the native switch puzzle. Four focused checks passed. Native testing reached the Gym from the ship/port and completed the three-Voltorb trainer encounter; full puzzle, Lt. Surge, reward and Save/Continue checks remain unfinished. A usage interruption stopped the previous session; it did not complete those pending checks. Resumed tests use a labeled initial-transport-only fixture and a copied save, with no Pokémon/item/badge grants.
 
 
@@ -1067,3 +1067,12 @@ Compilation, structural checks, cumulative patch reconstruction, ZIP integrity a
 The browser patcher now opens as a small page and downloads the modification patch only after Create is clicked, with visible download progress. Previously its button handler appeared after roughly 42 MB of embedded patch data, allowing the visible button to remain disabled while that data loaded. The previous decoder-only verification did not cover the browser's file-selection/button/download flow.
 
 A complete Chrome browser check now confirms file selection enables Create, the patch builds successfully, and the Download link yields the same NDS SHA256 `3dd95a51f8a444d3ede11d3851d67f2c85bc65d09ef9c841b4c718c53dacff66`. The ROM and original 0037 are unchanged. This patcher repair adds no gameplay or save-compatibility test claim. Refresh the [expanded 0037 patcher](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0037-expanded/index.html?patcher=2) if an older page is cached.
+
+
+## October 20, 2026 — expanded 0037 startup failure reproduced; 0038 work begun
+
+The owner reported that an old save did not load and a new game black-screened after Oak’s introduction and naming. A separate clean-new-game test of the unchanged released ROM reproduced the persistent black screen after normal player and rival naming, without any imported save. This establishes a startup problem independent of old-save compatibility. A boot fix is not yet verified and no 0038 release is available.
+
+The expanded engine changes the save structures and has no verified legacy migration. This does not establish that the owner’s original save is corrupt. Original saves and both 0037 baselines are preserved. Diagnosis is proceeding with isolated copies. Audio callback data were nonzero in the reproduction; audio silence has not been independently established.
+
+The [view-only testing address](https://certificates-fully-literature-biographies.trycloudflare.com/) has been restored; access credentials remain private and picture/sound pause between actual tests. The experimental patcher now displays the known startup issue. The ROM has not been silently replaced.
