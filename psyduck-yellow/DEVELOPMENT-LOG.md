@@ -1060,3 +1060,10 @@ Compilation, structural checks, cumulative patch reconstruction, ZIP integrity a
 **No boot, battles, Mega Evolution, new-species, Save/Continue, save migration, PKHeX/ALM or full campaign playtest was performed.** This engine changes the save layout. Existing saves and the current custom PKHeX/ALM builds are not verified compatible. Keep this experimental ROM and its saves in a separate folder, preserving originals. The inherited Rock Tunnel and later Kanto work remain unfinished; the optional PC-item expansion remains deferred. No new recording or live playtest accompanies this package.
 
 [Read the release notes](https://github.com/ThatAnarchyDude/corvus-workshop/blob/main/psyduck-yellow/prototype-0037-expanded/READ-ME-FIRST.txt) and [hg-engine credits](https://github.com/ThatAnarchyDude/corvus-workshop/blob/main/psyduck-yellow/prototype-0037-expanded/HG-ENGINE-CREDITS.md). Public artifacts contain a patch and documentation; ROMs and saves stay local.
+
+
+## October 19, 2026 — expanded 0037 patcher button/loading fix
+
+The browser patcher now opens as a small page and downloads the modification patch only after Create is clicked, with visible download progress. Previously its button handler appeared after roughly 42 MB of embedded patch data, allowing the visible button to remain disabled while that data loaded. The previous decoder-only verification did not cover the browser's file-selection/button/download flow.
+
+A complete Chrome browser check now confirms file selection enables Create, the patch builds successfully, and the Download link yields the same NDS SHA256 `3dd95a51f8a444d3ede11d3851d67f2c85bc65d09ef9c841b4c718c53dacff66`. The ROM and original 0037 are unchanged. This patcher repair adds no gameplay or save-compatibility test claim. Refresh the [expanded 0037 patcher](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0037-expanded/index.html?patcher=2) if an older page is cached.
