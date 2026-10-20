@@ -5,7 +5,7 @@ still being built. Share this page with anyone following the project.
 
 **Last updated: October 20, 2026.**
 
-[Watch LIVE testing with video and audio](https://certificates-fully-literature-biographies.trycloudflare.com/)
+[Watch LIVE testing with video and audio](https://format-bios-millions-signed.trycloudflare.com/)
 
 Tap **Enable sound** in the viewer for game audio. The upper DS screen is on the
 left and the touch screen is on the right. The link grants viewing only; game
@@ -1091,3 +1091,10 @@ For testing: collect the bedroom item ball, interact with the red flag panel to 
 **Pre-expansion saves still need migration work.** Use a separate folder and a new game for this early test; preserve all original saves. PKHeX/ALM compatibility, full battle integration, expanded species and end-to-end progression remain unverified. Do not transfer emulator save states between different ROMs. The Kanto campaign and inherited Rock Tunnel work are unfinished; PC item storage remains ten stacks, with expansion deferred.
 
 The cumulative patch roundtrip and ZIP integrity passed. A full Chrome file-selection/Create/Download check reconstructed exact ROM SHA256 `e86da7667b8347043b61fb11a63a60ecca54c840ab0120d58689457e025c80d3`. The browser check caught unsupported secondary patch compression before publication; the released patch uses the decoder-supported format. Public artifacts contain patches/documentation only; ROMs and saves remain local.
+
+
+## October 20, 2026 — viewing connection refreshed; Mega-related transition diagnosis
+
+The [viewing connection](https://format-bios-millions-signed.trycloudflare.com/) has been restored and remotely checked. Access credentials are shared only with the owner; controls remain private. Picture and sound pause between actual playtests.
+
+The owner reported black video with audio continuing after Lt. Surge, particularly Fly to Cerulean and Pokemon Center entry, and observed that disabling the Mega test switch seemed to avoid it. Matched prepared saves are being used to separate the flag setting from battle and transition behavior. A prepared post-Surge-state save entered Cerulean's Center with the flag ON and displayed normally; this does not yet reproduce or fix the reported problem. Battle-dependent behavior and Fly remain under investigation. No new ROM revision is released by this update.
