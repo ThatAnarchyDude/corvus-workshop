@@ -1,0 +1,15 @@
+{
+  "version": "0037-expanded-UNTESTED",
+  "source_sha256": "65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105",
+  "output_sha256": "3dd95a51f8a444d3ede11d3851d67f2c85bc65d09ef9c841b4c718c53dacff66",
+  "source_bytes": 134217728,
+  "output_bytes": 193145824,
+  "patch_sha256": "05dae8773b3309562f66ba705e26d1d13a0482df6e109f991eda777116a6066f",
+  "cumulative": true,
+  "roundtrip_verified": true,
+  "gameplay_tested": false,
+  "save_compatibility_verified": false,
+  "status": "experimental compiled integration; awaiting0038 playtest authorization",
+  "known_limitations": "No runtime or save compatibility tests. New engine changes save layout; current PKHeX/ALM compatibility unverified. Mega unlock flag2518 unchanged. Kanto campaign unfinished.",
+  "zip_verified": true
+}
