@@ -3,7 +3,7 @@
 A plain-language guide to what has changed, what you can play now, and what is
 still being built. Share this page with anyone following the project.
 
-**Last updated: October 16, 2026.**
+**Last updated: October 19, 2026.**
 
 [Watch LIVE testing with video and audio](https://semiconductor-occasionally-filters-howard.trycloudflare.com/)
 
@@ -14,9 +14,11 @@ controls remain private. Video and audio pause between actual playtests.
 *Stream link refreshed and remotely checked: October 16, 2026. This temporary link
 requires the laptop and streaming processes to remain online.*
 
-**Latest published patch: prototype 0036.** Route 2 aide Flash reward after ten caught species; native teaching, Save/Continue and cave Flash checked. Rock Tunnel conversion and later Kanto remain unfinished.
+**Latest published patch: prototype 0037 Expanded Engine — EXPERIMENTAL / UNTESTED.** Built from a separate copy of unfinished 0037. Compilation and patch/file checks passed; gameplay and save compatibility have not been tested.
 
-[Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0036/index.html)
+[Create the latest experimental expanded-engine prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0037-expanded/index.html)
+
+[Previous gameplay-tested checkpoint: prototype 0036](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0036/index.html)
 
 The download page contains a modification patch. Select your original,
 unmodified USA HeartGold game file to build the playable DS file on your own
@@ -1041,3 +1043,20 @@ Verified: four focused checks cover caught thresholds, full-pocket retry, one-ti
 Please test: fewer-than-ten refusal, ten-caught reward, repeat dialogue, teaching Flash, saving/Continue and native cave use. Back up your save. Caught species count; merely seeing Pokemon does not qualify.
 
 Limits: eligibility testing changed only copied Dex caught/seen flags and native checksums; initial transport fixtures were used for gate/cave checks. It does not establish naturally catching ten species or campaign balance. Original saves were preserved. Rock Tunnel's Yellow trainers/encounters and onward Kanto remain unfinished. Optional details and PC expansion are deferred, not canceled; current PC capacity is ten stacks. No new recording is bundled. Patch roundtrip, ZIP and actual browser decoder passed, including wrong-input rejection; the public page matches tested content. Browser UI inspection remained unavailable.
+
+
+## October 19, 2026 — prototype 0037 Expanded Engine: experimental integration
+
+[Create the separate experimental expanded-engine build from original USA HeartGold](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0037-expanded/index.html).
+
+This is a duplicate of the unfinished 0037 work with the supplied BluRosie hg-engine expansion compiled in. Original 0037 and earlier releases are preserved. It is an integration checkpoint, **not a completed Kanto campaign or a gameplay-tested release**.
+
+The engine includes Mega Evolution/Primal support, Fairy type, expanded species, moves and items, hidden abilities and 30 Pokémon boxes. Its 1,535 personal-data records include forms and placeholders; this is not a claim that 1,535 distinct species are fully implemented. Mega Evolution retains the engine's unlock flag and stone requirements; this build adds no campaign unlock event.
+
+Existing campaign scripts/events/maps, 843 trainer records, starter choices, approved item evolution rules, Golduck's Water/Psychic typing, Togepi's custom moves, custom TM compatibility and colored Jessie/James artwork were carried into the expanded formats. Seven custom NPC models were relocated to preserve the new follower graphics. These preservation checks concern files and code, not observed gameplay.
+
+Compilation, structural checks, cumulative patch reconstruction, ZIP integrity and the actual browser patch worker passed. Wrong input size/checksum are rejected; correct input reconstructs ROM SHA256 `3dd95a51f8a444d3ede11d3851d67f2c85bc65d09ef9c841b4c718c53dacff66`. The public patch page was downloaded and matched the tested page byte for byte.
+
+**No boot, battles, Mega Evolution, new-species, Save/Continue, save migration, PKHeX/ALM or full campaign playtest was performed.** This engine changes the save layout. Existing saves and the current custom PKHeX/ALM builds are not verified compatible. Keep this experimental ROM and its saves in a separate folder, preserving originals. The inherited Rock Tunnel and later Kanto work remain unfinished; the optional PC-item expansion remains deferred. No new recording or live playtest accompanies this package.
+
+[Read the release notes](https://github.com/ThatAnarchyDude/corvus-workshop/blob/main/psyduck-yellow/prototype-0037-expanded/READ-ME-FIRST.txt) and [hg-engine credits](https://github.com/ThatAnarchyDude/corvus-workshop/blob/main/psyduck-yellow/prototype-0037-expanded/HG-ENGINE-CREDITS.md). Public artifacts contain a patch and documentation; ROMs and saves stay local.
