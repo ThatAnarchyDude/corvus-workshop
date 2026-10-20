@@ -1,0 +1,13 @@
+Psyduck Yellow — prototype0037 EXPANDED ENGINE — EXPERIMENTAL / UNTESTED
+
+Built October19,2026 from a duplicate of unfinished0037, using the supplied hg-engine archive. The original unfinished0037 is unchanged. This is a compiled integration checkpoint, not a verified playable or complete Kanto campaign.
+
+Compiled features: Mega Evolution and Primal Reversion support, Fairy type, expanded species/moves/items, modern battle mechanics, hidden abilities and30 Pokemon boxes.1535 personal records include alternate forms and placeholders; this does not mean1535 fully implemented distinct species. Mega availability retains hg-engine's unlock flag2518 and applicable held-stone requirements; no new campaign unlock event was invented.
+
+Carried forward: campaign scripts/maps/events,843 trainer records, custom starter choices, item evolutions, Togepi moves, Golduck Water/Psychic, seven custom NPC models and colored Jessie/James battle art, custom TM items/compatibility and Celadon department stock. These were checked as data, not played.
+
+IMPORTANT: This engine changes the save layout and Pokemon data. Existing0037 saves and our current PKHeX/ALM build are NOT verified compatible. Keep original saves and ROMs separate; do not overwrite them. Use a separate emulator/game folder. Do not reuse save states across ROM versions.
+
+Checks completed: compilation, structural/resource assertions, source preservation, cumulative patch decode SHA256 match and ZIP integrity. No boot, battle, Mega Evolution, new-species, Save/Continue, save migration, PKHeX/ALM or end-to-end campaign playtest was performed. Gameplay testing and bugfixing wait for owner authorization to begin0038. The pre-existing RockTunnel campaign work remains unfinished.
+
+Credits: hg-engine by BluRosie and its contributors. See HG-ENGINE-CREDITS.md. Freely accessible, noncommercial distribution as required by the supplied project's README. No Nintendo ROM is included in the public patch page.
