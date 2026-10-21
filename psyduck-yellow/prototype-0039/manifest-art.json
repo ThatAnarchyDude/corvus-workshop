@@ -1,0 +1,41 @@
+{
+  "version": "0039-SPRITE-UPDATE",
+  "source_sha256": "65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105",
+  "source_bytes": 134217728,
+  "output_sha256": "1114ae2cc11777868150d95caa4ad5378d311b28ad76769c8dc1cad88fec71a3",
+  "output_bytes": 194488288,
+  "cumulative": true,
+  "roundtrip_verified": true,
+  "status": "experimental0039 sprite revision: custom Mega Eevee front/back; battle display/transformation unverified",
+  "new_species": 1561,
+  "mega_data_record": 1562,
+  "Eonite_item": 3145,
+  "Mega_Evolution_battle_tested": false,
+  "new_game_starter_acquisition_tested": false,
+  "new_ID_editor_compatibility_verified": false,
+  "legacy_save_migration_verified": false,
+  "browser_patch_stages": [
+    {
+      "url": "https://raw.githubusercontent.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0037-expanded/prototype-0037-expanded.xdelta",
+      "bytes": 31249946,
+      "sha256": "05dae8773b3309562f66ba705e26d1d13a0482df6e109f991eda777116a6066f"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0038/0037-to-0038.xdelta",
+      "bytes": 10238,
+      "sha256": "a5f4f6112a2a075d295cf75a26b83d983787284db3e754c9c20fc212ce53896b"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0039/0038-to-0039.xdelta",
+      "bytes": 80627,
+      "sha256": "ca0446aa012763c16b1a3df6eda32eebd5e6bd4df7805efbf96288451a6170ab"
+    },
+    {
+      "url": "0039-to-0039-art.xdelta",
+      "bytes": 8418,
+      "sha256": "0c0a17f1400d5317054f0e74464b54c6b43144a20eb6aa6902d8ece347121689"
+    }
+  ],
+  "base_Eevee_sprites_unchanged": true,
+  "sprite_conversion_roundtrip_verified": true
+}

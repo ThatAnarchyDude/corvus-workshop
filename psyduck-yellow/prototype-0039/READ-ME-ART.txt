@@ -1,0 +1,16 @@
+Pokemon Psyduck Yellow — Prototype0039 SPRITE UPDATE — October21,2026
+
+Updated0039 experimental test revision. Original0039 ROM/patch is preserved; index-initial.html opens its original patcher. This page now builds the sprite update from your ORIGINAL unmodified USAHeartGold .nds. All stages run locally and verify input/output hashes. No ROM is uploaded.
+
+NEW: custom Mega Eevee front/back battle sprites adapted from the owner's Eevee-New-Horizons guide. Sandy-brown body, long ears, large cream star ruff, single fluffy tail and Normal-variant silver/pearl gem. AI-assisted adaptation and deterministic DS conversion were used; these are not pre-existing sprites from the recovered ZIP. Two identical80x80 frames per view, transparent0 and15opaque colors. Shiny palette derives existing Eevee normal-to-shiny shifts. The existing animation has not been observed in battle.
+
+Only the Mega record1562's four gender/view sprites and two palettes changed. Base Eevee133 and starter1561 art are byte-identical, as are all other sprite entries. Engine/code/scripts/stats/items/encounters remain unchanged from original0039. No new custom species beyond its existing starter/Mega experiment. No separate Mega Pokedex entry.
+
+VERIFIED: encrypted native-format front/back conversion decodes to exact source indices, all unrelated resources preserved, patch reconstruction exacthash and ZIP integrity. Earlier0039 prepared native-save Continue with starter1561/Eonite3145 into Vermilion is inherited; no new gameplay test during this art update.
+
+UNVERIFIED: Mega battle appearance/animation/transformation/reversion, native starter gift flow, full follower movement and new-ID inventory/editor/evolution/Dex behavior. Eonite3145 has no normal pickup; the bedroom ball remains Charizardite X, with the red Mega switch. First Eonite row covers newstarter only; broader Eevee-family support remains unfinished. Old pre-expansion save conversion unsupported; current0038 PKHeX is not verified for these new IDs. Use separate folders and backups; never transfer emulator save states between ROM versions. The deferred post-Surge/Fly/Center issue is not claimed fixed. Kanto remains unfinished, PC10.
+
+TEST: normal new-game Eevee selection, field loading, Save/Continue and any available Mega behavior. Report exact build/emulator/actions. No claim of full campaign or natural balance. Development pauses after this release pending owner instructions.
+
+Expected ROM SHA256:1114ae2cc11777868150d95caa4ad5378d311b28ad76769c8dc1cad88fec71a3.
+Public files contain modification patches and documentation only; originals/ROMs/saves remain local.
