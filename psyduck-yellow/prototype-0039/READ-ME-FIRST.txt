@@ -1,0 +1,17 @@
+Pokemon Psyduck Yellow — prototype 0039 EXPERIMENTAL — October 21, 2026
+
+Released at the owner's request as the current experiment, not a complete game or fully verified Mega implementation.
+
+Added: dedicated starter Eevee species1561; Mega Eevee record1562 stored as starter form1; Eonite held-item3145. Stats/ability inherit Eevee. Art copies native Eevee and an existing stone as placeholders. Existing ordinary Eevee and all previous records remain. No separate Mega Pokedex entry. Other requested custom species/evolutions are not added.
+
+Fixed: the new species reached an unsupported follower graphics tag before the earlier compatibility mapping. This produced an invalid callback and crashed the emulator. A narrow earlier alias now uses normal Eevee follower graphics while keeping its separate battle/species identity. Missing follower model-form records were appended without changing originals.
+
+Verified: build/static preservation, copied expanded0038-save Continue into visible Vermilion with starter1561 holding Eonite3145; bounded4500-frame native run. Control saves with normal Eevee load even holding Eonite; the old uncorrected starter fails even with an existing stone. These are prepared high-level test fixtures, not natural starter acquisition, campaign balance or a full playthrough.
+
+NOT VERIFIED: Mega battle transformation/reversion; new-game starter gift flow; complete follower movement; new ID bag/editor/Dex and evolution behavior. Eonite has no normal pickup yet. The first scoped Eonite eligibility covers only the new starter; all ordinary Eevee/Eeveelution support remains unfinished. The bedroom item remains Charizardite X and the red panel toggles the Mega unlock. No other custom Pokemon are implemented. No new save migration. Existing0038 PKHeX is not verified with1561/1562/3145. Preserve saves; use a separate folder and never reuse save states across ROM builds. Old pre-expansion conversion is unsupported. The deferred post-Surge/Fly/Center black screen is not claimed fixed.
+
+TEST: normal new-game Eevee selection, field loading, normal Save/Continue and available battle behavior. New-game starter acquisition and Mega transformation remain explicitly experimental. Report emulator/version/actions and keep original saves. Kanto campaign remains unfinished; item PC remains ten slots.
+
+Patching: select ORIGINAL unmodified USA HeartGold .nds, not another prototype. The browser applies three verified stages locally and checks each output hash. No original ROM is uploaded. Expected output SHA256: 2c2bd3659c609b6d90ec86a0c66195f43aff2203487f991e0c8319f9a0661600.
+
+Earlier releases preserved. Public package contains patches/docs only. Development pauses after this delivery pending owner instructions. Credits: BluRosie/hg-engine and contributors; decoder RomPatcher.js, Marc Robledo, MIT.

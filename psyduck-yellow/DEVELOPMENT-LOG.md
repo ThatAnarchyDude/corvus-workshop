@@ -3,7 +3,7 @@
 A plain-language guide to what has changed, what you can play now, and what is
 still being built. Share this page with anyone following the project.
 
-**Last updated: October 20, 2026.**
+**Last updated: October 21, 2026.**
 
 [Watch LIVE testing with video and audio](https://format-bios-millions-signed.trycloudflare.com/)
 
@@ -14,9 +14,9 @@ controls remain private. Video and audio pause between actual playtests.
 *Stream link refreshed and remotely checked: October 16, 2026. This temporary link
 requires the laptop and streaming processes to remain online.*
 
-**Latest experimental playable patch: prototype 0038 — expanded-engine startup repair.** Clean new-game startup and focused Save/Continue checks passed. The campaign and engine integration remain unfinished; legacy-save migration and battle Mega Evolution remain unverified.
+**Latest experimental playable patch: prototype 0039 — starter Eevee loading fix.** Prepared-save Continue passed; Mega transformation/reversion and new-game starter acquisition remain unverified.
 
-[Create prototype 0038: startup repair and bedroom Mega test controls](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0038/index.html)
+[Create prototype 0039: starter Eevee experiment](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0039/index.html)
 
 [Previous gameplay-tested checkpoint: prototype 0036](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0036/index.html)
 
@@ -1098,3 +1098,14 @@ The cumulative patch roundtrip and ZIP integrity passed. A full Chrome file-sele
 The [viewing connection](https://format-bios-millions-signed.trycloudflare.com/) has been restored and remotely checked. Access credentials are shared only with the owner; controls remain private. Picture and sound pause between actual playtests.
 
 The owner reported black video with audio continuing after Lt. Surge, particularly Fly to Cerulean and Pokemon Center entry, and observed that disabling the Mega test switch seemed to avoid it. Matched prepared saves are being used to separate the flag setting from battle and transition behavior. A prepared post-Surge-state save entered Cerulean's Center with the flag ON and displayed normally; this does not yet reproduce or fix the reported problem. Battle-dependent behavior and Fly remain under investigation. No new ROM revision is released by this update.
+
+
+## October 21, 2026 — prototype 0039: starter Eevee experiment and loading fix
+
+[Create experimental prototype 0039 from original USA HeartGold](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0039/index.html).
+
+Adds dedicated starter Eevee/Mega Eevee records and Eonite, with inherited Eevee battle data and placeholder artwork. The starter uses existing Eevee follower graphics; a missing early alias had produced an invalid graphics entry and crashed Continue. A prepared copied native expanded-save fixture with the new starter holding Eonite now loads visible Vermilion and remains running through a bounded4500-frame check. Existing script banks, ordinary Eevee and prior records are preserved. This is not a new-game or full campaign playthrough.
+
+Mega transformation/reversion, native starter acquisition, complete follower movement, new-ID inventory/editor support and save compatibility remain unverified. Eonite has no normal pickup yet; the existing bedroom ball remains Charizardite X and its switch toggles Mega testing. This first scoped Eonite row covers the new starter only; ordinary Eevee-family support is unfinished. No separate Mega Pokedex entry or other new custom species is added. The old post-Surge/Fly/Center issue is not claimed fixed.
+
+Test normal Eevee starter selection, field loading and normal Save/Continue; report exact steps. Preserve saves and use a separate folder. Pre-expansion save conversion is unsupported, and current0038 PKHeX is not verified for these new IDs. Never reuse emulator save states between builds. Kanto and optional content remain unfinished. Earlier releases are preserved. Public artifacts are patches/documentation only. Development pauses after delivery awaiting owner instructions.
