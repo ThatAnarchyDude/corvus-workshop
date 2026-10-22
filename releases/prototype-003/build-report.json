@@ -1,0 +1,99 @@
+{
+  "build": "prototype-003",
+  "input_sha256": "65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105",
+  "prior_prototype_sha256": "4c4cac888ba52d4eb3ecce80e045cd7b3e6cc2060d8328bf0617f1bffe12b6ef",
+  "output_sha256": "1cd5dd980e9c9a542783fe261e5b4b9c59df7b1061e1be2d97f6fa2dd9e635db",
+  "output_bytes": 126657224,
+  "maps": [
+    {
+      "map_id": 49,
+      "script": 973,
+      "init": 974,
+      "text": 833,
+      "event": 495
+    },
+    {
+      "map_id": 505,
+      "script": 975,
+      "init": 976,
+      "text": 834,
+      "event": 496
+    },
+    {
+      "map_id": 9,
+      "script": 977,
+      "init": 978,
+      "text": 835,
+      "event": 497
+    }
+  ],
+  "rival_naming": {
+    "overlay": 53,
+    "hook": "0x21e5a5c",
+    "helper": "0x21e88a0",
+    "helper_bytes": 168,
+    "original_overlay_sha256": "19a3c683b5e82e37d71bb3cab902b106c14694676550482c15fcdf6c4a850ac0",
+    "output_overlay_sha256": "b100a044da4dafdabe42c528f1937be25883eef427bbe6554489d33a928383fc",
+    "new_message_ids": [
+      63,
+      64
+    ],
+    "phase_field": "OakSpeechData.unk_010",
+    "placement": "Oak intro, after player naming, before bedroom"
+  },
+  "rival_trainers": {
+    "25": 738,
+    "133": 739,
+    "175": 740
+  },
+  "route_1_preserved_trainer_records": [
+    "00004701000001000000210d01000200000000000000000011044f0100000000",
+    "01004401040001000000d80d0100030000000000000000000d04450100000000",
+    "02009200000001000000fe0c0200040000000000000000000904390100000000",
+    "03009200000001000000d90d0300040000000000000000000f04330100000000"
+  ],
+  "boundary_z": 344,
+  "original_events_preserved": true,
+  "wild_levels": [
+    3,
+    4,
+    2,
+    3,
+    2,
+    3,
+    2,
+    5,
+    4,
+    6,
+    4,
+    7
+  ],
+  "wild_species": [
+    16,
+    16,
+    19,
+    19,
+    16,
+    16,
+    19,
+    16,
+    19,
+    16,
+    19,
+    16
+  ],
+  "saved_state_registry": {
+    "oak_intercept": 16751,
+    "rival_gift_battle": 16750,
+    "route_boundary": 16749,
+    "potion_received": 2907,
+    "first_rival_battle_won": 16748
+  },
+  "limitations": [
+    "Pallet and first Route 1 grass only; northward travel blocked",
+    "Oak escort uses a transition to his lab; full Pikachu capture scene not implemented",
+    "Battle portrait retains HG rival presentation; overworld uses Blue",
+    "Three-starter gift chronology differs from Yellow forced Eevee theft",
+    "Existing prototype-002 saves require a new game for the new opening"
+  ]
+}

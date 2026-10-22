@@ -1,0 +1,81 @@
+{
+  "version": "015",
+  "source_sha256": "65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105",
+  "output_sha256": "b15097292e8dfcbc0a1c0d1f58eabb9132b0c117f95a79d266b0abe528f2ac84",
+  "source_bytes": 134217728,
+  "output_bytes": 126892232,
+  "patch_sha256": "9b906b9e75789463db4e962c12e7ccd4f41697adc7115db88a395d48d86cf489",
+  "parent_version": "014",
+  "cumulative": true,
+  "parent_output_sha256": "edcd95d49ad2a2c8959b2b946934793bdf8c6f506138d2f4087c246c1b08e79f",
+  "automated_tests": {
+    "passed": 187,
+    "failed": 0
+  },
+  "xdelta_roundtrip_verified": true,
+  "browser": {
+    "output_sha256": "b15097292e8dfcbc0a1c0d1f58eabb9132b0c117f95a79d266b0abe528f2ac84",
+    "bad_input_rejected": true,
+    "browser_errors": []
+  },
+  "native_rom_sha256": "b15097292e8dfcbc0a1c0d1f58eabb9132b0c117f95a79d266b0abe528f2ac84",
+  "native_checks": [
+    {
+      "check": "Brock victory",
+      "fixture": "Native GiveMon/ReturnLoanMon and normal save, Golduck level20; completion check, not opening-level balance",
+      "result": "Geodude12 and Onix14 defeated; only Boulder Badge awarded; Bide item115 quantity1; TM flagB22 and trainer flags2116/2117 set; early Route22 rival retired"
+    },
+    {
+      "check": "Brock loss",
+      "fixture": "Native level1 Psyduck, normal save",
+      "result": "Blackout to Pokemon Center; no badge, no Bide, neither gym trainer defeated"
+    },
+    {
+      "check": "Junior trainer",
+      "fixture": "Native level20 Golduck, normal save",
+      "result": "Diglett11 and Sandshrew11 defeated through native trainer dispatch; flag2116 set, Brock flag2117 and reward flagB22 remain clear"
+    },
+    {
+      "check": "Bide teaching",
+      "fixture": "Native Bide gift to level5 Eevee in lab, normal save",
+      "result": "TM pocket shows Bide No.34 x1; Eevee learns Bide through native menu; item consumed"
+    },
+    {
+      "check": "normal save and fresh reload after Brock",
+      "result": {
+        "badges": {
+          "johto": 0,
+          "kanto": 1
+        },
+        "bide_quantity": 1,
+        "flags": {
+          "0xb22": true,
+          "0xb43": true,
+          "0xb44": true,
+          "0x844": true,
+          "0x845": true
+        }
+      }
+    },
+    {
+      "check": "Golduck type summary",
+      "result": "Native summary visibly displays WATER and PSYCHIC; personal-data test proves Psyduck and other stats/learnsets unchanged by typing edit"
+    },
+    {
+      "check": "Brock walking guide",
+      "result": "Route3 trigger at1086,104 escorts player to gym; NPC returns and player regains control"
+    },
+    {
+      "check": "museum walking guide",
+      "result": "Choosing No west of guide escorts player to museum entrance; NPC walks back and player regains control; empty movement path corrected"
+    }
+  ],
+  "coverage_limits": [
+    "Pewter optional interior story/dialogue conversions remain pending; native HG services retained",
+    "Route3 remains temporary development boundary",
+    "Native victory fixtures are overleveled; not a starter-level balance certification",
+    "Not every approach direction, bag-full retry or older-save combination tested natively",
+    "No Android testing in this checkpoint; no full Kanto campaign traversal",
+    "Remote CDN could not be fetched from this cloud network; local browser reconstruction verified, publication verified through Git"
+  ]
+}

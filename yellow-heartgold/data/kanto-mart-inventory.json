@@ -1,0 +1,272 @@
+{
+  "source_sha256": "bef260fefcb81e6700ee314d442f450ab3ddbc450f95a1215f649e64ee790732",
+  "catalogs": {
+    "Viridian": [
+      "POKE_BALL",
+      "POTION",
+      "ANTIDOTE",
+      "PARLYZ_HEAL",
+      "BURN_HEAL"
+    ],
+    "Pewter": [
+      "POKE_BALL",
+      "POTION",
+      "ESCAPE_ROPE",
+      "ANTIDOTE",
+      "BURN_HEAL",
+      "AWAKENING",
+      "PARLYZ_HEAL"
+    ],
+    "Cerulean": [
+      "POKE_BALL",
+      "POTION",
+      "ESCAPE_ROPE",
+      "REPEL",
+      "ANTIDOTE",
+      "BURN_HEAL",
+      "AWAKENING",
+      "PARLYZ_HEAL"
+    ],
+    "Vermilion": [
+      "POKE_BALL",
+      "SUPER_POTION",
+      "ICE_HEAL",
+      "AWAKENING",
+      "PARLYZ_HEAL",
+      "REPEL"
+    ],
+    "Lavender": [
+      "GREAT_BALL",
+      "SUPER_POTION",
+      "REVIVE",
+      "ESCAPE_ROPE",
+      "SUPER_REPEL",
+      "ANTIDOTE",
+      "BURN_HEAL",
+      "ICE_HEAL",
+      "PARLYZ_HEAL"
+    ],
+    "Fuchsia": [
+      "ULTRA_BALL",
+      "GREAT_BALL",
+      "HYPER_POTION",
+      "REVIVE",
+      "FULL_HEAL",
+      "SUPER_REPEL"
+    ],
+    "Cinnabar": [
+      "ULTRA_BALL",
+      "GREAT_BALL",
+      "HYPER_POTION",
+      "MAX_REPEL",
+      "ESCAPE_ROPE",
+      "FULL_HEAL",
+      "REVIVE"
+    ],
+    "Saffron": [
+      "GREAT_BALL",
+      "HYPER_POTION",
+      "MAX_REPEL",
+      "ESCAPE_ROPE",
+      "FULL_HEAL",
+      "REVIVE"
+    ]
+  },
+  "stock_stage_order": [
+    "Pewter",
+    "Cerulean",
+    "Vermilion",
+    "Lavender",
+    "Fuchsia",
+    "Saffron",
+    "Cinnabar",
+    "Viridian"
+  ],
+  "verified_stages": [
+    {
+      "badges": 0,
+      "added_from": "Viridian",
+      "balls": [
+        "POKE_BALL"
+      ],
+      "supplies": [
+        "POTION",
+        "ANTIDOTE",
+        "PARLYZ_HEAL",
+        "BURN_HEAL"
+      ]
+    },
+    {
+      "badges": 1,
+      "added_from": "Pewter",
+      "balls": [
+        "POKE_BALL"
+      ],
+      "supplies": [
+        "POTION",
+        "ANTIDOTE",
+        "PARLYZ_HEAL",
+        "BURN_HEAL",
+        "ESCAPE_ROPE",
+        "AWAKENING"
+      ]
+    },
+    {
+      "badges": 2,
+      "added_from": "Cerulean",
+      "balls": [
+        "POKE_BALL"
+      ],
+      "supplies": [
+        "POTION",
+        "ANTIDOTE",
+        "PARLYZ_HEAL",
+        "BURN_HEAL",
+        "ESCAPE_ROPE",
+        "AWAKENING",
+        "REPEL"
+      ]
+    },
+    {
+      "badges": 3,
+      "added_from": "Vermilion",
+      "balls": [
+        "POKE_BALL"
+      ],
+      "supplies": [
+        "POTION",
+        "ANTIDOTE",
+        "PARLYZ_HEAL",
+        "BURN_HEAL",
+        "ESCAPE_ROPE",
+        "AWAKENING",
+        "REPEL",
+        "SUPER_POTION",
+        "ICE_HEAL"
+      ]
+    },
+    {
+      "badges": 4,
+      "added_from": "Lavender",
+      "balls": [
+        "POKE_BALL",
+        "GREAT_BALL"
+      ],
+      "supplies": [
+        "POTION",
+        "ANTIDOTE",
+        "PARLYZ_HEAL",
+        "BURN_HEAL",
+        "ESCAPE_ROPE",
+        "AWAKENING",
+        "REPEL",
+        "SUPER_POTION",
+        "ICE_HEAL",
+        "REVIVE",
+        "SUPER_REPEL"
+      ]
+    },
+    {
+      "badges": 5,
+      "added_from": "Fuchsia",
+      "balls": [
+        "POKE_BALL",
+        "GREAT_BALL",
+        "ULTRA_BALL"
+      ],
+      "supplies": [
+        "POTION",
+        "ANTIDOTE",
+        "PARLYZ_HEAL",
+        "BURN_HEAL",
+        "ESCAPE_ROPE",
+        "AWAKENING",
+        "REPEL",
+        "SUPER_POTION",
+        "ICE_HEAL",
+        "REVIVE",
+        "SUPER_REPEL",
+        "HYPER_POTION",
+        "FULL_HEAL"
+      ]
+    },
+    {
+      "badges": 6,
+      "added_from": "Saffron",
+      "balls": [
+        "POKE_BALL",
+        "GREAT_BALL",
+        "ULTRA_BALL"
+      ],
+      "supplies": [
+        "POTION",
+        "ANTIDOTE",
+        "PARLYZ_HEAL",
+        "BURN_HEAL",
+        "ESCAPE_ROPE",
+        "AWAKENING",
+        "REPEL",
+        "SUPER_POTION",
+        "ICE_HEAL",
+        "REVIVE",
+        "SUPER_REPEL",
+        "HYPER_POTION",
+        "FULL_HEAL",
+        "MAX_REPEL"
+      ]
+    },
+    {
+      "badges": 7,
+      "added_from": "Cinnabar",
+      "balls": [
+        "POKE_BALL",
+        "GREAT_BALL",
+        "ULTRA_BALL"
+      ],
+      "supplies": [
+        "POTION",
+        "ANTIDOTE",
+        "PARLYZ_HEAL",
+        "BURN_HEAL",
+        "ESCAPE_ROPE",
+        "AWAKENING",
+        "REPEL",
+        "SUPER_POTION",
+        "ICE_HEAL",
+        "REVIVE",
+        "SUPER_REPEL",
+        "HYPER_POTION",
+        "FULL_HEAL",
+        "MAX_REPEL"
+      ]
+    },
+    {
+      "badges": 8,
+      "added_from": "Viridian",
+      "balls": [
+        "POKE_BALL",
+        "GREAT_BALL",
+        "ULTRA_BALL"
+      ],
+      "supplies": [
+        "POTION",
+        "ANTIDOTE",
+        "PARLYZ_HEAL",
+        "BURN_HEAL",
+        "ESCAPE_ROPE",
+        "AWAKENING",
+        "REPEL",
+        "SUPER_POTION",
+        "ICE_HEAL",
+        "REVIVE",
+        "SUPER_REPEL",
+        "HYPER_POTION",
+        "FULL_HEAL",
+        "MAX_REPEL"
+      ]
+    }
+  ],
+  "celadon_selection_pending": false,
+  "native_shop_connection_pending": true,
+  "league_and_johto_shops_unchanged": true
+}

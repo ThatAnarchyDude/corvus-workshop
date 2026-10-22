@@ -1,0 +1,25 @@
+name: Export tinyxml emulator runtime
+on:
+  push:
+    paths:
+      - .github/workflows/export-tinyxml.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  export-runtime:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch redistributable TinyXML runtime package
+        run: |
+          set -eu
+          curl --fail --location --retry 2 --connect-timeout 10 --max-time 45 -o /tmp/tinyxml.deb 'https://archive.ubuntu.com/ubuntu/pool/universe/t/tinyxml/libtinyxml2.6.2v5_2.6.2-6.1_amd64.deb'
+          mkdir -p /tmp/unpacked dist
+          dpkg-deb -x /tmp/tinyxml.deb /tmp/unpacked
+          find /tmp/unpacked -type f -name 'libtinyxml.so*' -exec cp {} dist/ \;
+          test -s dist/libtinyxml.so.2.6.2
+      - uses: actions/upload-artifact@v4
+        with:
+          name: psyduck-yellow-tinyxml
+          path: dist/
+          retention-days: 1

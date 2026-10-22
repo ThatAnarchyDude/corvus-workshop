@@ -1,0 +1,19 @@
+name: Keep original ROMs out of Git
+on:
+  push:
+  pull_request:
+jobs:
+  rom-safety:
+    name: Check tracked files and ZIP contents
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python3 -m unittest discover -s yellow-heartgold/tests -p 'test_repo_safety.py' -v
+      - run: python3 -m unittest discover -s yellow-heartgold/tests -p 'test_yellow_opening_scene.py' -v
+      - run: python3 -m unittest discover -s yellow-heartgold/tests -p 'test_psyduck_yellow_starters.py' -v
+      - run: python3 -m unittest discover -s yellow-heartgold/tests -p 'test_bedroom_pc_script.py' -v
+      - run: python3 -m compileall -q yellow-heartgold/tools
+      - run: python3 yellow-heartgold/tools/check_repo_safety.py

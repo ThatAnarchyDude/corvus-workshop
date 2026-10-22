@@ -1,0 +1,12 @@
+{
+  "version": "0026",
+  "availability": "delivered locally; public artifact publication pending",
+  "output_sha256": "c3085440e6f27d02898c6a9dd56ab0f64a4ede4f92c7dcd61dbbde4a6c1be9d4",
+  "patch_sha256": "6c7f8d5eb9f5ce33e9057345978df08f4b46cf22e603345e9a25c58d3fe3454e",
+  "pristine_base_roundtrip_verified": true,
+  "focused_route5_checks": 6,
+  "gates_included": false,
+  "native_daycare": {"deposit": true, "separate_withdrawal_100_fee": true, "normal_save_continue": true, "daycare_bytes_preserved": 480, "egg_handling": "untested"},
+  "recording": {"duration_seconds": 40.032695, "native_audio": true, "sample_rate": 44100, "prepared_save": true, "observed_map": 517, "scope": "Continue and attendant dialogue", "full_deposit_cycle": false},
+  "unfinished": ["Yellow Route 5 geometry", "Day Care placement", "Saffron guards", "repeat area banners", "Blue rival title"]
+}

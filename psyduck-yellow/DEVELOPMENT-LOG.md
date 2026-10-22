@@ -3,17 +3,30 @@
 A plain-language guide to what has changed, what you can play now, and what is
 still being built. Share this page with anyone following the project.
 
-**Last updated: October 12, 2026 at 03:53 AM EDT.**
+**Last updated: October 20, 2026.**
 
-**Latest published patch: prototype 0025.** Nugget Bridge trainers appear before the Cerulean boundary. Its southern board now reads with A, Bill’s PC has a visible computer, and Cerulean’s robbed-house/Rocket event returns reusable TM28 Dig after helping Bill. Route 5 follows next.
+[Watch LIVE testing with video and audio](https://certificates-fully-literature-biographies.trycloudflare.com/)
 
-[Create the latest published playable prototype](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0025/index.html)
+Tap **Enable sound** in the viewer for game audio. The upper DS screen is on the
+left and the touch screen is on the right. The link grants viewing only; game
+controls remain private. Video and audio pause between actual playtests.
+
+*Stream link refreshed and remotely checked: October 16, 2026. This temporary link
+requires the laptop and streaming processes to remain online.*
+
+**Latest experimental playable patch: prototype 0038 — expanded-engine startup repair.** Clean new-game startup and focused Save/Continue checks passed. The campaign and engine integration remain unfinished; legacy-save migration and battle Mega Evolution remain unverified.
+
+[Create prototype 0038: startup repair and bedroom Mega test controls](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0038/index.html)
+
+[Previous gameplay-tested checkpoint: prototype 0036](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0036/index.html)
 
 The download page contains a modification patch. Select your original,
 unmodified USA HeartGold game file to build the playable DS file on your own
 device. The original file is not uploaded. Each new checkpoint includes earlier
 changes; use the original HeartGold file as input, rather than a previous
 prototype. Published checkpoints are kept separately and are not overwritten.
+
+For every newly released test prototype, publish and verify its own browser patching page, post the link in this chat and its dated GitHub update, and update the latest-patch link above. Preserve earlier patch pages. Private work-in-progress builds are not announced as released versions.
 
 ## Watch recorded playtests
 
@@ -677,3 +690,430 @@ Route 5 is next. The owner’s broader dialogue list and Blue teams reacting to
 the player’s Eevee evolution remain future work. Android editor development
 is paused, and the earlier melonDS movement-freeze report remains parked
 without a confirmed cause.
+
+
+## PC development resumed — October 12, 2026
+
+Prototype **0025 remains the latest published playable patch**. A new local 0026
+build is in development; it is not yet a finished or downloadable checkpoint.
+
+The target is now explicit: rebuild Yellow’s Kanto layout and adventure using
+HeartGold’s DS graphics and systems, then open Johto after the first Elite Four
+victory and Hall of Fame. Earlier areas will be checked where their maps still
+follow HeartGold. Johto’s existing maps and gameplay will be preserved. The approved
+starter choices, shiny odds, bedroom PC supplies, Water/Psychic Golduck and custom
+evolution methods remain intentional. The complete Oak introduction and player/rival
+naming screens are locked to the owner’s supplied 0025 version.
+
+Blue remains the Kanto rival, without a Leader title, before the first Hall of Fame.
+Giovanni remains Team Rocket’s leader and Viridian Gym’s leader during that campaign;
+Blue’s gym takeover follows afterward. These later events are planned, not implemented.
+Suitable color Jessie/James overworld and battle sprites are being researched.
+
+Route 5’s first development build now has Yellow’s encounters throughout the day,
+its Underground Path sign and no inherited outdoor NPC. The Kanto Day Care is being
+connected to HeartGold’s native services. The owner has approved sharing its deposited
+Pokémon and interactions with Johto’s existing Day Care, while leaving that facility
+unchanged. A private test reached the Kanto house, selected a Pokémon and deposited it;
+withdrawal, saving/reloading and egg handling still need checks. Yellow’s route layout,
+correct Day Care placement and the Saffron guard’s drink roadblock are still unfinished.
+Six focused automated checks pass; this is not a full campaign playthrough.
+
+The local build tools and DS emulator are working. A copy of the owner’s latest save
+loaded through Continue; the original was left untouched. A private live viewing link
+now carries both DS screens and game audio. A slow video conversion was corrected,
+and the owner reported much smoother playback. The private link is temporary and
+requires the PC and streaming processes to stay online; it is not a public viewing page.
+
+Each completed prototype update will include a labeled gameplay test recording
+here, alongside its playable patch link. Prepared saves or test-only setup will be
+identified, and earlier checkpoints and recordings will remain available. No new
+0026 completion recording or playable patch is being claimed in this progress update.
+
+
+## Prototype 0026 — local playable checkpoint, October 12, 2026
+
+Prototype 0026 has been delivered to the owner’s RetroArch downloads, with a separate copy of the latest normal 0025 save. Originals remain untouched. This is an incremental Route 5 encounters and Day Care checkpoint; 0025 remains the latest public patch page until the new artifacts are published.
+
+Route 5 now has Yellow’s weighted grass encounters throughout the day, its Underground Path sign and no inherited outdoor NPC. Its existing HeartGold house provides native Day Care interactions using the same deposited Pokémon as Johto. Separate native checks observed deposit, withdrawal with the 100-Pokédollar fee and a normal save/Continue reload preserving the entire Day Care save block. Egg handling is still untested. Johto resources, the supplied Oak introduction and naming screens, and approved customizations are preserved.
+
+Six focused Route 5 checks pass. The cumulative patch was applied to a pristine USA HeartGold ROM and reconstructed the exact tested 0026 file. A new 40-second recording with real game music and stereo audio shows Continue into the Kanto Day Care and attendant dialogue. It uses a copied prepared save; it is not campaign difficulty evidence or a recording of the entire deposit/withdrawal cycle. The playable file and recording are linked in the owner’s desktop chat; public artifact publication remains pending.
+
+Yellow’s Route 5 terrain and Day Care placement remain unfinished. Saffron’s drink roadblock is excluded from this checkpoint: a saved-variable collision with bedroom PC item slots was found during development. The gate source now uses a shared flag without that saved variable; native tests are still needed. Area-name banners on every transition and Blue’s phase-aware rival title also remain pending. Work continues toward the full Yellow campaign.
+
+The live dashboard now places the upper DS screen on the left and the touch screen on the right. Video and audio pause while editing. The owner-posted viewing URL is unchanged; a proposed separation of public viewing from private controls awaits specific approval.
+
+
+## Prototype 0026 — phone patching page published
+
+[Create prototype 0026 on your phone or PC](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0026/index.html) by selecting your original, unmodified USA HeartGold ROM. The page applies the cumulative modification patch locally and verifies the finished file; your ROM is never uploaded. Use the original HeartGold file, rather than 0025, as patch input. Earlier patch pages remain unchanged. The owner’s Windows file link timed out on the phone, so this restores the browser-based download workflow.
+
+[Watch the new 40-second test recording with real game audio](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/playtests/prototype-0026.html). It shows normal Continue into the Kanto Day Care and attendant dialogue using a copied prepared save; it does not show a full deposit/withdrawal cycle or establish campaign difficulty. Separate native deposit, withdrawal/100 fee and normal-save preservation checks are recorded in the checkpoint notes. Egg handling is untested. Yellow’s Route 5 geometry, precise Day Care placement and Saffron drink gates remain excluded or unfinished in 0026.
+
+The owner specifically approved public viewing with private controls. The existing live URL is unchanged and now grants viewing/audio only; a new private control credential stays local. Ten bridge checks pass, and remote checks confirm that viewing/audio work while public and anonymous game controls are rejected. Video/audio remain paused while editing. No ROMs, saves or private control credential were published.
+
+## October 12 — connected Route 5 scenery in progress (private 0027)
+
+Route 5 now has a private test build with seamless outdoor connections, HeartGold tree graphics at all 49 Yellow tree positions, and visible, joined cliff ledges. Yellow's spacing was shortened with the owner's approval while preserving its grass, ledges, doors and gate-required progression. The Underground Path sign opens correctly. Native gameplay checks show grass walking, southward ledge hopping and refusal to climb back north; actual testing was also shown on the existing live audiovisual feed.
+
+All 52 focused Route 5 checks pass. The new scenery changes rendered terrain only: collision, events, executable code and other resources remain unchanged compared with the connected baseline. Johto and the supplied Oak introduction/naming screens remain preserved. A labeled 24-second native gameplay recording with real stereo game audio is saved locally for this private checkpoint.
+
+0026 remains the latest released prototype. 0027 still needs fence/scenery finishing, gate interior and door-animation work, broader old-save and travel checks, and release patch verification. The next step is to finish those items before posting a new patching page and its recording. The live server and viewing tunnel remain connected; picture and sound pause between actual tests. No ROMs, saves or private controls are published by this update.
+
+## October 13 — live viewing page repaired
+
+The stream server was sending video and audio, but a JavaScript initialization error left the viewing page blank before it could draw the game screens. That error is fixed. Both screens now visibly render in the browser, sound initializes, and all 11 stream/dashboard checks pass, including a new test that executes the actual page script. Refresh the stream page to load the repair. The existing viewing URL is unchanged; public viewing and private controls remain separated.
+
+This repair does not change the ROM. The server and viewing tunnel remain connected, with ordinary video/audio pauses between tests. The owner's requested five-minute viewing window was restarted after the browser repair.
+
+## October 13 — natural Cerulean-to-Day Care access verified (private 0027)
+
+The northern entrance needed alignment: HeartGold's stairs reach the side roads, while Yellow's central approach sits between them. Two small gaps in the first-row tree/fence boundary now connect those stairs to the central path. All 48 grass tiles, 40 ledges, doors, buildings and the southern gate roadblock remain intact; Cerulean's original map and Johto remain unchanged.
+
+Continuous native tests now walk from either existing Cerulean entrance through Route 5 into Day Care without intermediate test transports. The actual live walk also completed that route. All 55 focused Route 5 checks pass. A labeled 49-second native recording with real stereo audio verifies Cerulean, Route 5 and Day Care; it stays local with this private checkpoint until release packaging.
+
+0026 remains the latest released prototype. Remaining work includes fences, the northern visual seam, gate interior and door animation, broader save/travel checks, and the cumulative release patch/recording. The viewing server and tunnel remain connected, with the feed paused between actual playtests.
+
+
+## October 13 — prototype 0026 bedroom report checked
+
+A tester reported unreliable movement and a recurring black screen using standalone DeSmuME 0.9.13-4 under Linux Xvfb. The cause is still unconfirmed.
+
+A clean run of the exact released 0026 ROM with our DeSmuME libretro core completed the supplied Oak/player/rival introduction, walked normally in the bedroom, used the stairs, and made a normal first-floor save. A fresh Continue boot loaded that save, and a separate direct-input test moved the player another tile. This does not rule out the tester's reported failure in their environment.
+
+A local Linux test kit and separate fresh first-floor .dsv were prepared for comparison. The kit needs no Xvfb, contains no ROM, preserves its input save, and captures screenshots and actual stereo game audio. Its official core downloader verifies the same core used by development. Saves and private test artifacts remain local. Two opening-metrics checks and all eleven stream/bridge checks pass. Prototype 0026 remains the latest release.
+
+
+## October 13 — complete offline Linux tester bundle
+
+The requested local bundle now includes the Python runner, exact DeSmuME libretro core, explicit configuration, portable Python, pinned Pillow packages, offline setup and the separate fresh first-floor save. It contains no ROM or owner campaign save. Base Linux runtime libraries are checked at startup.
+
+An extracted-copy test using the bundled Python and packages passed Continue and one-tile movement, captured both screens and real stereo audio, and preserved the supplied save. No Xvfb, pip or network download was required for setup. The bundle remains local for transfer to the tester. Prototype 0026 remains the release, and the standalone DeSmuME/Xvfb black-screen report remains open pending comparison.
+
+
+## Prototype 0029 — Route 6 and Underground Path, October 13, 2026
+
+[Create prototype 0029 on your phone or PC](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0029/index.html). Select your original, unmodified USA HeartGold ROM; the cumulative patch is applied locally and your original is never uploaded. Back up normal saves and keep emulator save states with their exact ROM version. Earlier patch pages remain available.
+
+Route 6 now connects to the native cities and has Yellow's six trainer teams, grass encounters and rod encounters. Native Underground rooms and hidden Full Restore/X Special rewards are retained. The northern entrance offers Cubone for RICKY, with the native trade followed by evolution into Machamp. Earlier Route 5 work and native interiors carry forward. Saffron's missing pavement textures are repaired.
+
+The Soul Badge permits Surf in both Kanto and Johto, with Fog Badge retained as an alternative. Native full-screen location previews remember visits within each time period and return after a period change; repeated entries keep the small name banners. The supplied Oak introduction/naming screens, approved customizations and native interiors are preserved. Johto assets remain preserved; future changes are limited to necessary traversal/HM compatibility with Kanto-earned unlocks. The full Kanto campaign remains unfinished.
+
+[Watch the 50-second recording with real game audio](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/playtests/prototype-0029.html). It shows repeated Vermilion/Route 6 crossings following a normal Continue on the final candidate. Both screens are side by side. Testing used a copied prepared traversal save and its existing party, without RAM writes or emulator state restoration; it does not establish campaign difficulty. Native audio-clock drift was aligned while preserving pitch.
+
+Separate continuous gameplay checks walked through both Underground entrances and the corridor, encountered a wild Pokémon, defeated both southern trainers and reached Vermilion. Native Save followed by fresh pure-candidate Continue retained the position and both actual defeat flags. Trade/evolution, hidden pickups, all three rods, Surf, preview history and preservation checks have separate evidence; this is not a complete campaign playthrough or gameplay coverage of every preview destination.
+
+The actual patch-page JavaScript decoder reconstructed the exact candidate and rejected incorrect size/checksum inputs. The cumulative xdelta and ROM archive also passed checks. Published patch and recording pages matched the tested local artifacts. No ROM, save or private control credential was published.
+
+
+## October 13 — Vermilion Bike Voucher reward verified in development
+
+The Fan Club chairman now gives Yellow's one-time Bike Voucher in the private 0030 candidate, keeping HeartGold's room intact. An actual native reward, normal save and fresh pure-candidate Continue retained the completed reward. A copy of that earned-Voucher save then completed the native Cerulean Voucher-for-Bicycle exchange. Tests used initial private transport only, without item grants or emulator save states; original saves remain untouched.
+
+Three focused checks cover the exchange/repeat logic, refusal/full-bag retries and native-resource preservation. Gameplay checks ran on the connected live video/audio feed, with picture and sound paused afterward. Other Vermilion events, Old Rod gift, ship and gym progression remain unfinished. The exchange's own Save/Continue and native refusal/full-bag cases still need checks. Prototype 0029 remains the latest published release.
+
+
+## October 13 — Old Rod gift in development
+
+Vermilion's fishing guru now offers Yellow's Old Rod in the private 0030 candidate, retaining HeartGold's room. Actual live testing confirmed refusal and reoffering, acceptance and the named receipt, then the completed-gift greeting. Six focused Rod/Voucher checks pass, including existing ownership, refusal/full-bag retries and native-resource preservation. Johto's native fishing-guru flag and scripts remain unchanged.
+
+Native Rod Save/Continue, fishing with the earned item and the full-bag case still need checks. Other Vermilion campaign work remains unfinished; prototype 0029 is the latest published release. Original saves are untouched, and the viewing connection remains available with picture and sound paused between tests.
+
+
+## October 13 — reported invisible gatehouse repaired in private0030
+The northbound gatehouse was missing from Vermilion's loaded building models even though its doorway remained active. The private next-prototype candidate now includes the compatible gate model. Live testing with a copied save showed its exterior, entry into the original HeartGold interior and normal exit with the exterior still visible. Complete city-to-gate traversal remains on the final release checklist.
+Preservation checks passed: the fix changes only Vermilion's graphics reference, leaving interiors, events, doors, terrain and Johto unchanged.0029 remains the latest release. The existing stream connection stays available with picture and audio paused between tests; its URL has not changed.
+
+
+## October 13 — Vermilion letter and house advice tested
+Yellow's letter to PIPPI is now visible on the existing house table and readable through all three paragraphs. Live tests also verified the youngster and Pidgey dialogue, the southern house's HM advice and normal dialogue closure. The original HeartGold rooms, furniture, collision and doors are preserved; only a small letter object was added.
+Preservation checks pass. The viewing link remains connected and remotely verified, with controls private and picture/sound paused between tests.0030 is still in development;0029 remains the latest release.
+
+
+## October 13 — Vermilion Mart conversations in development
+Added Yellow's two Mart customer conversations to the private candidate, preserving the native shop interior and clerks. The Rocket conversation and normal dialogue closure were exercised on the live feed. Preservation checks pass; the second customer's gameplay check and Yellow's exact shop inventory still need completion. Pokémon Center services and dialogue remain in progress.0029 remains the latest release.
+
+
+## October 13 — shared Kanto shop progression foundation checked
+The owner approved a common cumulative stock system for regular Kanto Marts, including Lavender: start with Yellow's Viridian stock and add missing items after each newly earned Kanto badge, following the standard badge-city order. Northern vendors sell balls and southern vendors sell general supplies. Johto shops, Celadon's Department Store and Pokémon League shops keep their HeartGold inventories and prices. Master Balls and Cherish Balls are excluded from new shop stock.
+Prepared shared inventory data and a Kanto-only badge counter. Five checks pass, including every possible badge combination. Native integration and the fourth badge's Celadon-derived stock selection remain pending. The earlier fixed Vermilion catalog passed actual copied-save buy/sell checks; the new shared system is not yet playable.0029 remains the latest release.
+
+
+## October 13 — Lavender supplies the fourth shop expansion
+Confirmed Lavender's Yellow stock for the fourth-badge expansion: Great Balls, Revives and Super Repels. All cumulative stock stages are now defined and five checks pass, including every badge combination and the two-vendor split. Celadon Department Store, League-area shops and Johto shops remain unchanged. Native integration is still pending; this is not yet a playable shared shop system.0029 remains the latest release.
+
+## October 13 — Vermilion Center interactions checked
+Yellow's training advice and stationary Chansey are implemented in the private candidate. Live checks verified their dialogue and return to normal field control, plus the native nurse's completed healing sequence. Preservation checks pass; the original room, nurse and link-service scripts remain intact. A conflicting poison-dialogue detail and other Vermilion campaign work remain pending.
+
+
+## October 13 — Jenny reward event staged
+The private candidate now contains Jenny's Thunder Badge check and level-10 Squirtle event. Three compiled-script checks pass; live testing verified that the existing two-badge save cannot receive the gift yet. The event is not release-ready: Yellow's Box delivery when the party is full, final Jenny artwork and accepted-gift save checks remain unfinished. Originals are untouched;0029 stays the latest release.
+
+
+## October 13 — approved Jenny gift behavior verified
+Jenny now uses the requested full-party warning and keeps Squirtle available until the player has a free party slot. This approved customization replaces automatic Box delivery. Four script checks pass. Live testing verified full-party refusal/retry, successful level-10 Squirtle delivery, repeat dialogue and persistence through normal Save/Continue on the pure candidate.
+Tests used isolated copied saves; eligibility and capacity fixtures were clearly labeled, and originals remain untouched. Jenny's final artwork and other Vermilion campaign work still need completion.0029 remains the latest release. The viewing connection remains available with picture and sound paused between tests.
+
+## October 13 — restored prototype 0028 patch link
+
+The missing [prototype 0028 browser patch page](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0028/index.html) is now published. It restores native gatehouse interiors. Its browser decoder reproduces the preserved released ROM exactly and rejects incorrect original files. Use an unmodified USA HeartGold file; the page contains only a patch and performs patching locally. Prototype 0029 remains the newer published checkpoint.
+
+Project pages and plain-language notes belong under `psyduck-yellow`. The existing `yellow-heartgold` folder holds development tools and ignored private build outputs. A local copy of the 0028 ZIP is now also available under `psyduck-yellow/downloads/prototype-0028`; that download folder is ignored and its ROM archive is not published. Existing release and tool paths remain preserved.
+
+
+## October 13 — shared Vermilion Mart stock checked in-game
+
+Both Vermilion vendors now use the new cumulative Kanto stock system in the private prototype 0030 candidate: the northern vendor sells balls and the southern vendor sells supplies. Native buying, selling and cancellation work. Tests on a copied two-badge save showed the expected early stock. A separate controlled fixture with four out-of-order Kanto badges and all eight Johto badges selected fourth-stage stock correctly, including Great Balls, Revive and Super Repel; later items remained locked. A normal save and fresh Continue on the pure candidate retained that stock. These fixture badges are test setup, not campaign victories.
+
+Compiled-script checks cover every badge combination for both vendors. Preservation checks confirm the existing shared shop scripts and excluded shops remain unchanged. Other ordinary Kanto Marts still need connecting as their areas progress. Vermilion's remaining city, ship and gym work and release checks are unfinished; prototype 0029 remains the latest published release. Original saves and released builds remain untouched.
+
+
+## October 13 — isolated ship rooms and captain reward checked
+
+Separate copies of HeartGold's ship hall and captain cabin now render and support ordinary doorway travel in both directions. Existing S.S. Aqua and Johto maps, events and assets remain unchanged. These test rooms are disconnected from the campaign and still have temporary native ship labels.
+
+The captain's Yellow dialogue and one-time HM01 Cut reward were checked in the native game on a copied save. A repeat conversation used the completed-reward greeting, and that behavior survived a normal Save and fresh Continue on the pure experimental candidate. Script checks also cover full-bag retry and unrelated quest flags; the full-bag case still needs an in-game check. The rubbing animation, final location names, boarding, rival, trainers and departure remain unfinished. Prototype 0029 remains the latest public release; this is private development progress, not a new playable release.
+
+
+## October 14 — viewing stream reconnected
+
+The viewing stream was restored after the desktop and Ubuntu recovery. [Open the refreshed live video/audio viewer](https://enrolled-ira-opening-five.trycloudflare.com/). Remote checks confirm authenticated viewing works and the viewing credential cannot use game controls. The access-bearing link is shared with the owner in chat; this public log stores only the viewer address. Picture and sound pause between actual playtests; the server and tunnel remain connected when possible. Prototype 0029 remains the latest published game release.
+
+
+## October 14, 2026 — full PKHeX with built-in prototype 0029 support
+
+[Download the full Windows PKHeX release](https://github.com/ThatAnarchyDude/PKHeX-Psyduck-Yellow/releases/tag/pkhex-py0029-v1). This keeps PKHeX's normal editors and adds an optional Psyduck Yellow 0029 profile. Open a copied battery save (.sav/.dsv or supported .srm), then enable Tools → Psyduck Yellow prototype 0029. The .nds game file and emulator save states are not editor inputs.
+
+Custom starter legality, supported Hidden Abilities, evolution changes, project shiny classification, item names and Golduck's Water/Psychic typing are built in. Saves remain Generation IV/HeartGold-compatible. Windows editor regressions and an exported-save native Continue check passed; an independent public build also passed. The full altered wild/campaign encounter catalog remains incomplete, so other custom encounters may still produce retail warnings. ROMs and player saves are not included. The game release remains prototype 0029.
+
+
+## October 14, 2026 — player PC items tab in PKHeX v2
+
+[Download PKHeX with the new PC inventory tab](https://github.com/ThatAnarchyDude/PKHeX-Psyduck-Yellow/releases/tag/pkhex-py0029-v2). With the Psyduck Yellow profile enabled, SAV → Items now includes the player's PC item storage separately from the Bag. All ten physical slots in prototype 0029 are editable regardless of badges. Tests verify correct saved item/quantity mapping, preservation of Bag and story data, and no extra tab in ordinary HeartGold saves. The independent Windows release build passed; v1 remains available.
+
+The approved next game prototype will start at 20 usable PC slots and unlock five for each distinct Kanto badge, up to 60. This restriction belongs in the game only; PKHeX will expose all physical slots supported by that new save layout. The expanded game layout is still pending and is not written into existing 0029 saves by this editor. The game release remains prototype 0029.
+
+
+## October 14, 2026 — PKHeX v3 resizable window
+
+[Download PKHeX v3](https://github.com/ThatAnarchyDude/PKHeX-Psyduck-Yellow/releases/tag/pkhex-py0029-v3). The main window now supports dragging its edges and the standard Windows maximize button. Editor panes expand to fit, the menu stays at its normal height, and maximizing uses the desktop working area so the visible taskbar remains accessible. Restore returns to the prior normal size. Native Windows resize/maximize/restore checks and the existing PC-item/starter editor regressions passed locally and in the independent public release build. Earlier editor releases remain available. Game prototype 0029 is unchanged.
+
+
+## October 14, 2026 — PKHeX v4 proportional interface scaling
+
+[Download PKHeX v4](https://github.com/ThatAnarchyDude/PKHeX-Psyduck-Yellow/releases/tag/pkhex-py0029-v4). Both manual resizing and maximizing now enlarge the live interface together: text, controls, spacing, menu icons and Pokemon images scale from their original dimensions. At 150% of the default client size, the display uses a 150% scale. A uniform factor fits differing window shapes without clipping or distortion; the taskbar remains available. Returning to the original size restores the original interface.
+
+Local and independent Windows checks passed manual scaling, the exact 150% example, maximize/restore, loading a save while enlarged, editing supported starter families and the PC inventory tab. The game/save format remains unchanged and earlier editor releases are preserved.
+
+
+## October 15 — viewing stream restored
+
+[Open the current live video/audio viewer](https://louisville-voted-worship-examining.trycloudflare.com/). The previous temporary tunnel stopped; its replacement is remotely verified. Authenticated viewing works and the viewing credential cannot operate game controls. The access-bearing viewing link is shared only with the owner in chat. Picture and sound pause between actual playtests. Prototype 0030 remains private and unfinished; prototype 0029 remains the latest published game release.
+
+
+## October 15 — replacement viewing connection
+
+The earlier temporary tunnel returned Cloudflare error 1033. [The replacement live video/audio viewer](https://certificates-fully-literature-biographies.trycloudflare.com/) is remotely verified and controls remain private. The owner received the access-bearing link in chat. This public address contains no viewing credential. Prototype 0030 is still in development; prototype 0029 remains the latest released game.
+
+
+## October 15 — colored battle artwork and ship navigation in development
+
+The owner's colored Jessie and James battle artwork is now integrated into the private prototype 0030 candidate and was observed in the running game's trainer introduction with stereo audio. Comparison with the preserved 0029 release confirms the supplied artwork changes only the intended battle graphics. The test used a copied save and a clearly identified forced-battle fixture; it does not establish a complete Mt. Moon story replay.
+
+Ship navigation work now accounts for all 17 passenger cabins. Live checks exercised all six first-floor cabins, both floor connections in both directions, and the farthest second-floor cabin. A doorway arrival-direction mismatch found during testing was corrected. A continuous native walk then reached the captain through the copied passage and ladder, with no intermediate test transport. Original HeartGold ship resources remain preserved. Boarding, remaining ship story events, Gym progression, expanded PC storage and final release checks are still unfinished. Prototype 0029 remains the latest published game; 0030 has not been released.
+
+
+## October 15 — saved-game ship travel checked
+
+A normal save in the captain's cabin loaded successfully through fresh Continue on the pure private candidate, with no test transport or battle fixture active. Ordinary movement then returned through the ladder and passage to the first-floor hall. This adds saved-game travel coverage to the earlier cabin and doorway checks. Originals remain preserved. Prototype 0030 is still unfinished and has not been released.
+
+
+## October 15 — S.S. Anne boarding checked
+The private 0030 candidate now connects Vermilion to the S.S. Anne through copied native port rooms. Native playtests confirmed refusal without a ticket, admission with a ticket, and a continuous return walk from the ship to Vermilion. The admission test used one explicitly granted test ticket on a copied save; this does not claim the full Bill-to-ship story is complete.
+Separate controlled tests verified that the pre-Hall-of-Fame route reaches the Anne port, while the post-Hall-of-Fame route restores the unchanged native HeartGold port and allows a normal return to the city. All 23 ship regression tests passed. Existing Johto content, original saves and the supplied colored battle artwork were preserved.
+Prototype 0030 remains private and unfinished. Ship story events and missing areas, remaining Vermilion/Gym work, and expanded PC item storage still need completion. Prototype 0029 remains the latest published patch.
+
+
+## October 15, 2026 — prototype 0030 published as-is at the owner's request
+[Patch your original USA HeartGold file for prototype 0030](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0030/index.html). This cumulative browser patch includes the colored Jessie/James battle artwork, Vermilion changes, shared ordinary-Kanto-Mart stock, connected S.S. Anne rooms, ticket boarding and the captain's Cut reward. The original ROM is processed locally and is never uploaded.
+The exact tested build was packaged without fixture ticket grants, forced transports or artificial Hall-of-Fame flags. Patch round-trip verification and execution of the actual page decoder passed; wrong-size and wrong-checksum originals were rejected. The public page rendered successfully in the browser. Keep a backup of your normal save.
+At the owner's direction, the unfinished ship story/Blue/trainers/departure and missing areas, remaining Vermilion/Gym/fishing checks, and 20-to-60-slot PC item storage with legacy-save/editor support move to prototype 0031. Prototype 0030 still has ten PC item stacks. This is a test checkpoint, not a completed Kanto campaign. Earlier patch pages remain available.
+
+
+## October 15 — prototype0031 departure-state checkpoint
+A private0031 candidate now detects the return from the ship after Cut, runs a departure cue and automatic dock exit, and remembers that boarding is closed. Native testing verified the exit and refusal even with a ticket. A normal save, fresh Continue on the pure candidate, repeated refusal and ordinary return to Vermilion passed. These checks used a copied save with an explicitly artificial Cut flag and test ticket, not a completed Bill/captain campaign replay. All29 ship regression tests passed.
+The moving-ship visual and camera scene are still unfinished; this checkpoint does not claim the full sailing animation. Prototype0030 remains the latest published patch. Original saves, released builds and native Johto content were preserved.
+The viewing tunnel was restored at https://certificates-fully-literature-biographies.trycloudflare.com/ . The authenticated owner link is shared only in chat; viewing controls remain private. Picture and sound are paused between playtests.
+
+
+## October 15 — native ship departure animation checked in0031
+The private0031 candidate now uses HeartGold's native animated ship transition and returns to the copied Kanto port. Timed video frames captured the ship moving away, with stereo audio enabled. The animation was followed by a normal save and fresh Continue on the pure candidate; boarding stayed closed and the player could return normally to Vermilion.
+The playtest used a copied save with an explicitly artificial Cut reward flag and test ticket. This checks the scene and persistence, not a completed ship campaign replay. Published0030 and original saves remain unchanged. Blue's ship encounter and the remaining0031 work are still being tested; no new patch is released at this checkpoint.
+
+
+## October 15 — private 0031 rival and ship sequence checked
+Native playtesting confirmed Blue’s Rival title and artwork, his four-Pokemon ship battle, victory dialogue and exit, and a normal save followed by fresh Continue without repeating the encounter. The pure candidate then allowed the captain interaction, ordinary return through the ship, and animated departure with stereo audio. All 34 ship tests and eight starter-property/title tests passed. These checks used copied saves and an existing high-level party, with initial transport where labeled; they do not establish campaign balance or complete Bill-to-ticket progression. Prototype 0030 remains the latest published patch; 0031 remains private work in progress.
+
+
+## October 15 — optional Blue rival battles and saved progression
+The owner approved continuing after losing any Blue rival battle before facing him as Kanto's first Champion. After a loss, the entire party is healed and Blue finishes his dialogue and leaves. Defeating Champion Blue remains required.
+The private 0031 ship playtest verified the loss, full healing of all three party members, captain access, and a normal save followed by fresh Continue on the pure candidate without repeating the encounter. Route 22 and Cerulean are updated in the same candidate; compiled checks cover both outcomes, every starter choice and every approach lane. Their native tests are still in progress. Original saves and published builds remain unchanged; prototype 0030 is still the latest released patch.
+
+
+## October 15 — optional Blue encounters checked in the game
+Native copied-save tests now confirm that losing to Blue on Route 22 and in Cerulean heals the entire party, completes his dialogue and exit, and leaves the route open without repeating the encounter. Route 22's winning outcome also passed. The ship's optional-loss state additionally survived a normal save and fresh Continue on the pure candidate. Tests used explicitly labeled scene resets and low-HP copies; original saves and released builds remain unchanged. Prototype 0031 is still private, with the remaining campaign and PC-storage work pending.
+
+
+## October 16, 2026 — prototype 0031 published: campaign progression first
+[Create prototype 0031 from your original USA HeartGold file](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0031/index.html).
+
+Completed: Blue's S.S. Anne encounter, departure after obtaining Cut, and continuing after losses to pre-Champion Blue in the implemented rival scenes. The entire party heals after a loss, Blue finishes his dialogue and leaves, and the scene does not repeat. First Champion Blue victory remains required. All prototype 0030 changes are retained.
+
+Verified: native copied-save checks of rival outcomes, full-party healing, captain access and departure; normal save/Continue persistence for the ship sequence; cumulative patch round-trip and the actual browser decoder, including wrong-input rejection. The public patch page renders successfully. These tests do not establish a full new-game campaign run or natural party balance.
+
+Please test: Continue using a backed-up normal save; unfinished Route 22/Cerulean rival scenes; ticket boarding, ship Blue, captain Cut, departure and subsequent Save/Continue. Previously completed scenes should stay completed.
+
+Still unfinished: later required Kanto progression and Vermilion Gym verification, optional ship content and presentation. PC storage remains ten stacks. Its expansion, optional gift refinements and other nonessential improvements are deferred, not canceled; existing completed content remains preserved. Next campaign task: Cut access to Lt. Surge, Thunder Badge and onward travel.
+
+The governing workflow is now progression bugs first, required campaign second, polish third and deferred optional Yellow content fourth. New playable checkpoints are due after each map becomes progression-ready and at least once per active 24-hour development period. If a newer safe build cannot be produced, report the attempts and obstacle, provide the stable build and await owner instructions on the blocked task; an unchanged build is not progress. No ROMs or saves are published.
+
+
+## October 16 — viewing connection restored; 0032 Gym checks resumed
+The viewing connection has been restored at https://certificates-fully-literature-biographies.trycloudflare.com/ . The authenticated owner link is shared only in chat; controls remain private. Remote status returned successfully. Prototype 0031 remains the latest published patch.
+The private 0032 candidate now uses Yellow’s Vermilion Gym teams and Thunderbolt reward while retaining the native switch puzzle. Four focused checks passed. Native testing reached the Gym from the ship/port and completed the three-Voltorb trainer encounter; full puzzle, Lt. Surge, reward and Save/Continue checks remain unfinished. A usage interruption stopped the previous session; it did not complete those pending checks. Resumed tests use a labeled initial-transport-only fixture and a copied save, with no Pokémon/item/badge grants.
+
+
+## October 16, 2026 — prototype 0032 published: Vermilion Gym
+[Create prototype 0032 from your original USA HeartGold file](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0032/index.html).
+
+Completed: Yellow’s Vermilion Gym teams, including Lt. Surge’s level-28 Raichu with Thunderbolt, Mega Punch, Mega Kick and Growl; victory awards the Thunder Badge and TM24 Thunderbolt. HeartGold’s native interior and two-switch puzzle remain. All0031 changes are included.
+
+Verified: four focused party/script/preservation checks; native trainer battles, both switches and opened gates, Raichu victory, third-badge display and TM24 receipt; normal saving, fresh Continue in the pure candidate, post-victory advice without another battle/reward, and return to Vermilion. A cumulative patch round-trip and the actual page decoder produced the expected ROM and rejected unsupported inputs. The published page was fetched and matched the tested page byte for byte; the browser UI inspection tool was unavailable this session.
+
+Please test: Gym switches and trainers, Lt. Surge, Thunderbolt receipt and repeat dialogue, normal Save/Continue and leaving the Gym. Back up your normal save first. Use the original unmodified USA HeartGold ROM as patch input.
+
+Limits: native tests used an existing high-level copied party and a clearly labeled initial-transport-only fixture before the Gym sequence, followed by pure-build Continue. This is not campaign balance or a complete new-game playthrough. A fresh-save check of the exterior Cut dependency remains pending. Junior trainer names/class artwork and cosmetic dialogue are deferred. PC storage still has ten stacks. Later Kanto progression remains unfinished. No new recording is bundled. Next work targets the required onward route and unresolved progression dependencies, rather than Gym decoration.
+
+
+## October 16, 2026 — prototype 0033 published: restored Cut access
+[Create prototype 0033 from your original USA HeartGold file](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0033/index.html).
+
+Fixed: an early development pass had removed Vermilion Gym’s Cut-tree actor. The original tree is restored. Direct tree interactions now accept the Cascade Badge, matching the existing party-menu Cut permission; HeartGold’s Hive Badge remains an alternative. A party member must know Cut. No HM, move or badge is automatically granted. All0032 Gym teams/rewards and earlier changes are preserved.
+
+Native checks passed on the pure candidate: blocked movement and refusal before a party member learned Cut; teaching the legitimately earned HM to the existing Umbreon; native offer, animation and passage using Cascade; tree regrowth after a normal building visit; normal Save, fresh Continue and successful Cut use again. Four focused checks cover all badge combinations, original tree data, script call/branch preservation and unchanged unrelated map/event/encounter resources. Johto map/event/encounter files were not changed. The shared permission retains native Hive behavior.
+
+Please test: Cut at the Gym entrance, Gym entry/exit and normal Save/Continue. If an old save loads directly in Vermilion without the restored tree, enter a building and return so the city objects refresh. Back up your normal save first.
+
+The cumulative patch and actual browser decoder reconstructed the exact tested ROM and rejected wrong inputs; the public page matched the local tested page byte for byte. Browser UI inspection was unavailable this session. Native tests used a copied high-level party, not a new-game balance run. Later Kanto, optional content and presentation remain unfinished; PC storage is still ten stacks. No new recording is bundled. Work continues with the next required routes rather than optional polish.
+
+
+## October 16, 2026 — prototype 0034 published: Route 9
+[Create prototype 0034 from your original USA HeartGold file](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0034/index.html).
+
+Completed: Yellow's nine Route 9 trainer teams, explicit moves and dialogue, grass encounters across all times of day, and required western Cut access. HeartGold's terrain remains traversable; all0033 changes are preserved.
+
+Verified: seven focused Route9/Route6 regression checks; native Cut, Sandshrew24 and Meowth23 trainer battles, Sandshrew repeat dialogue without another battle, continuous walking across Route9 into Route10, Center entry/exit and RockTunnel entry. A normal save loaded through fresh Continue on the pure build, followed by ordinary tunnel exit. Tests used a copied high-level party and initial transport to the western approach, with no item/Pokemon/badge grants; this is not a full new-game or balance run.
+
+Please test: Cerulean-to-Route9 Cut access, trainer approaches/battles, eastern stairs and passage to Route10, Center/tunnel entry and Save/Continue. Back up your save. A save already on Route9 may need leaving/re-entering to refresh actors.
+
+Still unfinished: Route10/RockTunnel Yellow events, trainers and encounters, onward Kanto and the full campaign run. Exact Yellow terrain alignment, optional pickups and presentation are deferred, not canceled. PC storage remains ten stacks. No new recording is bundled. The cumulative patch roundtrip, ZIP and actual browser decoder passed, including wrong-input rejection. The public page matches the tested content; browser UI inspection was unavailable. Work continues on the next required route.
+
+
+## October 16, 2026 — prototype 0035 published: Route 10
+[Create prototype 0035 from your original USA HeartGold file](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0035/index.html).
+
+Completed: Yellow's six Route10 trainer teams, explicit moves and dialogue across its north, south and Power Plant approaches, and grass encounters across all times. All0034 changes, native terrain, interiors and transitions remain.
+
+Verified: four focused checks cover every team, move, actor dispatch, encounter table and unrelated-resource preservation. Native tests defeated the northern Jigglypuff20/Clefairy20 trainer and southern Geodude21/Onix21 and Onix19/Graveler19 trainers. A continuous ordinary-controller walk crossed the inherited Rock Tunnel through four floor changes and continued through southern Route10 into Lavender. Normal Save and fresh Continue on the pure build retained the Lavender arrival.
+
+Please test: Route10 trainers, approaches, grass encounters, Center access and the southern path into Lavender. Back up your save; leave/re-enter an area if an older save restores old actors. The Power Plant-side trainer and remaining trainer outcomes still need native checks.
+
+Limits: the copied test save has an existing high-level party and stocked items; one existing Max Repel was used, with no new Pokemon/item/badge grants. These checks do not establish natural party balance or full new-game progression. Rock Tunnel still needs Yellow's trainers, encounters and the Flash reward dependency. Native traversal of the inherited dark cave does not mean its conversion is complete. Later Kanto, optional details and presentation remain unfinished; PC capacity is ten stacks. No new recording is bundled.
+
+The cumulative patch roundtrip, ZIP verification and actual browser decoder passed, including wrong-input rejection. The public page matches the tested content; browser UI inspection remained unavailable. Work continues with Rock Tunnel and its required dependencies.
+
+
+## October 16, 2026 — prototype 0036 published: Flash access
+[Create prototype 0036 from your original USA HeartGold file](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0036/index.html).
+
+Completed: Oak's aide in Route2's southeastern gatehouse now awards Flash after ten caught species, following Yellow's requirement. HeartGold's reusable TM70 provides Flash through normal teaching and field menus. The reward is one-time, with a full-TM-pocket retry. All0035 changes and the native gate interior/other NPC remain.
+
+Verified: four focused checks cover caught thresholds, full-pocket retry, one-time behavior, exact native caught-count opcode and unrelated-resource preservation. Native testing confirmed refusal on a four-owned copied save, then receipt on a clearly labeled ten-owned Dex-only fixture. Flash quantity increased95to96, normal teaching to the existing Umbreon kept the reusable TM, and a normal save/fresh Continue retained the reward and repeat-only aide dialogue. Using the normally learned Flash in Rock Tunnel expanded visibility.
+
+Please test: fewer-than-ten refusal, ten-caught reward, repeat dialogue, teaching Flash, saving/Continue and native cave use. Back up your save. Caught species count; merely seeing Pokemon does not qualify.
+
+Limits: eligibility testing changed only copied Dex caught/seen flags and native checksums; initial transport fixtures were used for gate/cave checks. It does not establish naturally catching ten species or campaign balance. Original saves were preserved. Rock Tunnel's Yellow trainers/encounters and onward Kanto remain unfinished. Optional details and PC expansion are deferred, not canceled; current PC capacity is ten stacks. No new recording is bundled. Patch roundtrip, ZIP and actual browser decoder passed, including wrong-input rejection; the public page matches tested content. Browser UI inspection remained unavailable.
+
+
+## October 19, 2026 — prototype 0037 Expanded Engine: experimental integration
+
+[Create the separate experimental expanded-engine build from original USA HeartGold](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0037-expanded/index.html).
+
+This is a duplicate of the unfinished 0037 work with the supplied BluRosie hg-engine expansion compiled in. Original 0037 and earlier releases are preserved. It is an integration checkpoint, **not a completed Kanto campaign or a gameplay-tested release**.
+
+The engine includes Mega Evolution/Primal support, Fairy type, expanded species, moves and items, hidden abilities and 30 Pokémon boxes. Its 1,535 personal-data records include forms and placeholders; this is not a claim that 1,535 distinct species are fully implemented. Mega Evolution retains the engine's unlock flag and stone requirements; this build adds no campaign unlock event.
+
+Existing campaign scripts/events/maps, 843 trainer records, starter choices, approved item evolution rules, Golduck's Water/Psychic typing, Togepi's custom moves, custom TM compatibility and colored Jessie/James artwork were carried into the expanded formats. Seven custom NPC models were relocated to preserve the new follower graphics. These preservation checks concern files and code, not observed gameplay.
+
+Compilation, structural checks, cumulative patch reconstruction, ZIP integrity and the actual browser patch worker passed. Wrong input size/checksum are rejected; correct input reconstructs ROM SHA256 `3dd95a51f8a444d3ede11d3851d67f2c85bc65d09ef9c841b4c718c53dacff66`. The public patch page was downloaded and matched the tested page byte for byte.
+
+**No boot, battles, Mega Evolution, new-species, Save/Continue, save migration, PKHeX/ALM or full campaign playtest was performed.** This engine changes the save layout. Existing saves and the current custom PKHeX/ALM builds are not verified compatible. Keep this experimental ROM and its saves in a separate folder, preserving originals. The inherited Rock Tunnel and later Kanto work remain unfinished; the optional PC-item expansion remains deferred. No new recording or live playtest accompanies this package.
+
+[Read the release notes](https://github.com/ThatAnarchyDude/corvus-workshop/blob/main/psyduck-yellow/prototype-0037-expanded/READ-ME-FIRST.txt) and [hg-engine credits](https://github.com/ThatAnarchyDude/corvus-workshop/blob/main/psyduck-yellow/prototype-0037-expanded/HG-ENGINE-CREDITS.md). Public artifacts contain a patch and documentation; ROMs and saves stay local.
+
+
+## October 19, 2026 — expanded 0037 patcher button/loading fix
+
+The browser patcher now opens as a small page and downloads the modification patch only after Create is clicked, with visible download progress. Previously its button handler appeared after roughly 42 MB of embedded patch data, allowing the visible button to remain disabled while that data loaded. The previous decoder-only verification did not cover the browser's file-selection/button/download flow.
+
+A complete Chrome browser check now confirms file selection enables Create, the patch builds successfully, and the Download link yields the same NDS SHA256 `3dd95a51f8a444d3ede11d3851d67f2c85bc65d09ef9c841b4c718c53dacff66`. The ROM and original 0037 are unchanged. This patcher repair adds no gameplay or save-compatibility test claim. Refresh the [expanded 0037 patcher](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0037-expanded/index.html?patcher=2) if an older page is cached.
+
+
+## October 20, 2026 — expanded 0037 startup failure reproduced; 0038 work begun
+
+The owner reported that an old save did not load and a new game black-screened after Oak’s introduction and naming. A separate clean-new-game test of the unchanged released ROM reproduced the persistent black screen after normal player and rival naming, without any imported save. This establishes a startup problem independent of old-save compatibility. A boot fix is not yet verified and no 0038 release is available.
+
+The expanded engine changes the save structures and has no verified legacy migration. This does not establish that the owner’s original save is corrupt. Original saves and both 0037 baselines are preserved. Diagnosis is proceeding with isolated copies. Audio callback data were nonzero in the reproduction; audio silence has not been independently established.
+
+The [view-only testing address](https://certificates-fully-literature-biographies.trycloudflare.com/) has been restored; access credentials remain private and picture/sound pause between actual tests. The experimental patcher now displays the known startup issue. The ROM has not been silently replaced.
+
+
+## October 20, 2026 — prototype 0038: startup repair and bedroom Mega test controls
+
+[Create playable experimental prototype 0038 from original USA HeartGold](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0038/index.html).
+
+Fixed: a mixed three/four-digit archive filename error shifted field-script bank indices during expanded-engine assembly. The restored campaign script archive now allows a clean new game to finish the supplied Oak introduction, player/rival naming and enter the bedroom. Expanded engine code and Pokémon/battle data remain; both original0037 baselines are preserved.
+
+Verified in the native DS emulator: clean intro/naming-to-bedroom, movement and staircase transition, normal Save followed by a fresh Continue into the house, then ordinary stairs back to the bedroom. The visible item ball gives one Charizardite X, and the red standing flag panel acts as an A-button Mega test switch with ON/OFF dialogue. RAM checks confirmed held-item ID660 was added once and Mega unlock flag2518 became set; the OFF interaction also displayed correctly. This is a focused startup/interaction check, not a full campaign playthrough or a battle Mega Evolution test.
+
+For testing: collect the bedroom item ball, interact with the red flag panel to turn Mega testing ON, give Charizardite X to a compatible Charizard and look for the Mega button in battle. No Pokémon is gifted. The original PC and interior remain. The switch is optional and does not rewrite campaign completion or other gimmick flags.
+
+**Pre-expansion saves still need migration work.** Use a separate folder and a new game for this early test; preserve all original saves. PKHeX/ALM compatibility, full battle integration, expanded species and end-to-end progression remain unverified. Do not transfer emulator save states between different ROMs. The Kanto campaign and inherited Rock Tunnel work are unfinished; PC item storage remains ten stacks, with expansion deferred.
+
+The cumulative patch roundtrip and ZIP integrity passed. A full Chrome file-selection/Create/Download check reconstructed exact ROM SHA256 `e86da7667b8347043b61fb11a63a60ecca54c840ab0120d58689457e025c80d3`. The browser check caught unsupported secondary patch compression before publication; the released patch uses the decoder-supported format. Public artifacts contain patches/documentation only; ROMs and saves remain local.
+
+## October 20, 2026 — Expanded-save editor ready
+The existing full Windows PKHeX editor now detects prototype0038 saves automatically and edits its expanded Pokemon data,30boxes, inventory and existing10-slotitemPC. Copied-save core and Windows interface checks passed, including Mega forms and wider abilities; a game Continue check displayed the edited money correctly. The application, matching source, license and validation notes are packaged locally. Older0029 and ordinary HeartGold modes remain supported. This does not convert old campaign saves into0038 or provide retail legality/AutoLegality support for the expanded engine. No game ROM was changed or published for this editor update. Waiting for the owner's confirmation before starting0039; its first task will be the reported post-Surge black-screen issue involving Fly toCerulean/PokemonCenters.
+
+## October21 — custom sprite library reviewed locally
+Owner has set the black-screen investigation aside for now; its cause remains unverified. Recovered custom sprite ZIP inspected without changing any ROM. It includes Mega Psyduck, a shiny version and Psyduckite, alongside base Psyduck and ten custom Eeveelution designs. All147manifest-listed files match their recorded hashes;28indexed80x80battle sprites independently decoded with transparent index0 and at most16usedcolors. Art/import/gameplay approval remains outstanding; the two-frame sheets contain duplicate placeholders. New Mega Pokemon and Stones require the owner's desired implementation before addition and will use existing form/Pokedex handling, with no separate Mega Pokedex entries. Scheduled general development remains paused. No new build released.
+
+
+## October21 — starter Eevee experiment halted after one test
+A private duplicate now contains separate starter Eevee and Mega Eevee records plus Eonite, with inherited Eevee battle data and placeholder art. Build and preservation checks passed. The single native test ended during Continue when the emulator runner exited before reaching battle; transformation is NOT verified and the cause is unknown. Evidence preserved; no further fix or retest attempted. Original releases remain unchanged. Development halted pending owner instructions.
+
+
+## October21 — starter Eevee loading failure isolated
+The new starter's follower used an unsupported graphics entry before the earlier compatibility mapping ran. This produced an invalid map-object callback and terminated the emulator. Ordinary Eevee loaded, even holding Eonite. A private adjustment now maps the new Eevee records to existing Eevee follower graphics earlier; the same starter/Eonite copied save successfully loads Vermilion. Mega battle transformation is still unverified. No release changed or published; paused to report the solution.
+
+
+## October21 — prototype0039 published; development paused
+[Create prototype0039](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0039/index.html). Publishes the fixed starter Eevee experiment at the owner's request. Prepared native Continue succeeds; Mega transformation and native starter acquisition remain unverified. Placeholder art/inherited battle data; Eonite has no normal pickup yet. Patch roundtrip, ZIP and local Chrome Create/Download passed; public hosted files match. Public dated log/latest link updated. Earlier releases preserved. Development halted pending owner instructions.
+
+
+## October21 — Mega Eevee artwork prepared privately
+Converted the owner's guide design into custom front/back battle sprites and imported them into a separate private build. Base Eevee and all other Pokemon graphics remain unchanged. Native-format pixel roundtrips passed; actual battle display/animation remains unverified. Released0039 is preserved and unchanged; no new patch page published. General development remains paused.
+
+
+## October21 — prototype0039 sprite update published
+[Create updated0039](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0039/index-art.html). New Mega Eevee front/back sprites; base Eevee unchanged. Original0039 patcher preserved as index-initial.html. Local browser Create/Download, patch reconstruction andZIP passed; hostedartpage/patch/notes match. Battle visuals/transformation remain unverified. Public datedlog/latest link updated; development paused forowner testing.

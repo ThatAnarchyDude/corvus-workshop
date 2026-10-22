@@ -1,0 +1,328 @@
+{
+  "engine": {
+    "base_shiny_denominator": 4096,
+    "charm_shiny_denominator": 2048,
+    "item_id": 114,
+    "owned_hook": "0x1ffca2c",
+    "shiny_roll_hook": "0x1ffca64",
+    "legendary_hook": "0x1ffca80",
+    "generation_hook": "0x1ffcb34",
+    "generation_trampoline": "0x1ffcb1c",
+    "setter_hook": "0x1ffcb94",
+    "setter_trampoline": "0x1ffcb84",
+    "charm_boost_hook": "0x1ffcac0",
+    "pending_hook": "0x1ffcb04",
+    "party_hook": "0x1ffcc04",
+    "party_trampoline": "0x1ffcbf4",
+    "legendary_species": [
+      144,
+      145,
+      146,
+      150,
+      243,
+      244,
+      245,
+      249,
+      250,
+      380,
+      381,
+      382,
+      383,
+      384,
+      483,
+      484,
+      487
+    ],
+    "unlocked_constructor_site": "0x0206df3e",
+    "save_pointer": "0x21d2228",
+    "unlocked_shiny_locks": [
+      {
+        "site": "0x206d15a",
+        "path": "Ranger Manaphy hatch"
+      },
+      {
+        "site": "0x204c05a",
+        "path": "Mystery Gift random PID"
+      },
+      {
+        "site": "0x204b8e2",
+        "path": "Pokewalker transfer"
+      },
+      {
+        "site": "0x222a020",
+        "overlay": 80,
+        "path": "Pokewalker generation"
+      },
+      {
+        "site": "0x22367ea",
+        "overlay": 80,
+        "path": "Pokewalker generation"
+      }
+    ],
+    "npc_trade_hook": "0x1ffcc2c",
+    "mystery_gift_hook": "0x1ffcc1c",
+    "trade_identity_hook": "0x1ffcc7c"
+  },
+  "player_shiny": {
+    "hook": "0x1ff8620",
+    "shiny_roll_denominator": 4096,
+    "perfect_iv_roll_denominator": 16384,
+    "mask_site": "0x1ff86d6"
+  },
+  "experience": {
+    "hook": "0x1ffccac",
+    "site": "0x02245ad8",
+    "trainer_ids": [
+      741,
+      742,
+      743,
+      744,
+      745,
+      746
+    ],
+    "level": 6
+  },
+  "blue_properties": {
+    "hook": "0x1ffccf8",
+    "site": "0x2073440",
+    "trainers": [
+      741,
+      742,
+      743,
+      744,
+      745,
+      746,
+      747,
+      748,
+      749,
+      750
+    ],
+    "seed_flags": [
+      "0xB00",
+      "0xB1F"
+    ],
+    "initialized_flag": "0xB3C",
+    "shiny_flag": "0xB3D",
+    "perfect_flag": "0xB3E",
+    "shiny_roll_denominator": 4096,
+    "perfect_iv_roll_denominator": 16384,
+    "bytes": 368
+  },
+  "mappings": [
+    {
+      "map": 505,
+      "script": 1018,
+      "init": 1009,
+      "text": 851,
+      "event": 512
+    },
+    {
+      "map": 506,
+      "script": 1019,
+      "init": 995,
+      "text": 857,
+      "event": 505
+    },
+    {
+      "map": 504,
+      "script": 1020,
+      "init": 993,
+      "text": 858,
+      "event": 504
+    },
+    {
+      "map": 50,
+      "script": 1021,
+      "init": 1015,
+      "text": 859,
+      "event": 517
+    },
+    {
+      "map": 27,
+      "script": 1022,
+      "init": 1023,
+      "text": 860,
+      "event": 518
+    },
+    {
+      "map": 299,
+      "script": 1024,
+      "init": 1025,
+      "text": 861,
+      "event": 519
+    }
+  ],
+  "repaired_message_banks": {
+    "853": 855,
+    "854": 856
+  },
+  "rival_trainers": {
+    "54_male": 747,
+    "54_female": 748,
+    "133_male": 749,
+    "133_female": 750,
+    "54": 747,
+    "133": 750
+  },
+  "lab_trainers": {
+    "54": 743,
+    "133": 746,
+    "54_male": 743,
+    "54_female": 744,
+    "133_male": 745,
+    "133_female": 746
+  },
+  "rival_party": {
+    "shared": {
+      "species": 21,
+      "level": 9
+    },
+    "starter_level": 8,
+    "rule": "saved lab choice; Togepi chooses Psyduck/Eevee uniformly; legacy Togepi keeps Eevee"
+  },
+  "route22_position": [
+    979,
+    266
+  ],
+  "flags": {
+    "done": 2884,
+    "hide": 2883,
+    "migration": 2882,
+    "rival_picked": 2881,
+    "rival_psyduck": 2880,
+    "rival_female": 2879
+  },
+  "version": "013",
+  "base_version": "012",
+  "input_sha256": "7910d6ed6b6e1a47107084405de67c5adb0ac6408107348e6adba0f53e733bec",
+  "output_sha256": "7b7a1ee57b972f3f8e18bdc1611e32eface19f18db368180a27fa5eedf640c9d",
+  "patch_sha256": "d64ac48accda1e2be10a0416c50c7891ed5305a2d8617e4d5f094248a3ed0bc0",
+  "changed_file_ids": [
+    12,
+    23,
+    80,
+    141,
+    146,
+    156,
+    161,
+    184,
+    185
+  ],
+  "date": "2026-10-10",
+  "tests": {
+    "passed": 165,
+    "skipped": 0
+  },
+  "patch_roundtrip_verified": true,
+  "browser": {
+    "output_sha256": "7b7a1ee57b972f3f8e18bdc1611e32eface19f18db368180a27fa5eedf640c9d",
+    "bad_input_rejected": true,
+    "browser_errors": []
+  },
+  "emulator": {
+    "engine": "DeSmuME libretro",
+    "rom_sha256": "7b7a1ee57b972f3f8e18bdc1611e32eface19f18db368180a27fa5eedf640c9d",
+    "method": "Continuous fresh boots and ordinary in-game saves; no cross-version emulator states",
+    "final_rom_checks": [
+      "East League guard intercepts player before passing, displays Johto warning through its last page, moves player from x=15 to x=16",
+      "First lab victory: Eevee EXP 125 to 216, level 5 to level 6, native animation and stats"
+    ],
+    "lab": {
+      "party": [
+        {
+          "species": 133,
+          "level": 6,
+          "exp": 216,
+          "gender": 1,
+          "ivs": [
+            23,
+            0,
+            31,
+            2,
+            26,
+            18
+          ],
+          "shiny": false,
+          "pid": 1713457410,
+          "ot": 1264215872,
+          "pending_charm": false
+        }
+      ],
+      "shiny_charm_quantity": 0,
+      "flags": {
+        "0x6a": true,
+        "0xb41": false,
+        "0xb40": false,
+        "0xb3f": false,
+        "0xb3b": false
+      }
+    },
+    "legendary_fixture": {
+      "party": [
+        {
+          "species": 150,
+          "level": 5,
+          "exp": 156,
+          "gender": 2,
+          "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+          ],
+          "shiny": false,
+          "pid": 3770391008,
+          "ot": 2297507372,
+          "pending_charm": false
+        },
+        {
+          "species": 480,
+          "level": 5,
+          "exp": 156,
+          "gender": 2,
+          "ivs": [
+            24,
+            18,
+            19,
+            11,
+            14,
+            1
+          ],
+          "shiny": false,
+          "pid": 538457034,
+          "ot": 2297507372,
+          "pending_charm": false
+        }
+      ],
+      "shiny_charm_quantity": 0,
+      "flags": {
+        "0x6a": false,
+        "0xb41": false,
+        "0xb40": false,
+        "0xb3f": false,
+        "0xb3b": false
+      }
+    },
+    "legendary_fixture_rom_sha256": "6efea6ac556ee032e88c8cdf4b7d0216b106d025fb708c24e880d3423ad4fb5c",
+    "fixture_limits": "Private event-script fixtures set scene positions and test moves or create Mewtwo/Uxie through native GiveMon. Their grants are absent from the release. Legendary fixture was generated from this final ROM.",
+    "additional_native_checks_during_development": [
+      "Full west-guard dialogue, including strong Pok\u00e9mon warning and final not-ready sentence",
+      "Mandatory Oak catching advice and five regular Pok\u00e9 Balls after Blue leaves National Dex scene",
+      "Native Route 22 battle shows level 9 Spearow and level 8 chosen Psyduck",
+      "Fresh Togepi choice saves Blue Psyduck/female against player Togepi/male; live follower species 175 active, no Dex access yet",
+      "Bedroom PC lists one Shiny Charm and withdraws it into native Key Item pocket"
+    ],
+    "development_check_limits": "These additional native checks were made before the final stat-recalculation addition. Their script bytes are unchanged; final generation/Charm/stat helpers are covered by the compiled Thumb tests."
+  },
+  "unrun": [
+    "Full Route 22 victory/departure and blackout replay in the final ROM (script logic checked automatically; native battle entrance checked)",
+    "Full new-game parcel quest replay in final ROM",
+    "Audible music and sound listening",
+    "Rare shiny encounter through every native acquisition path in a full emulator session; generation boundaries checked in compiled Thumb tests",
+    "External fixed-personality distribution payloads retain supplied personalities; unavailable distribution/network services are not emulated",
+    "Android compatibility deliberately deferred until the complete game; not a requirement for proceeding",
+    "Route 2 and Viridian Forest progression: next implementation checkpoint"
+  ]
+}

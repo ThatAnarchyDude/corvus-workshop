@@ -1,0 +1,57 @@
+{
+  "version": "005",
+  "output_sha256": "3c78ed017788e39d6a35aacaae5206df635bbada0ac203f610eaa459498fc144",
+  "patch_sha256": "fd09b8bdaff3bc721869fa82c363053a841149040489422c47bf700de0661a3a",
+  "preserved_gameplay_from": "004",
+  "changed_title_members": [
+    0,
+    3,
+    25,
+    26,
+    38,
+    39
+  ],
+  "model_bytes": 39696,
+  "water_bytes": 33452,
+  "hooks": {
+    "overlay": 60,
+    "camera_helper": "0x21eb880",
+    "original_sha256": "825d2d682a7fe6d522bb16df882f19f30ba841f78d9f582bbe7a4254a713ce42",
+    "output_sha256": "c83512f41fba49ff0f97077287f2b1f7a0cd4a7d07372b0c41afcb2e234d2dc0",
+    "cry_species": 54
+  },
+  "gameplay_verified": true,
+  "date": "2026-10-09",
+  "source_sha256": "65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105",
+  "local_tests": {
+    "passed": 64,
+    "failed": 0,
+    "skipped": 0
+  },
+  "verification_scope": "Title boot, animation, touch-start and normal prototype-004 save continuation; the unchanged Pallet gameplay retains its prior validation.",
+  "emulator": "DeSmuME 0.9.12 libretro",
+  "browser": {
+    "engine": "Chromium",
+    "phone_width": 390,
+    "wrong_input_rejected": true,
+    "download_sha256_verified": true,
+    "page_errors": []
+  },
+  "normal_save_check": {
+    "species": 133,
+    "map": 505,
+    "follower_species": 133,
+    "follower_active": 1,
+    "national_dex": true,
+    "owned": [
+      133
+    ]
+  },
+  "not_run": [
+    "Android emulator playtest",
+    "Audio listening",
+    "New full campaign playthrough"
+  ],
+  "opening_movie": "Unchanged HeartGold opening movie",
+  "rom_distribution": "Patch and local decoder only; no ROM hosted"
+}

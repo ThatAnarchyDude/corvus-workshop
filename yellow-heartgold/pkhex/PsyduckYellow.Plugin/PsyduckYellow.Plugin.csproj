@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework><UseWindowsForms>true</UseWindowsForms>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting><ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable>
+    <AssemblyName>PsyduckYellow.Plugin</AssemblyName>
+    <PKHeXCorePath Condition="'$(PKHeXCorePath)' == ''">../../.tools/PKHeX/PKHeX.Core/bin/Release/net10.0/PKHeX.Core.dll</PKHeXCorePath>
+  </PropertyGroup>
+  <ItemGroup><Compile Include="../Shared/ProjectRules.cs" Link="ProjectRules.cs" /></ItemGroup>
+  <ItemGroup><Reference Include="PKHeX.Core"><HintPath>$(PKHeXCorePath)</HintPath><Private>false</Private></Reference></ItemGroup>
+</Project>

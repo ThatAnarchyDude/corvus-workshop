@@ -1,0 +1,127 @@
+{
+  "version": "0027-development",
+  "released": false,
+  "candidate_sha256": "a848bd038f2aea75ea10bae692d24679da42f5f4cd1c54ef1ed442e340b6abe5",
+  "compiled_checks": 4,
+  "native": {
+    "north_no_drink_refusal": true,
+    "returned_to_route_side": true,
+    "fresh_water_consumed": 1,
+    "remaining_water": 1,
+    "repeat_crossing_no_extra_drink": true,
+    "normal_save_fresh_continue": true,
+    "shared_open_progress_maps": [
+      389,
+      390,
+      391,
+      493
+    ],
+    "bedroom_pc_slots_unchanged": true,
+    "soda_pop_consumed": 1,
+    "lemonade_consumed": 1,
+    "no_drink_refusal_all_four_approaches": true,
+    "bedroom_pc_slots_unchanged_all_cases": true
+  },
+  "private_fixture": "owner save COPY; 995 of each drink removed only in fixtures; water fixture grants 2 Fresh Waters; transport scenes excluded from candidate",
+  "pending": [
+    "Yellow Route 5/gatehouse geometry",
+    "recording and cumulative release roundtrip",
+    "full campaign difficulty and progression"
+  ],
+  "source_scope": "Kanto headers 389,390,391,493 and appended archive members; original Johto data unchanged",
+  "terrain_probe": {
+    "private": true,
+    "released": false,
+    "dimensions": [
+      20,
+      36
+    ],
+    "matrix_cells": [
+      1,
+      2
+    ],
+    "native_load": true,
+    "source_walking_permissions": true,
+    "native_south_hop_from_y2_to_y4": true,
+    "native_reverse_hop_blocked": true,
+    "temporary_diagnostic_colors": true,
+    "doors": false,
+    "grass_behavior": true,
+    "region_connections": false,
+    "native_grass_tiles": 48,
+    "native_grass_encounter_observed": "Pidgeotto level 17",
+    "live_grass_encounter_observed": "Abra level 7",
+    "lower_cell_arrival_y34": true,
+    "last_source_row_y35": true,
+    "padding_blocks_y36": true,
+    "normal_save_fresh_continue": {
+      "map": 13,
+      "x": 16,
+      "y": 35,
+      "height": 0,
+      "party_count": 3,
+      "parcel_state": 2,
+      "national_dex": true
+    },
+    "compiler_checks": 4,
+    "compiler_matches_native_tested_rom": true,
+    "live_test": "Temporary diagnostic colors; copied owner save; same view-only URL; feed paused after actual test"
+  },
+  "door_probe": {
+    "private": true,
+    "released": false,
+    "compiled_checks": 5,
+    "native_roundtrips": [
+      {
+        "mode": "route5-door-daycare",
+        "interior": 517,
+        "return_position": [
+          16,
+          21
+        ]
+      },
+      {
+        "mode": "route5-door-tunnel",
+        "interior": 469,
+        "return_position": [
+          23,
+          28
+        ]
+      },
+      {
+        "mode": "route5-door-gate-north",
+        "interior": 391,
+        "return_position": [
+          16,
+          29
+        ]
+      },
+      {
+        "mode": "route5-door-gate-south",
+        "interior": 391,
+        "return_position": [
+          16,
+          34
+        ]
+      },
+      {
+        "mode": "route5-door-north-left",
+        "interior": 391,
+        "return_position": [
+          16,
+          29
+        ]
+      }
+    ],
+    "native_sign_interaction": true,
+    "original_interior_actors_unchanged": true,
+    "original_archive_members_preserved": true,
+    "johto_unchanged": true,
+    "pending": [
+      "final building placement",
+      "Yellow gate interior geometry",
+      "region connections",
+      "save migration"
+    ]
+  }
+}

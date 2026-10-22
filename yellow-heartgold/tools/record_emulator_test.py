@@ -16,6 +16,7 @@ def main():
     parser.add_argument('--seconds', type=int, default=30)
     parser.add_argument('--actions', type=Path, help='JSON list of frame/buttons actions, including boot navigation')
     parser.add_argument('--skip-frames', type=int, default=0)
+    parser.add_argument('--horizontal', action='store_true', help='Show top screen left and bottom screen right')
     parser.add_argument('--label', default='Prototype 0022 — prepared test save')
     args = parser.parse_args()
     if not 1 <= args.seconds <= 600 or args.skip_frames < 0: parser.error('Invalid recording duration')
@@ -66,13 +67,20 @@ def main():
                     image = emulator.image()
                     if image is None: raise RuntimeError('Missing emulator video frame')
                     canvas = Image.new('RGB', (1024,768), '#131824')
-                    canvas.paste(image.resize((512,768), Image.Resampling.NEAREST), (0,0))
+                    if args.horizontal:
+                        canvas.paste(image.crop((0,0,256,192)).resize((512,384), Image.Resampling.NEAREST), (0,0))
+                        canvas.paste(image.crop((0,192,256,384)).resize((512,384), Image.Resampling.NEAREST), (512,0))
+                    else:
+                        canvas.paste(image.resize((512,768), Image.Resampling.NEAREST), (0,0))
                     draw = ImageDraw.Draw(canvas)
                     lines = [args.label, 'REAL GAME AUDIO + NATIVE VIDEO', f'Elapsed: {relative/fps:.1f}s',
                         'Prepared save; not normal progression.', 'Controller inputs; no RAM writes.', '',
                         *json.dumps(metrics,indent=2).splitlines(), '', 'Recent controller inputs:']
                     lines += [f"frame {e['native_frame']}: {','.join(e['buttons'])}" for e in history if 'buttons' in e][-5:]
-                    for i,line in enumerate(lines[:33]): draw.text((530,24+i*22),line,fill='#dce8ff',font=font)
+                    if args.horizontal:
+                        for i,line in enumerate(lines[:15]): draw.text((20,404+i*22),line,fill='#dce8ff',font=font)
+                    else:
+                        for i,line in enumerate(lines[:33]): draw.text((530,24+i*22),line,fill='#dce8ff',font=font)
                     encoder.stdin.write(canvas.tobytes()); video_frames += 1
                     if video_frames == 1: canvas.save(args.output.with_suffix('.jpg'), quality=90)
         finally:
@@ -103,7 +111,7 @@ def main():
         'video_frames':video_frames,'duration_seconds':video_duration,
         'source_audio_duration_seconds':audio_duration,'source_clock_drift_seconds':drift,
         'audio_tempo_correction':tempo,'audio_pitch_preserved':True,
-        'encoded_stream_durations':durations,'ram_writes':False,'events':history}
+        'encoded_stream_durations':durations,'ram_writes':False,'screen_layout':'top-left/bottom-right' if args.horizontal else 'vertical','events':history}
     args.output.with_suffix('.json').write_text(json.dumps(report,indent=2)+'\n')
     print(json.dumps({k:v for k,v in report.items() if k!='events'}))
 

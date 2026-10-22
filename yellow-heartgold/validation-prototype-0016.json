@@ -1,0 +1,162 @@
+{
+  "interiors": {
+    "maps": [
+      {
+        "map": 472,
+        "script": 1043,
+        "text": 870,
+        "event": 560,
+        "original_script": 756,
+        "original_event": 425
+      },
+      {
+        "map": 474,
+        "script": 1044,
+        "text": 871,
+        "event": 561,
+        "original_script": 751,
+        "original_event": 427
+      },
+      {
+        "map": 475,
+        "script": 1045,
+        "text": 872,
+        "event": 562,
+        "original_script": 753,
+        "original_event": 428
+      },
+      {
+        "map": 477,
+        "script": 1046,
+        "text": 873,
+        "event": 563,
+        "original_script": 757,
+        "original_event": 430
+      }
+    ],
+    "brock_select_sound": {
+      "original_script": 1039,
+      "script": 1047,
+      "opcode": 73,
+      "sound": 1500
+    }
+  },
+  "museum": {
+    "map": 471,
+    "script": 1048,
+    "init": 1049,
+    "text": 874,
+    "event": 564,
+    "original_script": 755,
+    "original_init": 528,
+    "original_text": 464,
+    "original_event": 424,
+    "ticket_price": 50,
+    "ticket_flag": 2851,
+    "amber_flag": 2852,
+    "amber_item": 103,
+    "layout": "Two floors",
+    "city_script": 1050,
+    "city_init": 1051,
+    "floors": {
+      "upper_map": 538,
+      "original_unused_header": "ff040f0000008b008f0103002d042d04000000a600026000",
+      "geometry": [
+        {
+          "matrix": 289,
+          "land": 681,
+          "original_matrix": 242,
+          "original_land": 358
+        },
+        {
+          "matrix": 290,
+          "land": 682,
+          "original_matrix": 242,
+          "original_land": 358
+        }
+      ],
+      "lower_event": 565,
+      "upper_event": 566,
+      "upper_script": 1052,
+      "upper_text": 875,
+      "stair": [
+        18,
+        5
+      ],
+      "stair_model": 4,
+      "upper_area": 44,
+      "exhibits": "Native HeartGold displays with Yellow dialogue"
+    }
+  },
+  "reusable_tms": {
+    "learning_function": "0x208254c",
+    "consumption_site": "0x20825b4",
+    "all_native_tms_reusable": true,
+    "custom_bide_reusable": true,
+    "hms_unchanged": true
+  },
+  "rare_candy_evolution": {
+    "dispatch": "0x207c288",
+    "entry": "0x1ffd620",
+    "trampoline": "0x1ffd60c",
+    "level_100_evolution": true,
+    "native_requirements": true,
+    "no_effect_consumes_item": false,
+    "evolution_cancel_available": true
+  },
+  "psyduck_evolution": {
+    "species": 54,
+    "target": 55,
+    "item": 81,
+    "moon_stone_only": true,
+    "level_up_removed": true,
+    "water_stone_removed": true,
+    "item_rule_address": "0x1ff8940"
+  },
+  "version": "0016",
+  "input_sha256": "b15097292e8dfcbc0a1c0d1f58eabb9132b0c117f95a79d266b0abe528f2ac84",
+  "output_sha256": "05ed484e1ddff00944063733031e2e3b4921c1e9cf145d58252fbd0c7b342242",
+  "patch_sha256": "db176c078d909de78fe1e36fb3895889236cf1ebb0e4a742b91a399c972727a1",
+  "changed_file_ids": [
+    141,
+    156,
+    161,
+    163,
+    170,
+    194
+  ],
+  "validation": {
+    "automated_tests": 212,
+    "passed": 212,
+    "failures": 0,
+    "elapsed_seconds": 148.272,
+    "museum_native": {
+      "output_sha256": "05ed484e1ddff00944063733031e2e3b4921c1e9cf145d58252fbd0c7b342242",
+      "map": [
+        471,
+        1,
+        12,
+        14,
+        3
+      ],
+      "amber_flag": true,
+      "amber_slots": [
+        [
+          103,
+          1
+        ]
+      ],
+      "upper_floor_rendered": true,
+      "stairs_both_directions": true
+    },
+    "browser": {
+      "output_sha256": "05ed484e1ddff00944063733031e2e3b4921c1e9cf145d58252fbd0c7b342242",
+      "bad_input_rejected": true,
+      "browser_errors": []
+    },
+    "old_amber_repeat_dialogue_checked": true,
+    "xdelta_round_trip_verified": true,
+    "complete_playthrough": false,
+    "bulk_rare_candy_selector_implemented": false
+  }
+}

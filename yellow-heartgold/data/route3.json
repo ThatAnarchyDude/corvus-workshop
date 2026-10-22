@@ -1,0 +1,366 @@
+{
+  "reference": {
+    "repository": "pret/pokeyellow",
+    "commit": "e89ead154b9968aa50eed9328ff2b38b6c194382",
+    "paths": [
+      "text/Route3.asm",
+      "scripts/Route3.asm",
+      "data/maps/objects/Route3.asm",
+      "data/trainers/parties.asm",
+      "data/wild/maps/Route3.asm",
+      "data/pokemon/evos_moves.asm"
+    ]
+  },
+  "messages": {
+    "Route3Text1": "Whew... I better take a rest... Groan...\rThat tunnel from CERULEAN takes a lot out of you!",
+    "Route3Youngster1BattleText": "Hey! I met you in VIRIDIAN FOREST!",
+    "Route3Youngster1EndBattleText": "You beat me again!",
+    "Route3Youngster1AfterBattleText": "There are other kinds of POKEMON than those found in the forest!",
+    "Route3Youngster2BattleText": "Hi! I like shorts! They're comfy and easy to wear!",
+    "Route3Youngster2EndBattleText": "I don't believe it!",
+    "Route3Youngster2AfterBattleText": "Are you storing your POKEMON on PC? Each BOX can hold 30 POKEMON!",
+    "Route3CooltrainerF1BattleText": "You looked at me, didn't you?",
+    "Route3CooltrainerF1EndBattleText": "You're mean!",
+    "Route3CooltrainerF1AfterBattleText": "Quit staring if you don't want to fight!",
+    "Route3Youngster3BattleText": "Are you a trainer? Let's fight!",
+    "Route3Youngster3EndBattleText": "If I had new POKEMON, I would've won!",
+    "Route3Youngster3AfterBattleText": "If a POKEMON BOX on the PC gets full, just switch to another BOX!",
+    "Route3CooltrainerF2BattleText": "That look you gave me, it's so intriguing!",
+    "Route3CooltrainerF2EndBattleText": "Be nice!",
+    "Route3CooltrainerF2AfterBattleText": "Avoid fights by not letting people see you!",
+    "Route3Youngster4BattleText": "Hey! You're not wearing shorts!",
+    "Route3Youngster4EndBattleText": "Lost! Lost! Lost!",
+    "Route3Youngster4AfterBattleText": "I always wear shorts, even in winter!",
+    "Route3Youngster5BattleText": "You can fight my new POKEMON!",
+    "Route3Youngster5EndBattleText": "Done like dinner!",
+    "Route3Youngster5AfterBattleText": "Trained POKEMON are stronger than the wild ones!",
+    "Route3CooltrainerF3BattleText": "Eek! Did you touch me?",
+    "Route3CooltrainerF3EndBattleText": "That's it?",
+    "Route3CooltrainerF3AfterBattleText": "ROUTE 4 is at the foot of MT.MOON.",
+    "Route3SignText": "ROUTE 3 MT.MOON AHEAD"
+  },
+  "trainers": [
+    {
+      "role": "Bug Catcher",
+      "trainer_class": 6,
+      "template": 4,
+      "actor": 3,
+      "x": 1104,
+      "z": 107,
+      "facing": 1,
+      "dialogue": "Route3Youngster1",
+      "sprite": 227,
+      "team": [
+        {
+          "species": 10,
+          "level": 10,
+          "moves": [
+            33,
+            81,
+            0,
+            0
+          ]
+        },
+        {
+          "species": 13,
+          "level": 10,
+          "moves": [
+            40,
+            81,
+            0,
+            0
+          ]
+        },
+        {
+          "species": 10,
+          "level": 10,
+          "moves": [
+            33,
+            81,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "role": "Youngster",
+      "trainer_class": 2,
+      "template": 8,
+      "actor": 10,
+      "x": 1103,
+      "z": 103,
+      "facing": 2,
+      "dialogue": "Route3Youngster2",
+      "sprite": 315,
+      "team": [
+        {
+          "species": 19,
+          "level": 11,
+          "moves": [
+            33,
+            39,
+            98,
+            0
+          ]
+        },
+        {
+          "species": 23,
+          "level": 11,
+          "moves": [
+            35,
+            43,
+            40,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "role": "Lass",
+      "trainer_class": 3,
+      "template": 22,
+      "actor": 0,
+      "x": 1110,
+      "z": 99,
+      "facing": 2,
+      "dialogue": "Route3CooltrainerF1",
+      "sprite": 320,
+      "team": [
+        {
+          "species": 16,
+          "level": 9,
+          "moves": [
+            16,
+            28,
+            0,
+            0
+          ]
+        },
+        {
+          "species": 16,
+          "level": 9,
+          "moves": [
+            16,
+            28,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "role": "Bug Catcher",
+      "trainer_class": 6,
+      "template": 4,
+      "actor": 2,
+      "x": 1114,
+      "z": 98,
+      "facing": 2,
+      "dialogue": "Route3Youngster3",
+      "sprite": 227,
+      "team": [
+        {
+          "species": 13,
+          "level": 9,
+          "moves": [
+            40,
+            81,
+            0,
+            0
+          ]
+        },
+        {
+          "species": 14,
+          "level": 9,
+          "moves": [
+            106,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "species": 10,
+          "level": 9,
+          "moves": [
+            33,
+            81,
+            0,
+            0
+          ]
+        },
+        {
+          "species": 11,
+          "level": 9,
+          "moves": [
+            106,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "role": "Lass",
+      "trainer_class": 3,
+      "template": 22,
+      "actor": 1,
+      "x": 1122,
+      "z": 111,
+      "facing": 0,
+      "dialogue": "Route3CooltrainerF2",
+      "sprite": 320,
+      "team": [
+        {
+          "species": 19,
+          "level": 10,
+          "moves": [
+            33,
+            39,
+            98,
+            0
+          ]
+        },
+        {
+          "species": 32,
+          "level": 10,
+          "moves": [
+            43,
+            33,
+            30,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "role": "Youngster",
+      "trainer_class": 2,
+      "template": 8,
+      "actor": 6,
+      "x": 1134,
+      "z": 113,
+      "facing": 1,
+      "dialogue": "Route3Youngster4",
+      "sprite": 315,
+      "team": [
+        {
+          "species": 21,
+          "level": 14,
+          "moves": [
+            64,
+            45,
+            43,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "role": "Bug Catcher",
+      "trainer_class": 6,
+      "template": 4,
+      "actor": 7,
+      "x": 1143,
+      "z": 118,
+      "facing": 3,
+      "dialogue": "Route3Youngster5",
+      "sprite": 227,
+      "team": [
+        {
+          "species": 10,
+          "level": 11,
+          "moves": [
+            33,
+            81,
+            0,
+            0
+          ]
+        },
+        {
+          "species": 11,
+          "level": 11,
+          "moves": [
+            106,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "role": "Lass",
+      "trainer_class": 3,
+      "template": 22,
+      "actor": 8,
+      "x": 1158,
+      "z": 123,
+      "facing": 0,
+      "dialogue": "Route3CooltrainerF3",
+      "sprite": 320,
+      "team": [
+        {
+          "species": 39,
+          "level": 14,
+          "moves": [
+            47,
+            1,
+            50,
+            0
+          ]
+        }
+      ]
+    }
+  ],
+  "wild_slots": [
+    {
+      "level": 8,
+      "species": 21
+    },
+    {
+      "level": 9,
+      "species": 21
+    },
+    {
+      "level": 9,
+      "species": 56
+    },
+    {
+      "level": 10,
+      "species": 21
+    },
+    {
+      "level": 8,
+      "species": 27
+    },
+    {
+      "level": 10,
+      "species": 19
+    },
+    {
+      "level": 10,
+      "species": 27
+    },
+    {
+      "level": 12,
+      "species": 19
+    },
+    {
+      "level": 11,
+      "species": 21
+    },
+    {
+      "level": 12,
+      "species": 21
+    }
+  ],
+  "encounter_rate": 20,
+  "adaptations": [
+    "PC box capacity dialogue uses HeartGold capacity of 30.",
+    "Trainer positions reuse native HeartGold route positions; map geometry remains unchanged.",
+    "No Route 3 item rewards in Yellow; inherited HG pickups are archived."
+  ]
+}

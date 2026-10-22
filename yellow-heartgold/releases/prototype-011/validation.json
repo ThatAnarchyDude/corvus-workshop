@@ -1,0 +1,133 @@
+{
+  "intro": {
+    "blue_panel": "0x21e8a40",
+    "rival_wrapper": "0x21e8ab0",
+    "blue_character": 69,
+    "blue_screens": [
+      70,
+      71
+    ],
+    "blue_palettes": [
+      72,
+      73
+    ],
+    "player_resources_preserved": true,
+    "eevee_origin": [
+      -40,
+      -72
+    ],
+    "eevee_rest_translation": [
+      -44,
+      70
+    ]
+  },
+  "lying": {
+    "sprite": 89,
+    "model": 864,
+    "lookup": "0x1ff9f84",
+    "source_graphics": "0x375b18",
+    "source_palette": "0x36d8b8"
+  },
+  "wake_hook": "0x1ffb4b4",
+  "gate": {
+    "script": 1012,
+    "init": 1013,
+    "event": 514,
+    "gate": [
+      1027,
+      235
+    ],
+    "cleared_position": [
+      1029,
+      237
+    ],
+    "barriers": [
+      [
+        1021,
+        235
+      ],
+      [
+        1024,
+        235
+      ],
+      [
+        1025,
+        235
+      ],
+      [
+        1026,
+        235
+      ],
+      [
+        1028,
+        235
+      ],
+      [
+        1029,
+        235
+      ],
+      [
+        1032,
+        235
+      ]
+    ],
+    "migration_flag": 2891
+  },
+  "land_clones": [
+    {
+      "cell": 360,
+      "old_land": 117,
+      "new_land": 677
+    },
+    {
+      "cell": 361,
+      "old_land": 118,
+      "new_land": 678
+    }
+  ],
+  "version": "011",
+  "base_version": "010",
+  "input_sha256": "f9e25b1a196c81d879350d57bbb2b870bd43a596badd7a6f4a8c6f0a0965757e",
+  "output_sha256": "6ac69f643d8277aee718157a0c1fafc7b3e6dfe960f12d59ae372b0fbcf41b7e",
+  "patch_sha256": "9b3642150a2a96b5fb8c2686425c331b50dde78c6c30ab75125f30d630f0925c",
+  "changed_file_ids": [
+    1,
+    53,
+    141,
+    161,
+    170,
+    194,
+    210,
+    249
+  ],
+  "date": "2026-10-09",
+  "tests": {
+    "passed": 116,
+    "skipped": 0
+  },
+  "patch_roundtrip_verified": true,
+  "browser": {
+    "output_sha256": "6ac69f643d8277aee718157a0c1fafc7b3e6dfe960f12d59ae372b0fbcf41b7e",
+    "bad_input_rejected": true,
+    "browser_errors": []
+  },
+  "emulator": {
+    "engine": "DeSmuME libretro",
+    "rom_sha256": "6ac69f643d8277aee718157a0c1fafc7b3e6dfe960f12d59ae372b0fbcf41b7e",
+    "continuous_fresh_boot_checks": [
+      "Blue touch-screen introduction and name confirmation for both player genders",
+      "Reject rival name, return to naming keyboard, confirm replacement name and complete intro to bedroom",
+      "Shiny Eevee sparkles and final rest pose retain the same position",
+      "Pre-Pokedex coffee gate blocks center and both side lanes",
+      "Post-parcel old man stands, performs native catching demo and walks aside"
+    ],
+    "normal_save_reload": "Completed lesson save reloads in final ROM and center passage remains open",
+    "fixtures": "Gate tests use normal in-game saves prepared at Viridian with pre-quest or completed-parcel flags. The entire new-game parcel quest was not replayed in 011.",
+    "snapshot_note": "Internal snapshot resumes failed locally during overlay transitions; final native checks use continuous fresh boots and normal in-game saves."
+  },
+  "unrun": [
+    "Android owner playtest",
+    "Audible music and sound listening",
+    "Route 2 and Viridian Forest progression (next prototype)"
+  ]
+}

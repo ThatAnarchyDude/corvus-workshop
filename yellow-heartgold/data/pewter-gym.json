@@ -1,0 +1,76 @@
+{
+  "reference_commit": "e89ead154b9968aa50eed9328ff2b38b6c194382",
+  "messages": {
+    "PewterGymBrockPreBattleText": "I'm BROCK! I'm PEWTER's GYM LEADER!\rI believe in rock hard defense and determination!\rThat's why my POKEMON are all the rock-type!\rDo you still want to challenge me? Fine then! Show me your best!",
+    "PewterGymBrockPostBattleAdviceText": "There are all kinds of trainers in the world!\rSome raise POKEMON for fights. Some see them as pets.\rI'm in training to become a POKEMON breeder.\rIf you take your POKEMON training seriously, go visit the GYM in CERULEAN and test your abilities!",
+    "PewterGymBrockWaitTakeThisText": "Wait! Take this with you!",
+    "PewterGymReceivedTM34Text": "You received TM34!",
+    "TM34ExplanationText": "\rA TM contains a technique that can be taught to POKEMON!\rA TM is good only once! So when you use one to teach a new technique, pick the POKEMON carefully!\rTM34 contains BIDE!\rYour POKEMON will absorb damage in battle then pay it back double!",
+    "PewterGymTM34NoRoomText": "You don't have room for this!",
+    "PewterGymBrockReceivedBoulderBadgeText": "I took you for granted.\rAs proof of your victory, here's the BOULDERBADGE!\rYou received the BOULDERBADGE!",
+    "PewterGymBrockBoulderBadgeInfoText": "\rThat's an official POKEMON LEAGUE BADGE!\rIts bearer's POKEMON become more powerful!\rThe technique FLASH can now be used anytime!",
+    "PewterGymCooltrainerMBattleText": "Stop right there, kid!\rYou're still light years from facing BROCK!",
+    "PewterGymCooltrainerMEndBattleText": "Darn!\rLight years isn't time! It measures distance!",
+    "PewterGymCooltrainerMAfterBattleText": "You're pretty hot, but not as hot as BROCK!",
+    "PewterGymGuidePreAdviceText": "Hiya! I can tell you have what it takes to become a POKEMON champ!\rI'm no trainer, but I can tell you how to win!\rLet me take you to the top!",
+    "PewterGymGuideBeginAdviceText": "All right! Let's get happening!",
+    "PewterGymGuideAdviceText": "The 1st POKEMON out in a match is at the top of the POKEMON LIST!\rBy changing the order of POKEMON, matches could be made easier!",
+    "PewterGymGuideFreeServiceText": "It's a free service! Let's get happening!",
+    "PewterGymGuidePostBattleText": "Just as I thought! You're POKEMON champ material!",
+    "PewterGymGuyText": "All right! Let's get happening!\rIt will be tough for your PIKACHU at this GYM!\rElectric attacks are harmless to BROCK's ground- type POKEMON."
+  },
+  "trainers": [
+    {
+      "role": "junior",
+      "original_hg": 308,
+      "team": [
+        {
+          "species": 50,
+          "level": 11,
+          "moves": [
+            10,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "species": 27,
+          "level": 11,
+          "moves": [
+            10,
+            28,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "role": "brock",
+      "original_hg": 253,
+      "team": [
+        {
+          "species": 74,
+          "level": 12,
+          "moves": [
+            33,
+            111,
+            0,
+            0
+          ]
+        },
+        {
+          "species": 95,
+          "level": 14,
+          "moves": [
+            33,
+            103,
+            117,
+            0
+          ]
+        }
+      ]
+    }
+  ]
+}

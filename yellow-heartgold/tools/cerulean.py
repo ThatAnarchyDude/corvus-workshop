@@ -70,7 +70,7 @@ def guide():
     s.label('after').msg(7);return end(s).finish()
 
 
-def rival_scene(trainers, lanes=range(1329,1333)):
+def rival_scene(trainers, lanes=range(1329,1333), optional=True):
     lanes=tuple(lanes)
     s=Script().emit(32,RIVAL_DONE).jump('done',1).emit(96).emit(105,0x4000,0x4001)
     music(s,1088)
@@ -78,13 +78,17 @@ def rival_scene(trainers, lanes=range(1329,1333)):
     s.jump('lane'+str(lanes[0]))
     for x in lanes:s.label('lane'+str(x)).movement(BLUE,'approach'+str(x)).emit(95).jump('battle')
     s.label('battle').movement(255,'face').emit(95).msg(0)
-    selected_battle(s,trainers,0,'result');s.label('result').emit(220,0x800C)
-    s.compare(0x800C,1).jump('lost',5).msg(1).msg(3)
+    selected_battle(s,trainers,int(optional),'result');s.label('result').emit(220,0x800C)
+    s.compare(0x800C,1).jump('lost',5).msg(1)
+    if optional:
+        s.jump('outro').label('lost').msg(2).label('outro')
+    s.msg(3)
     music(s,1089)
     s.compare(0x4000,lanes[0]).jump('leave_right',1).movement(BLUE,'leave_left').emit(95).jump('finish')
     s.label('leave_right').movement(BLUE,'leave_right_path').emit(95)
     s.label('finish').emit(30,RIVAL_DONE).emit(30,RIVAL_HIDE).emit(101,BLUE).emit(41,RIVAL_STATE,1).emit(82);end(s)
-    s.label('lost').msg(2).emit(219);end(s)
+    if not optional:
+        s.label('lost').msg(2).emit(219);end(s)
     s.label('done').emit(2)
     for x in lanes:
         moves=([(15,x-1329)] if x>1329 else [(14,1329-x)] if x<1329 else [])+[(13,3),(1,1)]

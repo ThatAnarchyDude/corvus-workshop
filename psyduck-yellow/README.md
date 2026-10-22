@@ -9,3 +9,8 @@ Base shiny odds are 1/4,096; carry the Shiny Charm from the bedroom PC for 1/2,0
 Back up normal saves and avoid transferring emulator save states between builds. Use a new game for lab experience and Togepi's new rival selection; a pre-parcel save for Oak's mandatory gift and the full cashier promise; a post-parcel save for Route 22 and the League gate. Existing older Togepi saves retain Blue's prior Eevee choice.
 
 Source and validation are on `android-prototype-013` in `yellow-heartgold/PROTOTYPE-013.md`. The decoder is RomPatcher.js by Marc Robledo, MIT licensed; see LICENSE.txt.
+
+## Project folders and downloads
+Public patch pages, playtest pages and project notes are organized under `psyduck-yellow`. Local playable ZIP packages belong in the ignored `psyduck-yellow/downloads/` folder. Development tools and preserved private build outputs currently remain under `yellow-heartgold`; changing that internal folder name requires updating and verifying tool dependencies.
+
+[Create prototype 0028](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0028/index.html). [Create the newer prototype 0029](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0029/index.html).

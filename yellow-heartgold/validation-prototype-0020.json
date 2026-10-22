@@ -1,0 +1,162 @@
+{
+  "version": "0020",
+  "input_sha256": "29d274454fd191bf0e41192322113f1ecb6961e74ca55dda3566b11fc13637cd",
+  "testing_travel": {
+    "temporary_testing_feature": true,
+    "fly": {
+      "item": 421,
+      "price": 0,
+      "department_store_floor": 3,
+      "stock_index": 20,
+      "original_stock": [
+        348,
+        354,
+        414,
+        405,
+        339,
+        368,
+        347,
+        355,
+        403,
+        382,
+        399,
+        406
+      ],
+      "stock_address": "0x1fff1b4",
+      "badge_call": "0x2068026",
+      "quantity_hook": "0x1fff1d0",
+      "quantity_call": "0x22578fa",
+      "quantity_original": "9bf654e9",
+      "visited_destinations_and_other_field_restrictions_preserved": true
+    },
+    "return_gap": {
+      "x": 1268,
+      "z": 117,
+      "original_permission": 32827,
+      "permission": 0,
+      "land": 152,
+      "new_land": 687,
+      "matrix_cell": 180
+    },
+    "save_layout_unchanged": true
+  },
+  "output_sha256": "39f0fbb43d345fe34fdd7db57a2ce766c712bf7b21a741f81e91316a0d201191",
+  "patch_sha256": "75a2abc6147048614dd1026ae6406db170d552d96a75d56bf548089934440794",
+  "roundtrip_verified": true,
+  "publication": {
+    "commit": "28b5fd7b8dd7e5311d0c182b5d047f91ffca451b",
+    "confirmed_push_utc": "2026-10-11T04:55:58.187279+00:00",
+    "source_commit": "9a4ad87242880c53294e2834f5450cee7e9dc528",
+    "url": "https://raw.githack.com/ThatAnarchyDude/corvus-workshop/28b5fd7b8dd7e5311d0c182b5d047f91ffca451b/psyduck-yellow/prototype-0020/index.html"
+  },
+  "tests": {
+    "passed": 6,
+    "failed": 0,
+    "record": "build/0020-focused-tests.txt"
+  },
+  "browser": {
+    "output_sha256": "39f0fbb43d345fe34fdd7db57a2ce766c712bf7b21a741f81e91316a0d201191",
+    "bad_input_rejected": true,
+    "browser_errors": [],
+    "download_name": "Pokemon-Psyduck-Yellow-prototype-0020.nds"
+  },
+  "native_emulator": {
+    "return_crossing": "Walked north from (1268,118) across the former one-way tile and back south. Existing ledge artwork retained.",
+    "purchase": "Native HM02 quantity picker: one, price zero; bag gained HM02, money unchanged at 4262.",
+    "teach": "Native HM taught Pidgey Fly in its empty fourth move slot.",
+    "fly": "Native outdoor Fly menu, departure animation and arrival at Celadon Center with no Fly badge.",
+    "normal_save": {
+      "directory": "emulator-0020-shop",
+      "quest": [
+        3,
+        2
+      ],
+      "location": [
+        55,
+        4294967295,
+        1231,
+        238,
+        1
+      ],
+      "money": 4262,
+      "items": {
+        "45": 1,
+        "101": 1,
+        "102": 0,
+        "116": 0,
+        "117": 0,
+        "118": 1,
+        "421": 1
+      },
+      "party": [
+        {
+          "species": 55,
+          "level": 21,
+          "moves": [
+            39,
+            55,
+            50,
+            93
+          ]
+        },
+        {
+          "species": 16,
+          "level": 10,
+          "moves": [
+            33,
+            28,
+            16,
+            19
+          ]
+        }
+      ]
+    },
+    "reload": {
+      "directory": "emulator-0020-reload",
+      "quest": [
+        3,
+        2
+      ],
+      "location": [
+        55,
+        4294967295,
+        1231,
+        238,
+        1
+      ],
+      "money": 4262,
+      "items": {
+        "45": 1,
+        "101": 1,
+        "102": 0,
+        "116": 0,
+        "117": 0,
+        "118": 1,
+        "421": 1
+      },
+      "party": [
+        {
+          "species": 55,
+          "level": 21,
+          "moves": [
+            39,
+            55,
+            50,
+            93
+          ]
+        },
+        {
+          "species": 16,
+          "level": 10,
+          "moves": [
+            33,
+            28,
+            16,
+            19
+          ]
+        }
+      ]
+    }
+  },
+  "published_files_verified": true
+}

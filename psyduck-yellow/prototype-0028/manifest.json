@@ -1,0 +1,13 @@
+{
+  "version": "0028",
+  "source_sha256": "65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105",
+  "output_sha256": "0de636af251081172fafcfcfee1017c3dd68c15a654ff97b76e7972a68270a52",
+  "source_bytes": 134217728,
+  "output_bytes": 127601352,
+  "patch_sha256": "adefcd6598bdab59908570d1c15a503111f28bcf5bcb6a71cb1e02fc6e93c1fd",
+  "cumulative": true,
+  "roundtrip_verified": true,
+  "zip_verified": true,
+  "publication": "patch-only page",
+  "recording": null
+}

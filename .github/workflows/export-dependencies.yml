@@ -1,0 +1,27 @@
+name: Export ROM development dependencies
+on:
+  push:
+    paths:
+      - .github/workflows/export-dependencies.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Collect Python packages and native patcher
+        run: |
+          mkdir -p payload/wheels payload/bin
+          python -m pip download --only-binary=:all: --dest payload/wheels ndspy keystone-engine pillow
+          sudo apt-get update -qq
+          sudo apt-get install -y xdelta3
+          cp "$(command -v xdelta3)" payload/bin/xdelta3
+          chmod +x payload/bin/xdelta3
+          sha256sum payload/bin/xdelta3 > payload/bin/SHA256SUMS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: psyduck-yellow-build-deps
+          path: payload/
+          retention-days: 1
