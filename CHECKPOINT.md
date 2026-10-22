@@ -1,11 +1,10 @@
 # CHECKPOINT (campaign-loop)
 
-Newest ROM: /mnt/c/RetroArch-Win64/downloads/Pokemon-Psyduck-Yellow-0041-engine-map-extension.nds
-  (source: yellow-heartgold/build/0041-map-extension-v1/, built from 0040; SHA starts 2ab4c748)
-Area just finished: ENGINE — map header table extension (tools/map_header_extension.py). ROM-only, stock-emulator safe.
-  Header ID check (ARM9 0x3B268) -> trampoline; IDs >= 540 read 24-byte records appended to resident hg-engine ov129
-  (capacity 305 new maps). No Johto/hg-engine data moved. No gameplay change yet.
-Test: boot, Continue from the 0040 fixture save, bedroom + menu OK (fixture only, not campaign proof). ID>=540 is only
-  RAM-verified (records+trampoline present after boot); first live warp comes with the Tower.
-Known gaps: Pokemon Tower floors, Marowak ghost, Mr. Fuji, Silph Scope (all not built); no new-map warp tested yet.
-Next: Lavender/Pokemon Tower using install() -> floors cloned from Sprout/Burned/Bell Tower layouts, new event/script/text banks.
+Newest ROM: /mnt/c/RetroArch-Win64/downloads/Pokemon-Psyduck-Yellow-0041-engine-map-extension.nds (engine only, no Tower).
+Work ROM (not a release): yellow-heartgold/build/0041-lavender-tower-v1/tower-t4.nds, built by tools/campaign_build.py tower
+  (args: tower <0041 engine ROM> <out.nds> <pret/pokeyellow clone dir>).
+Done: map header extension (IDs 540+). Tower 1F-7F = Bell Tower clones (540-546), Yellow Channelers 3F-6F + wilds, Lavender Radio Tower door <-> Tower 1F until flag 0x964.
+Fixed this session: land-data permission block starts at byte 16 (not 20); trainers/arrival now sit on passable tiles inside the rooms (3F floor map verified by dump).
+Unconfirmed: 3F battle trigger by screenshot (fixture 542 at 13,11 facing down; inputs showed no visible battle, only trainer sprites shifting). Recheck with a longer run.
+Gaps: 2F rival, 6F Marowak ghost gate, 7F Jessie/James + Mr. Fuji, Poke Flute (Fuji house = map 435), floor items/NPCs, Silph Scope.
+Next: confirm battle trigger, build the scenes above, then copy a tested ROM as ...-0041-lavender-tower.nds.

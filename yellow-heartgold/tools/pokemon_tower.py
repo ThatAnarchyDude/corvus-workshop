@@ -39,7 +39,7 @@ def _land(rom, map_id, d):
     floor = set()
     for y in range(32):
         for x in range(32):
-            v = struct.unpack_from('<H', land, 20 + 2 * (y * 32 + x))[0]
+            v = struct.unpack_from('<H', land, 16 + 2 * (y * 32 + x))[0]
             if not v & 0x8000 and v & 255 not in (16, 17, 19, 21):
                 floor.add((x, y))
     return floor
