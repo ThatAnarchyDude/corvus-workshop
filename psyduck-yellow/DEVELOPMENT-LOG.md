@@ -3,7 +3,7 @@
 A plain-language guide to what has changed, what you can play now, and what is
 still being built. Share this page with anyone following the project.
 
-**Last updated: October 21, 2026.**
+**Last updated: October 22, 2026.**
 
 [Watch LIVE testing with video and audio](https://format-bios-millions-signed.trycloudflare.com/)
 
@@ -1120,3 +1120,12 @@ Test normal Eevee starter selection, field loading and normal Save/Continue; rep
 New front/back Mega Eevee battle sprites adapt the owner's guide design. Only the Mega's sprite/palette records changed; base Eevee and all other Pokemon art remain unchanged. The converted sprites use DS palettes and two identical frames, with shiny colors derived from Eevee's existing palette shifts. Native-format pixel roundtrip and preservation checks passed. This is an artwork revision, with no additional gameplay changes or campaign progress.
 
 Actual battle appearance, animation, Mega transformation/reversion and starter acquisition remain unverified. The existing prepared-save Continue result is inherited, not a fresh playthrough. Eonite still has no normal pickup; the bedroom item/switch are unchanged. All earlier0039 experimental save/editor and campaign limits remain; preserve saves and do not reuse cross-ROM save states. Public artifacts contain patches/docs only. Development pauses after delivery pending owner instructions.
+
+
+## October 22, 2026 — prototype 0041 (experimental)
+
+[Create prototype 0041](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0041/index.html). It builds from your original USA HeartGold file in your browser; nothing is uploaded.
+
+A large Kanto update: Pokémon Tower, the Celadon Gym, the Rocket Hideout, Routes 8 and 11–18, the Fuchsia, Saffron, Seafoam and Viridian gyms, the Indigo Plateau League, a starter Psyduck with Mega Psyduck and Psyduckite using supplied art, and every Mega Stone for ₣0 in the Vermilion Mart.
+
+Played so far: New Game through Vermilion, including Mega Psyduck/Mega Eevee activation and reversion. Not played: everything from Nugget Bridge onward. Silph Co., the Safari Zone and the Cinnabar Mansion are not built. Known issue: a one-time black top screen after Viridian Forest, fixed by saving and reloading. Start a New Game; old saves are unsupported. Public artifacts are patches and documentation only.
