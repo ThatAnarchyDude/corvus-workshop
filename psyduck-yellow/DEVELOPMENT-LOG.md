@@ -1130,3 +1130,20 @@ Actual battle appearance, animation, Mega transformation/reversion and starter a
 A large Kanto update: Pokémon Tower, the Celadon Gym, the Rocket Hideout, Routes 8 and 11–18, the Fuchsia, Saffron, Seafoam and Viridian gyms, the Indigo Plateau League, a starter Psyduck with Mega Psyduck and Psyduckite using supplied art, and every Mega Stone for ₣0 in the Vermilion Mart.
 
 Played so far: New Game through Vermilion, including Mega Psyduck/Mega Eevee activation and reversion. Not played: everything from Nugget Bridge onward. Silph Co., the Safari Zone and the Cinnabar Mansion are not built. Known issue: a one-time black top screen after Viridian Forest, fixed by saving and reloading. Start a New Game; old saves are unsupported. Public artifacts are patches and documentation only.
+
+
+## October 22, 2026 — prototype 0042 (BETA pre-release)
+
+**BETA PRE-RELEASE, FOR TESTING ONLY. Not a complete game. Only the Kanto campaign, up to the first Hall of Fame, has been developed. Johto is NOT ready — do not go there.**
+
+[Create prototype 0042](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0042/index.html). It builds from your original USA HeartGold file in your browser; nothing is uploaded.
+
+What changed since 0041:
+- **Silph Co.**: HeartGold has only one small Silph building, so it was cloned into four floors holding Yellow's trainers (2F–11F), Yellow's rival fight, Giovanni, the Lapras gift and the Master Ball. Card Key doors and item balls are not included.
+- **Victory Road**: Yellow's 11 trainers were added; they stand only in the parts of the cave reachable on foot (the rest of HeartGold's cave needs HMs).
+- **Route 22 gate**: the League reception gate used to block every corridor, which made Victory Road and the League unreachable. It now lets you through to Victory Road once you hold all eight Kanto badges.
+- **Route 22 rival**: Blue's second battle (Yellow's higher-level team) now happens there once all eight badges are in hand; it is optional and a loss heals your party.
+- **After the Hall of Fame**: the southern arm of the Route 22 gate opens toward Johto. Johto is not ready; do not go there.
+- Internally: a 28-flag "safe pool" for future extra trainers was researched (trainer IDs are nearly used up); nothing from it is in this build.
+
+Checked: small emulator tests of the Silph Co. entrance and a trainer battle, a Victory Road trainer sight-battle, the Route 22 gate in both directions, the second rival scene (with prepared flags and badges), and a normal start to the bedroom. **Not checked:** winning the new battles, the full League, the Hall of Fame, or anything in Johto. The developer has played New Game only through Vermilion.
