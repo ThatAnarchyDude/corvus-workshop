@@ -5,7 +5,7 @@ still being built. Share this page with anyone following the project.
 
 **Last updated: October 22, 2026.**
 
-[Watch LIVE testing with video and audio](https://format-bios-millions-signed.trycloudflare.com/)
+[Watch LIVE testing with video and audio]()
 
 Tap **Enable sound** in the viewer for game audio. The upper DS screen is on the
 left and the touch screen is on the right. The link grants viewing only; game
@@ -14,7 +14,8 @@ controls remain private. Video and audio pause between actual playtests.
 *Stream link refreshed and remotely checked: October 16, 2026. This temporary link
 requires the laptop and streaming processes to remain online.*
 
-**Latest experimental playable patch: prototype0039 — Mega Eevee sprite update.** New front/back Mega sprites; base Eevee unchanged. Battle appearance/transformation/reversion remain unverified.
+**Latest experimental playable patch: prototype0041 — Playable testing DEMO ONLY.** Added a bunch of useful items in the player's PC (also eccessable in their bedroom). Also, added a HUGE list of "surprise" items available in the Vermilion Pokémart. Kanto campaign currently has been safely tested as running from New Game to Vermilion. Enjoy ;)
+Patch available [HERE] (https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0041/index.html)
 
 [Create updated prototype0039: Mega Eevee sprites](https://raw.githack.com/ThatAnarchyDude/corvus-workshop/main/psyduck-yellow/prototype-0039/index-art.html)
 
