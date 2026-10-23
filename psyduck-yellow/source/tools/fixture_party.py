@@ -1,7 +1,7 @@
 """TEST-ONLY fixture: give the player a Pokemon and items the first time the bedroom loads of a copied 0040 fixture save.
 
 Never part of a release ROM and never campaign proof. Optionally starts a wild battle.
-Usage: fixture_party.py <in.nds> <out.nds> <species> <held item> <level> [item:count ...] [--battle species,level] [--dex]
+Usage: fixture_party.py <in.nds> <out.nds> <species> <held item> <level> [item:count ...] [--battle species,level] [--dex] [--warp map,x,z] [--follower] [--trainer id]
 --dex also gives the Pokedex and National Dex mode (script commands 291, flag 0x6B, 477), which unlocks the POKEDEX and POKEMON entries of the field menu.
 """
 import struct
@@ -16,7 +16,7 @@ from pokemon_tower import _frame_entry, STATE
 BEDROOM = 506
 
 
-def install(rom, species, held, level, items, battle, dex=False):
+def install(rom, species, held, level, items, battle, dex=False, warp=None, follower=False, trainer=None):
     main = rom.loadArm9()
     d = main.sections[0].data = bytearray(main.sections[0].data)
     scripts = ndspy.narc.NARC(rom.files[rom.filenames.idOf('a/0/1/2')])
@@ -35,6 +35,18 @@ def install(rom, species, held, level, items, battle, dex=False):
         s.emit(589, battle[0], battle[1])
         s.data.append(0)
         s.emit(220, 0x800C)
+    if trainer is not None:                                   # test-only: start a battle against trainer record `trainer`
+        s.emit(213, trainer, 0)
+        s.data.extend(bytes(2))
+        s.emit(220, 0x800C)
+    if follower:                                              # the starter gift's own follower initialisation (tools/escort.py)
+        s.emit(30, 0x6A).emit(131, species)
+        s.emit(41, 0x416B, 3).emit(1).emit(41, 0x416B, 0)
+        s.emit(605)
+        s.data.extend(bytes([1, 0]))
+        s.emit(602, 0).emit(608).emit(3, 10, 0x800C).emit(602, 1)
+    if warp:
+        s.emit(176, warp[0], 0, warp[1], warp[2], 0)       # test-only teleport to map, x, z
     s.emit(97).emit(2)
     bank, count = append_bank(scripts.files[bank_id], [s.finish()])
     scripts.files[bank_id] = bytes(bank)
@@ -49,6 +61,19 @@ if __name__ == '__main__':
     dex = '--dex' in args
     if dex:
         args.remove('--dex')
+    warp = None
+    trainer = None
+    if '--trainer' in args:
+        i = args.index('--trainer')
+        trainer = int(args[i + 1])
+        del args[i:i + 2]
+    follower = '--follower' in args
+    if follower:
+        args.remove('--follower')
+    if '--warp' in args:
+        i = args.index('--warp')
+        warp = tuple(int(v) for v in args[i + 1].split(','))
+        del args[i:i + 2]
     if '--battle' in args:
         i = args.index('--battle')
         battle = tuple(int(v) for v in args[i + 1].split(','))
@@ -56,5 +81,5 @@ if __name__ == '__main__':
     src, dst, species, held, level = args[:5]
     items = [tuple(int(v) for v in a.split(':')) for a in args[5:]]
     rom = ndspy.rom.NintendoDSRom.fromFile(src)
-    install(rom, int(species), int(held), int(level), items, battle, dex)
+    install(rom, int(species), int(held), int(level), items, battle, dex, warp, follower, trainer)
     rom.saveToFile(dst)

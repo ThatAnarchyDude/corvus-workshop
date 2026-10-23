@@ -1,6 +1,6 @@
 # Psyduck Yellow — source
 
-The build tools, tests, data and notes behind **Pokémon Psyduck Yellow** (latest: prototype 0056 BETA). Each prototype is produced by chaining small Python patch scripts, each starting from the previous build's ROM; the public downloads are `xdelta` patches of those ROMs (see the [Releases](https://github.com/ThatAnarchyDude/Psyduck-Yellow-Releases/releases)).
+The build tools, tests, data and notes behind **Pokémon Psyduck Yellow** (latest: prototype 0081 BETA). Each prototype is produced by chaining small Python patch scripts, each starting from the previous build's ROM; the public downloads are `xdelta` patches of those ROMs (see the [Releases](https://github.com/ThatAnarchyDude/Psyduck-Yellow-Releases/releases)).
 
 ## Layout
 - `tools/` — the patch and build scripts (one module per area or feature, e.g. `starter_eevee_line.py`, `novareon.py`, `stellar_stab.py`, `stellar_rainbow.py`, `new_images.py`, `starter_display_fix.py`, `build_release_00xx.py`) and small emulator-test helpers.
@@ -15,6 +15,8 @@ The build tools, tests, data and notes behind **Pokémon Psyduck Yellow** (lates
 The scripts were written to run from a local project folder; some paths and notes mention the developer's own machine. They are published so the work can be read and audited, not as a one-command build.
 
 ## Prototype notes (newest first)
+**Prototype 0081 BETA** — Novareon's own Pokédex entry (`dex_novareon_id500.py`, `owner_text.py`) and follower (`novareon_follower_fix.py`), Mega Novareon art (`mega_novareon_art.py`), Champion Blue (`champion_blue.py`), item balls (`silph_items.py`, `tower_items.py`, `hideout_items.py`, `vr_items.py`), Moltres, trainer-party and text fixes (`trainer_type_fix.py`, `game_corner_text_fix.py`, `silph_exit_fix.py`), and static audits (`audit_*.py`).
+
 **Prototype 0056 BETA** — the Pokédex opens on the Kanto list (1–151) with real National numbers for the starter Pokémon and a KANTO title/label (`dex_fix.py`, `dex_kanto.py`, `dex_labels.py`); TM34 is Moonblast and TM58 is Dazzling Gleam, plus Fairy-move fixes (`fairy_moves.py`, `tm_fairy.py`, `tm_gleam_union.py`).
 
 **Prototype 0050 BETA** — the starter Eevee line (all eight Eeveelutions plus the new Stellar-type Novareon via a Sandwich, each with its own Mega), the Stellar type with its rainbow tag, new Sandwich and Novareon icons, and fixes for the starters' evolution screen, summary sprites and shiny Mega colours. See the [development log](../DEVELOPMENT-LOG.md).

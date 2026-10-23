@@ -129,3 +129,16 @@ Eonite swap DONE: owner verified Eonite pickup on a New Game (2026-10-22); the e
 - 2026-10-22 0046 starter_display_fix: spriteoffsets (a/1/8/0) + a/1/4/1 extended for 1561-1582, Mega shiny palettes decompressed. Deferred: Stellar type icon, Sandwich icon, Novareon menu icon (owner asked for generated images).
 - 2026-10-22 0047 new_images: Stellar chip (a/0/0/8 file 369, table 0x2100048[19]), Sandwich icon, Novareon party icon. Deferred: blue Novareon icon (needs a 4th icon palette bank), type 18 (typeless) chip still shows COOL.
 - 2026-10-22 0049 stellar_rainbow: 4th chip palette bank with a six-colour rainbow for the Stellar chip.
+- 2026-10-23 0057 Silph item balls (tools/silph_items.py): 12 of Yellow's 14 balls on the four clones (flags A38-A61). Deferred: TM09 Take Down (no such TM in this ROM), Card Key + doors (clones have no door geometry), Pokemon reports, Jessie/James.
+- 2026-10-23 0064 Victory Road item balls (tools/vr_items.py): Rare Candy 1F, Full Heal + Guard Spec 2F, Max Revive + TM64 Explosion 3F on reachable tiles (flags A2F-A37). Deferred: TM Sky Attack/Submission/Mega Kick (no such TMs here), Moltres (no Moltres overworld sprite in the engine: needs an owner decision), boulder switches; HG's own 9 balls still sit in the caves.
+- 2026-10-23 0065 Moltres (tools/vr_items.py): Lv50 static battle on Victory Road 2F at (5,36), engine's own Moltres overworld sprite 1026, flag A2D hides it after a win/catch. Boulder switches still deferred.
+- 2026-10-23 0071 Pokemon Tower item balls (tools/tower_items.py): 3F Escape Rope; 4F Elixir, Awakening, HP Up; 5F Nugget; 6F Rare Candy, X Accuracy (flags A1F-A29). Placement nearest Yellow's tile on the accessible floor.
+- 2026-10-23 0072 Silph exit fix (tools/silph_exit_fix.py, audit tools/audit_warps.py): clone A door -> lobby anchor 8 -> 1.
+- 2026-10-23 0073 Game Corner text fix (tools/game_corner_text_fix.py, audit tools/audit_messages.py): native Game Corner scripts keep their 23-row bank; the Rocket guard's lines are rows 23-25.
+- 2026-10-23 0074 Novareon dex identity = species id 500 (tools/dex_novareon_id500.py): fixes the SIZE page freeze; ARM9 0x0202940C (gap test) lets 500 through.
+- 2026-10-23 0075 Novareon follower fix (tools/novareon_follower_fix.py): alias table pair for species 1581/1582 now 1560 (borrowed follower slot) instead of 197.
+- 2026-10-23 0077 Champion Blue (tools/champion_blue.py): Champion room uses the rival class/name/sprite and Yellow's lines; League tested end to end on a fixture.
+- 2026-10-23 0078 Rocket Hideout item balls (tools/hideout_items.py): 8 of 14 (TMs absent, Lift Key skipped). 16 free flags remain below 0xAA0.
+- 2026-10-23 0079 Trainer party fix (tools/trainer_type_fix.py): 17 trainers had moves in their parties but type byte 0; Rock Tunnel and Viridian Gym trainers had garbage later Pokemon.
+- 2026-10-23 0080 Owner wording (tools/owner_text.py): Novareon dex category/entry and Eonite/Novareonite descriptions from Eevee-New-Horizons.pdf.
+- 2026-10-23 0081 Oak's evaluation text says Kanto (tools/oak_kanto_dex.py).
