@@ -1,0 +1,186 @@
+{
+  "version": "0022",
+  "input_sha256": "3bfbb2218be4ef8925d49dde1e760c5967e9e96f1a87685f148a5cbf302a7f3b",
+  "save_compatibility": {
+    "relocations": {
+      "0xb60": "0xa80",
+      "0xb61": "0xa81",
+      "0xb62": "0xa82",
+      "0xb63": "0xa83",
+      "0xb64": "0xa84",
+      "0xb65": "0xa85",
+      "0xb66": "0xa86",
+      "0xb67": "0xa87",
+      "0xb68": "0xa88",
+      "0xb69": "0xa89",
+      "0xb6a": "0xa8a"
+    },
+    "script_operands": 17,
+    "object_flags": 4,
+    "daily_reset_bytes": 12,
+    "protected_flags": [
+      "0xB00",
+      "0xB5F"
+    ],
+    "bounds_hook": "0x1fff424",
+    "recovery_hook": "0x1fff450",
+    "recovery_bytes": 656,
+    "recovery_marker": "0xa8b",
+    "actor_restore_hook": "0x1fff6f0",
+    "actor_restore_trampoline": "0x1fff6e0",
+    "actor_restore_bytes": 152
+  },
+  "trainer_card": {
+    "overlay": 51,
+    "initial_page": "Kanto",
+    "saved_badge_numbers_unchanged": true,
+    "portrait_regions_swapped": true,
+    "native_portraits_and_polishing_preserved": true
+  },
+  "friendship_charm": {
+    "item": 121,
+    "hook": "0x1fff788",
+    "bytes": 128,
+    "pc_map": 506,
+    "pc_script": 1099,
+    "pc_text": 895,
+    "passive": true,
+    "friendship": 255,
+    "scope": "non-Egg party Pokemon",
+    "existing_saves": true,
+    "other_evolution_prerequisites_unchanged": true
+  },
+  "output_sha256": "a26d9003ec23d9ebc60cc721a6aec169dd33af4ff657d9726bd89ab1cb2e89da",
+  "patch_sha256": "91f4cde6b1c17b809708c1f868bc124abb46b7dfc22fcd766ec49fb327955847",
+  "roundtrip_verified": true,
+  "publication": "Published as an immutable browser patch package; ROMs and saves remain private",
+  "verification": {
+    "unit_tests": {
+      "save_bounds_recovery_actor_restore_daily_rollover": 7,
+      "checkpoint_pc_brock_friendship_badges": 6,
+      "cerulean_and_pewter_script_regressions": 7,
+      "native_blue_cut_startup_on_final_rom": 6,
+      "player_pc_conservation": 6,
+      "bulk_rare_candy_regressions": 12,
+      "total": 44,
+      "failed": 0
+    },
+    "patch_roundtrip": true,
+    "browser": {
+      "output_sha256": "a26d9003ec23d9ebc60cc721a6aec169dd33af4ff657d9726bd89ab1cb2e89da",
+      "bad_input_rejected": true,
+      "browser_errors": [],
+      "download_name": "Pokemon-Psyduck-Yellow-prototype-0022.nds"
+    },
+    "preserved_assets": {
+      "unchanged_archives": [
+        "a/0/4/1",
+        "a/0/6/5",
+        "a/0/5/5",
+        "a/0/5/6",
+        "a/0/3/4",
+        "a/0/3/7"
+      ],
+      "arm7_unchanged": true,
+      "map_headers_unchanged_except": [
+        506
+      ]
+    },
+    "native": {
+      "emulator-0022-affected-recovery": {
+        "parcel": 2,
+        "pokedex": true,
+        "bide_quantity": 2,
+        "bide_given": true,
+        "tutorial_done": true,
+        "west_hidden": true,
+        "clerk_hidden": true,
+        "friendship_charm": 0,
+        "location": [
+          500,
+          0,
+          4,
+          11,
+          0
+        ]
+      },
+      "emulator-0022-prepare-brock-reward": {
+        "parcel": 2,
+        "pokedex": true,
+        "bide_quantity": 2,
+        "bide_given": true,
+        "tutorial_done": true,
+        "west_hidden": true,
+        "clerk_hidden": true,
+        "friendship_charm": 0,
+        "location": [
+          473,
+          4294967295,
+          7,
+          5,
+          0
+        ]
+      },
+      "emulator-0022-friendship-reload": {
+        "parcel": 2,
+        "pokedex": true,
+        "bide_quantity": 0,
+        "bide_given": false,
+        "tutorial_done": true,
+        "west_hidden": true,
+        "clerk_hidden": true,
+        "friendship_charm": 1,
+        "location": [
+          506,
+          4294967295,
+          6,
+          4,
+          0
+        ],
+        "friendship_values": [
+          255,
+          255
+        ]
+      }
+    },
+    "normal_0020_save_transfer": {
+      "source_quest_completed_by_native_Oak_script": true,
+      "source_save_reloaded_in_0020_before_transfer": true,
+      "parcel": 2,
+      "pokedex": true,
+      "mandatory_balls_given": true,
+      "continued_in_0022": true
+    },
+    "fixture_limits": [
+      "Private native scripts stage transports, parcel availability and reset symptoms. No private fixture ROM, save or helper is released.",
+      "This verifies targeted save and gameplay paths, not a fresh full campaign playthrough or Android compatibility.",
+      "The user save itself was not supplied; recovery was tested against matching reset symptoms.",
+      "Arbitrary erased flags or random rolls without surviving evidence cannot be reconstructed."
+    ],
+    "repaired_save_saved_and_reloaded": {
+      "parcel": 2,
+      "pokedex": true,
+      "bide_quantity": 2,
+      "bide_given": true,
+      "old_man_tutorial_done": true,
+      "west_guard_hidden": true,
+      "outdoor_clerk_hidden": true,
+      "recovery_marker_retained": true
+    }
+  },
+  "screenshots": [
+    "build/emulator-0022-affected-recovery/recovered.png",
+    "build/emulator-0022-affected-recovery/mart-entered.png",
+    "build/emulator-0022-prepare-brock-reward/brock-no-duplicate.png",
+    "build/emulator-0022-card-swapped/kanto-first.png",
+    "build/emulator-0022-friendship-reload/friendship-continue.png",
+    "build/emulator-0022-quest-transfer/quest-preserved.png",
+    "build/emulator-0022-repaired-save-reload/repaired-save-continue.png"
+  ],
+  "download_url": "https://raw.githack.com/ThatAnarchyDude/corvus-workshop/0a1887b1ef80c3980576b1ff0793191b736d1859/psyduck-yellow/prototype-0022/index.html",
+  "published_utc": "2026-10-11T17:46:11.166650+00:00",
+  "delivery_verification": {
+    "public_github_files_match": true,
+    "cdn_fetch_blocked_by_environment_proxy": true
+  }
+}

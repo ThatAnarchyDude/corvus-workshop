@@ -1,0 +1,703 @@
+{
+  "version": "0019",
+  "input_sha256": "5ce1b82b86b568169540520ed77e3500d216d234c61c4afc4117179cd59a69dc",
+  "output_sha256": "29d274454fd191bf0e41192322113f1ecb6961e74ca55dda3566b11fc13637cd",
+  "patch_sha256": "397ad041ecd0965cc828d91a4769f8c132689961a3ae0f778b0b8b76723a97ff",
+  "roundtrip_verified": true,
+  "interactions": {
+    "manual_sign_changes": [
+      {
+        "map": 9,
+        "original_event": 506,
+        "event": 576
+      },
+      {
+        "map": 10,
+        "manual_signs": [
+          1
+        ],
+        "original_script": 1026,
+        "script": 1070
+      },
+      {
+        "map": 10,
+        "original_event": 527,
+        "event": 577
+      },
+      {
+        "map": 11,
+        "manual_signs": [
+          2
+        ],
+        "original_script": 1055,
+        "script": 1071
+      },
+      {
+        "map": 11,
+        "original_event": 567,
+        "event": 578
+      },
+      {
+        "map": 12,
+        "original_event": 9,
+        "event": 579
+      },
+      {
+        "map": 13,
+        "original_event": 10,
+        "event": 580
+      },
+      {
+        "map": 14,
+        "original_event": 11,
+        "event": 581
+      },
+      {
+        "map": 15,
+        "original_event": 12,
+        "event": 582
+      },
+      {
+        "map": 16,
+        "original_event": 529,
+        "event": 583
+      },
+      {
+        "map": 17,
+        "original_event": 530,
+        "event": 584
+      },
+      {
+        "map": 18,
+        "original_event": 15,
+        "event": 585
+      },
+      {
+        "map": 19,
+        "original_event": 16,
+        "event": 586
+      },
+      {
+        "map": 20,
+        "original_event": 531,
+        "event": 587
+      },
+      {
+        "map": 21,
+        "original_event": 532,
+        "event": 588
+      },
+      {
+        "map": 23,
+        "original_event": 534,
+        "event": 589
+      },
+      {
+        "map": 24,
+        "original_event": 21,
+        "event": 590
+      },
+      {
+        "map": 26,
+        "original_event": 23,
+        "event": 591
+      },
+      {
+        "map": 27,
+        "original_event": 518,
+        "event": 592
+      },
+      {
+        "map": 29,
+        "original_event": 535,
+        "event": 593
+      },
+      {
+        "map": 30,
+        "original_event": 27,
+        "event": 594
+      },
+      {
+        "map": 31,
+        "original_event": 28,
+        "event": 595
+      },
+      {
+        "map": 32,
+        "original_event": 536,
+        "event": 596
+      },
+      {
+        "map": 49,
+        "original_event": 501,
+        "event": 597
+      },
+      {
+        "map": 50,
+        "original_event": 520,
+        "event": 598
+      },
+      {
+        "map": 51,
+        "manual_signs": [
+          6,
+          9,
+          10,
+          8
+        ],
+        "original_script": 1057,
+        "script": 1072
+      },
+      {
+        "map": 51,
+        "original_event": 558,
+        "event": 599
+      },
+      {
+        "map": 52,
+        "original_event": 49,
+        "event": 600
+      },
+      {
+        "map": 53,
+        "original_event": 50,
+        "event": 601
+      },
+      {
+        "map": 54,
+        "original_event": 538,
+        "event": 602
+      },
+      {
+        "map": 55,
+        "original_event": 539,
+        "event": 603
+      },
+      {
+        "map": 56,
+        "original_event": 540,
+        "event": 604
+      },
+      {
+        "map": 57,
+        "original_event": 54,
+        "event": 605
+      },
+      {
+        "map": 58,
+        "original_event": 55,
+        "event": 606
+      },
+      {
+        "map": 59,
+        "original_event": 56,
+        "event": 607
+      },
+      {
+        "map": 91,
+        "original_event": 541,
+        "event": 608
+      },
+      {
+        "map": 92,
+        "original_event": 89,
+        "event": 609
+      },
+      {
+        "map": 107,
+        "original_event": 575,
+        "event": 610
+      },
+      {
+        "map": 147,
+        "manual_signs": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "original_script": 1031,
+        "script": 1073
+      },
+      {
+        "map": 147,
+        "original_event": 544,
+        "event": 611
+      },
+      {
+        "map": 388,
+        "original_event": 548,
+        "event": 612
+      },
+      {
+        "map": 414,
+        "manual_signs": [
+          1
+        ],
+        "original_script": 1037,
+        "script": 1074
+      },
+      {
+        "map": 414,
+        "original_event": 559,
+        "event": 613
+      },
+      {
+        "map": 449,
+        "original_event": 404,
+        "event": 614
+      },
+      {
+        "map": 513,
+        "original_event": 465,
+        "event": 615
+      },
+      {
+        "map": 538,
+        "original_event": 566,
+        "event": 616
+      }
+    ],
+    "forest_boards": [
+      {
+        "x": 26,
+        "z": 41,
+        "height": 3,
+        "model": 31,
+        "land": 683,
+        "previous_permission": 0
+      },
+      {
+        "x": 12,
+        "z": 46,
+        "height": 4,
+        "model": 31,
+        "land": 683,
+        "previous_permission": 0
+      },
+      {
+        "x": 47,
+        "z": 46,
+        "height": 3,
+        "model": 31,
+        "land": 684,
+        "previous_permission": 0
+      },
+      {
+        "x": 49,
+        "z": 18,
+        "height": 2,
+        "model": 31,
+        "land": 685,
+        "previous_permission": 0
+      },
+      {
+        "x": 32,
+        "z": 58,
+        "height": 2,
+        "model": 31,
+        "land": 684,
+        "previous_permission": 2
+      },
+      {
+        "x": 11,
+        "z": 17,
+        "height": 2,
+        "model": 31,
+        "land": 686,
+        "previous_permission": 0
+      }
+    ],
+    "forest_original_matrix": 86,
+    "forest_matrix": 291
+  },
+  "item_collision": {
+    "collision_hook": "0x2060c34",
+    "hook": "0x1fff0bc",
+    "item_sprite": 87,
+    "inactive_objects_and_height_checks_preserved": true,
+    "all_other_objects_use_native_flags": true
+  },
+  "route4": {
+    "map": 12,
+    "trainer": 778,
+    "trainer_common": 1077,
+    "team": [
+      {
+        "species": 46,
+        "level": 31,
+        "moves": [
+          10,
+          78,
+          141,
+          147
+        ]
+      },
+      {
+        "species": 46,
+        "level": 31,
+        "moves": [
+          10,
+          78,
+          141,
+          147
+        ]
+      },
+      {
+        "species": 47,
+        "level": 31,
+        "moves": [
+          10,
+          78,
+          141,
+          147
+        ]
+      }
+    ],
+    "optional_yellow_lass_level": 31,
+    "script": 1075,
+    "init": 1076,
+    "text": 885,
+    "event": 617,
+    "wild": 148,
+    "tm": {
+      "item": 118,
+      "flag": 2873,
+      "actor": 3,
+      "x": 1254,
+      "z": 107
+    },
+    "west_npc": {
+      "map": 11,
+      "actor": 20,
+      "x": 1165,
+      "z": 108
+    },
+    "original": {
+      "script": 178,
+      "init": 423,
+      "text": 328,
+      "event": 579,
+      "wild": 114
+    }
+  },
+  "whirlwind": {
+    "tms": [
+      {
+        "item": 118,
+        "move": 18,
+        "index": 103,
+        "number": 4,
+        "name": "WHIRLWIND",
+        "key": "WHIRLWIND",
+        "template": 332,
+        "later_index": 4,
+        "description": "The target is blown away, forcing a switch in battle."
+      }
+    ],
+    "lookup_hooks": [
+      {
+        "site": "0x2078000",
+        "hook": "0x1fff0d0",
+        "previous": "0x1ffd999"
+      },
+      {
+        "site": "0x207804c",
+        "hook": "0x1fff0e0",
+        "previous": "0x1ffd9b1"
+      }
+    ],
+    "display_hooks": [
+      {
+        "site": "0x21fe920",
+        "hook": "0x1fff0f0"
+      },
+      {
+        "site": "0x21ff5b2",
+        "hook": "0x1fff128"
+      }
+    ],
+    "compatible_species": {
+      "WHIRLWIND": [
+        12,
+        16,
+        17,
+        18,
+        21,
+        22,
+        41,
+        42,
+        49,
+        83,
+        84,
+        85,
+        142,
+        144,
+        145,
+        146,
+        151,
+        156,
+        157,
+        159,
+        160,
+        208,
+        209,
+        210,
+        216,
+        217,
+        220,
+        221,
+        227,
+        228,
+        229,
+        231,
+        232,
+        234,
+        243,
+        244,
+        245,
+        248,
+        249,
+        250,
+        254,
+        257,
+        260,
+        261,
+        262,
+        264,
+        288,
+        289,
+        293,
+        294,
+        295,
+        304,
+        305,
+        306,
+        309,
+        310,
+        319,
+        320,
+        321,
+        323,
+        334,
+        335,
+        357,
+        364,
+        365,
+        371,
+        372,
+        373,
+        380,
+        381,
+        382,
+        383,
+        384,
+        389,
+        392,
+        395,
+        403,
+        404,
+        405,
+        408,
+        409,
+        410,
+        411,
+        419,
+        432,
+        434,
+        435,
+        443,
+        444,
+        445,
+        447,
+        448,
+        449,
+        450,
+        452,
+        464,
+        470,
+        471,
+        473,
+        483,
+        484,
+        485,
+        487,
+        493,
+        501
+      ]
+    },
+    "generation_one_compatibility": "Yellow",
+    "later_compatibility": "Roar",
+    "native_tm_items_preserved": true,
+    "native_save_layout_preserved": true
+  },
+  "route4_save_refresh": {
+    "map": 12,
+    "flag": 2874,
+    "state_var": 16706,
+    "script": 1079,
+    "init": 1080,
+    "entry": 3,
+    "noop_hook": "0x1fff160",
+    "previous_hook": "0x1ffb4b5",
+    "marker": "0x4d501939",
+    "removed_ids": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "restored_ids": [
+      1,
+      3
+    ],
+    "party_items_quest_and_normal_save_layout_preserved": true
+  },
+  "publication": {
+    "commit": "732edbaea0dfbe33dc038db31747b173a21d1f27",
+    "confirmed_push_utc": "2026-10-11T04:01:19.942348+00:00",
+    "source_commit": "1e1015aba24b564840d2100d8631e156aa7569a6",
+    "url": "https://raw.githack.com/ThatAnarchyDude/corvus-workshop/732edbaea0dfbe33dc038db31747b173a21d1f27/psyduck-yellow/prototype-0019/index.html"
+  },
+  "automated_checks": {
+    "regression_tests": 275,
+    "regression_status": "passed before the final Geodude NPC coordinate correction",
+    "final_focused_tests": 12,
+    "final_focused_status": "passed on the final release ROM",
+    "thumb_checks": "Collision flags across 1024 sprites; all 537 native item lookups; migration marker at all four byte alignments; unrelated Nop delegation preserved."
+  },
+  "browser": {
+    "output_sha256": "29d274454fd191bf0e41192322113f1ecb6961e74ca55dda3566b11fc13637cd",
+    "bad_input_rejected": true,
+    "browser_errors": [],
+    "download_name": "Pokemon-Psyduck-Yellow-prototype-0019.nds"
+  },
+  "native_checks": {
+    "seed": "Last normal 0018 Helix/HP Up Route 4 save, copied for testing; original retained.",
+    "direct_0018_continue": {
+      "directory": "emulator-0019-final-from-0018",
+      "quest": [
+        3,
+        2
+      ],
+      "location": [
+        12,
+        4294967295,
+        1195,
+        113,
+        1
+      ],
+      "money": 4262,
+      "items": {
+        "45": 1,
+        "101": 1,
+        "102": 0,
+        "116": 0,
+        "117": 0,
+        "118": 0
+      },
+      "party": [
+        {
+          "species": 55,
+          "level": 21,
+          "moves": [
+            39,
+            55,
+            50,
+            93
+          ]
+        }
+      ]
+    },
+    "refreshed_route4_actors": [
+      [
+        1,
+        320,
+        [
+          1250,
+          0,
+          109
+        ]
+      ],
+      [
+        3,
+        87,
+        [
+          1254,
+          0,
+          107
+        ]
+      ]
+    ],
+    "fresh_normal_save_reload": {
+      "directory": "emulator-0019-actual-release-reload",
+      "quest": [
+        3,
+        2
+      ],
+      "location": [
+        12,
+        4294967295,
+        1254,
+        107,
+        0
+      ],
+      "money": 4262,
+      "items": {
+        "45": 1,
+        "101": 1,
+        "102": 0,
+        "116": 0,
+        "117": 0,
+        "118": 1
+      },
+      "party": [
+        {
+          "species": 55,
+          "level": 21,
+          "moves": [
+            39,
+            55,
+            50,
+            93
+          ]
+        }
+      ]
+    },
+    "observed": [
+      "Visible Forest board remains silent on approach and reads Yellow Antidote advice with A.",
+      "Route 4 sign reads with A; main path reaches the Whirlwind pickup without inherited HeartGold trainer interruption.",
+      "Item ball blocks movement before collection; its tile is walkable after collection.",
+      "Whirlwind pickup appears once and remains in the bag after normal save and fresh boot.",
+      "Optional Lass starts a native battle with level-31 Paras; full three-member team and moves verified from ROM data.",
+      "Geodude-comment NPC is reachable by the Route 3 Center and displays the complete Yellow dialogue."
+    ],
+    "evidence_note": "Sign, item and Lass walks used the candidate with identical interaction/battle hooks and Route 4 data. The final coordinate correction moved only the west-side Geodude NPC; final native checks repeated direct 0018 Continue, normal-save reload and that NPC conversation."
+  },
+  "limitations": [
+    "Cerulean City and later campaign areas remain unconverted.",
+    "The optional Lass battle was started, not completed in the emulator during this checkpoint.",
+    "Every encounter slot and optional conversation has not been individually played.",
+    "Audio has not been audited by ear.",
+    "Normal save compatibility verified for these carried saves; keep backups. Emulator save states stay with their exact ROM."
+  ],
+  "published_files_byte_verified": [
+    {
+      "file": "index.html",
+      "bytes": 1215669,
+      "sha256": "937f9557f9e9912cb2f616bbdb40c45671fd2fd6a1554eb1a910bd518a8f5df0"
+    },
+    {
+      "file": "manifest.json",
+      "bytes": 486,
+      "sha256": "5c7b18c45075be2bf96802ad47d5301b2171cda2444f367f9148a3c3dae034b9"
+    },
+    {
+      "file": "LICENSE.txt",
+      "bytes": 1229,
+      "sha256": "a379dd012587a2fbe434ea6fcef30f502f32077738c2bd36e9e20cce621162bb"
+    }
+  ]
+}

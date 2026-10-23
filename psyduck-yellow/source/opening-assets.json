@@ -1,0 +1,144 @@
+{
+  "base_sha256": "65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105",
+  "scope": "read-only opening asset inspection; no gameplay edits",
+  "dex_policy": {
+    "current": "National Dex at starter receipt",
+    "future": "Oak parcel return; deferred by user"
+  },
+  "new_game_location": {
+    "component": "decompressed ARM9 first section",
+    "offset": 1024380,
+    "original": [
+      64,
+      -1,
+      6,
+      6,
+      1
+    ],
+    "candidate_map_id": 506,
+    "candidate_coordinates": "Must validate collision and stair access in emulator"
+  },
+  "maps": [
+    {
+      "name": "Pallet Town",
+      "map_id": 49,
+      "assets": {
+        "script": {
+          "index": 735,
+          "bytes": 696,
+          "sha256": "30fc3b0cfe851781bd2d58c6bf74a3b581b44f6be772c9883250ed566ee2ea7f"
+        },
+        "init_script": {
+          "index": 508,
+          "bytes": 8,
+          "sha256": "53aa3c1e3c40d0c9ed896248a829501c2f97e16634873fcc4bded2aca279ec64"
+        },
+        "messages": {
+          "index": 446,
+          "bytes": 486,
+          "sha256": "2fc0e6670b082985bd4a89192ef3cf31d8faabea9dab443b5dc03b60378894dc",
+          "count": 6
+        },
+        "events": {
+          "index": 46,
+          "bytes": 228,
+          "sha256": "3563e592d5c62319629f1e4414172e62c026ccde73ee26648a5c2f66696bd2e3"
+        }
+      }
+    },
+    {
+      "name": "Red's house, downstairs",
+      "map_id": 503,
+      "assets": {
+        "script": {
+          "index": 736,
+          "bytes": 48,
+          "sha256": "be14f9498778ad1670cdffad430cb2093cfa674a92b429761a94ea8bb7cb0072"
+        },
+        "init_script": {
+          "index": 509,
+          "bytes": 4,
+          "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+        },
+        "messages": {
+          "index": 447,
+          "bytes": 644,
+          "sha256": "f0b8c0d6a339dc1b512cbb2267aee163d421e54fd66f720a99d8b9c3bfe185c8",
+          "count": 3
+        },
+        "events": {
+          "index": 455,
+          "bytes": 112,
+          "sha256": "c6debd284390d321288a2b4216b59fe5adba981e30e2844846a2393d43534e12"
+        }
+      }
+    },
+    {
+      "name": "Red's house, upstairs",
+      "map_id": 506,
+      "assets": {
+        "script": {
+          "index": 737,
+          "bytes": 44,
+          "sha256": "743fb30e1bd83a2d1c4741338ce54802e0cb80540443f5a03a9dfffc62d988ec"
+        },
+        "init_script": {
+          "index": 510,
+          "bytes": 4,
+          "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+        },
+        "messages": {
+          "index": 448,
+          "bytes": 202,
+          "sha256": "e77522f2c2156ec68f8bad49383d016e357ca1ba5e9b57d7cc64b8f634f67834",
+          "count": 2
+        },
+        "events": {
+          "index": 458,
+          "bytes": 68,
+          "sha256": "82e0c000c0b38f1b240b4023aaab1daf956623af157d263e36410acaead979f0"
+        }
+      }
+    },
+    {
+      "name": "Oak's lab",
+      "map_id": 505,
+      "assets": {
+        "script": {
+          "index": 740,
+          "bytes": 2516,
+          "sha256": "06a28a69fc35db60a09fd67614ced099409216fbd5daa20059565d7c1ae44bb7"
+        },
+        "init_script": {
+          "index": 513,
+          "bytes": 20,
+          "sha256": "2d238802f0dd4e410e9a085323f107a2ec5f33521239d46b6aff516802b998d1"
+        },
+        "messages": {
+          "index": 451,
+          "bytes": 19906,
+          "sha256": "f503873f66f0185b1415a9638ebd7f533d6f9df45a257601ad93c9f747e5b72d",
+          "count": 58
+        },
+        "events": {
+          "index": 457,
+          "bytes": 572,
+          "sha256": "2d6fe4bd20e1df381033b485dcc6738444f19e713fe818e0de967bd37256eb50"
+        }
+      }
+    }
+  ],
+  "integration_requirements": [
+    "Preserve original HeartGold Kanto events and scripts, including Oak VAR_UNK_4131 state checks, for later relocation into the Johto postgame.",
+    "Implement the Pallet opening in separate script assets; retain original event logic and dependencies.",
+    "Defer destination maps, actor/sprite changes and progression design for preserved Kanto events until Johto postgame implementation.",
+    "Keep the National Dex grant at starter receipt in the next opening build.",
+    "Initialize the slot-1 follower in Oak lab before exploration resumes.",
+    "Provide separate opening home dialogue while preserving existing events; prevent travel with an empty party.",
+    "Relocate blackout recovery and home-return backup independently of initial spawn.",
+    "Preserve native warp links and validate both directions.",
+    "Add first rival battle and starter-dependent rival choices.",
+    "Rebalance Route 1 encounters before opening northward progression.",
+    "Test fresh saves separately from prototype-001 save data."
+  ]
+}

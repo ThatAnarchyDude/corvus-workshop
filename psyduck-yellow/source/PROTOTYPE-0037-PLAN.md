@@ -1,0 +1,2 @@
+##0037 RockTunnel required progression
+Baseline0036released. Privatev2Yellow15trainers/grasscompiled,fourfocusedchecksPASS; nativepending. Readlatesthandoffexactcandidate/runner/positions. FinishnativeFlash/1F+B1Fbattle/ordinaryfullroute/SaveContinue,packagepromptly,postpublicpatchanddatedlog/latestlink,thencontinueLavender/Tower/SilphScope. Do notdelayforoptionalTMpickups/decor/PC. Preserveallreleases/Johto/customizations; nofullnewgameclaim.

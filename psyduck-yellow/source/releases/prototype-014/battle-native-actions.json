@@ -1,0 +1,1269 @@
+[
+  {
+    "frames": 1200
+  },
+  {
+    "frames": 15,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 400
+  },
+  {
+    "frames": 15,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 600
+  },
+  {
+    "frames": 15,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 600
+  },
+  {
+    "frames": 120,
+    "screenshot": "loaded.png"
+  },
+  {
+    "frames": 12,
+    "buttons": [
+      7
+    ]
+  },
+  {
+    "frames": 200,
+    "screenshot": "approach.png"
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 120
+  },
+  {
+    "frames": 3,
+    "touch": [
+      122,
+      246
+    ]
+  },
+  {
+    "frames": 80
+  },
+  {
+    "frames": 3,
+    "touch": [
+      186,
+      238
+    ]
+  },
+  {
+    "frames": 350,
+    "screenshot": "battle-0.png"
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 120
+  },
+  {
+    "frames": 3,
+    "touch": [
+      122,
+      246
+    ]
+  },
+  {
+    "frames": 80
+  },
+  {
+    "frames": 3,
+    "touch": [
+      186,
+      238
+    ]
+  },
+  {
+    "frames": 350,
+    "screenshot": "battle-1.png"
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 120
+  },
+  {
+    "frames": 3,
+    "touch": [
+      122,
+      246
+    ]
+  },
+  {
+    "frames": 80
+  },
+  {
+    "frames": 3,
+    "touch": [
+      186,
+      238
+    ]
+  },
+  {
+    "frames": 350,
+    "screenshot": "battle-2.png"
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 120
+  },
+  {
+    "frames": 3,
+    "touch": [
+      122,
+      246
+    ]
+  },
+  {
+    "frames": 80
+  },
+  {
+    "frames": 3,
+    "touch": [
+      186,
+      238
+    ]
+  },
+  {
+    "frames": 350,
+    "screenshot": "battle-3.png"
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 120
+  },
+  {
+    "frames": 3,
+    "touch": [
+      122,
+      246
+    ]
+  },
+  {
+    "frames": 80
+  },
+  {
+    "frames": 3,
+    "touch": [
+      186,
+      238
+    ]
+  },
+  {
+    "frames": 350,
+    "screenshot": "battle-4.png"
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 120
+  },
+  {
+    "frames": 3,
+    "touch": [
+      122,
+      246
+    ]
+  },
+  {
+    "frames": 80
+  },
+  {
+    "frames": 3,
+    "touch": [
+      186,
+      238
+    ]
+  },
+  {
+    "frames": 350,
+    "screenshot": "battle-5.png"
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 120
+  },
+  {
+    "frames": 3,
+    "touch": [
+      122,
+      246
+    ]
+  },
+  {
+    "frames": 80
+  },
+  {
+    "frames": 3,
+    "touch": [
+      186,
+      238
+    ]
+  },
+  {
+    "frames": 350,
+    "screenshot": "battle-6.png"
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 120
+  },
+  {
+    "frames": 3,
+    "touch": [
+      122,
+      246
+    ]
+  },
+  {
+    "frames": 80
+  },
+  {
+    "frames": 3,
+    "touch": [
+      186,
+      238
+    ]
+  },
+  {
+    "frames": 350,
+    "screenshot": "battle-7.png"
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 120
+  },
+  {
+    "frames": 3,
+    "touch": [
+      122,
+      246
+    ]
+  },
+  {
+    "frames": 80
+  },
+  {
+    "frames": 3,
+    "touch": [
+      186,
+      238
+    ]
+  },
+  {
+    "frames": 350,
+    "screenshot": "battle-8.png"
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 120
+  },
+  {
+    "frames": 3,
+    "touch": [
+      122,
+      246
+    ]
+  },
+  {
+    "frames": 80
+  },
+  {
+    "frames": 3,
+    "touch": [
+      186,
+      238
+    ]
+  },
+  {
+    "frames": 350,
+    "screenshot": "battle-9.png"
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 120
+  },
+  {
+    "frames": 3,
+    "touch": [
+      122,
+      246
+    ]
+  },
+  {
+    "frames": 80
+  },
+  {
+    "frames": 3,
+    "touch": [
+      186,
+      238
+    ]
+  },
+  {
+    "frames": 350,
+    "screenshot": "battle-10.png"
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 120
+  },
+  {
+    "frames": 3,
+    "touch": [
+      122,
+      246
+    ]
+  },
+  {
+    "frames": 80
+  },
+  {
+    "frames": 3,
+    "touch": [
+      186,
+      238
+    ]
+  },
+  {
+    "frames": 350,
+    "screenshot": "battle-11.png"
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 120
+  },
+  {
+    "frames": 3,
+    "touch": [
+      122,
+      246
+    ]
+  },
+  {
+    "frames": 80
+  },
+  {
+    "frames": 3,
+    "touch": [
+      186,
+      238
+    ]
+  },
+  {
+    "frames": 350,
+    "screenshot": "battle-12.png"
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 120
+  },
+  {
+    "frames": 3,
+    "touch": [
+      122,
+      246
+    ]
+  },
+  {
+    "frames": 80
+  },
+  {
+    "frames": 3,
+    "touch": [
+      186,
+      238
+    ]
+  },
+  {
+    "frames": 350,
+    "screenshot": "battle-13.png"
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 120
+  },
+  {
+    "frames": 3,
+    "touch": [
+      122,
+      246
+    ]
+  },
+  {
+    "frames": 80
+  },
+  {
+    "frames": 3,
+    "touch": [
+      186,
+      238
+    ]
+  },
+  {
+    "frames": 350,
+    "screenshot": "battle-14.png"
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 120
+  },
+  {
+    "frames": 3,
+    "touch": [
+      122,
+      246
+    ]
+  },
+  {
+    "frames": 80
+  },
+  {
+    "frames": 3,
+    "touch": [
+      186,
+      238
+    ]
+  },
+  {
+    "frames": 350,
+    "screenshot": "battle-15.png"
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 120
+  },
+  {
+    "frames": 3,
+    "touch": [
+      122,
+      246
+    ]
+  },
+  {
+    "frames": 80
+  },
+  {
+    "frames": 3,
+    "touch": [
+      186,
+      238
+    ]
+  },
+  {
+    "frames": 350,
+    "screenshot": "battle-16.png"
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 120
+  },
+  {
+    "frames": 3,
+    "touch": [
+      122,
+      246
+    ]
+  },
+  {
+    "frames": 80
+  },
+  {
+    "frames": 3,
+    "touch": [
+      186,
+      238
+    ]
+  },
+  {
+    "frames": 350,
+    "screenshot": "battle-17.png"
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 120
+  },
+  {
+    "frames": 3,
+    "touch": [
+      122,
+      246
+    ]
+  },
+  {
+    "frames": 80
+  },
+  {
+    "frames": 3,
+    "touch": [
+      186,
+      238
+    ]
+  },
+  {
+    "frames": 350,
+    "screenshot": "battle-18.png"
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 120
+  },
+  {
+    "frames": 3,
+    "touch": [
+      122,
+      246
+    ]
+  },
+  {
+    "frames": 80
+  },
+  {
+    "frames": 3,
+    "touch": [
+      186,
+      238
+    ]
+  },
+  {
+    "frames": 350,
+    "screenshot": "battle-19.png"
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 120
+  },
+  {
+    "frames": 3,
+    "touch": [
+      122,
+      246
+    ]
+  },
+  {
+    "frames": 80
+  },
+  {
+    "frames": 3,
+    "touch": [
+      186,
+      238
+    ]
+  },
+  {
+    "frames": 350,
+    "screenshot": "battle-20.png"
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 120
+  },
+  {
+    "frames": 3,
+    "touch": [
+      122,
+      246
+    ]
+  },
+  {
+    "frames": 80
+  },
+  {
+    "frames": 3,
+    "touch": [
+      186,
+      238
+    ]
+  },
+  {
+    "frames": 350,
+    "screenshot": "battle-21.png"
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 180
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 180
+  },
+  {
+    "frames": 3,
+    "touch": [
+      125,
+      245
+    ]
+  },
+  {
+    "frames": 35,
+    "screenshot": "moves.png"
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 120
+  },
+  {
+    "frames": 3,
+    "touch": [
+      122,
+      246
+    ]
+  },
+  {
+    "frames": 80
+  },
+  {
+    "frames": 3,
+    "touch": [
+      53,
+      238
+    ]
+  },
+  {
+    "frames": 350,
+    "screenshot": "tackle-0.png"
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 120
+  },
+  {
+    "frames": 3,
+    "touch": [
+      122,
+      246
+    ]
+  },
+  {
+    "frames": 80
+  },
+  {
+    "frames": 3,
+    "touch": [
+      53,
+      238
+    ]
+  },
+  {
+    "frames": 350,
+    "screenshot": "tackle-1.png"
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 120
+  },
+  {
+    "frames": 3,
+    "touch": [
+      122,
+      246
+    ]
+  },
+  {
+    "frames": 80
+  },
+  {
+    "frames": 3,
+    "touch": [
+      53,
+      238
+    ]
+  },
+  {
+    "frames": 350,
+    "screenshot": "tackle-2.png"
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 120
+  },
+  {
+    "frames": 3,
+    "touch": [
+      122,
+      246
+    ]
+  },
+  {
+    "frames": 80
+  },
+  {
+    "frames": 3,
+    "touch": [
+      53,
+      238
+    ]
+  },
+  {
+    "frames": 350,
+    "screenshot": "tackle-3.png"
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 120
+  },
+  {
+    "frames": 3,
+    "touch": [
+      122,
+      246
+    ]
+  },
+  {
+    "frames": 80
+  },
+  {
+    "frames": 3,
+    "touch": [
+      53,
+      238
+    ]
+  },
+  {
+    "frames": 350,
+    "screenshot": "tackle-4.png"
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 120
+  },
+  {
+    "frames": 3,
+    "touch": [
+      122,
+      246
+    ]
+  },
+  {
+    "frames": 80
+  },
+  {
+    "frames": 3,
+    "touch": [
+      53,
+      238
+    ]
+  },
+  {
+    "frames": 350,
+    "screenshot": "tackle-5.png"
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 120
+  },
+  {
+    "frames": 3,
+    "touch": [
+      122,
+      246
+    ]
+  },
+  {
+    "frames": 80
+  },
+  {
+    "frames": 3,
+    "touch": [
+      53,
+      238
+    ]
+  },
+  {
+    "frames": 350,
+    "screenshot": "tackle-6.png"
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 120
+  },
+  {
+    "frames": 3,
+    "touch": [
+      122,
+      246
+    ]
+  },
+  {
+    "frames": 80
+  },
+  {
+    "frames": 3,
+    "touch": [
+      53,
+      238
+    ]
+  },
+  {
+    "frames": 350,
+    "screenshot": "tackle-7.png"
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 120
+  },
+  {
+    "frames": 3,
+    "touch": [
+      122,
+      246
+    ]
+  },
+  {
+    "frames": 80
+  },
+  {
+    "frames": 3,
+    "touch": [
+      53,
+      238
+    ]
+  },
+  {
+    "frames": 350,
+    "screenshot": "tackle-8.png"
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 120
+  },
+  {
+    "frames": 3,
+    "touch": [
+      122,
+      246
+    ]
+  },
+  {
+    "frames": 80
+  },
+  {
+    "frames": 3,
+    "touch": [
+      53,
+      238
+    ]
+  },
+  {
+    "frames": 350,
+    "screenshot": "tackle-9.png"
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 120
+  },
+  {
+    "frames": 3,
+    "touch": [
+      122,
+      246
+    ]
+  },
+  {
+    "frames": 80
+  },
+  {
+    "frames": 3,
+    "touch": [
+      53,
+      238
+    ]
+  },
+  {
+    "frames": 350,
+    "screenshot": "tackle-10.png"
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 120
+  },
+  {
+    "frames": 3,
+    "touch": [
+      122,
+      246
+    ]
+  },
+  {
+    "frames": 80
+  },
+  {
+    "frames": 3,
+    "touch": [
+      53,
+      238
+    ]
+  },
+  {
+    "frames": 350,
+    "screenshot": "tackle-11.png"
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 120
+  },
+  {
+    "frames": 3,
+    "touch": [
+      122,
+      246
+    ]
+  },
+  {
+    "frames": 80
+  },
+  {
+    "frames": 3,
+    "touch": [
+      53,
+      238
+    ]
+  },
+  {
+    "frames": 350,
+    "screenshot": "tackle-12.png"
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 120
+  },
+  {
+    "frames": 3,
+    "touch": [
+      122,
+      246
+    ]
+  },
+  {
+    "frames": 80
+  },
+  {
+    "frames": 3,
+    "touch": [
+      53,
+      238
+    ]
+  },
+  {
+    "frames": 350,
+    "screenshot": "tackle-13.png"
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 120
+  },
+  {
+    "frames": 3,
+    "touch": [
+      122,
+      246
+    ]
+  },
+  {
+    "frames": 80
+  },
+  {
+    "frames": 3,
+    "touch": [
+      53,
+      238
+    ]
+  },
+  {
+    "frames": 350,
+    "screenshot": "tackle-14.png"
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      0
+    ]
+  },
+  {
+    "frames": 120
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      0
+    ]
+  },
+  {
+    "frames": 120
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      0
+    ]
+  },
+  {
+    "frames": 120
+  },
+  {
+    "frames": 3,
+    "touch": [
+      124,
+      266
+    ]
+  },
+  {
+    "frames": 100
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 120
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 120
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 900,
+    "screenshot": "saved-victory.png"
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 1000
+  },
+  {
+    "frames": 10,
+    "buttons": [
+      8
+    ]
+  },
+  {
+    "frames": 200,
+    "screenshot": "saved-final.png"
+  }
+]

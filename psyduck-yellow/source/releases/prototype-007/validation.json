@@ -1,0 +1,661 @@
+{
+  "mappings": [
+    {
+      "map_id": 49,
+      "script": 986,
+      "init": 987,
+      "text": 840,
+      "event": 501
+    },
+    {
+      "map_id": 505,
+      "script": 988,
+      "init": 989,
+      "text": 841,
+      "event": 502
+    },
+    {
+      "map_id": 503,
+      "script": 990,
+      "init": 991,
+      "text": 842,
+      "event": 503
+    },
+    {
+      "map_id": 504,
+      "script": 992,
+      "init": 993,
+      "text": 843,
+      "event": 504
+    },
+    {
+      "map_id": 506,
+      "script": 994,
+      "init": 995,
+      "text": 844,
+      "event": 505
+    },
+    {
+      "map_id": 9,
+      "script": 996,
+      "init": 997,
+      "text": 845,
+      "event": 506
+    },
+    {
+      "map_id": 527,
+      "script": 998,
+      "init": 999,
+      "text": 846,
+      "event": 507
+    },
+    {
+      "map_id": 50,
+      "script": 1000,
+      "init": 1001,
+      "text": 847,
+      "event": 508
+    },
+    {
+      "map_id": 500,
+      "script": 1002,
+      "init": 1003,
+      "text": 848,
+      "event": 509
+    },
+    {
+      "map_id": 501,
+      "script": 1004,
+      "init": 1005,
+      "text": 849,
+      "event": 510
+    }
+  ],
+  "dex_gate_hook": "0x1ff896c",
+  "shoes_item": 113,
+  "shoes_param_member": 514,
+  "parcel_item": 459,
+  "variables": {
+    "parcel": 16746,
+    "shoes": 16745,
+    "cashier": 16749,
+    "balls": 2899
+  },
+  "original_assets_preserved": true,
+  "version": "007",
+  "output_sha256": "28803b52062e6bc23c777d14092678255eb4412e46b1d87984d5eaef6609bcbf",
+  "patch_sha256": "a43749e189e01024853195e8bc40aaaf1f61c1e8ee2ab8994083581faa95de45",
+  "changed_file_ids": [
+    141,
+    146,
+    156,
+    161
+  ],
+  "date": "2026-10-09",
+  "tests": {
+    "passed": 82,
+    "skipped": 0
+  },
+  "browser": {
+    "output_sha256": "28803b52062e6bc23c777d14092678255eb4412e46b1d87984d5eaef6609bcbf",
+    "bad_input_rejected": true,
+    "browser_errors": []
+  },
+  "emulator": {
+    "engine": "DeSmuME libretro",
+    "completed": [
+      "Imported prototype-006 post-starter normal save; Dex hidden and caught records retained",
+      "Mom walk, shoes item and running unlock; Route 1 entry",
+      "Low-level Pidgey and Rattata wild encounters; both gatehouse directions",
+      "Cashier approach from Mart, outside greeting and walking escort; explanation inside Mart",
+      "Parcel receipt without Dex; held-parcel normal save/reload preserves shoes, parcel and cashier state",
+      "Native Center healing, box storage UI, Player PC shared item storage and Potion withdrawal",
+      "Returned parcel to Oak; Blue enters/leaves; National Dex enabled and parcel removed",
+      "Five Pok\u00e9 Balls granted on next Oak conversation",
+      "Imported an actual prototype-006 outdoor Pallet save; new Mom actor and shoes scene complete",
+      "Normal save/reload after delivery preserves National Dex, quest completion, five Pok\u00e9 Balls and PC withdrawal",
+      "Repeat Oak conversation after reload does not repeat parcel delivery or Pok\u00e9 Ball gift"
+    ],
+    "unrun": [
+      "Android emulator",
+      "Listening test",
+      "Complete fresh-game opening on prototype 007",
+      "All approach columns in the emulator"
+    ]
+  },
+  "save_checks": {
+    "parcel_held": {
+      "dex": {
+        "address": "0x227d520",
+        "flags": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "owned": [
+          133
+        ]
+      },
+      "field": {
+        "address": "0x22a0240",
+        "map_id": 500,
+        "player": [
+          4,
+          0,
+          8
+        ],
+        "follower": [
+          4,
+          0,
+          10
+        ],
+        "follower_species": 133,
+        "follower_active": 1,
+        "party_count": 1,
+        "active_dex_address": "0x227d520"
+      },
+      "note": "Follower visibility is verified separately in screenshots, not inferred from active state.",
+      "quest": {
+        "parcel": 1,
+        "shoes": 1,
+        "cashier": 2,
+        "initialized": true,
+        "balls_given": false
+      },
+      "key_items": {
+        "113": 1,
+        "459": 1
+      },
+      "running_unlocked": true
+    },
+    "center_storage": {
+      "dex": {
+        "address": "0x227d508",
+        "flags": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "owned": [
+          133
+        ],
+        "seen": [
+          16,
+          19,
+          54,
+          133
+        ]
+      },
+      "field": {
+        "address": "0x22a0228",
+        "map_id": 50,
+        "player": [
+          1032,
+          6,
+          263
+        ],
+        "follower": [
+          1032,
+          6,
+          263
+        ],
+        "follower_species": 133,
+        "follower_active": 1,
+        "party_count": 1,
+        "active_dex_address": "0x227d508"
+      },
+      "note": "Follower visibility is verified separately in screenshots, not inferred from active state.",
+      "quest": {
+        "parcel": 1,
+        "shoes": 1,
+        "cashier": 2,
+        "initialized": true,
+        "balls_given": false
+      },
+      "pc_storage": [
+        {
+          "item": 0,
+          "quantity": 0
+        },
+        {
+          "item": 50,
+          "quantity": 95
+        },
+        {
+          "item": 83,
+          "quantity": 95
+        },
+        {
+          "item": 84,
+          "quantity": 95
+        },
+        {
+          "item": 82,
+          "quantity": 95
+        },
+        {
+          "item": 109,
+          "quantity": 95
+        },
+        {
+          "item": 108,
+          "quantity": 95
+        },
+        {
+          "item": 246,
+          "quantity": 95
+        },
+        {
+          "item": 85,
+          "quantity": 95
+        },
+        {
+          "item": 0,
+          "quantity": 0
+        }
+      ],
+      "bag_items": {
+        "113": 1,
+        "459": 1,
+        "17": 2,
+        "50": 95
+      },
+      "key_items": {
+        "113": 1,
+        "459": 1
+      },
+      "running_unlocked": true
+    },
+    "parcel_delivered": {
+      "dex": {
+        "address": "0x227d4a4",
+        "flags": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "owned": [
+          133
+        ],
+        "seen": [
+          16,
+          19,
+          54,
+          133
+        ]
+      },
+      "field": {
+        "address": "0x22a01c4",
+        "map_id": 505,
+        "player": [
+          8,
+          0,
+          7
+        ],
+        "follower": [
+          8,
+          0,
+          8
+        ],
+        "follower_species": 133,
+        "follower_active": 1,
+        "party_count": 1,
+        "active_dex_address": "0x227d4a4"
+      },
+      "note": "Follower visibility is verified separately in screenshots, not inferred from active state.",
+      "quest": {
+        "parcel": 2,
+        "shoes": 1,
+        "cashier": 2,
+        "initialized": true,
+        "balls_given": true
+      },
+      "pc_storage": [
+        {
+          "item": 0,
+          "quantity": 0
+        },
+        {
+          "item": 50,
+          "quantity": 95
+        },
+        {
+          "item": 83,
+          "quantity": 95
+        },
+        {
+          "item": 84,
+          "quantity": 95
+        },
+        {
+          "item": 82,
+          "quantity": 95
+        },
+        {
+          "item": 109,
+          "quantity": 95
+        },
+        {
+          "item": 108,
+          "quantity": 95
+        },
+        {
+          "item": 246,
+          "quantity": 95
+        },
+        {
+          "item": 85,
+          "quantity": 95
+        },
+        {
+          "item": 0,
+          "quantity": 0
+        }
+      ],
+      "bag_items": {
+        "113": 1,
+        "17": 2,
+        "50": 95,
+        "4": 5
+      },
+      "key_items": {
+        "113": 1
+      },
+      "running_unlocked": true
+    },
+    "old_pallet_migration": {
+      "dex": {
+        "address": "0x227d534",
+        "flags": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "owned": [
+          133
+        ],
+        "seen": [
+          54,
+          133
+        ]
+      },
+      "field": {
+        "address": "0x22a0254",
+        "map_id": 49,
+        "player": [
+          1040,
+          2,
+          358
+        ],
+        "follower": [
+          1040,
+          2,
+          359
+        ],
+        "follower_species": 133,
+        "follower_active": 1,
+        "party_count": 1,
+        "active_dex_address": "0x227d534"
+      },
+      "note": "Follower visibility is verified separately in screenshots, not inferred from active state.",
+      "quest": {
+        "parcel": 0,
+        "shoes": 1,
+        "cashier": 0,
+        "initialized": true,
+        "balls_given": false
+      },
+      "pc_storage": [
+        {
+          "item": 0,
+          "quantity": 0
+        },
+        {
+          "item": 0,
+          "quantity": 0
+        },
+        {
+          "item": 0,
+          "quantity": 0
+        },
+        {
+          "item": 0,
+          "quantity": 0
+        },
+        {
+          "item": 0,
+          "quantity": 0
+        },
+        {
+          "item": 0,
+          "quantity": 0
+        },
+        {
+          "item": 0,
+          "quantity": 0
+        },
+        {
+          "item": 0,
+          "quantity": 0
+        },
+        {
+          "item": 0,
+          "quantity": 0
+        },
+        {
+          "item": 0,
+          "quantity": 0
+        }
+      ],
+      "bag_items": {
+        "113": 1,
+        "17": 1,
+        "50": 95
+      },
+      "key_items": {
+        "113": 1
+      },
+      "running_unlocked": true
+    },
+    "delivery_reload": {
+      "dex": {
+        "address": "0x227d4c8",
+        "flags": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "owned": [
+          133
+        ],
+        "seen": [
+          16,
+          19,
+          54,
+          133
+        ]
+      },
+      "field": {
+        "address": "0x22a01e8",
+        "map_id": 505,
+        "player": [
+          8,
+          0,
+          7
+        ],
+        "follower": [
+          8,
+          0,
+          8
+        ],
+        "follower_species": 133,
+        "follower_active": 1,
+        "party_count": 1,
+        "active_dex_address": "0x227d4c8"
+      },
+      "note": "Follower visibility is verified separately in screenshots, not inferred from active state.",
+      "quest": {
+        "parcel": 2,
+        "shoes": 1,
+        "cashier": 2,
+        "initialized": true,
+        "balls_given": true
+      },
+      "pc_storage": [
+        {
+          "item": 0,
+          "quantity": 0
+        },
+        {
+          "item": 50,
+          "quantity": 95
+        },
+        {
+          "item": 83,
+          "quantity": 95
+        },
+        {
+          "item": 84,
+          "quantity": 95
+        },
+        {
+          "item": 82,
+          "quantity": 95
+        },
+        {
+          "item": 109,
+          "quantity": 95
+        },
+        {
+          "item": 108,
+          "quantity": 95
+        },
+        {
+          "item": 246,
+          "quantity": 95
+        },
+        {
+          "item": 85,
+          "quantity": 95
+        },
+        {
+          "item": 0,
+          "quantity": 0
+        }
+      ],
+      "bag_items": {
+        "113": 1,
+        "17": 2,
+        "50": 95,
+        "4": 5
+      },
+      "key_items": {
+        "113": 1
+      },
+      "running_unlocked": true
+    },
+    "repeat_oak": {
+      "dex": {
+        "address": "0x227d4c8",
+        "flags": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "owned": [
+          133
+        ],
+        "seen": [
+          16,
+          19,
+          54,
+          133
+        ]
+      },
+      "field": {
+        "address": "0x22a01e8",
+        "map_id": 505,
+        "player": [
+          8,
+          0,
+          7
+        ],
+        "follower": [
+          8,
+          0,
+          8
+        ],
+        "follower_species": 133,
+        "follower_active": 1,
+        "party_count": 1,
+        "active_dex_address": "0x227d4c8"
+      },
+      "note": "Follower visibility is verified separately in screenshots, not inferred from active state.",
+      "quest": {
+        "parcel": 2,
+        "shoes": 1,
+        "cashier": 2,
+        "initialized": true,
+        "balls_given": true
+      },
+      "pc_storage": [
+        {
+          "item": 0,
+          "quantity": 0
+        },
+        {
+          "item": 50,
+          "quantity": 95
+        },
+        {
+          "item": 83,
+          "quantity": 95
+        },
+        {
+          "item": 84,
+          "quantity": 95
+        },
+        {
+          "item": 82,
+          "quantity": 95
+        },
+        {
+          "item": 109,
+          "quantity": 95
+        },
+        {
+          "item": 108,
+          "quantity": 95
+        },
+        {
+          "item": 246,
+          "quantity": 95
+        },
+        {
+          "item": 85,
+          "quantity": 95
+        },
+        {
+          "item": 0,
+          "quantity": 0
+        }
+      ],
+      "bag_items": {
+        "113": 1,
+        "17": 2,
+        "50": 95,
+        "4": 5
+      },
+      "key_items": {
+        "113": 1
+      },
+      "running_unlocked": true
+    }
+  }
+}

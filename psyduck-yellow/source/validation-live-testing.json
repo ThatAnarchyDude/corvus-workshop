@@ -1,0 +1,63 @@
+{
+  "checked_at_utc": "2026-10-11T18:04:00Z",
+  "unit_tests": {
+    "passed": 5,
+    "failed": 0
+  },
+  "native_stream": {
+    "rom": "private prototype 0022",
+    "decoded_frame_size": [
+      256,
+      384
+    ],
+    "continue_loaded": true,
+    "parcel_state": 2,
+    "national_dex": true,
+    "party_count": 2,
+    "input_proof": {
+      "before_x": 4,
+      "after_x": 3
+    },
+    "default_video_off": true,
+    "on_command": true
+  },
+  "auth": {
+    "missing_token_http": 403,
+    "authenticated_status_http": 200
+  },
+  "cloudflared": {
+    "version": "2026.10.0",
+    "official_sha256": "d33ff2d14475178d2012c2c56beba87389ac5ded27649519f198a7d3134a99db",
+    "verified": true,
+    "external_tunnel": "blocked",
+    "reason": "api.trycloudflare.com DNS connection refused; independent HTTPS proxy CONNECT 403"
+  },
+  "optional_x11": "not installed or tested; container has no root/sudo",
+  "remote_preview": "not established; no forwarding tool exposed",
+  "ram_hooks": {
+    "validated": [
+      "map ID",
+      "player coordinates",
+      "party count",
+      "parcel state",
+      "National Dex"
+    ],
+    "not_validated": [
+      "battle status",
+      "text box status"
+    ]
+  },
+  "external_access_retry": {
+    "network_permission_granted": true,
+    "outside_command_sandbox_attempted": true,
+    "result": "Still blocked: api.trycloudflare.com DNS connection refused",
+    "public_url_created": false
+  },
+  "published_environment_retry": {
+    "published_network_policy": "unrestricted",
+    "cloudflare_direct": "TCP connection refused to API port 443",
+    "cloudflare_proxy": "HTTP 403, Your request was blocked",
+    "localtunnel": "address allocated but relay data connection refused; remote status timed out",
+    "external_viewing_verified": false
+  }
+}

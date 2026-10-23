@@ -1,0 +1,665 @@
+{
+  "invisible": {
+    "sprite": 90,
+    "model": 865,
+    "lookup": "0x1ffb4f4"
+  },
+  "land_clones": [
+    {
+      "cell": 360,
+      "old_land": 677,
+      "new_land": 679
+    },
+    {
+      "cell": 361,
+      "old_land": 678,
+      "new_land": 680
+    }
+  ],
+  "mappings": [
+    {
+      "map": 50,
+      "script": 1014,
+      "init": 1015,
+      "text": 853,
+      "event": 515
+    },
+    {
+      "map": 500,
+      "script": 1016,
+      "init": 1017,
+      "text": 854,
+      "event": 516
+    }
+  ],
+  "blockers": [
+    [
+      14,
+      1024,
+      235
+    ],
+    [
+      15,
+      1025,
+      235
+    ],
+    [
+      16,
+      1026,
+      235
+    ],
+    [
+      17,
+      1028,
+      235
+    ],
+    [
+      18,
+      1029,
+      235
+    ]
+  ],
+  "granddaughter": {
+    "before": 17,
+    "after": 22,
+    "aside": [
+      1028,
+      238
+    ]
+  },
+  "cut_trees": [
+    [
+      19,
+      1021,
+      235,
+      16
+    ],
+    [
+      20,
+      1032,
+      235,
+      17
+    ]
+  ],
+  "west_guard": [
+    1002,
+    259
+  ],
+  "flags": {
+    "migration": 2887,
+    "west_hide": 2886,
+    "gear_reward": 2885
+  },
+  "version": "012",
+  "base_version": "011",
+  "input_sha256": "6ac69f643d8277aee718157a0c1fafc7b3e6dfe960f12d59ae372b0fbcf41b7e",
+  "output_sha256": "7910d6ed6b6e1a47107084405de67c5adb0ac6408107348e6adba0f53e733bec",
+  "patch_sha256": "b9e221e9b52b65f5aa3755d6aa70700c2ebb7d7c2db2b000a54832050441bd2a",
+  "changed_file_ids": [
+    1,
+    141,
+    156,
+    161,
+    170,
+    194,
+    210
+  ],
+  "date": "2026-10-10",
+  "tests": {
+    "passed": 128,
+    "skipped": 0
+  },
+  "patch_roundtrip_verified": true,
+  "browser": {
+    "output_sha256": "7910d6ed6b6e1a47107084405de67c5adb0ac6408107348e6adba0f53e733bec",
+    "bad_input_rejected": true,
+    "browser_errors": []
+  },
+  "emulator": {
+    "engine": "DeSmuME libretro",
+    "rom_sha256": "7910d6ed6b6e1a47107084405de67c5adb0ac6408107348e6adba0f53e733bec",
+    "method": "Continuous fresh boots and normal in-game saves; no internal snapshot resumes",
+    "checks": [
+      "Native Cut message before acquiring Cut",
+      "Native Cut removes right-hand tree, left tree remains, player crosses former tree tile",
+      "Old man lesson runs, granddaughter walks aside and begins movement type 3 wandering",
+      "Temporary actors 14\u201318 absent after lesson and normal save reload; trees 19 and 20 remain",
+      "Former invisible barrier tile (1025,235) passable immediately after lesson",
+      "West guard warning before delivery, guard absent in completed-parcel city entry",
+      "Cashier thanks player, grants Pok\u00e9gear and Town Map card, then opens native shop",
+      "Town Map visibly displays Kanto centered on Viridian",
+      "Normal save reload retains Pok\u00e9gear; cashier opens shop without repeating reward"
+    ],
+    "normal_save_reward": {
+      "got_gear": true,
+      "reward_claimed": true,
+      "map_card": 1,
+      "map_unlock_level": 2
+    },
+    "world_actor_evidence": {
+      "west": {
+        "player": [
+          1003,
+          6,
+          259
+        ],
+        "actors": [
+          {
+            "id": 255,
+            "sprite": 0,
+            "movement": 1,
+            "position": [
+              1003,
+              6,
+              259
+            ]
+          },
+          {
+            "id": 253,
+            "sprite": 562,
+            "movement": 48,
+            "position": [
+              1003,
+              6,
+              259
+            ]
+          },
+          {
+            "id": 0,
+            "sprite": 330,
+            "movement": 0,
+            "position": [
+              1045,
+              0,
+              240
+            ]
+          },
+          {
+            "id": 1,
+            "sprite": 330,
+            "movement": 0,
+            "position": [
+              1036,
+              0,
+              254
+            ]
+          },
+          {
+            "id": 2,
+            "sprite": 330,
+            "movement": 0,
+            "position": [
+              1034,
+              0,
+              245
+            ]
+          },
+          {
+            "id": 8,
+            "sprite": 334,
+            "movement": 0,
+            "position": [
+              1042,
+              0,
+              254
+            ]
+          },
+          {
+            "id": 12,
+            "sprite": 89,
+            "movement": 0,
+            "position": [
+              1027,
+              0,
+              235
+            ]
+          },
+          {
+            "id": 14,
+            "sprite": 90,
+            "movement": 0,
+            "position": [
+              1024,
+              0,
+              235
+            ]
+          },
+          {
+            "id": 15,
+            "sprite": 90,
+            "movement": 0,
+            "position": [
+              1025,
+              0,
+              235
+            ]
+          },
+          {
+            "id": 16,
+            "sprite": 90,
+            "movement": 0,
+            "position": [
+              1026,
+              0,
+              235
+            ]
+          },
+          {
+            "id": 17,
+            "sprite": 90,
+            "movement": 0,
+            "position": [
+              1028,
+              0,
+              235
+            ]
+          },
+          {
+            "id": 18,
+            "sprite": 90,
+            "movement": 0,
+            "position": [
+              1029,
+              0,
+              235
+            ]
+          },
+          {
+            "id": 19,
+            "sprite": 86,
+            "movement": 0,
+            "position": [
+              1021,
+              6,
+              235
+            ]
+          },
+          {
+            "id": 20,
+            "sprite": 86,
+            "movement": 0,
+            "position": [
+              1032,
+              0,
+              235
+            ]
+          },
+          {
+            "id": 21,
+            "sprite": 34,
+            "movement": 0,
+            "position": [
+              1002,
+              6,
+              259
+            ]
+          }
+        ]
+      },
+      "cut": {
+        "player": [
+          1032,
+          6,
+          234
+        ],
+        "actors": [
+          {
+            "id": 255,
+            "sprite": 0,
+            "movement": 1,
+            "position": [
+              1032,
+              6,
+              234
+            ]
+          },
+          {
+            "id": 253,
+            "sprite": 562,
+            "movement": 48,
+            "position": [
+              1032,
+              6,
+              235
+            ]
+          },
+          {
+            "id": 0,
+            "sprite": 330,
+            "movement": 0,
+            "position": [
+              1045,
+              6,
+              240
+            ]
+          },
+          {
+            "id": 1,
+            "sprite": 330,
+            "movement": 0,
+            "position": [
+              1036,
+              6,
+              254
+            ]
+          },
+          {
+            "id": 2,
+            "sprite": 330,
+            "movement": 0,
+            "position": [
+              1034,
+              6,
+              245
+            ]
+          },
+          {
+            "id": 8,
+            "sprite": 334,
+            "movement": 0,
+            "position": [
+              1042,
+              6,
+              254
+            ]
+          },
+          {
+            "id": 12,
+            "sprite": 89,
+            "movement": 0,
+            "position": [
+              1027,
+              6,
+              235
+            ]
+          },
+          {
+            "id": 14,
+            "sprite": 90,
+            "movement": 0,
+            "position": [
+              1024,
+              6,
+              235
+            ]
+          },
+          {
+            "id": 15,
+            "sprite": 90,
+            "movement": 0,
+            "position": [
+              1025,
+              6,
+              235
+            ]
+          },
+          {
+            "id": 16,
+            "sprite": 90,
+            "movement": 0,
+            "position": [
+              1026,
+              6,
+              235
+            ]
+          },
+          {
+            "id": 17,
+            "sprite": 7,
+            "movement": 0,
+            "position": [
+              1028,
+              6,
+              235
+            ]
+          },
+          {
+            "id": 18,
+            "sprite": 90,
+            "movement": 0,
+            "position": [
+              1029,
+              6,
+              235
+            ]
+          },
+          {
+            "id": 19,
+            "sprite": 86,
+            "movement": 0,
+            "position": [
+              1021,
+              6,
+              235
+            ]
+          }
+        ]
+      },
+      "lesson": {
+        "player": [
+          1025,
+          6,
+          235
+        ],
+        "actors": [
+          {
+            "id": 255,
+            "sprite": 0,
+            "movement": 1,
+            "position": [
+              1025,
+              6,
+              235
+            ]
+          },
+          {
+            "id": 253,
+            "sprite": 562,
+            "movement": 48,
+            "position": [
+              1025,
+              6,
+              237
+            ]
+          },
+          {
+            "id": 0,
+            "sprite": 330,
+            "movement": 0,
+            "position": [
+              1045,
+              6,
+              240
+            ]
+          },
+          {
+            "id": 1,
+            "sprite": 330,
+            "movement": 0,
+            "position": [
+              1036,
+              6,
+              254
+            ]
+          },
+          {
+            "id": 2,
+            "sprite": 330,
+            "movement": 0,
+            "position": [
+              1034,
+              6,
+              245
+            ]
+          },
+          {
+            "id": 8,
+            "sprite": 334,
+            "movement": 0,
+            "position": [
+              1042,
+              6,
+              254
+            ]
+          },
+          {
+            "id": 12,
+            "sprite": 330,
+            "movement": 0,
+            "position": [
+              1029,
+              6,
+              237
+            ]
+          },
+          {
+            "id": 22,
+            "sprite": 7,
+            "movement": 3,
+            "position": [
+              1029,
+              6,
+              238
+            ]
+          },
+          {
+            "id": 19,
+            "sprite": 86,
+            "movement": 0,
+            "position": [
+              1021,
+              6,
+              235
+            ]
+          },
+          {
+            "id": 20,
+            "sprite": 86,
+            "movement": 0,
+            "position": [
+              1032,
+              6,
+              235
+            ]
+          }
+        ]
+      },
+      "reload": {
+        "player": [
+          1026,
+          6,
+          235
+        ],
+        "actors": [
+          {
+            "id": 255,
+            "sprite": 0,
+            "movement": 1,
+            "position": [
+              1026,
+              6,
+              235
+            ]
+          },
+          {
+            "id": 253,
+            "sprite": 562,
+            "movement": 48,
+            "position": [
+              1025,
+              6,
+              236
+            ]
+          },
+          {
+            "id": 0,
+            "sprite": 330,
+            "movement": 0,
+            "position": [
+              1045,
+              6,
+              240
+            ]
+          },
+          {
+            "id": 1,
+            "sprite": 330,
+            "movement": 0,
+            "position": [
+              1036,
+              6,
+              254
+            ]
+          },
+          {
+            "id": 2,
+            "sprite": 330,
+            "movement": 0,
+            "position": [
+              1034,
+              6,
+              245
+            ]
+          },
+          {
+            "id": 8,
+            "sprite": 334,
+            "movement": 0,
+            "position": [
+              1042,
+              6,
+              254
+            ]
+          },
+          {
+            "id": 12,
+            "sprite": 330,
+            "movement": 0,
+            "position": [
+              1029,
+              6,
+              237
+            ]
+          },
+          {
+            "id": 22,
+            "sprite": 7,
+            "movement": 3,
+            "position": [
+              1028,
+              6,
+              239
+            ]
+          },
+          {
+            "id": 19,
+            "sprite": 86,
+            "movement": 0,
+            "position": [
+              1021,
+              6,
+              235
+            ]
+          },
+          {
+            "id": 20,
+            "sprite": 86,
+            "movement": 0,
+            "position": [
+              1032,
+              6,
+              235
+            ]
+          }
+        ]
+      }
+    },
+    "fixture_limits": "Fixtures set parcel state and positioning using an isolated local warp script, then save normally and boot the unmodified release ROM. Cut fixture additionally sets Cut on one party Pok\u00e9mon and the native Hive badge; these grants are not in the release."
+  },
+  "unrun": [
+    "Owner Android playtest",
+    "Full new-game parcel quest replay in 012",
+    "Audible music and sound listening",
+    "Route 2 and Viridian Forest progression (next prototype)"
+  ]
+}

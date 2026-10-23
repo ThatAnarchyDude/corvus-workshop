@@ -1,0 +1,803 @@
+{
+  "version": "0021",
+  "input_sha256": "39f0fbb43d345fe34fdd7db57a2ce766c712bf7b21a741f81e91316a0d201191",
+  "tms": {
+    "tms": [
+      {
+        "item": 119,
+        "move": 61,
+        "index": 104,
+        "number": 11,
+        "name": "BUBBLEBEAM",
+        "key": "BUBBLEBEAM",
+        "template": 330,
+        "later_index": 2,
+        "description": "A spray of bubbles strikes the target and may lower its Speed."
+      }
+    ],
+    "lookup_hooks": [
+      {
+        "site": "0x2078000",
+        "hook": "0x1fff1f4",
+        "previous": "0x1fff0d1"
+      },
+      {
+        "site": "0x207804c",
+        "hook": "0x1fff204",
+        "previous": "0x1fff0e1"
+      }
+    ],
+    "display_hooks": [
+      {
+        "site": "0x21fe920",
+        "hook": "0x1fff214"
+      },
+      {
+        "site": "0x21ff5b2",
+        "hook": "0x1fff258"
+      }
+    ],
+    "compatible_species": {
+      "BUBBLEBEAM": [
+        7,
+        8,
+        9,
+        19,
+        20,
+        30,
+        31,
+        33,
+        34,
+        35,
+        36,
+        39,
+        40,
+        52,
+        53,
+        54,
+        55,
+        60,
+        61,
+        62,
+        72,
+        73,
+        79,
+        80,
+        86,
+        87,
+        90,
+        91,
+        98,
+        99,
+        104,
+        105,
+        108,
+        112,
+        113,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        124,
+        130,
+        131,
+        134,
+        138,
+        139,
+        140,
+        141,
+        143,
+        144,
+        147,
+        148,
+        149,
+        150,
+        151,
+        158,
+        159,
+        160,
+        161,
+        162,
+        170,
+        171,
+        173,
+        174,
+        175,
+        176,
+        183,
+        184,
+        186,
+        190,
+        194,
+        195,
+        199,
+        206,
+        209,
+        210,
+        211,
+        222,
+        223,
+        224,
+        225,
+        226,
+        230,
+        238,
+        241,
+        242,
+        245,
+        248,
+        249,
+        251,
+        258,
+        259,
+        260,
+        263,
+        264,
+        270,
+        271,
+        272,
+        278,
+        279,
+        283,
+        284,
+        287,
+        288,
+        289,
+        293,
+        294,
+        295,
+        298,
+        300,
+        301,
+        302,
+        304,
+        305,
+        306,
+        313,
+        314,
+        316,
+        317,
+        318,
+        319,
+        320,
+        321,
+        327,
+        335,
+        339,
+        340,
+        341,
+        342,
+        347,
+        348,
+        349,
+        350,
+        351,
+        352,
+        359,
+        361,
+        362,
+        363,
+        364,
+        365,
+        366,
+        367,
+        368,
+        369,
+        370,
+        380,
+        381,
+        382,
+        384,
+        385,
+        386,
+        393,
+        394,
+        395,
+        400,
+        418,
+        419,
+        422,
+        423,
+        424,
+        427,
+        428,
+        431,
+        432,
+        440,
+        442,
+        446,
+        448,
+        449,
+        450,
+        456,
+        457,
+        458,
+        459,
+        460,
+        463,
+        468,
+        471,
+        478,
+        480,
+        481,
+        482,
+        484,
+        489,
+        490,
+        493,
+        496,
+        497,
+        498
+      ]
+    },
+    "generation_one_compatibility": "Yellow",
+    "later_compatibility": "Water Pulse",
+    "native_tm_items_preserved": true,
+    "native_save_layout_preserved": true
+  },
+  "cerulean": {
+    "maps": [
+      {
+        "map": 427,
+        "script": 1082,
+        "init": 1083,
+        "text": 887,
+        "event": 619,
+        "original": [
+          760,
+          533,
+          469,
+          382
+        ]
+      },
+      {
+        "map": 52,
+        "script": 1084,
+        "init": 1085,
+        "text": 888,
+        "event": 620,
+        "original": [
+          758,
+          531,
+          467,
+          600
+        ]
+      },
+      {
+        "map": 431,
+        "script": 1086,
+        "init": 1087,
+        "text": 889,
+        "event": 621,
+        "original": [
+          765,
+          538,
+          473,
+          386
+        ]
+      },
+      {
+        "map": 428,
+        "script": 1088,
+        "init": 1089,
+        "text": 890,
+        "event": 622,
+        "original": [
+          761,
+          534,
+          470,
+          383
+        ]
+      },
+      {
+        "map": 426,
+        "script": 1090,
+        "init": 1091,
+        "text": 891,
+        "event": 623,
+        "original": [
+          759,
+          532,
+          468,
+          381
+        ]
+      },
+      {
+        "map": 430,
+        "script": 1092,
+        "init": 1093,
+        "text": 892,
+        "event": 624,
+        "original": [
+          764,
+          537,
+          472,
+          385
+        ]
+      },
+      {
+        "map": 429,
+        "script": 1094,
+        "init": 1095,
+        "text": 893,
+        "event": 625,
+        "original": [
+          763,
+          536,
+          471,
+          384
+        ]
+      }
+    ],
+    "trainers": [
+      {
+        "id": 779,
+        "template": 297,
+        "team": [
+          [
+            118,
+            19,
+            [
+              64,
+              39,
+              48,
+              0
+            ],
+            0
+          ]
+        ]
+      },
+      {
+        "id": 780,
+        "template": 16,
+        "team": [
+          [
+            116,
+            16,
+            [
+              145,
+              0,
+              0,
+              0
+            ],
+            0
+          ],
+          [
+            90,
+            16,
+            [
+              33,
+              110,
+              0,
+              0
+            ],
+            0
+          ]
+        ]
+      },
+      {
+        "id": 781,
+        "template": 254,
+        "team": [
+          [
+            120,
+            18,
+            [
+              33,
+              55,
+              0,
+              0
+            ],
+            0
+          ],
+          [
+            121,
+            21,
+            [
+              33,
+              55,
+              106,
+              61
+            ],
+            0
+          ]
+        ]
+      },
+      {
+        "id": 782,
+        "template": 742,
+        "team": [
+          [
+            21,
+            18,
+            [
+              64,
+              45,
+              43,
+              31
+            ],
+            0
+          ],
+          [
+            27,
+            15,
+            [
+              10,
+              28,
+              0,
+              0
+            ],
+            0
+          ],
+          [
+            19,
+            15,
+            [
+              33,
+              39,
+              98,
+              158
+            ],
+            0
+          ],
+          [
+            54,
+            17,
+            [
+              10,
+              39,
+              55,
+              50
+            ],
+            1
+          ]
+        ]
+      },
+      {
+        "id": 783,
+        "template": 742,
+        "team": [
+          [
+            21,
+            18,
+            [
+              64,
+              45,
+              43,
+              31
+            ],
+            0
+          ],
+          [
+            27,
+            15,
+            [
+              10,
+              28,
+              0,
+              0
+            ],
+            0
+          ],
+          [
+            19,
+            15,
+            [
+              33,
+              39,
+              98,
+              158
+            ],
+            0
+          ],
+          [
+            54,
+            17,
+            [
+              10,
+              39,
+              55,
+              50
+            ],
+            2
+          ]
+        ]
+      },
+      {
+        "id": 784,
+        "template": 742,
+        "team": [
+          [
+            21,
+            18,
+            [
+              64,
+              45,
+              43,
+              31
+            ],
+            0
+          ],
+          [
+            27,
+            15,
+            [
+              10,
+              28,
+              0,
+              0
+            ],
+            0
+          ],
+          [
+            19,
+            15,
+            [
+              33,
+              39,
+              98,
+              158
+            ],
+            0
+          ],
+          [
+            133,
+            17,
+            [
+              33,
+              39,
+              28,
+              45
+            ],
+            1
+          ]
+        ]
+      },
+      {
+        "id": 785,
+        "template": 742,
+        "team": [
+          [
+            21,
+            18,
+            [
+              64,
+              45,
+              43,
+              31
+            ],
+            0
+          ],
+          [
+            27,
+            15,
+            [
+              10,
+              28,
+              0,
+              0
+            ],
+            0
+          ],
+          [
+            19,
+            15,
+            [
+              33,
+              39,
+              98,
+              158
+            ],
+            0
+          ],
+          [
+            133,
+            17,
+            [
+              33,
+              39,
+              28,
+              45
+            ],
+            2
+          ]
+        ]
+      },
+      {
+        "id": 786,
+        "template": 12,
+        "team": [
+          [
+            66,
+            17,
+            [
+              2,
+              67,
+              43,
+              0
+            ],
+            0
+          ],
+          [
+            96,
+            17,
+            [
+              1,
+              95,
+              50,
+              93
+            ],
+            0
+          ]
+        ]
+      }
+    ],
+    "gym": {
+      "misty": 781,
+      "juniors": [
+        779,
+        780
+      ],
+      "badge": 9,
+      "tm_item": 119,
+      "tm_flag": 2921,
+      "cut_hook": "0x1fff40c",
+      "cut_check_site": "0x2067f82"
+    },
+    "rival": {
+      "trainers": {
+        "54_male": 782,
+        "54_female": 783,
+        "133_male": 784,
+        "133_female": 785,
+        "54": 782,
+        "133": 785
+      },
+      "first": 782,
+      "properties_hook": "0x1fff29c",
+      "previous_properties_hook": "0x1ffccf8",
+      "state": 16708,
+      "hide": 2914,
+      "done": 2913,
+      "trigger": [
+        1329,
+        106,
+        4
+      ]
+    },
+    "bulbasaur": {
+      "species": 1,
+      "level": 10,
+      "lead_friendship_threshold": 147,
+      "given": 2915,
+      "hide": 2916
+    },
+    "thief": {
+      "trainer": 786,
+      "implemented": false,
+      "requires_bill": 16709
+    },
+    "common_bank": 1081
+  },
+  "bike_shop": {
+    "map": 432,
+    "script": 1096,
+    "text": 894,
+    "event": 626,
+    "matrix": 292,
+    "source_matrix": 107,
+    "original_header": "ff1b8f121201fe021b02da011004100483018dc9014464e4",
+    "voucher": 120,
+    "bicycle": 450,
+    "received_flag": 2912,
+    "voucher_source": "Vermilion fan club, in its later area checkpoint",
+    "johto_unchanged": true
+  },
+  "pewter_guide": {
+    "map": 51,
+    "script": 1098,
+    "event": 627,
+    "state": 16710,
+    "start": [
+      1085,
+      104
+    ],
+    "player_finish": [
+      1046,
+      94
+    ],
+    "guide_finish": [
+      1047,
+      94
+    ],
+    "path_source": "data/pewter-guide-path.json",
+    "trigger": [
+      1086,
+      101,
+      1,
+      6
+    ],
+    "open_after_boulder": true,
+    "original_script": 1072,
+    "original_event": 599
+  },
+  "startup": {
+    "itcm_bytes": 29732,
+    "word_aligned": true,
+    "end_pointer_matches": true
+  },
+  "output_sha256": "3bfbb2218be4ef8925d49dde1e760c5967e9e96f1a87685f148a5cbf302a7f3b",
+  "patch_sha256": "b6d5a2b4692ada6a45bad808e49022e4e249aeb9a56727ccb092f8f3ca468d2b",
+  "roundtrip_verified": true,
+  "publication": {
+    "commit": "876971401fd392cad83d2230842f086e236925bc",
+    "confirmed_push_utc": "2026-10-11T14:30:29.359410+00:00",
+    "source_commit": "f968655c16ac04f5e3c2b3f164129c4e94fc5fbe",
+    "url": "https://raw.githack.com/ThatAnarchyDude/corvus-workshop/876971401fd392cad83d2230842f086e236925bc/psyduck-yellow/prototype-0021/index.html",
+    "public_log_commit": "1db13d28a65220ec082f01ef0eef2ab05de733c6"
+  },
+  "browser": {
+    "output_sha256": "3bfbb2218be4ef8925d49dde1e760c5967e9e96f1a87685f148a5cbf302a7f3b",
+    "bad_input_rejected": true,
+    "browser_errors": [],
+    "download_name": "Pokemon-Psyduck-Yellow-prototype-0021.nds"
+  },
+  "checks": {
+    "focused_tests": 16,
+    "focused_tests_passed": true,
+    "unaligned_candidate_regression_detected": true,
+    "native_startup": [
+      "Psyduck title",
+      "Continue menu",
+      "normal-save load"
+    ],
+    "pewter_guide": [
+      "automatic stop on previously bypassable lane",
+      "escort reaches gym",
+      "all six lanes and manual approaches decision-tested",
+      "escort and return paths collision-checked"
+    ],
+    "bike_shop": [
+      "no-voucher welcome",
+      "voucher removes one voucher and awards one Bicycle",
+      "Bicycle retained after ordinary save and fresh reload"
+    ],
+    "melanie": [
+      "native gift produces level-10 Bulbasaur",
+      "given and hide flags set",
+      "friendship threshold, refusal, full-party and repeat cases decision-tested"
+    ],
+    "misty": [
+      "native Staryu level 18",
+      "native Starmie level 21",
+      "battle won",
+      "Cascade Badge awarded",
+      "one TM11 BubbleBeam awarded",
+      "one BubbleBeam and its received flag verified after genuine Save and final-ROM fresh reload"
+    ],
+    "blue": [
+      "visible bridge approach",
+      "Spearow18, Sandshrew15, Rattata15 and persisted Eevee17 seen in battle",
+      "native battle completed and departure flags set",
+      "choice, gender, win/loss and repeat branches decision-tested"
+    ],
+    "center": [
+      "native healing sequence",
+      "Player PC item-storage Withdraw/Deposit/Toss menu"
+    ],
+    "preservation": [
+      "native Johto map headers unchanged",
+      "original script/event/matrix/land/trainer archives retained",
+      "native save layout unchanged"
+    ],
+    "limitations": [
+      "Native battles ran on the matching gameplay candidate before the two corrected Blue music IDs; final ROM engine/data tests, browser verification and normal-save reload run separately.",
+      "Test-only Pikachu, friendship and voucher grants existed only in private fixture ROMs/saves. Those fixture scripts are absent from the release.",
+      "Gatehouse counter NPC and transition sprite reports remain unconfirmed.",
+      "Route24/Route25/Bill and the returning robbed-house/Dig sequence are later checkpoints."
+    ]
+  }
+}

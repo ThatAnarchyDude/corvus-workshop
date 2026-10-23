@@ -1,0 +1,2 @@
+## Prototype0036 — required Flash / RockTunnel dependencies
+Baseline0035released. NewRoute2Flashaide397rewardafter10ownedimplemented/private,threefocusedtestsPASS; nativechecksseelatesthandoff. Verifyrefusalunder10,eligiblerewardonce,retry/saveContinue,teachandnativecaveFlash. PreserveRoute2nativegate/interior/otherNPCandallJohto. RockTunnelYellowtrainers7+8andgrassnext; source/read-onlyrefsandnativecontinuousroutealreadyknown0035-route10-audit-v1. Deliverfunctionalcheckpointwithoutcosmeticdelay. Preserveearlierreleases; keepCAMPAIGN-FIRST-PLANauthoritative.

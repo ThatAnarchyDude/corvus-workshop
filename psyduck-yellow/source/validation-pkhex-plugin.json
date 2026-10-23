@@ -1,0 +1,387 @@
+{
+  "hiddenAbilityRoundTrips": [
+    {
+      "species": 54,
+      "Ability": 33,
+      "ShinyXor": 12,
+      "Gender": 0,
+      "PID": 1124805368,
+      "checksum": true
+    },
+    {
+      "species": 55,
+      "Ability": 33,
+      "ShinyXor": 12,
+      "Gender": 0,
+      "PID": 1124805368,
+      "checksum": true
+    },
+    {
+      "species": 133,
+      "Ability": 107,
+      "ShinyXor": 12,
+      "Gender": 1,
+      "PID": 1124805368,
+      "checksum": true
+    },
+    {
+      "species": 134,
+      "Ability": 93,
+      "ShinyXor": 12,
+      "Gender": 0,
+      "PID": 1124805368,
+      "checksum": true
+    },
+    {
+      "species": 135,
+      "Ability": 95,
+      "ShinyXor": 12,
+      "Gender": 0,
+      "PID": 1124805368,
+      "checksum": true
+    },
+    {
+      "species": 136,
+      "Ability": 62,
+      "ShinyXor": 12,
+      "Gender": 0,
+      "PID": 1124805368,
+      "checksum": true
+    },
+    {
+      "species": 197,
+      "Ability": 39,
+      "ShinyXor": 12,
+      "Gender": 0,
+      "PID": 1124805368,
+      "checksum": true
+    },
+    {
+      "species": 470,
+      "Ability": 34,
+      "ShinyXor": 12,
+      "Gender": 0,
+      "PID": 1124805368,
+      "checksum": true
+    },
+    {
+      "species": 471,
+      "Ability": 115,
+      "ShinyXor": 12,
+      "Gender": 0,
+      "PID": 1124805368,
+      "checksum": true
+    },
+    {
+      "species": 175,
+      "Ability": 105,
+      "ShinyXor": 12,
+      "Gender": 0,
+      "PID": 1124805368,
+      "checksum": true
+    },
+    {
+      "species": 176,
+      "Ability": 105,
+      "ShinyXor": 12,
+      "Gender": 0,
+      "PID": 1124805368,
+      "checksum": true
+    },
+    {
+      "species": 468,
+      "Ability": 105,
+      "ShinyXor": 12,
+      "Gender": 0,
+      "PID": 1124805368,
+      "checksum": true
+    }
+  ],
+  "shinyBoundaries": "passed",
+  "unrelatedDataPreserved": true,
+  "pcStorage": "passed",
+  "invalidEdits": "rejected",
+  "nativeReload": {
+    "species-54": {
+      "continue": "passed",
+      "species": 54,
+      "ability": 33,
+      "shiny_xor": 12,
+      "gender": 0,
+      "metrics": {
+        "field_system": "0x22a01d0",
+        "map_id": 506,
+        "player": {
+          "x": 6,
+          "y": 4,
+          "height": 0
+        },
+        "party_count": 2,
+        "parcel_state": 2,
+        "national_dex": true,
+        "text_box": "unavailable (no validated hook)",
+        "battle": "unavailable (no validated hook)"
+      },
+      "pc_stacks": [
+        [
+          0,
+          0
+        ],
+        [
+          50,
+          95
+        ],
+        [
+          83,
+          95
+        ],
+        [
+          84,
+          95
+        ],
+        [
+          82,
+          95
+        ],
+        [
+          109,
+          95
+        ],
+        [
+          108,
+          95
+        ],
+        [
+          246,
+          95
+        ],
+        [
+          85,
+          95
+        ],
+        [
+          114,
+          1
+        ]
+      ]
+    },
+    "species-133": {
+      "continue": "passed",
+      "species": 133,
+      "ability": 107,
+      "shiny_xor": 12,
+      "gender": 1,
+      "metrics": {
+        "field_system": "0x22a01d0",
+        "map_id": 506,
+        "player": {
+          "x": 6,
+          "y": 4,
+          "height": 0
+        },
+        "party_count": 2,
+        "parcel_state": 2,
+        "national_dex": true,
+        "text_box": "unavailable (no validated hook)",
+        "battle": "unavailable (no validated hook)"
+      },
+      "pc_stacks": [
+        [
+          0,
+          0
+        ],
+        [
+          50,
+          95
+        ],
+        [
+          83,
+          95
+        ],
+        [
+          84,
+          95
+        ],
+        [
+          82,
+          95
+        ],
+        [
+          109,
+          95
+        ],
+        [
+          108,
+          95
+        ],
+        [
+          246,
+          95
+        ],
+        [
+          85,
+          95
+        ],
+        [
+          114,
+          1
+        ]
+      ]
+    },
+    "species-175": {
+      "continue": "passed",
+      "species": 175,
+      "ability": 105,
+      "shiny_xor": 12,
+      "gender": 0,
+      "metrics": {
+        "field_system": "0x22a01d0",
+        "map_id": 506,
+        "player": {
+          "x": 6,
+          "y": 4,
+          "height": 0
+        },
+        "party_count": 2,
+        "parcel_state": 2,
+        "national_dex": true,
+        "text_box": "unavailable (no validated hook)",
+        "battle": "unavailable (no validated hook)"
+      },
+      "pc_stacks": [
+        [
+          0,
+          0
+        ],
+        [
+          50,
+          95
+        ],
+        [
+          83,
+          95
+        ],
+        [
+          84,
+          95
+        ],
+        [
+          82,
+          95
+        ],
+        [
+          109,
+          95
+        ],
+        [
+          108,
+          95
+        ],
+        [
+          246,
+          95
+        ],
+        [
+          85,
+          95
+        ],
+        [
+          114,
+          1
+        ]
+      ]
+    },
+    "pc-edit": {
+      "continue": "passed",
+      "species": 55,
+      "ability": 6,
+      "shiny_xor": 1084,
+      "gender": 0,
+      "metrics": {
+        "field_system": "0x22a01d0",
+        "map_id": 506,
+        "player": {
+          "x": 6,
+          "y": 4,
+          "height": 0
+        },
+        "party_count": 2,
+        "parcel_state": 2,
+        "national_dex": true,
+        "text_box": "unavailable (no validated hook)",
+        "battle": "unavailable (no validated hook)"
+      },
+      "pc_stacks": [
+        [
+          4,
+          25
+        ],
+        [
+          50,
+          95
+        ],
+        [
+          83,
+          95
+        ],
+        [
+          84,
+          95
+        ],
+        [
+          82,
+          95
+        ],
+        [
+          109,
+          95
+        ],
+        [
+          108,
+          95
+        ],
+        [
+          246,
+          95
+        ],
+        [
+          85,
+          95
+        ],
+        [
+          114,
+          1
+        ]
+      ]
+    }
+  },
+  "windowsUI": {
+    "status": "passed",
+    "run": "https://github.com/ThatAnarchyDude/corvus-workshop/actions/runs/38168315938",
+    "sourceCommit": "30d4284",
+    "checks": [
+      "actual pinned upstream PluginLoader discovers DLL",
+      "IPlugin Initialize and Tools menu",
+      "form construction",
+      "supported and unsupported party selections",
+      "project shiny display at XOR 12",
+      "initialized/uninitialized PC gate",
+      "disable on non-HGSS save"
+    ],
+    "manualFullEditorSession": "not yet tested"
+  },
+  "stockEditorFinding": {
+    "source": "PKHeX.WinForms/Controls/PKM Editor/LoadSave.cs",
+    "methods": [
+      "GetAbilityIndex4",
+      "SaveMisc4"
+    ],
+    "problem": "Unknown Gen IV ability falls back to first normal ability; preparing fields writes the dropdown value.",
+    "solution": "Plugin edits native party slot directly using EntityImportSettings.None."
+  },
+  "repositoryCreation": {
+    "fork": "blocked by GitHub integration HTTP 403",
+    "plugin": "blocked by GitHub integration createRepository permission",
+    "preparedLocally": true
+  }
+}

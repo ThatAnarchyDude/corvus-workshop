@@ -1,0 +1,1049 @@
+{
+  "version": "014",
+  "parent_version": "013",
+  "cumulative": true,
+  "source_sha256": "65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105",
+  "parent_output_sha256": "7b7a1ee57b972f3f8e18bdc1611e32eface19f18db368180a27fa5eedf640c9d",
+  "output_sha256": "edcd95d49ad2a2c8959b2b946934793bdf8c6f506138d2f4087c246c1b08e79f",
+  "patch_sha256": "e496054485061f202415662750b36d01c92816dcc3f7976b2c758c038a25a86f",
+  "automated_tests": {
+    "passed": 176,
+    "failed": 0
+  },
+  "xdelta_roundtrip_verified": true,
+  "browser": {
+    "output_sha256": "edcd95d49ad2a2c8959b2b946934793bdf8c6f506138d2f4087c246c1b08e79f",
+    "bad_input_rejected": true,
+    "browser_errors": []
+  },
+  "terrain": {
+    "removed_objects": 116,
+    "changed_maps": 30,
+    "preserved_viridian_actor_ids": [
+      19,
+      20
+    ],
+    "johto_headers_unchanged": true
+  },
+  "native_checks": [
+    {
+      "check": "first forest trainer battle",
+      "release_rom": true,
+      "fixture": "Normal save made by native GiveMon/ReturnLoanMon at level 15 to isolate completion from opening balance; no RAM/save byte edits",
+      "result": "Two Caterpie defeated, 158 EXP gained, trainer751 defeat flag set"
+    },
+    {
+      "check": "southern gate and hidden Potion",
+      "release_rom": true,
+      "result": "Gate travelled both directions; map147 returned; Potion quantity2\u21923; flag885 set"
+    },
+    {
+      "check": "northern gate and boundary",
+      "release_rom": true,
+      "result": "Gate reached Route2 north; temporary Pewter boundary displayed"
+    },
+    {
+      "check": "victory normal save and reload",
+      "release_rom": true,
+      "result": "Normal save reload retains 3533 EXP and trainer751 defeat flag; trainer gives after-battle dialogue without starting another battle."
+    },
+    {
+      "check": "removed object script references",
+      "result": "Reference script sources for affected original Kanto maps contain no explicit references to their removed HM-object symbols."
+    }
+  ],
+  "limits": [
+    "Full forest traversal and all five trainer battles have not been played end-to-end in this native run.",
+    "Native battle fixture uses level15 Eevee; it does not verify fresh level5 starter battle balance.",
+    "Ordinary grass encounters are converted; optional Headbutt encounters have not been rebalanced.",
+    "Pewter is not converted in this checkpoint.",
+    "Android compatibility is not independently verified for this build."
+  ],
+  "build_report": {
+    "mappings": [
+      {
+        "map": 10,
+        "script": 1026,
+        "init": 1027,
+        "text": 862,
+        "event": 521
+      },
+      {
+        "map": 414,
+        "script": 1028,
+        "init": 1029,
+        "text": 863,
+        "event": 522
+      },
+      {
+        "map": 147,
+        "script": 1031,
+        "init": 1032,
+        "text": 864,
+        "event": 523
+      },
+      {
+        "map": 419,
+        "script": 1033,
+        "init": 1034,
+        "text": 865,
+        "event": 524
+      },
+      {
+        "map": 420,
+        "script": 1035,
+        "init": 1036,
+        "text": 866,
+        "event": 525
+      }
+    ],
+    "trainers": [
+      {
+        "id": 751,
+        "defeat_flag": 2111,
+        "actor": 7,
+        "source": "BugCatcher 1",
+        "dialogue": "ViridianForestYoungster2",
+        "team": [
+          [
+            10,
+            7
+          ],
+          [
+            10,
+            7
+          ]
+        ],
+        "class": 6,
+        "original_hg_trainer": 695
+      },
+      {
+        "id": 752,
+        "defeat_flag": 2112,
+        "actor": 8,
+        "source": "BugCatcher 2",
+        "dialogue": "ViridianForestYoungster3",
+        "team": [
+          [
+            11,
+            6
+          ],
+          [
+            10,
+            6
+          ],
+          [
+            11,
+            6
+          ]
+        ],
+        "class": 6,
+        "original_hg_trainer": 696
+      },
+      {
+        "id": 753,
+        "defeat_flag": 2113,
+        "actor": 9,
+        "source": "Lass 19",
+        "dialogue": "ViridianForestCooltrainerF",
+        "team": [
+          [
+            29,
+            6
+          ],
+          [
+            32,
+            6
+          ]
+        ],
+        "class": 3,
+        "original_hg_trainer": 697
+      },
+      {
+        "id": 754,
+        "defeat_flag": 2114,
+        "actor": 10,
+        "source": "BugCatcher 15",
+        "dialogue": "ViridianForestYoungster5",
+        "team": [
+          [
+            10,
+            8
+          ],
+          [
+            11,
+            8
+          ]
+        ],
+        "class": 6,
+        "original_hg_trainer": 698
+      },
+      {
+        "id": 755,
+        "defeat_flag": 2115,
+        "actor": 11,
+        "source": "BugCatcher 3",
+        "dialogue": "ViridianForestYoungster4",
+        "team": [
+          [
+            10,
+            10
+          ]
+        ],
+        "class": 6,
+        "original_hg_trainer": 699
+      }
+    ],
+    "wild": [
+      {
+        "map": 10,
+        "original": 112,
+        "member": 142
+      },
+      {
+        "map": 414,
+        "original": 136,
+        "member": 143
+      },
+      {
+        "map": 147,
+        "original": 137,
+        "member": 144
+      }
+    ],
+    "viridian_event": 520,
+    "trainer_common_bank": 1030,
+    "hidden_items": {
+      "original_table": "0x20fa558",
+      "active_table": "0x1ffce68",
+      "ids": [
+        8085,
+        8087
+      ],
+      "items": [
+        17,
+        18
+      ]
+    },
+    "pewter_boundary": {
+      "script": 1037,
+      "text": 867,
+      "event": 526
+    },
+    "removed_terrain_gates": [
+      {
+        "map": 10,
+        "original_event": 521,
+        "event": 527,
+        "objects": [
+          {
+            "id": 2,
+            "sprite": 86,
+            "script": 10000
+          },
+          {
+            "id": 3,
+            "sprite": 86,
+            "script": 10000
+          },
+          {
+            "id": 4,
+            "sprite": 86,
+            "script": 10000
+          }
+        ]
+      },
+      {
+        "map": 11,
+        "original_event": 8,
+        "event": 528,
+        "objects": [
+          {
+            "id": 12,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 13,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 14,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 15,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 16,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 17,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 18,
+            "sprite": 85,
+            "script": 10001
+          }
+        ]
+      },
+      {
+        "map": 16,
+        "original_event": 13,
+        "event": 529,
+        "objects": [
+          {
+            "id": 8,
+            "sprite": 86,
+            "script": 10000
+          },
+          {
+            "id": 9,
+            "sprite": 86,
+            "script": 10000
+          }
+        ]
+      },
+      {
+        "map": 17,
+        "original_event": 14,
+        "event": 530,
+        "objects": [
+          {
+            "id": 6,
+            "sprite": 86,
+            "script": 10000
+          },
+          {
+            "id": 7,
+            "sprite": 86,
+            "script": 10000
+          },
+          {
+            "id": 8,
+            "sprite": 86,
+            "script": 10000
+          },
+          {
+            "id": 9,
+            "sprite": 86,
+            "script": 10000
+          },
+          {
+            "id": 10,
+            "sprite": 86,
+            "script": 10000
+          },
+          {
+            "id": 11,
+            "sprite": 86,
+            "script": 10000
+          },
+          {
+            "id": 12,
+            "sprite": 86,
+            "script": 10000
+          }
+        ]
+      },
+      {
+        "map": 20,
+        "original_event": 17,
+        "event": 531,
+        "objects": [
+          {
+            "id": 11,
+            "sprite": 86,
+            "script": 10000
+          },
+          {
+            "id": 12,
+            "sprite": 86,
+            "script": 10000
+          }
+        ]
+      },
+      {
+        "map": 21,
+        "original_event": 18,
+        "event": 532,
+        "objects": [
+          {
+            "id": 11,
+            "sprite": 86,
+            "script": 10000
+          }
+        ]
+      },
+      {
+        "map": 22,
+        "original_event": 19,
+        "event": 533,
+        "objects": [
+          {
+            "id": 8,
+            "sprite": 86,
+            "script": 10000
+          },
+          {
+            "id": 9,
+            "sprite": 86,
+            "script": 10000
+          },
+          {
+            "id": 14,
+            "sprite": 86,
+            "script": 10000
+          },
+          {
+            "id": 15,
+            "sprite": 86,
+            "script": 10000
+          },
+          {
+            "id": 16,
+            "sprite": 86,
+            "script": 10000
+          }
+        ]
+      },
+      {
+        "map": 23,
+        "original_event": 20,
+        "event": 534,
+        "objects": [
+          {
+            "id": 10,
+            "sprite": 86,
+            "script": 10000
+          }
+        ]
+      },
+      {
+        "map": 29,
+        "original_event": 26,
+        "event": 535,
+        "objects": [
+          {
+            "id": 10,
+            "sprite": 86,
+            "script": 10000
+          }
+        ]
+      },
+      {
+        "map": 32,
+        "original_event": 29,
+        "event": 536,
+        "objects": [
+          {
+            "id": 1,
+            "sprite": 86,
+            "script": 10000
+          }
+        ]
+      },
+      {
+        "map": 51,
+        "original_event": 48,
+        "event": 537,
+        "objects": [
+          {
+            "id": 3,
+            "sprite": 85,
+            "script": 10001
+          }
+        ]
+      },
+      {
+        "map": 54,
+        "original_event": 51,
+        "event": 538,
+        "objects": [
+          {
+            "id": 5,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 6,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 7,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 8,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 9,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 10,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 11,
+            "sprite": 86,
+            "script": 10000
+          }
+        ]
+      },
+      {
+        "map": 55,
+        "original_event": 52,
+        "event": 539,
+        "objects": [
+          {
+            "id": 11,
+            "sprite": 86,
+            "script": 10000
+          }
+        ]
+      },
+      {
+        "map": 56,
+        "original_event": 53,
+        "event": 540,
+        "objects": [
+          {
+            "id": 3,
+            "sprite": 86,
+            "script": 10000
+          }
+        ]
+      },
+      {
+        "map": 91,
+        "original_event": 88,
+        "event": 541,
+        "objects": [
+          {
+            "id": 8,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 9,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 10,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 11,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 12,
+            "sprite": 85,
+            "script": 10001
+          }
+        ]
+      },
+      {
+        "map": 124,
+        "original_event": 121,
+        "event": 542,
+        "objects": [
+          {
+            "id": 3,
+            "sprite": 84,
+            "script": 10002
+          },
+          {
+            "id": 4,
+            "sprite": 84,
+            "script": 10002
+          },
+          {
+            "id": 5,
+            "sprite": 84,
+            "script": 10002
+          }
+        ]
+      },
+      {
+        "map": 145,
+        "original_event": 141,
+        "event": 543,
+        "objects": [
+          {
+            "id": 4,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 5,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 6,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 7,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 8,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 9,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 10,
+            "sprite": 85,
+            "script": 10001
+          }
+        ]
+      },
+      {
+        "map": 147,
+        "original_event": 523,
+        "event": 544,
+        "objects": [
+          {
+            "id": 5,
+            "sprite": 86,
+            "script": 10000
+          },
+          {
+            "id": 6,
+            "sprite": 86,
+            "script": 10000
+          }
+        ]
+      },
+      {
+        "map": 178,
+        "original_event": 171,
+        "event": 545,
+        "objects": [
+          {
+            "id": 3,
+            "sprite": 84,
+            "script": 10002
+          },
+          {
+            "id": 4,
+            "sprite": 84,
+            "script": 10002
+          }
+        ]
+      },
+      {
+        "map": 179,
+        "original_event": 172,
+        "event": 546,
+        "objects": [
+          {
+            "id": 4,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 5,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 6,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 7,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 8,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 9,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 10,
+            "sprite": 85,
+            "script": 10001
+          }
+        ]
+      },
+      {
+        "map": 298,
+        "original_event": 269,
+        "event": 547,
+        "objects": [
+          {
+            "id": 0,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 1,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 2,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 3,
+            "sprite": 85,
+            "script": 10001
+          }
+        ]
+      },
+      {
+        "map": 388,
+        "original_event": 345,
+        "event": 548,
+        "objects": [
+          {
+            "id": 2,
+            "sprite": 84,
+            "script": 10002
+          }
+        ]
+      },
+      {
+        "map": 395,
+        "original_event": 352,
+        "event": 549,
+        "objects": [
+          {
+            "id": 0,
+            "sprite": 86,
+            "script": 10000
+          },
+          {
+            "id": 1,
+            "sprite": 86,
+            "script": 10000
+          },
+          {
+            "id": 2,
+            "sprite": 86,
+            "script": 10000
+          }
+        ]
+      },
+      {
+        "map": 414,
+        "original_event": 526,
+        "event": 550,
+        "objects": [
+          {
+            "id": 1,
+            "sprite": 86,
+            "script": 10000
+          }
+        ]
+      },
+      {
+        "map": 422,
+        "original_event": 377,
+        "event": 551,
+        "objects": [
+          {
+            "id": 0,
+            "sprite": 86,
+            "script": 10000
+          }
+        ]
+      },
+      {
+        "map": 450,
+        "original_event": 405,
+        "event": 552,
+        "objects": [
+          {
+            "id": 4,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 5,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 6,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 7,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 8,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 9,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 10,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 11,
+            "sprite": 85,
+            "script": 10001
+          }
+        ]
+      },
+      {
+        "map": 451,
+        "original_event": 406,
+        "event": 553,
+        "objects": [
+          {
+            "id": 5,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 6,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 7,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 8,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 9,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 10,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 11,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 12,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 13,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 15,
+            "sprite": 85,
+            "script": 10001
+          }
+        ]
+      },
+      {
+        "map": 452,
+        "original_event": 407,
+        "event": 554,
+        "objects": [
+          {
+            "id": 3,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 4,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 5,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 6,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 7,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 8,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 9,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 10,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 11,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 12,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 13,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 14,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 15,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 16,
+            "sprite": 85,
+            "script": 10001
+          },
+          {
+            "id": 17,
+            "sprite": 85,
+            "script": 10001
+          }
+        ]
+      },
+      {
+        "map": 453,
+        "original_event": 408,
+        "event": 555,
+        "objects": [
+          {
+            "id": 0,
+            "sprite": 84,
+            "script": 10002
+          },
+          {
+            "id": 1,
+            "sprite": 84,
+            "script": 10002
+          },
+          {
+            "id": 2,
+            "sprite": 84,
+            "script": 10002
+          },
+          {
+            "id": 3,
+            "sprite": 84,
+            "script": 10002
+          },
+          {
+            "id": 4,
+            "sprite": 84,
+            "script": 10002
+          },
+          {
+            "id": 5,
+            "sprite": 84,
+            "script": 10002
+          }
+        ]
+      },
+      {
+        "map": 455,
+        "original_event": 410,
+        "event": 556,
+        "objects": [
+          {
+            "id": 0,
+            "sprite": 84,
+            "script": 10002
+          }
+        ]
+      }
+    ],
+    "item_flags": [
+      2853,
+      2854,
+      2855,
+      885,
+      887,
+      2858,
+      2859
+    ],
+    "version": "014",
+    "input_sha256": "7b7a1ee57b972f3f8e18bdc1611e32eface19f18db368180a27fa5eedf640c9d",
+    "output_sha256": "edcd95d49ad2a2c8959b2b946934793bdf8c6f506138d2f4087c246c1b08e79f",
+    "patch_sha256": "e496054485061f202415662750b36d01c92816dcc3f7976b2c758c038a25a86f",
+    "changed_file_ids": [
+      141,
+      156,
+      161,
+      166,
+      184,
+      185,
+      186,
+      260
+    ]
+  }
+}

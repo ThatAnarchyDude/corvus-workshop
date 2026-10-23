@@ -1,0 +1,359 @@
+{
+  "map": 11,
+  "script": 1055,
+  "init": 1056,
+  "text": 876,
+  "event": 567,
+  "wild": 145,
+  "trainers": [
+    {
+      "id": 758,
+      "defeat_flag": 2118,
+      "role": "Bug Catcher",
+      "trainer_class": 6,
+      "template": 4,
+      "actor": 3,
+      "x": 1104,
+      "z": 107,
+      "facing": 1,
+      "dialogue": "Route3Youngster1",
+      "sprite": 227,
+      "team": [
+        {
+          "species": 10,
+          "level": 10,
+          "moves": [
+            33,
+            81,
+            0,
+            0
+          ]
+        },
+        {
+          "species": 13,
+          "level": 10,
+          "moves": [
+            40,
+            81,
+            0,
+            0
+          ]
+        },
+        {
+          "species": 10,
+          "level": 10,
+          "moves": [
+            33,
+            81,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 759,
+      "defeat_flag": 2119,
+      "role": "Youngster",
+      "trainer_class": 2,
+      "template": 8,
+      "actor": 10,
+      "x": 1103,
+      "z": 103,
+      "facing": 2,
+      "dialogue": "Route3Youngster2",
+      "sprite": 315,
+      "team": [
+        {
+          "species": 19,
+          "level": 11,
+          "moves": [
+            33,
+            39,
+            98,
+            0
+          ]
+        },
+        {
+          "species": 23,
+          "level": 11,
+          "moves": [
+            35,
+            43,
+            40,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 760,
+      "defeat_flag": 2120,
+      "role": "Lass",
+      "trainer_class": 3,
+      "template": 22,
+      "actor": 0,
+      "x": 1110,
+      "z": 99,
+      "facing": 2,
+      "dialogue": "Route3CooltrainerF1",
+      "sprite": 320,
+      "team": [
+        {
+          "species": 16,
+          "level": 9,
+          "moves": [
+            16,
+            28,
+            0,
+            0
+          ]
+        },
+        {
+          "species": 16,
+          "level": 9,
+          "moves": [
+            16,
+            28,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 761,
+      "defeat_flag": 2121,
+      "role": "Bug Catcher",
+      "trainer_class": 6,
+      "template": 4,
+      "actor": 2,
+      "x": 1114,
+      "z": 98,
+      "facing": 2,
+      "dialogue": "Route3Youngster3",
+      "sprite": 227,
+      "team": [
+        {
+          "species": 13,
+          "level": 9,
+          "moves": [
+            40,
+            81,
+            0,
+            0
+          ]
+        },
+        {
+          "species": 14,
+          "level": 9,
+          "moves": [
+            106,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "species": 10,
+          "level": 9,
+          "moves": [
+            33,
+            81,
+            0,
+            0
+          ]
+        },
+        {
+          "species": 11,
+          "level": 9,
+          "moves": [
+            106,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 762,
+      "defeat_flag": 2122,
+      "role": "Lass",
+      "trainer_class": 3,
+      "template": 22,
+      "actor": 1,
+      "x": 1122,
+      "z": 111,
+      "facing": 0,
+      "dialogue": "Route3CooltrainerF2",
+      "sprite": 320,
+      "team": [
+        {
+          "species": 19,
+          "level": 10,
+          "moves": [
+            33,
+            39,
+            98,
+            0
+          ]
+        },
+        {
+          "species": 32,
+          "level": 10,
+          "moves": [
+            43,
+            33,
+            30,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 763,
+      "defeat_flag": 2123,
+      "role": "Youngster",
+      "trainer_class": 2,
+      "template": 8,
+      "actor": 6,
+      "x": 1134,
+      "z": 113,
+      "facing": 1,
+      "dialogue": "Route3Youngster4",
+      "sprite": 315,
+      "team": [
+        {
+          "species": 21,
+          "level": 14,
+          "moves": [
+            64,
+            45,
+            43,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 764,
+      "defeat_flag": 2124,
+      "role": "Bug Catcher",
+      "trainer_class": 6,
+      "template": 4,
+      "actor": 7,
+      "x": 1143,
+      "z": 118,
+      "facing": 3,
+      "dialogue": "Route3Youngster5",
+      "sprite": 227,
+      "team": [
+        {
+          "species": 10,
+          "level": 11,
+          "moves": [
+            33,
+            81,
+            0,
+            0
+          ]
+        },
+        {
+          "species": 11,
+          "level": 11,
+          "moves": [
+            106,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 765,
+      "defeat_flag": 2125,
+      "role": "Lass",
+      "trainer_class": 3,
+      "template": 22,
+      "actor": 8,
+      "x": 1158,
+      "z": 123,
+      "facing": 0,
+      "dialogue": "Route3CooltrainerF3",
+      "sprite": 320,
+      "team": [
+        {
+          "species": 39,
+          "level": 14,
+          "moves": [
+            47,
+            1,
+            50,
+            0
+          ]
+        }
+      ]
+    }
+  ],
+  "trainer_common": 1054,
+  "original_common": 1038,
+  "originals": {
+    "script": 175,
+    "init": 420,
+    "text": 326,
+    "event": 528,
+    "wild": 113
+  },
+  "city_script": 1057,
+  "city_text": 877,
+  "city_init": 1051,
+  "version": "0017",
+  "input_sha256": "05ed484e1ddff00944063733031e2e3b4921c1e9cf145d58252fbd0c7b342242",
+  "output_sha256": "71f86b48272129c0f3d8f6b876403bf831c454b5917add58caf9921560f1976d",
+  "patch_sha256": "9e6ab58e53f0f85a97b2480f8bd6249bf36af340b022c470a67477300e0b838f",
+  "changed_file_ids": [
+    141,
+    156,
+    161,
+    166,
+    184,
+    185,
+    186,
+    260
+  ],
+  "validation": {
+    "automated_tests": 218,
+    "passed": 218,
+    "failures": 0,
+    "elapsed_seconds": 125.719,
+    "browser": {
+      "output_sha256": "71f86b48272129c0f3d8f6b876403bf831c454b5917add58caf9921560f1976d",
+      "bad_input_rejected": true,
+      "browser_errors": []
+    },
+    "xdelta_round_trip_verified": true,
+    "native_emulator": {
+      "previous_prototype_normal_save_loaded": true,
+      "native_fixture_prepared_private_normal_save": true,
+      "post_brock_east_exit_crossed_both_directions": true,
+      "youngster_team_seen": [
+        [
+          19,
+          11
+        ],
+        [
+          23,
+          11
+        ]
+      ],
+      "battle_won": true,
+      "trainer_defeat_flag_set": true,
+      "post_battle_30_pokemon_tip_seen": true
+    },
+    "all_eight_battles_played": false,
+    "complete_campaign_playthrough": false,
+    "blue_eevee_dependent_teams_implemented": false
+  }
+}

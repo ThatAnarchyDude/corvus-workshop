@@ -1,0 +1,607 @@
+{
+  "reference": {
+    "repository": "pret/pokeyellow",
+    "commit": "e89ead154b9968aa50eed9328ff2b38b6c194382",
+    "paths": [
+      "text/MtMoon1F.asm",
+      "text/MtMoonB2F.asm",
+      "data/trainers/parties.asm",
+      "data/wild/maps/MtMoon1F.asm",
+      "data/wild/maps/MtMoonB1F.asm",
+      "data/wild/maps/MtMoonB2F.asm",
+      "data/pokemon/base_stats/",
+      "data/pokemon/evos_moves.asm"
+    ]
+  },
+  "messages": {
+    "MtMoon1FHikerBattleText": "WHOA! You shocked me! Oh, you're just a kid!",
+    "MtMoon1FHikerEndBattleText": "Wow! Shocked again!",
+    "MtMoon1FHikerAfterBattleText": "Kids like you shouldn't be here!",
+    "MtMoon1FYoungster1BattleText": "Did you come to explore too?",
+    "MtMoon1FYoungster1EndBattleText": "Losing stinks!",
+    "MtMoon1FYoungster1AfterBattleText": "I came down here to show off to girls.",
+    "MtMoon1FCooltrainerF1BattleText": "Wow! It's way bigger in here than I thought!",
+    "MtMoon1FCooltrainerF1EndBattleText": "Oh! I lost it!",
+    "MtMoon1FCooltrainerF1AfterBattleText": "How do you get out of here?",
+    "MtMoon1FSuperNerdBattleText": "What! Don't sneak up on me!",
+    "MtMoon1FSuperNerdEndBattleText": "My POKEMONMON won't do!",
+    "MtMoon1FSuperNerdAfterBattleText": "I have to find stronger POKEMONMON.",
+    "MtMoon1FCooltrainerF2BattleText": "What? I'm waiting for my friends to find me here.",
+    "MtMoon1FCooltrainerF2EndBattleText": "I lost?",
+    "MtMoon1FCooltrainerF2AfterBattleText": "I heard there are some very rare fossils here.",
+    "MtMoon1FYoungster2BattleText": "Suspicious men are in the cave. What about you?",
+    "MtMoon1FYoungster2EndBattleText": "You got me!",
+    "MtMoon1FYoungster2AfterBattleText": "I saw them! I'm sure they're from TEAM ROCKET!",
+    "MtMoon1FYoungster3BattleText": "Go through this cave to get to CERULEAN CITY!",
+    "MtMoon1FYoungster3EndBattleText": "I lost.",
+    "MtMoon1FYoungster3AfterBattleText": "ZUBAT is tough! But, it can be useful if you catch one.",
+    "MtMoon1FBewareZubatSign": "Beware! ZUBAT is a bloodsucker!",
+    "MtMoonJessieJamesText1": "Stop right there!",
+    "MtMoonJessieJamesText2": "That fossil is TEAM ROCKET's!\rSurrender now, or  prepare to fight!",
+    "MtMoonJessieJamesText3": "A brat beat us?",
+    "MtMoonJessieJamesText4": "TEAM ROCKET, blast off at the speed of light!",
+    "MtMoonB2FDomeFossilYouWantText": "You want the DOME FOSSIL?",
+    "MtMoonB2FHelixFossilYouWantText": "You want the HELIX FOSSIL?",
+    "MtMoonB2FReceivedFossilText": "{PLAYER} got the  !",
+    "MtMoonB2FYouHaveNoRoomText": "Look, you've got no room for this.",
+    "MtMoonB2FSuperNerdTheyreBothMineText": "Hey, stop!\rI found these fossils! They're both mine!",
+    "MtMoonB2FSuperNerdOkIllShareText": "OK! I'll share!",
+    "MtMoonB2fSuperNerdEachTakeOneText": "We'll each take one! No being greedy!",
+    "MtMoonB2FSuperNerdTheresAPokemonLabText": "Far away, on CINNABAR ISLAND, there's a POKEMONMON LAB.\rThey do research on regenerating fossils.",
+    "MtMoonB2FSuperNerdThenThisIsMineText": "All right. Then this is mine!",
+    "MtMoonB2FRocket2BattleText": "We, TEAM ROCKET, are POKEMONMON gangsters!",
+    "MtMoonB2FRocket2EndBattleText": "I blew it!",
+    "MtMoonB2FRocket2AfterBattleText": "Darn it all! My associates won't stand for this!",
+    "MtMoonB2FRocket3BattleText": "We're pulling a big job here! Get lost, kid!",
+    "MtMoonB2FRocket3EndBattleText": "So, you are good.",
+    "MtMoonB2FRocket3AfterBattleText": "If you find a fossil, give it to me and scram!",
+    "MtMoonB2FRocket4BattleText": "Little kids should leave grown-ups alone!",
+    "MtMoonB2FRocket4EndBattleText": "I'm steamed!",
+    "MtMoonB2FRocket4AfterBattleText": "POKEMONMON lived here long before people came."
+  },
+  "trainers": [
+    {
+      "role": "Hiker",
+      "trainer_class": 9,
+      "sprite": 332,
+      "map": 107,
+      "actor": 0,
+      "x": 19,
+      "z": 3,
+      "facing": 1,
+      "dialogue": "MtMoon1FHiker",
+      "team": [
+        {
+          "species": 74,
+          "level": 10,
+          "moves": [
+            33,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "species": 74,
+          "level": 10,
+          "moves": [
+            33,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "species": 95,
+          "level": 10,
+          "moves": [
+            33,
+            103,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "role": "Youngster",
+      "trainer_class": 2,
+      "sprite": 315,
+      "map": 107,
+      "actor": 1,
+      "x": 7,
+      "z": 3,
+      "facing": 1,
+      "dialogue": "MtMoon1FYoungster1",
+      "team": [
+        {
+          "species": 19,
+          "level": 10,
+          "moves": [
+            33,
+            39,
+            98,
+            0
+          ]
+        },
+        {
+          "species": 19,
+          "level": 10,
+          "moves": [
+            33,
+            39,
+            98,
+            0
+          ]
+        },
+        {
+          "species": 41,
+          "level": 10,
+          "moves": [
+            141,
+            48,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "role": "Lass",
+      "trainer_class": 3,
+      "sprite": 320,
+      "map": 107,
+      "actor": 2,
+      "x": 23,
+      "z": 4,
+      "facing": 2,
+      "dialogue": "MtMoon1FCooltrainerF1",
+      "team": [
+        {
+          "species": 43,
+          "level": 11,
+          "moves": [
+            71,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "species": 69,
+          "level": 11,
+          "moves": [
+            22,
+            74,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "role": "Super Nerd",
+      "trainer_class": 78,
+      "sprite": 317,
+      "map": 107,
+      "actor": 3,
+      "x": 17,
+      "z": 7,
+      "facing": 2,
+      "dialogue": "MtMoon1FSuperNerd",
+      "team": [
+        {
+          "species": 81,
+          "level": 11,
+          "moves": [
+            33,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "species": 100,
+          "level": 11,
+          "moves": [
+            33,
+            103,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "role": "Lass",
+      "trainer_class": 3,
+      "sprite": 320,
+      "map": 107,
+      "actor": 4,
+      "x": 10,
+      "z": 12,
+      "facing": 3,
+      "dialogue": "MtMoon1FCooltrainerF2",
+      "team": [
+        {
+          "species": 35,
+          "level": 14,
+          "moves": [
+            1,
+            45,
+            47,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "role": "Bug Catcher",
+      "trainer_class": 6,
+      "sprite": 227,
+      "map": 107,
+      "actor": 5,
+      "x": 12,
+      "z": 16,
+      "facing": 2,
+      "dialogue": "MtMoon1FYoungster2",
+      "team": [
+        {
+          "species": 13,
+          "level": 11,
+          "moves": [
+            40,
+            81,
+            0,
+            0
+          ]
+        },
+        {
+          "species": 14,
+          "level": 11,
+          "moves": [
+            106,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "role": "Bug Catcher",
+      "trainer_class": 6,
+      "sprite": 227,
+      "map": 107,
+      "actor": 6,
+      "x": 24,
+      "z": 16,
+      "facing": 2,
+      "dialogue": "MtMoon1FYoungster3",
+      "team": [
+        {
+          "species": 10,
+          "level": 10,
+          "moves": [
+            33,
+            81,
+            0,
+            0
+          ]
+        },
+        {
+          "species": 11,
+          "level": 10,
+          "moves": [
+            106,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "species": 10,
+          "level": 10,
+          "moves": [
+            33,
+            81,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "role": "Team Rocket",
+      "trainer_class": 55,
+      "sprite": 222,
+      "map": 107,
+      "actor": 7,
+      "x": 13,
+      "z": 17,
+      "facing": 2,
+      "dialogue": "MtMoonB2FRocket2",
+      "team": [
+        {
+          "species": 27,
+          "level": 11,
+          "moves": [
+            10,
+            28,
+            0,
+            0
+          ]
+        },
+        {
+          "species": 19,
+          "level": 11,
+          "moves": [
+            33,
+            39,
+            98,
+            0
+          ]
+        },
+        {
+          "species": 41,
+          "level": 11,
+          "moves": [
+            141,
+            48,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "role": "Team Rocket",
+      "trainer_class": 55,
+      "sprite": 222,
+      "map": 448,
+      "actor": 8,
+      "x": 4,
+      "z": 3,
+      "facing": 3,
+      "dialogue": "MtMoonB2FRocket3",
+      "team": [
+        {
+          "species": 41,
+          "level": 12,
+          "moves": [
+            141,
+            48,
+            0,
+            0
+          ]
+        },
+        {
+          "species": 23,
+          "level": 12,
+          "moves": [
+            35,
+            43,
+            40,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "role": "Team Rocket",
+      "trainer_class": 55,
+      "sprite": 222,
+      "map": 448,
+      "actor": 9,
+      "x": 7,
+      "z": 24,
+      "facing": 2,
+      "dialogue": "MtMoonB2FRocket4",
+      "team": [
+        {
+          "species": 19,
+          "level": 13,
+          "moves": [
+            33,
+            39,
+            98,
+            0
+          ]
+        },
+        {
+          "species": 41,
+          "level": 13,
+          "moves": [
+            141,
+            48,
+            0,
+            0
+          ]
+        }
+      ]
+    }
+  ],
+  "wild_slots": {
+    "1F": [
+      {
+        "level": 8,
+        "species": 41
+      },
+      {
+        "level": 9,
+        "species": 41
+      },
+      {
+        "level": 10,
+        "species": 74
+      },
+      {
+        "level": 6,
+        "species": 41
+      },
+      {
+        "level": 7,
+        "species": 41
+      },
+      {
+        "level": 10,
+        "species": 41
+      },
+      {
+        "level": 10,
+        "species": 74
+      },
+      {
+        "level": 11,
+        "species": 41
+      },
+      {
+        "level": 12,
+        "species": 27
+      },
+      {
+        "level": 11,
+        "species": 35
+      }
+    ],
+    "B1F": [
+      {
+        "level": 8,
+        "species": 41
+      },
+      {
+        "level": 9,
+        "species": 41
+      },
+      {
+        "level": 10,
+        "species": 41
+      },
+      {
+        "level": 10,
+        "species": 74
+      },
+      {
+        "level": 11,
+        "species": 74
+      },
+      {
+        "level": 11,
+        "species": 41
+      },
+      {
+        "level": 9,
+        "species": 46
+      },
+      {
+        "level": 11,
+        "species": 46
+      },
+      {
+        "level": 10,
+        "species": 35
+      },
+      {
+        "level": 12,
+        "species": 35
+      }
+    ],
+    "B2F": [
+      {
+        "level": 10,
+        "species": 41
+      },
+      {
+        "level": 11,
+        "species": 74
+      },
+      {
+        "level": 13,
+        "species": 46
+      },
+      {
+        "level": 11,
+        "species": 41
+      },
+      {
+        "level": 11,
+        "species": 41
+      },
+      {
+        "level": 12,
+        "species": 41
+      },
+      {
+        "level": 13,
+        "species": 41
+      },
+      {
+        "level": 9,
+        "species": 35
+      },
+      {
+        "level": 11,
+        "species": 35
+      },
+      {
+        "level": 13,
+        "species": 35
+      }
+    ]
+  },
+  "encounter_rate": 10,
+  "pending": [
+    "Super Nerd fossil battle and exclusive choice",
+    "Jessie/James ambush, images and departure",
+    "Hidden items, HP Up, and Yellow Water Gun/Mega Punch TMs",
+    "Mt. Moon Pokemon Center and Magikarp seller",
+    "Native emulator playtests before release"
+  ],
+  "pickups": [
+    {
+      "map": 107,
+      "actor": 16,
+      "item": 17,
+      "name": "POTION",
+      "flag": 2860,
+      "x": 6,
+      "z": 2
+    },
+    {
+      "map": 107,
+      "actor": 17,
+      "item": 81,
+      "name": "MOON STONE",
+      "flag": 2861,
+      "x": 23,
+      "z": 2
+    },
+    {
+      "map": 107,
+      "actor": 18,
+      "item": 50,
+      "name": "RARE CANDY",
+      "flag": 2862,
+      "x": 10,
+      "z": 9
+    },
+    {
+      "map": 107,
+      "actor": 19,
+      "item": 78,
+      "name": "ESCAPE ROPE",
+      "flag": 2863,
+      "x": 12,
+      "z": 14
+    },
+    {
+      "map": 107,
+      "actor": 20,
+      "item": 17,
+      "name": "POTION",
+      "flag": 2864,
+      "x": 20,
+      "z": 23
+    }
+  ]
+}
