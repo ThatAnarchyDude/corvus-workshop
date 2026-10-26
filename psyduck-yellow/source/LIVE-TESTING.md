@@ -126,8 +126,8 @@ bash tools/start_external_stream.sh
 ```
 
 The helper verifies token protection before opening a tunnel. Cloudflare prints
-an actual `(temporary live-test link, removed) URL only after successful provisioning.
-Append `/#token=YOUR_TOKEN` to access the HUD and feed. Keep the full access link
+an actual `[temporary tunnel link removed] URL only after successful provisioning.
+Append `/` to access the HUD and feed. Keep the full access link
 private; it expires when the tunnel stops. This has no uptime guarantee, may be
 buffered by intermediate proxies, and is not a permanent development log URL.
 Do not publish the token or full access link in the repository. Stop the tunnel

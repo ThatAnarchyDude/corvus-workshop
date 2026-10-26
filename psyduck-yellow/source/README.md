@@ -1,32 +1,3 @@
-# Psyduck Yellow — source
-
-The build tools, tests, data and notes behind **Pokémon Psyduck Yellow** (latest: prototype 0081 BETA). Each prototype is produced by chaining small Python patch scripts, each starting from the previous build's ROM; the public downloads are `xdelta` patches of those ROMs (see the [Releases](https://github.com/ThatAnarchyDude/Psyduck-Yellow-Releases/releases)).
-
-## Layout
-- `tools/` — the patch and build scripts (one module per area or feature, e.g. `starter_eevee_line.py`, `novareon.py`, `stellar_stab.py`, `stellar_rainbow.py`, `new_images.py`, `starter_display_fix.py`, `build_release_00xx.py`) and small emulator-test helpers.
-- `tests/` — offline tests that need no ROM; `data/` — Yellow-derived tables and event data as JSON; `asm/` — hand-written Thumb patches; `pkhex/` — PKHeX plugin source; `art/` — title artwork.
-- `*-PLAN.md`, `CAMPAIGN-FIRST-PLAN.md` and other notes — design decisions, owner approvals and test records, newest last.
-
-## What is NOT here (and why)
-- **No ROMs, saves, emulator states or game files** — the original HeartGold ROM and every built game stay on the developer's machine. The scripts need your own legally obtained USA HeartGold to do anything.
-- **Private dependencies are not included**: a working copy of hg-engine, the PKHeX forks and the developer's original sprite library live in a separate local folder. Scripts that reach for them (for example `tools/novareon.py`) will not run from a plain checkout.
-- Build output, test fixtures and screenshots.
-
-The scripts were written to run from a local project folder; some paths and notes mention the developer's own machine. They are published so the work can be read and audited, not as a one-command build.
-
-## Prototype notes (newest first)
-**Prototype 0081 BETA** — Novareon's own Pokédex entry (`dex_novareon_id500.py`, `owner_text.py`) and follower (`novareon_follower_fix.py`), Mega Novareon art (`mega_novareon_art.py`), Champion Blue (`champion_blue.py`), item balls (`silph_items.py`, `tower_items.py`, `hideout_items.py`, `vr_items.py`), Moltres, trainer-party and text fixes (`trainer_type_fix.py`, `game_corner_text_fix.py`, `silph_exit_fix.py`), and static audits (`audit_*.py`).
-
-**Prototype 0056 BETA** — the Pokédex opens on the Kanto list (1–151) with real National numbers for the starter Pokémon and a KANTO title/label (`dex_fix.py`, `dex_kanto.py`, `dex_labels.py`); TM34 is Moonblast and TM58 is Dazzling Gleam, plus Fairy-move fixes (`fairy_moves.py`, `tm_fairy.py`, `tm_gleam_union.py`).
-
-**Prototype 0050 BETA** — the starter Eevee line (all eight Eeveelutions plus the new Stellar-type Novareon via a Sandwich, each with its own Mega), the Stellar type with its rainbow tag, new Sandwich and Novareon icons, and fixes for the starters' evolution screen, summary sprites and shiny Mega colours. See the [development log](../DEVELOPMENT-LOG.md).
-
-**Prototype 0042 BETA** — Silph Co., Victory Road, the second Route 22 rival battle, the Route 22 badge gate and the way to the League and Hall of Fame.
-
-**Prototype 0041** — Pokémon Tower, the Celadon Gym, the Rocket Hideout, Routes 8 and 11–18, the Fuchsia, Saffron, Seafoam and Viridian gyms, the League, Mega Psyduck and the free Mega Stones.
-
----
-
 Prototype 0024 adds Yellow’s Route 25 trainers, encounters, hidden Ether/Elixir and reusable Seismic Toss TM, plus Bill’s visible separation scene and automatic S.S. Ticket reward. See [ROUTE25-BILL.md](ROUTE25-BILL.md) and the [validation record](validation-prototype-0024.json). The returning Cerulean robbed-house/Dig event follows next.
 
 Prototype 0023 continues through Route 24 and Nugget Bridge, including Yellow’s contest teams, Nugget/Rocket event, Charmander gift and reusable Thunder Wave TM. It also corrects Blue’s bridge approach lanes and height, the fossil rendering and mandatory Mt. Moon battles. See [ROUTE24.md](ROUTE24.md) and the [validation record](validation-prototype-0023.json).

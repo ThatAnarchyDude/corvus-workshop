@@ -4,6 +4,7 @@ Never part of a release ROM and never campaign proof. Optionally starts a wild b
 Usage: fixture_party.py <in.nds> <out.nds> <species> <held item> <level> [item:count ...] [--battle species,level] [--dex] [--warp map,x,z] [--follower] [--trainer id]
 --dex also gives the Pokedex and National Dex mode (script commands 291, flag 0x6B, 477), which unlocks the POKEDEX and POKEMON entries of the field menu.
 """
+import os
 import struct
 import sys
 import ndspy.narc
@@ -25,6 +26,14 @@ def install(rom, species, held, level, items, battle, dex=False, warp=None, foll
     s = Script().emit(41, STATE, 1).emit(137, species, level, held, 0, 0, 0x800C)
     for item, count in items:
         s.emit(125, item, count, 0x800C)
+    for extra in filter(None, os.environ.get('FIXTURE_EXTRA', '').split(',')):       # test-only: give more species (registers them as caught in the Pokedex); env FIXTURE_EXTRA=species:level,...
+        sp, lv = extra.split(':')
+        s.emit(137, int(sp), int(lv), 0, 0, 0, 0x800C)
+    for flag in filter(None, os.environ.get('FIXTURE_FLAGS', '').split(',')):      # test-only: set story flags (env FIXTURE_FLAGS=0x9f9,...)
+        s.emit(30, int(flag, 0))
+    for pair in filter(None, os.environ.get('FIXTURE_VARS', '').split(',')):         # test-only: set script variables (env FIXTURE_VARS=0x406d=1,...)
+        var, value = pair.split('=')
+        s.emit(41, int(var, 0), int(value, 0))
     if dex:
         s.emit(291).emit(30, 0x6B).emit(477)       # the project's own dex grant: give Pokedex, flag 0x6B, National Dex mode on
         s.data.append(1)

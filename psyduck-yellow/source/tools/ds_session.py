@@ -84,6 +84,17 @@ def shot(name):
             r,g,b=(v>>10)&31,(v>>5)&31,v&31;out.extend((r*255//31,g*255//31,b*255//31))
     Image.frombytes('RGB',(w,h),bytes(out)).save(root/name) if pix!=1 else Image.frombytes('RGB',(w,h),data,'raw','BGRX',pitch).save(root/name)
 
+def shot_true(name):
+    """True-colour screenshot. shot() decodes the core's RGB565 frames as 0RGB1555, which distorts every hue (pink grass, odd trees); the tests' pixel thresholds were tuned to that, so shot() stays as is."""
+    data,w,h,pitch,pix=frame
+    if pix!=2:return shot(name)
+    out=bytearray()
+    for y in range(h):
+        for x in range(w):
+            v=int.from_bytes(data[y*pitch+x*2:y*pitch+x*2+2],'little')
+            out.extend((((v>>11)&31)*255//31,((v>>5)&63)*255//63,(v&31)*255//31))
+    Image.frombytes('RGB',(w,h),bytes(out)).save(root/name)
+
 def boot():
     """Same input sequence as shoot.sh: continue from the fixture save, close the menu."""
     A=8

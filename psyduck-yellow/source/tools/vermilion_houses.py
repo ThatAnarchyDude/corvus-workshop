@@ -24,9 +24,9 @@ def patch(rom,messages):
   report={'map':mid,'old_script':sid,'script':ns,'old_text':tid,'text':nt,'native_init':iid,'first_message':first,'original_script_length':original_len,'messages':labels}
   if mid==363:
    eid=struct.unpack_from('<H',d,rec+16)[0];g=events_decode(events.files[eid]);assert len(g[1])==2
-   for i,sprite in enumerate((315,444)):
+   for i,sprite in enumerate((315,1005)):
     row=bytearray(g[1][i]);struct.pack_into('<H',row,2,sprite);g[1][i]=bytes(row)
-   ne=len(events.files);events.files.append(events_encode(g));struct.pack_into('<H',d,rec+16,ne);report.update(old_event=eid,event=ne,sprites=[315,444])
+   ne=len(events.files);events.files.append(events_encode(g));struct.pack_into('<H',d,rec+16,ne);report.update(old_event=eid,event=ne,sprites=[315,1005])
   reports.append(report)
  for path,arc in zip(paths,(scripts,texts,events)):rom.files[rom.filenames.idOf(path)]=arc.save()
  rom.arm9=main.save(compress=True)

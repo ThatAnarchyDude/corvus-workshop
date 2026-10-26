@@ -206,7 +206,7 @@ nop
     bank=[rival_scene(blue),talk(4),talk(5),talk(4),talk(4),talk(6),talk(7),talk(8),talk(9),talk(10),talk(11),talk(12),city_init(),random_dialogue(13,3),random_dialogue(16,4,101)]
     install(52,g,bank,[M[x] for x in labels+extra],struct.pack('<BHHBHH',2,13,0,3,13,0)+b'\0\0')
     # Melanie's care home uses HG's western house, which already has Pokémon.
-    g,_,_=current(431);g[1]=[actor(0,330,1,5,6),actor(2,428,2,2,6,BULBA_HIDE),actor(3,1006,3,5,3),actor(4,456,4,8,6)]
+    g,_,_=current(431);g[1]=[actor(0,330,1,5,6),actor(2,1007,2,2,6,BULBA_HIDE),actor(3,1006,3,5,3),actor(4,1012,4,8,6)]
     labels=('MelanieText1','MelanieText2','MelanieText3','MelanieText4','MelanieText5','MelanieBulbasaurText','MelanieOddishText','MelanieSandshrewText')
     install(431,g,[melanie(),cry_dialogue(5,1),cry_dialogue(6,43),cry_dialogue(7,27)],[M[x] for x in labels]+['Your party is full. Make room for BULBASAUR and come back.'])
     # Native HG clinic services and Player PC item storage remain available.

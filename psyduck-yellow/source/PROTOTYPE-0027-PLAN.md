@@ -192,7 +192,7 @@ Fly/follower/camera validation remain blockers for release. No public push.
 Previous stream processes stopped between runs. Local city-link runner69278 recovered
 with separate build/0027-live-city-links-v2 save folder; actual live city roundtrip
 passes. Cloudflare recovery PID1316 uses new origin
-(temporary live-test link, removed) . Existing viewing credential
+[temporary tunnel link removed] . Existing viewing credential
 remains live-token; controls live-control-token unchanged/private. Remote JPEG11787bytes,
 44100Hz nonzero PCM, can_controlFalse and viewer POST403 verified. Feed paused after
 gameplay. Public GitHub log still old URL because this heartbeat prohibits public push;
@@ -431,7 +431,7 @@ included in the delivered game. The cumulative patch reproduces the ROM exactly
 from the unchanged original HeartGold ROM.
 
 The live tunnel was restored after the old one stopped. Its current link is
-[Watch live testing]((temporary live-test link, removed)).
+[Watch live testing]([temporary tunnel link removed]).
 The service stays connected and pauses video/audio between tests. The owner
 reported the separate Linux testing problem fixed by the supplied kit.
 
