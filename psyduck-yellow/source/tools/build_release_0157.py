@@ -8,6 +8,7 @@ Usage: build_release_0157.py <releases-repo clone> <0039-art-to-0157.xdelta> <00
 """
 import hashlib
 import json
+import os
 import re
 import shutil
 import sys
@@ -17,7 +18,8 @@ DATE = 'November 3, 2026'
 VERSION = '0157-BETA'
 LABEL = 'BETA 0.1.57'
 FOLDER, PREVIOUS = 'prototype-0157', 'prototype-0110'
-PAGE = f'https://raw.githack.com/ThatAnarchyDude/Psyduck-Yellow-Releases/main/{FOLDER}/index.html'
+OWNER = os.environ.get('RELEASE_OWNER', 'ThatAnarchyDude')       # the account whose Psyduck-Yellow-Releases repo gets this release (the supplied token can only write to Doctor-Pokemon's fork)
+PAGE = f'https://raw.githack.com/{OWNER}/Psyduck-Yellow-Releases/main/{FOLDER}/index.html'
 OUT_NAME = 'Pokemon Psyduck Yellow BETA 0.1.57.nds'
 PATCH_NAME = '0039-art-to-0157.xdelta'
 SOURCE_URL = 'https://github.com/Doctor-Pokemon/corvus-workshop/tree/publish-0157/psyduck-yellow/source'   # branch of the owner's second account (the token cannot push to ThatAnarchyDude/corvus-workshop); a pull request proposes it there
