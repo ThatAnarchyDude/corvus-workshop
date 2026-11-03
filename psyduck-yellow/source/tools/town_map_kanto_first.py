@@ -1,7 +1,7 @@
 """Town Map / Fly map: Kanto only until the first arrival in Johto (owner 2026-11-03: "Town Map should show ONLY Kanto until you arrive in Johto for the first time", New Bark Town unlocked as a Fly destination only directly after; owner idea: reuse HeartGold's own initial-map mechanics).
 HeartGold's Fly map (overlay 101) has a lock of its own: a 2-bit "map unlock level" in the save (script command 804). Level 0 = only the Johto half exists (the cursor cannot enter tile columns >= 22, only entries on Johto tiles are drawn, the Kanto picture is never loaded); level 2 = the whole map.
 Only the Johto half is the unlocked one at level 0, and the Kanto picture is not loaded there, so the vanilla level cannot lock Johto. This build keeps the map at level 2 (both pictures loaded) and applies the same three restrictions, MIRRORED, while Johto is locked.
-Johto counts as unlocked once the Fly point of New Bark Town is set (flag 0x9BB = Fly point 11, 0x9B0 + 11): Elm's call on the first Johto arrival sets it (johto_step2), nothing else does. While it is clear:
+Johto counts as unlocked once script variable 0x4128 (the postgame progress counter) is 6 or more: Elm's call on the first Johto arrival sets it (johto_step2). It is NOT keyed on New Bark's Fly point (flag 0x9BB): the engine's fly-point-on-entry table (ARM9 0x020F9E80) has its first entry changed from map 60 (New Bark) to map 49 (Pallet Town) in this ROM, so walking into Pallet sets 0x9BB at the very start of a game (owner report 2026-11-03: the Town Map still scrolled into Johto in 0158). While the counter is below 6:
  - cursor (overlay 101 0x021EA7A8): the level read becomes the helper below and `blo` -> `bhs` at 0x021EA7BE, so the cursor cannot enter columns < 22 (the Johto half) and a locked tile has no destination;
  - icons (0x021EB00A, 0x021EB020): the level read becomes the helper and `cmp r0, #0` -> `cmp r0, #2` (the tile-class function 0x021E5C50 returns 2 for the Johto columns), so Johto entries are not drawn;
  - left limit: both map apps (Fly 0x021ED980, Town Map 0x021E78EC) write the cursor rectangle at app+0x100.. (min column 1, max column from the per-level table, min row 1, max row 17): while locked the min column is 22 instead of 1 (0x021EDA6C / 0x021E7A5C), so the cursor cannot leave Kanto;
@@ -9,7 +9,7 @@ Johto counts as unlocked once the Fly point of New Bark Town is set (flag 0x9BB 
 Once the flag is set every check passes through unchanged and the map is vanilla (both halves, the page it was last on).
 The Town Map app (0x021E78EC) opens on the page of the player's current region (Kanto during the Kanto campaign); its call to the destination builder 0x021ED4E0 (0x021E7900) goes through a wrapper that, while locked, sets the persisted cursor tile to Pallet Town first.
 Helpers live in overlay 129's free bytes (0x023DE5CE-0x023DE808 only (570 zero bytes between two code sections, no pointers into them; the whole length of every helper is asserted zero and inside that run)):
- unlocked(r0 = app) -> r0 = 1 when Fly point 11 is set, else 0; touches only r0-r3 (the call sites keep r4-r7);
+ unlocked(r0 = app) -> r0 = 1 when the progress counter is >= 6, else 0; a leaf routine that only clobbers r0 and r1 (the call sites keep r4-r7);
  page: replaces the two page instructions; r0 (the app pointer for the call that follows) and r2 are live there and are preserved.
 Saving overlay 101 must keep it compressed (it is stored compressed in the ROM). No save change; the unlock level stays whatever the scripts set (2 from the Viridian reward on).
 Usage (from yellow-heartgold, PYTHONPATH=tools): town_map_kanto_first.py <in.nds> <out.nds>"""
@@ -25,8 +25,7 @@ CURSOR_SKIP = 0x021EA7C4
 ICON_LEVEL = 0x021EB00A          # the same level read through r5, then cmp r0,#2 (then bhs: draw everything)
 ICON_TEST = 0x021EB020           # cmp r0,#0 -> cmp r0,#2 (then beq: skip the entry)
 PAGE = 0x021ED998                # adds r1,r1,#1 ; strb r1,[r4,#0xd]
-FLY_POINT = 0x02066930           # (flags, action 2 = test, index) -> set?
-NEW_BARK = 11                    # Fly point index of New Bark Town (flag 0x9BB)
+PROGRESS_UNLOCKED = 6            # script variable 0x4128 (the postgame progress counter, vars start at the VarsFlags base: offset (0x4128 - 0x4000) * 2 = 0x250) is 6 once Elm has called (johto_step2), 7 after Mr. Pokemon
 START_X, START_Z = 32, 11        # the persisted cursor tile while locked: Pallet Town's entry (x 32, z 11) in the Fly map's table at 0x021F79B4
 LEFT_LIMIT = 22                  # first Kanto column
 MIN_COLUMN_FLY = 0x021EDA6C      # movs r1,#1 ; adds r0,r1,#0 ; adds r0,#0xff ; strh r1,[r4,r0]   (writes min column 1 to app+0x100)
@@ -58,21 +57,18 @@ def patch(rom):
         ov.data[at:at + len(new)] = new
 
     unlocked = asm('''
-push {r3, lr}
 ldr r0, [r0, #0x10]
 ldr r0, [r0, #0x2c]
-movs r1, #2
-movs r2, #%d
-ldr r3, flycheck
-blx r3
-cmp r0, #0
-beq locked
+movs r1, #0x25
+lsls r1, r1, #4
+ldrh r0, [r0, r1]
+cmp r0, #%d
+blo locked
 movs r0, #1
+bx lr
 locked:
-pop {r3, pc}
-
-.align 2
-flycheck: .word %d''' % (NEW_BARK, FLY_POINT | 1), UNLOCKED_AT)
+movs r0, #0
+bx lr''' % PROGRESS_UNLOCKED, UNLOCKED_AT)
     page = asm('''
 push {r0, r1, r2, r3, lr}
 adds r0, r4, #0
