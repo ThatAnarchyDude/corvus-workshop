@@ -31,7 +31,7 @@ NAMES = {1: 'VictoryRoad1F', 2: 'VictoryRoad2F', 3: 'VictoryRoad3F'}
 BLOCKS = {1: (10, 9), 2: (15, 9), 3: (15, 9)}
 OX, OZ, CX, CZ, AREA = 8, 12, 3, 3, 70
 ROUTE23_GATE, INDIGO = 299, 58
-BOULDER_SPRITE, BOULDER_SCRIPT, ROCK_SPRITE = 85, 10001, 84
+BOULDER_SPRITE, BOULDER_SCRIPT, ROCK_SPRITE = 85, 10001, 84      # WRONG way round (found 2026-10-28): 85/10001 is the Rock Smash rock and 84/10002 the Strength boulder; vr_boulder_fix.py swaps them in the built maps
 FLAGS = {'b1': 0x956, 'b2a': 0x957, 'b2b': 0x958, 'b3': 0x959}        # one hide flag per barrier (checked free by trainer_alloc.assert_flags_free)
 # switches (Yellow step) and the barrier block each opens: (barrier key, switch (x, y), barrier block (y, x), open block id)
 SWITCHES = {1: [('b1', (17, 13), (6, 4), 0x1D)],

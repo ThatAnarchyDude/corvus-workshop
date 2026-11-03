@@ -61,12 +61,16 @@ class TextScript(Script):
         return super().emit(op, *args)
 
 
-def script(*, evolution_items=False, text_offset=0, service_only=False, shiny_charm=False, friendship_charm=False):
+STARTING_STACKS = ((17, 1), (50, 95))   # (item, quantity) written into the first slots on the first use (Potion, Rare Candy)
+EVOLUTION_QUANTITY = 95               # each evolution item is added to the PC in this quantity
+
+
+def script(*, evolution_items=False, text_offset=0, service_only=False, shiny_charm=False, friendship_charm=False, starting_stacks=STARTING_STACKS, evolution_quantity=EVOLUTION_QUANTITY):
     s = TextScript(text_offset)
     if not service_only:
         s.emit(96).emit(73, 1547)
     s.compare(INIT, 1).jump('upgrade' if evolution_items else 'charm' if shiny_charm else 'boot', 1)
-    for (item_var, qty_var), item, qty in zip(SLOTS, [17, 50], [1, 95]):
+    for (item_var, qty_var), (item, qty) in zip(SLOTS, starting_stacks):
         s.emit(41, item_var, item).emit(41, qty_var, qty)
     s.emit(41, INIT, 1)
     if evolution_items:
@@ -80,7 +84,7 @@ def script(*, evolution_items=False, text_offset=0, service_only=False, shiny_ch
             s.jump('upgrade_full')
             for i, (item_var, qty_var) in enumerate(SLOTS):
                 s.label(f'upgrade_add_{step}_{i}').emit(42, 0x8009, qty_var)
-                s.emit(39, 0x8009, 95).compare(0x8009, 999).jump('upgrade_full', 2)
+                s.emit(39, 0x8009, evolution_quantity).compare(0x8009, 999).jump('upgrade_full', 2)
                 s.emit(41, item_var, item).emit(42, qty_var, 0x8009)
                 s.emit(41, EVOLUTION_INIT, step + 1).jump(f'upgrade_next_{step}')
             s.label(f'upgrade_next_{step}')

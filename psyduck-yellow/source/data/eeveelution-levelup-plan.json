@@ -1,0 +1,1850 @@
+{
+ "Vaporeon": [
+  [
+   0,
+   "Water Gun"
+  ],
+  [
+   1,
+   "Tackle"
+  ],
+  [
+   1,
+   "Tail Whip"
+  ],
+  [
+   1,
+   "Quick Attack"
+  ],
+  [
+   1,
+   "Bite"
+  ],
+  [
+   1,
+   "Swift"
+  ],
+  [
+   1,
+   "Helping Hand"
+  ],
+  [
+   1,
+   "Baton Pass"
+  ],
+  [
+   1,
+   "Take Down"
+  ],
+  [
+   1,
+   "Charm"
+  ],
+  [
+   1,
+   "Double-Edge"
+  ],
+  [
+   1,
+   "Last Resort"
+  ],
+  [
+   15,
+   "Bubble"
+  ],
+  [
+   18,
+   "Water Pulse"
+  ],
+  [
+   21,
+   "Aqua Ring"
+  ],
+  [
+   25,
+   "Aqua Jet"
+  ],
+  [
+   28,
+   "Brine"
+  ],
+  [
+   31,
+   "Haze"
+  ],
+  [
+   34,
+   "Muddy Water"
+  ],
+  [
+   37,
+   "Scald"
+  ],
+  [
+   40,
+   "Soak"
+  ],
+  [
+   44,
+   "Surf"
+  ],
+  [
+   47,
+   "Aqua Tail"
+  ],
+  [
+   50,
+   "Waterfall"
+  ],
+  [
+   53,
+   "Hydro Pump"
+  ],
+  [
+   56,
+   "Dive"
+  ],
+  [
+   60,
+   "Whirlpool"
+  ],
+  [
+   63,
+   "Wave Crash"
+  ],
+  [
+   66,
+   "Hydro Cannon"
+  ]
+ ],
+ "Jolteon": [
+  [
+   0,
+   "Thunder Shock"
+  ],
+  [
+   1,
+   "Tackle"
+  ],
+  [
+   1,
+   "Tail Whip"
+  ],
+  [
+   1,
+   "Quick Attack"
+  ],
+  [
+   1,
+   "Bite"
+  ],
+  [
+   1,
+   "Swift"
+  ],
+  [
+   1,
+   "Helping Hand"
+  ],
+  [
+   1,
+   "Baton Pass"
+  ],
+  [
+   1,
+   "Take Down"
+  ],
+  [
+   1,
+   "Charm"
+  ],
+  [
+   1,
+   "Double-Edge"
+  ],
+  [
+   1,
+   "Last Resort"
+  ],
+  [
+   15,
+   "Thunder Wave"
+  ],
+  [
+   19,
+   "Spark"
+  ],
+  [
+   23,
+   "Shock Wave"
+  ],
+  [
+   27,
+   "Charge Beam"
+  ],
+  [
+   31,
+   "Thunder Fang"
+  ],
+  [
+   35,
+   "Volt Switch"
+  ],
+  [
+   39,
+   "Double Kick"
+  ],
+  [
+   42,
+   "Discharge"
+  ],
+  [
+   46,
+   "Electro Ball"
+  ],
+  [
+   50,
+   "Wild Charge"
+  ],
+  [
+   54,
+   "Agility"
+  ],
+  [
+   58,
+   "Thunderbolt"
+  ],
+  [
+   62,
+   "Thunder"
+  ],
+  [
+   66,
+   "Volt Tackle"
+  ]
+ ],
+ "Flareon": [
+  [
+   0,
+   "Ember"
+  ],
+  [
+   1,
+   "Tackle"
+  ],
+  [
+   1,
+   "Tail Whip"
+  ],
+  [
+   1,
+   "Quick Attack"
+  ],
+  [
+   1,
+   "Bite"
+  ],
+  [
+   1,
+   "Swift"
+  ],
+  [
+   1,
+   "Helping Hand"
+  ],
+  [
+   1,
+   "Baton Pass"
+  ],
+  [
+   1,
+   "Take Down"
+  ],
+  [
+   1,
+   "Charm"
+  ],
+  [
+   1,
+   "Double-Edge"
+  ],
+  [
+   1,
+   "Last Resort"
+  ],
+  [
+   15,
+   "Will-O-Wisp"
+  ],
+  [
+   19,
+   "Flame Wheel"
+  ],
+  [
+   23,
+   "Fire Fang"
+  ],
+  [
+   27,
+   "Flame Burst"
+  ],
+  [
+   31,
+   "Fire Spin"
+  ],
+  [
+   35,
+   "Lava Plume"
+  ],
+  [
+   39,
+   "Bulk Up"
+  ],
+  [
+   42,
+   "Flare Blitz"
+  ],
+  [
+   46,
+   "Flamethrower"
+  ],
+  [
+   50,
+   "Fire Blast"
+  ],
+  [
+   54,
+   "Overheat"
+  ],
+  [
+   58,
+   "Heat Wave"
+  ],
+  [
+   62,
+   "Sacred Fire"
+  ],
+  [
+   66,
+   "Fire Punch"
+  ]
+ ],
+ "Espeon": [
+  [
+   0,
+   "Confusion"
+  ],
+  [
+   1,
+   "Tackle"
+  ],
+  [
+   1,
+   "Tail Whip"
+  ],
+  [
+   1,
+   "Quick Attack"
+  ],
+  [
+   1,
+   "Bite"
+  ],
+  [
+   1,
+   "Swift"
+  ],
+  [
+   1,
+   "Helping Hand"
+  ],
+  [
+   1,
+   "Baton Pass"
+  ],
+  [
+   1,
+   "Take Down"
+  ],
+  [
+   1,
+   "Charm"
+  ],
+  [
+   1,
+   "Double-Edge"
+  ],
+  [
+   1,
+   "Last Resort"
+  ],
+  [
+   15,
+   "Psybeam"
+  ],
+  [
+   19,
+   "Psycho Cut"
+  ],
+  [
+   23,
+   "Calm Mind"
+  ],
+  [
+   27,
+   "Zen Headbutt"
+  ],
+  [
+   31,
+   "Reflect"
+  ],
+  [
+   35,
+   "Light Screen"
+  ],
+  [
+   39,
+   "Extrasensory"
+  ],
+  [
+   42,
+   "Power Swap"
+  ],
+  [
+   46,
+   "Psyshock"
+  ],
+  [
+   50,
+   "Stored Power"
+  ],
+  [
+   54,
+   "Psychic"
+  ],
+  [
+   58,
+   "Future Sight"
+  ],
+  [
+   62,
+   "Psych Up"
+  ],
+  [
+   66,
+   "Trick Room"
+  ]
+ ],
+ "Umbreon": [
+  [
+   0,
+   "Snarl"
+  ],
+  [
+   1,
+   "Tackle"
+  ],
+  [
+   1,
+   "Tail Whip"
+  ],
+  [
+   1,
+   "Quick Attack"
+  ],
+  [
+   1,
+   "Bite"
+  ],
+  [
+   1,
+   "Swift"
+  ],
+  [
+   1,
+   "Helping Hand"
+  ],
+  [
+   1,
+   "Baton Pass"
+  ],
+  [
+   1,
+   "Take Down"
+  ],
+  [
+   1,
+   "Charm"
+  ],
+  [
+   1,
+   "Double-Edge"
+  ],
+  [
+   1,
+   "Last Resort"
+  ],
+  [
+   15,
+   "Pursuit"
+  ],
+  [
+   19,
+   "Feint Attack"
+  ],
+  [
+   22,
+   "Confuse Ray"
+  ],
+  [
+   26,
+   "Assurance"
+  ],
+  [
+   30,
+   "Payback"
+  ],
+  [
+   33,
+   "Taunt"
+  ],
+  [
+   37,
+   "Torment"
+  ],
+  [
+   40,
+   "Crunch"
+  ],
+  [
+   44,
+   "Knock Off"
+  ],
+  [
+   48,
+   "Night Slash"
+  ],
+  [
+   51,
+   "Dark Pulse"
+  ],
+  [
+   55,
+   "Foul Play"
+  ],
+  [
+   59,
+   "Thief"
+  ],
+  [
+   62,
+   "Embargo"
+  ],
+  [
+   66,
+   "Sucker Punch"
+  ]
+ ],
+ "Leafeon": [
+  [
+   0,
+   "Razor Leaf"
+  ],
+  [
+   1,
+   "Tackle"
+  ],
+  [
+   1,
+   "Tail Whip"
+  ],
+  [
+   1,
+   "Quick Attack"
+  ],
+  [
+   1,
+   "Bite"
+  ],
+  [
+   1,
+   "Swift"
+  ],
+  [
+   1,
+   "Helping Hand"
+  ],
+  [
+   1,
+   "Baton Pass"
+  ],
+  [
+   1,
+   "Take Down"
+  ],
+  [
+   1,
+   "Charm"
+  ],
+  [
+   1,
+   "Double-Edge"
+  ],
+  [
+   1,
+   "Last Resort"
+  ],
+  [
+   15,
+   "Absorb"
+  ],
+  [
+   19,
+   "Leech Seed"
+  ],
+  [
+   22,
+   "Magical Leaf"
+  ],
+  [
+   26,
+   "Synthesis"
+  ],
+  [
+   30,
+   "Mega Drain"
+  ],
+  [
+   33,
+   "Sunny Day"
+  ],
+  [
+   37,
+   "Giga Drain"
+  ],
+  [
+   40,
+   "Energy Ball"
+  ],
+  [
+   44,
+   "Leaf Blade"
+  ],
+  [
+   48,
+   "Seed Bomb"
+  ],
+  [
+   51,
+   "Swords Dance"
+  ],
+  [
+   55,
+   "Wood Hammer"
+  ],
+  [
+   59,
+   "Solar Beam"
+  ],
+  [
+   62,
+   "Leaf Storm"
+  ],
+  [
+   66,
+   "Grass Knot"
+  ]
+ ],
+ "Glaceon": [
+  [
+   0,
+   "Icy Wind"
+  ],
+  [
+   1,
+   "Tackle"
+  ],
+  [
+   1,
+   "Tail Whip"
+  ],
+  [
+   1,
+   "Quick Attack"
+  ],
+  [
+   1,
+   "Bite"
+  ],
+  [
+   1,
+   "Swift"
+  ],
+  [
+   1,
+   "Helping Hand"
+  ],
+  [
+   1,
+   "Baton Pass"
+  ],
+  [
+   1,
+   "Take Down"
+  ],
+  [
+   1,
+   "Charm"
+  ],
+  [
+   1,
+   "Double-Edge"
+  ],
+  [
+   1,
+   "Last Resort"
+  ],
+  [
+   15,
+   "Powder Snow"
+  ],
+  [
+   19,
+   "Ice Shard"
+  ],
+  [
+   23,
+   "Mist"
+  ],
+  [
+   27,
+   "Aurora Beam"
+  ],
+  [
+   31,
+   "Ice Fang"
+  ],
+  [
+   35,
+   "Haze"
+  ],
+  [
+   39,
+   "Icicle Spear"
+  ],
+  [
+   42,
+   "Avalanche"
+  ],
+  [
+   46,
+   "Frost Breath"
+  ],
+  [
+   50,
+   "Freeze-Dry"
+  ],
+  [
+   54,
+   "Ice Beam"
+  ],
+  [
+   58,
+   "Icicle Crash"
+  ],
+  [
+   62,
+   "Blizzard"
+  ],
+  [
+   66,
+   "Mirror Coat"
+  ]
+ ],
+ "Sylveon": [
+  [
+   0,
+   "Disarming Voice"
+  ],
+  [
+   1,
+   "Tackle"
+  ],
+  [
+   1,
+   "Tail Whip"
+  ],
+  [
+   1,
+   "Quick Attack"
+  ],
+  [
+   1,
+   "Bite"
+  ],
+  [
+   1,
+   "Swift"
+  ],
+  [
+   1,
+   "Helping Hand"
+  ],
+  [
+   1,
+   "Baton Pass"
+  ],
+  [
+   1,
+   "Take Down"
+  ],
+  [
+   1,
+   "Charm"
+  ],
+  [
+   1,
+   "Double-Edge"
+  ],
+  [
+   1,
+   "Last Resort"
+  ],
+  [
+   15,
+   "Fairy Wind"
+  ],
+  [
+   20,
+   "Draining Kiss"
+  ],
+  [
+   25,
+   "Misty Terrain"
+  ],
+  [
+   30,
+   "Moonlight"
+  ],
+  [
+   35,
+   "Light Screen"
+  ],
+  [
+   40,
+   "Play Rough"
+  ],
+  [
+   46,
+   "Skill Swap"
+  ],
+  [
+   51,
+   "Dazzling Gleam"
+  ],
+  [
+   56,
+   "Psych Up"
+  ],
+  [
+   61,
+   "Moonblast"
+  ],
+  [
+   66,
+   "Calm Mind"
+  ]
+ ],
+ "Brawleon": [
+  [
+   0,
+   "Drain Punch"
+  ],
+  [
+   1,
+   "Feint"
+  ],
+  [
+   1,
+   "Tackle"
+  ],
+  [
+   1,
+   "Helping Hand"
+  ],
+  [
+   1,
+   "Fake Out"
+  ],
+  [
+   1,
+   "Focus Energy"
+  ],
+  [
+   4,
+   "Mach Punch"
+  ],
+  [
+   8,
+   "Vacuum Wave"
+  ],
+  [
+   10,
+   "Comet Punch"
+  ],
+  [
+   12,
+   "Detect"
+  ],
+  [
+   14,
+   "Karate Chop"
+  ],
+  [
+   16,
+   "Bullet Punch"
+  ],
+  [
+   18,
+   "Dizzy Punch"
+  ],
+  [
+   20,
+   "Sucker Punch"
+  ],
+  [
+   21,
+   "Quick Guard"
+  ],
+  [
+   22,
+   "Revenge"
+  ],
+  [
+   24,
+   "Thunder Punch"
+  ],
+  [
+   24,
+   "Ice Punch"
+  ],
+  [
+   24,
+   "Fire Punch"
+  ],
+  [
+   26,
+   "Shadow Punch"
+  ],
+  [
+   28,
+   "Agility"
+  ],
+  [
+   30,
+   "Power-Up Punch"
+  ],
+  [
+   32,
+   "Mega Punch"
+  ],
+  [
+   34,
+   "Sky Uppercut"
+  ],
+  [
+   36,
+   "Close Combat"
+  ],
+  [
+   38,
+   "Hammer Arm"
+  ],
+  [
+   40,
+   "Counter"
+  ],
+  [
+   42,
+   "Meteor Mash"
+  ],
+  [
+   46,
+   "Jet Punch"
+  ],
+  [
+   48,
+   "Cross Chop"
+  ],
+  [
+   50,
+   "Dynamic Punch"
+  ],
+  [
+   54,
+   "Ice Hammer"
+  ],
+  [
+   58,
+   "Plasma Fists"
+  ],
+  [
+   62,
+   "Superpower"
+  ]
+ ],
+ "Venomeon": [
+  [
+   0,
+   "Poison Sting"
+  ],
+  [
+   1,
+   "Tackle"
+  ],
+  [
+   1,
+   "Tail Whip"
+  ],
+  [
+   1,
+   "Quick Attack"
+  ],
+  [
+   1,
+   "Bite"
+  ],
+  [
+   1,
+   "Swift"
+  ],
+  [
+   1,
+   "Helping Hand"
+  ],
+  [
+   1,
+   "Baton Pass"
+  ],
+  [
+   1,
+   "Take Down"
+  ],
+  [
+   1,
+   "Charm"
+  ],
+  [
+   1,
+   "Double-Edge"
+  ],
+  [
+   1,
+   "Last Resort"
+  ],
+  [
+   15,
+   "Acid"
+  ],
+  [
+   19,
+   "Smog"
+  ],
+  [
+   24,
+   "Toxic"
+  ],
+  [
+   28,
+   "Venoshock"
+  ],
+  [
+   32,
+   "Sludge"
+  ],
+  [
+   36,
+   "Poison Fang"
+  ],
+  [
+   40,
+   "Acid Spray"
+  ],
+  [
+   45,
+   "Sludge Bomb"
+  ],
+  [
+   49,
+   "Poison Jab"
+  ],
+  [
+   53,
+   "Toxic Spikes"
+  ],
+  [
+   58,
+   "Cross Poison"
+  ],
+  [
+   62,
+   "Gunk Shot"
+  ],
+  [
+   66,
+   "Belch"
+  ]
+ ],
+ "Duneon": [
+  [
+   0,
+   "Mud-Slap"
+  ],
+  [
+   1,
+   "Tackle"
+  ],
+  [
+   1,
+   "Tail Whip"
+  ],
+  [
+   1,
+   "Quick Attack"
+  ],
+  [
+   1,
+   "Bite"
+  ],
+  [
+   1,
+   "Swift"
+  ],
+  [
+   1,
+   "Helping Hand"
+  ],
+  [
+   1,
+   "Baton Pass"
+  ],
+  [
+   1,
+   "Take Down"
+  ],
+  [
+   1,
+   "Charm"
+  ],
+  [
+   1,
+   "Double-Edge"
+  ],
+  [
+   1,
+   "Last Resort"
+  ],
+  [
+   15,
+   "Sand Attack"
+  ],
+  [
+   20,
+   "Mud Shot"
+  ],
+  [
+   24,
+   "Bulldoze"
+  ],
+  [
+   29,
+   "Dig"
+  ],
+  [
+   34,
+   "Mud Bomb"
+  ],
+  [
+   38,
+   "Earth Power"
+  ],
+  [
+   43,
+   "Drill Run"
+  ],
+  [
+   47,
+   "StompingTantrum"
+  ],
+  [
+   52,
+   "Sandstorm"
+  ],
+  [
+   57,
+   "Spikes"
+  ],
+  [
+   61,
+   "Earthquake"
+  ],
+  [
+   66,
+   "Shore Up"
+  ]
+ ],
+ "Zephyreon": [
+  [
+   0,
+   "Gust"
+  ],
+  [
+   1,
+   "Tackle"
+  ],
+  [
+   1,
+   "Tail Whip"
+  ],
+  [
+   1,
+   "Quick Attack"
+  ],
+  [
+   1,
+   "Bite"
+  ],
+  [
+   1,
+   "Swift"
+  ],
+  [
+   1,
+   "Helping Hand"
+  ],
+  [
+   1,
+   "Baton Pass"
+  ],
+  [
+   1,
+   "Take Down"
+  ],
+  [
+   1,
+   "Charm"
+  ],
+  [
+   1,
+   "Double-Edge"
+  ],
+  [
+   1,
+   "Last Resort"
+  ],
+  [
+   15,
+   "Wing Attack"
+  ],
+  [
+   20,
+   "Aerial Ace"
+  ],
+  [
+   24,
+   "Air Cutter"
+  ],
+  [
+   29,
+   "Roost"
+  ],
+  [
+   34,
+   "Tailwind"
+  ],
+  [
+   38,
+   "Acrobatics"
+  ],
+  [
+   43,
+   "Pluck"
+  ],
+  [
+   47,
+   "Air Slash"
+  ],
+  [
+   52,
+   "Bounce"
+  ],
+  [
+   57,
+   "Drill Peck"
+  ],
+  [
+   61,
+   "Hurricane"
+  ],
+  [
+   66,
+   "Brave Bird"
+  ]
+ ],
+ "Chryseon": [
+  [
+   0,
+   "Bug Bite"
+  ],
+  [
+   1,
+   "Tackle"
+  ],
+  [
+   1,
+   "Tail Whip"
+  ],
+  [
+   1,
+   "Quick Attack"
+  ],
+  [
+   1,
+   "Bite"
+  ],
+  [
+   1,
+   "Swift"
+  ],
+  [
+   1,
+   "Helping Hand"
+  ],
+  [
+   1,
+   "Baton Pass"
+  ],
+  [
+   1,
+   "Take Down"
+  ],
+  [
+   1,
+   "Charm"
+  ],
+  [
+   1,
+   "Double-Edge"
+  ],
+  [
+   1,
+   "Last Resort"
+  ],
+  [
+   15,
+   "String Shot"
+  ],
+  [
+   20,
+   "Struggle Bug"
+  ],
+  [
+   25,
+   "Silver Wind"
+  ],
+  [
+   30,
+   "Signal Beam"
+  ],
+  [
+   35,
+   "U-turn"
+  ],
+  [
+   40,
+   "Leech Life"
+  ],
+  [
+   46,
+   "X-Scissor"
+  ],
+  [
+   51,
+   "Pin Missile"
+  ],
+  [
+   56,
+   "Quiver Dance"
+  ],
+  [
+   61,
+   "Bug Buzz"
+  ],
+  [
+   66,
+   "Megahorn"
+  ]
+ ],
+ "Strateon": [
+  [
+   0,
+   "Rock Throw"
+  ],
+  [
+   1,
+   "Tackle"
+  ],
+  [
+   1,
+   "Tail Whip"
+  ],
+  [
+   1,
+   "Quick Attack"
+  ],
+  [
+   1,
+   "Bite"
+  ],
+  [
+   1,
+   "Swift"
+  ],
+  [
+   1,
+   "Helping Hand"
+  ],
+  [
+   1,
+   "Baton Pass"
+  ],
+  [
+   1,
+   "Take Down"
+  ],
+  [
+   1,
+   "Charm"
+  ],
+  [
+   1,
+   "Double-Edge"
+  ],
+  [
+   1,
+   "Last Resort"
+  ],
+  [
+   15,
+   "Rock Tomb"
+  ],
+  [
+   20,
+   "Rollout"
+  ],
+  [
+   25,
+   "Smack Down"
+  ],
+  [
+   30,
+   "Ancient Power"
+  ],
+  [
+   35,
+   "Power Gem"
+  ],
+  [
+   40,
+   "Rock Slide"
+  ],
+  [
+   46,
+   "Stealth Rock"
+  ],
+  [
+   51,
+   "Rock Polish"
+  ],
+  [
+   56,
+   "Stone Edge"
+  ],
+  [
+   61,
+   "Rock Blast"
+  ],
+  [
+   66,
+   "Head Smash"
+  ]
+ ],
+ "Wraitheon": [
+  [
+   0,
+   "Lick"
+  ],
+  [
+   1,
+   "Tackle"
+  ],
+  [
+   1,
+   "Tail Whip"
+  ],
+  [
+   1,
+   "Quick Attack"
+  ],
+  [
+   1,
+   "Bite"
+  ],
+  [
+   1,
+   "Swift"
+  ],
+  [
+   1,
+   "Helping Hand"
+  ],
+  [
+   1,
+   "Baton Pass"
+  ],
+  [
+   1,
+   "Take Down"
+  ],
+  [
+   1,
+   "Charm"
+  ],
+  [
+   1,
+   "Double-Edge"
+  ],
+  [
+   1,
+   "Last Resort"
+  ],
+  [
+   15,
+   "Astonish"
+  ],
+  [
+   20,
+   "Night Shade"
+  ],
+  [
+   25,
+   "Shadow Sneak"
+  ],
+  [
+   30,
+   "Confuse Ray"
+  ],
+  [
+   35,
+   "Curse"
+  ],
+  [
+   40,
+   "Spite"
+  ],
+  [
+   46,
+   "Shadow Ball"
+  ],
+  [
+   51,
+   "Hex"
+  ],
+  [
+   56,
+   "Phantom Force"
+  ],
+  [
+   61,
+   "Shadow Claw"
+  ],
+  [
+   66,
+   "Destiny Bond"
+  ]
+ ],
+ "Wyrmeon": [
+  [
+   0,
+   "Dragon Breath"
+  ],
+  [
+   1,
+   "Tackle"
+  ],
+  [
+   1,
+   "Tail Whip"
+  ],
+  [
+   1,
+   "Quick Attack"
+  ],
+  [
+   1,
+   "Bite"
+  ],
+  [
+   1,
+   "Swift"
+  ],
+  [
+   1,
+   "Helping Hand"
+  ],
+  [
+   1,
+   "Baton Pass"
+  ],
+  [
+   1,
+   "Take Down"
+  ],
+  [
+   1,
+   "Charm"
+  ],
+  [
+   1,
+   "Double-Edge"
+  ],
+  [
+   1,
+   "Last Resort"
+  ],
+  [
+   15,
+   "Twister"
+  ],
+  [
+   21,
+   "Dragon Rage"
+  ],
+  [
+   28,
+   "Dragon Tail"
+  ],
+  [
+   34,
+   "Dragon Claw"
+  ],
+  [
+   40,
+   "Dragon Pulse"
+  ],
+  [
+   47,
+   "Dragon Dance"
+  ],
+  [
+   53,
+   "Dragon Rush"
+  ],
+  [
+   60,
+   "Outrage"
+  ],
+  [
+   66,
+   "Draco Meteor"
+  ]
+ ],
+ "Ferreon": [
+  [
+   0,
+   "Metal Claw"
+  ],
+  [
+   1,
+   "Tackle"
+  ],
+  [
+   1,
+   "Tail Whip"
+  ],
+  [
+   1,
+   "Quick Attack"
+  ],
+  [
+   1,
+   "Bite"
+  ],
+  [
+   1,
+   "Swift"
+  ],
+  [
+   1,
+   "Helping Hand"
+  ],
+  [
+   1,
+   "Baton Pass"
+  ],
+  [
+   1,
+   "Take Down"
+  ],
+  [
+   1,
+   "Charm"
+  ],
+  [
+   1,
+   "Double-Edge"
+  ],
+  [
+   1,
+   "Last Resort"
+  ],
+  [
+   15,
+   "Iron Defense"
+  ],
+  [
+   19,
+   "Metal Sound"
+  ],
+  [
+   24,
+   "Bullet Punch"
+  ],
+  [
+   28,
+   "Iron Head"
+  ],
+  [
+   32,
+   "Gyro Ball"
+  ],
+  [
+   36,
+   "Flash Cannon"
+  ],
+  [
+   40,
+   "Iron Tail"
+  ],
+  [
+   45,
+   "Steel Wing"
+  ],
+  [
+   49,
+   "Meteor Mash"
+  ],
+  [
+   53,
+   "Heavy Slam"
+  ],
+  [
+   58,
+   "Autotomize"
+  ],
+  [
+   62,
+   "Smart Strike"
+  ],
+  [
+   66,
+   "Doom Desire"
+  ]
+ ],
+ "Novareon": [
+  [
+   0,
+   "Swift"
+  ],
+  [
+   1,
+   "Tackle"
+  ],
+  [
+   1,
+   "Tail Whip"
+  ],
+  [
+   1,
+   "Quick Attack"
+  ],
+  [
+   1,
+   "Bite"
+  ],
+  [
+   1,
+   "Swift"
+  ],
+  [
+   1,
+   "Helping Hand"
+  ],
+  [
+   1,
+   "Baton Pass"
+  ],
+  [
+   1,
+   "Take Down"
+  ],
+  [
+   1,
+   "Charm"
+  ],
+  [
+   1,
+   "Double-Edge"
+  ],
+  [
+   1,
+   "Last Resort"
+  ],
+  [
+   15,
+   "Psybeam"
+  ],
+  [
+   21,
+   "Signal Beam"
+  ],
+  [
+   28,
+   "Shadow Ball"
+  ],
+  [
+   34,
+   "Calm Mind"
+  ],
+  [
+   40,
+   "Cosmic Power"
+  ],
+  [
+   47,
+   "Stored Power"
+  ],
+  [
+   53,
+   "Psychic"
+  ],
+  [
+   60,
+   "Meteor Mash"
+  ],
+  [
+   66,
+   "Hyper Beam"
+  ]
+ ]
+}

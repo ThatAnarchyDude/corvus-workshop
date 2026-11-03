@@ -431,7 +431,7 @@ included in the delivered game. The cumulative patch reproduces the ROM exactly
 from the unchanged original HeartGold ROM.
 
 The live tunnel was restored after the old one stopped. Its current link is
-[Watch live testing]([temporary tunnel link removed]).
+[Watch live testing]([temporary tunnel link removed]#token=SaBO46q-TKH_m6lLAib088MTzb7drRISjWaqa7IlVxM).
 The service stays connected and pauses video/audio between tests. The owner
 reported the separate Linux testing problem fixed by the supplied kit.
 
