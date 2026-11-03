@@ -43,8 +43,8 @@ def install(rom, species, held, level, items, battle, dex=False, warp=None, foll
         var, value = pair.split('=')
         s.emit(41, int(var, 0), int(value, 0))
     if dex:
-        s.emit(291).emit(30, 0x6B).emit(477)       # the project's own dex grant: give Pokedex, flag 0x6B, National Dex mode on
-        s.data.append(1)
+        s.emit(291).emit(30, 0x6B).emit(477)       # the project's own dex grant: give Pokedex, flag 0x6B, National Dex mode on (env FIXTURE_DEXMODE=0 for the Kanto-only start)
+        s.data.append(int(os.environ.get('FIXTURE_DEXMODE', '1')))
         s.emit(0x800C)
         for flag in (0x68, 0x69, 0x6A, 0x6C, 0x6D, 0x6E):   # neighbours of the Pokedex flag; one of them is the POKEMON menu entry
             s.emit(30, flag)
