@@ -21,8 +21,8 @@ for cz in range(h):
             for lx in range(32):
                 if not perm[(lz * 32 + lx) * 2 + 1] & 0x80: free.add((cx * 32 + lx, cz * 32 + lz))
 g = events_decode(events.files[struct.unpack_from('<H', r, 16)[0]])
-boulders = [(struct.unpack_from('<H', a, 0)[0], tuple(struct.unpack_from('<2H', a, 24))) for a in g[1] if struct.unpack_from('<H', a, 2)[0] == 85]
-rocks = [tuple(struct.unpack_from('<2H', a, 24)) for a in g[1] if struct.unpack_from('<H', a, 2)[0] == 84]
+boulders = [(struct.unpack_from('<H', a, 0)[0], tuple(struct.unpack_from('<2H', a, 24))) for a in g[1] if struct.unpack_from('<H', a, 10)[0] in (10001, 10002)]       # puzzle boulders: script 10001 before vr_boulder_fix.py (sprite 85), 10002 after (sprite 84)
+rocks = [tuple(struct.unpack_from('<2H', a, 24)) for a in g[1] if struct.unpack_from('<H', a, 2)[0] in (84, 85) and struct.unpack_from('<H', a, 10)[0] == 0]       # barrier rocks: script 0
 g[1] = [a for a in g[1] if not 3000 <= struct.unpack_from('<H', a, 10)[0] < 4100]       # test copy: no trainers (their sight lines interrupt the walk)
 blocked = {tuple(struct.unpack_from('<2H', a, 24)) for a in g[1]}
 st = vr.SWITCHES[floor][k]
