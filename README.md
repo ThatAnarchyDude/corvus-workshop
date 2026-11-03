@@ -15,10 +15,10 @@ A mobile-friendly interactive battery and capacitor simulator with electrotherma
 
 An unofficial fan project that rebuilds **Pokémon Yellow's Kanto campaign inside Pokémon HeartGold's engine** ([hg-engine](https://github.com/BluRosie/hg-engine)). You start with **Psyduck, Togepi or Eevee**; Psyduck and Eevee can **Mega Evolve**; and Kanto's towns, gyms, Team Rocket plots, Elite Four and Champion Blue follow Yellow's teams and dialogue, from Pallet Town to the first Hall of Fame. Johto (HeartGold's own region) is planned as a postgame.
 
-> **⚠️ Latest: BETA 0.1.58 (prototype 0158) — for testing only. It is not a complete game.** The Kanto campaign up to the first Hall of Fame is built, plus the first parts of the Johto postgame; **Johto is unfinished and has not been played through.**
+> **⚠️ Latest: BETA 0.1.60 (prototype 0160) — for testing only. It is not a complete game.** The Kanto campaign up to the first Hall of Fame is built, plus the first parts of the Johto postgame; **Johto is unfinished and has not been played through.**
 
 - **[Download / releases](https://github.com/ThatAnarchyDude/Psyduck-Yellow-Releases/releases)** — patches and notes for every prototype; no ROMs or saves are distributed, so you need your own legally obtained USA HeartGold.
-- **[Patching page for BETA 0.1.57 (builds the game in your browser)](https://raw.githack.com/Doctor-Pokemon/Psyduck-Yellow-Releases/main/prototype-0158/index.html)**
+- **[Patching page for BETA 0.1.57 (builds the game in your browser)](https://raw.githack.com/Doctor-Pokemon/Psyduck-Yellow-Releases/main/prototype-0160/index.html)**
 - **[Source code and tools](./psyduck-yellow/source/)** — the Python build tools, tests, data and notes that produce the patches (see its README for what is and isn't included)
 - **[Plain-language development log](./psyduck-yellow/DEVELOPMENT-LOG.md)** — dated changes, current work and plans
 - **[Project folder](./psyduck-yellow/)** — hosted patching pages for earlier prototypes and playtest clips
